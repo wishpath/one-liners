@@ -100,7 +100,7 @@ public class OneLiners {
                                      
                                     "Rancher - container management platform - manages workloads, deploys, scales containerized applications. Uses container runtime Kubernetes (Docker or other). Sets it's clusters.\n" +
                                      
-                                    "Rancher comparison to platform - not a container orchestration platform itself, but it is a management platform for container orchestration and Kubernetes. Provides a user-friendly interface and tools for deploying, configuring.\n" +
+                                    "Is Rancher a container orchestration platform?  - not a container orchestration platform itself, but it is a management platform for container orchestration and Kubernetes. Provides a user-friendly interface and tools for deploying, configuring.\n" +
                                      
                                     "Andromeda functions - Application Development Platform - with managed services such as containers, monitoring, logging, traceability, caching, etc., for developing, deploying and operating cloud native applications.\n" +
                                      

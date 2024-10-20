@@ -1,0 +1,3 @@
+[submodule ".mod/ai-client"]
+	path = .mod/ai-client
+	url = https://github.com/wishpath/ai-client.git
