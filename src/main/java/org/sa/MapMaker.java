@@ -21,6 +21,24 @@ public class MapMaker {
         .orElse(null);
   }
 
+  public Map.Entry<String, String> pickKeyDefinition(String fragment) {
+    return keyDefinition.entrySet()
+        .stream()
+        .filter(entry -> entry.getKey().toLowerCase().contains(fragment.toLowerCase()))
+        .findFirst()
+        .orElse(pickRandomKeyDefinition());
+  }
+
+
+  public Map.Entry<String, String> pickNthKeyDefinition(String fragment, int nthInstance) {
+    return keyDefinition.entrySet()
+        .stream()
+        .filter(entry -> entry.getKey().toLowerCase().contains(fragment.toLowerCase()))
+        .skip(nthInstance + 1)
+        .findFirst()
+        .orElse(pickRandomKeyDefinition());
+  }
+
   public static void main(String[] args) {
     keyDefinition.entrySet().forEach(System.out::println);
   }

@@ -1,0 +1,8 @@
+evaluate:
+    a:
+        a1: first - ask what abreviation stands for if full words
+        a2: second - explain what phrase means
+    b: provide feedback. after feedback evaluade learning:
+        b1 - a1
+        b2 - b2
+
