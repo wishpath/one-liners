@@ -161,7 +161,7 @@ public class OneLiners {
 
   private String other =
       "NFC - Near Field Communication - wireless communication technology that allows data exchange between devices over a very short distance, typically a few centimeters.\n" +
-      "Product backlog - prioritized list of features, enhancements, bug fixes, and other work items that need to be addressed in a product.\n" +
+      "What is a product backlog in agile project management? - prioritized list of features, enhancements, bug fixes, and other work items that need to be addressed in a product.\n" +
       "Stakeholders - everyone with interest in outcome - customers/users, APO, analysts, team, testers, manager, regulatory authorities, security, leadership, marketing, support, customer service etc.\n" +
       "YubiKey - A flash drive for security purposes on a Mac.\n" +
       "WoW - way of working.\n" +
