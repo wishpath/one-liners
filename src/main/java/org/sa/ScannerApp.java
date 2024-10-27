@@ -18,7 +18,7 @@ public class ScannerApp {
       System.out.println("Explain this: " + key);
       String input = scanner.nextLine().trim();
       if (input.isEmpty()) continue;
-      else if ("menu".equals(input)) System.out.println("skip - reloads key; define - defines current key; pick nth <fragment nth> - pick nth key containing fragment; pick <fragment> - pick key containing fragment");
+      else if ("menu".equals(input)) System.out.println("skip - reloads key;\ndefine - defines current key;\npick nth <fragment nth> - pick nth key containing fragment;\npick <fragment> - pick key containing fragment;\n? - include this symbol to get an answer;");
       else if ("skip".equals(input) || "".equals(input)) {reloadKey();}
       else if ("define".equals(input)) System.out.println(definition);
 //      else if (input.startsWith(EDIT)) {
