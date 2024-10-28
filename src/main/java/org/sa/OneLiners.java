@@ -157,6 +157,7 @@ public class OneLiners {
       "Factory - patterns that provide an interface for creating instances of a class, but allow subclasses to alter the type of objects that will be created.\n" +
       "Wireshark - app for network troubleshooting.\n" +
       "Gateway - A computer that sits between different networks or applications. The gateway converts data from one protocol format to another.\n" +
+      "hashing - transforming data into a fixed-size code. Deterministic. One hash code can mean multiple original data (collision case).\n" +
       "Gateway team in an enterprise - ensures a secure digital environment by managing network security, access controls, and incident response protocols to safeguard data effectively.\n";
 
   private String other =
