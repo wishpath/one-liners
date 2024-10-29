@@ -144,6 +144,8 @@ public class OneLiners {
       "Subnet - subnetwork - segment of a larger network. Subnetting improves network performance, security, and organization.\n" +
       "Synchronous - each next task starts when previous one ends.\n" +
       "Asynchronous - each next task starts without previous one ending. Task become concurrent.\n" +
+      "Real-time data flow - Continuous, asynchronous transfer and processing of data as events occur\n" +
+      "Kafka - a platform orchestrating real-time, asynchronous communication between services, ensuring scalable, reliable data flow and event logging.\n" +
       "Encapsulation - Hiding internal elements of object or service. Provides clear separation. Improves maintainability.\n" +
       "Technical debt - accumulated code imperfections.\n" +
       "SwiftUI - user interface framework developed by Apple for building apps across iOS, macOS, watchOS, and tvOS.\n" +
