@@ -247,6 +247,10 @@ public class OneLiners {
     return spring;
   }
 
+  public String getReact() {
+    return react;
+  }
+
   public String getAllOneLiners() {
     return qa + containerisation + apis + logs + esealing + databases + regulations + softwareEngineering + other + spring + react;
   }
