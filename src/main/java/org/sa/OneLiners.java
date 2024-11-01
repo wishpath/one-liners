@@ -132,7 +132,6 @@ public class OneLiners {
       "Collision resistant - different inputs should not produce the same outcome.\n" +
       "Memoization technique - storing the results of expensive function calls and return the cached result when the same inputs occur again.\n" +
       "AD - architecture description.\n" +
-      "FDP - frontend development platform (example: React).\n" +
       "Deploying - making app available on a target environment. For example production environment.\n" +
       "VPN - Virtual Private Network - encrypted and tunneled connection to trusted remote server, where your identity is hidden, but all the data in the internet accessed.\n" +
       "DevOps - practices, principles, and cultural philosophies. The primary goal is to automate the process of software delivery and infrastructure changes.\n" +
@@ -145,7 +144,10 @@ public class OneLiners {
       "Synchronous - each next task starts when previous one ends.\n" +
       "Asynchronous - each next task starts without previous one ending. Task become concurrent.\n" +
       "Real-time data flow - Continuous, asynchronous transfer and processing of data as events occur\n" +
-      "Kafka - a platform orchestrating real-time, asynchronous communication between services, ensuring scalable, reliable data flow and event logging.\n" +
+      "Kafka (1) - a platform orchestrating data flow\n" +
+      "Kafka (2) - distributed event streaming platform for high-throughput, fault-tolerant data pipelines.\n" +
+      "Kafka (3) - a platform orchestrating real-time, asynchronous communication between services, ensuring scalable, reliable data flow and event logging.\n" +
+      "Difference between Kafka and Kubernetes in the sense that both are platforms of orchestration - Kafka is the data traffic controller, while Kubernetes is the container traffic controller." +
       "Encapsulation - Hiding internal elements of object or service. Provides clear separation. Improves maintainability.\n" +
       "Technical debt - accumulated code imperfections.\n" +
       "SwiftUI - user interface framework developed by Apple for building apps across iOS, macOS, watchOS, and tvOS.\n" +
@@ -199,7 +201,11 @@ public class OneLiners {
       "Proxy pattern - creating placeholders for another object to control access to it, but it doesn't necessarily mean creating copies of the target object.\n" +
       "RDBMS - relational database management system.\n" +
       "DSL - Domain-Specific Language - syntax, designed for a specific problem domain, as opposed to being a general-purpose. Example: Thymeleaf provides DSL for HTML.\n" +
-      "Stereotype - role of class, marked by annotation.\n";
+      "What is stereotype in Spring - role of class, marked by annotation. E.g.: @Controller @Service\n";
+
+  private String react =
+      "FDP - frontend development platform (example: React).\n" +
+      "JSX - JavaScript as XML - is an HTML-like syntax used in React to create UI elements.";
 
   public String getQa() {
     return qa;
@@ -242,6 +248,6 @@ public class OneLiners {
   }
 
   public String getAllOneLiners() {
-    return qa + containerisation + apis + logs + esealing + databases + regulations + softwareEngineering + other + spring;
+    return qa + containerisation + apis + logs + esealing + databases + regulations + softwareEngineering + other + spring + react;
   }
 }
