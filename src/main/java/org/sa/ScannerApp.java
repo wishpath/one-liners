@@ -18,10 +18,13 @@ public class ScannerApp {
       System.out.println("Explain this: " + key);
       String input = scanner.nextLine().trim();
       if (input.isEmpty()) continue;
-      else if ("menu".equals(input)) System.out.println("skip - reloads key;\ndefine - defines current key;\npick nth <fragment nth> - pick nth key containing fragment;\npick <fragment> - pick key containing fragment;\n? - include this symbol to get an answer;");
-      else if ("skip".equals(input) || "".equals(input)) {reloadKey();}
+      else if ("menu".equals(input)) System.out.println("skip - reloads key;\ndefine - defines current key;\ndefine all <fragment> - defines all keys containing fragment;\ndefine all all <fragment> - defines all keys and values containing fragment;\npick nth <fragment nth> - pick nth key containing fragment;\npick <fragment> - pick key containing fragment;\n? - include this symbol to get an answer;");
+      else if ("skip".equals(input) || "s".equals(input)) {reloadKey();}
+      else if (input.startsWith("define all all ")) { printAllKeyValuesContainingFragment(input.substring("define all all ".length()));}
+      else if (input.startsWith("define all ")) { printAllKeysContainingFragment(input.substring("define all ".length()));}
       else if ("define".equals(input)) System.out.println(definition);
 //      else if (input.startsWith(EDIT)) {
+
 //        printDefinition();
 //        map.edit(keyDefinition, input.substring(6));
 //      }
@@ -50,6 +53,16 @@ public class ScannerApp {
                 "\nYour entire answer should be up to 300 characters"));
       }
     }
+  }
+
+  private void printAllKeyValuesContainingFragment(String fragment) {
+    System.out.println("defining all key-values containing fragment: " + fragment);
+    new MapMaker().printAllEntriesContainingFragmentInKeyValue(fragment);
+  }
+
+  private void printAllKeysContainingFragment(String fragment) {
+    System.out.println("defining all keys containing fragment: " + fragment);
+    new MapMaker().printAllEntriesContainingFragmentInKey(fragment);
   }
 
 

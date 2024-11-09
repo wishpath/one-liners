@@ -89,7 +89,7 @@ public class OneLiners {
 
   private String logs =
       "Kibana - log and data visualization and exploration tool. Used in conjunction with OpenShift (or other).\n" +
-      "Logread - our system where logs are being stored in files.\n" +
+      "Logread - our system where logs are being stored in files.\n" + //is this external tool?
       "Loki - log aggregation system and time-series database that is part of the Grafana.\n" +
       "ELK - is an acronym that stands for Elasticsearch, Logstash, and Kibana.\n" +
       "Elasticsearch - search and analytics engine. Handles and analyzes large volumes of data in real-time.\n" +
@@ -147,7 +147,7 @@ public class OneLiners {
       "Kafka (1) - a platform orchestrating data flow\n" +
       "Kafka (2) - distributed event streaming platform for high-throughput, fault-tolerant data pipelines.\n" +
       "Kafka (3) - a platform orchestrating real-time, asynchronous communication between services, ensuring scalable, reliable data flow and event logging.\n" +
-      "Difference between Kafka and Kubernetes in the sense that both are platforms of orchestration - Kafka is the data traffic controller, while Kubernetes is the container traffic controller." +
+      "Difference between Kafka and Kubernetes in the sense that both are platforms of orchestration - Kafka is the data traffic controller, while Kubernetes is the container traffic controller.\n" +
       "Encapsulation - Hiding internal elements of object or service. Provides clear separation. Improves maintainability.\n" +
       "Technical debt - accumulated code imperfections.\n" +
       "SwiftUI - user interface framework developed by Apple for building apps across iOS, macOS, watchOS, and tvOS.\n" +
@@ -198,13 +198,17 @@ public class OneLiners {
       "Metadata - describes various aspects of data, such as its format, source, purpose, quality, and relationships with other data.\n" +
       "Pointcut - set of criteria that defines a certain point in the execution of a program.\n" +
       "Component scanning - method of configuration: annotations added to classes, attributes, and methods. Helps defining bean.\n" +
-      "Proxy pattern - creating placeholders for another object to control access to it, but it doesn't necessarily mean creating copies of the target object.\n" +
+      "Proxy pattern - creating placeholders for another object to control access to it, but it doesn't necessarily mean creating copies of the target object.\n" + //???
       "RDBMS - relational database management system.\n" +
       "DSL - Domain-Specific Language - syntax, designed for a specific problem domain, as opposed to being a general-purpose. Example: Thymeleaf provides DSL for HTML.\n" +
       "What is stereotype in Spring - role of class, marked by annotation. E.g.: @Controller @Service\n";
 
   private String react =
       "FDP - frontend development platform (example: React).\n" +
+      "JSON - JavaScript Object Notation - is a text-based data format representing objects, used for easy data exchange between systems.\n" +
+      "URL safe format - avoids special characters, making data suitable for transmission in URLs.\n" +
+      "token - secure, encoded string used to represent authentication, authorization, or session information digitally.\n" +
+      "JWT - JSON Web Token - compact, URL-safe token format used to securely encode, verify, and transmit information between parties, commonly for authentication and authorization purposes.\n" +
       "JSX - JavaScript as XML - is an HTML-like syntax used in React to create UI elements.";
 
   public String getQa() {
@@ -245,6 +249,10 @@ public class OneLiners {
 
   public String getSpring() {
     return spring;
+  }
+
+  public String getReact() {
+    return react;
   }
 
   public String getAllOneLiners() {
