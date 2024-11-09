@@ -70,5 +70,25 @@ public class MapMaker {
   }
 
 
+  public void printAllEntriesContainingFragmentInKey(String fragment) {
+    keyDefinition.entrySet()
+        .stream()
+        .filter(entry -> entry.getKey().toLowerCase().contains(fragment.toLowerCase()))
+        .forEach(entry -> {
+          System.out.println("\n" + entry.getKey() + ":");
+          System.out.println(entry.getValue());
+        });
+    System.out.println();
+  }
 
+  public void printAllEntriesContainingFragmentInKeyValue(String fragment) {
+    keyDefinition.entrySet()
+        .stream()
+        .filter(entry -> (entry.getKey() + " " + entry.getValue()).toLowerCase().contains(fragment.toLowerCase()))
+        .forEach(entry -> {
+          System.out.println("\n" + entry.getKey() + ":");
+          System.out.println(entry.getValue());
+        });
+    System.out.println();
+  }
 }
