@@ -1,4 +1,5 @@
-print in color. integrate color console module
+decide what prints in what color
+create colorApplyer that would have .applyRed("example text") or inRed
 
 
 evaluate:

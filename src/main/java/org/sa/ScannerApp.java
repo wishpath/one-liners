@@ -18,7 +18,7 @@ public class ScannerApp {
       System.out.println("Explain this: " + key);
       String input = scanner.nextLine().trim();
       if (input.isEmpty()) continue;
-      else if ("menu".equals(input)) System.out.println("skip - reloads key;\ndefine - defines current key;\ndefine all <fragment> - defines all keys containing fragment;\ndefine all all <fragment> - defines all keys and values containing fragment;\npick nth <fragment nth> - pick nth key containing fragment;\npick <fragment> - pick key containing fragment;\n? - include this symbol to get an answer;");
+      else if ("menu".equals(input)) printMenu();
       else if ("skip".equals(input) || "s".equals(input)) {reloadKey();}
       else if (input.startsWith("define all all ")) { printAllKeyValuesContainingFragment(input.substring("define all all ".length()));}
       else if (input.startsWith("define all ")) { printAllKeysContainingFragment(input.substring("define all ".length()));}
@@ -86,5 +86,9 @@ public class ScannerApp {
 
   private void printDefinition() {
     System.out.println(keyDefinition.getValue());
+  }
+
+  private static void printMenu() {
+    System.out.println("skip - reloads key;\ndefine - defines current key;\ndefine all <fragment> - defines all keys containing fragment;\ndefine all all <fragment> - defines all keys and values containing fragment;\npick nth <fragment nth> - pick nth key containing fragment;\npick <fragment> - pick key containing fragment;\n<fragment ?> - include question mark to get an answer;");
   }
 }

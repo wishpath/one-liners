@@ -2,6 +2,13 @@ package org.sa;
 
 public class OneLinersSwed {
 
+  private String esealing =
+      "E-seal - a proof that the document has integrity (not tampered).\n" +
+      "ESealing narrative - tellers use the STAR application to upload the prepared documents and add e-seals to them. Users access these documents through iBank.\n" +
+      "Seal Service - sorts and groups documents. Works on Andromeda.\n" +
+      "Signature Container Service - adds e-seals to documents. Works on Rancher 2.\n" +
+      "E-archive - stores documents. Works on Rancher 2.\n";
+
   private String swedbank =
       "PartyMDM - centralized Party Master Data Management solution used in Swedbank Baltic. Developed by Baltic Customer Data Domain team.\n" +
       "TIDY project - making sure data is being managed according to regulations.\n" +

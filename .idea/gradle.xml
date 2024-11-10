@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/.mod/ai-client" />
+            <option value="$PROJECT_DIR$/.mod/console-color" />
           </set>
         </option>
       </GradleProjectSettings>

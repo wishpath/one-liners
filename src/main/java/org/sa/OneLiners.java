@@ -97,14 +97,6 @@ public class OneLiners {
       "Full-text search - searching technique. Searches all content. Scores matching. Understands context, synonyms. Ignores overly common terms. Reduces words to steam: runner -> run.\n" +
       "Distributed computing - interconnected computers that work as a single system. Computers/nodes are in different locations and communicate with each other over a network.";
 
-  private String esealing =
-      "E-seal - a proof that the document has integrity (not tampered).\n" +
-      "ESealing narrative - tellers use the STAR application to upload the prepared documents and add e-seals to them. Users access these documents through iBank.\n" +
-      "Tamper - make illegal and/or damaging alteration.\n" +
-      "Seal Service - sorts and groups documents. Works on Andromeda.\n" +
-      "Signature Container Service - adds e-seals to documents. Works on Rancher 2.\n" +
-      "E-archive - stores documents. Works on Rancher 2.\n";
-
   private String databases =
       "Core - marks that database is main. But in our case there are only core databases so it's a bit meaningless, e.g. \"test_lt_core\".\n" +
       "Partition and sample - part of database table.\n" +
@@ -170,6 +162,7 @@ public class OneLiners {
       "Stakeholders - everyone with interest in outcome - customers/users, APO, analysts, team, testers, manager, regulatory authorities, security, leadership, marketing, support, customer service etc.\n" +
       "YubiKey - A flash drive for security purposes on a Mac.\n" +
       "WoW - way of working.\n" +
+      "Hungarian pollution - overusing type prefixes in variable names.\n" +
       "CFT - cross functional team - individuals with different areas of expertise.\n" +
       "Value stream - sequence of processes, company uses to deliver product. Encompasses all the steps. May include insights into the efficiency, bottlenecks, areas for improvements.\n" +
       "Life cycle management - managing the entire lifespan of a product. Includes initial concept, development through usage, maintenance and retirement.\n";
@@ -227,10 +220,6 @@ public class OneLiners {
     return logs;
   }
 
-  public String getEsealing() {
-    return esealing;
-  }
-
   public String getDatabases() {
     return databases;
   }
@@ -256,6 +245,6 @@ public class OneLiners {
   }
 
   public String getAllOneLiners() {
-    return qa + containerisation + apis + logs + esealing + databases + regulations + softwareEngineering + other + spring + react;
+    return qa + containerisation + apis + logs + databases + regulations + softwareEngineering + other + spring + react;
   }
 }
