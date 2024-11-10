@@ -1,3 +1,6 @@
 [submodule ".mod/ai-client"]
 	path = .mod/ai-client
 	url = https://github.com/wishpath/ai-client.git
+[submodule ".mod/console-color"]
+	path = .mod/console-color
+	url = https://github.com/wishpath/console-color.git
