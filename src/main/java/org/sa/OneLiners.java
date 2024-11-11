@@ -19,7 +19,7 @@ public class OneLiners {
       "Agile Test Quadrants - concept categorizing types of testing. Based on two axes: technology-facing and business-facing.\n" +
       "Test data management for entreprise - meeting the needs of an organization rather than specific individual or teams needs.\n" +
       "GPA - general purpose app.\n" +
-      "Integrated test environment -  test environment that closely resembles the production environment.\n" +
+      "Integrated test environment - test environment that closely resembles the production environment.\n" +
       "SLI - Service Level Indicator - Metric measuring system performance.\n" +
       "SLO - Service Level Objective - Target level of performance for reliability.\n" +
       "Error budget - Maximum allowable errors metric in a system within a specified time frame for reliability.\n" +
@@ -63,14 +63,14 @@ public class OneLiners {
       "Garbage collection - is an automated process that identifies and frees up memory.\n" +
       "Microservice - independent part of application for a specific function.\n" +
       "Namespace (1) - In networking, namespaces can refer to isolated environments where different systems or applications can have their own unique identifiers without conflicting with others.\n" +
-      "Namespace (2) - way to divide cluster resources between multiple users (or multiple projects or teams) on a single cluster.  Within a namespace, you can have pods, services, deployments, and other resources.\n" +
+      "Namespace (2) - way to divide cluster resources between multiple users (or multiple projects or teams) on a single cluster. Within a namespace, you can have pods, services, deployments, and other resources.\n" +
       "PV - Persistent Volume - storage resource that exists independently of a container. Managed by administrator/ platform.\n" +
       "PVC - Persistent Volume Claim - request for PV storage by a user.\n" +
       "Helm - package manager for Kubernetes - setts up and manages applications - uses pre-configured packages containing all the necessary resources: services, deployments, and configuration files, needed to run a specific application.\n" +
       "Helm chart - package / set of files. Organized into a directory structure. Often reference container images as part of their configurations.\n" +
       "Container image - executable package that includes everything needed to run a piece of software, including the code, runtime, libraries, and system tools.\n" +
-      "Base Java Docker image - serves as the foundation for running Java applications within a Docker container.  Provides the foundational environment and Java runtime for running Java applications within a container.\n" +
-      "YAML - (YAML Ain't Markup Language) -  is a human-readable data serialization format. Like XML or JSON.\n" +
+      "Base Java Docker image - serves as the foundation for running Java applications within a Docker container. Provides the foundational environment and Java runtime for running Java applications within a container.\n" +
+      "YAML - (YAML Ain't Markup Language) - is a human-readable data serialization format. Like XML or JSON.\n" +
       "Haselcast - software to distribute data and computing load over nodes. Provides parallel processing and in-memory data grid.\n" +
       "IMDG - An in-memory data grid - distributed computing technology that stores and manages data in RAM memory.\n" +
       "DC - datacenter - building to house computer systems. includes: telecommunications, storage systems, backup power supplies, redundant data communications connections, etc.\n" +
@@ -113,7 +113,7 @@ public class OneLiners {
       "DSS - data security standard.\n" +
       "PCI DSS - Payment Card Industry Data Security Standard - ensures the secure handling of credit card information during payment transactions.\n" +
       "AFC - anti financial crime.\n" +
-      "Java EE - Java Enterprise Edition -  platform, which provides a set of specifications for building enterprise-level applications.\n" +
+      "Java EE - Java Enterprise Edition - platform, which provides a set of specifications for building enterprise-level applications.\n" +
       "Enterprise-level - scale, complexity, and requirements to meet the needs of large organizations.\n";
 
   private String softwareEngineering =
@@ -152,7 +152,7 @@ public class OneLiners {
       "Framework - reusable and extensible structure that helps building applications.\n" +
       "Factory - patterns that provide an interface for creating instances of a class, but allow subclasses to alter the type of objects that will be created.\n" +
       "Wireshark - app for network troubleshooting.\n" +
-      "Gateway - A computer that sits between different networks or applications. The gateway converts data from one protocol format to another.\n" +
+      "Gateway - A computer that sits between different networks or applications. The gateway converts data from one protocol format to another.\n" +
       "hashing - transforming data into a fixed-size code. Deterministic. One hash code can mean multiple original data (collision case).\n" +
       "Gateway team in an enterprise - ensures a secure digital environment by managing network security, access controls, and incident response protocols to safeguard data effectively.\n";
 
@@ -183,7 +183,7 @@ public class OneLiners {
       "JPA - Java Persistence API - Java specification for managing relational data in Java applications. It provides a standard way to map Java objects to database tables and vice versa.\n" +
       "Hibernate - ORM framework for the Java - forerunner of JPA.\n" +
       "JPQL - Java Persistence Query Language - interacts with databases in a platform-independent way. Automatic translation to actual SQL query depending on platform. Used with JPA.\n" +
-      "Web container - servlet container or servlet engine - component of a server that manages the execution of servlets and Java Server Pages (JSP). \n" +
+      "Web container - servlet container or servlet engine - component of a server that manages the execution of servlets and Java Server Pages (JSP).\n" +
       "JSP - Java Server Pages - allows Java code directly within HTML pages. Provides tags for iteration, conditionals, and formatting.\n" +
       "Liferay - portal and content management system (CMS) written in Java. Provides a platform for building websites and various web apps.\n" +
       "Web portal - platform - provides access to services.\n" +
