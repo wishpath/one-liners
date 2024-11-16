@@ -55,10 +55,13 @@ public class OneLiners {
       "Docker - container runtime.\n" +
       "Rancher - container management platform - manages workloads, deploys, scales containerized applications. Uses container runtime Kubernetes (Docker or other). Sets it's clusters.\n" +
       "Is Rancher a container orchestration platform?  - not a container orchestration platform itself, but it is a management platform for container orchestration and Kubernetes. Provides a user-friendly interface and tools for deploying, configuring.\n" +
-      "Andromeda functions - Application Development Platform - with managed services such as containers, monitoring, logging, traceability, caching, etc., for developing, deploying and operating cloud native applications.\n" +
-      "Andromeda context - Application Development Platform - runs your applications inside containers that is deployed in a Kubernetes cluster. Andromeda is a part of OpenShift. And OpenShift is built on Kubernetes.\n" +
+      "Andromeda - Application Development Platform - supports the development, deployment, and operation of cloud-native applications.\n" +
+      "How does Andromeda relate to OpenShift and Kubernetes? - Andromeda is a part of OpenShift, which is built on Kubernetes. Andromeda runs applications inside containers that are deployed in a Kubernetes cluster.\n" +
+      "Managed services - subset of services that focus on ongoing management, maintenance, and support.\n" +
+      "Managed services of Andromeda - Containers, monitoring, logging, traceability, caching, etc.\n" +
       "Kubernetes - container orchestration platform.\n" +
-      "OpenShift - is built on top of Kubernetes and extends its capabilities with additional features for application development, deployment, and operations.\n" +
+      "How does OpenShift relate to Kubernetes? - OpenShift is built on top of Kubernetes, extending its capabilities with additional features.\n" +
+      "OpenShift - container orchestration platform - automates the development, deployment, and management of containerized applications.\n" +
       "Throttling - intentional limitation or control of certain resources, actions, or processes within an app or a system.\n" +
       "Garbage collection - is an automated process that identifies and frees up memory.\n" +
       "Microservice - independent part of application for a specific function.\n" +
@@ -150,7 +153,7 @@ public class OneLiners {
       "Aspect - oriented programming - way to separate functionality. Example: logging specific method can be triggered from separate class.\n" +
       "Boilerplate - sections of code that have to be included in many places with little or no alteration.\n" +
       "Framework - reusable and extensible structure that helps building applications.\n" +
-      "Factory - patterns that provide an interface for creating instances of a class, but allow subclasses to alter the type of objects that will be created.\n" +
+      "Factory design pattern - provides an interface for creating instances of a class, allowing subclasses to alter the type of objects that will be created.\n" +
       "Wireshark - app for network troubleshooting.\n" +
       "Gateway - A computer that sits between different networks or applications. The gateway converts data from one protocol format to another.\n" +
       "hashing - transforming data into a fixed-size code. Deterministic. One hash code can mean multiple original data (collision case).\n" +
