@@ -97,7 +97,8 @@ public class OneLiners {
       "ELK - is an acronym that stands for Elasticsearch, Logstash, and Kibana.\n" +
       "Elasticsearch - search and analytics engine. Handles and analyzes large volumes of data in real-time.\n" +
       "Logstash - data processing pipeline. Ingests, transforms, and enriches data. Often used for logs.\n" +
-      "Full-text search - searching technique. Searches all content. Scores matching. Understands context, synonyms. Ignores overly common terms. Reduces words to steam: runner -> run.\n" +
+      "Full-text search - searching technique. Scores matching. Understands synonyms. Ignores overly common terms. Reduces words to stems: runner -> run.\n" +
+      "Stop Word Filtering - ignoring frequently occurring, non-informative words (e.g., \"the,\" \"and\") to enhance search efficiency and relevance.\n" +
       "Distributed computing - interconnected computers that work as a single system. Computers/nodes are in different locations and communicate with each other over a network.";
 
   private String databases =

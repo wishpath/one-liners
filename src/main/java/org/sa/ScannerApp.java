@@ -19,10 +19,13 @@ public class ScannerApp {
       String input = scanner.nextLine().trim();
       if (input.isEmpty()) continue;
       else if ("menu".equals(input)) printMenu();
-      else if ("skip".equals(input) || "s".equals(input)) {reloadKey();}
-      else if (input.startsWith("define all all ")) { printAllKeyValuesContainingFragment(input.substring("define all all ".length()));}
-      else if (input.startsWith("define all ")) { printAllKeysContainingFragment(input.substring("define all ".length()));}
-      else if ("define".equals(input)) System.out.println(definition);
+      else if ("skip".equals(input) || "s".equals(input)) {
+        reloadKey();
+      } else if (input.startsWith("define all all ")) {
+        printAllKeyValuesContainingFragment(input.substring("define all all ".length()));
+      } else if (input.startsWith("define all ")) {
+        printAllKeysContainingFragment(input.substring("define all ".length()));
+      } else if ("define".equals(input)) System.out.println(definition);
 //      else if (input.startsWith(EDIT)) {
 
 //        printDefinition();
@@ -35,15 +38,13 @@ public class ScannerApp {
         if (!searchFor.matches(endsWithSpaceDigitsPattern)) {
           System.out.println("no match");
           reloadKey(input.substring("pick nth ".length()));
-        }
-        else {
+        } else {
           String fragment = searchFor.replaceAll(endsWithSpaceDigitsPattern, "$1");
           int nth = Integer.parseInt(searchFor.replaceAll(endsWithSpaceDigitsPattern, "$2"));
           System.out.println(fragment + " " + nth);
           reloadKey(fragment, nth);
         }
-      }
-      else if (input.startsWith("pick ")) reloadKey(input.substring("pick ".length()));
+      } else if (input.startsWith("pick ")) reloadKey(input.substring("pick ".length()));
       else if (input.contains("?")) System.out.println(ai.getAnswer(input));
       else {
         System.out.println(ai.getAnswer(
