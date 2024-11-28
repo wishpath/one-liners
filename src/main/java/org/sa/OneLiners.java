@@ -106,7 +106,8 @@ public class OneLiners {
       "Partition and sample - part of database table.\n" +
       "NOT IN (sql) - operator, !=\n" +
       "DBA - database administrators.\n" +
-      "CTE - Common Table Expression - result set of a query which exists temporarily and for use only within the context of a larger query.\n";
+      "CTE (1) - Common Test Environment.\n" +
+      "CTE (2) - Common Table Expression - result set of a query which exists temporarily and for use only within the context of a larger query.\n";
 
   private String regulations =
       "DORA - Digital Operational Resilience Act - EU rules rules for financial institutions to manage unforeseen data disruption incidents.\n" +
@@ -122,13 +123,14 @@ public class OneLiners {
 
   private String softwareEngineering =
       "ORM - Object-Relational Mapping - interaction between a database and OOP. database operations are performed using objects and classes rather than raw SQL queries. E.g.: Hibernate for Java.\n" +
-      "Hash - unique representation of the input data. Used for encryption, integrity verification, indexing etc. Deterministic, fixed output size, irreversible, collision resistant.\n" +
-      "Deterministic - same input will always produce the same outcome.\n" +
-      "Irreversible - not possible obtain the original input from the outcome.\n" +
+      "hash - unique representation of the input data. Used for encryption, integrity verification, indexing etc. Deterministic, fixed output size, irreversible, collision resistant.\n" +
+      "deterministic - same input will always produce the same outcome.\n" +
+      "credential - username, password, or token, used to authenticate and authorize a user.\n" +
+      "irreversible data transformation - not possible to obtain the original input from the outcome.\n" +
       "Collision resistant - different inputs should not produce the same outcome.\n" +
       "Memoization technique - storing the results of expensive function calls and return the cached result when the same inputs occur again.\n" +
       "AD - architecture description.\n" +
-      "Deploying - making app available on a target environment. For example production environment.\n" +
+      "deploying - making app available on a target environment. For example production environment.\n" +
       "VPN - Virtual Private Network - encrypted and tunneled connection to trusted remote server, where your identity is hidden, but all the data in the internet accessed.\n" +
       "DevOps - practices, principles, and cultural philosophies. The primary goal is to automate the process of software delivery and infrastructure changes.\n" +
       "SSL (1) - Secure Sockets Layer - standard security protocol that encrypts the communication between a web server and a browser to protect sensitive information.\n" +
@@ -137,8 +139,8 @@ public class OneLiners {
       "PR - public release.\n" +
       "DNS - Domain Name System - maps user - friendly domain names to numeric IP addresses.\n" +
       "Subnet - subnetwork - segment of a larger network. Subnetting improves network performance, security, and organization.\n" +
-      "Synchronous - each next task starts when previous one ends.\n" +
-      "Asynchronous - each next task starts without previous one ending. Task become concurrent.\n" +
+      "synchronous - each next task starts when previous one ends.\n" +
+      "asynchronous - each next task starts without previous one ending. Task become concurrent.\n" +
       "Real-time data flow - Continuous, asynchronous transfer and processing of data as events occur\n" +
       "Kafka (1) - a platform orchestrating data flow\n" +
       "Kafka (2) - distributed event streaming platform for high-throughput, fault-tolerant data pipelines.\n" +
