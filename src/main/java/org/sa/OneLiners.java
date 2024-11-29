@@ -210,6 +210,30 @@ public class OneLiners {
       "JWT - JSON Web Token - compact, URL-safe token format used to securely encode, verify, and transmit information between parties, commonly for authentication and authorization purposes.\n" +
       "JSX - JavaScript as XML - is an HTML-like syntax used in React to create UI elements.";
 
+  private String concepts =
+      "abstraction (1) - process of hiding complex implementation details and showing only the necessary features.\n" +
+          "abstraction (2) - helps to manage complexity by hiding implementation details and exposing only essential features.\n" +
+          "abstraction (3) - examples: Interfaces, Abstract Classes, Modules and Packages, APIs (Application Programming Interfaces), Design Patterns (e.g., Facade Pattern, Decorator Pattern), Layered Architecture, Frameworks and Libraries, Database ORM (Object-Relational Mapping), Microservices, Virtual Machines and Containers.\n" +
+          "interface - only shows what methods the implementing classes has to implement.\n" +
+          "abstract class - both shows what methods the extending classes has to implement and can implement some shared code.\n" +
+          "coupling - degree of interdependence between software modules.\n" +
+          "high coupling example - class A uses the whole class B, instead of just using some string that is needed from class B field.\n" +
+          "cohesion - degree to which elements of a module or class are related and work together to achieve a single purpose.\n" +
+          "cohesion example - A UserManager class with methods createUser, deleteUser, and updateUser has high cohesion, focusing solely on user management.\n" +
+          "example of good cohesion but poor separation of concerns - A DocumentManager class with methods for createDocument, formatDocument, and saveDocument demonstrates good cohesion (all methods are related to document management) but poor separation of concerns (handles multiple unrelated aspects of document handling).\n" +
+          "example of good separation of concerns for a DocumentManager class - A DocumentManager class that only manages high-level operations like createDocument and manageDocumentLifecycle, while delegating detailed tasks like document creation to a DocumentFactory, formatting to a Formatter, and saving to a StorageService.\n" +
+          "key Components of Continuous Integration - VCS (e.g. Git), automated builds for compiling and error checking, automated tests, continuous feedback for immediate issue resolution, and a build server (e.g., Jenkins) to monitor VCS and trigger builds/tests.\n" +
+          "example of bounded contexts - an e-commerce system with User Management (user registration, authentication, profile management), Order Processing (orders, payments, order statuses), and Inventory Management (stock levels, suppliers, product information).\n" +
+          "bounded - having specific business areas and functions (distinct from other contexts), isolation (no direct impact on other contexts), contextual meaning (terms and concepts are unambiguous only within the context), and autonomy (independent evolution and management).\n" +
+          "domain - The broader problem space or business area that includes various contexts or subdomains, each with its own specific model and logic.\n" +
+          "context (Bounded Context) - A defined boundary within the domain that isolates a particular model and ensures consistent terminology and rules within that specific area.\n" +
+          "ubiquitous language - shared, common, used by both domain experts and developers to describe and discuss the domain model.\n" +
+          "domain model - software implementation of a business area.\n" +
+          "non-semantic message - you essentially strip away the contextual and descriptive information, leaving behind only the raw data without additional meaning or context.\n" +
+          "semantic message - raw data + metadata\n" +
+          "example of a semantic registration message (JSON) - Raw Data: Includes fields such as userId, username, email, registrationDate, and status; Metadata: Includes contextual information like registrationSource, referralCode, and ipAddress, as well as the verification status.\n";
+
+
   public String getQa() {
     return qa;
   }
@@ -250,7 +274,11 @@ public class OneLiners {
     return react;
   }
 
+  public String getConcepts() {
+    return concepts;
+  }
+
   public String getAllOneLiners() {
-    return qa + containerisation + apis + logs + databases + regulations + softwareEngineering + other + spring + react;
+    return qa + containerisation + apis + logs + databases + regulations + softwareEngineering + other + spring + react + concepts;
   }
 }
