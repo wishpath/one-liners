@@ -9,7 +9,7 @@ public class Dictionary {
       "trivial names - names should clearly convey their purpose, making their intent immediately obvious.\n" +
       "non-trivial complexity - isolate unavoidable complexity to keep the rest of the code clean and simple.\n";
 
-  private String generalEnglish =
+  private String generalEnglishFromLithuanian =
       "įsijausti - immerse in, get absorbed in, engage in, get into\n" +
       "graužti - gnaw\n";
 }
