@@ -8,4 +8,14 @@ public class Dictionary {
       "trivial solutions - favor the simplest solutions over overcomplicated designs or abstractions.\n" +
       "trivial names - names should clearly convey their purpose, making their intent immediately obvious.\n" +
       "non-trivial complexity - isolate unavoidable complexity to keep the rest of the code clean and simple.\n";
+
+  private String generalEnglishFromLithuanian =
+      "įsijausti - immerse in, get absorbed in, engage in, get into\n" +
+      "kandis - moth\n" +
+      "kolibris - hummingbird\n" +
+      "širšė - hornet\n" +
+      "žuvėdra - seagull\n" +
+      "kakadu - cockatoo\n" +
+      "gandras - stork\n" +
+      "graužti - gnaw\n";
 }
