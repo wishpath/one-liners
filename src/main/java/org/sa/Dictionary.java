@@ -11,5 +11,11 @@ public class Dictionary {
 
   private String generalEnglishFromLithuanian =
       "įsijausti - immerse in, get absorbed in, engage in, get into\n" +
+      "kandis - moth\n" +
+      "kolibris - hummingbird\n" +
+      "širšė - hornet\n" +
+      "žuvėdra - seagull\n" +
+      "kakadu - cockatoo\n" +
+      "gandras - stork\n" +
       "graužti - gnaw\n";
 }
