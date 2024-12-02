@@ -17,5 +17,9 @@ public class Dictionary {
       "žuvėdra - seagull\n" +
       "kakadu - cockatoo\n" +
       "gandras - stork\n" +
+      "nejauku - awkward, uncomfortable\n" +
       "graužti - gnaw\n";
+
+  private String generalEnglishToDefinitions =
+      "outrageous - shocking and morally unacceptable. (Begėdiškas)\n";
 }
