@@ -21,5 +21,6 @@ public class Dictionary {
       "graužti - gnaw\n";
 
   private String generalEnglishToDefinitions =
-      "outrageous - shocking and morally unacceptable. (Begėdiškas)\n";
+      "outrageous - shocking and morally unacceptable. (Begėdiškas)\n" +
+      "humongous - extremely large\n";
 }
