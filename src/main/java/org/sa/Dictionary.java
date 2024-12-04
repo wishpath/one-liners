@@ -18,9 +18,15 @@ public class Dictionary {
       "kakadu - cockatoo\n" +
       "gandras - stork\n" +
       "nejauku - awkward, uncomfortable\n" +
+      "priskirti - assign\n" +
       "graužti - gnaw\n";
 
   private String generalEnglishToDefinitions =
       "outrageous - shocking and morally unacceptable. (Begėdiškas)\n" +
       "humongous - extremely large\n";
+
+  private String workUsefulEnglish =
+      "diligence - careful or persistent work\n" +
+      "facility - building\n" +
+      "\n";
 }
