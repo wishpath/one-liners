@@ -1,201 +1,84 @@
-mitigate - make less severe.
-
 operational risk - risk of loss in the result of: internal process, pleople, system, external events
-
-comply - meet specific standards
-
 common means frequent; ubiquitous means present everywhere
-
 thoroughness - being in regard to every detail.
-
 CDD - Customer Due Dilligence - performing customer checks
-
-onboarding - integration into organisation
-
-due - adequate
-
 pipeline - process of building, testing and deploying. Often associated with automatisation.
-
 CI/CD pipeline - continuous - integration, delivery, deployment
-
 operations specialist - takes care of IT infrastructure: severs, networks, hardware. Deploys and configures software apps
-
-vague - unclear, imprecise, not clearly defined
-
 exponent - a quantity representing the power to which a given number or expression is to be raised. in 3^2, 2 is an exponent. 3 is a base.
-
 credential - information, proof of the identity or authorization of an entity (such as a user or a system).Include: username and password, API keys, certificates, tokens, biometric data.
-
 microcosm - miniature containing characteristic features of something much larger.
-
-fetch - go, get it and bring it back.
-
-retrieve - get back, bring back; regain possession of.
-
 veneer - thin layer of material applied over another to provide a decorative or protective finish.
-
-to stash - to hide sth.
-
 git stash -  to temporarily save changes (that are not ready to be committed) to a temporary storage, that can be retrieved later.
-
 secret - kubernetes resource to store sensitive data as a key value pair in etcd. secrets can be read by cluster admins, namespace admins, users with RBAC permissions
-
 RBAC - role based access controll.
-
 Etcd - configuration data, metadata that needs to be shared among nodes in a distributed system. Name comes from etc(et cetera) folder where system configuration is stored (linux), d - distributed.
-
-
-
 Secret (yaml):
-
 apiVersion: v1
-
 kind: Secret
-
 metadata:
-
   name: example-secret
-
   namespace: mynamespace
-
 type: Opaque
-
 data:
-
   username: YWRtaW4=   # Base64-encoded "admin"
-
   password: cGFzc3dvcmQ=   # Base64-encoded "password"
-
-
-
 RABC (yaml) :
-
 apiVersion: rbac.authorization.k8s.io/v1
-
 kind: Role
-
 metadata:
-
   name: secret-reader
-
   namespace: mynamespace
-
 rules:
-
 - apiGroups: [""]
-
   resources: ["secrets"]
-
   verbs: ["get", "list", "watch"]
-
-
-
-
-
  VDE - value delivery engine - agile combination of teams, that has a common goal. Has PI meeting every 10 weeks. Can be large group - VDE1 - "train". And can be medium group - VDE2 - "tram".
-
 PI Planning - Program Increment Planning.
-
 L&P - team: Lifecycle and Performance.
-
-
 Jar hell - challenges arising from conflicts or compatibility issues between different versions of Java Archive (JAR) files, often encountered in projects with multiple dependencies.
-
-
-
 intrusive - įkyrus, nepageidaujamas, keliantis trikdžius, trukdandtis
-
 hub - central point, where things are executed
-
 node - machine with individual instance
-
 assess - evaluate/ estimaate quality of
-
 mitigate - sumažinti/sušvelninti
-
 substitution - replacement
-
-verbose - using too many words
-
 opinionated - having specific way of doing things. generaly - having strong inclination to a particular set of opinions, beliefs, or principles.
-
-enhanced - strengthened
-
-credibility - quality of being trusted
-
 e.g. - exampli gratia - example, for sake of
-
 integrity (of documents) -  quality of being accurate, complete, unaltered, untampered
-
-tamper - make illegal or/and damaging alterations
-
-seal - antspaudas, izoliacinis sluoksnis, patvirtinimas
-
 dispatcher
-
 overdue
-
 remediation - fixing or mitigating of vulnerabilities
-
 consonance - state of being in agreement
-
 proprietary - belonging to company
-
 facilitate meeting
-
 efficacy
-
 redundancy
-
 due diligence
-
 gateway - tarpuvartė, įėjimas
-
 commissioning - bring (something newly produced, such as a factory or machine) into working condition. "we had a few hiccups getting the heating equipment commissioned"
-
 DPIA - Data Protection Impact Assessment - process identifying and minimising risks of the processing of personal.
-
 TDC - ??test data compliance
-
 GCT - ??general compliance teseting
-
 Build - entire process for execution - compiling source files, linking libraries, and packaging resources into a distributable format
-
 Assemble - specific phase within the build process - collecting and combining individual components into larger units.
-
 perteklinis - redundant, excess, surplus
-
 legal person - legal personality, legal entity, juridical person
-
 "Vague" refers to something that is not clearly defined, expressed, or stated
-
 Defensive programming - ensuring that software behaves as expected even when encountering unexpected inputs or conditions. Input validation, Error handling, Robustness, Fail-safe defaults, Clear documentation
-
 overlay - (web) - graphical element that is superimposed on top of another elements, typically to display additional content or provide a focused interaction area.
-
 present() - method in fluentlenium that checkts if the element is there in the DOM.
 pagination - sequence of numbers assigned to pages.
-
 landing page - entry point for a particular section of a website. Promts a specific action from visitors, such as making a purchase, signing up for a newsletter, downloading a resource, or filling out a form.
-
 to prompt - paskatinti, encourage (a hesitating speaker) to say something.
-
 either
-
 pivot
-
 due dilligence
-
 paradigm
-
 cog wheel
-
 PI planning
 raft
-
 Kay vault - cloud where everything will be migrated
-
 OKR - objectives and key requirements
-
 cte-common test environment
 Conversational banking uses AI-driven chat interfaces to provide personalized banking support, allowing customers to conduct transactions and access services through messaging.
