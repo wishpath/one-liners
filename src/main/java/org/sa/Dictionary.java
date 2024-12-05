@@ -28,5 +28,18 @@ public class Dictionary {
   private String workUsefulEnglish =
       "diligence - careful or persistent work\n" +
       "facility - building\n" +
+      "comply - meet specific standards\n" +
+      "due - adequate\n" +
+      "mitigate - make less severe\n" +
+      "onboarding - integration into organisation\n" +
+      "vague - unclear, imprecise, not clearly defined\n" +
+      "fetch - go, get it and bring it back\n" +
+      "retrieve - get back, bring back; regain possession of\n" +
+      "to stash - to hide sth.\n" +
+      "verbose - using too many words\n" +
+      "enhanced - strengthened\n" +
+      "tamper - make illegal or/and damaging alterations\n" +
+      "seal - antspaudas, izoliacinis sluoksnis, patvirtinimas\n" +
+      "credibility - quality of being trusted\n" +
       "\n";
 }
