@@ -19,10 +19,14 @@ public class Dictionary {
       "gandras - stork\n" +
       "nejauku - awkward, uncomfortable\n" +
       "priskirti - assign\n" +
+      "gateway - tarpuvartė, įėjimas\n" +
+      "perteklinis - redundant, excess, surplus\n" +
       "graužti - gnaw\n";
 
   private String generalEnglishToDefinitions =
       "outrageous - shocking and morally unacceptable. (Begėdiškas)\n" +
+      "consonance - state of being in agreement\n" +
+      "veneer - thin layer of material applied over another to provide a decorative or protective finish.\n" +
       "humongous - extremely large\n";
 
   private String workUsefulEnglish =
@@ -41,5 +45,12 @@ public class Dictionary {
       "tamper - make illegal or/and damaging alterations\n" +
       "seal - antspaudas, izoliacinis sluoksnis, patvirtinimas\n" +
       "credibility - quality of being trusted\n" +
+      "thoroughness - being in regard to every detail.\n" +
+      "exponent - a quantity representing the power to which a given number or expression is to be raised. in 3^2, 2 is an exponent. 3 is a base.\n" +
+      "credential - information, proof of the identity or authorization of an entity (such as a user or a system).Include: username and password, API keys, certificates, tokens, biometric data.\n" +
+      "e.g. - exampli gratia - example, for sake of\n" +
+      "remediation - fixing or mitigating of vulnerabilities\n" +
+      "proprietary - belonging to company\n" +
+      "assess - evaluate/ estimaate quality of\n" +
       "\n";
 }
