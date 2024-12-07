@@ -4,7 +4,6 @@ CDD - Customer Due Dilligence - performing customer checks
 pipeline - process of building, testing and deploying. Often associated with automatisation.
 CI/CD pipeline - continuous - integration, delivery, deployment
 operations specialist - takes care of IT infrastructure: severs, networks, hardware. Deploys and configures software apps
-microcosm - miniature containing characteristic features of something much larger.
 git stash -  to temporarily save changes (that are not ready to be committed) to a temporary storage, that can be retrieved later.
 secret - kubernetes resource to store sensitive data as a key value pair in etcd. secrets can be read by cluster admins, namespace admins, users with RBAC permissions
 RBAC - role based access control.
@@ -13,20 +12,14 @@ VDE - value delivery engine - agile combination of teams, that has a common goal
 PI Planning - Program Increment Planning.
 L&P - team: Lifecycle and Performance.
 Jar hell - challenges arising from conflicts or compatibility issues between different versions of Java Archive (JAR) files, often encountered in projects with multiple dependencies.
-intrusive - įkyrus, nepageidaujamas, keliantis trikdžius, trukdandtis
 hub - central point, where things are executed
 node - machine with individual instance
-mitigate - sumažinti/sušvelninti
-substitution - replacement
-opinionated - having specific way of doing things. generaly - having strong inclination to a particular set of opinions, beliefs, or principles.
-integrity (of documents) -  quality of being accurate, complete, unaltered, untampered
 dispatcher
 overdue
 facilitate meeting
 efficacy
 redundancy
 due diligence
-commissioning - bring (something newly produced, such as a factory or machine) into working condition. "we had a few hiccups getting the heating equipment commissioned"
 DPIA - Data Protection Impact Assessment - process identifying and minimising risks of the processing of personal.
 TDC - ??test data compliance
 GCT - ??general compliance teseting
@@ -37,9 +30,7 @@ legal person - legal personality, legal entity, juridical person
 Defensive programming - ensuring that software behaves as expected even when encountering unexpected inputs or conditions. Input validation, Error handling, Robustness, Fail-safe defaults, Clear documentation
 overlay - (web) - graphical element that is superimposed on top of another elements, typically to display additional content or provide a focused interaction area.
 present() - method in fluentlenium that checkts if the element is there in the DOM.
-pagination - sequence of numbers assigned to pages.
 landing page - entry point for a particular section of a website. Promts a specific action from visitors, such as making a purchase, signing up for a newsletter, downloading a resource, or filling out a form.
-to prompt - paskatinti, encourage (a hesitating speaker) to say something.
 either
 pivot
 due dilligence

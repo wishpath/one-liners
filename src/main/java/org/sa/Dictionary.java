@@ -23,11 +23,18 @@ public class Dictionary {
       "perteklinis - redundant, excess, surplus\n" +
       "graužti - gnaw\n";
 
+  private String englishToLithuanian =
+      "mitigate - sumažinti/sušvelninti\n" +
+      "\n";
+
   private String generalEnglishToDefinitions =
       "outrageous - shocking and morally unacceptable. (Begėdiškas)\n" +
       "consonance - state of being in agreement\n" +
       "veneer - thin layer of material applied over another to provide a decorative or protective finish.\n" +
-      "humongous - extremely large\n";
+      "humongous - extremely large\n" +
+      "microcosm - miniature containing characteristic features of something much larger\n" +
+      "opinionated - having specific way of doing things. generaly - having strong inclination to a particular set of opinions, beliefs, or principles.\n" +
+      "\n";
 
   private String workUsefulEnglish =
       "diligence - careful or persistent work\n" +
@@ -52,5 +59,11 @@ public class Dictionary {
       "remediation - fixing or mitigating of vulnerabilities\n" +
       "proprietary - belonging to company\n" +
       "assess - evaluate/ estimaate quality of\n" +
+      "substitution - replacement\n" +
+      "pagination - sequence of numbers assigned to pages\n" +
+      "to prompt - paskatinti, encourage (a hesitating speaker) to say something\n" +
+      "integrity (of documents) -  quality of being accurate, complete, unaltered, not tampered\n" +
+      "intrusive - įkyrus, nepageidaujamas, keliantis trikdžius, trukdandtis\n" +
+      "commissioning - bring (something newly produced, such as a factory or machine) into working condition. \"we had a few hiccups getting the heating equipment commissioned\"\n" +
       "\n";
 }
