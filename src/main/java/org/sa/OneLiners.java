@@ -79,7 +79,9 @@ public class OneLiners {
       "DC - datacenter - building to house computer systems. includes: telecommunications, storage systems, backup power supplies, redundant data communications connections, etc.\n" +
       "Cloud - services over the internet, such as storage, processing power, databases, networking, software, and analytics. Instead of relying on local devices.\n" +
       "SSH - Secure Shell key - pair of cryptographic keys (public and private) - used to authenticate and secure communication over a network.\n" +
-      "NFS - Network File System - for accessing files over a network as if they were on a local file system.\n";
+      "NFS - Network File System - for accessing files over a network as if they were on a local file system.\n" +
+      "secret - kubernetes resource to store sensitive data as a key value pair in etcd. secrets can be read by cluster admins, namespace admins, users with RBAC permissions\n" +
+      "\n";
 
   private String apis =
       "API - Application Programming Interface - set of rules and protocols that allows different software applications to communicate.\n" +
@@ -130,6 +132,25 @@ public class OneLiners {
       "Collision resistant - different inputs should not produce the same outcome.\n" +
       "Memoization technique - storing the results of expensive function calls and return the cached result when the same inputs occur again.\n" +
       "AD - architecture description.\n" +
+      "Assemble - specific phase within the build process - collecting and combining individual components into larger units.\n" +
+      "pipeline - process of building, testing and deploying. Often associated with automatisation.\n" +
+      "PI Planning - Program Increment Planning.\n" +
+      "OKR - objectives and key requirements.\n" +
+      "operational risk - risk of loss in the result of: internal process, people, system, external events.\n" +
+      "CI/CD pipeline - continuous - integration, delivery, deployment.\n" +
+      "CDD - Customer Due Dilligence - performing customer checks.\n" +
+      "hub - central point, where things are executed.\n" +
+      "node - machine with individual instance.\n" +
+      "PI planning - Program Increment planning - aligns teams, sets objectives, and plans iterations collaboratively.\n" +
+      "TDC - test data compliance - test data meets standards and regulations.\n" +
+      "GCT - general compliance testing - testing processes to meet standards and regulations.\n" +
+      "landing page - entry point for a particular section of a website. Prompts a specific action from visitors, such as making a purchase, signing up for a newsletter, downloading a resource, or filling out a form.\n" +
+      "overlay - (web) - graphical element that is superimposed on top of another elements, typically to display additional content or provide a focused interaction area.\n" +
+      "build - entire process for execution - compiling source files, linking libraries, and packaging resources into a distributable format\n.\n" +
+      "Jar hell - challenges arising from conflicts or compatibility issues between different versions of Java Archive (JAR) files, often encountered in projects with multiple dependencies.\n" +
+      "defensive programming - ensuring that software behaves as expected even when encountering unexpected inputs or conditions. Input validation, Error handling, Robustness, Fail-safe defaults, Clear documentation.\n" +
+      "operations specialist - takes care of IT infrastructure: severs, networks, hardware. Deploys and configures software apps\n" +
+      "git stash -  to temporarily save changes (that are not ready to be committed) to a temporary storage, that can be retrieved later.\n" +
       "deploying - making app available on a target environment. For example production environment.\n" +
       "VPN - Virtual Private Network - encrypted and tunneled connection to trusted remote server, where your identity is hidden, but all the data in the internet accessed.\n" +
       "DevOps - practices, principles, and cultural philosophies. The primary goal is to automate the process of software delivery and infrastructure changes.\n" +
@@ -137,6 +158,11 @@ public class OneLiners {
       "SSL (2) - Secure Sockets Layer - protects communication over a network or internet. Encrypts the data between browser and website server. Successor - Transport Layer Security - TLS.\n" +
       "Code integration - combining code changes from multiple contributors into a shared repository.\n" +
       "PR - public release.\n" +
+      "Etcd - configuration data shared among nodes in a distributed system.\n" +
+      "DPIA - Data Protection Impact Assessment - process identifying and minimising risks of the processing of personal data.\n" +
+      "Etcd etymology - \"et cetera\" + \"distributed\" - comes from the /etc directory in Linux for configuration.\n" +
+      "RBAC - role based access control - system of user access rights based on their role within an organization.\n" +
+      "present() - method in fluentlenium that checkts if the element is there in the DOM.\n" +
       "DNS - Domain Name System - maps user - friendly domain names to numeric IP addresses.\n" +
       "Subnet - subnetwork - segment of a larger network. Subnetting improves network performance, security, and organization.\n" +
       "synchronous - each next task starts when previous one ends.\n" +
@@ -168,6 +194,7 @@ public class OneLiners {
       "Stakeholders - everyone with interest in outcome - customers/users, APO, analysts, team, testers, manager, regulatory authorities, security, leadership, marketing, support, customer service etc.\n" +
       "YubiKey - A flash drive for security purposes on a Mac.\n" +
       "WoW - way of working.\n" +
+      "legal person - legal personality, legal entity, juridical person.\n" +
       "Hungarian pollution - overusing type prefixes in variable names.\n" +
       "CFT - cross functional team - individuals with different areas of expertise.\n" +
       "Value stream - sequence of processes, company uses to deliver product. Encompasses all the steps. May include insights into the efficiency, bottlenecks, areas for improvements.\n" +
