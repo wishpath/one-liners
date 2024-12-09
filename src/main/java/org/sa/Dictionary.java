@@ -21,15 +21,27 @@ public class Dictionary {
       "priskirti - assign\n" +
       "gateway - tarpuvartė, įėjimas\n" +
       "perteklinis - redundant, excess, surplus\n" +
+      "perteklius - redundancy\n" +
+      "krumpliaratis - cog wheel\n" +
+      "plaustas - raft\n" +
       "graužti - gnaw\n";
 
   private String englishToLithuanian =
       "mitigate - sumažinti/sušvelninti\n" +
+      "overdue - late - pavėluotas\n" +
+      "paradigm - model, pattern, or typical example of something\n" +
+      "pivot - turning point, (key) change, posūkis, critical point, reversal - apvertimas.\n" +
+      "diligence - dėmesingumas, rūpestingumas, atsargumas, care, attentiveness, caution\n" +
+      "due - tinkamas, atitinkamas, būtinas, proper, appropriate, necessary\n" +
+      "due diligence - tinkamas dėmesingumas, būtinas atsargumas, atitinkamas atsargumas - (tyrimui, nagrinėjimui, patvirtinimui)\n" +
       "\n";
 
   private String generalEnglishToDefinitions =
       "outrageous - shocking and morally unacceptable. (Begėdiškas)\n" +
       "consonance - state of being in agreement\n" +
+      "either - one of two\n" +
+      "efficacy - binary ability to produce the desired effect under ideal conditions (if conditions are varied, this is called effectiveness)\n" +
+      "pivot business - change it's strategy, product, or market to adapt to new challenges or opportunities.\n" +
       "veneer - thin layer of material applied over another to provide a decorative or protective finish.\n" +
       "humongous - extremely large\n" +
       "microcosm - miniature containing characteristic features of something much larger\n" +
@@ -38,9 +50,13 @@ public class Dictionary {
 
   private String workUsefulEnglish =
       "diligence - careful or persistent work\n" +
+      "due diligence - proper level of investigation, analysis, and verification - (due - proper) + (diligence - care)\n" +
       "facility - building\n" +
+      "facilitate meeting - organize meeting\n" +
+      "ubiquitous - means present everywhere (common means frequent)\n" +
       "comply - meet specific standards\n" +
       "due - adequate\n" +
+      "vague - not clearly defined, expressed, or stated\n" +
       "mitigate - make less severe\n" +
       "onboarding - integration into organisation\n" +
       "vague - unclear, imprecise, not clearly defined\n" +

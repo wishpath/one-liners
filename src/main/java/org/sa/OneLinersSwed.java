@@ -18,7 +18,13 @@ public class OneLinersSwed {
       "Omni-channel - experience of transitioning interconnected channels seamlessly and with consistent experience.\n" +
       "CasC - CI/CD team's tool for encrypting. For onboarding to OpenShift it encrypts: service account credentials and config files.\n" +
       "ECD - Entreprise Continuous Delivery (team).\n" +
-      "SGW - Swedbank Gate Way (team).\n";
+      "VDE - value delivery engine - agile combination of teams, that has a common goal. Has PI meeting every 10 weeks. Can be large group - VDE1 - \"train\". And can be medium group - VDE2 - \"tram\".\n.\n" +
+      "SGW - Swedbank Gate Way (team).\n" +
+      "L&P - team: Lifecycle and Performance.\n" +
+      "Kay vault - cloud where everything will be migrated.\n" +
+      "CTE - common test environment.\n" +
+      "Conversational banking - services provided through AI-driven chat messages - personal support, transactions and access to services.\n" +
+      "\n";
 
   private String businessStar =
       "Authorized signatory - a person who can handle the company's banking matters at the bank branch.\n" +
