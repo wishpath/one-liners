@@ -123,7 +123,6 @@ public class OneLiners {
       "Java EE - Java Enterprise Edition - platform, which provides a set of specifications for building enterprise-level applications.\n" +
       "Enterprise-level - scale, complexity, and requirements to meet the needs of large organizations.\n";
 
-
   private String softwareEngineering =
       "ORM - Object-Relational Mapping - interaction between a database and OOP. database operations are performed using objects and classes rather than raw SQL queries. E.g.: Hibernate for Java.\n" +
       "hash - unique representation of the input data. Used for encryption, integrity verification, indexing etc. Deterministic, fixed output size, irreversible, collision resistant.\n" +
