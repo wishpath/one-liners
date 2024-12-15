@@ -13,6 +13,7 @@ public class ScannerApp {
   private String key = keyDefinition.getKey();
   private String definition = keyDefinition.getValue();
 
+
   public ScannerApp() {
     while (true) {
       System.out.println("Explain this: " + key);
