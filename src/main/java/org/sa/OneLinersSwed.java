@@ -46,3 +46,4 @@ public class OneLinersSwed {
       "JETTY - Java-based web server and servlet container. Can be embedded within app, allowing to serve web content directly without the web server.\n" +
       "Servlet - Java-based program extending the capabilities of a server. Handles requests from clients, generates dynamic web content, interacts with databases.\n";
 }
+
