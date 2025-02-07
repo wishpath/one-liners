@@ -47,3 +47,4 @@ public class OneLinersSwed {
       "Servlet - Java-based program extending the capabilities of a server. Handles requests from clients, generates dynamic web content, interacts with databases.\n";
 }
 
+
