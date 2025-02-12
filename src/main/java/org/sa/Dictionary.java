@@ -50,6 +50,12 @@ public class Dictionary {
 
   private String workUsefulEnglish =
       "diligence - careful or persistent work\n" +
+      "allocate - reserve a specific amount of any resource, so it's available when needed\n" +
+      "allocate a list - short for allocate memory for a list\n" +
+      "dispose - remove, or free up a resource\n" +
+      "dispose of memory - free up or release memory\n" +
+      "dispose of a list - release the list and its resources.\n" +
+      "obfuscate data - make unclear, unintelligible, encrypt or pseudonimize or anonimize. (etimology: make obscure)\n" +
       "due diligence - proper level of investigation, analysis, and verification - (due - proper) + (diligence - care)\n" +
       "facility - building\n" +
       "facilitate meeting - organize meeting\n" +
@@ -76,10 +82,17 @@ public class Dictionary {
       "proprietary - belonging to company\n" +
       "assess - evaluate/ estimaate quality of\n" +
       "substitution - replacement\n" +
+      "traverse - systematically move across an area with a purpose\n" +
       "pagination - sequence of numbers assigned to pages\n" +
       "to prompt - paskatinti, encourage (a hesitating speaker) to say something\n" +
       "integrity (of documents) -  quality of being accurate, complete, unaltered, not tampered\n" +
       "intrusive - įkyrus, nepageidaujamas, keliantis trikdžius, trukdandtis\n" +
       "commissioning - bring (something newly produced, such as a factory or machine) into working condition. \"we had a few hiccups getting the heating equipment commissioned\"\n" +
+      "\n";
+
+  private String lithuanianRare =
+      "vienok - tačiau, vis dėl to, bet\n" +
+      "idant - kad\n" +
+      "nearaliuotas - neišauklėtas (gyvulys)\n" +
       "\n";
 }
