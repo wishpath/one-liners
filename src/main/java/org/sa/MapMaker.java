@@ -45,6 +45,7 @@ public class MapMaker {
 
   private static Map<String, String> createKeyDefinitionMap(String allOneLiners) {
     return Arrays.stream(allOneLiners.split("\n"))
+                 .filter(line -> line.contains(" - "))
                  .map(MapMaker::extractEntryFromLine)
                  .sorted(Comparator.comparing(Map.Entry::getKey))
                  .collect(Collectors.toMap(
