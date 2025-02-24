@@ -96,3 +96,6 @@ public class Dictionary {
       "nearaliuotas - neišauklėtas (gyvulys)\n" +
       "\n";
 }
+
+
+
