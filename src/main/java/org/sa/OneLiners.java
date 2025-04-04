@@ -125,6 +125,8 @@ public class OneLiners {
 
 
   private String softwareEngineering =
+      "Firewall - network security system that monitors and controls incoming and outgoing network traffic based on predetermined rules.\n" +
+      "Firewall opening - configuration change to allow specific traffic through the firewall, enabling communication over a given port or IP range.\n" +
       "ORM - Object-Relational Mapping - interaction between a database and OOP. database operations are performed using objects and classes rather than raw SQL queries. E.g.: Hibernate for Java.\n" +
       "hash - unique representation of the input data. Used for encryption, integrity verification, indexing etc. Deterministic, fixed output size, irreversible, collision resistant.\n" +
       "deterministic - same input will always produce the same outcome.\n" +
