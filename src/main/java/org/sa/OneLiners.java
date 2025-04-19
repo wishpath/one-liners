@@ -261,6 +261,8 @@ public class OneLiners {
       "domain model - software implementation of a business area.\n" +
       "non-semantic message - you essentially strip away the contextual and descriptive information, leaving behind only the raw data without additional meaning or context.\n" +
       "semantic message - raw data + metadata\n" +
+      "permutation - specific ordering of distinct elements.\n" +
+      "greedy solution - picks best now, ignores future. Assumes local = global best.\n" +
       "example of a semantic registration message (JSON) - Raw Data: Includes fields such as userId, username, email, registrationDate, and status; Metadata: Includes contextual information like registrationSource, referralCode, and ipAddress, as well as the verification status.\n";
 
 
