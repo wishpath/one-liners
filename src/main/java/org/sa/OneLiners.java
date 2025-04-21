@@ -262,6 +262,11 @@ public class OneLiners {
       "non-semantic message - you essentially strip away the contextual and descriptive information, leaving behind only the raw data without additional meaning or context.\n" +
       "semantic message - raw data + metadata\n" +
       "permutation - specific ordering of distinct elements.\n" +
+      "edge - connection of two nodes.\n" +
+      "directed graph - nodes connected one-directionally.\n" +
+      "undirected graph - nodes connected bi-directionally.\n" +
+      "indegree - number of edges directed towards a node.\n" +
+      "outdegree - number of edges directed from a node.\n" +
       "greedy solution - picks best now, ignores future. Assumes local = global best.\n" +
       "example of a semantic registration message (JSON) - Raw Data: Includes fields such as userId, username, email, registrationDate, and status; Metadata: Includes contextual information like registrationSource, referralCode, and ipAddress, as well as the verification status.\n";
 
