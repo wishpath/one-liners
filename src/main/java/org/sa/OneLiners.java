@@ -267,6 +267,9 @@ public class OneLiners {
       "undirected graph - nodes connected bi-directionally.\n" +
       "indegree - number of edges directed towards a node.\n" +
       "outdegree - number of edges directed from a node.\n" +
+      "modal window - UI element that blocks interaction with the rest of the interface until closed.\n" +
+      "UI dialog - secondary window used to display information or prompt user action.\n" +
+      "Interface - an intermediate between user and internal functionality; serves as both abstraction and boundary.\n" +
       "greedy solution - picks best now, ignores future. Assumes local = global best.\n" +
       "example of a semantic registration message (JSON) - Raw Data: Includes fields such as userId, username, email, registrationDate, and status; Metadata: Includes contextual information like registrationSource, referralCode, and ipAddress, as well as the verification status.\n";
 
