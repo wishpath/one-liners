@@ -40,6 +40,7 @@ public class Dictionary {
       "outrageous - shocking and morally unacceptable. (Begėdiškas)\n" +
       "consonance - state of being in agreement\n" +
       "either - one of two\n" +
+      "big time - on a large scale; to a great extent\n" +
       "efficacy - binary ability to produce the desired effect under ideal conditions (if conditions are varied, this is called effectiveness)\n" +
       "pivot business - change it's strategy, product, or market to adapt to new challenges or opportunities.\n" +
       "veneer - thin layer of material applied over another to provide a decorative or protective finish.\n" +
