@@ -135,6 +135,15 @@ public class OneLiners {
       "Collision resistant - different inputs should not produce the same outcome.\n" +
       "Memoization technique - storing the results of expensive function calls and return the cached result when the same inputs occur again.\n" +
       "AD - architecture description.\n" +
+      "F5 – advanced load balancer and application traffic controller.\n" +
+      "F5 rules – logic to control service traffic (access, balance and security)\n" +
+      "Ingress Controller - Kubernetes component that manages external access to services.\n" +
+      "VIP (OpenShift) – Virtual IP - routes traffic to services or pods within a cluster, often for load balancing.\n" +
+      "VPN Whitelisting – a security measure that allows only specific IP addresses or devices to access a service through a VPN.\n" +
+      "CI - Configuration Item - any component that needs to be managed in order to deliver an IT service.\n" +
+      "DevSecOps - practice of integrating security seamlessly into every phase of the software development and delivery pipeline.\n" +
+      "Postmortem - structured analysis that takes place after a failure has occurred.\n" +
+      "Sticky session - ensures a user's requests are routed to the same server (no need to transfer copies of session data, Java classes don’t need serialization).\n" +
       "Assemble - specific phase within the build process - collecting and combining individual components into larger units.\n" +
       "pipeline - process of building, testing and deploying. Often associated with automatisation.\n" +
       "PI Planning - Program Increment Planning.\n" +

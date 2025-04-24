@@ -12,6 +12,8 @@ public class OneLinersSwed {
   private String swedbank =
       "PartyMDM - centralized Party Master Data Management solution used in Swedbank Baltic. Developed by Baltic Customer Data Domain team.\n" +
       "TIDY project - making sure data is being managed according to regulations.\n" +
+      "ICDEV - was a custom development environment used by ICD team, but it is no longer in use.\n" +
+      "VTE - Virtual Test Environment - custom testing environment used by certain teams.\n" +
       "LMI - Log Management and Intelligence (LMI) - platform, where logs are stored long term.\n" +
       "Incidents - tickets needed to be solved regarding issues. Our team gets assigned ticked regarding problems of STAR.\n" +
       "Karoo - an external tool - a system overseeing the customer call display in the branch. It interacts with a STAR database to check when the AB was registered.\n" +
