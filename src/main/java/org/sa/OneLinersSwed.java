@@ -41,7 +41,7 @@ public class OneLinersSwed {
       "CRM - customer relationship management.\n" +
       "CIM - customer interaction management.\n" +
       "PRODIGY - microservice that has a set of scheduled background tasks like SMS reminders, old iBank notification cleanup, outlook and permission check.\n" +
-      "PORTAL - main part of STAR, which access all other parts.\n" +
+      "PORTAL - main part of STAR, which accesses all other parts.\n" +
       "LDAP rights - Lightweight Directory Access Protocol - protocol which is used to reach STAR portlets.\n" +
       "AD rights - Windows/Microsoft LDAP implementation - in our context it's the same as LDAP.\n" +
       "Emergency release - if the release is called REL240, after it emergency release might be done. It would be called REL240.1. Changes would be tested by the team who needs them implemented.\n" +

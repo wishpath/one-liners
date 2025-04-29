@@ -253,7 +253,8 @@ public class OneLiners {
       "abstraction (1) - process of hiding complex implementation details and showing only the necessary features.\n" +
       "abstraction (2) - helps to manage complexity by hiding implementation details and exposing only essential features.\n" +
       "abstraction (3) - examples: Interfaces, Abstract Classes, Modules and Packages, APIs (Application Programming Interfaces), Design Patterns (e.g., Facade Pattern, Decorator Pattern), Layered Architecture, Frameworks and Libraries, Database ORM (Object-Relational Mapping), Microservices, Virtual Machines and Containers.\n" +
-      "interface - only shows what methods the implementing classes has to implement.\n" +
+      "interface in java - only shows what methods the implementing classes has to implement.\n" +
+      "interface - an intermediate between user and internal functionality; serves as both abstraction and boundary.\n" +
       "abstract class - both shows what methods the extending classes has to implement and can implement some shared code.\n" +
       "coupling - degree of interdependence between software modules.\n" +
       "high coupling example - class A uses the whole class B, instead of just using some string that is needed from class B field.\n" +
@@ -278,7 +279,7 @@ public class OneLiners {
       "outdegree - number of edges directed from a node.\n" +
       "modal window - UI element that blocks interaction with the rest of the interface until closed.\n" +
       "UI dialog - secondary window used to display information or prompt user action.\n" +
-      "interface - an intermediate between user and internal functionality; serves as both abstraction and boundary.\n" +
+
       "greedy solution - picks best now, ignores future. Assumes local = global best.\n" +
       "example of a semantic registration message (JSON) - Raw Data: Includes fields such as userId, username, email, registrationDate, and status; Metadata: Includes contextual information like registrationSource, referralCode, and ipAddress, as well as the verification status.\n";
 
