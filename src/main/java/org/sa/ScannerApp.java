@@ -22,11 +22,18 @@ public class ScannerApp {
       else if ("menu".equals(input)) printMenu();
       else if ("skip".equals(input) || "s".equals(input)) {
         reloadKey();
-      } else if (input.startsWith("define all all ")) {
+      }
+      else if ("all keys".equals(input)) {
+        System.out.println("The list of all keys:");
+        new MapMaker().printAllKeys();
+      }
+      else if (input.startsWith("define all all ")) {
         printAllKeyValuesContainingFragment(input.substring("define all all ".length()));
-      } else if (input.startsWith("define all ")) {
+      }
+      else if (input.startsWith("define all ")) {
         printAllKeysContainingFragment(input.substring("define all ".length()));
-      } else if ("define".equals(input)) System.out.println(definition);
+      }
+      else if ("define".equals(input)) System.out.println(definition);
 //      else if (input.startsWith(EDIT)) {
 
 //        printDefinition();

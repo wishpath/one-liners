@@ -92,4 +92,13 @@ public class MapMaker {
         });
     System.out.println();
   }
+
+  public void printAllKeys() {
+    keyDefinition.entrySet()
+        .stream()
+        .forEach(entry -> {
+          System.out.print(entry.getKey() + ", ");
+        });
+    System.out.println();
+  }
 }
