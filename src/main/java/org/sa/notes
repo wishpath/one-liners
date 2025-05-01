@@ -1,3 +1,10 @@
+
+
+PickNth - rename method, add explanation, extract what is possible to functions
+
+
+
+
 decide what prints in what color
 create colorApplyer that would have .applyRed("example text") or inRed
 notes on dealing submodules in gradle
