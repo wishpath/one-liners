@@ -1,3 +1,9 @@
+1.Dictionary to properties files.
+2.All properties files to folder "concepts"
+3.Class "Concepts" - just for constructing and containing map.
+
+
+
 decide what prints in what color
 create colorApplyer that would have .applyRed("example text") or inRed
 notes on dealing submodules in gradle
