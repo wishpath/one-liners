@@ -20,8 +20,4 @@ public class Concepts {
         map.put(e.getKey().toString(), e.getValue().toString());
     }
   }
-
-  public static void main(String[] args) throws IOException {
-    System.out.println(new Concepts().map);
-  }
 }

@@ -1,6 +1,7 @@
-1.Dictionary to properties files.
-2.All properties files to folder "concepts"
-3.Class "Concepts" - just for constructing and containing map.
+
+
+PickNth - rename method, add explanation, extract what is possible to functions
+
 
 
 
