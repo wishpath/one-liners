@@ -3,7 +3,6 @@ package org.sa.other;
 import org.sa.Dictionary;
 
 import java.io.IOException;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
@@ -55,7 +54,7 @@ public class OneLinersToPropertiesTransporter {
     props.putAll(createKeyDefinitionMap(s));
 
     //write
-    props.store(Files.newBufferedWriter(path), "Generated");
-    System.out.println(Files.lines(path).filter(line -> line.contains("=")).count() + " lines in the file");
+    //props.store(Files.newBufferedWriter(path), "Generated");
+    //System.out.println(Files.lines(path).filter(line -> line.contains("=")).count() + " lines in the file");
   }
 }
