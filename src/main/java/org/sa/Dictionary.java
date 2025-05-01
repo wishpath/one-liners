@@ -2,14 +2,7 @@ package org.sa;
 
 public class Dictionary {
 
-  private String trivialInCleanCode =
-      "trivial (two meanings) - 1. not important 2. simple, not complex, easily understandable, basic or elementary\n" +
-      "trivial logic - logic should be simple and self-evident, requiring no additional explanation.\n" +
-      "trivial solutions - favor the simplest solutions over overcomplicated designs or abstractions.\n" +
-      "trivial names - names should clearly convey their purpose, making their intent immediately obvious.\n" +
-      "non-trivial complexity - isolate unavoidable complexity to keep the rest of the code clean and simple.\n";
-
-  private String generalEnglishFromLithuanian =
+  public static String generalEnglishFromLithuanian =
       "įsijausti - immerse in, get absorbed in, engage in, get into\n" +
       "kandis - moth\n" +
       "kolibris - hummingbird\n" +
@@ -26,17 +19,16 @@ public class Dictionary {
       "plaustas - raft\n" +
       "graužti - gnaw\n";
 
-  private String englishToLithuanian =
+  public static String englishToLithuanian =
       "mitigate - sumažinti/sušvelninti\n" +
       "overdue - late - pavėluotas\n" +
       "paradigm - model, pattern, or typical example of something\n" +
       "pivot - turning point, (key) change, posūkis, critical point, reversal - apvertimas.\n" +
       "diligence - dėmesingumas, rūpestingumas, atsargumas, care, attentiveness, caution\n" +
       "due - tinkamas, atitinkamas, būtinas, proper, appropriate, necessary\n" +
-      "due diligence - tinkamas dėmesingumas, būtinas atsargumas, atitinkamas atsargumas - (tyrimui, nagrinėjimui, patvirtinimui)\n" +
-      "\n";
+      "due diligence - tinkamas dėmesingumas, būtinas atsargumas, atitinkamas atsargumas - (tyrimui, nagrinėjimui, patvirtinimui)\n";
 
-  private String generalEnglishToDefinitions =
+  public static String generalEnglishToDefinitions =
       "outrageous - shocking and morally unacceptable. (Begėdiškas)\n" +
       "consonance - state of being in agreement\n" +
       "either - one of two\n" +
@@ -47,9 +39,13 @@ public class Dictionary {
       "humongous - extremely large\n" +
       "microcosm - miniature containing characteristic features of something much larger\n" +
       "opinionated - having specific way of doing things. generaly - having strong inclination to a particular set of opinions, beliefs, or principles.\n" +
-      "\n";
+      "trivial (two meanings) - 1. not important 2. simple, not complex, easily understandable, basic or elementary\n" +
+      "trivial logic - logic should be simple and self-evident, requiring no additional explanation.\n" +
+      "trivial solutions - favor the simplest solutions over overcomplicated designs or abstractions.\n" +
+      "trivial names - names should clearly convey their purpose, making their intent immediately obvious.\n" +
+      "non-trivial complexity - isolate unavoidable complexity to keep the rest of the code clean and simple.\n";
 
-  private String workUsefulEnglish =
+  public static String workUsefulEnglish =
       "diligence - careful or persistent work\n" +
       "allocate - reserve a specific amount of any resource, so it's available when needed\n" +
       "allocate a list - short for allocate memory for a list\n" +
@@ -88,14 +84,12 @@ public class Dictionary {
       "to prompt - paskatinti, encourage (a hesitating speaker) to say something\n" +
       "integrity (of documents) -  quality of being accurate, complete, unaltered, not tampered\n" +
       "intrusive - įkyrus, nepageidaujamas, keliantis trikdžius, trukdandtis\n" +
-      "commissioning - bring (something newly produced, such as a factory or machine) into working condition. \"we had a few hiccups getting the heating equipment commissioned\"\n" +
-      "\n";
+      "commissioning - bring (something newly produced, such as a factory or machine) into working condition. \"we had a few hiccups getting the heating equipment commissioned\"\n";
 
-  private String lithuanianRare =
+  public static String lithuanianRare =
       "vienok - tačiau, vis dėl to, bet\n" +
       "idant - kad\n" +
-      "nearaliuotas - neišauklėtas (gyvulys)\n" +
-      "\n";
+      "nearaliuotas - neišauklėtas (gyvulys)\n";
 }
 
 

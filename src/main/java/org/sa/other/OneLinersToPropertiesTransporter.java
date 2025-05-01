@@ -1,6 +1,6 @@
 package org.sa.other;
 
-import org.sa.OneLinersSwed;
+import org.sa.Dictionary;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -44,14 +44,15 @@ public class OneLinersToPropertiesTransporter {
 
   public static void main(String[] args) throws IOException {
     //prep
-    //String s = new OneLiners().getConcepts();
-    String s = OneLinersSwed.swedbank;
-
-    Path path = Paths.get("src/main/java/org/sa/topics-swed/swedbank.properties");
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    String s = Dictionary.lithuanianRare;
+    Path path = Paths.get("src/main/java/org/sa/dictionary/lithuanianRare.properties");
     System.out.println(s.chars().filter(c -> c == '\n').count() + " lines in the string");
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
     Properties props = new Properties();
     props.putAll(createKeyDefinitionMap(s));
-    //System.out.println(createKeyDefinitionMap(s));
 
     //write
     props.store(Files.newBufferedWriter(path), "Generated");
