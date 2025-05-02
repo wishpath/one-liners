@@ -6,12 +6,12 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Random;
 
-public class Function {
+public class Actions {
 
   private Concepts concepts = new Concepts();
   private AiClient ai = new AiClient();
 
-  public Function() throws IOException {
+  public Actions() throws IOException {
   }
 
   public Map.Entry<String, String> pickRandomConcept() {
