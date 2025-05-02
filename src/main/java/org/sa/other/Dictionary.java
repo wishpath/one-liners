@@ -1,4 +1,4 @@
-package org.sa;
+package org.sa.other;
 
 public class Dictionary {
 
