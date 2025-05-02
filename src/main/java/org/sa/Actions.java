@@ -6,12 +6,12 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Random;
 
-public class Function {
+public class Actions {
 
   private Concepts concepts = new Concepts();
   private AiClient ai = new AiClient();
 
-  public Function() throws IOException {
+  public Actions() throws IOException {
   }
 
   public Map.Entry<String, String> pickRandomConcept() {
@@ -22,7 +22,7 @@ public class Function {
         .orElse(null);
   }
 
-  public Map.Entry<String, String> pickKeyDefinition(String fragment) {
+  public Map.Entry<String, String> pickConceptWithFragmentInKey(String fragment) {
     return concepts.map.entrySet()
         .stream()
         .filter(entry -> entry.getKey().toLowerCase().contains(fragment.toLowerCase()))
@@ -40,7 +40,7 @@ public class Function {
         .orElse(pickRandomConcept());
   }
 
-  public void printAllEntriesContainingFragmentInKey(String fragment) {
+  public void printAllConceptsContainingFragmentInKey(String fragment) {
     System.out.println("defining all keys containing fragment: " + fragment);
     concepts.map.entrySet()
         .stream()
@@ -52,7 +52,7 @@ public class Function {
     System.out.println();
   }
 
-  public void printAllEntriesContainingFragmentInKeyValue(String fragment) {
+  public void printAllConceptsContainingFragmentInKeyValue(String fragment) {
     System.out.println("defining all key-values containing fragment: " + fragment);
     concepts.map.entrySet()
         .stream()
@@ -86,13 +86,13 @@ public class Function {
             "\nYour entire answer should be up to 300 characters"));
   }
 
-  public Map.Entry<String, String>  pickNthKeyContainingFragment(String input) {
+  public Map.Entry<String, String> pickNthConceptWithFragmentInKey(String input) {
     String fragmentToSearchForAndNumber = input.substring("pick nth ".length());
     String endsWithSpaceDigitsPattern = "^(.*) (\\d+)$";
 
     if (!fragmentToSearchForAndNumber.matches(endsWithSpaceDigitsPattern)) {
       System.out.println("no match");
-      return pickKeyDefinition(input.substring("pick nth ".length()));
+      return pickConceptWithFragmentInKey(input.substring("pick nth ".length()));
     }
     else {
       String fragment = fragmentToSearchForAndNumber.replaceAll(endsWithSpaceDigitsPattern, "$1");

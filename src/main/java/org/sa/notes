@@ -1,6 +1,8 @@
 decide what prints in what color
 create colorApplyer that would have .applyRed("example text") or inRed
 notes on dealing submodules in gradle
+do tests?
+sort topics
 
 evaluate:
     a:

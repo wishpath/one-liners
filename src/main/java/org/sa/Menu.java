@@ -8,15 +8,16 @@ public class Menu {
 
   private static final String MENU = "skip - reloads key;\ndefine - defines current key;\ndefine all <fragment> - defines all keys containing fragment;\ndefine all all <fragment> - defines all keys and values containing fragment;\npick nth <fragment nth> - pick nth key containing fragment;\npick <fragment> - pick key containing fragment;\n<fragment ?> - include question mark to get an answer;";
   private Scanner scanner = new Scanner(System.in);
-  private Function act = new Function();
+  private Actions act = new Actions();
   private Map.Entry<String, String> concept = act.pickRandomConcept();
+  private String input = "";
  
 
 
   public Menu() throws IOException {
     while (true) {
       System.out.println("Explain this: " + concept.getKey());
-      String input = scanner.nextLine().trim();
+      input = scanner.nextLine().trim();
 
       if (input.isEmpty()) 
         continue;
@@ -31,19 +32,19 @@ public class Menu {
         act.printAllKeys();
       
       else if (input.startsWith("define all all ")) 
-        act.printAllEntriesContainingFragmentInKeyValue(input.substring("define all all ".length()));
+        act.printAllConceptsContainingFragmentInKeyValue(sub("define all all "));
       
       else if (input.startsWith("define all ")) 
-        act.printAllEntriesContainingFragmentInKey(input.substring("define all ".length()));
+        act.printAllConceptsContainingFragmentInKey(sub("define all "));
       
       else if ("define".equals(input)) 
         System.out.println(concept.getValue());
       
       else if (input.startsWith("pick nth ")) 
-        concept = act.pickNthKeyContainingFragment(input);
+        concept = act.pickNthConceptWithFragmentInKey(input);
       
       else if (input.startsWith("pick "))
-        concept = act.pickKeyDefinition(input.substring("pick ".length()));
+        concept = act.pickConceptWithFragmentInKey(sub("pick "));
       
       else if (input.contains("?")) 
         act.askAi(input);
@@ -53,9 +54,7 @@ public class Menu {
     }
   }
 
-
-
-
-
-
+  private String sub(String skippingThis) {
+    return input.substring(skippingThis.length());
+  }
 }
