@@ -1,11 +1,11 @@
 package org.sa.other;
 
-import org.sa.ScannerApp;
+import org.sa.Menu;
 
 import java.io.IOException;
 
 public class Main {
   public static void main(String[] args) throws IOException {
-    new ScannerApp();
+    new Menu();
   }
 }

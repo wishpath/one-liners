@@ -1,7 +1,5 @@
 package org.sa.other;
 
-import org.sa.Dictionary;
-
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
