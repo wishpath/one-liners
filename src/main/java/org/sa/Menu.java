@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Menu {
 
-  private static final String MENU = "skip - reloads key;\ndefine - defines current key;\ndefine all <fragment> - defines all keys containing fragment;\ndefine all all <fragment> - defines all keys and values containing fragment;\npick nth <fragment nth> - pick nth key containing fragment;\npick <fragment> - pick key containing fragment;\n<fragment ?> - include question mark to get an answer;";
+  private static final String MENU = "\u001B[31mskip\u001B[0m - reloads key;\n\u001B[31mdefine\u001B[0m - defines current key;\n\u001B[31mdefine all <fragment>\u001B[0m - defines all keys containing fragment;\n\u001B[31mdefine all all <fragment> \u001B[0m- defines all keys and values containing fragment;\n\u001B[31mpick nth <fragment nth> \u001B[0m- pick nth key containing fragment;\n\u001B[31mpick <fragment> \u001B[0m- pick key containing fragment;\n\u001B[31m<fragment ?> \u001B[0m- include question mark to get an answer;\n";
   private Scanner scanner = new Scanner(System.in);
   private Actions act = new Actions();
   private Map.Entry<String, String> concept = act.pickRandomConcept();

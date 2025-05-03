@@ -1,6 +1,7 @@
 package org.sa;
 
 import org.sa.concepts.Concepts;
+import org.sa.console.SimpleColorPrint;
 
 import java.io.IOException;
 import java.util.Map;
@@ -75,11 +76,11 @@ public class Actions {
   }
 
   public void askAi(String input) {
-    System.out.println(ai.getAnswer(input));
+    SimpleColorPrint.yellow(ai.getAnswer(input));
   }
 
   public void evaluateUserExplanationWithAI(String key, String input) {
-    System.out.println(ai.getAnswer(
+    SimpleColorPrint.yellow(ai.getAnswer(
         "is this a good keyword and definition: " + key + " = " + input +
             ". \n1 - Evaluate the answer by answering a question \"Does this capture the essence?\" (keeping in mind, that definition is allowed to be concise, minimalistic and does not require details). If, it does capture the essence the evaluation should be 8/10 and above." +
             "\nand 2 - If evaluations is less than 7/10 - conclude the right answer. Else do not provide the right answer." +
