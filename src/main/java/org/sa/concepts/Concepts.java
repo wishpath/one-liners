@@ -20,4 +20,10 @@ public class Concepts {
         map.put(e.getKey().toString(), e.getValue().toString());
     }
   }
+
+  public static void main(String[] args) throws IOException {
+    Files.walk(DIR)
+        .filter(p -> p.toString().endsWith(".properties"))
+        .forEach(p -> System.out.println(p.getFileName().toString().replace(".properties", "")));
+  }
 }
