@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Menu {
 
-  private static final String MENU = "\u001B[31mskip\u001B[0m - reloads key;\n\u001B[31mdefine\u001B[0m - defines current key;\n\u001B[31mdefine all <fragment>\u001B[0m - defines all keys containing fragment;\n\u001B[31mdefine all all <fragment> \u001B[0m- defines all keys and values containing fragment;\n\u001B[31mpick nth <fragment nth> \u001B[0m- pick nth key containing fragment;\n\u001B[31mpick <fragment> \u001B[0m- pick key containing fragment;\n\u001B[31m<fragment ?> \u001B[0m- include question mark to get an answer;\n\u001B[31mall keys \u001B[0m- lists all the keys in this app;\n";
+  private static final String MENU = "\n\u001B[31mskip\u001B[0m - reloads key;\n\u001B[31mdefine\u001B[0m - defines current key;\n\u001B[31mdefine all <fragment>\u001B[0m - defines all keys containing fragment;\n\u001B[31mdefine all all <fragment> \u001B[0m- defines all keys and values containing fragment;\n\u001B[31mpick nth <fragment nth> \u001B[0m- pick nth key containing fragment;\n\u001B[31mpick <fragment> \u001B[0m- pick key containing fragment;\n\u001B[31m<fragment ?> \u001B[0m- include question mark to get an answer;\n\u001B[31mall keys \u001B[0m- lists all the keys in this app;\n";
   private Scanner scanner = new Scanner(System.in);
   private Actions act = new Actions();
   private Map.Entry<String, String> concept = act.pickRandomConcept();
@@ -19,7 +19,7 @@ public class Menu {
   public Menu() throws IOException {
     while (true) {
       SimpleColorPrint.blueInLine("Please explain this: ");
-      SimpleColorPrint.red(concept.getKey());
+      SimpleColorPrint.red(concept.getKey() + "\n");
       input = scanner.nextLine().trim();
 
       if (input.isEmpty()) 
@@ -41,7 +41,7 @@ public class Menu {
         act.printAllConceptsContainingFragmentInKey(sub("define all "));
       
       else if ("define".equals(input)) 
-        System.out.println(concept.getValue());
+        System.out.println(concept.getValue() + "\n");
       
       else if (input.startsWith("pick nth ")) 
         concept = act.pickNthConceptWithFragmentInKey(input);

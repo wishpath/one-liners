@@ -43,7 +43,8 @@ public class Actions {
   }
 
   public void printAllConceptsContainingFragmentInKey(String fragment) {
-    System.out.println("defining all keys containing fragment: " + fragment);
+    SimpleColorPrint.blueInLine("defining all keys containing fragment: ");
+    SimpleColorPrint.red(fragment);
     concepts.map.entrySet()
         .stream()
         .filter(entry -> entry.getKey().toLowerCase().contains(fragment.toLowerCase()))
@@ -55,7 +56,8 @@ public class Actions {
   }
 
   public void printAllConceptsContainingFragmentInKeyValue(String fragment) {
-    System.out.println("defining all key-values containing fragment: " + fragment);
+    SimpleColorPrint.blueInLine("defining all key-values containing fragment: ");
+    SimpleColorPrint.red(fragment);
     concepts.map.entrySet()
         .stream()
         .filter(entry -> (entry.getKey() + " " + entry.getValue()).toLowerCase().contains(fragment.toLowerCase()))
@@ -63,7 +65,7 @@ public class Actions {
           System.out.println("\n" + entry.getKey() + ":");
           System.out.println(entry.getValue());
         });
-    System.out.println();
+    System.out.println("");
   }
 
   public void printAllKeys() {
@@ -89,11 +91,12 @@ public class Actions {
   }
 
   public Map.Entry<String, String> pickNthConceptWithFragmentInKey(String input) {
-    String fragmentToSearchForAndNumber = input.substring("pick nth ".length());
+    //pick nth <fragment nth> - pick nth key containing fragment;
+    String fragmentToSearchForAndNumber = input.substring("pick nth ".length()); //should be "<fragment nth>"
     String endsWithSpaceDigitsPattern = "^(.*) (\\d+)$";
 
     if (!fragmentToSearchForAndNumber.matches(endsWithSpaceDigitsPattern)) {
-      System.out.println("no match");
+      SimpleColorPrint.red("pick nth <fragment nth>");
       return pickConceptWithFragmentInKey(input.substring("pick nth ".length()));
     }
     else {
