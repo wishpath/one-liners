@@ -1,5 +1,7 @@
 package org.sa.concepts;
 
+import org.sa.Prop;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -9,7 +11,7 @@ import java.util.Map;
 import java.util.Properties;
 
 public class Concepts {
-  private static final Path DIR = Paths.get("src/main/java/org/sa/concepts/topics");
+  private static final Path DIR = Paths.get("src/main/java/org/sa/concepts/" + Prop.FOLDER);
   public final Map<String, String> map = new HashMap<>();
 
   public Concepts() throws IOException {
