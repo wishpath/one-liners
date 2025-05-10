@@ -16,6 +16,7 @@ public class Actions {
   }
 
   public Map.Entry<String, String> pickRandomConcept() {
+    SimpleColorPrint.blue("Picking a random concept...");
     return concepts.map.entrySet()
         .stream()
         .skip(new Random().nextInt(concepts.map.size()))
@@ -66,7 +67,7 @@ public class Actions {
   }
 
   public void printAllKeys() {
-    System.out.println("The list of all keys:");
+    SimpleColorPrint.blue("Listing all the keys:");
     concepts.map.entrySet()
         .stream()
         .forEach(entry -> {

@@ -1,5 +1,7 @@
 package org.sa;
 
+import org.sa.console.SimpleColorPrint;
+
 import java.io.IOException;
 import java.util.Map;
 import java.util.Scanner;
@@ -16,7 +18,8 @@ public class Menu {
 
   public Menu() throws IOException {
     while (true) {
-      System.out.println("Explain this: " + concept.getKey());
+      SimpleColorPrint.blue("Please explain this: " + concept.getKey());
+      SimpleColorPrint.blue("Please explain this: " + concept.getKey());
       input = scanner.nextLine().trim();
 
       if (input.isEmpty()) 
