@@ -23,3 +23,6 @@ pick <fragment> - pick key containing fragment;
 update submodules:
 git submodule update --remote --merge
 then commit
+
+douplicated concepts?
+

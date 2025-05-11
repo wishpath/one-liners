@@ -53,7 +53,7 @@ public class Menu {
         act.askAi(input);
       
       else 
-        act.evaluateUserExplanationWithAI(concept, input);
+        concept = act.evaluateUserExplanationWithAI(concept, input);
     }
   }
 

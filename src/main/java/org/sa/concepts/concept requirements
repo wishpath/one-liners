@@ -1,0 +1,47 @@
+Instruction: Generating Very Short Definitions
+
+Objectives:
+• Generate definitions that are extremely concise, laconic, and to the point.
+• The output should capture the essence of the concept in the shortest possible form without losing fundamental meaning.
+
+Key Requirements:
+
+Length:
+• Ideal length is way below 140 characters.
+• Shorter is better, even if it sacrifices some clarity.
+• Use 2-3 words if possible.
+• No unnecessary details.
+
+Format:
+• One line, separated by =, and no redundant words.
+• If applicable, use escaped spaces in the key (e.g., enDash\ (–)).
+• A very short example or a practical use case is tolerable, example:
+en\ dash\ (–)=dash for range or connection, example: "New York – Boston", type: Alt+0150
+• if the word is not a name, use lowercase letter to start a phrase, example:
+hub=central point, where things are executed.
+
+Tone:
+• Direct and terse.
+• The goal is to convey just the essence.
+
+Content Structure:
+• Concept (escaped if necessary) = Short Definition, Example, Key Detail.
+• Use the most laconic language possible.
+
+Example:
+SLI=Service Level Indicator — Metric measuring system performance.
+URL=Uniform Resource Locators.
+en\ dash\ (–)=dash for range or connection, example: "New York – Boston", type: Alt+0150
+substitution=replacement
+hub=central point, where things are executed.
+
+Guidelines:
+• Prioritize brevity over precision. example:
+substitution=replacement
+• If a longer phrase or term can be reduced to one or two words, do so.
+• Essence only — avoid elaboration.
+• Shorter and less clear is better than longer and more precise.
+• If the concept key is an abbreviation, full term has to be spelled out like this (with "space + dash + space" afterwards):
+SLI=Service Level Indicator — metric measuring system performance.
+• Or even better (if the full version can serve as a simple definition):
+URL=Uniform Resource Locators.
