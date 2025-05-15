@@ -4,6 +4,7 @@ import org.sa.concepts.Concepts;
 import org.sa.console.SimpleColorPrint;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.regex.Pattern;
@@ -59,29 +60,42 @@ public class Actions {
   }
 
   public void printAllConceptsContainingFragmentInKey(String fragment) {
-    SimpleColorPrint.blueInLine("defining all keys containing fragment: ");
-    SimpleColorPrint.red(fragment);
-    concepts.map.entrySet()
-        .stream()
+    List<Map.Entry<String, String>> found = concepts.map.entrySet().stream()
         .filter(entry -> entry.getKey().toLowerCase().contains(fragment.toLowerCase()))
-        .forEach(entry -> {
-          System.out.println("\n" + entry.getKey() + ":");
-          System.out.println(entry.getValue());
-        });
+        .toList();
+
+    if (found.isEmpty()) {
+      SimpleColorPrint.redInLine("No keys found containing fragment: ");
+      SimpleColorPrint.red(fragment);
+    }
+    else {
+      SimpleColorPrint.blueInLine("Defining all keys containing fragment: ");
+      SimpleColorPrint.red(fragment);
+      found.forEach(entry -> printConceptWithFragment(entry, fragment));
+    }
     System.out.println();
   }
 
   public void printAllConceptsContainingFragmentInKeyValue(String fragment) {
-    SimpleColorPrint.blueInLine("defining all key-values containing fragment: ");
-    SimpleColorPrint.red(fragment);
-    concepts.map.entrySet()
-        .stream()
+    List<Map.Entry<String, String>> found = concepts.map.entrySet().stream()
         .filter(entry -> (entry.getKey() + " " + entry.getValue()).toLowerCase().contains(fragment.toLowerCase()))
-        .forEach(entry -> {
-          System.out.println("\n" + entry.getKey() + ":");
-          System.out.println(entry.getValue());
-        });
-    System.out.println("");
+        .toList();
+
+    if (found.isEmpty()) {
+      SimpleColorPrint.redInLine("No key-values found containing fragment: ");
+      SimpleColorPrint.red(fragment);
+    }
+    else {
+      SimpleColorPrint.blueInLine("Defining all key-values containing fragment: ");
+      SimpleColorPrint.red(fragment);
+      found.forEach(entry -> printConceptWithFragment(entry, fragment));
+    }
+    System.out.println();
+  }
+
+  private static void printConceptWithFragment(Map.Entry<String, String> entry, String fragment) {
+    System.out.println("\n" + entry.getKey() + ":");
+    System.out.println(entry.getValue());
   }
 
   public void printAllKeys() {

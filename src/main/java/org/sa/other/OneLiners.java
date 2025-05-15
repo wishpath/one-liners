@@ -17,7 +17,7 @@ public class OneLiners {
       "Subsetting data - selecting and using a representative portion of a larger dataset.\n" +
       "Data Pseudonymization - protecting privacy by replacing or encrypting personally identifiable information (PII) with artificial identifiers (pseudonyms).\n" +
       "Agile Test Quadrants - concept categorizing types of testing. Based on two axes: technology-facing and business-facing.\n" +
-      "Test data management for entreprise - meeting the needs of an organization rather than specific individual or teams needs.\n" +
+      "test data management for entreprise - xxxxmeeting the needs of an organization rather than specific individual or teams needs.\n" +
       "GPA - general purpose app.\n" +
       "Integrated test environment - test environment that closely resembles the production environment.\n" +
       "SLI - Service Level Indicator - Metric measuring system performance.\n" +

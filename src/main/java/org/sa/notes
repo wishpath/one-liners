@@ -30,3 +30,9 @@ douplicated concepts?
 define all dao
 defining all keys containing fragment: dao
 no keys were found, so inform the user on this!
+
+rework qa topics
+
+define all all printing if not found
+
+make method print conceptWithFragment
