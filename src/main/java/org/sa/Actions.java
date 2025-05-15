@@ -93,9 +93,27 @@ public class Actions {
     System.out.println();
   }
 
-  private static void printConceptWithFragment(Map.Entry<String, String> entry, String fragment) {
+  private static void printConceptWithFragment2(Map.Entry<String, String> entry, String fragment) {
     System.out.println("\n" + entry.getKey() + ":");
     System.out.println(entry.getValue());
+  }
+
+  private static void printConceptWithFragment(Map.Entry<String, String> entry, String fragment) {
+    String concept = "\n" + entry.getKey() + ":\n" + entry.getValue() + "\n";
+    String lowerConcept = concept.toLowerCase();
+    String lowerFragment = fragment.toLowerCase();
+    int start = 0;
+
+    while (start < concept.length()) {
+      int index = lowerConcept.indexOf(lowerFragment, start);
+      if (index == -1) {
+        SimpleColorPrint.normal(concept.substring(start));
+        break;
+      }
+      SimpleColorPrint.normalInLine(concept.substring(start, index));
+      SimpleColorPrint.redInLine(concept.substring(index, index + fragment.length()));
+      start = index + fragment.length();
+    }
   }
 
   public void printAllKeys() {
