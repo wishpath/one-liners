@@ -132,8 +132,8 @@ public class Actions {
 
   public Map.Entry<String, String> evaluateUserExplanationWithAI(Map.Entry<String, String> concept, String input) {
     String question =
-        "is this a good key and definition: " + concept.getKey() + " = " + input +
-        ". \n1 - Evaluate the answer by answering a question \"Does this capture the essence?\" (try to be positive with your evaluation)." +
+        "is this a good key and definition: " + concept.getKey() + " = " + input + ". " +
+        "\n 1 - Evaluate the answer by answering a question \"Does this capture the essence?\" (try to be positive with your evaluation)." +
         "\n if some detail are missing, but it does capture the essence the evaluation should be 10/10" +
         "\n if definition matches this one, rate 10/10: " + concept.getValue() +
         "\n if the essence is ALMOST there, rate 9/10: " +
@@ -141,10 +141,24 @@ public class Actions {
         "\n think how you would formulate an answer in up to 10 words - if you could not comme up with better answer, rate 10/10 " +
         "\n if answer totally totally off, rate 0/10 " +
         "\n if answer somewhat passable, rate 7/10 " +
-        "\n if the key is abbreviation (of phrase first letters), definition should contain exact or similar words to spell them, otherwise the evaluation should from 0/10 to 7/10" +
-        "\nand 'step 2' - If evaluations is less than 7/10 - conclude the right answer. (if evaluation is  7/10 to 10/10 - don't even mention this 'step 2')." +
-        "\nYour entire answer should be up to 300 characters";
-    String answer = ai.getAnswer(question);
+        "\n if the key is an acronym, the definition must include the exact matching words that correspond to each letter of the acronym (e.g., 'Intelligence Quotient' for IQ); other correct answers (like 'a measure of smartness') are not acceptable, and the maximum score is 7/10." +
+        "\n and 'step 2' - If evaluations is less than 7/10 - conclude the right answer. (if evaluation is  7/10 to 10/10 - don't even mention this 'step 2')." +
+        "\n Your entire answer should be up to 300 characters";
+
+    String questionB =
+        "Is this a good key and definition: " + concept.getKey() + " = " + input + ". " +
+            "\n 1 - Evaluate the answer by asking: 'Does this capture the essence?' (aim to be positive)." +
+            "\n If some details are missing but it captures the essence, rate 10/10." +
+            "\n If the definition matches this one, rate 10/10: " + concept.getValue() +
+            "\n If the essence is ALMOST there, rate 9/10." +
+            "\n If the essence is somewhat touched, rate 8/10." +
+            "\n Think of an answer in up to 10 words - if you can't come up with a better one, rate 10/10." +
+            "\n If the answer is completely off, rate 0/10." +
+            "\n If the answer is somewhat acceptable, rate 7/10." +
+            "\n If the key is an acronym, the definition must include exact words for each letter (e.g., 'Intelligence Quotient' for IQ); other correct answers (like 'a measure of smartness') are not acceptable, and the maximum score is 7/10." +
+            "\n Step 2 - If the evaluation is less than 7/10, provide the correct answer (if 7/10 to 10/10, skip this step)." +
+            "\n Your entire answer should be up to 300 characters.";
+    String answer = ai.getAnswer(questionB);
     SimpleColorPrint.yellow(answer);
     if (parseEvaluation(answer) >= 7) return pickRandomConcept();
     return concept;
