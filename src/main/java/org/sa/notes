@@ -25,5 +25,3 @@ git submodule update --remote --merge
 then commit
 
 douplicated concepts?
-
-rework qa topics
