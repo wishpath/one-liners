@@ -42,14 +42,14 @@ public class OneLinersToPropertiesTransporter {
   public static void main(String[] args) throws IOException {
     //prep
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    String s = Dictionary.lithuanianRare;
+    //String s = Dictionary.lithuanianRare;
     Path path = Paths.get("src/main/java/org/sa/dictionary/lithuanianRare.properties");
-    System.out.println(s.chars().filter(c -> c == '\n').count() + " lines in the string");
+    //System.out.println(s.chars().filter(c -> c == '\n').count() + " lines in the string");
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
     Properties props = new Properties();
-    props.putAll(createKeyDefinitionMap(s));
+    //props.putAll(createKeyDefinitionMap(s));
 
     //write
     //props.store(Files.newBufferedWriter(path), "Generated");
