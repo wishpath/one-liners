@@ -25,3 +25,8 @@ git submodule update --remote --merge
 then commit
 
 douplicated concepts?
+
+
+pick nth heap 1
+Searching for fragment: heap nth: 1
+Not found 1-th concept containing fragment: heap ///////////// should be heap space!!!!!!!!

@@ -4,8 +4,10 @@ import org.sa.concepts.Concepts;
 import org.sa.console.SimpleColorPrint;
 
 import java.io.IOException;
+import java.nio.file.Files;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Random;
 import java.util.regex.Pattern;
 
@@ -131,20 +133,6 @@ public class Actions {
   }
 
   public Map.Entry<String, String> evaluateUserExplanationWithAI(Map.Entry<String, String> concept, String input) {
-    String question =
-        "is this a good key and definition: " + concept.getKey() + " = " + input + ". " +
-        "\n 1 - Evaluate the answer by answering a question \"Does this capture the essence?\" (try to be positive with your evaluation)." +
-        "\n if some detail are missing, but it does capture the essence the evaluation should be 10/10" +
-        "\n if definition matches this one, rate 10/10: " + concept.getValue() +
-        "\n if the essence is ALMOST there, rate 9/10: " +
-        "\n if the essence is somewhat touched, rate 8/10: " +
-        "\n think how you would formulate an answer in up to 10 words - if you could not comme up with better answer, rate 10/10 " +
-        "\n if answer totally totally off, rate 0/10 " +
-        "\n if answer somewhat passable, rate 7/10 " +
-        "\n if the key is an acronym, the definition must include the exact matching words that correspond to each letter of the acronym (e.g., 'Intelligence Quotient' for IQ); other correct answers (like 'a measure of smartness') are not acceptable, and the maximum score is 7/10." +
-        "\n and 'step 2' - If evaluations is less than 7/10 - conclude the right answer. (if evaluation is  7/10 to 10/10 - don't even mention this 'step 2')." +
-        "\n Your entire answer should be up to 300 characters";
-
     String questionB =
         "Is this a good key and definition: " + concept.getKey() + " = " + input + ". " +
             "\n 1 - Evaluate the answer by asking: 'Does this capture the essence?' (aim to be positive)." +
@@ -158,9 +146,15 @@ public class Actions {
             "\n If the key is an acronym, the definition must include exact words for each letter (e.g., 'Intelligence Quotient' for IQ); other correct answers (like 'a measure of smartness') are not acceptable, and the maximum score is 7/10." +
             "\n Step 2 - If the evaluation is less than 7/10, provide the correct answer (if 7/10 to 10/10, skip this step)." +
             "\n Your entire answer should be up to 300 characters.";
+
     String answer = ai.getAnswer(questionB);
     SimpleColorPrint.yellow(answer);
-    if (parseEvaluation(answer) >= 7) return pickRandomConcept();
+
+    if (parseEvaluation(answer) >= 7) {
+      concepts.score.merge(concept.getKey(), 1, Integer :: sum);
+      return pickRandomConcept();
+    }
+    concepts.score.merge(concept.getKey(), -1, Integer :: sum);
     return concept;
   }
 
@@ -198,5 +192,20 @@ public class Actions {
       SimpleColorPrint.red(String.valueOf(nth));
       return pickNthKeyDefinition(fragment, nth);
     }
+  }
+
+  public void save() throws IOException {
+    Properties props = new Properties();
+
+    // Convert the <String, Integer> map to <String, String> and putAll
+    concepts.score.forEach((key, value) -> props.put(key, String.valueOf(value)));
+
+    //write
+    props.store(Files.newBufferedWriter(concepts.SCORE_PATH), "Concept key to score (1 for correct, -1 for wrong)");
+    System.out.println(Files.lines(concepts.SCORE_PATH).filter(line -> line.contains("=")).count() + " lines in the score file");
+  }
+
+  public void end() throws IOException {
+    save();
   }
 }

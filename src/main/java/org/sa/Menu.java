@@ -55,7 +55,14 @@ public class Menu {
       
       else if (input.contains("?")) 
         act.askAi(input);
-      
+
+      else if ("save".equals(input))
+        act.save();
+
+      else if ("end".equals(input)) {
+        act.save(); break;
+      }
+
       else
         setConcept(act.evaluateUserExplanationWithAI(concept, input)); //if evaluation < 7, keeps same concept;
     }
