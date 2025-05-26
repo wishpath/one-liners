@@ -17,6 +17,8 @@ public class Concepts {
   public final Map<String, Integer> score = new HashMap<>();
 
   public Concepts() throws IOException {
+
+    //load definitions
     for (Path subtopicPath : Files.walk(DIR).filter(p -> p.toString().endsWith(".properties")).toList()) {
       Properties props = new Properties();
       props.load(Files.newInputStream(subtopicPath));
@@ -24,6 +26,7 @@ public class Concepts {
         map.put(e.getKey().toString(), e.getValue().toString());
     }
 
+    //load scores
     Properties scoreProps = new Properties();
     scoreProps.load(Files.newInputStream(SCORE_PATH));
     for (Map.Entry<Object, Object> e : scoreProps.entrySet())

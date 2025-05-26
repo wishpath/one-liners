@@ -30,3 +30,7 @@ douplicated concepts?
 pick nth heap 1
 Searching for fragment: heap nth: 1
 Not found 1-th concept containing fragment: heap ///////////// should be heap space!!!!!!!!
+
+new menu item "idk" as for (i don't know) - should merge "-1" to score, should print out definition and skip to another concept
+
+allways pick concept with the lowest score. If multiple, just take first for simplicity.
