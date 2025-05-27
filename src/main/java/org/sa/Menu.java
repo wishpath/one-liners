@@ -30,7 +30,7 @@ public class Menu {
         System.out.println(MENU);
       
       else if ("skip".equals(input) || "s".equals(input)) 
-        concept = act.pickRandomConcept();
+        setConcept(act.pickRandomConcept());
       
       else if ("all keys".equals(input)) 
         act.printAllKeys();
@@ -58,6 +58,9 @@ public class Menu {
 
       else if ("save".equals(input))
         act.save();
+
+      else if ("idk".equals(input))
+        setConcept(act.answerIDontKnow(concept));
 
       else if ("end".equals(input)) {
         act.save(); break;

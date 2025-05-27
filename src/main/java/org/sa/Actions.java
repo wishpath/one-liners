@@ -208,4 +208,11 @@ public class Actions {
   public void end() throws IOException {
     save();
   }
+
+  public Map.Entry<String, String> answerIDontKnow(Map.Entry<String, String> concept) {
+    concepts.score.merge(concept.getKey(), -1, Integer :: sum);
+    SimpleColorPrint.blue("Concept has received a score of -1: ");
+    SimpleColorPrint.red(concept.getKey() + " - " + concept.getValue());
+    return pickRandomConcept();
+  }
 }
