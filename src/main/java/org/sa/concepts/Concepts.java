@@ -15,6 +15,7 @@ public class Concepts {
   private static final Path TOPICS_SWED = Paths.get("src/main/java/org/sa/concepts/topics-swed");
   public static final Path SCORE_PATH = Paths.get("src/main/java/org/sa/score/score.properties");
   public static final Path WIKI_OUTPUT_FILE = Paths.get("src/main/java/org/sa/concepts/wiki.txt");
+  public static final String WIKI_INTRO = "*Goal of this article*\nThis collection of super-short definitions captures the core of each concept in just a few words, creating a broad, foundational framework for quick knowledge acquisition. By reducing concepts to their essence—even if imperfect—this approach fosters the confidence needed to deepen understanding later. This minimalist style lets you absorb a wide set of ideas rapidly, forming a scaffold for continuous growth.\n\n";
   public final Map<String, String> map = new HashMap<>();
   public final Map<String, Integer> score = new HashMap<>();
 
@@ -46,26 +47,8 @@ public class Concepts {
         .forEach(p -> System.out.println(p.getFileName().toString().replace(".properties", "")));
   }
 
-//  private static void exportAllConceptsForWiki() throws IOException {
-//    StringBuilder sb = new StringBuilder();
-//
-//    Stream.concat(Files.walk(TOPICS), Files.walk(TOPICS_SWED))
-//        .filter(p -> p.toString().endsWith(".properties"))
-//        .forEach(p -> {
-//          sb.append(getFileNameWithoutExtension(p)).append("\n");
-//          try {
-//            Files.lines(p)
-//                .filter(line -> line.contains("="))
-//                .map(Concepts::transformLine)
-//                .forEach(l -> sb.append(l).append("\n"));
-//          } catch (IOException e) {}
-//        });
-//
-//    Files.writeString(WIKI_OUTPUT_FILE, sb.toString());
-//  }
-
   private static void exportAllConceptsForWiki() throws IOException {
-    StringBuilder sb = new StringBuilder();
+    StringBuilder sb = new StringBuilder(WIKI_INTRO);
     List<Path> wikiTopicFiles = Stream
         .concat(Files.walk(TOPICS), Files.walk(TOPICS_SWED))
         .filter(p -> p.toString().endsWith(".properties"))

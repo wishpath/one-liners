@@ -1,3 +1,6 @@
+*Goal of this article*
+This collection of super-short definitions captures the core of each concept in just a few words, creating a broad, foundational framework for quick knowledge acquisition. By reducing concepts to their essence—even if imperfect—this approach fosters the confidence needed to deepen understanding later. This minimalist style lets you absorb a wide set of ideas rapidly, forming a scaffold for continuous growth.
+
 
 *Algorithms Coding And Structures*
      indegree - number of incoming edges directed towards a node.
@@ -311,7 +314,7 @@
      data pseudonymization - protecting privacy by encrypting personal indentifiers or replacing them with pseudonyms.
      PII - Personally Identifiable Information - data that can identify an individual.
      pseudonym - artificial identifier.
-     error budget - Maximum allowable errors metric in a system within a specified time frame for reliability.
+     error budget - maximum allowable errors metric in a system within a specified time frame for reliability.
      exploratory testing - flexible approach to uncover unexpected defects and understand behavior.
      feature flag - feature toggle.
      functional testing - Verifies that software features align with specified requirements.
@@ -342,9 +345,9 @@
      CTE (sandbox) - Common Test Environment.
 
 *Regulations*
-     AFC - anti financial crime.
+     AFC - Anti Financial Crime.
      DORA - Digital Operational Resilience Act - EU rules for banks to manage unforeseen data disruption incidents.
-     DSS - data security standard.
+     DSS - Data Security Standard.
      EDD - Enhanced Due Diligence - more thorough investigation of customer - beyond the standard KYC procedures.
      enterprise-level - scale, complexity, and requirements to meet the needs of large organizations.
      GDPR - General Data Protection Regulation - European Union regulation on information privacy.
@@ -459,7 +462,7 @@
      TIDY project - making sure data is being managed according to regulations.
      VDE - value delivery engine — multiple agile teams with shared goal, having PI meeting every 10 weeks.
      VTE - Virtual Test Environment - custom testing environment used by certain teams.
-     CC1, CC2, CC3, CC4 - Criticality categories classifying IT services by importance and compliance impact.
+     CC1, CC2, CC3, CC4 - Criticality Categories classifying IT services by importance and compliance impact.
      core - marks that database is main. But in our case there are only core databases so it's a bit meaningless.
      Enigma - internal service to sign and encrypt data. Stores encryption keys in HSM.
      HSM - Hardware Security Module - specialised computer device that stores and manages cryptographic keys.
