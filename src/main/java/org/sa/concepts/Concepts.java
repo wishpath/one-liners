@@ -4,10 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
+import java.util.*;
 import java.util.stream.Stream;
 
 public class Concepts {
@@ -16,8 +13,10 @@ public class Concepts {
   public static final Path SCORE_PATH = Paths.get("src/main/java/org/sa/score/score.properties");
   public static final Path WIKI_OUTPUT_FILE = Paths.get("src/main/java/org/sa/concepts/wiki.txt");
   public static final String WIKI_INTRO = "*Goal of this article*\nThis collection of super-short definitions captures the core of each concept in just a few words, creating a broad, foundational framework for quick knowledge acquisition. By reducing concepts to their essence—even if imperfect—this approach fosters the confidence needed to deepen understanding later. This minimalist style lets you absorb a wide set of ideas rapidly, forming a scaffold for continuous growth.\n\n";
-  public final Map<String, String> map = new HashMap<>();
-  public final Map<String, Integer> score = new HashMap<>();
+
+  public final Map<String, String> keyDefinition = new HashMap<>();
+  public final Map<String, Integer> keyScore = new HashMap<>();
+  public final TreeMap<Integer, List<String>> scoreKeyList = new TreeMap<>();
 
   public Concepts() throws IOException {
 
@@ -26,14 +25,31 @@ public class Concepts {
       Properties props = new Properties();
       props.load(Files.newInputStream(subtopicPath));
       for (Map.Entry<Object, Object> e : props.entrySet())
-        map.put(e.getKey().toString(), e.getValue().toString());
+        keyDefinition.put(e.getKey().toString(), e.getValue().toString());
     }
 
     //load scores
     Properties scoreProps = new Properties();
     scoreProps.load(Files.newInputStream(SCORE_PATH));
     for (Map.Entry<Object, Object> e : scoreProps.entrySet())
-      score.put(e.getKey().toString(), Integer.parseInt((String)e.getValue()));
+      keyScore.put(e.getKey().toString(), Integer.parseInt((String)e.getValue()));
+
+    //sort scores ascendingly, list keys for score
+    for(Map.Entry<String, Integer> e : keyScore.entrySet()) {
+      scoreKeyList.computeIfAbsent(e.getValue(), k -> new ArrayList<>()).add(e.getKey());
+    }
+  }
+
+  public void incrementScore(String key, int increment) {
+    int initialScore = keyScore.get(key);
+    keyScore.merge(key, increment, Integer :: sum);
+
+    List<String> initialList = scoreKeyList.get(initialScore);
+    if (initialList.size() == 1) scoreKeyList.remove(initialScore);
+    else initialList.remove(key);
+
+    int finalScore = keyScore.get(key);
+    scoreKeyList.computeIfAbsent(finalScore, k -> new ArrayList<>()).add(key);
   }
 
   public static void main(String[] args) throws IOException {

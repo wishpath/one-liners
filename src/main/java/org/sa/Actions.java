@@ -8,7 +8,6 @@ import java.nio.file.Files;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
-import java.util.Random;
 import java.util.regex.Pattern;
 
 public class Actions {
@@ -19,35 +18,30 @@ public class Actions {
   public Actions() throws IOException {
   }
 
-  public Map.Entry<String, String> pickRandomConcept() {
-    SimpleColorPrint.blue("Picking a random concept...");
-    return concepts.map.entrySet()
-        .stream()
-        .skip(new Random().nextInt(concepts.map.size()))
-        .findFirst()
-        .orElseGet(() -> {
-          SimpleColorPrint.red("No concepts available.");
-          return null;
-        });
+  public Map.Entry<String, String> pickConceptWithLowestScore() {
+    SimpleColorPrint.blue("Picking concept with lowest score...");
+    String key = concepts.scoreKeyList.firstEntry().getValue().getFirst();
+    String value = concepts.keyDefinition.get(key);
+    return Map.entry(key, value);
   }
 
   public Map.Entry<String, String> pickConceptWithFragmentInKey(String fragment) {
     SimpleColorPrint.blueInLine("Picking key containing fragment ");
     SimpleColorPrint.red(fragment);
-    return concepts.map.entrySet()
+    return concepts.keyDefinition.entrySet()
         .stream()
         .filter(entry -> entry.getKey().toLowerCase().contains(fragment.toLowerCase()))
         .findFirst()
         .orElseGet(() -> {
           SimpleColorPrint.blueInLine("Not found any concept containing fragment: ");
           SimpleColorPrint.red(fragment);
-          return pickRandomConcept();
+          return pickConceptWithLowestScore();
         });
   }
 
 
   public Map.Entry<String, String> pickNthKeyDefinition(String fragment, int nthInstance) {
-    return concepts.map.entrySet()
+    return concepts.keyDefinition.entrySet()
         .stream()
         .filter(entry -> entry.getKey().toLowerCase().contains(fragment.toLowerCase()))
         .skip(nthInstance + 1)
@@ -57,12 +51,12 @@ public class Actions {
           SimpleColorPrint.redInLine(String.valueOf(nthInstance));
           SimpleColorPrint.blueInLine("-th concept containing fragment: ");
           SimpleColorPrint.red(fragment);
-          return pickRandomConcept();
+          return pickConceptWithLowestScore();
         });
   }
 
   public void printAllConceptsContainingFragmentInKey(String fragment) {
-    List<Map.Entry<String, String>> found = concepts.map.entrySet().stream()
+    List<Map.Entry<String, String>> found = concepts.keyDefinition.entrySet().stream()
         .filter(entry -> entry.getKey().toLowerCase().contains(fragment.toLowerCase()))
         .toList();
 
@@ -79,7 +73,7 @@ public class Actions {
   }
 
   public void printAllConceptsContainingFragmentInKeyValue(String fragment) {
-    List<Map.Entry<String, String>> found = concepts.map.entrySet().stream()
+    List<Map.Entry<String, String>> found = concepts.keyDefinition.entrySet().stream()
         .filter(entry -> (entry.getKey() + " " + entry.getValue()).toLowerCase().contains(fragment.toLowerCase()))
         .toList();
 
@@ -120,7 +114,7 @@ public class Actions {
 
   public void printAllKeys() {
     SimpleColorPrint.blue("Listing all the keys:");
-    concepts.map.entrySet()
+    concepts.keyDefinition.entrySet()
         .stream()
         .forEach(entry -> {
           System.out.print(entry.getKey() + ", ");
@@ -151,10 +145,10 @@ public class Actions {
     SimpleColorPrint.yellow(answer);
 
     if (parseEvaluation(answer) >= 7) {
-      concepts.score.merge(concept.getKey(), 1, Integer :: sum);
-      return pickRandomConcept();
+      concepts.incrementScore(concept.getKey(), 1);
+      return pickConceptWithLowestScore();
     }
-    concepts.score.merge(concept.getKey(), -1, Integer :: sum);
+    concepts.incrementScore(concept.getKey(), -1);
     return concept;
   }
 
@@ -198,7 +192,7 @@ public class Actions {
     Properties props = new Properties();
 
     // Convert the <String, Integer> map to <String, String> and putAll
-    concepts.score.forEach((key, value) -> props.put(key, String.valueOf(value)));
+    concepts.keyScore.forEach((key, value) -> props.put(key, String.valueOf(value)));
 
     //write
     props.store(Files.newBufferedWriter(concepts.SCORE_PATH), "Concept key to score (1 for correct, -1 for wrong)");
@@ -210,9 +204,9 @@ public class Actions {
   }
 
   public Map.Entry<String, String> answerIDontKnow(Map.Entry<String, String> concept) {
-    concepts.score.merge(concept.getKey(), -1, Integer :: sum);
+    concepts.incrementScore(concept.getKey(), -1);
     SimpleColorPrint.blue("Concept has received a score of -1: ");
     SimpleColorPrint.red(concept.getKey() + " - " + concept.getValue());
-    return pickRandomConcept();
+    return pickConceptWithLowestScore();
   }
 }

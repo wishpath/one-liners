@@ -34,9 +34,3 @@ Not found 1-th concept containing fragment: heap ///////////// should be heap sp
 new menu item "idk" as for (i don't know) - should merge "-1" to score, should print out definition and skip to another concept
 
 allways pick concept with the lowest score. If multiple, just take first for simplicity.
-
-answerIDontKnow picks the same concept for some reason
-
-just like "idk, answering wrong should note the score of -1, total result, for example -3, the correct entry, and pick a random new concept
-
-somehow, make the entries available in ICD wiki - make an app to print these definitions all in one list with correct syntax and format
