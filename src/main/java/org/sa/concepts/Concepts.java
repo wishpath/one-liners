@@ -1,6 +1,7 @@
 package org.sa.concepts;
 
 import org.sa.console.SimpleColorPrint;
+import org.sa.other.ValueAscendingMap;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -17,7 +18,7 @@ public class Concepts {
   public static final String WIKI_INTRO = "*Goal of this article*\nThis collection of super-short definitions captures the core of each concept in just a few words, creating a broad, foundational framework for quick knowledge acquisition. By reducing concepts to their essence—even if imperfect—this approach fosters the confidence needed to deepen understanding later. This minimalist style lets you absorb a wide set of ideas rapidly, forming a scaffold for continuous growth.\n\n";
 
   public final Map<String, String> keyDefinition = new HashMap<>();
-  public final Map<String, Integer> keyScore = new HashMap<>(); //no keys with score zero
+  public final ValueAscendingMap<String, Integer> keyScore = new ValueAscendingMap<>(); //no keys with score zero, auto ascending
   public final TreeMap<Integer, List<String>> mapScoreToKeys = new TreeMap<>(); //auto ascending map
 
   public Concepts() throws IOException {

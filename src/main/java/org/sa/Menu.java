@@ -8,7 +8,19 @@ import java.util.Scanner;
 
 public class Menu {
 
-  private static final String MENU = "\n\u001B[31mskip\u001B[0m - reloads key;\n\u001B[31mdefine\u001B[0m - defines current key;\n\u001B[31mdefine all <fragment>\u001B[0m - defines all keys containing fragment;\n\u001B[31mdefine all all <fragment> \u001B[0m- defines all keys and values containing fragment;\n\u001B[31mpick nth <fragment nth> \u001B[0m- pick nth key containing fragment;\n\u001B[31mpick <fragment> \u001B[0m- pick key containing fragment;\n\u001B[31m<fragment ?> \u001B[0m- include question mark to get an answer;\n\u001B[31mall keys \u001B[0m- lists all the keys in this app;\n\u001B[31msave \u001B[0m- saves scores;\n\u001B[31mend \u001B[0m- ends the app gracefully;\n";
+  private static final String MENU =
+      "\n\u001B[31mskip\u001B[0m - reloads key;\n" +
+          "\u001B[31mdefine\u001B[0m - defines current key;\n" +
+          "\u001B[31mdefine all <fragment>\u001B[0m - defines all keys containing fragment;\n" +
+          "\u001B[31mdefine all all <fragment> \u001B[0m- defines all keys and values containing fragment;\n" +
+          "\u001B[31mpick nth <fragment nth> \u001B[0m- pick nth key containing fragment;\n" +
+          "\u001B[31mpick <fragment> \u001B[0m- pick key containing fragment;\n" +
+          "\u001B[31m<fragment ?> \u001B[0m- include question mark to get an answer;\n" +
+          "\u001B[31mall keys \u001B[0m- lists all the keys in this app;\n" +
+          "\u001B[31msave \u001B[0m- saves scores;\n" +
+          "\u001B[31mscore \u001B[0m- prints current concept score;\n" +
+          "\u001B[31mscores \u001B[0m- prints all non-zero scores;\n" +
+          "\u001B[31mend \u001B[0m- ends the app gracefully;\n";
   private Scanner scanner = new Scanner(System.in);
   private Actions act = new Actions();
   private Map.Entry<String, String> previousConcept = act.pickConceptWithLowestScore();
@@ -62,6 +74,12 @@ public class Menu {
 
       else if ("idk".equals(input))
         setConcept(act.answerIDontKnow(concept));
+
+      else if ("score".equals(input))
+        act.printCurrentKeyScore(concept);
+
+      else if ("scores".equals(input))
+        act.printAllNonZeroScores();
 
       else if ("end".equals(input)) {
         act.save(); break;

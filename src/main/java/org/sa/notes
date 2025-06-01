@@ -24,14 +24,15 @@ update submodules:
 git submodule update --remote --merge
 then commit
 
-douplicated concepts?
+douplicated concepts? check for doubles
+allow only one "=" in the concept
 
-
-pick nth heap 1
-Searching for fragment: heap nth: 1
-Not found 1-th concept containing fragment: heap ///////////// should be heap space!!!!!!!!
-
-
-put scores in the file in acending order
+1.redo saving and reading to properties file.
+    properties -> txt
+    key -> not escaped so easy to search (without these \ symbols that hiders search)
+2.put scores in the file in acending order
+3.print scores in console in ascending order
 
 do "score" command for current key
+
+print non zero scores

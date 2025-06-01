@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Properties;
 import java.util.regex.Pattern;
 
@@ -18,14 +19,14 @@ public class Actions {
   public Actions() throws IOException {
   }
 
-  public Map.Entry<String, String> pickConceptWithLowestScore() {
+  public Entry<String, String> pickConceptWithLowestScore() {
     SimpleColorPrint.blue("Picking concept with lowest score...");
     String key = concepts.mapScoreToKeys.firstEntry().getValue().getFirst();
     String value = concepts.keyDefinition.get(key);
     return Map.entry(key, value);
   }
 
-  public Map.Entry<String, String> pickConceptWithFragmentInKey(String fragment) {
+  public Entry<String, String> pickConceptWithFragmentInKey(String fragment) {
     SimpleColorPrint.blueInLine("Picking key containing fragment ");
     SimpleColorPrint.red(fragment);
     return concepts.keyDefinition.entrySet()
@@ -40,7 +41,7 @@ public class Actions {
   }
 
 
-  public Map.Entry<String, String> pickNthKeyDefinition(String fragment, int nthInstance) {
+  public Entry<String, String> pickNthKeyDefinition(String fragment, int nthInstance) {
     return concepts.keyDefinition.entrySet()
         .stream()
         .filter(entry -> entry.getKey().toLowerCase().contains(fragment.toLowerCase()))
@@ -56,7 +57,7 @@ public class Actions {
   }
 
   public void printAllConceptsContainingFragmentInKey(String fragment) {
-    List<Map.Entry<String, String>> found = concepts.keyDefinition.entrySet().stream()
+    List<Entry<String, String>> found = concepts.keyDefinition.entrySet().stream()
         .filter(entry -> entry.getKey().toLowerCase().contains(fragment.toLowerCase()))
         .toList();
 
@@ -73,7 +74,7 @@ public class Actions {
   }
 
   public void printAllConceptsContainingFragmentInKeyValue(String fragment) {
-    List<Map.Entry<String, String>> found = concepts.keyDefinition.entrySet().stream()
+    List<Entry<String, String>> found = concepts.keyDefinition.entrySet().stream()
         .filter(entry -> (entry.getKey() + " " + entry.getValue()).toLowerCase().contains(fragment.toLowerCase()))
         .toList();
 
@@ -89,12 +90,12 @@ public class Actions {
     System.out.println();
   }
 
-  private static void printConceptWithFragment2(Map.Entry<String, String> entry, String fragment) {
+  private static void printConceptWithFragment2(Entry<String, String> entry, String fragment) {
     System.out.println("\n" + entry.getKey() + ":");
     System.out.println(entry.getValue());
   }
 
-  private static void printConceptWithFragment(Map.Entry<String, String> entry, String fragment) {
+  private static void printConceptWithFragment(Entry<String, String> entry, String fragment) {
     String concept = "\n" + entry.getKey() + ":\n" + entry.getValue() + "\n";
     String lowerConcept = concept.toLowerCase();
     String lowerFragment = fragment.toLowerCase();
@@ -126,7 +127,7 @@ public class Actions {
     SimpleColorPrint.yellow(ai.getAnswer(input));
   }
 
-  public Map.Entry<String, String> evaluateUserExplanationWithAI(Map.Entry<String, String> concept, String input) {
+  public Entry<String, String> evaluateUserExplanationWithAI(Entry<String, String> concept, String input) {
     String questionB =
         "Is this a good key and definition: " + concept.getKey() + " = " + input + ". " +
             "\n 1 - Evaluate the answer by asking: 'Does this capture the essence?' (aim to be positive)." +
@@ -165,7 +166,7 @@ public class Actions {
     }
   }
 
-  public Map.Entry<String, String> pickNthConceptWithFragmentInKey(String input) {
+  public Entry<String, String> pickNthConceptWithFragmentInKey(String input) {
     //pick nth <fragment nth> - pick nth key containing fragment;
     String fragmentToSearchForAndNumber = input.substring("pick nth ".length()); //should be "<fragment nth>"
     String endsWithSpaceDigitsPattern = "^(.*) (\\d+)$";
@@ -203,10 +204,28 @@ public class Actions {
     save();
   }
 
-  public Map.Entry<String, String> answerIDontKnow(Map.Entry<String, String> concept) {
+  public Entry<String, String> answerIDontKnow(Entry<String, String> concept) {
     concepts.incrementScore(concept.getKey(), -1);
     SimpleColorPrint.blue("Concept has received a score of -1: ");
     SimpleColorPrint.red(concept.getKey() + " - " + concept.getValue());
     return pickConceptWithLowestScore();
+  }
+
+  public void printCurrentKeyScore(Entry<String, String> concept) {
+    SimpleColorPrint.blueInLine("The score of concept '");
+    SimpleColorPrint.redInLine(concept.getKey());
+    SimpleColorPrint.blueInLine("' is: ");
+    Integer score = concepts.keyScore.get(concept.getKey());
+    String finalScore = score == null ? "0" : String.valueOf(score);
+    SimpleColorPrint.red(finalScore);
+  }
+
+  public void printAllNonZeroScores() {
+    SimpleColorPrint.red("All non-zero scores:");
+    for (Entry<String, Integer> e : concepts.keyScore.entrySet()) {
+      SimpleColorPrint.blueInLine(e.getKey() + ": ");
+      SimpleColorPrint.red(String.valueOf(e.getValue()));
+    }
+    SimpleColorPrint.normal("\n\n");
   }
 }
