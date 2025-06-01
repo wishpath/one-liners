@@ -20,7 +20,7 @@ public class Actions {
 
   public Map.Entry<String, String> pickConceptWithLowestScore() {
     SimpleColorPrint.blue("Picking concept with lowest score...");
-    String key = concepts.scoreKeyList.firstEntry().getValue().getFirst();
+    String key = concepts.mapScoreToKeys.firstEntry().getValue().getFirst();
     String value = concepts.keyDefinition.get(key);
     return Map.entry(key, value);
   }
@@ -44,7 +44,7 @@ public class Actions {
     return concepts.keyDefinition.entrySet()
         .stream()
         .filter(entry -> entry.getKey().toLowerCase().contains(fragment.toLowerCase()))
-        .skip(nthInstance + 1)
+        .skip(nthInstance)
         .findFirst()
         .orElseGet(() -> {
           SimpleColorPrint.blueInLine("Not found ");

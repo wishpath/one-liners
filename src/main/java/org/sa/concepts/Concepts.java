@@ -1,5 +1,7 @@
 package org.sa.concepts;
 
+import org.sa.console.SimpleColorPrint;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -15,8 +17,8 @@ public class Concepts {
   public static final String WIKI_INTRO = "*Goal of this article*\nThis collection of super-short definitions captures the core of each concept in just a few words, creating a broad, foundational framework for quick knowledge acquisition. By reducing concepts to their essence—even if imperfect—this approach fosters the confidence needed to deepen understanding later. This minimalist style lets you absorb a wide set of ideas rapidly, forming a scaffold for continuous growth.\n\n";
 
   public final Map<String, String> keyDefinition = new HashMap<>();
-  public final Map<String, Integer> keyScore = new HashMap<>();
-  public final TreeMap<Integer, List<String>> scoreKeyList = new TreeMap<>();
+  public final Map<String, Integer> keyScore = new HashMap<>(); //no keys with score zero
+  public final TreeMap<Integer, List<String>> mapScoreToKeys = new TreeMap<>(); //auto ascending map
 
   public Concepts() throws IOException {
 
@@ -32,29 +34,42 @@ public class Concepts {
     Properties scoreProps = new Properties();
     scoreProps.load(Files.newInputStream(SCORE_PATH));
     for (Map.Entry<Object, Object> e : scoreProps.entrySet())
-      keyScore.put(e.getKey().toString(), Integer.parseInt((String)e.getValue()));
+      if (!e.getValue().equals("0"))
+        keyScore.put(e.getKey().toString(), Integer.parseInt((String)e.getValue()));
+
+    //keys not having explicit score, load with score 0
+    for (String key : keyDefinition.keySet())
+      if (keyScore.get(key) == null)
+        mapScoreToKeys.computeIfAbsent(0, k -> new ArrayList<>()).add(key);
 
     //sort scores ascendingly, list keys for score
+    SimpleColorPrint.blue("Current scores:");
     for(Map.Entry<String, Integer> e : keyScore.entrySet()) {
-      scoreKeyList.computeIfAbsent(e.getValue(), k -> new ArrayList<>()).add(e.getKey());
+      SimpleColorPrint.blueInLine(e.getKey() + ": ");
+      SimpleColorPrint.red(String.valueOf(e.getValue()));
+      mapScoreToKeys.computeIfAbsent(e.getValue(), k -> new ArrayList<>()).add(e.getKey());
     }
+
   }
 
   public void incrementScore(String key, int increment) {
-    int initialScore = keyScore.get(key);
+    Integer initialScore = keyScore.get(key);
+    if (initialScore == null) initialScore = 0;
     keyScore.merge(key, increment, Integer :: sum);
+    int finalScore = keyScore.get(key);
+    if (finalScore == 0) keyScore.remove(key);
 
-    List<String> initialList = scoreKeyList.get(initialScore);
-    if (initialList.size() == 1) scoreKeyList.remove(initialScore);
+    List<String> initialList = mapScoreToKeys.get(initialScore);
+    if (initialList.size() == 1) mapScoreToKeys.remove(initialScore);
     else initialList.remove(key);
 
-    int finalScore = keyScore.get(key);
-    scoreKeyList.computeIfAbsent(finalScore, k -> new ArrayList<>()).add(key);
+
+    mapScoreToKeys.computeIfAbsent(finalScore, k -> new ArrayList<>()).add(key);
   }
 
   public static void main(String[] args) throws IOException {
     printListOfTopics();
-    exportAllConceptsForWiki();
+    exportAllConceptsForWikiPage();
   }
 
   private static void printListOfTopics() throws IOException {
@@ -63,7 +78,7 @@ public class Concepts {
         .forEach(p -> System.out.println(p.getFileName().toString().replace(".properties", "")));
   }
 
-  private static void exportAllConceptsForWiki() throws IOException {
+  private static void exportAllConceptsForWikiPage() throws IOException {
     StringBuilder sb = new StringBuilder(WIKI_INTRO);
     List<Path> wikiTopicFiles = Stream
         .concat(Files.walk(TOPICS), Files.walk(TOPICS_SWED))

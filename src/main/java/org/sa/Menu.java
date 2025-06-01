@@ -18,6 +18,7 @@ public class Menu {
 
 
   public Menu() throws IOException {
+    System.out.println(MENU);
     while (true) {
       SimpleColorPrint.blueInLine("Please explain this: ");
       SimpleColorPrint.red(concept.getKey() + "\n");
