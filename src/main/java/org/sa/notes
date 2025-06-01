@@ -31,7 +31,6 @@ allow only one "=" in the concept
     properties -> txt
     key -> not escaped so easy to search (without these \ symbols that hiders search)
 2.put scores in the file in acending order
-3.print scores in console in ascending order
 
 do "score" command for current key
 
