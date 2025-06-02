@@ -3,12 +3,12 @@ package org.sa;
 import org.sa.concepts.Concepts;
 import org.sa.console.SimpleColorPrint;
 
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Properties;
 import java.util.regex.Pattern;
 
 public class Actions {
@@ -190,14 +190,12 @@ public class Actions {
   }
 
   public void save() throws IOException {
-    Properties props = new Properties();
+    BufferedWriter writer = Files.newBufferedWriter(concepts.SCORE_PATH);
 
-    // Convert the <String, Integer> map to <String, String> and putAll
-    concepts.keyScore.forEach((key, value) -> props.put(key, String.valueOf(value)));
+    for (Entry<String, Integer> e : concepts.keyScore.entrySet())
+      writer.write(e.getKey().replaceAll("([ \\t\\n\\r\\f=:])", "\\\\$1") + "=" + e.getValue() + "\n");
 
-    //write
-    props.store(Files.newBufferedWriter(concepts.SCORE_PATH), "Concept key to score (1 for correct, -1 for wrong)");
-    System.out.println(Files.lines(concepts.SCORE_PATH).filter(line -> line.contains("=")).count() + " lines in the score file");
+    writer.flush();
   }
 
   public void end() throws IOException {

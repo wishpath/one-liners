@@ -25,13 +25,8 @@ git submodule update --remote --merge
 then commit
 
 douplicated concepts? check for doubles
-allow only one "=" in the concept
+allow only one "=" in the concept (value must not contain it, in the key it is escaped)
 
 1.redo saving and reading to properties file.
     properties -> txt
     key -> not escaped so easy to search (without these \ symbols that hiders search)
-2.put scores in the file in acending order
-
-do "score" command for current key
-
-print non zero scores
