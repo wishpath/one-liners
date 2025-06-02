@@ -1,28 +1,8 @@
-continue sorting concepts
-
-
 do tests?
-sort topics
 
-evaluate:
-    a:
-        a1: first - ask what abreviation stands for if full words
-        a2: second - explain what phrase means
-    b: provide feedback. after feedback evaluade learning:
-        b1 - a1
-        b2 - b2
-
-"pick infe"
-gives
-Explain this: Value stream
-pick <fragment> - pick key containing fragment;
-?????????????????????????????????????????????????????????
-(was not loaded, because dictionary is not loaded)
-
-
-update submodules:
-git submodule update --remote --merge
-then commit
+>>>how to update submodules:
+>>>git submodule update --remote --merge
+>>>then commit
 
 douplicated concepts? check for doubles
 allow only one "=" in the concept (value must not contain it, in the key it is escaped)
