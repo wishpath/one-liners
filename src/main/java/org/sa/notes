@@ -10,3 +10,5 @@ allow only one "=" in the concept (value must not contain it, in the key it is e
 1.redo saving and reading to properties file.
     properties -> txt
     key -> not escaped so easy to search (without these \ symbols that hiders search)
+
+properties to concepts should write correct lithuanian symbols. and sort by key in alphabetic order;
