@@ -1,0 +1,10 @@
+Kibana=log and data visualization and exploration tool. Used in conjunction with OpenShift (or other).
+Elasticsearch=search and analytics engine. Handles and analyzes large volumes of data in real-time.
+ELK=Elasticsearch, Logstash, and Kibana - tools for searching, analyzing, and visualizing logs and data.
+Loki=log aggregation system and time-series database that is part of the Grafana.
+Logstash=data processing pipeline. Ingests, transforms, and enriches data. Often used for logs.
+stop word filtering=ignoring frequently occurring, non-informative words (e.g., "the," "and") to improve search.
+full-text search=search technique that scores matches, understands synonyms, and reduces words to stems.
+observability=monitoring system health via logs, metrics, and traces for real-time insights.
+distributed computing=computers in different locations working together as one system over a network.
+Logread=our system where logs are being stored in files.

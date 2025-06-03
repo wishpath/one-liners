@@ -1,0 +1,15 @@
+metadata=data about data: format, source, purpose, quality, relationships with other data.
+AD=architecture description or active directory (access rights).
+HSM=Hardware Security Module â device for cryptographic key protection.
+interface=an intermediate between user and internal functionality; serves as both abstraction and boundary.
+ICT system components=hardware, software, networks, and people.
+SSO=Single Sign-On - authentication method for accessing multiple apps with one login.
+framework=reusable and extensible structure that helps building applications.
+credential=username, password, or token, used to authenticate and authorize a user.
+hub=central point, where things are executed.
+infer=deduce info from evidence. Java example: in "var x = stream.toList()", x is inferred as a List.
+ICT system=Information and Communication Technology setup for data handling and communication.
+deduce=conclude
+detrimental=causing harm, e.g. "Memory leaks are detrimental to performance."
+dispatcher=system or person that ensures efficiency by distributing resources, tasks, and information.
+cross architecture=making sure components fit well: front, back, data, infrastructure and security

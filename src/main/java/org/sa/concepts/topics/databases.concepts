@@ -1,0 +1,17 @@
+DBA=database administrators.
+Hibernate=ORM framework for the Java - predecessor of JPA.
+JPQL=Java Persistence Query Language - platform-independent database queries (get auto-translated to specific SQL).
+ORM=Object-Relational Mapping - framework for object mapping e.g. Hibernate.
+DAO=Data Access Object - object with custom CRUD methods to interact with database.
+RDBMS=relational database management system.
+partition and sample=part of database table.
+JPA scope=API covering queries, object mapping, transactions, and entity management.
+object mapping (database)=linking app objects to database tables for storage/retrieval.
+entity (database)=object stored in database, represents data record.
+CTE (SQL)=Common Table Expression - temporary result set in a larger query.
+entity management=managing app data objects in DB: create, update, delete.
+NOT IN (SQL)=operator, similar to "!=" (not equals)
+JDBC=Java Database Connectivity - Java API for executing SQL in relational databases.
+JPA=Java Persistence API - standard for managing relational data in Java apps, mapping objects to database tables.
+connection pool=pool of reusable database connections, speeds up app-db interactions.
+database transactions=group of DB actions done as one, all succeed or fail together.

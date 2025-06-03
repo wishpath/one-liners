@@ -196,6 +196,7 @@ public class Actions {
       writer.write(e.getKey().replaceAll("([ \\t\\n\\r\\f=:])", "\\\\$1") + "=" + e.getValue() + "\n");
 
     writer.flush();
+    writer.close();
   }
 
   public void end() throws IOException {
