@@ -23,14 +23,7 @@ public class Concepts {
 
   public Concepts() throws IOException {
 
-    //load definitions
-//    for (Path subtopicPath : Files.walk(TOPICS).filter(p -> p.toString().endsWith(".properties")).toList()) {
-//      Properties props = new Properties();
-//      props.load(Files.newInputStream(subtopicPath));
-//      for (Map.Entry<Object, Object> e : props.entrySet())
-//        keyDefinition.put(e.getKey().toString(), e.getValue().toString());
-//    }
-
+    //load concepts
     for (Path subtopicPath : Files.walk(TOPICS).filter(p -> p.toString().endsWith(".concepts")).toList())
       Files.lines(subtopicPath)
           .filter(line -> line.contains("="))
