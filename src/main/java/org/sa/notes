@@ -7,8 +7,4 @@ do tests?
 douplicated concepts? check for doubles
 allow only one "=" in the concept (value must not contain it, in the key it is escaped)
 
-1.redo saving and reading to properties file.
-    properties -> txt
-    key -> not escaped so easy to search (without these \ symbols that hiders search)
-
-read concepts not from .properties, but rather from .concepts
+emDash (—) and ndash does not print well in console
