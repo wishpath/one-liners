@@ -1,8 +1,7 @@
 AWS=Amazon cloud platform for scalable computing, storage, and services.
 Azure=Microsoft cloud platform for apps, data, and services.
 Google Cloud=Google cloud platform for hosting, data, and AI.
-Kafka (1/2)=platform orchestrating data flow
-Kafka (2/2)=distributed event streaming platform for high-throughput, fault-tolerant data pipelines.
+Kafka=platform orchestrating data flow. Event streaming platform.
 Kafka vs Kubernetes=Kafka orchestrates data streams; Kubernetes orchestrates container management.
 Kerberos=authentication protocol.
 Kerberos keytab=file storing username, service name and key to request Kerberos tickets.

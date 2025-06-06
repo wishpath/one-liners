@@ -5,6 +5,8 @@ do tests?
 >>>then commit
 
 douplicated concepts? check for doubles
-allow only one "=" in the concept (value must not contain it, in the key it is escaped)
 
 emDash (—) and ndash does not print well in console
+
+ok, not needed to change:
+ * multiple "=" characters in the concept, because when splitting by it, it is limited to 2 parts max.
