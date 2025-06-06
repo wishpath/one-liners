@@ -10,3 +10,5 @@
    - update submodules:
        - git submodule update --remote --merge
        - then commit
+   - tone down the definitions in .concepts:
+       - ?
