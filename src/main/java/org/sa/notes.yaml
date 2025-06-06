@@ -1,0 +1,12 @@
+  problems:
+   - duplicated concepts? check for doubles
+   - emDash (—) and ndash do not print well in console
+   - do tests?
+
+  ok_not_needed_to_change:
+   - multiple "=" characters in the concept, because when splitting by it, it is limited to 2 parts max.
+
+  how_to:
+   - update submodules:
+       - git submodule update --remote --merge
+       - then commit
