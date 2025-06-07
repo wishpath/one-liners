@@ -1,5 +1,4 @@
 problems:
-  - duplicated concepts? check for doubles
   - emDash (—) and ndash do not print well in console
   - do tests?
   - fix concept requirements and turn to yaml

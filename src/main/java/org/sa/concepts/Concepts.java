@@ -23,23 +23,7 @@ public class Concepts {
 
   public Concepts() throws IOException {
 
-    //load concepts, check for repeating keys
-    for (Path subtopicPath : Files.walk(TOPICS).filter(p -> p.toString().endsWith(".concepts")).toList())
-      Files.lines(subtopicPath)
-          .filter(line -> line.contains("="))
-          .forEach(line -> {
-            String[] arr = line.split("=", 2);
-            String repeated = keyDefinition.put(arr[0], arr[1]);
-            if (repeated != null) {
-              SimpleColorPrint.redInLine("The repeated key: ");
-              SimpleColorPrint.blueInLine(arr[0]);
-              SimpleColorPrint.redInLine(", the definitions: ");
-              SimpleColorPrint.blueInLine(arr[1]);
-              SimpleColorPrint.redInLine(" and ");
-              SimpleColorPrint.blue(repeated);
-            }
-          });
-
+    loadConceptsCheckRepeated();
 
     //load scores
     Properties scoreProps = new Properties();
@@ -63,20 +47,24 @@ public class Concepts {
 
   }
 
-  public void incrementScore(String key, int increment) {
-    Integer initialScore = keyScore.get(key);
-    if (initialScore == null) initialScore = 0;
-    keyScore.merge(key, increment, Integer :: sum);
-    int finalScore = keyScore.get(key);
-    if (finalScore == 0) keyScore.remove(key);
-
-    List<String> initialList = mapScoreToKeys.get(initialScore);
-    if (initialList.size() == 1) mapScoreToKeys.remove(initialScore);
-    else initialList.remove(key);
-
-
-    mapScoreToKeys.computeIfAbsent(finalScore, k -> new ArrayList<>()).add(key);
+  private void loadConceptsCheckRepeated() throws IOException {
+    for (Path subtopicPath : Files.walk(TOPICS).filter(p -> p.toString().endsWith(".concepts")).toList())
+      Files.lines(subtopicPath)
+          .filter(line -> line.contains("="))
+          .forEach(line -> {
+            String[] arr = line.split("=", 2);
+            String repeated = keyDefinition.put(arr[0], arr[1]);
+            if (repeated != null) {
+              SimpleColorPrint.redInLine("The repeated key: ");
+              SimpleColorPrint.blueInLine(arr[0]);
+              SimpleColorPrint.redInLine(", the definitions: ");
+              SimpleColorPrint.blueInLine(arr[1]);
+              SimpleColorPrint.redInLine(" and ");
+              SimpleColorPrint.blue(repeated);
+            }
+          });
   }
+
 
   public static void main(String[] args) throws IOException {
     printListOfTopics();

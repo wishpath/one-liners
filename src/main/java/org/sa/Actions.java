@@ -6,6 +6,7 @@ import org.sa.console.SimpleColorPrint;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -146,10 +147,10 @@ public class Actions {
     SimpleColorPrint.yellow(answer);
 
     if (parseEvaluation(answer) >= 7) {
-      concepts.incrementScore(concept.getKey(), 1);
+      incrementScore(concept.getKey(), 1);
       return pickConceptWithLowestScore();
     }
-    concepts.incrementScore(concept.getKey(), -1);
+    incrementScore(concept.getKey(), -1);
     return concept;
   }
 
@@ -204,7 +205,7 @@ public class Actions {
   }
 
   public Entry<String, String> answerIDontKnow(Entry<String, String> concept) {
-    concepts.incrementScore(concept.getKey(), -1);
+    incrementScore(concept.getKey(), -1);
     SimpleColorPrint.blue("Concept has received a score of -1: ");
     SimpleColorPrint.red(concept.getKey() + " - " + concept.getValue());
     return pickConceptWithLowestScore();
@@ -226,5 +227,19 @@ public class Actions {
       SimpleColorPrint.red(String.valueOf(e.getValue()));
     }
     SimpleColorPrint.normal("\n\n");
+  }
+
+  public void incrementScore(String key, int increment) {
+    Integer initialScore = concepts.keyScore.get(key);
+    if (initialScore == null) initialScore = 0;
+    concepts.keyScore.merge(key, increment, Integer :: sum);
+    int finalScore = concepts.keyScore.get(key);
+    if (finalScore == 0) concepts.keyScore.remove(key);
+
+    List<String> initialList = concepts.mapScoreToKeys.get(initialScore);
+    if (initialList.size() == 1) concepts.mapScoreToKeys.remove(initialScore);
+    else initialList.remove(key);
+
+    concepts.mapScoreToKeys.computeIfAbsent(finalScore, k -> new ArrayList<>()).add(key);
   }
 }
