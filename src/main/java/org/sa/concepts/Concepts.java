@@ -23,13 +23,21 @@ public class Concepts {
 
   public Concepts() throws IOException {
 
-    //load concepts
+    //load concepts, check for repeating keys
     for (Path subtopicPath : Files.walk(TOPICS).filter(p -> p.toString().endsWith(".concepts")).toList())
       Files.lines(subtopicPath)
           .filter(line -> line.contains("="))
           .forEach(line -> {
             String[] arr = line.split("=", 2);
-            keyDefinition.put(arr[0], arr[1]);
+            String repeated = keyDefinition.put(arr[0], arr[1]);
+            if (repeated != null) {
+              SimpleColorPrint.redInLine("The repeated key: ");
+              SimpleColorPrint.blueInLine(arr[0]);
+              SimpleColorPrint.redInLine(", the definitions: ");
+              SimpleColorPrint.blueInLine(arr[1]);
+              SimpleColorPrint.redInLine(" and ");
+              SimpleColorPrint.blue(repeated);
+            }
           });
 
 
