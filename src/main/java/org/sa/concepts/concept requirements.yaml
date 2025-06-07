@@ -37,7 +37,7 @@ Guidelines:
   - If a longer phrase or term can be reduced to one or two words, do so.
   - Essence only — avoid elaboration.
   - Shorter and less clear is better than longer and more precise.
-  - NB! If the concept key is an acronym, full term has to be spelled out like this (with "space + dash + space" afterwards):
+  - NB! If the concept key is an acronym or initialism, full term has to be spelled out like this (with "space + dash + space" afterwards):
       - "SLI=Service Level Indicator — metric measuring system performance."
   - Or even better (if the full version can serve as a simple definition):
       - "URL=Uniform Resource Locators."
