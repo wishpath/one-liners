@@ -2,6 +2,7 @@ problems:
   - emDash (—) and ndash do not print well in console
   - do tests?
   - fix concept requirements and turn to yaml
+  - remember answers in csv format: - key, attempted answer, AI rating, datetime
 
 ok not needed to change: - multiple "=" characters in the concept, because when splitting by it, it is limited to 2 parts max.
 
