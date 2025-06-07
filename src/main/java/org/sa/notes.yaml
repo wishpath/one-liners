@@ -1,8 +1,7 @@
 problems:
-  - finish how to: tone down the definitions in .concepts
   - emDash (—) and ndash do not print well in console
   - do tests?
-  - remember answers in csv format: key, attempted answer, AI rating, datetime
+  - when picking a concept with lowest score, randomize between concepts with the same lowest score.
 
 ok, not needed to change: multiple "=" characters in the concept, because when splitting by it, it is limited to 2 parts max.
 
