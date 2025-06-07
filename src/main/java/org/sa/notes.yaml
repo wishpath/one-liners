@@ -1,9 +1,9 @@
 problems:
-  - emDash (—) and ndash do not print well in console
   - do tests?
-  - when picking a concept with lowest score, randomize between concepts with the same lowest score.
 
-ok, not needed to change: multiple "=" characters in the concept, because when splitting by it, it is limited to 2 parts max.
+ok, not needed to change:
+   - multiple "=" characters in the concept, because when splitting by it, it is limited to 2 parts max.
+   - characters print well in console, but gradle settings > build and run should be IntelliJ
 
 how to:
   - update submodules:

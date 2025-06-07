@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Random;
 import java.util.regex.Pattern;
 
 public class Actions {
@@ -26,9 +27,10 @@ public class Actions {
 
   public Entry<String, String> pickConceptWithLowestScore() {
     SimpleColorPrint.blue("Picking concept with lowest score...");
-    String key = concepts.mapScoreToKeys.firstEntry().getValue().getFirst();
-    String value = concepts.keyDefinition.get(key);
-    return Map.entry(key, value);
+    List<String> keysWithLowestScore = concepts.mapScoreToKeys.firstEntry().getValue();
+    String randomKey = keysWithLowestScore.get(new Random().nextInt(keysWithLowestScore.size()));
+    String value = concepts.keyDefinition.get(randomKey);
+    return Map.entry(randomKey, value);
   }
 
   public Entry<String, String> pickConceptWithFragmentInKey(String fragment) {
