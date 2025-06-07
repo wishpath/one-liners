@@ -17,6 +17,6 @@ continuous integration components=VCS (e.g., Git), automated: builds, tests, fee
 deploying=making app available on a target environment. For example production environment.
 git stash=git command to temporarily save uncommitted changes for later retrieval.
 heap space=memory area during program execution, for storing objects.
-memory lack in Jenkins=due to large builds, extensive test suites, or insufficient memory allocation in JVM settings.
+reason for memory lack in Jenkins=due to large builds, test suites, or insufficient memory allocation in JVM settings.
 pipeline=process of building, testing and deploying. Often associated with automatisation.
 roll out=deployment and activation of a new product or feature for use.

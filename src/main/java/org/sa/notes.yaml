@@ -1,5 +1,12 @@
 problems:
   - do tests?
+  - heap space vs runtime concept
+
+ideas:
+  - add score "7, 8 - 1; 9 - 2; 10 - 4"
+  - in case of failed answer (evaluation < 7):
+    - save to the list (both in memory and file) "do not learn today" with structure "key, date".
+    - only keep record for "today", delete past ones
 
 ok, not needed to change:
    - multiple "=" characters in the concept, because when splitting by it, it is limited to 2 parts max.
@@ -10,4 +17,4 @@ how to:
     - git submodule update --remote --merge
     - then commit
   - tone down the definitions in .concepts:
-    - ?
+    - Settings > ... > File Types > "+" > in the "line comment" put "="

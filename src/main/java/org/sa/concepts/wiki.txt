@@ -194,8 +194,8 @@ This collection of super-short definitions captures the core of each concept in 
 
 *Domain Driven Design*
      semantic registration message - JSON structure for user signup. Includes raw data and metadata.
-     signup raw data - core data fields: userId, username, email, registration date, status.
-     signup metadata - contextual info: registrationSource, referralCode, ipAddress, verification status.
+     raw data for signup - core data fields: userId, username, email, registration date, status.
+     metadata for signup - contextual info: registrationSource, referralCode, ipAddress, verification status.
      bounded - distinct business area, isolated from other contexts, distinct contextual meaning, independent evolution.
      bounded context - software unit with consistent terms, e.g., order processing in retail, payments in finance.
      bounded context example - user management - user registration, authentication, profile management.
