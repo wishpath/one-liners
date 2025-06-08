@@ -12,3 +12,13 @@ runtime;environment and time where an app runs;8;2025-06-07T22:21:32.641811500
 pivot;truning point;9;2025-06-07T22:21:56.424246400
 due diligence;proper inverstigation and checks;9;2025-06-08T20:42:00.783697
 runtime;Software providing needed componens and resources to run a program. Runtime also refers to a time when a program is being ran.;10;2025-06-08T20:53:49.390008100
+memoization;it is a programmin technique, when intermediate results are saved to the memory, so they do not need to be rediscovered;10;2025-06-08T20:57:50.100697
+diligence;care, research, investigation;8;2025-06-08T21:04:35.314938
+traverse;visit all places, go trhough something, loop through something;8;2025-06-08T21:07:21.411005
+deduce;conclude from evidence;10;2025-06-08T21:11:03.022037
+cohesion;level of interconnectedness;8;2025-06-08T21:11:44.889112500
+interface;provides abstraction, hides details, exposes key / needed features;10;2025-06-08T21:14:36.639935900
+Azure;it is cloud computing platform provided by Microsoft;10;2025-06-08T21:15:16.526789100
+Ivy;Ivy is a software to manage application dependecies. Can be integrated to Gradle or Jenkins. Can access Ivy repository.;9;2025-06-08T21:16:36.049484200
+VPN whitelisting;Setting objects that can be accessed through VPN (Virtual Private Network) connection.;8;2025-06-08T21:18:08.677885500
+interface;provides abstraction, hides details, exposes key / needed features;10;2025-06-08T21:21:41.006955900

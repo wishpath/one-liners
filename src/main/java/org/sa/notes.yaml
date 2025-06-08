@@ -1,9 +1,9 @@
 problems:
   - do tests?
   - //if evaluation < 7, keeps same concept; change this
+  - auto save (and temporarily print all scores to console for debuging purposes)
 
 ideas:
-  - add score "7, 8 - 1; 9 - 2; 10 - 4"
   - in case of failed answer (evaluation < 7):
     - save to the list (both in memory and file) "do not learn today" with structure "key, date".
     - only keep record for "today", delete past ones

@@ -1,5 +1,3 @@
-Andromeda=app development platform also for deployment and operation of cloud-native applications. Runs on OpenShift.
-Andromeda container deployment=Andromeda runs applications inside containers deployed in a Kubernetes cluster.
 DC=data center — building housing IT systems.
 DC components=includes telecommunications, storage, backup power, redundant connections, cooling, etc.
 Docker=container runtime.
@@ -44,6 +42,5 @@ pod=smallest deployable unit. It can hold one or more containers.
 port=communication endpoint.
 runtime=software providing components to execute an app (or period when a program is executing).
 secret (Kubernetes)=resource storing sensitive data as key-value pairs in etcd.
-secret access (Kubernetes)=readable by admins or users with RBAC permissions.
 throttling=intentional limitation or control of certain resources, actions, or processes within an app or a system.
 worker node=computing node for running the containerized applications, has its own CPU, memory, and other resources.
