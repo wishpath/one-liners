@@ -38,7 +38,7 @@ public class Concepts {
         mapScoreToKeys.computeIfAbsent(0, k -> new ArrayList<>()).add(key);
 
     //sort scores ascendingly, list keys for score
-    SimpleColorPrint.blue("Current scores:");
+    SimpleColorPrint.red("Current scores:");
     for(Map.Entry<String, Integer> e : keyScore.entrySet()) {
       SimpleColorPrint.blueInLine(e.getKey() + ": ");
       SimpleColorPrint.red(String.valueOf(e.getValue()));

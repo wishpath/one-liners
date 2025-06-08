@@ -3,7 +3,6 @@ HSM=Hardware Security Module — device for cryptographic key protection.
 ICT system=Information and Communication Technology setup for data handling and communication.
 ICT system components=hardware, software, networks, and people.
 SSO=Single Sign-On - authentication method for accessing multiple apps with one login.
-credential=username, password, or token, used to authenticate and authorize a user.
 cross architecture=making sure components fit well: front, back, data, infrastructure and security
 deduce=conclude
 detrimental=causing harm, e.g. "Memory leaks are detrimental to performance."

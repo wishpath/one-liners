@@ -1,6 +1,5 @@
 problems:
   - do tests?
-  - heap space vs runtime concept
 
 ideas:
   - add score "7, 8 - 1; 9 - 2; 10 - 4"

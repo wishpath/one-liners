@@ -1,4 +1,3 @@
-.war file=Web Application Archive - containing app, packaged and, ready for deployment.
 Argo CD=Argo Continuous Delivery - deploys app from Git repo to Kubernetes cluster.
 CI/CD=C - continuous (automatic), I - integration (merging code and testing it), D - delivery (deploying).
 DevOps=practices, principles, philosophies on automation of the process of software delivery and infrastructure changes.
