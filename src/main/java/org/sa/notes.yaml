@@ -1,5 +1,6 @@
 problems:
   - do tests?
+  - //if evaluation < 7, keeps same concept; change this
 
 ideas:
   - add score "7, 8 - 1; 9 - 2; 10 - 4"

@@ -161,7 +161,7 @@ public class Actions {
 
     //depending on evaluation return concept entry
     if (evaluation >= 7) {
-      incrementScore(concept.getKey(), 1);
+      incrementScore(concept.getKey(), evaluation <= 8 ? 1 : evaluation == 9 ? 2 : 4);
       return pickConceptWithLowestScore();
     }
     incrementScore(concept.getKey(), -1);
