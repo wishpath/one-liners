@@ -1,12 +1,20 @@
 problems:
   - do tests?
-  - //if evaluation < 7, keeps same concept; change this
+  - command "weaknesses"     - "print fails" "failed" "rerun failed concepts" - print from not today list
   - auto save (and temporarily print all scores to console for debuging purposes)
+  - command not sure, ns (should give -1 score), idk should give -2
+  - ";":
+    - do not allow ";" in key (because not today list  and attempted answers separates key with it);
+    - do not allow ";" in attempted answer (attempted answers list separates key with it);
+    - do ; checks where needed
+  - if a concept key gets deleted or altered, it has to be removed from scores as well
+
 
 ideas:
   - in case of failed answer (evaluation < 7):
     - save to the list (both in memory and file) "do not learn today" with structure "key, date".
     - only keep record for "today", delete past ones
+    - spaced repetition
 
 ok, not needed to change:
    - multiple "=" characters in the concept, because when splitting by it, it is limited to 2 parts max.

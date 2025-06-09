@@ -3,10 +3,12 @@ package org.sa.concepts;
 import org.sa.console.SimpleColorPrint;
 import org.sa.other.ValueAscendingMap;
 
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Stream;
 
@@ -15,11 +17,13 @@ public class Concepts {
   private static final Path TOPICS_SWED = Paths.get("src/main/java/org/sa/concepts/topics-swed");
   public static final Path SCORE_PATH = Paths.get("src/main/java/org/sa/score/score.properties");
   public static final Path WIKI_OUTPUT_FILE = Paths.get("src/main/java/org/sa/concepts/wiki.txt");
+  public static final Path NOT_TODAY_FILE = Paths.get("src/main/java/org/sa/not_today.csv");
   public static final String WIKI_INTRO = "*Goal of this article*\nThis collection of super-short definitions captures the core of each concept in just a few words, creating a broad, foundational framework for quick knowledge acquisition. By reducing concepts to their essence—even if imperfect—this approach fosters the confidence needed to deepen understanding later. This minimalist style lets you absorb a wide set of ideas rapidly, forming a scaffold for continuous growth.\n\n";
 
   public final Map<String, String> keyDefinition = new HashMap<>();
   public final ValueAscendingMap<String, Integer> keyScore = new ValueAscendingMap<>(); //no keys with score zero, auto ascending
   public final TreeMap<Integer, List<String>> mapScoreToKeys = new TreeMap<>(); //auto ascending map
+  public final Map<String, LocalDateTime> notTodayKeys = new HashMap<>();
 
   public Concepts() throws IOException {
 
@@ -43,6 +47,15 @@ public class Concepts {
       SimpleColorPrint.blueInLine(e.getKey() + ": ");
       SimpleColorPrint.red(String.valueOf(e.getValue()));
       mapScoreToKeys.computeIfAbsent(e.getValue(), k -> new ArrayList<>()).add(e.getKey());
+    }
+
+    //load notTodayKeys from file
+    try (Stream<String> lines = Files.lines(NOT_TODAY_FILE)) {
+      LocalDateTime oneDayAgo = LocalDateTime.now().minusDays(1);
+      lines.map(line -> line.split(";"))
+          .map(parts -> Map.entry(parts[0], LocalDateTime.parse(parts[1])))
+          .filter(e -> e.getValue().isAfter(oneDayAgo))
+          .forEach(e -> notTodayKeys.put(e.getKey(), e.getValue()));
     }
 
   }
@@ -104,5 +117,24 @@ public class Concepts {
     String key = parts[0].replace("\\ ", " ");
     String value = parts.length > 1 ? parts[1].trim() : "";
     return "     " + key + " - " + value + "\n";
+  }
+
+  public void dontLearnThisToday(String key) throws IOException {
+    // refresh: remove entries older than one day
+    refreshNotTodayMap();
+
+    // add new entry
+    notTodayKeys.put(key, LocalDateTime.now());
+
+    //autosave updated list to file
+    try (BufferedWriter writer = Files.newBufferedWriter(NOT_TODAY_FILE)) {
+      for (Map.Entry<String, LocalDateTime> entry : notTodayKeys.entrySet())
+        writer.write(entry.getKey() + ";" + entry.getValue() + System.lineSeparator());
+    }
+  }
+
+  public void refreshNotTodayMap() {
+    LocalDateTime oneDayAgo = LocalDateTime.now().minusDays(1);
+    notTodayKeys.entrySet().removeIf(e -> e.getValue().isBefore(oneDayAgo));
   }
 }

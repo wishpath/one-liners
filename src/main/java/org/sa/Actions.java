@@ -10,11 +10,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.Random;
 import java.util.regex.Pattern;
 
 public class Actions {
@@ -27,10 +24,16 @@ public class Actions {
 
   public Entry<String, String> pickConceptWithLowestScore() {
     SimpleColorPrint.blue("Picking concept with lowest score...");
-    List<String> keysWithLowestScore = concepts.mapScoreToKeys.firstEntry().getValue();
-    String randomKey = keysWithLowestScore.get(new Random().nextInt(keysWithLowestScore.size()));
-    String value = concepts.keyDefinition.get(randomKey);
-    return Map.entry(randomKey, value);
+
+    concepts.refreshNotTodayMap();
+    Set<String> skippableKeys = concepts.notTodayKeys.keySet();
+
+    for (List<String> keys : concepts.mapScoreToKeys.values())
+      for (String key : keys)
+        if (!skippableKeys.contains(key))
+          return Map.entry(key, concepts.keyDefinition.get(key));
+
+    throw new NoSuchElementException("No eligible concept available");
   }
 
   public Entry<String, String> pickConceptWithFragmentInKey(String fragment) {
@@ -160,12 +163,12 @@ public class Actions {
     }
 
     //depending on evaluation return concept entry
-    if (evaluation >= 7) {
-      incrementScore(concept.getKey(), evaluation <= 8 ? 1 : evaluation == 9 ? 2 : 4);
-      return pickConceptWithLowestScore();
-    }
-    incrementScore(concept.getKey(), -1);
-    return concept;
+    incrementScore(concept.getKey(), evaluation < 7 ? -1 : evaluation <= 8 ? 1 : evaluation == 9 ? 2 : 4);
+    concepts.dontLearnThisToday(concept.getKey());
+
+    SimpleColorPrint.blueInLine("The default definition: ");
+    SimpleColorPrint.normal(concept.getValue());
+    return pickConceptWithLowestScore();
   }
 
   private int parseEvaluation(String s) {
@@ -218,10 +221,11 @@ public class Actions {
     save();
   }
 
-  public Entry<String, String> answerIDontKnow(Entry<String, String> concept) {
+  public Entry<String, String> answerIDontKnow(Entry<String, String> concept) throws IOException {
     incrementScore(concept.getKey(), -1);
     SimpleColorPrint.blue("Concept has received a score of -1: ");
     SimpleColorPrint.red(concept.getKey() + " - " + concept.getValue());
+    concepts.dontLearnThisToday(concept.getKey());
     return pickConceptWithLowestScore();
   }
 

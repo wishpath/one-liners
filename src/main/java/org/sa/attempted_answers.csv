@@ -22,3 +22,14 @@ Azure;it is cloud computing platform provided by Microsoft;10;2025-06-08T21:15:1
 Ivy;Ivy is a software to manage application dependecies. Can be integrated to Gradle or Jenkins. Can access Ivy repository.;9;2025-06-08T21:16:36.049484200
 VPN whitelisting;Setting objects that can be accessed through VPN (Virtual Private Network) connection.;8;2025-06-08T21:18:08.677885500
 interface;provides abstraction, hides details, exposes key / needed features;10;2025-06-08T21:21:41.006955900
+PPTE;pre production test environment - where changes has to be tested right before they get deployed to production;10;2025-06-09T21:14:43.938355400
+Rancher features;it has a user interface;8;2025-06-09T21:34:32.783060500
+synchronous;action that happend right after antoher has has finished.;9;2025-06-09T21:43:44.581758500
+stakeholder;any person intrested in the outcome of software building process;10;2025-06-09T21:46:29.481736400
+container image;contains environment parameters and runnable application. Runs on a pod and provides an application instance;9;2025-06-09T21:48:50.797762600
+reason for memory lack in Jenkins;If Jenkins settings allow too low resources that the source or it's tests actually need;8;2025-06-09T21:50:25.834673400
+usability testing;testing from the point of user, basically UI/UX testing;9;2025-06-09T21:51:30.724773
+functional testing;evaluates if the app generates correct outcome;9;2025-06-09T21:52:49.515599900
+F5 rules;define how the traffic is being directed to app instances, pods, namespaces and clusters;8;2025-06-09T21:54:26.426007
+Docker;container rutime;10;2025-06-09T21:54:51.634720900
+domain model;definition of roles and processes of a specific business part;8;2025-06-09T21:55:29.834754600
