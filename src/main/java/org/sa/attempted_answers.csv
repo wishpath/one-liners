@@ -33,4 +33,9 @@ functional testing;evaluates if the app generates correct outcome;9;2025-06-09T2
 F5 rules;define how the traffic is being directed to app instances, pods, namespaces and clusters;8;2025-06-09T21:54:26.426007
 Docker;container rutime;10;2025-06-09T21:54:51.634720900
 domain model;definition of roles and processes of a specific business part;8;2025-06-09T21:55:29.834754600
-;
+dispose of memory;releasing memory;10;2025-06-10T23:16:41.784599600
+directed graph;grapth are connected nodes. directed means that a connections has signle direction, from one one to another;8;2025-06-10T23:23:00.447986100
+sticky session benefit;no need to serialize objects and transfer them over network;9;2025-06-10T23:25:11.089336400
+test pilot;when a new feature is released partialy for testing purposes;8;2025-06-10T23:32:47.497049
+AD;those are role based rights, spelled out as Access Direct. Or this can mean Architecture Description.;7;2025-06-10T23:34:17.717216300
+JSP;java script pages. format to write frontend pages using javascript logic;0;2025-06-10T23:35:38.881067

@@ -137,40 +137,6 @@ public class Actions {
     SimpleColorPrint.yellow(ai.getAnswer(input));
   }
 
-  public Entry<String, String> evaluateUserExplanationWithAI(Entry<String, String> concept, String userInputDefinitionAttempt) throws IOException {
-    //AI evaluation
-    String questionB =
-        "Is this a good key and definition: " + concept.getKey() + " = " + userInputDefinitionAttempt + ". " +
-            "\n 1 - Evaluate the answer by asking: 'Does this capture the essence?' (aim to be positive)." +
-            "\n If some details are missing but it captures the essence, rate 10/10." +
-            "\n If the definition matches this one, rate 10/10: " + concept.getValue() +
-            "\n If the essence is ALMOST there, rate 9/10." +
-            "\n If the essence is somewhat touched, rate 8/10." +
-            "\n Think of an answer in up to 10 words - if you can't come up with a better one, rate 10/10." +
-            "\n If the answer is completely off, rate 0/10." +
-            "\n If the answer is somewhat acceptable, rate 7/10." +
-            "\n If the key is an acronym, the definition must include exact words for each letter (e.g., 'Intelligence Quotient' for IQ); other correct answers (like 'a measure of smartness') are not acceptable, and the maximum score is 7/10." +
-            "\n Step 2 - If the evaluation is less than 7/10, provide the correct answer (if 7/10 to 10/10, skip this step)." +
-            "\n Your entire answer should be up to 300 characters.";
-    String answer = ai.getAnswer(questionB);
-    SimpleColorPrint.yellow(answer);
-    int evaluation = parseEvaluation(answer);
-
-    //memorize answer
-    String recordLine = String.join(";", concept.getKey(), userInputDefinitionAttempt, String.valueOf(evaluation), LocalDateTime.now().toString()) + "\n";
-    try (BufferedWriter writer = Files.newBufferedWriter(ATTEMPTED_ANSWERS, StandardOpenOption.CREATE, StandardOpenOption.APPEND)) {
-      writer.write(recordLine);
-    }
-
-    //depending on evaluation return concept entry
-    incrementScore(concept.getKey(), evaluation < 7 ? -1 : evaluation <= 8 ? 1 : evaluation == 9 ? 2 : 4);
-    concepts.dontLearnThisToday(concept.getKey());
-
-    SimpleColorPrint.blueInLine("The default definition: ");
-    SimpleColorPrint.normal(concept.getValue());
-    return pickConceptWithLowestScore();
-  }
-
   private int parseEvaluation(String s) {
     try {
       return Pattern.compile("\\b([0-9]|10)/10\\b")
@@ -259,5 +225,39 @@ public class Actions {
     else initialList.remove(key);
 
     concepts.mapScoreToKeys.computeIfAbsent(finalScore, k -> new ArrayList<>()).add(key);
+  }
+
+  public Entry<String, String> evaluateUserExplanationWithAI(Entry<String, String> concept, String userInputDefinitionAttempt) throws IOException {
+    //AI evaluation
+    String questionB =
+        "Is this a good key and definition: " + concept.getKey() + " = " + userInputDefinitionAttempt + ". " +
+            "\n 1 - Evaluate the answer by asking: 'Does this capture the essence?' (aim to be positive)." +
+            "\n If some details are missing but it captures the essence, rate 10/10." +
+            "\n If the definition matches this one, rate 10/10: " + concept.getValue() +
+            "\n If the essence is ALMOST there, rate 9/10." +
+            "\n If the essence is somewhat touched, rate 8/10." +
+            "\n Think of an answer in up to 10 words - if you can't come up with a better one, rate 10/10." +
+            "\n If the answer is completely off, rate 0/10." +
+            "\n If the answer is somewhat acceptable, rate 7/10." +
+            "\n If the key is an acronym, the definition must include exact words for each letter (e.g., 'Intelligence Quotient' for IQ); other correct answers (like 'a measure of smartness') are not acceptable, and the maximum score is 7/10." +
+            "\n Step 2 - If the evaluation is less than 7/10, provide the correct answer (if 7/10 to 10/10, skip this step)." +
+            "\n Your entire answer should be up to 300 characters.";
+    String answer = ai.getAnswer(questionB);
+    SimpleColorPrint.yellow(answer);
+    int evaluation = parseEvaluation(answer);
+
+    //memorize answer
+    String recordLine = String.join(";", concept.getKey(), userInputDefinitionAttempt, String.valueOf(evaluation), LocalDateTime.now().toString()) + "\n";
+    try (BufferedWriter writer = Files.newBufferedWriter(ATTEMPTED_ANSWERS, StandardOpenOption.CREATE, StandardOpenOption.APPEND)) {
+      writer.write(recordLine);
+    }
+
+    //depending on evaluation return concept entry
+    incrementScore(concept.getKey(), evaluation < 7 ? -1 : evaluation <= 8 ? 1 : evaluation == 9 ? 2 : 4);
+    concepts.dontLearnThisToday(concept.getKey());
+
+    SimpleColorPrint.blueInLine("The default definition: ");
+    SimpleColorPrint.normal(concept.getValue());
+    return pickConceptWithLowestScore();
   }
 }

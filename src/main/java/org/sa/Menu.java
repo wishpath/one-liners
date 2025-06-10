@@ -31,7 +31,6 @@ public class Menu {
     System.out.println(MENU);
     while (true) {
       act.save();
-      act.printAllNonZeroScores();
       SimpleColorPrint.blueInLine("Please explain this: ");
       SimpleColorPrint.red(concept.getKey() + "\n");
       input = scanner.nextLine().trim();
