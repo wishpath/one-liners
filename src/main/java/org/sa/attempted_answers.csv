@@ -33,3 +33,4 @@ functional testing;evaluates if the app generates correct outcome;9;2025-06-09T2
 F5 rules;define how the traffic is being directed to app instances, pods, namespaces and clusters;8;2025-06-09T21:54:26.426007
 Docker;container rutime;10;2025-06-09T21:54:51.634720900
 domain model;definition of roles and processes of a specific business part;8;2025-06-09T21:55:29.834754600
+;

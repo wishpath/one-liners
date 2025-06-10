@@ -17,10 +17,8 @@ public class Menu {
           "\u001B[31mpick <fragment> \u001B[0m- pick key containing fragment;\n" +
           "\u001B[31m<fragment ?> \u001B[0m- include question mark to get an answer;\n" +
           "\u001B[31mall keys \u001B[0m- lists all the keys in this app;\n" +
-          "\u001B[31msave \u001B[0m- saves scores;\n" +
           "\u001B[31mscore \u001B[0m- prints current concept score;\n" +
-          "\u001B[31mscores \u001B[0m- prints all non-zero scores;\n" +
-          "\u001B[31mend \u001B[0m- ends the app gracefully;\n";
+          "\u001B[31mscores \u001B[0m- prints all non-zero scores;\n";
   private Scanner scanner = new Scanner(System.in);
   private Actions act = new Actions();
   private Map.Entry<String, String> previousConcept = act.pickConceptWithLowestScore();
@@ -32,6 +30,8 @@ public class Menu {
   public Menu() throws IOException {
     System.out.println(MENU);
     while (true) {
+      act.save();
+      act.printAllNonZeroScores();
       SimpleColorPrint.blueInLine("Please explain this: ");
       SimpleColorPrint.red(concept.getKey() + "\n");
       input = scanner.nextLine().trim();
@@ -69,9 +69,6 @@ public class Menu {
       else if (input.contains("?")) 
         act.askAi(input);
 
-      else if ("save".equals(input))
-        act.save();
-
       else if ("idk".equals(input))
         setConcept(act.answerIDontKnow(concept));
 
@@ -80,10 +77,6 @@ public class Menu {
 
       else if ("scores".equals(input))
         act.printAllNonZeroScores();
-
-      else if ("end".equals(input)) {
-        act.save(); break;
-      }
 
       else
         setConcept(act.evaluateUserExplanationWithAI(concept, input)); //if evaluation < 7, keeps same concept;
