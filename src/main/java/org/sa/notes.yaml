@@ -1,8 +1,6 @@
 problems:
   - do tests?
   - command "weaknesses"     - "print fails" "failed" "rerun failed concepts" - print from not today list
-  - auto save (and temporarily print all scores to console for debuging purposes)
-  - command not sure, ns (should give -1 score), idk should give -2
   - ";":
     - do not allow ";" in key (because not today list  and attempted answers separates key with it);
     - do not allow ";" in attempted answer (attempted answers list separates key with it);

@@ -227,6 +227,18 @@ public class Actions {
     concepts.mapScoreToKeys.computeIfAbsent(finalScore, k -> new ArrayList<>()).add(key);
   }
 
+  public void printEntriesWithMinusScore() {
+    SimpleColorPrint.blue("Printing concepts with minus score:\n");
+    for (Entry<Integer, List<String>> e : concepts.mapScoreToKeys.entrySet()) {
+      if (e.getKey() >= 0) break;
+      for (String key : e.getValue()) {
+        SimpleColorPrint.redInLine(key);
+        SimpleColorPrint.blueInLine(" - " + concepts.keyDefinition.get(key));
+        SimpleColorPrint.normal(" - score: " + concepts.keyScore.get(key));
+      }
+    }
+  }
+
   public Entry<String, String> evaluateUserExplanationWithAI(Entry<String, String> concept, String userInputDefinitionAttempt) throws IOException {
     //AI evaluation
     String questionB =
@@ -261,3 +273,4 @@ public class Actions {
     return pickConceptWithLowestScore();
   }
 }
+
