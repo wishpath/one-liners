@@ -28,10 +28,17 @@ public class Actions {
     concepts.refreshNotTodayMap();
     Set<String> skippableKeys = concepts.notTodayKeys.keySet();
 
-    for (List<String> keys : concepts.mapScoreToKeys.values())
+    for (List<String> keys : concepts.mapScoreToKeys.values()) {
+      List<String> eligibleKeys = new ArrayList<>();
+
       for (String key : keys)
         if (!skippableKeys.contains(key))
-          return Map.entry(key, concepts.keyDefinition.get(key));
+          eligibleKeys.add(key);
+
+      if (eligibleKeys.isEmpty()) continue;
+      String randomKey = eligibleKeys.get(new Random().nextInt(eligibleKeys.size()));
+      return Map.entry(randomKey, concepts.keyDefinition.get(randomKey));
+    }
 
     throw new NoSuchElementException("No eligible concept available");
   }
@@ -39,6 +46,7 @@ public class Actions {
   public Entry<String, String> pickConceptWithFragmentInKey(String fragment) {
     SimpleColorPrint.blueInLine("Picking key containing fragment ");
     SimpleColorPrint.red(fragment);
+
     return concepts.keyDefinition.entrySet()
         .stream()
         .filter(entry -> entry.getKey().toLowerCase().contains(fragment.toLowerCase()))
