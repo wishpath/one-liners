@@ -32,7 +32,6 @@ etcd=configuration data shared among nodes in a distributed system.
 etcd etymology="et cetera" + "distributed" - comes from the /etc directory in Linux for configuration.
 garbage collection=is an automated process that identifies and frees up memory.
 managed services=subset of services that focus on ongoing management, maintenance, and support.
-managed services of Andromeda=Containers, monitoring, logging, traceability, caching, etc.
 master node=responsible for managing the overall cluster state.
 microservice=independent part of application for a specific function.
 namespace (cluster)=divides cluster resources (pods, services, deployments) among projects or teams.
