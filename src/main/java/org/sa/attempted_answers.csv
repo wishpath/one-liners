@@ -39,3 +39,13 @@ sticky session benefit;no need to serialize objects and transfer them over netwo
 test pilot;when a new feature is released partialy for testing purposes;8;2025-06-10T23:32:47.497049
 AD;those are role based rights, spelled out as Access Direct. Or this can mean Architecture Description.;7;2025-06-10T23:34:17.717216300
 JSP;java script pages. format to write frontend pages using javascript logic;0;2025-06-10T23:35:38.881067
+PV;persistent volume - in Kubernetes or Openshift this is storage that is independent from containers;10;2025-06-12T22:20:10.965867100
+onboarding;integrating into organisation, welcome to the organisation;9;2025-06-12T22:37:42.095886600
+JSP;Java Server Pages - source code of webpages containing markup and logic;8;2025-06-12T22:38:55.759828100
+bad separation of concerns (DDD);when a class contains functions beloging to separate business domains;8;2025-06-12T22:40:25.064391600
+CTO;chief technical officer - head of IT;7;2025-06-12T22:42:54.181639700
+subsetting data;separating data into smaller portions;8;2025-06-12T22:43:48.192518800
+signup metadata;aditional data for signup, other than username and password;9;2025-06-12T22:45:48.434953600
+separation of concerns (DDD);when a class does more than one thing;0;2025-06-12T22:47:15.443041200
+asynchronous;processes that might overlap;8;2025-06-12T22:48:18.015064300
+greedy solution;solution maximizing immediate result, not planning ahead;10;2025-06-12T22:57:06.016155400

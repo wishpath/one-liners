@@ -32,9 +32,11 @@ public class Concepts {
     //load scores
     Properties scoreProps = new Properties();
     scoreProps.load(Files.newInputStream(SCORE_PATH));
-    for (Map.Entry<Object, Object> e : scoreProps.entrySet())
-      if (!e.getValue().equals("0"))
-        keyScore.put(e.getKey().toString(), Integer.parseInt((String)e.getValue()));
+    for (Map.Entry<Object, Object> e : scoreProps.entrySet()) {
+      if (e.getValue().equals("0")) continue; // 0 is default...
+      if (!keyDefinition.containsKey(e.getKey())) continue; // has score but key got deleted/ altered
+      keyScore.put(e.getKey().toString(), Integer.parseInt((String)e.getValue()));
+    }
 
     //keys not having explicit score, load with score 0
     for (String key : keyDefinition.keySet())

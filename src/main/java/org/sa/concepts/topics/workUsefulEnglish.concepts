@@ -1,5 +1,5 @@
 allocate=reserve a specific amount of any resource, so it's available when needed
-allocate a list=short for allocate memory for a list
+allocate a list==reserve memory space to store list elements.
 assess=evaluate/ estimate quality of
 base (math)=number raised to a power, e.g. 3 in 3^2
 commissioning=bring (something newly produced, such as a factory or machine) into working condition.
