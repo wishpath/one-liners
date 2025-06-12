@@ -267,7 +267,8 @@ public class Actions {
     int evaluation = parseEvaluation(answer);
 
     //memorize answer
-    String recordLine = String.join(";", concept.getKey(), userInputDefinitionAttempt, String.valueOf(evaluation), LocalDateTime.now().toString()) + "\n";
+    String definition = userInputDefinitionAttempt.replace(";", ",");
+    String recordLine = String.join(";", concept.getKey(), definition , String.valueOf(evaluation), LocalDateTime.now().toString()) + "\n";
     try (BufferedWriter writer = Files.newBufferedWriter(ATTEMPTED_ANSWERS, StandardOpenOption.CREATE, StandardOpenOption.APPEND)) {
       writer.write(recordLine);
     }

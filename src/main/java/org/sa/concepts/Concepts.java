@@ -68,6 +68,7 @@ public class Concepts {
           .filter(line -> line.contains("="))
           .forEach(line -> {
             String[] arr = line.split("=", 2);
+            if(arr[0].contains(";")) throw new RuntimeException("Key '" + arr[0] + "' should not contain semicolon (;)");
             String repeated = keyDefinition.put(arr[0], arr[1]);
             if (repeated != null) {
               SimpleColorPrint.redInLine("The repeated key: ");
