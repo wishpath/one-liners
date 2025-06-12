@@ -1,21 +1,13 @@
 problems:
   - do tests?
-  - command "weaknesses"     - "print fails" "failed" "rerun failed concepts" - print from not today list
-  - ";":
-    - do not allow ";" in key (because not today list  and attempted answers separates key with it);
-    - do not allow ";" in attempted answer (attempted answers list separates key with it);
-    - do ; checks where needed
-
 
 ideas:
-  - in case of failed answer (evaluation < 7):
-    - save to the list (both in memory and file) "do not learn today" with structure "key, date".
-    - only keep record for "today", delete past ones
-    - spaced repetition
+  -
 
 ok, not needed to change:
    - multiple "=" characters in the concept, because when splitting by it, it is limited to 2 parts max.
    - characters print well in console, but gradle settings > build and run should be IntelliJ
+   - spaced repetition - would not seem to bring much benefit, but would complicate code
 
 how to:
   - update submodules:
