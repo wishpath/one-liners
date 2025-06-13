@@ -1,7 +1,7 @@
 AI=chat-based banking services: support, transactions, and service access.
 CC1,=CC2, CC3, CC4=Criticality Categories classifying IT services by importance and compliance impact.
 CTE=common test environment.
-CasC=CI/CD team tool to encrypt service account credentials and config files for OpenShift onboarding.
+CasC=Development Tools team tool to encrypt service account credentials and config files for OpenShift onboarding.
 ECD=Entreprise Continuous Delivery (team).
 Enigma=internal service to sign and encrypt data. Stores encryption keys in HSM.
 HSM=Hardware Security Module - specialised computer device that stores and manages cryptographic keys.
@@ -20,3 +20,5 @@ master (data)=central, authoritative source of info.
 omni-channel=experience of transitioning interconnected channels seamlessly and with consistent experience.
 party=an entity involved in a transaction or relationship. example: customer, vendor, partner.
 party master data=key info about customers, partners within an organization.
+Development Tools=team, previously known as CI/CD.
+
