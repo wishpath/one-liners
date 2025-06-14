@@ -49,3 +49,11 @@ signup metadata;aditional data for signup, other than username and password;9;20
 separation of concerns (DDD);when a class does more than one thing;0;2025-06-12T22:47:15.443041200
 asynchronous;processes that might overlap;8;2025-06-12T22:48:18.015064300
 greedy solution;solution maximizing immediate result, not planning ahead;10;2025-06-12T22:57:06.016155400
+Genesys Cloud;cloud based software for call centers;9;2025-06-14T17:47:49.859191
+PV;Persistant Volume - in conairesed application platforms this is a memory that is independent from nodes.;0;2025-06-14T17:50:54.203353900
+bounded context;Part of company IT solutions where terminology is not ambiguos because it belongs to specific business part;9;2025-06-14T17:53:23.209876100
+XSS;cross site scripting - this is a way to hack apps by inserting pieces of code into fields.;6;2025-06-14T17:54:43.412532400
+allocate a list;means to reserve a specific memory for list items to be stored;9;2025-06-14T17:56:01.254846900
+DPIA;data protection something;0;2025-06-14T17:56:54.554354600
+separation of concerns (DDD);placing code addressing separate functionality to separate contexts like class, modules or services;8;2025-06-14T17:58:38.152417700
+VIP (OpenShift);Virtual Internet Protocol - directs traffic to a specific namespace;0;2025-06-14T18:00:08.700362
