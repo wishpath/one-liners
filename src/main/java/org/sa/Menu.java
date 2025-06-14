@@ -1,5 +1,8 @@
 package org.sa;
 
+import org.sa.actions.Actions;
+import org.sa.actions.Info;
+import org.sa.concepts.Concepts;
 import org.sa.console.SimpleColorPrint;
 
 import java.io.IOException;
@@ -30,7 +33,9 @@ public class Menu {
           "\u001B[31mscore \u001B[0m- prints current concept score;\n" +
           "\u001B[31mscores \u001B[0m- prints all non-zero scores;\n";
   private Scanner scanner = new Scanner(System.in);
-  private Actions act = new Actions();
+  private Concepts concepts = new Concepts();
+  private Actions act = new Actions(concepts, new AiClient());
+  private Info info = new Info(concepts);
   private Map.Entry<String, String> previousConcept = act.pickConceptWithLowestScore();
 
   private Map.Entry<String, String> concept = previousConcept;
@@ -57,16 +62,16 @@ public class Menu {
         setConcept(act.pickConceptWithLowestScore());
 
       else if ("all keys".equals(input))
-        act.printAllKeys();
+        info.printAllKeys();
 
       else if ("previous".equals(input) || "prev".equals(input))
         setConcept(previousConcept);
 
       else if (input.startsWith("define all all "))
-        act.printAllConceptsContainingFragmentInKeyValue(sub("define all all "));
+        info.printAllConceptsContainingFragmentInKeyValue(sub("define all all "));
 
       else if (input.startsWith("define all "))
-        act.printAllConceptsContainingFragmentInKey(sub("define all "));
+        info.printAllConceptsContainingFragmentInKey(sub("define all "));
 
       else if ("define".equals(input))
         System.out.println(concept.getValue() + "\n");
@@ -84,13 +89,13 @@ public class Menu {
         setConcept(act.answerIDontKnow(concept));
 
       else if ("weak".equals(input) || "weakness".equals(input) || "weaknesses".equals(input))
-        act.printEntriesWithMinusScore();
+        info.printEntriesWithMinusScore();
 
       else if ("score".equals(input))
-        act.printCurrentKeyScore(concept);
+        info.printCurrentKeyScore(concept);
 
       else if ("scores".equals(input))
-        act.printAllNonZeroScores();
+        info.printAllNonZeroScores();
 
       else
         setConcept(act.evaluateUserExplanationWithAI(concept, input)); //if evaluation < 7, keeps same concept;

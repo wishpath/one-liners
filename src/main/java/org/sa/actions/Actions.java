@@ -1,5 +1,6 @@
-package org.sa;
+package org.sa.actions;
 
+import org.sa.AiClient;
 import org.sa.concepts.Concepts;
 import org.sa.console.SimpleColorPrint;
 
@@ -16,11 +17,14 @@ import java.util.regex.Pattern;
 
 public class Actions {
 
-  private Concepts concepts = new Concepts();
-  private AiClient ai = new AiClient();
+  private Concepts concepts;
+  private AiClient ai;
   private static final Path ATTEMPTED_ANSWERS = Paths.get("src/main/java/org/sa/attempted_answers.csv");
 
-  public Actions() throws IOException {}
+  public Actions(Concepts concepts, AiClient ai) throws IOException {
+    this.concepts = concepts;
+    this.ai = ai;
+  }
 
   public Entry<String, String> pickConceptWithLowestScore() {
     SimpleColorPrint.blue("Picking concept with lowest score...");
@@ -74,73 +78,6 @@ public class Actions {
         });
   }
 
-  public void printAllConceptsContainingFragmentInKey(String fragment) {
-    List<Entry<String, String>> found = concepts.keyDefinition.entrySet().stream()
-        .filter(entry -> entry.getKey().toLowerCase().contains(fragment.toLowerCase()))
-        .toList();
-
-    if (found.isEmpty()) {
-      SimpleColorPrint.redInLine("No keys found containing fragment: ");
-      SimpleColorPrint.red(fragment);
-    }
-    else {
-      SimpleColorPrint.blueInLine("Defining all keys containing fragment: ");
-      SimpleColorPrint.red(fragment);
-      found.forEach(entry -> printConceptWithFragment(entry, fragment));
-    }
-    System.out.println();
-  }
-
-  public void printAllConceptsContainingFragmentInKeyValue(String fragment) {
-    List<Entry<String, String>> found = concepts.keyDefinition.entrySet().stream()
-        .filter(entry -> (entry.getKey() + " " + entry.getValue()).toLowerCase().contains(fragment.toLowerCase()))
-        .toList();
-
-    if (found.isEmpty()) {
-      SimpleColorPrint.redInLine("No key-values found containing fragment: ");
-      SimpleColorPrint.red(fragment);
-    }
-    else {
-      SimpleColorPrint.blueInLine("Defining all key-values containing fragment: ");
-      SimpleColorPrint.red(fragment);
-      found.forEach(entry -> printConceptWithFragment(entry, fragment));
-    }
-    System.out.println();
-  }
-
-  private static void printConceptWithFragment2(Entry<String, String> entry, String fragment) {
-    System.out.println("\n" + entry.getKey() + ":");
-    System.out.println(entry.getValue());
-  }
-
-  private static void printConceptWithFragment(Entry<String, String> entry, String fragment) {
-    String concept = "\n" + entry.getKey() + ":\n" + entry.getValue() + "\n";
-    String lowerConcept = concept.toLowerCase();
-    String lowerFragment = fragment.toLowerCase();
-    int start = 0;
-
-    while (start < concept.length()) {
-      int index = lowerConcept.indexOf(lowerFragment, start);
-      if (index == -1) {
-        SimpleColorPrint.normal(concept.substring(start));
-        break;
-      }
-      SimpleColorPrint.normalInLine(concept.substring(start, index));
-      SimpleColorPrint.redInLine(concept.substring(index, index + fragment.length()));
-      start = index + fragment.length();
-    }
-  }
-
-  public void printAllKeys() {
-    SimpleColorPrint.blue("Listing all the keys:");
-    concepts.keyDefinition.entrySet()
-        .stream()
-        .forEach(entry -> {
-          System.out.print(entry.getKey() + ", ");
-        });
-    System.out.println();
-  }
-
   public void askAi(String input) {
     SimpleColorPrint.yellow(ai.getAnswer(input));
   }
@@ -169,12 +106,11 @@ public class Actions {
       SimpleColorPrint.normal(" - did not end with space and number.");
       SimpleColorPrint.red("pick nth <fragment nth> was aborted");
       return pickConceptWithFragmentInKey(input.substring("pick nth ".length()));
-    }
-    else {
+    } else {
       String fragment = fragmentToSearchForAndNumber.replaceAll(endsWithSpaceDigitsPattern, "$1");
       int nth = Integer.parseInt(fragmentToSearchForAndNumber.replaceAll(endsWithSpaceDigitsPattern, "$2"));
       SimpleColorPrint.blueInLine("Searching for fragment: ");
-      SimpleColorPrint.redInLine(fragment );
+      SimpleColorPrint.redInLine(fragment);
       SimpleColorPrint.blueInLine(" nth: ");
       SimpleColorPrint.red(String.valueOf(nth));
       return pickNthKeyDefinition(fragment, nth);
@@ -191,10 +127,6 @@ public class Actions {
     writer.close();
   }
 
-  public void end() throws IOException {
-    save();
-  }
-
   public Entry<String, String> answerIDontKnow(Entry<String, String> concept) throws IOException {
     incrementScore(concept.getKey(), -1);
     SimpleColorPrint.blue("Concept has received a score of -1: ");
@@ -203,28 +135,10 @@ public class Actions {
     return pickConceptWithLowestScore();
   }
 
-  public void printCurrentKeyScore(Entry<String, String> concept) {
-    SimpleColorPrint.blueInLine("The score of concept '");
-    SimpleColorPrint.redInLine(concept.getKey());
-    SimpleColorPrint.blueInLine("' is: ");
-    Integer score = concepts.keyScore.get(concept.getKey());
-    String finalScore = score == null ? "0" : String.valueOf(score);
-    SimpleColorPrint.red(finalScore);
-  }
-
-  public void printAllNonZeroScores() {
-    SimpleColorPrint.red("All non-zero scores:");
-    for (Entry<String, Integer> e : concepts.keyScore.entrySet()) {
-      SimpleColorPrint.blueInLine(e.getKey() + ": ");
-      SimpleColorPrint.red(String.valueOf(e.getValue()));
-    }
-    SimpleColorPrint.normal("\n\n");
-  }
-
   public void incrementScore(String key, int increment) {
     Integer initialScore = concepts.keyScore.get(key);
     if (initialScore == null) initialScore = 0;
-    concepts.keyScore.merge(key, increment, Integer :: sum);
+    concepts.keyScore.merge(key, increment, Integer::sum);
     int finalScore = concepts.keyScore.get(key);
     if (finalScore == 0) concepts.keyScore.remove(key);
 
@@ -233,18 +147,6 @@ public class Actions {
     else initialList.remove(key);
 
     concepts.mapScoreToKeys.computeIfAbsent(finalScore, k -> new ArrayList<>()).add(key);
-  }
-
-  public void printEntriesWithMinusScore() {
-    SimpleColorPrint.blue("Printing concepts with minus score:\n");
-    for (Entry<Integer, List<String>> e : concepts.mapScoreToKeys.entrySet()) {
-      if (e.getKey() >= 0) break;
-      for (String key : e.getValue()) {
-        SimpleColorPrint.redInLine(key);
-        SimpleColorPrint.blueInLine(" - " + concepts.keyDefinition.get(key));
-        SimpleColorPrint.normal(" - score: " + concepts.keyScore.get(key));
-      }
-    }
   }
 
   public Entry<String, String> evaluateUserExplanationWithAI(Entry<String, String> concept, String userInputDefinitionAttempt) throws IOException {
@@ -268,7 +170,7 @@ public class Actions {
 
     //memorize answer
     String definition = userInputDefinitionAttempt.replace(";", ",");
-    String recordLine = String.join(";", concept.getKey(), definition , String.valueOf(evaluation), LocalDateTime.now().toString()) + "\n";
+    String recordLine = String.join(";", concept.getKey(), definition, String.valueOf(evaluation), LocalDateTime.now().toString()) + "\n";
     try (BufferedWriter writer = Files.newBufferedWriter(ATTEMPTED_ANSWERS, StandardOpenOption.CREATE, StandardOpenOption.APPEND)) {
       writer.write(recordLine);
     }
