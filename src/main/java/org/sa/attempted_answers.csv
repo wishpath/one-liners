@@ -58,3 +58,11 @@ DPIA;data protection something;0;2025-06-14T17:56:54.554354600
 separation of concerns (DDD);placing code addressing separate functionality to separate contexts like class, modules or services;8;2025-06-14T17:58:38.152417700
 VIP (OpenShift);Virtual Internet Protocol - directs traffic to a specific namespace;0;2025-06-14T18:00:08.700362
 thoroughness;quality of a person who works with attention to details, precision and care;10;2025-06-14T19:11:47.918855600
+fetch;means go, take and bring back;10;2025-06-15T13:05:12.293630400
+CI;Continuous Integration - this means that the source code parts are combined / integrated to the end product in an automatic way;2;2025-06-15T13:06:45.122909900
+tampering;alter in a damaging way;9;2025-06-15T13:19:19.825458400
+.war file;archive file, similar to .jar. From this file an application can be run;8;2025-06-15T13:20:40.245360900
+dispose;to free up. example - dispose memory - fee up memory. dispose list - fee up memory allocated to a list items;9;2025-06-15T13:29:09.546478800
+DC;data center - a building where physical servers are store and other hardware as well;8;2025-06-15T13:30:00.945731800
+framework;established helper sofware to develop applications faster and simplier. already contains pre-solved areas.;8;2025-06-15T13:32:07.466544500
+encapsulation;hiding details in the objects. for example when field is marked private and is managed using getters and setters.;9;2025-06-15T13:33:32.376097

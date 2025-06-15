@@ -1,5 +1,5 @@
 CFT=cross functional team - individuals with different areas of expertise.
-CI=Configuration Item - any component that needs to be managed in order to deliver an IT service.
+CI (IT component)=Configuration Item - any manageable component to deliver IT service.
 CTO=Chief Technology Officer - executive responsible for overseeing technological development and innovation.
 Genesys Cloud=cloud-based contact-center app for personalized phone, email, chat, text, and social support.
 Liferay=content management system (CMS). Pre-made, highly customisable website for enterprise. Backend and frontend.
