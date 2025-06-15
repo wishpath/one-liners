@@ -1,13 +1,12 @@
 package org.sa.other;
 
-import org.sa.console.Colors;
+import org.sa.console.ColoredString;
 
 public class MenuLine {
-  static String newLine (String command, String function) {
+  public static String string(String command, String function) {
     return
         "\n" +
-        Colors.RED + command + Colors.RESET +
-        " - " + function +
-        "\n";
+        ColoredString.red(command) +
+        " - " + function;
   }
 }

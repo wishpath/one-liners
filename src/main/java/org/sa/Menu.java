@@ -4,6 +4,7 @@ import org.sa.actions.Actions;
 import org.sa.actions.Info;
 import org.sa.concepts.Concepts;
 import org.sa.console.SimpleColorPrint;
+import org.sa.other.MenuLine;
 
 import java.io.IOException;
 import java.util.Map;
@@ -20,18 +21,6 @@ public class Menu {
   private String sub(String skippingThis) {
     return input.substring(skippingThis.length());
   }
-  private static final String MENU =
-      "\n\u001B[31mskip\u001B[0m - reloads key;\n" +
-          "\u001B[31mdefine\u001B[0m - defines current key;\n" +
-          "\u001B[31mdefine all <fragment>\u001B[0m - defines all keys containing fragment;\n" +
-          "\u001B[31mdefine all all <fragment> \u001B[0m- defines all keys and values containing fragment;\n" +
-          "\u001B[31mpick nth <fragment nth> \u001B[0m- pick nth key containing fragment;\n" +
-          "\u001B[31mpick <fragment> \u001B[0m- pick key containing fragment;\n" +
-          "\u001B[31m<fragment ?> \u001B[0m- include question mark to get an answer;\n" +
-          "\u001B[31mall keys \u001B[0m- lists all the keys in this app;\n" +
-          "\u001B[31mweak, weakness, weaknesses \u001B[0m- prints newest failed entries;\n" +
-          "\u001B[31mscore \u001B[0m- prints current concept score;\n" +
-          "\u001B[31mscores \u001B[0m- prints all non-zero scores;\n";
 
   private Scanner scanner = new Scanner(System.in);
   private Concepts concepts = new Concepts();
@@ -41,7 +30,21 @@ public class Menu {
   private Map.Entry<String, String> concept = previousConcept;
   private String input = "";
 
-
+  private static final String MENU =
+    MenuLine.string("skip", "reloads key") +
+    MenuLine.string("define", "defines current key") +
+    MenuLine.string("define all <fragment>", "defines all keys containing fragment") +
+    MenuLine.string("define all all <fragment>", "defines all keys and values containing fragment") +
+    MenuLine.string("pick nth <fragment nth>", "picks nth key containing fragment") +
+    MenuLine.string("pick <fragment>", "picks key containing fragment") +
+    MenuLine.string("<fragment ?>", "includes question mark to get an answer") +
+    MenuLine.string("all keys", "lists all the keys in this app") +
+    MenuLine.string("prev, previous", "comes back to previous concept") +
+    MenuLine.string("idk", "marks 'I don't know' to current concept question") +
+    MenuLine.string("weak, weakness, weaknesses", "prints newest failed entries") +
+    MenuLine.string("score", "prints current concept score") +
+    MenuLine.string("scores", "prints all non-zero scores") +
+    MenuLine.string("menu", "prints command menu") + "\n";
 
   public Menu() throws IOException {
     System.out.println(MENU);
