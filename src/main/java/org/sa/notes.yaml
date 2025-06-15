@@ -1,6 +1,10 @@
 problems:
   - unit tests:
     -
+  - make MENU string clear to read
+  - test WikiExporter app if still functional after
+  - remove code from Concepts constructor:
+      - initialize global objects straight with methods containing what is in constructor now.
 
 ideas:
   -

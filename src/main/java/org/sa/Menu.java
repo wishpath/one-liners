@@ -32,14 +32,13 @@ public class Menu {
           "\u001B[31mweak, weakness, weaknesses \u001B[0m- prints newest failed entries;\n" +
           "\u001B[31mscore \u001B[0m- prints current concept score;\n" +
           "\u001B[31mscores \u001B[0m- prints all non-zero scores;\n";
+
   private Scanner scanner = new Scanner(System.in);
   private Concepts concepts = new Concepts();
   private Actions act = new Actions(concepts, new AiClient());
   private Info info = new Info(concepts);
   private Map.Entry<String, String> previousConcept = act.pickConceptWithLowestScore();
-
   private Map.Entry<String, String> concept = previousConcept;
-
   private String input = "";
 
 

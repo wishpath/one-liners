@@ -12,18 +12,18 @@ import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Stream;
 
+
+//purpose: load, keep and manage concept info: key, definition, score, status and their permutations
 public class Concepts {
-  private static final Path TOPICS = Paths.get("src/main/java/org/sa/concepts/topics");
-  private static final Path TOPICS_SWED = Paths.get("src/main/java/org/sa/concepts/topics-swed");
+  public static final Path TOPICS = Paths.get("src/main/java/org/sa/concepts/topics");
+  public static final Path TOPICS_SWED = Paths.get("src/main/java/org/sa/concepts/topics-swed");
   public static final Path SCORE_PATH = Paths.get("src/main/java/org/sa/score/score.properties");
-  public static final Path WIKI_OUTPUT_FILE = Paths.get("src/main/java/org/sa/concepts/wiki.txt");
   public static final Path NOT_TODAY_FILE = Paths.get("src/main/java/org/sa/not_today.csv");
-  public static final String WIKI_INTRO = "*Goal of this article*\nThis collection of super-short definitions captures the core of each concept in just a few words, creating a broad, foundational framework for quick knowledge acquisition. By reducing concepts to their essence—even if imperfect—this approach fosters the confidence needed to deepen understanding later. This minimalist style lets you absorb a wide set of ideas rapidly, forming a scaffold for continuous growth.\n\n";
 
   public final Map<String, String> keyDefinition = new HashMap<>();
   public final ValueAscendingMap<String, Integer> keyScore = new ValueAscendingMap<>(); //no keys with score zero, auto ascending
   public final TreeMap<Integer, List<String>> mapScoreToKeys = new TreeMap<>(); //auto ascending map
-  public final Map<String, LocalDateTime> notTodayKeys = new HashMap<>();
+  public final Map<String, LocalDateTime> notTodayKeys = new HashMap<>();//keys skipped from learning for one day
 
   public Concepts() throws IOException {
 
@@ -59,7 +59,6 @@ public class Concepts {
           .filter(e -> e.getValue().isAfter(oneDayAgo))
           .forEach(e -> notTodayKeys.put(e.getKey(), e.getValue()));
     }
-
   }
 
   private void loadConceptsCheckRepeated() throws IOException {
@@ -79,47 +78,6 @@ public class Concepts {
               SimpleColorPrint.blue(repeated);
             }
           });
-  }
-
-
-  public static void main(String[] args) throws IOException {
-    printListOfTopics();
-    exportAllConceptsForWikiPage();
-  }
-
-  private static void printListOfTopics() throws IOException {
-    Files.walk(TOPICS)
-        .filter(p -> p.toString().endsWith(".properties"))
-        .forEach(p -> System.out.println(p.getFileName().toString().replace(".properties", "")));
-  }
-
-  private static void exportAllConceptsForWikiPage() throws IOException {
-    StringBuilder sb = new StringBuilder(WIKI_INTRO);
-    List<Path> wikiTopicFiles = Stream
-        .concat(Files.walk(TOPICS), Files.walk(TOPICS_SWED))
-        .filter(p -> p.toString().endsWith(".properties"))
-        .toList();
-
-    for (Path p : wikiTopicFiles) {
-      sb.append(getFileNameWithoutExtension(p)); // add title
-      for (String line : Files.readAllLines(p))
-        sb.append(line.contains("=") ? transformLine(line) : ""); //add line under title
-    }
-
-    Files.writeString(WIKI_OUTPUT_FILE, sb.toString());
-  }
-
-  private static String getFileNameWithoutExtension(Path p) {
-    String baseName = p.getFileName().toString().replace(".properties", "");
-    String spaced = baseName.replaceAll("([a-z])([A-Z])", "$1 $2");
-    return "\n*" + Character.toUpperCase(spaced.charAt(0)) + spaced.substring(1) + "*\n";
-  }
-
-  private static String transformLine(String line) {
-    String[] parts = line.split("=", 2);
-    String key = parts[0].replace("\\ ", " ");
-    String value = parts.length > 1 ? parts[1].trim() : "";
-    return "     " + key + " - " + value + "\n";
   }
 
   public void dontLearnThisToday(String key) throws IOException {
