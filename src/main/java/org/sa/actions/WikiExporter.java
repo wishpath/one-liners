@@ -45,7 +45,7 @@ public class WikiExporter {
   }
 
   private static String getFileNameWithoutExtension(Path p) {
-    String baseName = p.getFileName().toString().replace(".properties", "");
+    String baseName = p.getFileName().toString().replace(".concepts", "");
     String spaced = baseName.replaceAll("([a-z])([A-Z])", "$1 $2");
     return "\n*" + Character.toUpperCase(spaced.charAt(0)) + spaced.substring(1) + "*\n";
   }

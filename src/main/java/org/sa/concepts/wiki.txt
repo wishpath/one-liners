@@ -2,7 +2,7 @@
 This set of very short definitions gets straight to the point, giving you the basics of each idea in just a few words. It’s a fast way to start learning and build confidence, even if the definitions aren’t perfect. The simple style helps you pick up many ideas quickly and gives you a base to learn more over time.
 
 
-*Algorithms Coding And Structures.concepts*
+*Algorithms Coding And Structures*
      DRY - Don't Repeat Yourself - programming principle.
      DSL - Domain-Specific Language - syntax tailored to a non-general domain. Example: Thymeleaf provides DSL for HTML.
      Hungarian pollution - overusing type prefixes in variable names.
@@ -44,7 +44,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      trie - tree storing words by letters, good for fast prefix search. Pronounced like “try” (/traɪ/).
      undirected graph - nodes connected bi-directionally.
 
-*Apis.concepts*
+*Apis*
      API - Application Programming Interface - set of rules and protocols that allows software applications to communicate.
      API gateway - server, single entry for routing requests to APIs/services, adding security, monitoring, and management.
      REST - Representational State Transfer - API architecture standard.
@@ -60,7 +60,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      semanticMessage - raw data plus metadata or structure that explains the meaning (e.g., JSON with field names)
      using APIs - exchanging data and functionality using predefined rules.
 
-*Backend.concepts*
+*Backend*
      AWS - Amazon cloud platform for scalable computing, storage, and services.
      Azure - Microsoft cloud platform for apps, data, and services.
      Google Cloud - Google cloud platform for hosting, data, and AI.
@@ -79,7 +79,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      sticky session benefit - avoids session data transfer and Java object serialization.
      throughput - rate at which data is processed or transmitted through a system, measured in units/events per interval.
 
-*Business And Workplace.concepts*
+*Business And Workplace*
      CFT - cross functional team - individuals with different areas of expertise.
      CI (IT component) - Configuration Item - any manageable component to deliver IT service.
      CTO - Chief Technology Officer - executive responsible for overseeing technological development and innovation.
@@ -102,7 +102,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      ubiquitous language - shared, common, used by both domain experts and developers to describe the domain model.
      value stream - sequence of processes a company uses to deliver product, showing steps, efficiency, and bottlenecks.
 
-*Ci Cd And Dev Ops.concepts*
+*Ci Cd And Dev Ops*
      Argo CD - Argo Continuous Delivery - deploys app from Git repo to Kubernetes cluster.
      CI/CD - C - continuous (automatic), I - integration (merging code and testing it), D - delivery (deploying).
      DevOps - practices, principles, philosophies on automation of the process of software delivery and infrastructure changes.
@@ -125,7 +125,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      pipeline - process of building, testing and deploying. Often associated with automatisation.
      roll out - deployment and activation of a new product or feature for use.
 
-*Containerisation.concepts*
+*Containerisation*
      DC - data center — building housing IT systems.
      DC components - includes telecommunications, storage, backup power, redundant connections, cooling, etc.
      Docker - container runtime.
@@ -172,7 +172,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      throttling - intentional limitation or control of certain resources, actions, or processes within an app or a system.
      worker node - computing node for running the containerized applications, has its own CPU, memory, and other resources.
 
-*Databases.concepts*
+*Databases*
      CTE (SQL) - Common Table Expression - temporary result set in a larger query.
      DAO - Data Access Object - object with custom CRUD methods to interact with database.
      DBA - database administrators.
@@ -192,7 +192,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      object mapping (database) - linking app objects to database tables for storage/retrieval.
      partition and sample - part of database table.
 
-*Domain Driven Design.concepts*
+*Domain Driven Design*
      bad cohesion (DDD) - module elements unrelated, causing complexity and confusion.
      bad separation of concerns (DDD) - overlapping responsibilities causing tight coupling and confusion.
      bounded - distinct business area, isolated from other contexts, distinct contextual meaning, independent evolution.
@@ -214,7 +214,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      signup metadata - contextual info: registrationSource, referralCode, ipAddress, verification status.
      signup raw data - core data fields: userId, username, email, registration date, status.
 
-*Frontend.concepts*
+*Frontend*
      Chromium - base upon which many modern web browsers are built.
      FDP - frontend development platform (example: React).
      JSON - JavaScript Object Notation - text-based data format representing objects; for easy data exchange between systems.
@@ -233,7 +233,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      web container - server component managing servlets and Java Server Pages (JSP) execution.
      web portal - platform - provides access to services.
 
-*General ITTerms.concepts*
+*General ITTerms*
      AD - architecture description or active directory (access rights).
      HSM - Hardware Security Module — device for cryptographic key protection.
      ICT system - Information and Communication Technology setup for data handling and communication.
@@ -249,13 +249,13 @@ This set of very short definitions gets straight to the point, giving you the ba
      interface - an intermediate between user and internal functionality; serves as both abstraction and boundary.
      metadata - data about data: format, source, purpose, quality, relationships with other data.
 
-*Hardware.concepts*
+*Hardware*
      NFC - Near Field Communication - wireless communication technology - between devices typically a few centimeters away.
      Unix - operating system. Linux is a Unix - like, but not a direct descendant.
      YubiKey - A flash drive for security purposes on a Mac.
      operations specialist - takes care of IT infrastructure: severs, networks, hardware. Deploys and configures apps.
 
-*Java And Spring.concepts*
+*Java And Spring*
      .war file - Web Application Archive - deployable Java web app package, similar to .jar.
      Bean factory/ Application context - dependency injection container in Spring.
      IoC - Inversion of Control - design principle where object creation and lifecycle are managed by a container or framework.
@@ -277,7 +277,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      servlet/controller/MVC - Model View Controller - handles user input, process it, and update the model or view.
      what is stereotype in Spring - role of class, marked by annotation. E.g.: @Controller @Service
 
-*Logs And Observability.concepts*
+*Logs And Observability*
      ELK - Elasticsearch, Logstash, and Kibana - tools for searching, analyzing, and visualizing logs and data.
      Elasticsearch - search and analytics engine. Handles and analyzes large volumes of data in real-time.
      Kibana - log and data visualization and exploration tool. Used in conjunction with OpenShift (or other).
@@ -289,7 +289,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      observability - monitoring system health via logs, metrics, and traces for real-time insights.
      stop word filtering - ignoring frequently occurring, non-informative words (e.g., "the," "and") to improve search.
 
-*Networking.concepts*
+*Networking*
      DNS - Domain Name System - maps user-friendly domain names to numeric IP addresses.
      SSL - Secure Sockets Layer - encryption of browser-server communication; predecessor to TLS.
      TLS - Transport Layer Security - - encryption of browser-server communication; successor to SSL.
@@ -301,7 +301,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      firewall opening - configuration that allows specific traffic through the firewall on designated ports or IP ranges.
      subnet - subnetwork - segment of a larger network. Subnetting improves network performance, security, and organization.
 
-*Qa And Testing.concepts*
+*Qa And Testing*
      A/B testing - split testing - compare two versions (A and B) of a webpage.
      Agile Test Quadrants - concept categorizing types of testing. Based on two axes: technology-facing and business-facing.
      CTE (sandbox) - Common Test Environment.
@@ -342,7 +342,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      unit testing - Testing individual units of code in isolation (AKA component testing).
      usability testing - evaluates user-friendliness and overall user experience.
 
-*Regulations.concepts*
+*Regulations*
      AFC - Anti Financial Crime.
      CDD - Customer Due Dilligence - performing customer checks.
      DGOM - Data Governance Operating Model — roles, policies, and processes ensuring data quality, security and compliance.
@@ -365,7 +365,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      personal data retention - storing and maintaining individuals' personal information for a specific period.
      tampering - making illegal or/and damaging alterations.
 
-*Work Useful English.concepts*
+*Work Useful English*
      allocate - reserve a specific amount of any resource, so it's available when needed
      allocate a list - reserve memory space to store list elements.
      assess - evaluate/ estimate quality of
@@ -410,7 +410,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      vague - not clearly defined, expressed, or stated
      verbose - using too many words
 
-*Business Star.concepts*
+*Business Star*
      AB - appointment booking.
      AD rights - Windows/Microsoft LDAP implementation - in our context it's the same as LDAP.
      CIM - customer interaction management.
@@ -430,14 +430,14 @@ This set of very short definitions gets straight to the point, giving you the ba
      servlet - Java-based program extending the capabilities of a server. Handles requests from clients, generates dynamic web content, interacts with databases.
      teleagreement user - a person who can manage banking matters in the online bank.
 
-*Esealing.concepts*
+*Esealing*
      E-archive - stores documents. Works on Andromeda.
      E-seal - a proof that the document has integrity (not tampered).
      ESealing narrative - tellers upload preped docs and add e-seals to them on STAR. Users access these docs through iBank.
      Seal Service - sorts and groups documents. Works on Andromeda.
      Signature Container Service - adds e-seals to documents. Works on Andromeda.
 
-*Swedbank General.concepts*
+*Swedbank General*
      AI - chat-based banking services: support, transactions, and service access.
      CC1, - CC2, CC3, CC4=Criticality Categories classifying IT services by importance and compliance impact.
      CTE - common test environment.
@@ -462,7 +462,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      party master data - key info about customers, partners within an organization.
      Development Tools - team, previously known as CI/CD.
 
-*Swed Migrations.concepts*
+*Swed Migrations*
      Skyvault - internal Swedbank project to migrate applications to cloud. Does not relate to external company SkyVault.
      datacenters in Estonia - third-party hosting, rented, will be closed.
      datacenters in Frankfurt - uses Azure cloud, Baltic apps will be migrated there, as part of Skyvault initiative.
