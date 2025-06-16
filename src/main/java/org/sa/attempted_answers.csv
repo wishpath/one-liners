@@ -66,3 +66,18 @@ dispose;to free up. example - dispose memory - fee up memory. dispose list - fee
 DC;data center - a building where physical servers are store and other hardware as well;8;2025-06-15T13:30:00.945731800
 framework;established helper sofware to develop applications faster and simplier. already contains pre-solved areas.;8;2025-06-15T13:32:07.466544500
 encapsulation;hiding details in the objects. for example when field is marked private and is managed using getters and setters.;9;2025-06-15T13:33:32.376097
+PV;persisntent volume - storage that is indepdent of containers;9;2025-06-15T19:01:01.415066100
+VIP (OpenShift);Virtual Internet Protocol - used to traffic calls within a cluster, often for load balancing reasons.;0;2025-06-15T19:02:39.798909300
+SLI;Service Level Indicator - a measurement / metric used to describe how well a service works;9;2025-06-15T19:19:06.074413900
+XSS;Cross-Site Scripting - a flaw in the service, where hackers might inject working scripts into it.;8;2025-06-15T19:20:46.826429100
+DPIA;Data Protection Impac Accessment - noticing an managing risks when a personal data is being operated;7;2025-06-15T19:22:33.631509200
+gateway team;a team that manages external calls to internal systems, for example APIs;8;2025-06-15T19:23:54.505075300
+Spring boot;Java framework for creation of web applications.;8;2025-06-15T19:25:20.915678500
+OpenShift;Container orchestration platform;9;2025-06-15T19:25:55.494892400
+JSP;java server page - html code combined with java logic, such as loops and ifs;10;2025-06-16T10:53:31.677102300
+cloud platform;cloud refers that it is located in remote server or servers. platform is sort of environment with tools, where apps can be developed and ran;8;2025-06-16T10:55:49.563908
+to stash;to temporarily save current changes in some other place, from where later, those changes can be taken;9;2025-06-16T10:57:13.920194600
+RESTful data formats;json, xml;8;2025-06-16T10:59:19.640400500
+throttling;intentionally limiting resources that are being used;10;2025-06-16T10:59:47.844431700
+hashing;applying algorithms to a value, to get a useful end value. Can be used for security reasons. Hash values may collide.;9;2025-06-16T11:01:54.553416900
+canary deployment;installing new features to the production by small portions;9;2025-06-16T11:02:50.347123800
