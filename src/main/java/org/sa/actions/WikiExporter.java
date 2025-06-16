@@ -21,16 +21,17 @@ public class WikiExporter {
   }
 
   private static void printListOfTopics(Concepts c) throws IOException {
+    System.out.println("here");
     Files.walk(c.TOPICS)
-        .filter(p -> p.toString().endsWith(".properties"))
-        .forEach(p -> System.out.println(p.getFileName().toString().replace(".properties", "")));
+        .filter(p -> p.toString().endsWith(".concepts"))
+        .forEach(p -> System.out.println(p.getFileName().toString().replace(".concepts", "")));
   }
 
   private static void exportAllConceptsForWikiPage(Concepts c) throws IOException {
     StringBuilder sb = new StringBuilder(WIKI_INTRO);
     List<Path> wikiTopicFiles = Stream
         .concat(Files.walk(c.TOPICS), Files.walk(c.TOPICS_SWED))
-        .filter(p -> p.toString().endsWith(".properties"))
+        .filter(p -> p.toString().endsWith(".concepts"))
         .toList();
 
     for (Path p : wikiTopicFiles) {
