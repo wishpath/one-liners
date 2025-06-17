@@ -108,5 +108,6 @@ public class Info {
         SimpleColorPrint.normal(" - score: " + concepts.keyScore.get(key));
       }
     }
+    System.out.println();
   }
 }
