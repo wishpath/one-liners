@@ -81,3 +81,21 @@ RESTful data formats;json, xml;8;2025-06-16T10:59:19.640400500
 throttling;intentionally limiting resources that are being used;10;2025-06-16T10:59:47.844431700
 hashing;applying algorithms to a value, to get a useful end value. Can be used for security reasons. Hash values may collide.;9;2025-06-16T11:01:54.553416900
 canary deployment;installing new features to the production by small portions;9;2025-06-16T11:02:50.347123800
+base Java Docker image;environment with java runtimes for container applications to work in;9;2025-06-17T10:01:15.910156900
+exploratory testing;free approach for testing;9;2025-06-17T10:01:47.239352700
+streamline;to make processes efficient;9;2025-06-17T10:02:13.337102900
+data flow;all processes containing data: input, calculations, output;8;2025-06-17T10:03:13.639777400
+semantic registration message;key value pairs for registration online;7;2025-06-17T10:04:10.442004800
+DPIA;data protection impact assessment - finding and mitigating risks regarding processes with personal data;10;2025-06-17T10:05:43.081591300
+MLM;multi level marketing - marketing where seller proffits from his recruits. by many it is considered a pyramid scheme;9;2025-06-17T10:07:05.022070800
+XSS;cross-site scripting - web page flaw when hackers can insert malicious scripts into it;10;2025-06-17T10:08:16.339607600
+PV;persistant volume - storage that is not dependent on container;7;2025-06-17T10:09:11.182166900
+chaos engineering;inserting code that is known to break the application system in order test it;8;2025-06-17T10:12:12.002866100
+integrated test environment;prod like environment, where all components are integrated just like in prod;10;2025-06-17T10:13:11.779582100
+paradigm;example, pattern, model;10;2025-06-17T10:13:34.730993600
+on-premises datacenter;where IT servers are placed in facilities belonging to the company;9;2025-06-17T10:14:30.381044400
+obfuscate data;modify personal data so a concrete person cannot be identified from it;9;2025-06-17T10:15:33.755519900
+firewall;layer of trafic rules between server and client.;8;2025-06-17T10:16:24.253873400
+DRT;disaster recovery testing - checking how well application can be recovered after a disaster;7;2025-06-17T10:17:36.091519600
+justified vs excusable;justified marks calculated intentionality of having flaws, excusable has cannotation of just tollerating them;9;2025-06-17T10:19:43.789088600
+NOT IN (SQL);operation similar to != or !contains;9;2025-06-17T10:20:50.616052700
