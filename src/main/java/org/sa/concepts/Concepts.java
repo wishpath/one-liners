@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 
 //purpose: load, keep and manage concept info: key, definition, score, status and their permutations
 public class Concepts {
-  public static final Path TOPICS = Paths.get("src/main/java/org/sa/concepts/topics");
+  public static final Path TOPICS_PUBLIC = Paths.get("src/main/java/org/sa/concepts/topics");
   public static final Path TOPICS_SWED = Paths.get("src/main/java/org/sa/concepts/topics-swed");
   public static final Path SCORE_PATH = Paths.get("src/main/java/org/sa/score/score.properties");
   public static final Path NOT_TODAY_FILE = Paths.get("src/main/java/org/sa/not_today.csv");
@@ -62,7 +62,7 @@ public class Concepts {
   }
 
   private void loadConceptsCheckRepeated() throws IOException {
-    for (Path subtopicPath : Files.walk(TOPICS).filter(p -> p.toString().endsWith(".concepts")).toList())
+    for (Path subtopicPath : Files.walk(TOPICS_PUBLIC).filter(p -> p.toString().endsWith(".concepts")).toList())
       Files.lines(subtopicPath)
           .filter(line -> line.contains("="))
           .forEach(line -> {

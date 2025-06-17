@@ -1,7 +1,9 @@
 problems:
   - unit tests:
     -
-  - WikiExporter should export both general and (general and swed)
+  - exportAllConceptsForWikiPage should have helper
+  - test wiki exporter // try to upload to wiki
+  - wiki should not make (-) to emoji
   - remove code from Concepts constructor:
       - initialize global objects straight with methods containing what is in constructor now.
 

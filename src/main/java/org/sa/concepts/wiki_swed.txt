@@ -56,8 +56,8 @@ This set of very short definitions gets straight to the point, giving you the ba
      Swagger - framework that simplifies the process of designing, documenting, and testing RESTful web APIs.
      URL - Uniform Resource Locators.
      gateway - device or software bridging networks or apps, converting data between protocols.
-     nonSemanticMessage - raw payload only, no extra structure or meaning (e.g., plain text, CSV row, raw byte stream)
-     semanticMessage - raw data plus metadata or structure that explains the meaning (e.g., JSON with field names)
+     non semantic message - raw payload only, no extra structure or meaning (e.g., plain text, CSV row, raw byte stream)
+     semantic message - raw data plus metadata or structure that explains the meaning (e.g., JSON with field names)
      using APIs - exchanging data and functionality using predefined rules.
 
 *Backend*
@@ -344,13 +344,13 @@ This set of very short definitions gets straight to the point, giving you the ba
 
 *Regulations*
      AFC - Anti Financial Crime.
-     CDD - Customer Due Dilligence - performing customer checks.
+     CDD - Customer Due Diligence - performing customer checks.
      DGOM - Data Governance Operating Model — roles, policies, and processes ensuring data quality, security and compliance.
      DORA - Digital Operational Resilience Act - EU rules for banks to manage unforeseen data disruption incidents.
      DPIA - Data Protection Impact Assessment - process identifying and minimising risks of the processing of personal data.
      DSS - Data Security Standard.
      Data governance - management of data quality, security, and accessibility through defined roles, rules, and processes.
-     ECB - - Europien Central Bank
+     ECB - - European Central Bank
      ECB stress test - European Central Bank’s check of banks’ strength under tough economic conditions.
      EDD - Enhanced Due Diligence - more thorough investigation of customer - beyond the standard KYC procedures.
      GCT - general compliance testing - testing processes to meet standards and regulations.
@@ -387,12 +387,12 @@ This set of very short definitions gets straight to the point, giving you the ba
      exponent (math) - power a number is raised to, e.g. 2 in 3^2
      facilitate meeting - organize meeting
      facility - building
-     fetch - go, get it an
+     fetch - go, get it and bring back
      hyphen (-) function - dash for joining words, example: "well-known", type: button on keyboard
      integrity (of documents) - quality of being accurate, complete, unaltered, not tampered
      intrusive - annoying, unwanted, causing disturbances, disruptive.
      mitigate - make less severe
-     obfuscate data - make unclear, unintelligible, encrypt or pseudonimize or anonimize. (etimology: make obscure)
+     obfuscate data - make unclear, unintelligible, encrypt or pseudonimize or anonimize. (etymology: make obscure)
      onboarding - integration into organisation
      pagination - sequence of numbers assigned to pages
      paradigm - model, pattern, or typical example of something
