@@ -14,7 +14,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      cohesion example - UserManager class with createUser, deleteUser methods; high cohesion, focused only on user management.
      collision - when different data produce the same hash code.
      collision resistant - different inputs should not produce the same outcome.
-     coupling - degree of interdependence between software modules.
+     coupling (noun) (software) - degree of interdependence between software modules.
      defensive programming - ensuring software behaves as expected even when encountering unexpected inputs or conditions.
      deque - double-ended queue, allows insertion and removal from both ends. In Java implemented as ArrayDeque.
      deterministic - same input will always produce the same outcome.
@@ -139,8 +139,8 @@ This set of very short definitions gets straight to the point, giving you the ba
      NFS - Network File System - for accessing files over a network as if they were on a local file system.
      OpenShift - platform for container orchestration, automation, development, deployment, management; built on Kubernetes.
      OpenShift vs Kubernetes? - OpenShift is built on top of Kubernetes, extending its capabilities with additional features.
-     PV - Persistent Volume - storage resource that exists independently of a container. Managed by administrator/ platform.
-     PVC - Persistent Volume Claim - request for PV storage by a user.
+     PV (containerisation) - Persistent Volume — storage independent of containers, managed by platform or admin.
+     PVC (containerisation) - Persistent Volume Claim - request for PV storage by a user.
      RBAC - Role-Based Access Control — restricts system access based on user roles.
      Rancher features - provides user-friendly interface and tools for deployment and configuration.
      Rancher platform - management platform for container orchestration and Kubernetes.
@@ -409,6 +409,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      ubiquitous - means present everywhere (common means frequent)
      vague - not clearly defined, expressed, or stated
      verbose - using too many words
+     suite - related set treated as a group, e.g. suite of tests.
 
 *Business Star*
      AB - appointment booking.

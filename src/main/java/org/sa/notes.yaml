@@ -1,7 +1,6 @@
 problems:
   - unit tests:
     -
-  - exportAllConceptsForWikiPage should have helper
   - test wiki exporter // try to upload to wiki
   - wiki should not make (-) to emoji
   - in the ai response, print score in another color.

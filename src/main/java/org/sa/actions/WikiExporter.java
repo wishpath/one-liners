@@ -29,13 +29,20 @@ public class WikiExporter {
   }
 
   private static void exportAllConceptsForWikiPage(Concepts c) throws IOException {
-    StringBuilder sb_swed = new StringBuilder(WIKI_INTRO_SIMPLE);
-    StringBuilder sb_public = new StringBuilder(WIKI_INTRO_SIMPLE);
+    StringBuilder sb_swed_wiki_text = new StringBuilder(WIKI_INTRO_SIMPLE);
+    StringBuilder sb_public_wiki_text = new StringBuilder(WIKI_INTRO_SIMPLE);
 
     List<Path> swedTopicFiles = Files.walk(c.TOPICS_SWED).filter(p -> p.toString().endsWith(".concepts")).toList();
     List<Path> publicTopicFiles = Files.walk(c.TOPICS_PUBLIC).filter(p -> p.toString().endsWith(".concepts")).toList();
 
-    //add public topics to both files
+    addPublicTopicsToBothWikis(publicTopicFiles, sb_swed_wiki_text, sb_public_wiki_text);
+    addSwedTopicsToSwedWikiOnly(swedTopicFiles, sb_swed_wiki_text);
+
+    Files.writeString(WIKI_SWED_OUTPUT_FILE, sb_swed_wiki_text.toString());
+    Files.writeString(WIKI_PUBLIC_OUTPUT_FILE, sb_public_wiki_text.toString());
+  }
+
+  private static void addPublicTopicsToBothWikis(List<Path> publicTopicFiles, StringBuilder sb_swed, StringBuilder sb_public) throws IOException {
     for (Path p : publicTopicFiles) {
       sb_swed.append(getFileNameWithoutExtension(p)); // add title
       sb_public.append(getFileNameWithoutExtension(p)); // add title
@@ -44,17 +51,15 @@ public class WikiExporter {
         sb_public.append(line.contains("=") ? transformLine(line) : ""); //add line under title
       }
     }
+  }
 
-    //add swed topics to swed wiki file only
+  private static void addSwedTopicsToSwedWikiOnly(List<Path> swedTopicFiles, StringBuilder sb_swed) throws IOException {
     for (Path p : swedTopicFiles) {
       sb_swed.append(getFileNameWithoutExtension(p)); // add title
       for (String line : Files.readAllLines(p)) {
         sb_swed.append(line.contains("=") ? transformLine(line) : ""); //add line under title
       }
     }
-
-    Files.writeString(WIKI_SWED_OUTPUT_FILE, sb_swed.toString());
-    Files.writeString(WIKI_PUBLIC_OUTPUT_FILE, sb_public.toString());
   }
 
   private static String getFileNameWithoutExtension(Path p) {
