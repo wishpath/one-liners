@@ -180,7 +180,7 @@ public class Actions {
     concepts.dontLearnThisToday(concept.getKey());
 
     SimpleColorPrint.blueInLine("The default definition: ");
-    SimpleColorPrint.normal(concept.getValue());
+    SimpleColorPrint.normal(concept.getValue() + "\n");
     return pickConceptWithLowestScore();
   }
 }

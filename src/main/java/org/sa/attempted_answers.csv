@@ -99,3 +99,21 @@ firewall;layer of trafic rules between server and client.;8;2025-06-17T10:16:24.
 DRT;disaster recovery testing - checking how well application can be recovered after a disaster;7;2025-06-17T10:17:36.091519600
 justified vs excusable;justified marks calculated intentionality of having flaws, excusable has cannotation of just tollerating them;9;2025-06-17T10:19:43.789088600
 NOT IN (SQL);operation similar to != or !contains;9;2025-06-17T10:20:50.616052700
+hub;central point from where the management comes;8;2025-06-18T19:40:53.499599200
+good cohesion (DDD);having only similar functions grouped together;8;2025-06-18T19:41:53.620157500
+Wireshark;software for troubleshooting network;9;2025-06-18T19:42:13.222000500
+GCT;general complience testing - checks how well regulations are being met;7;2025-06-18T19:45:02.524579800
+JPA;java persistance API - standard of managing databases;7;2025-06-18T19:46:06.157796
+coupling;interconnecting together;8;2025-06-18T19:46:36.526179900
+port;endpoint of communication;10;2025-06-18T19:48:03.109467800
+good cohesion for DocManager;each method manages documents: creation, editing, deletion;8;2025-06-18T19:48:48.199714400
+CI/CD;ontinuous integration / continuous delivery. Continuous integration is automated testing and compilation of code from various sources and continuous delivery is automated deployment;9;2025-06-18T19:53:23.570710200
+DDoS attacks;malicious hacker attacks where target service is being bombarded by overwhelmingly large amount of calls;8;2025-06-18T19:55:02.983877200
+suite;a set of related objects. e. g. test suite;10;2025-06-18T19:56:13.483202500
+web portal;web page where primary function is to direct to another web pages;9;2025-06-18T19:57:41.533835700
+bounded context (example of inventory management);separate part of software where terminology aligns to inventory management;8;2025-06-18T19:59:36.197521600
+DevOps;Development and Operations discipline where CI/CD pipelines are being used.;8;2025-06-18T20:01:13.420185600
+Helm;Application/Service settings. For example has information on which versions has to be built. What are parameters for app instances.;8;2025-06-18T20:04:57.000675700
+RESTful;Means that API has a set of standards: data markup formats, like json or xml, layers in the app like controller, service and storage, standard http calls like PUT or GET.;8;2025-06-18T20:08:34.162075600
+partition and sample;in database these are ways to take a portion of entries;9;2025-06-18T20:09:36.179528400
+Argo CD;Software to get source code from git and deploy it to Kubernetes clusters.;8;2025-06-18T20:10:58.527844400
