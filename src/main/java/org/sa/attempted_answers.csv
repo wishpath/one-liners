@@ -117,3 +117,10 @@ Helm;Application/Service settings. For example has information on which versions
 RESTful;Means that API has a set of standards: data markup formats, like json or xml, layers in the app like controller, service and storage, standard http calls like PUT or GET.;8;2025-06-18T20:08:34.162075600
 partition and sample;in database these are ways to take a portion of entries;9;2025-06-18T20:09:36.179528400
 Argo CD;Software to get source code from git and deploy it to Kubernetes clusters.;8;2025-06-18T20:10:58.527844400
+CTE (sandbox);common test environment;10;2025-06-19T15:10:05.165490200
+infer;conclude from evidence;10;2025-06-19T15:10:43.350683500
+microservice;separate unit of software, providing a particular function;9;2025-06-19T15:12:00.310334800
+JPA entity management;java persistence API maps entities : objects to relational database tables;9;2025-06-19T15:12:58.857785500
+namespace (networking);in containerised application orchestration platforms, this is a subdivision of cluster, or a group of nodes;8;2025-06-19T15:15:05.087240700
+postmortem;methodical checks of what went wrong, and steps to prevent it;8;2025-06-19T15:18:45.455316900
+RESTful layers;controllers, services and storage;9;2025-06-19T15:19:39.252948700
