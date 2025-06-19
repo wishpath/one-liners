@@ -124,3 +124,9 @@ JPA entity management;java persistence API maps entities : objects to relational
 namespace (networking);in containerised application orchestration platforms, this is a subdivision of cluster, or a group of nodes;8;2025-06-19T15:15:05.087240700
 postmortem;methodical checks of what went wrong, and steps to prevent it;8;2025-06-19T15:18:45.455316900
 RESTful layers;controllers, services and storage;9;2025-06-19T15:19:39.252948700
+deploying;installing application to particular environment;9;2025-06-19T15:31:40.678792600
+API;application programming interface - endpoints to access exposed functionality;8;2025-06-19T15:53:29.267226700
+cohesion (DDD);level of interconnectedness;8;2025-06-19T15:56:04.432591800
+regression testing;automated UI testing using tools like Selenium to check if application behaviour is a expected;8;2025-06-19T16:09:23.233105700
+greedy solution;solution maximizing immediate result, not planning ahead;10;2025-06-19T16:10:17.047248400
+exponent (math);l,skjdfl,gksjdf,lgkjsdf,lgjksd,flkhjs,dlfkhjs,ldfhkj;0;2025-06-19T16:11:06.766762900

@@ -1,6 +1,7 @@
 package org.sa.actions;
 
 import org.sa.concepts.Concepts;
+import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
 
 import java.util.List;
@@ -50,24 +51,27 @@ public class Info {
 
   private static void printConceptWithFragmentHighlighted(Map.Entry<String, String> entry, String fragment) {
     String concept = "\n" + entry.getKey() + ":\n" + entry.getValue() + "\n";
+    printStringWithFragmentHighlighted(fragment, concept, Colors.LIGHT_GRAY, Colors.RED);
+  }
 
-    //lowercase strings just to find index where fragment is
-    String lowerConcept = concept.toLowerCase();
+  public static void printStringWithFragmentHighlighted(String fragment, String string, String mainColorAnsiCode, String fragmentColorAnsiCode) {
+    //lowercase strings for easy finding of index where the fragment is
+    String lowerS = string.toLowerCase();
     String lowerFragment = fragment.toLowerCase();
 
     //each iteration will print up to the end of next matching fragment
-     for (int indexOfPrintStart = 0; indexOfPrintStart < concept.length(); ) {
-      int indexOfFragment = lowerConcept.indexOf(lowerFragment, indexOfPrintStart);
-      if (indexOfFragment == -1) {
-        SimpleColorPrint.normal(concept.substring(indexOfPrintStart));
-        break;
-      }
-      //print before fragment
-      SimpleColorPrint.normalInLine(concept.substring(indexOfPrintStart, indexOfFragment));
-      //print fragment
-      SimpleColorPrint.redInLine(concept.substring(indexOfFragment, indexOfFragment + fragment.length()));
-      indexOfPrintStart = indexOfFragment + fragment.length();
-    }
+    for (int indexOfPrintStart = 0; indexOfPrintStart < string.length(); ) {
+     int indexOfFragment = lowerS.indexOf(lowerFragment, indexOfPrintStart);
+     if (indexOfFragment == -1) {
+       SimpleColorPrint.color(string.substring(indexOfPrintStart), mainColorAnsiCode);
+       break;
+     }
+     //print before fragment
+     SimpleColorPrint.colorInLine(string.substring(indexOfPrintStart, indexOfFragment), mainColorAnsiCode);
+     //print fragment
+     SimpleColorPrint.colorInLine(string.substring(indexOfFragment, indexOfFragment + fragment.length()), fragmentColorAnsiCode);
+     indexOfPrintStart = indexOfFragment + fragment.length();
+   }
   }
 
   public void printAllKeys() {

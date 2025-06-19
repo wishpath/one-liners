@@ -2,6 +2,7 @@ package org.sa.actions;
 
 import org.sa.AiClient;
 import org.sa.concepts.Concepts;
+import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
 
 import java.io.BufferedWriter;
@@ -82,19 +83,6 @@ public class Actions {
     SimpleColorPrint.yellow(ai.getAnswer(input));
   }
 
-  private int parseEvaluation(String s) {
-    try {
-      return Pattern.compile("\\b([0-9]|10)/10\\b")
-          .matcher(s)
-          .results()
-          .map(match -> Integer.parseInt(match.group(1)))
-          .findFirst()
-          .orElse(-1);
-    } catch (NumberFormatException e) {
-      return -1;
-    }
-  }
-
   public Entry<String, String> pickNthConceptWithFragmentInKey(String input) {
     //pick nth <fragment nth> - pick nth key containing fragment;
     String fragmentToSearchForAndNumber = input.substring("pick nth ".length()); //should be "<fragment nth>"
@@ -149,6 +137,15 @@ public class Actions {
     concepts.mapScoreToKeys.computeIfAbsent(finalScore, k -> new ArrayList<>()).add(key);
   }
 
+  private String extractEvaluationString(String s) {
+    return Pattern.compile("\\b([0-9]|10)/10\\b")
+        .matcher(s)
+        .results()
+        .map(matchResult -> matchResult.group())
+        .findFirst()
+        .orElse("");
+  }
+
   public Entry<String, String> evaluateUserExplanationWithAI(Entry<String, String> concept, String userInputDefinitionAttempt) throws IOException {
     //AI evaluation
     String questionB =
@@ -165,8 +162,15 @@ public class Actions {
             "\n Step 2 - If the evaluation is less than 7/10, provide the correct answer (if 7/10 to 10/10, skip this step)." +
             "\n Your entire answer should be up to 300 characters.";
     String answer = ai.getAnswer(questionB);
-    SimpleColorPrint.yellow(answer);
-    int evaluation = parseEvaluation(answer);
+    String evaluationString = extractEvaluationString(answer);
+    int evaluation = Integer.parseInt(evaluationString.split("/")[0]);
+
+    if ("".equals(evaluationString)) {
+      SimpleColorPrint.red("The AI has not provided the evaluation. Try again. AI answer: \n" + answer);
+      return concept;
+    }
+
+    Info.printStringWithFragmentHighlighted(evaluationString, answer, Colors.YELLOW, Colors.RED);
 
     //memorize answer
     String definition = userInputDefinitionAttempt.replace(";", ",");
