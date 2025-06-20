@@ -130,3 +130,22 @@ cohesion (DDD);level of interconnectedness;8;2025-06-19T15:56:04.432591800
 regression testing;automated UI testing using tools like Selenium to check if application behaviour is a expected;8;2025-06-19T16:09:23.233105700
 greedy solution;solution maximizing immediate result, not planning ahead;10;2025-06-19T16:10:17.047248400
 exponent (math);l,skjdfl,gksjdf,lgkjsdf,lgjksd,flkhjs,dlfkhjs,ldfhkj;0;2025-06-19T16:11:06.766762900
+CTE (SQL);common table expression;7;2025-06-20T15:58:17.026058400
+master node;node from which other nodes are ruled;8;2025-06-20T15:59:12.700846700
+database transactions;a group of sql queries which completes one function and is concidered failed if a single of these queries failed;9;2025-06-20T16:05:36.700954600
+secret (Kubernetes);confidential key definition information;8;2025-06-20T16:06:19.349644500
+deque;data structure. two way que. can be implemented as linked list or array deque;8;2025-06-20T16:08:18.908109300
+to prompt;to give ai questions or instructions;8;2025-06-20T16:08:49.110878300
+edge (graphs);connection between nodes in a graph. can be directed or go both ways.;9;2025-06-20T16:10:11.074439
+hub;central point where decisions are made;9;2025-06-20T16:10:59.283687200
+indegree;incomming connection;8;2025-06-20T16:11:38.166222500
+exponent (math);when a number is raised by some power, this is this power value;8;2025-06-20T16:12:54.554297900
+throughput;amount of data flow that can happen a given moment;8;2025-06-20T16:13:44.834711600
+git stash;temporarity put the changes away, so they can be applied later;10;2025-06-20T16:14:10.846838600
+unit testing;in java source code most methods has to be checked by this unit test to check if the method's outcome is as aspected;8;2025-06-20T21:12:04.391189300
+object mapping (database);when object fields become database table columns;8;2025-06-20T21:13:43.336844100
+security testing;checking if the app safe;8;2025-06-20T21:14:31.601882800
+dispose of a list;free up a memory where list items were meant to be placed;10;2025-06-20T21:15:53.739619400
+facility;building;8;2025-06-20T21:17:21.721056400
+bad separation of concerns (DDD);single unit has too wide amplitude of functionalities;9;2025-06-20T21:18:27.052574400
+abstract class;a class where there are some implemented code, and some abstract methods that has to overridden in the inheritors;10;2025-06-20T21:20:58.066530700

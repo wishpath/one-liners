@@ -1,4 +1,4 @@
-CFT=cross functional team - individuals with different areas of expertise.
+CFT (company structure)=cross functional team - individuals with different areas of expertise.
 CI (IT component)=Configuration Item - any manageable component to deliver IT service.
 CTO=Chief Technology Officer - executive responsible for overseeing technological development and innovation.
 Genesys Cloud=cloud-based contact-center app for personalized phone, email, chat, text, and social support.
@@ -17,5 +17,5 @@ postmortem=structured analysis that takes place after a failure has occurred.
 product backlog (agile)=prioritized list of features and tasks in agile projects.
 stakeholder=one with interest in outcome: customer, team, tester, manager, regulator, security, leadership, marketing.
 streamline=remove obstacles and add improvements to optimize.
-ubiquitous language=shared, common, used by both domain experts and developers to describe the domain model.
+ubiquitous language (DDD)=shared, common, used by both domain experts and developers to describe the domain model.
 value stream=sequence of processes a company uses to deliver product, showing steps, efficiency, and bottlenecks.
