@@ -104,7 +104,7 @@ public class Info {
 
   public void printEntriesWithMinusScore() {
     SimpleColorPrint.blue("Printing concepts with minus score:\n");
-    for (Map.Entry<Integer, List<String>> e : concepts.mapScoreToKeys.entrySet()) {
+    for (Map.Entry<Integer, List<String>> e : concepts.scoreToKeys.entrySet()) {
       if (e.getKey() >= 0) break;
       for (String key : e.getValue()) {
         SimpleColorPrint.redInLine(key);

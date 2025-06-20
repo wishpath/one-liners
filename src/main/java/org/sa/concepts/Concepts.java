@@ -22,43 +22,15 @@ public class Concepts {
 
   public final Map<String, String> keyDefinition = new HashMap<>();
   public final ValueAscendingMap<String, Integer> keyScore = new ValueAscendingMap<>(); //no keys with score zero, auto ascending
-  public final TreeMap<Integer, List<String>> mapScoreToKeys = new TreeMap<>(); //auto ascending map
+  public final TreeMap<Integer, List<String>> scoreToKeys = new TreeMap<>(); //auto ascending map
   public final Map<String, LocalDateTime> notTodayKeys = new HashMap<>();//keys skipped from learning for one day
 
   public Concepts() throws IOException {
-
     loadConceptsCheckRepeated();
-
-    //load scores
-    Properties scoreProps = new Properties();
-    scoreProps.load(Files.newInputStream(SCORE_PATH));
-    for (Map.Entry<Object, Object> e : scoreProps.entrySet()) {
-      if (e.getValue().equals("0")) continue; // 0 is default...
-      if (!keyDefinition.containsKey(e.getKey())) continue; // has score but key got deleted/ altered
-      keyScore.put(e.getKey().toString(), Integer.parseInt((String)e.getValue()));
-    }
-
-    //keys not having explicit score, load with score 0
-    for (String key : keyDefinition.keySet())
-      if (keyScore.get(key) == null)
-        mapScoreToKeys.computeIfAbsent(0, k -> new ArrayList<>()).add(key);
-
-    //sort scores ascendingly, list keys for score
-    SimpleColorPrint.red("Current scores:");
-    for(Map.Entry<String, Integer> e : keyScore.entrySet()) {
-      SimpleColorPrint.blueInLine(e.getKey() + ": ");
-      SimpleColorPrint.red(String.valueOf(e.getValue()));
-      mapScoreToKeys.computeIfAbsent(e.getValue(), k -> new ArrayList<>()).add(e.getKey());
-    }
-
-    //load notTodayKeys from file
-    try (Stream<String> lines = Files.lines(NOT_TODAY_FILE)) {
-      LocalDateTime oneDayAgo = LocalDateTime.now().minusDays(1);
-      lines.map(line -> line.split(";"))
-          .map(parts -> Map.entry(parts[0], LocalDateTime.parse(parts[1])))
-          .filter(e -> e.getValue().isAfter(oneDayAgo))
-          .forEach(e -> notTodayKeys.put(e.getKey(), e.getValue()));
-    }
+    loadScores();
+    applyDefaultScoreZero();
+    mapAscendingScoresToConcepts();
+    loadNotTodayConcepts();
   }
 
   private void loadConceptsCheckRepeated() throws IOException {
@@ -79,6 +51,44 @@ public class Concepts {
             }
           });
   }
+
+  private void loadScores() throws IOException {
+    Properties scoreProps = new Properties();
+    scoreProps.load(Files.newInputStream(SCORE_PATH));
+    for (Map.Entry<Object, Object> e : scoreProps.entrySet()) {
+      if (e.getValue().equals("0")) continue; // 0 is default...
+      if (!keyDefinition.containsKey(e.getKey())) continue; // has score but key got deleted/ altered
+      keyScore.put(e.getKey().toString(), Integer.parseInt((String)e.getValue()));
+    }
+  }
+
+  private void applyDefaultScoreZero() {
+    //keys not having explicit score, load with score 0
+    for (String key : keyDefinition.keySet())
+      if (keyScore.get(key) == null)
+        scoreToKeys.computeIfAbsent(0, k -> new ArrayList<>()).add(key);
+  }
+
+  private void mapAscendingScoresToConcepts() {
+    SimpleColorPrint.red("Current scores:");
+    for(Map.Entry<String, Integer> e : keyScore.entrySet()) {
+      SimpleColorPrint.blueInLine(e.getKey() + ": ");
+      SimpleColorPrint.red(String.valueOf(e.getValue()));
+      scoreToKeys.computeIfAbsent(e.getValue(), k -> new ArrayList<>()).add(e.getKey());
+    }
+  }
+
+  private void loadNotTodayConcepts() throws IOException {
+    try (Stream<String> lines = Files.lines(NOT_TODAY_FILE)) {
+      LocalDateTime oneDayAgo = LocalDateTime.now().minusDays(1);
+      lines.map(line -> line.split(";"))
+          .map(parts -> Map.entry(parts[0], LocalDateTime.parse(parts[1])))
+          .filter(e -> e.getValue().isAfter(oneDayAgo))
+          .forEach(e -> notTodayKeys.put(e.getKey(), e.getValue()));
+    }
+  }
+
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   public void dontLearnThisToday(String key) throws IOException {
     // refresh: remove entries older than one day

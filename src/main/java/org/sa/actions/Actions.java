@@ -33,7 +33,7 @@ public class Actions {
     concepts.refreshNotTodayMap();
     Set<String> skippableKeys = concepts.notTodayKeys.keySet();
 
-    for (List<String> keys : concepts.mapScoreToKeys.values()) {
+    for (List<String> keys : concepts.scoreToKeys.values()) {
       List<String> eligibleKeys = new ArrayList<>();
 
       for (String key : keys)
@@ -130,11 +130,11 @@ public class Actions {
     int finalScore = concepts.keyScore.get(key);
     if (finalScore == 0) concepts.keyScore.remove(key);
 
-    List<String> initialList = concepts.mapScoreToKeys.get(initialScore);
-    if (initialList.size() == 1) concepts.mapScoreToKeys.remove(initialScore);
+    List<String> initialList = concepts.scoreToKeys.get(initialScore);
+    if (initialList.size() == 1) concepts.scoreToKeys.remove(initialScore);
     else initialList.remove(key);
 
-    concepts.mapScoreToKeys.computeIfAbsent(finalScore, k -> new ArrayList<>()).add(key);
+    concepts.scoreToKeys.computeIfAbsent(finalScore, k -> new ArrayList<>()).add(key);
   }
 
   private String extractEvaluationString(String s) {

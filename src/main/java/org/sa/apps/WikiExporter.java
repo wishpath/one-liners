@@ -1,4 +1,4 @@
-package org.sa.actions;
+package org.sa.apps;
 
 import org.sa.concepts.Concepts;
 
