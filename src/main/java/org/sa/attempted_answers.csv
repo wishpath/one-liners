@@ -149,3 +149,8 @@ dispose of a list;free up a memory where list items were meant to be placed;10;2
 facility;building;8;2025-06-20T21:17:21.721056400
 bad separation of concerns (DDD);single unit has too wide amplitude of functionalities;9;2025-06-20T21:18:27.052574400
 abstract class;a class where there are some implemented code, and some abstract methods that has to overridden in the inheritors;10;2025-06-20T21:20:58.066530700
+TDM;test data management;10;2025-06-21T17:20:02.171695300
+integrity (of documents);documents are not altered, or not altered in a damaging way, such as faking data;9;2025-06-21T17:21:21.793260800
+OKR;objective key requirements - rules of how well should service work;0;2025-06-21T17:22:26.659203600
+worker node;a node where service instances can be deployed;9;2025-06-21T17:23:11.362774400
+ubiquitous;havind a single meaning some specific business context, both by developers and business people;0;2025-06-21T17:24:43.355966400
