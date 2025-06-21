@@ -1,4 +1,12 @@
 problems:
+  - prep and fix console colors:
+    - blue - global narratives
+    - cyan - inner narratives
+    - yellow - AI
+    - bright yellow - extra data
+  - do console indentation
+  - In colors do very bright gray
+  - in color do boldColorInLine and similar
   - unit tests:
     -
 

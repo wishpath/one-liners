@@ -1,9 +1,12 @@
 package org.sa.actions;
 
 import org.sa.concepts.Concepts;
+import org.sa.config.Props;
 import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Map;
 
@@ -111,6 +114,51 @@ public class Info {
         SimpleColorPrint.blueInLine(" - " + concepts.keyDefinition.get(key));
         SimpleColorPrint.normal(" - score: " + concepts.keyScore.get(key));
       }
+    }
+    System.out.println();
+  }
+
+//  public void printKeysWithMinusScoreAndDates() {
+//    SimpleColorPrint.blue("Printing keys with minus score:\n");
+//    for (Map.Entry<String, LocalDateTime> e : concepts.notTodayKeys.entrySet()) {
+//      String key = e.getKey();
+//      Integer score = concepts.keyScore.get(key);
+//      if (score == null || score >= 0) continue;
+//      SimpleColorPrint.blueInLine("available at");
+//      SimpleColorPrint.normalInLine(String.valueOf(" - " + e.getValue().plusDays(1)) +  " - ");
+//      SimpleColorPrint.red(key);
+//    }
+//    System.out.println();
+//  }
+
+//  public void printKeysWithMinusScoreAndDates() {
+//    SimpleColorPrint.blue("Printing keys with minus score:\n");
+//    DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+//    for (var e : concepts.notTodayKeys.entrySet()) {
+//      var key   = e.getKey();
+//      var score = concepts.keyScore.get(key);
+//      if (score == null || score >= 0) continue;
+//      var date  = e.getValue().plusDays(1).format(fmt);
+//
+//      // label
+//      SimpleColorPrint.colorInLine("Available at: ", Colors.CYAN);
+//      // highlighted date
+//      SimpleColorPrint.colorInLine(date, Colors.BRIGHT_YELLOW);
+//      // separator + key label
+//      SimpleColorPrint.colorInLine("  |  Key: ", Colors.CYAN);
+//      // the key itself
+//      SimpleColorPrint.red(key);
+//    }
+//    System.out.println();
+//  }
+
+  public void printKeysWithMinusScoreAndDates() {
+    SimpleColorPrint.blue("Printing keys with minus score:\n");
+    for (Map.Entry<String, LocalDateTime> e : concepts.notTodayKeys.entrySet()) {
+      if (concepts.keyScore.get(e.getKey()) >= 0) continue;
+      String time = e.getValue().plusDays(1).format(DateTimeFormatter.ofPattern("HH:mm"));
+      SimpleColorPrint.normalInLine(Props.SPACE + time);
+      SimpleColorPrint.red(" " + e.getKey());
     }
     System.out.println();
   }

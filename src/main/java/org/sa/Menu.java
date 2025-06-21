@@ -42,6 +42,7 @@ public class Menu {
     MenuLine.string("prev, previous", "comes back to previous concept") +
     MenuLine.string("idk", "marks 'I don't know' to current concept question") +
     MenuLine.string("weak, weakness, weaknesses", "prints newest failed entries") +
+    MenuLine.string("weak keys", "prints newest failed keys (no definitions)") +
     MenuLine.string("score", "prints current concept score") +
     MenuLine.string("scores", "prints all non-zero scores") +
     MenuLine.string("menu", "prints command menu") + "\n";
@@ -92,6 +93,9 @@ public class Menu {
 
       else if ("weak".equals(input) || "weakness".equals(input) || "weaknesses".equals(input))
         info.printEntriesWithMinusScore();
+
+      else if ("weak keys".equals(input))
+        info.printKeysWithMinusScoreAndDates();
 
       else if ("score".equals(input))
         info.printCurrentKeyScore(concept);

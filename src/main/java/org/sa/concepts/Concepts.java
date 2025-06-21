@@ -23,7 +23,7 @@ public class Concepts {
   public final Map<String, String> keyDefinition = new HashMap<>();
   public final ValueAscendingMap<String, Integer> keyScore = new ValueAscendingMap<>(); //no keys with score zero, auto ascending
   public final TreeMap<Integer, List<String>> scoreToKeys = new TreeMap<>(); //auto ascending map
-  public final Map<String, LocalDateTime> notTodayKeys = new HashMap<>();//keys skipped from learning for one day
+  public final ValueAscendingMap<String, LocalDateTime> notTodayKeys = new ValueAscendingMap<>();//keys skipped from learning for one day
 
   public Concepts() throws IOException {
     loadConceptsCheckRepeated();

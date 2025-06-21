@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
-public class ValueAscendingMap<K, V extends Comparable<V>> extends LinkedHashMap<K, V> {
+public class ValueAscendingMap<K, V extends Comparable<? super V>> extends LinkedHashMap<K, V> {
   @Override
   public V put(K key, V value) {
     V oldValue = super.put(key, value);
