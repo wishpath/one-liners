@@ -154,3 +154,9 @@ integrity (of documents);documents are not altered, or not altered in a damaging
 OKR;objective key requirements - rules of how well should service work;0;2025-06-21T17:22:26.659203600
 worker node;a node where service instances can be deployed;9;2025-06-21T17:23:11.362774400
 ubiquitous;havind a single meaning some specific business context, both by developers and business people;0;2025-06-21T17:24:43.355966400
+PII;persona identifiable information;0;2025-06-22T22:33:28.632075600
+bad cohesion (DDD);when a software units completes unrelated functions (from different business areas);9;2025-06-22T22:35:41.244101500
+ubiquitous;common, commonly used;9;2025-06-22T22:36:14.692643
+OKR;Objectives and key requirements;0;2025-06-22T22:36:50.406426400
+garbage collection;when unused memory gets disposed;9;2025-06-22T22:39:30.529567400
+Java beans;In Sprint these are Java Objects which one manages by annotations;7;2025-06-22T22:40:58.833216400

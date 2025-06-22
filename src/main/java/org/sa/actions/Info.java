@@ -155,7 +155,8 @@ public class Info {
   public void printKeysWithMinusScoreAndDates() {
     SimpleColorPrint.blue("Printing keys with minus score:\n");
     for (Map.Entry<String, LocalDateTime> e : concepts.notTodayKeys.entrySet()) {
-      if (concepts.keyScore.get(e.getKey()) >= 0) continue;
+      Integer score = concepts.keyScore.get(e.getKey()); // null means score is 0;
+      if (score == null || score >= 0) continue;
       String time = e.getValue().plusDays(1).format(DateTimeFormatter.ofPattern("HH:mm"));
       SimpleColorPrint.normalInLine(Props.SPACE + time);
       SimpleColorPrint.red(" " + e.getKey());

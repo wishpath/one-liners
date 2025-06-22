@@ -2,7 +2,7 @@
 Bean factory/ Application context=dependency injection container in Spring.
 IoC=Inversion of Control - design principle where object creation and lifecycle are managed by a container or framework.
 JSP=Java Server Pages - embed Java code in HTML, with tags for loops, conditions, formatting.
-Java beans=simple objects with only getters and setters for the attributes.
+Java bean=simple Java object with getters/setters, often used as DTO for data transfer.
 POJO=Plain Old Java Object - simple Java class without framework inheritance or interfaces.
 Spring beans=POJOs configured in the application context.
 Spring boot=part of Spring (Java framework) specific for creating web app back end.
