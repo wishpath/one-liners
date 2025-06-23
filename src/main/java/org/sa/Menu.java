@@ -3,6 +3,7 @@ package org.sa;
 import org.sa.actions.Actions;
 import org.sa.actions.Info;
 import org.sa.concepts.Concepts;
+import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
 import org.sa.other.MenuLine;
 
@@ -30,7 +31,7 @@ public class Menu {
   private Map.Entry<String, String> concept = previousConcept;
   private String input = "";
 
-  private static final String MENU =
+  private static final String MENU = Colors.BLUE + "Menu:" + Colors.RESET +
     MenuLine.string("skip", "reloads key") +
     MenuLine.string("define", "defines current key") +
     MenuLine.string("define all <fragment>", "defines all keys containing fragment") +
@@ -77,7 +78,7 @@ public class Menu {
         info.printAllConceptsContainingFragmentInKey(sub("define all "));
 
       else if ("define".equals(input))
-        System.out.println(concept.getValue() + "\n");
+        System.out.println(Colors.BLUE + concept.getKey() + ": " + Colors.RESET + concept.getValue() + "\n");
 
       else if (input.startsWith("pick nth "))
         setConcept(act.pickNthConceptWithFragmentInKey(input));

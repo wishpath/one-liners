@@ -1,5 +1,6 @@
 package org.sa.concepts;
 
+import org.sa.config.Props;
 import org.sa.console.SimpleColorPrint;
 import org.sa.other.ValueAscendingMap;
 
@@ -72,10 +73,11 @@ public class Concepts {
   private void mapAscendingScoresToConcepts() {
     SimpleColorPrint.red("Current scores:");
     for(Map.Entry<String, Integer> e : keyScore.entrySet()) {
-      SimpleColorPrint.blueInLine(e.getKey() + ": ");
+      SimpleColorPrint.blueInLine(Props.TAB + e.getKey() + ": ");
       SimpleColorPrint.red(String.valueOf(e.getValue()));
       scoreToKeys.computeIfAbsent(e.getValue(), k -> new ArrayList<>()).add(e.getKey());
     }
+    System.out.println();
   }
 
   private void loadNotTodayConcepts() throws IOException {

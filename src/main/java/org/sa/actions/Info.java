@@ -29,7 +29,7 @@ public class Info {
     }
     else {
       SimpleColorPrint.blueInLine("Defining all keys containing fragment: ");
-      SimpleColorPrint.red(fragment);
+      SimpleColorPrint.red(fragment + "\n");
       found.forEach(entry -> printConceptWithFragmentHighlighted(entry, fragment));
     }
     System.out.println();
@@ -46,14 +46,14 @@ public class Info {
     }
     else {
       SimpleColorPrint.blueInLine("Defining all key-values containing fragment: ");
-      SimpleColorPrint.red(fragment);
+      SimpleColorPrint.red(fragment + "\n");
       found.forEach(entry -> printConceptWithFragmentHighlighted(entry, fragment));
     }
     System.out.println();
   }
 
   private static void printConceptWithFragmentHighlighted(Map.Entry<String, String> entry, String fragment) {
-    String concept = "\n" + entry.getKey() + ":\n" + entry.getValue() + "\n";
+    String concept = Props.TAB + entry.getKey() + ": " + entry.getValue();
     printStringWithFragmentHighlighted(fragment, concept, Colors.LIGHT_GRAY, Colors.RED);
   }
 
@@ -84,7 +84,7 @@ public class Info {
         .forEach(entry -> {
           System.out.print(entry.getKey() + ", ");
         });
-    System.out.println();
+    System.out.println("\n");
   }
 
   public void printCurrentKeyScore(Map.Entry<String, String> concept) {
@@ -93,13 +93,13 @@ public class Info {
     SimpleColorPrint.blueInLine("' is: ");
     Integer score = concepts.keyScore.get(concept.getKey());
     String finalScore = score == null ? "0" : String.valueOf(score);
-    SimpleColorPrint.red(finalScore);
+    SimpleColorPrint.red(finalScore + "\n");
   }
 
   public void printAllNonZeroScores() {
     SimpleColorPrint.red("All non-zero scores:");
     for (Map.Entry<String, Integer> e : concepts.keyScore.entrySet()) {
-      SimpleColorPrint.blueInLine(e.getKey() + ": ");
+      SimpleColorPrint.blueInLine(Props.TAB + e.getKey() + ": ");
       SimpleColorPrint.red(String.valueOf(e.getValue()));
     }
     SimpleColorPrint.normal("\n\n");
@@ -110,7 +110,7 @@ public class Info {
     for (Map.Entry<Integer, List<String>> e : concepts.scoreToKeys.entrySet()) {
       if (e.getKey() >= 0) break;
       for (String key : e.getValue()) {
-        SimpleColorPrint.redInLine(key);
+        SimpleColorPrint.redInLine(Props.TAB + key);
         SimpleColorPrint.blueInLine(" - " + concepts.keyDefinition.get(key));
         SimpleColorPrint.normal(" - score: " + concepts.keyScore.get(key));
       }
@@ -118,47 +118,13 @@ public class Info {
     System.out.println();
   }
 
-//  public void printKeysWithMinusScoreAndDates() {
-//    SimpleColorPrint.blue("Printing keys with minus score:\n");
-//    for (Map.Entry<String, LocalDateTime> e : concepts.notTodayKeys.entrySet()) {
-//      String key = e.getKey();
-//      Integer score = concepts.keyScore.get(key);
-//      if (score == null || score >= 0) continue;
-//      SimpleColorPrint.blueInLine("available at");
-//      SimpleColorPrint.normalInLine(String.valueOf(" - " + e.getValue().plusDays(1)) +  " - ");
-//      SimpleColorPrint.red(key);
-//    }
-//    System.out.println();
-//  }
-
-//  public void printKeysWithMinusScoreAndDates() {
-//    SimpleColorPrint.blue("Printing keys with minus score:\n");
-//    DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
-//    for (var e : concepts.notTodayKeys.entrySet()) {
-//      var key   = e.getKey();
-//      var score = concepts.keyScore.get(key);
-//      if (score == null || score >= 0) continue;
-//      var date  = e.getValue().plusDays(1).format(fmt);
-//
-//      // label
-//      SimpleColorPrint.colorInLine("Available at: ", Colors.CYAN);
-//      // highlighted date
-//      SimpleColorPrint.colorInLine(date, Colors.BRIGHT_YELLOW);
-//      // separator + key label
-//      SimpleColorPrint.colorInLine("  |  Key: ", Colors.CYAN);
-//      // the key itself
-//      SimpleColorPrint.red(key);
-//    }
-//    System.out.println();
-//  }
-
   public void printKeysWithMinusScoreAndDates() {
     SimpleColorPrint.blue("Printing keys with minus score:\n");
     for (Map.Entry<String, LocalDateTime> e : concepts.notTodayKeys.entrySet()) {
       Integer score = concepts.keyScore.get(e.getKey()); // null means score is 0;
       if (score == null || score >= 0) continue;
       String time = e.getValue().plusDays(1).format(DateTimeFormatter.ofPattern("HH:mm"));
-      SimpleColorPrint.normalInLine(Props.SPACE + time);
+      SimpleColorPrint.normalInLine(Props.TAB + time);
       SimpleColorPrint.red(" " + e.getKey());
     }
     System.out.println();

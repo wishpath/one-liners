@@ -160,3 +160,36 @@ ubiquitous;common, commonly used;9;2025-06-22T22:36:14.692643
 OKR;Objectives and key requirements;0;2025-06-22T22:36:50.406426400
 garbage collection;when unused memory gets disposed;9;2025-06-22T22:39:30.529567400
 Java beans;In Sprint these are Java Objects which one manages by annotations;7;2025-06-22T22:40:58.833216400
+performance testing;checking how well service and system behaves with a larger load;8;2025-06-23T10:44:18.097724
+test data management for enterprise;large companies having a model how to deal with data in pre production test environmet. Might include creating synthetic data, obfuscating and so on.;9;2025-06-23T10:46:22.769909800
+continuous integration components;merging code and testing;8;2025-06-23T10:46:54.191005600
+Kafka vs Kubernetes;Orchestration platforms: kafka orchestrates data flow and kubernetes orchestrates containerised applications.;9;2025-06-23T10:48:26.374316200
+entity (database);Data entry corresponding to an Object in the back-end.;8;2025-06-23T10:49:47.844398300
+technical debt;accumulated code imperfections;10;2025-06-23T11:01:08.628276600
+outdegree;in a grapth, the number of outgoing edges (connections from a node to another nodes);10;2025-06-23T11:02:31.022299600
+Kerberos;Software managing passwords;8;2025-06-23T11:03:15.947056900
+penetration testing;authorised hacking of the system to check voulnerabilities;10;2025-06-23T11:04:15.423411300
+collision resistant;means that a product of an algorithm will not cause problems due to matching another instance, when it is supposed to be unique;8;2025-06-23T11:10:49.687987500
+RESTful client-server;server is backend providing endpoints and data flow behind them. Client is usually front end system.;9;2025-06-23T11:12:27.083399300
+domain;business area with ubiquitous language.;9;2025-06-23T11:12:56.819234500
+JPA responsibilities;java persistence API - manages data flow between backend and database;7;2025-06-23T11:13:46.092166
+bounded context (example of user management);user management has a separate unit of software which is responsible for user management: user creation, deletion, eding, updates and other;9;2025-06-23T11:15:39.374190800
+bounded;in DDD means having a separation between other contexts. Might be through class, module or service.;10;2025-06-23T11:17:16.821756400
+value stream;agile business process in VDE to create or enhance software;7;2025-06-23T11:20:02.765080300
+JDBC;java data base connection - standard of backend communication to database.;7;2025-06-23T11:20:52.752242100
+product backlog (agile);all the task listed by priority in order to deliver a product;9;2025-06-23T11:22:43.725070300
+error budget;how much errors are justified;8;2025-06-23T11:23:15.367900700
+PV (containerisation);persistant volume - storage independent from container;9;2025-06-23T11:23:50.093679500
+pseudonym;real name replaced with newly created one;10;2025-06-23T11:27:08.003225700
+collision;when produced hash code matches another instance;9;2025-06-23T11:29:01.609838600
+feature flag;a single variable to toggle entire part of software;9;2025-06-23T11:34:15.627934900
+present() (Fluentlenium);checks if web element is in the DOM;10;2025-06-23T11:40:36.118773600
+Logread;directory where log files are formulated and stored;7;2025-06-23T11:41:16.876477100
+container management platform;tool run multiple instances of a service, each in the container and in a separate pod. Might be in a separate cluster or namespace.;8;2025-06-23T11:44:56.268198500
+NFC;technology: near field communication: used for payments with debit cards;4;2025-06-23T11:46:06.151219700
+DRY;don't repeat yourself - conding principle.;7;2025-06-23T11:47:08.730346
+YAML;yaml aint markup language - structured key value pairs;7;2025-06-23T11:48:23.603888800
+stop word filtering;meny;0;2025-06-23T11:49:30.609342900
+IoC;Inversion of Control - when a framework manages object/bean lifecycle;9;2025-06-23T11:51:40.872594900
+master node;a node with reponsibility of managing overall state of other nodes and cluster;10;2025-06-23T11:52:42.801812300
+bounded context (example of order processing);a separate part of software for order processing: buying, selling, additional calculations;8;2025-06-23T11:55:12.007259

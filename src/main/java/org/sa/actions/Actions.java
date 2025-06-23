@@ -2,6 +2,7 @@ package org.sa.actions;
 
 import org.sa.AiClient;
 import org.sa.concepts.Concepts;
+import org.sa.config.Props;
 import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
 
@@ -28,7 +29,7 @@ public class Actions {
   }
 
   public Entry<String, String> pickConceptWithLowestScore() {
-    SimpleColorPrint.blue("Picking concept with lowest score...");
+    SimpleColorPrint.blue("Picking concept with lowest score...\n");
 
     concepts.refreshNotTodayMap();
     Set<String> skippableKeys = concepts.notTodayKeys.keySet();
@@ -49,8 +50,8 @@ public class Actions {
   }
 
   public Entry<String, String> pickConceptWithFragmentInKey(String fragment) {
-    SimpleColorPrint.blueInLine("Picking key containing fragment ");
-    SimpleColorPrint.red(fragment);
+    SimpleColorPrint.blueInLine("Picking key containing fragment: ");
+    SimpleColorPrint.red(fragment + "\n");
 
     return concepts.keyDefinition.entrySet()
         .stream()
@@ -80,7 +81,7 @@ public class Actions {
   }
 
   public void askAi(String input) {
-    SimpleColorPrint.yellow(ai.getAnswer(input));
+    SimpleColorPrint.yellow(ai.getAnswer(input) + "\n");
   }
 
   public Entry<String, String> pickNthConceptWithFragmentInKey(String input) {
@@ -100,7 +101,7 @@ public class Actions {
       SimpleColorPrint.blueInLine("Searching for fragment: ");
       SimpleColorPrint.redInLine(fragment);
       SimpleColorPrint.blueInLine(" nth: ");
-      SimpleColorPrint.red(String.valueOf(nth));
+      SimpleColorPrint.red(String.valueOf(nth) + "\n");
       return pickNthKeyDefinition(fragment, nth);
     }
   }
@@ -118,7 +119,7 @@ public class Actions {
   public Entry<String, String> answerIDontKnow(Entry<String, String> concept) throws IOException {
     incrementScore(concept.getKey(), -1);
     SimpleColorPrint.blue("Concept has received a score of -1: ");
-    SimpleColorPrint.red(concept.getKey() + " - " + concept.getValue());
+    SimpleColorPrint.red(Props.TAB + concept.getKey() + ": " + concept.getValue() + "\n");
     concepts.dontLearnThisToday(concept.getKey());
     return pickConceptWithLowestScore();
   }
@@ -161,7 +162,7 @@ public class Actions {
             "\n If the key is an acronym, the definition must include exact words for each letter (e.g., 'Intelligence Quotient' for IQ); other correct answers (like 'a measure of smartness') are not acceptable, and the maximum score is 7/10." +
             "\n Step 2 - If the evaluation is less than 7/10, provide the correct answer (if 7/10 to 10/10, skip this step)." +
             "\n Your entire answer should be up to 300 characters.";
-    String answer = ai.getAnswer(questionB);
+    String answer = ai.getAnswer(questionB) + "\n";
     String evaluationString = extractEvaluationString(answer);
     int evaluation = Integer.parseInt(evaluationString.split("/")[0]);
 
