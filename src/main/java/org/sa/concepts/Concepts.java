@@ -32,25 +32,27 @@ public class Concepts {
     applyDefaultScoreZero();
     mapAscendingScoresToConcepts();
     loadNotTodayConcepts();
+    System.out.println("Count of concepts: " + keyDefinition.size());
+    System.out.println("Count of scores: " + keyScore.size());
   }
 
   private void loadConceptsCheckRepeated() throws IOException {
     for (Path subtopicPath : Files.walk(TOPICS_PUBLIC).filter(p -> p.toString().endsWith(".concepts")).toList())
       Files.lines(subtopicPath)
-          .filter(line -> line.contains("="))
-          .forEach(line -> {
-            String[] arr = line.split("=", 2);
-            if(arr[0].contains(";")) throw new RuntimeException("Key '" + arr[0] + "' should not contain semicolon (;)");
-            String repeated = keyDefinition.put(arr[0], arr[1]);
-            if (repeated != null) {
-              SimpleColorPrint.redInLine("The repeated key: ");
-              SimpleColorPrint.blueInLine(arr[0]);
-              SimpleColorPrint.redInLine(", the definitions: ");
-              SimpleColorPrint.blueInLine(arr[1]);
-              SimpleColorPrint.redInLine(" and ");
-              SimpleColorPrint.blue(repeated);
-            }
-          });
+        .filter(line -> line.contains("="))
+        .forEach(line -> {
+          String[] arr = line.split("=", 2);
+          if(arr[0].contains(";")) throw new RuntimeException("Key '" + arr[0] + "' should not contain semicolon (;)");
+          String repeated = keyDefinition.put(arr[0], arr[1]);
+          if (repeated != null) {
+            SimpleColorPrint.redInLine("The repeated key: ");
+            SimpleColorPrint.blueInLine(arr[0]);
+            SimpleColorPrint.redInLine(", the definitions: ");
+            SimpleColorPrint.blueInLine(arr[1]);
+            SimpleColorPrint.redInLine(" and ");
+            SimpleColorPrint.blue(repeated);
+          }
+        });
   }
 
   private void loadScores() throws IOException {
@@ -95,12 +97,8 @@ public class Concepts {
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   public void dontLearnThisToday(String key) throws IOException {
-    // refresh: remove entries older than one day
-    refreshNotTodayMap();
-
-    // add new entry
+    refreshNotTodayMap(); //remove entries older than one day
     notTodayKeys.put(key, LocalDateTime.now());
-
     autosaveNotTodayMapToFile();
   }
 
