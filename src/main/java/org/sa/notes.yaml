@@ -7,9 +7,6 @@ problems:
     - bright yellow - extra data
   - In colors do very bright gray
   - in color do boldColorInLine and similar
-  - clean up not today keys immediately:
-      - "CFT (company structure);2025-06-24T15:47:35.738308"
-      - "CFT (context: company structure);2025-06-24T15:52:48.961567700"
   - unit tests:
     -
 

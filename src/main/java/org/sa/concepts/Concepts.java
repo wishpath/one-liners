@@ -86,8 +86,10 @@ public class Concepts {
       lines.map(line -> line.split(";"))
           .map(parts -> Map.entry(parts[0], LocalDateTime.parse(parts[1])))
           .filter(e -> e.getValue().isAfter(oneDayAgo))
+          .filter(e -> keyDefinition.containsKey(e.getKey()))
           .forEach(e -> notTodayKeys.put(e.getKey(), e.getValue()));
     }
+    autosaveNotTodayMapToFile();
   }
 
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -99,7 +101,10 @@ public class Concepts {
     // add new entry
     notTodayKeys.put(key, LocalDateTime.now());
 
-    //autosave updated list to file
+    autosaveNotTodayMapToFile();
+  }
+
+  private void autosaveNotTodayMapToFile() throws IOException {
     try (BufferedWriter writer = Files.newBufferedWriter(NOT_TODAY_FILE)) {
       for (Map.Entry<String, LocalDateTime> entry : notTodayKeys.entrySet())
         writer.write(entry.getKey() + ";" + entry.getValue() + System.lineSeparator());
