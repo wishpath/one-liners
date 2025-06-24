@@ -193,3 +193,21 @@ stop word filtering;meny;0;2025-06-23T11:49:30.609342900
 IoC;Inversion of Control - when a framework manages object/bean lifecycle;9;2025-06-23T11:51:40.872594900
 master node;a node with reponsibility of managing overall state of other nodes and cluster;10;2025-06-23T11:52:42.801812300
 bounded context (example of order processing);a separate part of software for order processing: buying, selling, additional calculations;8;2025-06-23T11:55:12.007259
+PII;personally identifieble information;8;2025-06-24T15:16:42.732690600
+OKR;objectives and key results;10;2025-06-24T15:18:07.090441400
+CFT (company structure);cross-functional team;0;2025-06-24T15:18:41.827392200
+CFT (company structure);cross functional team - a team consisting of professionals with different competences;7;2025-06-24T15:22:19.088661300
+CFT (company structure);Cross Functional Team - individuals wtih different areas of expertise;7;2025-06-24T15:23:28.890900700
+CFT (company structure);Cross Functional Team – a group of individuals from different departments or areas of expertise working together toward a common goal.;7;2025-06-24T15:47:35.736312300
+CFT (context: company structure);Please explain this: CFT (company structure);10;2025-06-24T15:50:45.726779500
+CFT (context: company structure);cross functional team - individuals with different areas of expertise.;10;2025-06-24T15:52:48.958575100
+verbose;containin many words;9;2025-06-24T15:55:03.599872500
+memoization;programming technique where intemediate results are stored, so there would not be need to calculate them again;9;2025-06-24T15:56:08.802150300
+Spring beans;In Spring framework those are java objects, which lifecycles are managed by inversion of control.;9;2025-06-24T15:57:20.145737900
+backlog;list of tasks to be done;9;2025-06-24T15:58:03.442554400
+observability;logs and moniroring. anything that would help to see the state of application.;8;2025-06-24T15:58:51.675898800
+NFC;near field communitation - technology of informations exchange between devices that are typically a few centimeters away;6;2025-06-24T16:37:13.528583300
+NFC;near field communication - technology of informations exchange between devices that are typically a few centimeters away;10;2025-06-24T16:37:59.383625200
+irreversible data transformation;it is impossible to backward engineer initial information from the result.;9;2025-06-24T16:40:01.853275
+good cohesion (DDD);a software unit serves a praticular narrow business area, having uniquitous language;8;2025-06-24T16:41:36.936546200
+VPN;virtual private network - way to safely connect to the internet resources.;9;2025-06-24T16:43:07.322539

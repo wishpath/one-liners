@@ -1,4 +1,4 @@
-CFT (company structure)=cross functional team - individuals with different areas of expertise.
+CFT (context: company structure)=cross functional team - individuals with different areas of expertise.
 CI (IT component)=Configuration Item - any manageable component to deliver IT service.
 CTO=Chief Technology Officer - executive responsible for overseeing technological development and innovation.
 Genesys Cloud=cloud-based contact-center app for personalized phone, email, chat, text, and social support.
@@ -12,7 +12,7 @@ backlog=pending tasks or features to complete.
 gateway team=protecting network by managing security, access, and their incidents.
 legal person=legal personality, legal entity, juridical person.
 life cycle management=managing a product’s full lifespan: concept, development, use, maintenance, retirement.
-operational risk=risk of loss in the result of: internal process, people, system, external events.
+operational risk=financial or reputational loss from failed processes, people, systems, or external events.
 postmortem=structured analysis that takes place after a failure has occurred.
 product backlog (agile)=prioritized list of features and tasks in agile projects.
 stakeholder=one with interest in outcome: customer, team, tester, manager, regulator, security, leadership, marketing.

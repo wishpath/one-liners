@@ -80,13 +80,13 @@ This set of very short definitions gets straight to the point, giving you the ba
      throughput - rate at which data is processed or transmitted through a system, measured in units/events per interval.
 
 *Business And Workplace*
-     CFT - cross functional team - individuals with different areas of expertise.
+     CFT (context: company structure) - cross functional team - individuals with different areas of expertise.
      CI (IT component) - Configuration Item - any manageable component to deliver IT service.
      CTO - Chief Technology Officer - executive responsible for overseeing technological development and innovation.
      Genesys Cloud - cloud-based contact-center app for personalized phone, email, chat, text, and social support.
      Liferay - content management system (CMS). Pre-made, highly customisable website for enterprise. Backend and frontend.
      MLM - Multi-Level Marketing - strategy where salespeople earn from personal sales and sales made by their recruits.
-     OKR - objectives and key requirements.
+     OKR - objectives and key results.
      PI planning - Program Increment planning - aligns teams, sets objectives, and plans iterations collaboratively.
      PR - can mean public release, pull request, public relations.
      WoW - Way of working - team's established approach to tasks and collaboration.
@@ -99,7 +99,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      product backlog (agile) - prioritized list of features and tasks in agile projects.
      stakeholder - one with interest in outcome: customer, team, tester, manager, regulator, security, leadership, marketing.
      streamline - remove obstacles and add improvements to optimize.
-     ubiquitous language - shared, common, used by both domain experts and developers to describe the domain model.
+     ubiquitous language (DDD) - shared, common, used by both domain experts and developers to describe the domain model.
      value stream - sequence of processes a company uses to deliver product, showing steps, efficiency, and bottlenecks.
 
 *Ci Cd And Dev Ops*
@@ -236,8 +236,8 @@ This set of very short definitions gets straight to the point, giving you the ba
 *General ITTerms*
      AD - architecture description or active directory (access rights).
      HSM - Hardware Security Module — device for cryptographic key protection.
-     ICT system - Information and Communication Technology setup for data handling and communication.
-     ICT system components - hardware, software, networks, and people.
+     ICT system (purpose) - Information and Communication Technology setup for data handling and communication.
+     ICT system (components) - Information and Communication Technology setup hardware, software, networks, and people.
      SSO - Single Sign-On - authentication method for accessing multiple apps with one login.
      cross architecture - making sure components fit well: front, back, data, infrastructure and security
      deduce - conclude
@@ -260,7 +260,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      Bean factory/ Application context - dependency injection container in Spring.
      IoC - Inversion of Control - design principle where object creation and lifecycle are managed by a container or framework.
      JSP - Java Server Pages - embed Java code in HTML, with tags for loops, conditions, formatting.
-     Java beans - simple objects with only getters and setters for the attributes.
+     Java bean - simple Java object with getters/setters, often used as DTO for data transfer.
      POJO - Plain Old Java Object - simple Java class without framework inheritance or interfaces.
      Spring beans - POJOs configured in the application context.
      Spring boot - part of Spring (Java framework) specific for creating web app back end.

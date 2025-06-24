@@ -22,7 +22,6 @@ public class WikiExporter {
   }
 
   private static void printListOfTopics(Concepts c) throws IOException {
-    System.out.println("here");
     Files.walk(c.TOPICS_PUBLIC)
         .filter(p -> p.toString().endsWith(".concepts"))
         .forEach(p -> System.out.println(p.getFileName().toString().replace(".concepts", "")));

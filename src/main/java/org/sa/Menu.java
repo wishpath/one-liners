@@ -95,7 +95,7 @@ public class Menu {
       else if ("weak".equals(input) || "weakness".equals(input) || "weaknesses".equals(input))
         info.printEntriesWithMinusScore();
 
-      else if ("weak keys".equals(input))
+      else if ("weak keys".equals(input) || "weak time".equals(input))
         info.printKeysWithMinusScoreAndDates();
 
       else if ("score".equals(input))

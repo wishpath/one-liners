@@ -1,12 +1,15 @@
 problems:
+  - "CFT (context: company structure);Please explain this: CFT (company structure);10;2025-06-24T15:50:45.726779500" - the answer was way longer / pasted whatever was copied from console...
   - prep and fix console colors:
     - blue - global narratives
     - cyan - inner narratives
     - yellow - AI
     - bright yellow - extra data
-  - do console indentation
   - In colors do very bright gray
   - in color do boldColorInLine and similar
+  - clean up not today keys immediately:
+      - "CFT (company structure);2025-06-24T15:47:35.738308"
+      - "CFT (context: company structure);2025-06-24T15:52:48.961567700"
   - unit tests:
     -
 
