@@ -1,10 +1,5 @@
 problems:
-  - "CFT (context: company structure);Please explain this: CFT (company structure);10;2025-06-24T15:50:45.726779500" - the answer was way longer / pasted whatever was copied from console...
-  - prep and fix console colors:
-    - blue - global narratives
-    - cyan - inner narratives
-    - yellow - AI
-    - bright yellow - extra data
+
   - In colors do very bright gray
   - in color do boldColorInLine and similar
   - unit tests:
@@ -17,6 +12,11 @@ ok, not needed to change:
    - multiple "=" characters in the concept, because when splitting by it, it is limited to 2 parts max.
    - characters print well in console, but gradle settings > build and run should be IntelliJ
    - spaced repetition - would not seem to bring much benefit, but would complicate code
+   - prep and fix console colors:
+     - blue - global narratives
+     - cyan - inner narratives
+     - yellow - AI
+     - bright yellow - extra data
 
 how to:
   - update submodules:
