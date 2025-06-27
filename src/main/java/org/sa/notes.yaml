@@ -1,6 +1,5 @@
 problems:
-  - unit tests:
-    -
+  -
 
 ideas:
   -
@@ -10,10 +9,15 @@ ok, not needed to change:
    - characters print well in console, but gradle settings > build and run should be IntelliJ
    - spaced repetition - would not seem to bring much benefit, but would complicate code
    - prep and fix console colors:
-     - blue - global narratives
-     - cyan - inner narratives
-     - yellow - AI
-     - bright yellow - extra data
+      - blue - global narratives
+      - cyan - inner narratives
+      - yellow - AI
+      - bright yellow - extra data
+   - it is ok to not write unit tests if:
+      - it's a prototype or throw-away app
+      - there's only one developer.
+      - input files are small and predictable.
+      - You’ll iterate quickly, and the app will likely be rewritten or discarded.
 
 how to:
   - update submodules:
