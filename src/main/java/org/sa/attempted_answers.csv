@@ -233,3 +233,10 @@ semantic registration message;key value pairs, like json used for user authentic
 operations specialist;idk\;0;2025-06-27T16:58:45.362323
 WoW;way of working - processes within team how things should be done;10;2025-06-27T16:59:19.424695500
 coupling (noun) (software);dependecy between two parts of code;9;2025-06-27T16:59:53.749472400
+token;user login information that are stored in usually in the cookies;7;2025-06-28T13:12:19.928090400
+Hungarian pollution;variables having prefixes or suffixes marking type of the variable;8;2025-06-28T13:58:18.533779700
+DevSecOps;specialists and discipline of automated pipelines: integreation: merging, testing, security, and delivery: deployment;8;2025-06-28T13:59:55.535163
+credential examples;username, password;8;2025-06-28T14:00:55.157850200
+credential;user data that can be used to authenticate;9;2025-06-28T14:01:29.876473100
+defensive programming;extra checks for corner cases within code;8;2025-06-28T14:02:14.169769300
+JPA;Java Persistence API - standard or java apps interacting to databases;8;2025-06-28T14:03:05.969214600
