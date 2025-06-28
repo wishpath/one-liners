@@ -65,7 +65,7 @@ public class Menu {
       else if ("skip".equals(input) || "s".equals(input))
         setConcept(act.pickConceptWithLowestScore());
 
-      else if ("all keys".equals(input))
+      else if ("all keys".equals(input) || "keys".equals(input))
         info.printAllKeys();
 
       else if ("previous".equals(input) || "prev".equals(input))

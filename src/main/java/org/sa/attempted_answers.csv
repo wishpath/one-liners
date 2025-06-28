@@ -230,7 +230,6 @@ Agile Test Quadrants;tests sorted on two dimentions - technical and business;9;2
 accessibility testing;checks of how well people with limited abilities can use the product;10;2025-06-27T16:55:13.138322100
 jar hell;happens when multiple dependencies depend of different versions of subdependencies. all versions of subdependencies are downloaded and are confusing which one should be used;9;2025-06-27T16:57:25.647734
 semantic registration message;key value pairs, like json used for user authentication;8;2025-06-27T16:58:31.765232400
-operations specialist;idk\;0;2025-06-27T16:58:45.362323
 WoW;way of working - processes within team how things should be done;10;2025-06-27T16:59:19.424695500
 coupling (noun) (software);dependecy between two parts of code;9;2025-06-27T16:59:53.749472400
 token;user login information that are stored in usually in the cookies;7;2025-06-28T13:12:19.928090400
@@ -240,3 +239,10 @@ credential examples;username, password;8;2025-06-28T14:00:55.157850200
 credential;user data that can be used to authenticate;9;2025-06-28T14:01:29.876473100
 defensive programming;extra checks for corner cases within code;8;2025-06-28T14:02:14.169769300
 JPA;Java Persistence API - standard or java apps interacting to databases;8;2025-06-28T14:03:05.969214600
+servlet container;Part of the server which manages servlets that are defined in the application;9;2025-06-28T19:15:54.659287
+JPQL;Java Persistence Query Language - tool in java application to write a universal queries, independent of the kind of the database;9;2025-06-28T19:17:09.708123500
+provisioning;putting new feature into use;8;2025-06-28T19:17:42.140755
+NFS;Network File System - way to access files in the network as if they were local;9;2025-06-28T19:18:39.488626800
+operations specialist;specialist that takes care of it infrastructure: servers, deployment, repositories;8;2025-06-28T19:19:39.937244
+REST;standard for endpoints. They should be stateless. Standard http actions like GET or PUT. common data markup file types used like JSON. Applications have layers like controller, service and storage.;8;2025-06-28T19:22:24.949685100
+
