@@ -246,3 +246,22 @@ NFS;Network File System - way to access files in the network as if they were loc
 operations specialist;specialist that takes care of it infrastructure: servers, deployment, repositories;8;2025-06-28T19:19:39.937244
 REST;standard for endpoints. They should be stateless. Standard http actions like GET or PUT. common data markup file types used like JSON. Applications have layers like controller, service and storage.;8;2025-06-28T19:22:24.949685100
 
+connection protection (examples);authentication, access control, key exchange;8;2025-06-29T13:30:23.455465800
+artifact;artifact in general is a thing;0;2025-06-29T13:31:04.603660300
+code integration;automated code merging, compiling and tests. part of CI/CD pipeline in the DevOps.;9;2025-06-29T13:36:21.892562100
+data flow;getting, processing, storing and sending information;8;2025-06-29T13:37:21.333552500
+ICT system (components);Information Computing Technology system componens - hardware, software, newtorks and people.;8;2025-06-29T13:41:23.184106200
+etcd etymology;et cetera directory - in linux that is directory for various items;8;2025-06-29T13:46:37.156476700
+aspect;aspect in aspect oriented programming is a function that can be outsourced from code, while not explicitly calling it in the classes wehre its used. for example logging;8;2025-06-29T13:51:40.594110900
+F5;load balancer and traffic orchestrator in kubernetes and OpenShift;9;2025-06-29T13:52:22.423913100
+good separation of concerns (DDD);One piece of code, does narrow range of functions - all connected to the same business context and area.;9;2025-06-29T13:53:47.785094300
+ECB;Europien Central Bank;7;2025-06-29T13:57:26.391079700
+servlet vs controller;both takes care of user requests and send computed infromation, but controller is higher abstraction over servlet.;10;2025-06-29T13:59:06.521260700
+JETTY;application server - manages lifecycle of application beans and servlets;8;2025-06-29T14:01:54.925909200
+VIP (OpenShift);Virtual IP - directs traffic within cluster, oftern for load balancing purposes;9;2025-06-29T14:03:14.899376200
+Rancher platform;orchestration tool for kubernetes containers;9;2025-06-29T14:04:29.661652700
+pod;portion of resources where containerised application is deployed.;8;2025-06-29T14:05:40.025777800
+assess;check and make sure something is true;8;2025-06-29T14:06:06.985151700
+stereotype in Spring;the way to annotate components by @ sign in Spring applications;9;2025-06-29T14:07:47.695754600
+deque;two way que in Java, implemented as ArrayDeque or LinkedList;8;2025-06-29T14:08:34.896840
+subnet;portion of network;8;2025-06-29T14:08:57.427799300

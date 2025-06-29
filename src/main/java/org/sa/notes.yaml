@@ -1,5 +1,17 @@
 problems:
-  -
+  - ICT system (components):
+    - user answer:
+      - "Information Computing Technology system componens - hardware, software, newtorks and people":
+        - ai evaluation:
+          - 8/10 : that's too high
+          - "The definition captures the essence but has a typo: \"componens\" should be \"components,\" and \"newtorks\" should be \"networks.\" The acronym is incorrect; ICT stands for Information and Communication Technology. Overall, the essence is somewhat touched"
+  - etcd etymology:
+      - user: et cetera directory - in linux that is directory for various items
+      - has to be: "et cetera" + "distributed" - comes from the /etc directory in Linux for configuration.
+      - ai:
+        - Rating:
+          - 8/10 While "et cetera directory" slightly touches on the concept, the essence is more accurately captured by "et cetera" + "distributed," associating it with Linux’s /etc directory for configuration. To improve, emphasize the "distributed" aspect.
+
 
 ideas:
   -
