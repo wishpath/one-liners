@@ -265,3 +265,13 @@ assess;check and make sure something is true;8;2025-06-29T14:06:06.985151700
 stereotype in Spring;the way to annotate components by @ sign in Spring applications;9;2025-06-29T14:07:47.695754600
 deque;two way que in Java, implemented as ArrayDeque or LinkedList;8;2025-06-29T14:08:34.896840
 subnet;portion of network;8;2025-06-29T14:08:57.427799300
+servlet container;part of application server like Tomcat or Jetty, where the applications servlets' lifecycles are managed;9;2025-06-30T13:38:37.897009500
+IMDG;in memory data grid - storage in RAM for quicker access;8;2025-06-30T13:40:21.748240100
+JSX;JavaScript XML - format similar to HTML to furmulate web pages with React;8;2025-06-30T13:42:00.451590400
+component scanning;process in Spring, where classes and method that has annotations are read;9;2025-06-30T13:43:05.582020400
+hash use cases;encryption, security, passwords, integrity, secrets;8;2025-06-30T13:44:09.236586300
+operational risk;damage that might happen dure to failure of network, hardware, software or people.;9;2025-06-30T13:45:09.272891
+DBA;Data Base Adminitrators - IT team;8;2025-06-30T13:45:29.469803700
+container;tool providing environment, runtime and settings for application instance;9;2025-06-30T13:47:07.064773100
+customer data domain;operations, processes, software and people dealing with customer information.;9;2025-06-30T13:48:57.865648500
+OpenShift vs Kubernetes?;Both are containerised application orchestrating platforms, but OpenShift is higher abstraction of Kubernetes, providing additional functionality;9;2025-06-30T13:50:18.662292900
