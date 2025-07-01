@@ -275,3 +275,8 @@ DBA;Data Base Adminitrators - IT team;8;2025-06-30T13:45:29.469803700
 container;tool providing environment, runtime and settings for application instance;9;2025-06-30T13:47:07.064773100
 customer data domain;operations, processes, software and people dealing with customer information.;9;2025-06-30T13:48:57.865648500
 OpenShift vs Kubernetes?;Both are containerised application orchestrating platforms, but OpenShift is higher abstraction of Kubernetes, providing additional functionality;9;2025-06-30T13:50:18.662292900
+dispatcher;someone or something that directs flows to different directions;8;2025-07-01T16:22:29.577446700
+servlet container;it is where servlet lifecycles are managed in application server, such as Tomcat or Jetty;10;2025-07-01T16:29:30.864259700
+compatibility testing;checks if application works well in different environments and or setups.;10;2025-07-01T16:30:12.867592500
+life cycle management;taking care or project, application or object throuh planning, initiation and iterations;8;2025-07-01T16:32:05.191965700
+build;application built to a deployable file, such as WAR;8;2025-07-01T16:32:56.842499200
