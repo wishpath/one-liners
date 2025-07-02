@@ -280,3 +280,4 @@ servlet container;it is where servlet lifecycles are managed in application serv
 compatibility testing;checks if application works well in different environments and or setups.;10;2025-07-01T16:30:12.867592500
 life cycle management;taking care or project, application or object throuh planning, initiation and iterations;8;2025-07-01T16:32:05.191965700
 build;application built to a deployable file, such as WAR;8;2025-07-01T16:32:56.842499200
+namespace (cluster);git notes;0;2025-07-02T10:11:43.043022400

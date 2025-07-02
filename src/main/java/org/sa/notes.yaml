@@ -32,6 +32,8 @@ ok, not needed to change:
       - You’ll iterate quickly, and the app will likely be rewritten or discarded.
 
 how to:
+  - add submodule:
+    - git submodule add <repository-link> <target-folder>
   - update submodules:
     - git submodule update --remote --merge
     - then commit
