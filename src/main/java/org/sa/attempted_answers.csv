@@ -281,3 +281,18 @@ compatibility testing;checks if application works well in different environments
 life cycle management;taking care or project, application or object throuh planning, initiation and iterations;8;2025-07-01T16:32:05.191965700
 build;application built to a deployable file, such as WAR;8;2025-07-01T16:32:56.842499200
 namespace (cluster);git notes;0;2025-07-02T10:11:43.043022400
+DGOM;Data Governance Object Model - defines proceses and roles how customer data is handled;9;2025-07-03T16:29:18.883353400
+proprietary;belonging to a company;8;2025-07-03T16:30:06.382562700
+undirected graph;when graph edges between nodes does not point to one direction, but raher connects bidirectionaly;10;2025-07-03T16:31:11.931372600
+custody;legal taking care;10;2025-07-03T16:31:39.170153300
+ORM;Object Relational Mapping - framework to map objects to database tables;10;2025-07-03T16:32:36.272682200
+em dash ("—") function;used when something unexpected is wanted to convey;7;2025-07-03T16:33:28.608066300
+en dash ("–") function;used to connect words and use them as one unit, example cross-functional;7;2025-07-03T16:34:37.251555
+allocate;give a specific place in the memory;8;2025-07-03T16:35:31.166162800
+web;internet;8;2025-07-03T16:35:55.808651300
+pipeline;automated processes. In IT usually conneced to CI/CD and DevOps;8;2025-07-03T16:37:07.593790100
+artifactory;repository where built apps or libraries are held;9;2025-07-03T16:38:01.243663200
+Data governance;taking care of data;8;2025-07-03T16:38:42.927652100
+POJO;Plain Old Java Object;10;2025-07-03T16:39:00.477814700
+good separation of concerns for DocManager;only takes care of managing documents : create, edit, delete;9;2025-07-03T16:39:29.399887500
+commissioning;making ready to use;9;2025-07-03T16:39:58.906462500
