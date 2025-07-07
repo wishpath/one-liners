@@ -305,3 +305,16 @@ personal data retention;time for which personal information is being kept and ma
 proprietary;belonging to a company;8;2025-07-05T09:44:01.504426800
 JSON;semantic message, popular for object serialisation and sending data over network, having hierarchy and key value pairs;8;2025-07-05T09:46:16.504819400
 interface in java;is sort of contract for the class which implements it. Shows what methods this class should implement.;9;2025-07-05T09:54:52.235263600
+DORA;dk;8;2025-07-06T11:26:37.866154600
+detrimental;causing damage;9;2025-07-06T11:27:36.501995200
+Kerberos keytab;secret code provided by Kerberos services (using username and password), is used to authenticate in a third service;8;2025-07-06T11:31:07.208839100
+cross architecture;including all parts of architecture: backend, frontend, database, logging and so on;9;2025-07-06T11:34:28.155469900
+trie;words stored in trees, letter by letter. good for searching words with certain prefixes;10;2025-07-07T23:05:46.026660900
+TDC;test data complience;8;2025-07-07T23:06:21.491298400
+integration testing;testing how well certain part of the system works with the context (other parts of the system);9;2025-07-07T23:07:46.523307
+parity;quality of being even or odd;10;2025-07-07T23:08:14.835281200
+Kibana;in Opeshift this is a solution for logs and monitoring;9;2025-07-07T23:08:51.222613
+Java bean;object managed by Spring inversion of control;7;2025-07-07T23:09:42.943774200
+KPI;key production indicator - quantifieble mesurement of how well should system work;7;2025-07-07T23:11:52.835810100
+commissioning example;"commission a new feature" - means making feature available to the users;8;2025-07-07T23:13:53.239402500
+namespace (cluster);logical part of cluster with own resouces, where even smaller instances are - pods.;9;2025-07-07T23:16:43.104323800
