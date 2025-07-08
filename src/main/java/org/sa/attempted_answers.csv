@@ -318,3 +318,7 @@ Java bean;object managed by Spring inversion of control;7;2025-07-07T23:09:42.94
 KPI;key production indicator - quantifieble mesurement of how well should system work;7;2025-07-07T23:11:52.835810100
 commissioning example;"commission a new feature" - means making feature available to the users;8;2025-07-07T23:13:53.239402500
 namespace (cluster);logical part of cluster with own resouces, where even smaller instances are - pods.;9;2025-07-07T23:16:43.104323800
+state (of object);values of fields of the object;9;2025-07-08T10:07:05.201450100
+URL safe format;means all the possible characters in this format are allowed in URL string;8;2025-07-08T10:08:12.151070100
+legal person;a company, firm, organisation, not an individual;10;2025-07-08T10:09:15.433829800
+chaos engineering;intentionional and authorized injection of code with bugs and errors in order to test such scenarios.;7;2025-07-08T10:10:47.501866500
