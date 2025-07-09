@@ -322,3 +322,9 @@ state (of object);values of fields of the object;9;2025-07-08T10:07:05.201450100
 URL safe format;means all the possible characters in this format are allowed in URL string;8;2025-07-08T10:08:12.151070100
 legal person;a company, firm, organisation, not an individual;10;2025-07-08T10:09:15.433829800
 chaos engineering;intentionional and authorized injection of code with bugs and errors in order to test such scenarios.;7;2025-07-08T10:10:47.501866500
+Kubernetes;container orchestration platform;10;2025-07-08T10:14:09.099524300
+Ivy integration to Gradle;Ivy plugin in the Gradle project, through which Ivy repositories and libraries can be reached;10;2025-07-09T09:55:36.185981700
+indegree;In a graph node, this is a number of incoming edges;10;2025-07-09T09:56:10.044016600
+TDC;test data complience;8;2025-07-09T09:56:21.681077100
+pointcut;in the aspect method anotations, this is a rule by which this method is triggered.;8;2025-07-09T09:57:37.043143900
+ubiquitous language (DDD);in domain driven develpment this is a language common in the bounded context, whhich represents a business part;8;2025-07-09T09:59:11.789939800
