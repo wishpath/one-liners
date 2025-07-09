@@ -328,3 +328,5 @@ indegree;In a graph node, this is a number of incoming edges;10;2025-07-09T09:56
 TDC;test data complience;8;2025-07-09T09:56:21.681077100
 pointcut;in the aspect method anotations, this is a rule by which this method is triggered.;8;2025-07-09T09:57:37.043143900
 ubiquitous language (DDD);in domain driven develpment this is a language common in the bounded context, whhich represents a business part;8;2025-07-09T09:59:11.789939800
+SwiftUI;platform to create apple user interfaces. iOS and other;9;2025-07-09T12:14:33.386766700
+FDP;front development platform - framework to build UI apps, like React or Angular;0;2025-07-09T12:16:25.061886
