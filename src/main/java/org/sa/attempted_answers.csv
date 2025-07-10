@@ -330,3 +330,31 @@ pointcut;in the aspect method anotations, this is a rule by which this method is
 ubiquitous language (DDD);in domain driven develpment this is a language common in the bounded context, whhich represents a business part;8;2025-07-09T09:59:11.789939800
 SwiftUI;platform to create apple user interfaces. iOS and other;9;2025-07-09T12:14:33.386766700
 FDP;front development platform - framework to build UI apps, like React or Angular;0;2025-07-09T12:16:25.061886
+real-time data flow;data managed in multiple concurrent threads;8;2025-07-10T22:26:25.786203700
+Hazelcast;Software to use in-memory data grid for distributed compute;8;2025-07-10T22:27:26.931331600
+FDP;Frontend Development Platform - for example React or Angular;8;2025-07-10T22:28:07.900000900
+ECB stress test;European Central Bank checks how well banks can deal with disaster scenarios;10;2025-07-10T22:29:52.847368500
+JPQL;Java Persistance Query Language - Standard language independent of target database type, used for managing databases.;9;2025-07-10T22:32:04.640981700
+stub;a block of code;7;2025-07-10T22:33:45.169967100
+pagination;when given list is distributed over multiple pages, each page with index;8;2025-07-10T22:34:47.091448800
+heap;data structure where elements are sorted automatically. min heap makes available a smallest member and max heap - bigest.;8;2025-07-10T22:36:34.935858900
+DGOM;Data Governance Object Model - the way data is managed in the company - precesses, roles, rules and so on.;7;2025-07-10T22:37:46.611994400
+data pseudonymization;when real data is replaced with pseudonyms;9;2025-07-10T22:38:35.790155100
+due;1. proper 2. almost now;7;2025-07-10T22:39:29.170243900
+poor separation of concerns for DocManager;class not only manages documents like creating or editing them, but has additional functionalities, like sending email for example;10;2025-07-10T22:41:18.459801700
+TDC;Test Driven Coding - first writing the test and addopting the code to it.;0;2025-07-10T22:42:20.686409400
+directed graph;means edges in in the graph are vectors between nodes. This meeans they have direction.;9;2025-07-10T22:43:29.904190700
+Loki (observability);A tool to collect log files;9;2025-07-10T22:43:59.219808900
+firewall opening;implementing a set of rules how instances in the network interact;8;2025-07-10T22:45:13.953616
+Kafka;real time data flow orchestration platform;9;2025-07-10T22:46:04.361996
+diamond operator (Java);retrieves the Type automatically from where it's already mentioned;8;2025-07-10T22:47:23.554773100
+domain vs bounded context;both are part of buisness with ubiquitous language and are a base for creation of a separate software unit: service, module or class;9;2025-07-10T22:49:19.556002400
+modal window;sort of like pop up or dialog, where the backgroud is inactivated;9;2025-07-10T22:50:48.039812800
+permutation;different variation of same members, but different order;9;2025-07-10T22:51:50.994456500
+etcd;et cetera directory - in linux there is such folder;0;2025-07-10T22:52:32.352372300
+enhanced;strengthened;9;2025-07-10T22:54:02.961096600
+SSO;single sign on - the way to authenticate without entering username and password;7;2025-07-10T22:54:39.454396400
+Kerberos keytab key;a secred provided by Kerberos service in exchange of correct username and password, is used to authenticate to third party service;7;2025-07-10T22:57:16.993895600
+Chromium;Base of browsers, mainly Chrome;10;2025-07-10T22:57:59.033092800
+integration testing;tests how well small peaces of code are working when integrated into larger contexts;9;2025-07-10T22:59:02.222410900
+overlay (web);sort of layer on top of UI screen, preventing from actions. for example laoding overlay;9;2025-07-10T23:00:15.230986600
