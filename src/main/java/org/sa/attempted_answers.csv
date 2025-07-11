@@ -358,3 +358,4 @@ Kerberos keytab key;a secred provided by Kerberos service in exchange of correct
 Chromium;Base of browsers, mainly Chrome;10;2025-07-10T22:57:59.033092800
 integration testing;tests how well small peaces of code are working when integrated into larger contexts;9;2025-07-10T22:59:02.222410900
 overlay (web);sort of layer on top of UI screen, preventing from actions. for example laoding overlay;9;2025-07-10T23:00:15.230986600
+Swagger;software for listing endpoints;7;2025-07-11T19:43:22.945922200
