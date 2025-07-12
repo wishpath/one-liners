@@ -1,4 +1,6 @@
 problems:
+  - csv should use comma
+  - concept should not use comma
   - ICT system (components):
     - user answer:
       - "Information Computing Technology system componens - hardware, software, newtorks and people":

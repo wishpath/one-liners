@@ -42,7 +42,8 @@ public class Concepts {
         .filter(line -> line.contains("="))
         .forEach(line -> {
           String[] arr = line.split("=", 2);
-          if(arr[0].contains(";")) throw new RuntimeException("Key '" + arr[0] + "' should not contain semicolon (;)");
+          if (arr[0].contains(";")) throw new RuntimeException("Key '" + arr[0] + "' should not contain semicolons (;)");
+          if (arr[0].contains(",")) throw new RuntimeException("Key '" + arr[0] + "' should not contain commas (,)");
           String repeated = keyDefinition.put(arr[0], arr[1]);
           if (repeated != null) {
             SimpleColorPrint.redInLine("The repeated key: ");
@@ -83,15 +84,22 @@ public class Concepts {
   }
 
   private void loadNotTodayConcepts() throws IOException {
+
+    SimpleColorPrint.blue("NOT TODAY:");
     try (Stream<String> lines = Files.lines(NOT_TODAY_FILE)) {
       LocalDateTime oneDayAgo = LocalDateTime.now().minusDays(1);
-      lines.map(line -> line.split(";"))
+      lines.map(line -> line.split(","))
+          .peek(parts -> {
+            SimpleColorPrint.normal(Props.TAB + Arrays.toString(parts));
+            if (parts.length > 2) throw new RuntimeException("LINE CONTAINS TOO MANY COMMAS");
+          })
           .map(parts -> Map.entry(parts[0], LocalDateTime.parse(parts[1])))
           .filter(e -> e.getValue().isAfter(oneDayAgo))
           .filter(e -> keyDefinition.containsKey(e.getKey()))
           .forEach(e -> notTodayKeys.put(e.getKey(), e.getValue()));
     }
     autosaveNotTodayMapToFile();
+    System.out.println();
   }
 
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -105,7 +113,7 @@ public class Concepts {
   private void autosaveNotTodayMapToFile() throws IOException {
     try (BufferedWriter writer = Files.newBufferedWriter(NOT_TODAY_FILE)) {
       for (Map.Entry<String, LocalDateTime> entry : notTodayKeys.entrySet())
-        writer.write(entry.getKey() + ";" + entry.getValue() + System.lineSeparator());
+        writer.write(entry.getKey() + "," + entry.getValue() + System.lineSeparator());
     }
   }
 
