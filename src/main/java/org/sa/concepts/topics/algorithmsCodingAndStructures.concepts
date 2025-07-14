@@ -1,8 +1,7 @@
 DRY=Don't Repeat Yourself - programming principle.
 DSL=Domain-Specific Language - syntax tailored to a non-general domain. Example: Thymeleaf provides DSL for HTML.
 Hungarian pollution=overusing type prefixes in variable names.
-abstraction (1)=process of hiding complex implementation details and showing only the necessary features.
-abstraction (2)=helps to manage complexity by hiding implementation details and exposing only essential features.
+abstraction=process of hiding complex details, exposing only essential features to manage complexity.
 abstraction examples=interfaces, modules, packages, APIs, frameworks, ORMs, microservices, VMs, containers.
 boilerplate=sections of code that have to be included in many places with little or no alteration.
 cohesion=degree to which elements of a module or class are related and work together to achieve a single purpose.

@@ -1,6 +1,8 @@
 problems:
-  - csv should use comma
-  - concept should not use comma
+  - csv should use comma (attempted answers)
+
+
+scoring problems:
   - ICT system (components):
     - user answer:
       - "Information Computing Technology system componens - hardware, software, newtorks and people":
@@ -41,3 +43,10 @@ how to:
     - then commit
   - tone down the definitions in .concepts:
     - Settings > ... > File Types > "+" > in the "line comment" put "="
+      
+      
+      https://www.strava.com/oauth/authorize?client_id=165873
+      &response_type=code
+      &redirect_uri=http://localhost
+      &approval_prompt=force
+      &scope=read,activity:read_all

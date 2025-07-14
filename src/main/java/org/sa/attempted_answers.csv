@@ -369,3 +369,19 @@ using APIs;communication between services, or human and service through endpoint
 credibility;how well should a person or organisation should be trusted;9;2025-07-12T13:39:11.832502
 container instance;separate copy of program working on a pod, having runtime and settings;9;2025-07-12T13:40:22.756182500
 gateway;server managin incomming connections;7;2025-07-12T13:40:46.727462100
+PCI DSS;Paying Card Industry Data Security Standard - wow safe is to use credit card;7;2025-07-13T09:16:03.013761800
+etcd;etc distributed - distributed settings accoss pods;8;2025-07-14T11:47:57.228420300
+Ingress Controller;manages and distributes traffic accross Kubernetes deployed instances of an application;9;2025-07-14T11:49:03.544343800
+Elasticsearch;tool, software for observability. reads logs, filters them, combines data;9;2025-07-14T11:49:52.486404100
+full-text search;technology for searching, which understands synonims and steams of words;8;2025-07-14T11:50:51.833013400
+Google Cloud;platform for cloud computing and data;9;2025-07-14T11:51:13.818368500
+Bean factory/ Application context;In Spring this manages objects and implements inversion of control;8;2025-07-14T11:51:56.533097300
+semantic message;data that has additional meta data describing what it is. for example in JSON there are fields explaining what is the meaning of each value.;9;2025-07-14T11:54:59.979659600
+CTE (SQL);common table expression;8;2025-07-14T11:55:20.779849700
+exponent (math);when a number is rased to the power, this is the number explaining what the power is;7;2025-07-14T11:56:08.443709600
+cloud;remote servers;7;2025-07-14T11:56:49.374049600
+substitution (general word);replacement;10;2025-07-14T11:57:06.290177400
+UI dialog;part of the web page, sort of like pop up on the sreen asking user to choose certain options;9;2025-07-14T11:57:53.989582500
+DSS;data security standard;10;2025-07-14T11:58:24.081004300
+volatile;the quality of unpredictability of change, big and sudden changes;9;2025-07-14T11:59:45.039935200
+DSL;data secure layer;0;2025-07-14T11:59:59.047066100
