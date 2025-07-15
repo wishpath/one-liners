@@ -385,3 +385,10 @@ UI dialog;part of the web page, sort of like pop up on the sreen asking user to 
 DSS;data security standard;10;2025-07-14T11:58:24.081004300
 volatile;the quality of unpredictability of change, big and sudden changes;9;2025-07-14T11:59:45.039935200
 DSL;data secure layer;0;2025-07-14T11:59:59.047066100
+non-semantic message;raw data without any explanation of its meaning;10;2025-07-15T11:34:18.465363500
+etcd;etc distributed - common configurations for nodes in Kubernetes;7;2025-07-15T23:33:18.382072100
+provisioning;making available in the production;7;2025-07-15T23:33:59.538727700
+DSL;Domain Specific Language - a language that is not universal but with a more narrow use and purpose;9;2025-07-15T23:35:11.560179700
+volatile (Java);keyword to make variable have a freshly updated value in multithereading;8;2025-07-15T23:37:48.991842600
+SLO;Service Level Objective - aim for application to function as well as defined in the criteria;10;2025-07-15T23:39:44.945063700
+comply;to meet requirements;10;2025-07-15T23:40:25.569567
