@@ -4,7 +4,6 @@ CTE=common test environment.
 CasC=Development Tools team tool to encrypt service account credentials and config files for OpenShift onboarding.
 ECD=Entreprise Continuous Delivery (team).
 Enigma=internal service to sign and encrypt data. Stores encryption keys in HSM.
-HSM=Hardware Security Module - specialised computer device that stores and manages cryptographic keys.
 ICDEV=was a custom development environment used by ICD team, but it is no longer in use.
 Karoo=external tool managing branch customer call display, checking AB registration in STAR database.
 L&P=team: Lifecycle and Performance.

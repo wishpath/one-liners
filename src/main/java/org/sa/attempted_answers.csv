@@ -392,3 +392,6 @@ DSL;Domain Specific Language - a language that is not universal but with a more 
 volatile (Java);keyword to make variable have a freshly updated value in multithereading;8;2025-07-15T23:37:48.991842600
 SLO;Service Level Objective - aim for application to function as well as defined in the criteria;10;2025-07-15T23:39:44.945063700
 comply;to meet requirements;10;2025-07-15T23:40:25.569567
+artifact (context: compilation);artifact is compiled and built application code, ready for runnig. In format such as .jar or .war;9;2025-07-16T10:00:29.877777700
+enterprise-level;means that a product has a scale and other requirements to fit needs of large companies;9;2025-07-16T10:01:25.853242900
+A/B testing;testing two variations of business solutions to decide which one is better;9;2025-07-16T10:05:14.892288100
