@@ -405,3 +405,9 @@ Jenkins;CI/CD tool for automated tasks, mostly integration and deployment;9;2025
 build process;source code preparation to be runnable;8;2025-07-17T11:07:02.708065100
 boilerplate;common code that is usually repeated without much customisation accross multiple projects;10;2025-07-17T11:08:33.393399
 dispatcher;someone or something that directs incoming requests;8;2025-07-17T11:09:12.130661300
+JSX;JavaScript as XML - sytax used to add JavaScript functionality to HTML, for example in React;7;2025-07-18T23:52:34.808928700
+signup raw data;password, username;0;2025-07-18T23:53:14.782527800
+hyphen ("-") function;joins multiple words that makes up a single word;9;2025-07-18T23:54:08.700931300
+ELK;ElasticSearch, Loki, Kibana - tools of observability;0;2025-07-18T23:54:43.822987700
+SLI;Service Level Index - how well a service should work;7;2025-07-18T23:55:28.589667900
+PCI DSS;payment card industry data security standard;10;2025-07-18T23:56:23.552484300
