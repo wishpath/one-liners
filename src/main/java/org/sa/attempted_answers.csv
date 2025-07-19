@@ -411,3 +411,9 @@ hyphen ("-") function;joins multiple words that makes up a single word;9;2025-07
 ELK;ElasticSearch, Loki, Kibana - tools of observability;0;2025-07-18T23:54:43.822987700
 SLI;Service Level Index - how well a service should work;7;2025-07-18T23:55:28.589667900
 PCI DSS;payment card industry data security standard;10;2025-07-18T23:56:23.552484300
+JWT;skiy;0;2025-07-19T22:54:48.446341700
+JWT;compact, URL-safe token format commonly used for authentication and authorization purposes;9;2025-07-19T22:56:42.006068100
+Ingress Controller;in kubernetes it dispathes traffic to instances;8;2025-07-19T23:37:59.371535700
+em dash ("—") function;marks sudden change in plot;8;2025-07-19T23:39:51.725488
+IMDG;in memory data grid - distributed memore places in RAM;8;2025-07-19T23:40:40.171984300
+FDP;frontend development platform;10;2025-07-19T23:40:55.629448200
