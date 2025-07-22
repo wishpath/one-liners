@@ -417,3 +417,37 @@ Ingress Controller;in kubernetes it dispathes traffic to instances;8;2025-07-19T
 em dash ("—") function;marks sudden change in plot;8;2025-07-19T23:39:51.725488
 IMDG;in memory data grid - distributed memore places in RAM;8;2025-07-19T23:40:40.171984300
 FDP;frontend development platform;10;2025-07-19T23:40:55.629448200
+signup raw data;password, cusotmer id, customer username, email and so on;8;2025-07-20T09:37:58.990892100
+ELK;ElasticSearch Loki Kibana;0;2025-07-20T09:40:26.857243100
+web server;handles static web pages and requests to them;9;2025-07-20T09:41:21.130077200
+en dash ("–") function;joins related terms, like city names withing a journey course, example Kaunas – Vilnius;9;2025-07-20T09:43:38.608960400
+assemble;part of build process when a smaller parts of code are gathered to bigger units;9;2025-07-20T09:46:13.914716300
+URL;universal relative link;0;2025-07-20T11:47:49.676531200
+abstraction;process of hiding details, and leaving key features exposed;9;2025-07-20T12:50:59.623511
+test integration;checking how well tests work in a larger context of an application;7;2025-07-20T12:52:03.027232600
+connection protection (examples);encryption, authentication, authorisations, pseudonumisation, obfuscation;9;2025-07-20T12:53:25.223604700
+etcd;etc distributed - in kerberos, this is shared common configurations for all instances;7;2025-07-20T12:54:24.083357
+operations specialist;takes care of infrastructure maintenance and deployment of applications;9;2025-07-20T12:55:33.030823900
+mitigate;make less severe;10;2025-07-20T12:55:51.026392600
+full-text search;searching technology, which undersatnds synonimas and word steams;7;2025-07-20T12:56:48.333486700
+API gateway;server that controlls incomming calls to exposed API endpoints;9;2025-07-20T12:57:39.178872700
+means of defensive programming;defining edge cases in the code in detail, and solving them explicitly;8;2025-07-20T12:59:00.551230400
+ELK;tools for observability - ElasticSearch, Logstash, Kibana;9;2025-07-22T11:33:16.345063100
+intrusive;disruptive, distrubing;8;2025-07-22T11:33:36.621447900
+servlet;Spring bean that handles incomming requests;5;2025-07-22T11:34:04.547268200
+signup raw data;username, user id, email, date, status;10;2025-07-22T11:34:52.266878400
+Helm chart;A unit that has applications, container, their configurations and settings;9;2025-07-22T11:35:36.026678500
+URL;universal resource locator;0;2025-07-22T11:36:25.638078600
+AWS (cloud);Amazon Web Services - platform for cloud computing and storage;10;2025-07-22T11:37:16.477390700
+sticky session;a seession which is only conncected to single instance of the application;9;2025-07-22T11:44:26.206014100
+RDBMS;relational database management system;10;2025-07-22T11:49:45.365865700
+Saba;software, tool for managing workplace topics and learning;8;2025-07-22T11:50:33.357849700
+JSX;JavaScript XML - in React this is syntax for both foming HTML elements and using JavaStript logic for them.;9;2025-07-22T11:52:36.328997600
+container runtime;environment, configurations and settings to run a container. Or a time when container is running.;8;2025-07-22T11:53:39.854455400
+JPA transaction;a group of database operations considered as a single batch. If a single operation fails - then the whole batch fails;9;2025-07-22T11:54:33.600355500
+separation of concerns (DDD);each bounded context serves a specified specialised part of business;8;2025-07-22T11:56:04.265369400
+RESTful methods;GET, POST, DELETE, EDIT;9;2025-07-22T11:56:42.954055400
+package (software);and archived set of software, that can be distributed;8;2025-07-22T11:57:46.208229400
+Logstash;sofware that takes care of transfering logs;8;2025-07-22T11:58:30.818744200
+secret (Kubernetes);a way to authorise without password;7;2025-07-22T11:59:25.308488200
+DNS;domain network system - manages domain names and maps them to ips;0;2025-07-22T12:00:25.517858300
