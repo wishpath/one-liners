@@ -451,3 +451,9 @@ package (software);and archived set of software, that can be distributed;8;2025-
 Logstash;sofware that takes care of transfering logs;8;2025-07-22T11:58:30.818744200
 secret (Kubernetes);a way to authorise without password;7;2025-07-22T11:59:25.308488200
 DNS;domain network system - manages domain names and maps them to ips;0;2025-07-22T12:00:25.517858300
+provisioning;making available for production and making it available there;9;2025-07-23T11:24:14.475574500
+real-time data flow;as events occure, their data get sent for processing and gets processed paralelly;9;2025-07-23T11:25:02.644808600
+facilitate meeting;organise a meeting;10;2025-07-23T11:25:14.935946500
+DC components;Data center - servers, data, and network connections;8;2025-07-23T11:25:54.798569600
+DAO;data access object;10;2025-07-23T11:26:14.788338700
+cohesion example;a single classs has two methods that are connected, for example DocManager has editDocument() and createDocument();9;2025-07-23T11:27:13.472390800
