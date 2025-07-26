@@ -464,3 +464,8 @@ factory pattern;coding pattern where creation of an object is handled by another
 ELK;ElasticSearch, LogStash and Kibana;10;2025-07-24T11:05:43.054525100
 DNS;Domain Name System - maping user friendly website names to their ip addresses;9;2025-07-24T11:06:26.810442800
 Hazelcast;Tool for distribute computing in the network;8;2025-07-24T11:07:25.989175800
+servlet;java object that handles incomming requests;9;2025-07-26T16:32:45.313528
+URL;uniform resource locator;10;2025-07-26T16:34:13.703277500
+web container;part of web server that handles execution of servlets and jsp;10;2025-07-26T16:34:58.866828700
+UAT;User Acceptability Teset - checks how well a program functions from the perspective of a user;0;2025-07-26T16:36:19.293377500
+connection pool (context: database);multitude of database connections for improved speed;9;2025-07-26T16:38:11.069397200
