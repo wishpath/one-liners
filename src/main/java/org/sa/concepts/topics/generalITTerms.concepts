@@ -1,6 +1,6 @@
 AD=architecture description or active directory (access rights).
 HSM (security)=Hardware Security Module — specialised computer device that stores and manages cryptographic keys.
-ICT system (purpose)=Information and Communication Technology setup for data handling and communication.
+ICT system=Information and Communication Technology setup for data handling and communication.
 ICT system (components)=Information and Communication Technology setup hardware, software, networks, and people.
 SSO=Single Sign-On - authentication method for accessing multiple apps with one login.
 cross architecture=making sure components fit well: front, back, data, infrastructure and security

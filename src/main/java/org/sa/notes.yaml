@@ -50,3 +50,9 @@ how to:
       &redirect_uri=http://localhost
       &approval_prompt=force
       &scope=read,activity:read_all
+
+TOTALLY WRONG:
+  Please explain this: GPA
+    General Purpose Application
+    0/10. GPA typically stands for "Grade Point Average," not "General Purpose Application." A correct definition of GPA would be "Grade Point Average, a measure of academic performance."
+  The default definition: general purpose app.`

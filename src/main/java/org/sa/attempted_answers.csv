@@ -469,3 +469,8 @@ URL;uniform resource locator;10;2025-07-26T16:34:13.703277500
 web container;part of web server that handles execution of servlets and jsp;10;2025-07-26T16:34:58.866828700
 UAT;User Acceptability Teset - checks how well a program functions from the perspective of a user;0;2025-07-26T16:36:19.293377500
 connection pool (context: database);multitude of database connections for improved speed;9;2025-07-26T16:38:11.069397200
+ICT system (purpose);Information and Communication system;8;2025-07-27T10:15:31.688054700
+TLS;Trasfer Layer Security;0;2025-07-28T14:28:13.859328100
+UAT;User Acceptance Testing - checks how well application works from the perspective of user;9;2025-07-28T14:29:11.785143900
+servlet;java object that handles incoming requests;9;2025-07-28T14:29:35.919448100
+GPA;General Purpose Application;0;2025-07-28T14:30:51.275268200
