@@ -474,3 +474,9 @@ TLS;Trasfer Layer Security;0;2025-07-28T14:28:13.859328100
 UAT;User Acceptance Testing - checks how well application works from the perspective of user;9;2025-07-28T14:29:11.785143900
 servlet;java object that handles incoming requests;9;2025-07-28T14:29:35.919448100
 GPA;General Purpose Application;0;2025-07-28T14:30:51.275268200
+TLS;transfer layer security;5;2025-07-29T23:26:15.976970600
+GPA;general purpose app;7;2025-07-29T23:26:57.710510800
+servlet;java object that takes care of incomming requests and processing;9;2025-07-29T23:28:10.666268800
+UAT;user acceptance teting - checking how well product works from the perspective of a user;0;2025-07-29T23:28:58.025844900
+DORA;data object resilience assesment - ECB checks how well banks are ready for disasters;0;2025-07-29T23:30:55.948093800
+CI (IT component);continuous integration - automated build and test process;0;2025-07-29T23:34:46.520872600

@@ -3,7 +3,6 @@ Agile Test Quadrants=concept categorizing types of testing. Based on two axes: t
 CTE (sandbox)=Common Test Environment.
 DDoS attacks=Distributed denial-of service attacks.
 DRT=Disaster Recovery Tests - process to prepare and test functions for actual disaster recovery.
-GPA=general purpose app.
 KPI=key performance indicator.
 PII=Personally Identifiable Information - data that can identify an individual.
 PPTE=pre production test environment.
