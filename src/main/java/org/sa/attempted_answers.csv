@@ -480,3 +480,4 @@ servlet;java object that takes care of incomming requests and processing;9;2025-
 UAT;user acceptance teting - checking how well product works from the perspective of a user;0;2025-07-29T23:28:58.025844900
 DORA;data object resilience assesment - ECB checks how well banks are ready for disasters;0;2025-07-29T23:30:55.948093800
 CI (IT component);continuous integration - automated build and test process;0;2025-07-29T23:34:46.520872600
+PI planning;program increment planning - in agile engine this is an event where multiple teams meet and coordinate their work for an upcomming number of weeks;10;2025-07-30T20:24:25.437744900
