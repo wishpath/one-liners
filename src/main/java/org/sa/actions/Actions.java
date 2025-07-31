@@ -21,7 +21,7 @@ public class Actions {
 
   private Concepts concepts;
   private AiClient ai;
-  private static final Path ATTEMPTED_ANSWERS = Paths.get("src/main/java/org/sa/attempted_answers.csv");
+  private static final Path ATTEMPTED_ANSWERS = Paths.get("src/main/java/org/sa/data/attempted_answers.csv");
 
   public Actions(Concepts concepts, AiClient ai) throws IOException {
     this.concepts = concepts;
@@ -174,18 +174,18 @@ public class Actions {
     Info.printStringWithFragmentHighlighted(evaluationString, answer, Colors.YELLOW, Colors.RED);
 
     //memorize answer
-    String definition = userInputDefinitionAttempt.replace(";", ",");
-    String recordLine = String.join(";", concept.getKey(), definition, String.valueOf(evaluation), LocalDateTime.now().toString()) + "\n";
+    String definition = userInputDefinitionAttempt.replace(",", ";");
+    String recordLine = String.join(",", concept.getKey(), definition, String.valueOf(evaluation), LocalDateTime.now().toString()) + "\n";
     try (BufferedWriter writer = Files.newBufferedWriter(ATTEMPTED_ANSWERS, StandardOpenOption.CREATE, StandardOpenOption.APPEND)) {
       writer.write(recordLine);
     }
 
-    //depending on evaluation return concept entry
+    //score, put to "not_today", print default answer
     incrementScore(concept.getKey(), evaluation < 7 ? -1 : evaluation <= 8 ? 1 : evaluation == 9 ? 2 : 4);
     concepts.dontLearnThisToday(concept.getKey());
-
     SimpleColorPrint.blueInLine("The default definition: ");
     SimpleColorPrint.normal(concept.getValue() + "\n");
+
     return pickConceptWithLowestScore();
   }
 }

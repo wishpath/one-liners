@@ -1,11 +1,12 @@
 problems:
   - csv should use comma (attempted answers)
+    - construct transfering class between current not_today.csv to the one using commas
 
 
 scoring problems:
   - ICT system (components):
     - user answer:
-      - "Information Computing Technology system componens - hardware, software, newtorks and people":
+      - "Information Computing Technology system components - hardware, software, newtorks and people":
         - ai evaluation:
           - 8/10 : that's too high
           - "The definition captures the essence but has a typo: \"componens\" should be \"components,\" and \"newtorks\" should be \"networks.\" The acronym is incorrect; ICT stands for Information and Communication Technology. Overall, the essence is somewhat touched"

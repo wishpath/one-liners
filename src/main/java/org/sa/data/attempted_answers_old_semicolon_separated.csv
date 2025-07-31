@@ -481,3 +481,12 @@ UAT;user acceptance teting - checking how well product works from the perspectiv
 DORA;data object resilience assesment - ECB checks how well banks are ready for disasters;0;2025-07-29T23:30:55.948093800
 CI (IT component);continuous integration - automated build and test process;0;2025-07-29T23:34:46.520872600
 PI planning;program increment planning - in agile engine this is an event where multiple teams meet and coordinate their work for an upcomming number of weeks;10;2025-07-30T20:24:25.437744900
+TLS;Transport Layer Security - protects connections between browser and server;10;2025-07-31T09:54:17.583093800
+UAT;User Acceptance Testing - checks how well functionality workd from the perspective of a user.;9;2025-07-31T09:55:19.356323500
+product life cycle management;taking care of a product through all of it's life: idea, building, developing, maintenance, decommissioning;9;2025-07-31T09:56:14.575158700
+DORA;Data Operational Resilience Act - EU regulations on how well banks should function during disasters;8;2025-07-31T09:57:24.173979800
+CI (IT component);Configuration Item - any component that impacts how well a service functions;9;2025-07-31T09:59:08.326595100
+ICT system;Information and Communication Technology System - usually simply computer system;8;2025-07-31T10:00:56.174189300
+distributed computing;technology where processes have portions that are being calculated in separate computer units;9;2025-07-31T10:02:27.130002700
+deterministic;means the process will always result in the same predictable outcome;9;2025-07-31T10:03:41.649598
+proprietary;belonging to a company;8;2025-07-31T10:10:53.627337100
