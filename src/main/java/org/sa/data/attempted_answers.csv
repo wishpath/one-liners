@@ -491,3 +491,36 @@ distributed computing,technology where processes have portions that are being ca
 deterministic,means the process will always result in the same predictable outcome,9,2025-07-31T10:03:41.649598
 proprietary,belonging to a company,8,2025-07-31T10:10:53.627337100
 servlet/controller/MVC,takes care of incomming requests and distributes computing and data retrieval to other layers,8,2025-07-31T10:30:01.127469900
+TLS,Transport Layer Security - technology to enhance security between browser-server connection,10,2025-08-02T20:52:53.909395100
+GCT,General Complience Testing - checking how well service follows the rules,7,2025-08-02T20:54:08.178615300
+landing page,first page after entering a web page,8,2025-08-02T20:55:04.214715900
+em dash ("—") function,Used in the sentence to separate some unexpected twist,8,2025-08-02T20:57:10.378948900
+pointcut,in aspect class pointcut shows where how the method is triggered,7,2025-08-02T21:06:27.877527600
+QES (Smart-ID),qualified electronic signature - most advaced electronic signature; equal to physical signature,9,2025-08-02T21:07:47.494558400
+SES (Smart-ID),simple electronic signature - basic electronic signature,9,2025-08-02T21:09:41.481341200
+product life cycle management,taking care of the whole life of a product: concept; development; implementation; delivery; deployment; maintenace; stoping usage.,10,2025-08-02T21:16:00.367618800
+arbitrary,something done by choice as opposed to some measurement,8,2025-08-02T21:16:58.119536800
+AES (Smart-ID),Advance Electronic Signature - standard for signing document electronicaly; not having as strict rules as Qualified Eleectronic Signature; but still containing digital proofs.,9,2025-08-02T21:18:53.076075200
+AFC (compliance),Anti Financial Crime - preventing and managing crimes like financial fraud; bribery and money laundering,10,2025-08-02T21:20:42.041909800
+application server,provides web pages to users; takes care controllers; servlets; jsp etc.,8,2025-08-02T21:25:31.342872200
+CDD (compliance),customer due dilligence - checking users / customers,9,2025-08-02T21:26:31.812061700
+SSH,security shell - technology to authenticate,0,2025-08-02T21:27:32.123018800
+Hazelcast,Sofware to do distributed computations,8,2025-08-02T21:28:43.252856400
+Kerberos ticket,file for authentication whithout sending username and password directly to third service,10,2025-08-02T21:29:50.050429600
+UAT,User Acceptance Testing - checking how well product works from the perspective of a customer or user,10,2025-08-02T21:30:42.516357400
+EDD (compliance),Enhanced Due Diligence - more strict checks on a customer,10,2025-08-02T21:31:34.738659800
+SSL,security service layer - manages security of browser server connection,0,2025-08-02T21:32:54.830258100
+DORA,Data Operational Resilience Act - EU rules for financial institutions; how well they should run in case of disasters,7,2025-08-02T21:34:40.420002500
+en dash ("–") function,conncects similar words to formulate ranges; vectors and so on. For example New York - Los Angeles,8,2025-08-02T21:36:08.584355
+JPA entity management (db),Managin connection of Data Object Model connected to database table entry,8,2025-08-02T21:40:15.004893
+JPA transaction (db),a set of actions in database that makes up a singe unit. Transaction fails if at least one action fails.,9,2025-08-02T21:41:17.384537900
+JPA responsibilities (db),connects Data Object Model classes to their corresponding database table entries,7,2025-08-02T21:42:00.559471
+JPA (db),Java Persistence API,10,2025-08-02T21:42:28.353611200
+e.g.,exampli gratia,10,2025-08-02T21:42:39.515220600
+build process,small peaces of code in source are brought together and made ready to be ran or distributed,7,2025-08-02T21:43:37.781188700
+F5 rules,distributing and dispatching user requests and other traffic to application instances,8,2025-08-02T21:44:26.047305800
+RESTful,API; controller and servlet standard; manily about stateless classes; standard http methods; application layers,8,2025-08-02T21:46:02.580889700
+abstraction examples,interface; method name; API,8,2025-08-02T21:46:40.104591600
+data flow,real time information sending and processing,8,2025-08-02T21:47:01.618426900
+package (software),a portion of data. Also each java class is organised and belongs to a certain package,8,2025-08-02T21:48:19.137397
+Logstash,software for fetching logs to observability tools,8,2025-08-02T21:49:19.446077200

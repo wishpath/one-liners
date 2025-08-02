@@ -3,10 +3,10 @@ DAO=Data Access Object - object with custom CRUD methods to interact with databa
 DBA=database administrators.
 Hibernate=Object-Relational Mapping (ORM) framework for the Java - predecessor of JPA (Java Persistence API).
 JDBC=Java Database Connectivity - Java API for executing SQL in relational databases.
-JPA=Java Persistence API - standard for managing relational data in Java apps, mapping objects to database tables.
-JPA responsibilities=Java Persistence API covers SQL queries, object mapping, transactions, and entity management.
-JPA transaction=sequence of database operations as a single unit.
-JPA entity management=handling objects mapped to database rows.
+JPA (db)=Java Persistence API - standard for managing relational data in Java apps, mapping objects to database tables.
+JPA responsibilities (db)=Java Persistence API covers SQL queries, object mapping, transactions, and entity management.
+JPA transaction (db)=sequence of database operations as a single unit.
+JPA entity management (db)=handling objects mapped to database rows.
 JPQL=Java Persistence Query Language - platform-independent database queries (get auto-translated to specific SQL).
 NOT IN (SQL)=operator, similar to "!=" (not equals)
 ORM=Object-Relational Mapping - framework for object mapping e.g. Hibernate.

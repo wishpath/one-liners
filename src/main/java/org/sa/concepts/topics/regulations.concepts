@@ -1,13 +1,13 @@
-AFC=Anti Financial Crime.
-CDD=Customer Due Diligence - performing customer checks.
+AFC (compliance)=Anti Financial Crime — preventing and managing financial fraud, money laundering, bribery etc.
+CDD (compliance)=Customer Due Diligence - performing customer checks.
 DGOM=Data Governance Operating Model — roles, policies, and processes ensuring data quality, security and compliance.
 DORA=Digital Operational Resilience Act - EU rules for banks to manage unforeseen data disruption incidents.
 DPIA=Data Protection Impact Assessment - process identifying and minimising risks of the processing of personal data.
 DSS=Data Security Standard.
 Data governance=management of data quality, security, and accessibility through defined roles, rules, and processes.
-ECB=- European Central Bank
+ECB=European Central Bank
 ECB stress test=European Central Bank’s check of banks’ strength under tough economic conditions.
-EDD=Enhanced Due Diligence - more thorough investigation of customer - beyond the standard KYC procedures.
+EDD (compliance)=Enhanced Due Diligence - more thorough investigation of customer - beyond the standard KYC procedures.
 GCT=general compliance testing - testing processes to meet standards and regulations.
 GDPR=General Data Protection Regulation - European Union regulation on information privacy.
 Java EE=Java Enterprise Edition - platform providing rules for building enterprise-level applications.
