@@ -490,3 +490,4 @@ ICT system,Information and Communication Technology System - usually simply comp
 distributed computing,technology where processes have portions that are being calculated in separate computer units,9,2025-07-31T10:02:27.130002700
 deterministic,means the process will always result in the same predictable outcome,9,2025-07-31T10:03:41.649598
 proprietary,belonging to a company,8,2025-07-31T10:10:53.627337100
+servlet/controller/MVC,takes care of incomming requests and distributes computing and data retrieval to other layers,8,2025-07-31T10:30:01.127469900
