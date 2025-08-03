@@ -524,3 +524,11 @@ abstraction examples,interface; method name; API,8,2025-08-02T21:46:40.104591600
 data flow,real time information sending and processing,8,2025-08-02T21:47:01.618426900
 package (software),a portion of data. Also each java class is organised and belongs to a certain package,8,2025-08-02T21:48:19.137397
 Logstash,software for fetching logs to observability tools,8,2025-08-02T21:49:19.446077200
+deque,data structure implemented as ArrayDeque of LinkedList. It maintains insertion order and has a quick access to first and last item,8,2025-08-03T12:37:51.785452
+unit testing,tests that developers write for most of their methods,8,2025-08-03T12:38:34.025127200
+secret (Kubernetes),a file containing authentication data; but not username and password directly,8,2025-08-03T12:39:24.108040800
+value stream,agile way of organising work of multiple teams that depend on each other,8,2025-08-03T12:40:08.122501200
+bad cohesion (DDD),single software unit solves unrelated functionalities,9,2025-08-03T12:40:58.041141
+commissioning example,getting code ready for the production,8,2025-08-03T12:41:37.200805200
+commissioning example sentence,we had to solve multiple problems to commission the functionalities required by business teams,9,2025-08-03T12:43:51.645639
+traverse,visit all,8,2025-08-03T12:44:04.754548900

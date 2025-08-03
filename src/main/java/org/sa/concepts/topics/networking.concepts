@@ -1,5 +1,5 @@
 DNS=Domain Name System - maps user-friendly domain names to numeric IP addresses.
-SSL=Secure Sockets Layer - encryption of browser-server communication; predecessor to TLS.
+SSL=Secure Sockets Layer - encryption of browser-server communication; predecessor to TLS - Transport Layer Security.
 TLS=Transport Layer Security - encryption of browser-server communication; successor to SSL.
 VPN=Virtual Private Network - encrypted connection to a remote server, hiding identity while accessing the internet.
 VPN whitelisting=security measure that allows only specific IP addresses or devices to access a service through a VPN.
