@@ -1,25 +1,10 @@
 problems:
-  - csv should use comma (attempted answers)
-    - construct transfering class between current not_today.csv to the one using commas
-
-
-scoring problems:
-  - ICT system (components):
-    - user answer:
-      - "Information Computing Technology system components - hardware, software, newtorks and people":
-        - ai evaluation:
-          - 8/10 : that's too high
-          - "The definition captures the essence but has a typo: \"componens\" should be \"components,\" and \"newtorks\" should be \"networks.\" The acronym is incorrect; ICT stands for Information and Communication Technology. Overall, the essence is somewhat touched"
-  - etcd etymology:
-      - user: et cetera directory - in linux that is directory for various items
-      - has to be: "et cetera" + "distributed" - comes from the /etc directory in Linux for configuration.
-      - ai:
-        - Rating:
-          - 8/10 While "et cetera directory" slightly touches on the concept, the essence is more accurately captured by "et cetera" + "distributed," associating it with Linux’s /etc directory for configuration. To improve, emphasize the "distributed" aspect.
-
+  - additional instruction specific to a concept
 
 ideas:
-  -
+  - as every concept has been tried:
+      - check how many of phrases has never received a score of 8, then 9, then 10
+      - if for some concepts it is impossible to receive 10, add additional instructions for the AI. provide a couple of examples with answers that would match the evaluation of 10/10
 
 ok, not needed to change:
    - multiple "=" characters in the concept, because when splitting by it, it is limited to 2 parts max.

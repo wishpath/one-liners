@@ -532,3 +532,4 @@ bad cohesion (DDD),single software unit solves unrelated functionalities,9,2025-
 commissioning example,getting code ready for the production,8,2025-08-03T12:41:37.200805200
 commissioning example sentence,we had to solve multiple problems to commission the functionalities required by business teams,9,2025-08-03T12:43:51.645639
 traverse,visit all,8,2025-08-03T12:44:04.754548900
+subnet,part of a network,9,2025-08-03T19:56:53.137926700
