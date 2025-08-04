@@ -33,6 +33,6 @@ stub=small code replacing larger code, simulates unimplemented parts, aids testi
 subsetting data=selecting and using a representative portion of a larger dataset.
 test data management for enterprise=managing test data to meet organization-wide needs, not just individual teams.
 test integration=combining software modules and testing them as a unified system.
-test pilot=limited-scale trial of a new version before full release, for testing, feedback, and identifying issues.
+test pilot (IT)=limited-scale trial of a new version before full release, for testing, feedback, and identifying issues.
 unit testing=Testing individual units of code in isolation (AKA component testing).
 usability testing=evaluates user-friendliness and overall user experience.

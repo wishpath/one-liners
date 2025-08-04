@@ -21,7 +21,7 @@ public class Actions {
 
   private Concepts concepts;
   private AiClient ai;
-  private static final Path ATTEMPTED_ANSWERS = Paths.get("src/main/java/org/sa/data/attempted_answers.csv");
+  private static final Path ATTEMPTED_ANSWERS_FILEPATH = Paths.get("src/main/java/org/sa/data/attempted_answers.csv");
 
   public Actions(Concepts concepts, AiClient ai) throws IOException {
     this.concepts = concepts;
@@ -178,7 +178,7 @@ public class Actions {
     //memorize answer
     String definition = userInputDefinitionAttempt.replace(",", ";");
     String recordLine = String.join(",", concept.getKey(), definition, String.valueOf(evaluation), LocalDateTime.now().toString()) + "\n";
-    try (BufferedWriter writer = Files.newBufferedWriter(ATTEMPTED_ANSWERS, StandardOpenOption.CREATE, StandardOpenOption.APPEND)) {
+    try (BufferedWriter writer = Files.newBufferedWriter(ATTEMPTED_ANSWERS_FILEPATH, StandardOpenOption.CREATE, StandardOpenOption.APPEND)) {
       writer.write(recordLine);
     }
 

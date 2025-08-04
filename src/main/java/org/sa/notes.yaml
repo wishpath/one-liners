@@ -1,5 +1,10 @@
 problems:
-  - additional instruction specific to a concept
+  - check "weak" command, does it give a word with score of "0" (apparently it does not):
+    - print not today keys
+    - change method name
+    - check if last score was positive ( >= 7 ) if so, do not print
+      - in concepts create a new structure map "key" and boolean "last guess was positively evaluated". this is only needed for not today concepts, so maybe they can be merge somehow
+  - additional instruction specific to a single concept
 
 ideas:
   - as every concept has been tried:

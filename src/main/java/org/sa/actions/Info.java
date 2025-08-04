@@ -7,8 +7,10 @@ import org.sa.console.SimpleColorPrint;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class Info {
 
@@ -106,14 +108,29 @@ public class Info {
   }
 
   public void printEntriesWithMinusScore() {
+    Set<String> minusScoreKeys = new HashSet<>();
     SimpleColorPrint.blue("Printing concepts with minus score:\n");
     for (Map.Entry<Integer, List<String>> e : concepts.scoreToKeys.entrySet()) {
       if (e.getKey() >= 0) break;
       for (String key : e.getValue()) {
+        minusScoreKeys.add(key);
         SimpleColorPrint.redInLine(Props.TAB + key);
         SimpleColorPrint.blueInLine(" - " + concepts.keyDefinition.get(key));
         SimpleColorPrint.normal(" - score: " + concepts.keyScore.get(key));
       }
+    }
+
+
+    SimpleColorPrint.blue("Printing not today concepts (of non-negative score):\n");
+    for (Map.Entry<String, LocalDateTime> e : concepts.notTodayKeys.entrySet()) {
+      if (minusScoreKeys.contains(e.getKey())) continue;
+
+        SimpleColorPrint.redInLine(Props.TAB + e.getKey());
+        SimpleColorPrint.blueInLine(" - " + concepts.keyDefinition.get(e.getKey()));
+        Integer score = concepts.keyScore.get(e.getKey());
+        if (score == null) score = 0;
+        SimpleColorPrint.normal(" - score: " + score);
+
     }
     System.out.println();
   }

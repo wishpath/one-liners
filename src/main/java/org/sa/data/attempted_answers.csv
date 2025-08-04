@@ -533,3 +533,47 @@ commissioning example,getting code ready for the production,8,2025-08-03T12:41:3
 commissioning example sentence,we had to solve multiple problems to commission the functionalities required by business teams,9,2025-08-03T12:43:51.645639
 traverse,visit all,8,2025-08-03T12:44:04.754548900
 subnet,part of a network,9,2025-08-03T19:56:53.137926700
+remediation,removing voulnerabilities,10,2025-08-03T23:00:15.015481800
+RBAC,Role Based Access Control - standard to give various rights in the company depending on person's role there,10,2025-08-03T23:01:26.348566800
+Kerberos principal,username and server pair used for authenticaction in form of "username@server",9,2025-08-03T23:02:14.095255100
+Liferay,a CMS - content managing system - covers frontend and backend,8,2025-08-03T23:04:39.168285500
+SSL,security sockets layer - takes care of browser to server connection,6,2025-08-03T23:05:25.544847
+Hibernate,In Spring this is a tool for Object Relational Maping to database,8,2025-08-03T23:07:42.094903400
+Bean factory/ Application context,This takes care of IoC - Inversion of Control - manages objects; beans and their injection,8,2025-08-03T23:08:37.041993
+Genesys Cloud,cloud based support contact-center,9,2025-08-03T23:09:16.585390700
+data custodian,a team that takes care of data,8,2025-08-03T23:09:41.866453700
+SSH,secure shell key pair — private and public,6,2025-08-03T23:10:13.702521600
+GCT,General Compliace Testing - checking how well a product follows rules,8,2025-08-03T23:11:27.078149300
+en dash ("–") function,is used between connected words to formulate ranges,9,2025-08-03T23:12:12.097241800
+em dash ("—") function,separates unexpected thoughts; is typed by alt + 0151,9,2025-08-03T23:12:59.465060
+DevSecOps,Disciplin and philosophy of automated integration; security; delivery; deployment etc,6,2025-08-03T23:14:36.096513800
+cloud platform,something that enables running IT services and is based on distributed remote servers,9,2025-08-03T23:15:59.465720500
+web server,runs the backed; takes care of user requests and serves web content,9,2025-08-03T23:17:00.252129400
+postmortem,actions taken after some disaster or troubles. Analysis what happened and actions to prevent repetition of such happenings,10,2025-08-03T23:18:07.677497200
+metadata,data about data,10,2025-08-03T23:18:26.357573
+entity (database),corresponds to object in java,8,2025-08-03T23:19:10.812680
+Logread,tool to read logs as files,9,2025-08-03T23:19:36.596981300
+test pilot,starting limited use of intended functionality for test purposes,7,2025-08-03T23:20:34.883723400
+test pilot (IT),trying how well functionality works; while exposing it to a limited number of customers,8,2025-08-03T23:22:55.356264700
+servlet,takes care of user requests and directs data flow. lower abstraction of controller,9,2025-08-03T23:23:54.720037600
+subsetting data,separating data into portions,8,2025-08-03T23:24:36.424623500
+etcd etymology,Et Cetera Distributed - common settings and configurations for all instances of application,9,2025-08-03T23:25:58.167703600
+DBA,Database Administrators - name of a team,10,2025-08-04T10:43:18.886155700
+staging environment,means that latest changes in this evironment will get deployed to production,8,2025-08-04T10:43:58.714291900
+facility,building,8,2025-08-04T10:44:18.468157700
+KPI,Key Performance Indicator,10,2025-08-04T10:44:39.224038500
+SLI,Service Level Indicator - how well should a service work,7,2025-08-04T10:45:15.745088300
+JPA responsibilities (db),transactions; queries and mapping etities in database to objects in the backend,9,2025-08-04T10:46:14.105142200
+diligence,persistant throrough work with care and attention to detail,9,2025-08-04T10:47:00.610507
+firewall,rules for communication for instances in the network,8,2025-08-04T10:47:48.103734700
+JPQL,java persistence query language - universal database query code; that can be translated to any database type specialised query language,9,2025-08-04T10:49:05.083351900
+landing page,initial web page where users are directed and start there,8,2025-08-04T10:49:36.630754400
+due,1. now 2. proper,7,2025-08-04T10:50:14.984132800
+cohesion,connectedness,8,2025-08-04T10:50:56.306469800
+YAML,YAML Ain't Markup Language - a common human readable sytax format; for data and metadata,8,2025-08-04T10:52:16.563770200
+pagination,way to display large lists in the web page; when portions of that list gets a separate page,10,2025-08-04T10:53:23.567473
+application server,responsible for runtime of application; runs calculations and provides outcome,9,2025-08-04T10:55:12.501404100
+JSON,Javascirpt Object Notation - a common file format for data and metadata,7,2025-08-04T10:55:56.976423
+CI (IT component),Configuration Item - any element that is manageble and from wich the given service depends,9,2025-08-04T10:56:45.169936300
+performance testing,checking how well service performs under a larger load,9,2025-08-04T10:57:24.223758100
+IMDG,In memory data grid - distributed computation and storage where data is located in RAM,9,2025-08-04T10:58:02.939755200
