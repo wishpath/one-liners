@@ -150,8 +150,8 @@ public class Actions {
   public Entry<String, String> evaluateUserExplanationWithAI(Entry<String, String> concept, String userInputDefinitionAttempt) throws IOException {
     //AI evaluation
     String questionB =
-        "Is this a good key and definition: " + concept.getKey() + " = " + userInputDefinitionAttempt + ". " +
-            "\n 1 - Evaluate the answer by asking: 'Does this capture the essence?' (aim to be positive)." +
+        "Is this a good key and definition: key: \"" + concept.getKey() + "\", and definition: \"" + userInputDefinitionAttempt + "\". " +
+            "\n Step 1 - Evaluate the answer by asking: 'Does this capture the essence?' (aim to be positive)." +
             "\n If some details are missing but it captures the essence, rate 10/10." +
             "\n If the definition matches this one, rate 10/10: " + concept.getValue() +
             "\n If the essence is ALMOST there, rate 9/10." +
@@ -159,9 +159,13 @@ public class Actions {
             "\n Think of an answer in up to 10 words - if you can't come up with a better one, rate 10/10." +
             "\n If the answer is completely off, rate 0/10." +
             "\n If the answer is somewhat acceptable, rate 7/10." +
+
+            //acronyms
             "\n If the key is an acronym, definitions should include the exact matching word for each letter in the definition (e.g., 'Intelligence Quotient' for IQ); otherwise, even a generally correct answer (like 'a measure of smartness') is not acceptable and should be rated 6/10 at most." +
+            "\n If the key is an acronym, and the definition does not include the exact matching word for each letter, the rating must be 6/10 or lower, regardless of partial correctness or acceptability.\n" +
             "\n If the key is an acronym, each core expanded word must be spelled exactly (−1 point per misspelling) ; other spelling errors are ignored.\n" +
             "\n If the key is an acronym, each core expanded word — even if misspelled — must clearly match the key’s intended word; wrong words aren’t accepted (e.g., for “SSL”: “securing” OK (only gramatical form is different), “sekure” −1 point (misspell), “service” rejected (totally wrong word)).\n" +
+
             "\n Step 2 - If the evaluation is less than 7/10, provide the correct answer (if 7/10 to 10/10, skip this step)." +
             "\n Your entire answer should be up to 300 characters.";
     String answer = ai.getAnswer(questionB) + "\n";

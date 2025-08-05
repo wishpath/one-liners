@@ -577,3 +577,33 @@ JSON,Javascirpt Object Notation - a common file format for data and metadata,7,2
 CI (IT component),Configuration Item - any element that is manageble and from wich the given service depends,9,2025-08-04T10:56:45.169936300
 performance testing,checking how well service performs under a larger load,9,2025-08-04T10:57:24.223758100
 IMDG,In memory data grid - distributed computation and storage where data is located in RAM,9,2025-08-04T10:58:02.939755200
+SSH,Security Shell - a pair of keys for authentication - public one and private one,0,2025-08-05T22:50:07.226790900
+SSL,Secure Sockets Layer - takes care of security in the browser – server connection,8,2025-08-05T22:51:34.575490
+HSM (device),Hardware Security Module - a specialised computer,9,2025-08-05T22:52:20.591980900
+Liferay,content management system (CMS) - solution coverting brackend and frontend,8,2025-08-05T22:53:55.831353100
+Hibernate,Library that takes care of Object Relational Mapping (ORM); connection to database; queries and transactions,9,2025-08-05T22:55:11.437940600
+Kerberos principal,it is information used to connect to the server which includes username and server name in this way username@server,9,2025-08-05T22:56:28.168772800
+en dash ("–") function,formulates a connection or a range,9,2025-08-05T22:57:34.509012300
+DevSecOps,Development Security Operations - practice and philosophy of automated and secure integration and delivery,6,2025-08-05T22:58:41.300158700
+DevSecOps,Development; Security; Operations; integrating security into every phase of software development and delivery.,10,2025-08-05T23:00:49.608041300
+data custodian,a team (or person) who takes care of data,9,2025-08-05T23:07:32.378915900
+em dash ("—") function,spearates unexpected thoughs and is typed by alt + 0151,9,2025-08-05T23:08:09.920542200
+Bean factory/ Application context,Takes care of Inversion of Control (IoC) - manages objects; beans and their injection,10,2025-08-05T23:09:27.678705300
+PVC (containerisation),Persistant Volume Claim - a persons request to get some memory that is independent of nodes and app instances,5,2025-08-05T23:11:06.872257100
+security testing,testing how safe is the application,9,2025-08-05T23:11:55.360061
+component scanning,Reading classes and methods that has annotations that look like @annotation,9,2025-08-05T23:12:40.956752300
+Data governance,how a company organises takes care of customer data.,8,2025-08-05T23:13:38.557126500
+Swagger,A tool for listing endpoints,8,2025-08-05T23:13:51.608328100
+Hungarian pollution,overusing suffices in variable names,7,2025-08-05T23:14:11.356466900
+AD,Access Direct - user access rights,7,2025-08-05T23:14:54.889451400
+regression testing,UI automated tests - check if functionalities work as expected,8,2025-08-05T23:22:45.442789100
+detrimental,criticaly bad,7,2025-08-05T23:23:17.272638700
+pipeline (IT),automated que of actions for the specific task,8,2025-08-05T23:24:20.809364200
+hash use cases,security; authentication; performance enhancement; integrity checks; identity,9,2025-08-05T23:25:34.105399900
+framework,a set of abstractions over existing code for beter efficiency and reduction of boilerplate code,9,2025-08-05T23:26:41.432634700
+Elasticsearch,observability tool for customised searching for log data,8,2025-08-05T23:27:25.288279900
+streamline,to increase efficiency of a process or multitude of them,9,2025-08-05T23:28:16.302079400
+pod,instance of an application with runtime; settings; configurations and service itself,8,2025-08-05T23:28:59.199048
+YubiKey,USB device for authentication,9,2025-08-05T23:29:27.326666300
+Genesys Cloud,cloud based call-center and support platform,10,2025-08-05T23:30:09.223579800
+URL,Universal Resource Locator,0,2025-08-05T23:39:09.912807300
