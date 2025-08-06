@@ -607,3 +607,5 @@ pod,instance of an application with runtime; settings; configurations and servic
 YubiKey,USB device for authentication,9,2025-08-05T23:29:27.326666300
 Genesys Cloud,cloud based call-center and support platform,10,2025-08-05T23:30:09.223579800
 URL,Universal Resource Locator,0,2025-08-05T23:39:09.912807300
+SSH,secure shell - a pair of authentication keys - public and private,6,2025-08-06T23:43:38.913688
+SSH,Secure Shell - a pair of keys for authentication - public and private,6,2025-08-06T23:55:15.926029200

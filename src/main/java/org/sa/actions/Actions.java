@@ -161,7 +161,7 @@ public class Actions {
             "\n If the answer is somewhat acceptable, rate 7/10." +
 
             //acronyms
-            "\n If the key is an acronym, definitions should include the exact matching word for each letter in the definition (e.g., 'Intelligence Quotient' for IQ); otherwise, even a generally correct answer (like 'a measure of smartness') is not acceptable and should be rated 6/10 at most." +
+            "\n If the key is an acronym, definitions should include the exact matching word for each letter in the definition (e.g., 'Intelligence Quotient' for IQ); case does not matter." +
             "\n If the key is an acronym, and the definition does not include the exact matching word for each letter, the rating must be 6/10 or lower, regardless of partial correctness or acceptability.\n" +
             "\n If the key is an acronym, each core expanded word must be spelled exactly (−1 point per misspelling) ; other spelling errors are ignored.\n" +
             "\n If the key is an acronym, each core expanded word — even if misspelled — must clearly match the key’s intended word; wrong words aren’t accepted (e.g., for “SSL”: “securing” OK (only gramatical form is different), “sekure” −1 point (misspell), “service” rejected (totally wrong word)).\n" +
