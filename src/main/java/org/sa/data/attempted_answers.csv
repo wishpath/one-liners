@@ -609,3 +609,29 @@ Genesys Cloud,cloud based call-center and support platform,10,2025-08-05T23:30:0
 URL,Universal Resource Locator,0,2025-08-05T23:39:09.912807300
 SSH,secure shell - a pair of authentication keys - public and private,6,2025-08-06T23:43:38.913688
 SSH,Secure Shell - a pair of keys for authentication - public and private,6,2025-08-06T23:55:15.926029200
+Helm chart,definitions from which application instances can be produces,0,2025-08-07T00:02:59.210910
+JWT,JSON Web Token - authentication token,6,2025-08-07T00:03:59.698290400
+SSH,Secure Shell - a pair of authentication keys - private and public,6,2025-08-07T00:10:09.682013100
+SSH,Secure Shell - a pair of criptographic keys - private and public,8,2025-08-07T00:10:59.030173700
+SSH,Secure Shell - a pair of cryptographic keys - private and public. It serves a way to authenticate safely over an network that is not safe.,0,2025-08-07T00:15:50.281549700
+SSH,Secure Shell - encrypted communication over an insecure network,8,2025-08-07T00:18:34.476959500
+SSH,Secure Shell - encrypted communication over an insecure network for authentication and data transfer. Uses a pair of keys - private and public,10,2025-08-07T00:20:53.323036400
+PVC (containerisation),Persistent Volume Claim - users request to get storage that is independent to a pod,9,2025-08-07T00:24:47.137820700
+SSL,Secure Sockets Layer - ensurese secure browser - server communication,10,2025-08-07T00:25:44.292909800
+em dash ("—") function,separates a though that is unexpected. is typed by alt + 0151,9,2025-08-07T00:26:51.595546500
+URL,Uniform Resource Locator,10,2025-08-07T00:27:39.271104
+en dash ("–") function,formulates a connection or range. typed by alt + 0150,10,2025-08-07T00:28:52.926039400
+ICT system,Information and Comunication Technology system,9,2025-08-07T00:29:38.396404600
+cohesion (DDD),single unit of code contains only connected functionalities,9,2025-08-07T00:30:22.873436100
+credential examples,email; username; name; address,7,2025-08-07T00:30:43.629945400
+test integration,how well added functionalities work in the context,8,2025-08-07T00:31:45.463053200
+defensive programming,doing extra checks and solving all the cases,8,2025-08-07T00:32:42.483139200
+arbitrary,it means a choise is the matter; not some calculation,8,2025-08-07T00:33:10.471578500
+JWT,JSON web token - authentication and authorisation message,9,2025-08-08T23:41:49.059545
+Helm chart,a package with application configurations settings and images,9,2025-08-08T23:42:25.215859900
+SSH,Security Shell - takes care of security for sending information over unsecure network. Provided a pair of keys - public and private,8,2025-08-08T23:44:28.441039
+em dash ("—") function,separates unexpected thought. Is typed by alt + 0151,8,2025-08-08T23:45:55.887852700
+en dash ("–") function,formulates a connection or range. is typed by alt + 0150,10,2025-08-08T23:46:47.288500
+chaos engineering,introducing elements to an applications that are known to break the app,7,2025-08-08T23:48:30.626053800
+PR,can mean public relations or pull request,10,2025-08-08T23:55:17.832958700
+GDPR,general data protection requirement,0,2025-08-08T23:56:11.130208100
