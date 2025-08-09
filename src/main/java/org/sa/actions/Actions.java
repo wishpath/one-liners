@@ -151,7 +151,7 @@ public class Actions {
     //AI evaluation
     String questionB =
         "Is this a good key and definition: key: \"" + concept.getKey() + "\", and definition: \"" + userInputDefinitionAttempt + "\". " +
-            "\n A.Step 1 - Evaluate the answer by asking: 'Does this capture the essence?' (aim to be positive)." +
+            "\n A. Step 1 - Evaluate the answer by asking: 'Does this capture the essence?' (aim to be positive)." +
             "\n B. If some details are missing but it captures the essence, rate 10/10." +
             "\n C. If the definition matches this one, rate 10/10: " + concept.getValue() + ", but other definitions might get a perfect rating as well." +
             "\n D. If the essence is ALMOST there, rate 9/10." +
@@ -167,12 +167,6 @@ public class Actions {
 
             "\n Step 2 - If the evaluation is less than 7/10, provide the correct answer (if 7/10 to 10/10, skip this step)." +
             "\n Your entire answer should be up to 300 characters.";
-
-
-    //questionB += "Then explanation in 200 words which rules were used to give current evaluation and other reasoning";
-//    SimpleColorPrint.blue("A question for the AI:");
-//    System.out.println(Colors.MAGENTA + questionB + Colors.RESET + "\n");
-
 
     String answer = ai.getAnswer(questionB) + "\n";
     String evaluationString = extractEvaluationString(answer);

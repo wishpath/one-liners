@@ -7,10 +7,8 @@ import org.sa.console.SimpleColorPrint;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 public class Info {
 
@@ -108,7 +106,6 @@ public class Info {
   }
 
   public void printLowestScoreConcepts() {
-    Set<String> minusScoreKeys = new HashSet<>();
     int weakConceptCounter = 0;
     SimpleColorPrint.blue("Printing concepts with lowest score:\n");
     for (Map.Entry<Integer, List<String>> e : concepts.scoreToKeys.entrySet()) {
@@ -122,27 +119,54 @@ public class Info {
         SimpleColorPrint.blueInLine(Props.TAB.repeat(2) + key + " ");
         SimpleColorPrint.colorInLine(concepts.keyDefinition.get(key) + " ", Colors.LIGHT_GRAY);
         LocalDateTime notTodayTime = concepts.notTodayKeys.get(key);
-        System.out.println(notTodayTime == null ? "" : notTodayTime);
+        String time = notTodayTime == null ? "" : notTodayTime.format(DateTimeFormatter.ofPattern("HH:mm"));
+        System.out.println(time);
       }
       System.out.println();
     }
   }
 
-  public void printKeysWithMinusScoreAndDates() {
-    SimpleColorPrint.blue("Printing keys with minus score:\n");
-    for (Map.Entry<String, LocalDateTime> e : concepts.notTodayKeys.entrySet()) {
-      Integer score = concepts.keyScore.get(e.getKey()); // null means score is 0;
-      if (score == null || score >= 0) continue;
-      String time = e.getValue().plusDays(1).format(DateTimeFormatter.ofPattern("HH:mm"));
-      SimpleColorPrint.normalInLine(Props.TAB + time);
-      SimpleColorPrint.red(" " + e.getKey());
-    }
+  public void printNotTodayKeysByTimeAvailableAndLowestScore2() {
+    int passableScore = getPassableScore();
+    SimpleColorPrint.blue("Printing 'not today' keys with lower scores:\n");
+    concepts.notTodayKeys.entrySet().stream()
+        .filter(e -> concepts.keyScore.getOrDefault(e.getKey(), 0) <= passableScore)
+        .forEach(e -> {
+          int score = concepts.keyScore.getOrDefault(e.getKey(), 0);
+          String time = e.getValue().plusDays(1).format(DateTimeFormatter.ofPattern("HH:mm"));
+          SimpleColorPrint.normalInLine(Props.TAB + time);
+          SimpleColorPrint.redInLine(" " + e.getKey());
+          SimpleColorPrint.color(" " + score, Colors.LIGHT_GRAY);
+        });
+
     System.out.println();
+  }
+
+  private int getPassableScore() {
+    final int MINIMUM_CONCEPTS_TO_PRINT = 8;
+    int passableScore = Integer.MIN_VALUE; // score pointer in order to print at least 8 concepts
+    int willBePrinted = 0;
+
+    for (Map.Entry<Integer, List<String>> e : concepts.scoreToKeys.entrySet()) {
+      long countAtScore = e.getValue().stream()
+          .filter(concepts.notTodayKeys::containsKey)
+          .count();
+      willBePrinted += countAtScore;
+
+      if (willBePrinted >= MINIMUM_CONCEPTS_TO_PRINT) {
+        System.out.println("will be printed: " + willBePrinted);
+        passableScore = e.getKey();
+        break;
+      }
+    }
+    if (passableScore == Integer.MIN_VALUE) passableScore = Integer.MAX_VALUE; // if fewer than minCount exist, print all
+    return passableScore;
   }
 
   public void printNotTodayConcepts() {
     concepts.notTodayKeys.forEach((key, time) -> {
-      SimpleColorPrint.redInLine(Props.TAB + time.toString().split("\\.")[0]);
+      String timeString = time.plusDays(1).format(DateTimeFormatter.ofPattern("HH:mm"));
+      SimpleColorPrint.redInLine(Props.TAB + timeString);
       SimpleColorPrint.blueInLine(" " + key + " ");
       SimpleColorPrint.color(concepts.keyDefinition.get(key), Colors.LIGHT_GRAY);
     });

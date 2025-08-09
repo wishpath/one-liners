@@ -655,3 +655,16 @@ Java bean,Java object,8,2025-08-09T15:25:52.837337900
 PVC (containerisation),Persistent Volume Claim - user request for storage that is independent from pods or applications,10,2025-08-09T15:26:48.443032100
 CTO,Chief Technical Officer - the big computer guy,8,2025-08-09T15:27:18.347280300
 .war file,archive file for running and distributing apps,9,2025-08-09T15:27:44.099739600
+Helm,manages configurations and setting for installing application instances in Kubernetes,9,2025-08-10T00:08:48.540923200
+JWT,JSON Web Token - authorisation and authentication message in a specific format,10,2025-08-10T00:09:47.821342700
+en dash ("–") function,formulates ranges and connections; is typed by alt + 0150,10,2025-08-10T00:10:19.665746600
+Helm chart,in order to install application to pod; this is a collection of setting and configuration,9,2025-08-10T00:11:10.760137700
+SSH,secure shell - manages sending information securely over an insecure network. Provides two keys - public and private,10,2025-08-10T00:12:19.977375100
+em dash ("—") function,separates unexpected thoughts; typed by alt + 0151,9,2025-08-10T00:38:30.679553
+GDPR,General Data Protection Regulation,10,2025-08-10T00:39:38.573606400
+asynchronous,means that operations might happen concurrently,9,2025-08-10T00:42:48.414663300
+to prompt,to ask for answer,8,2025-08-10T00:43:03.339726800
+pivot,change direction,9,2025-08-10T00:43:13.097761
+test pilot (IT),trying intended new functionality in production within a limited scale,10,2025-08-10T00:43:53.287993900
+roll out,to start new release in the production,10,2025-08-10T00:45:00.001221300
+bounded context (example of order processing),no today,0,2025-08-10T01:04:12.746800400

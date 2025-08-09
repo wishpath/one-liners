@@ -42,7 +42,7 @@ public class Menu {
     MenuLine.string("all keys", "lists all the keys in this app") +
     MenuLine.string("prev, previous", "comes back to previous concept") +
     MenuLine.string("idk", "marks 'I don't know' to current concept question") +
-    MenuLine.string("weak", "prints newest failed entries") +
+    MenuLine.string("weak", "prints concepts with lowest score") +
     MenuLine.string("weak keys", "prints newest failed keys (no definitions)") +
     MenuLine.string("not today", "prints concepts that are not to be learned today") +
     MenuLine.string("score", "prints current concept score") +
@@ -96,10 +96,10 @@ public class Menu {
       else if ("weak".equals(input))
         info.printLowestScoreConcepts();
 
-      else if ("weak keys".equals(input) || "weak time".equals(input))
-        info.printKeysWithMinusScoreAndDates();
+      else if ("weak keys".equals(input))
+        info.printNotTodayKeysByTimeAvailableAndLowestScore2();
 
-      else if ("not today".equals(input) || "notoday".equals(input))
+      else if ("not today".equals(input) || "no today".equals(input))
         info.printNotTodayConcepts();
 
       else if ("score".equals(input))
