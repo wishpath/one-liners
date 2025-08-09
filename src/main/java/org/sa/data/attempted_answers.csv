@@ -635,3 +635,23 @@ en dash ("–") function,formulates a connection or range. is typed by alt + 015
 chaos engineering,introducing elements to an applications that are known to break the app,7,2025-08-08T23:48:30.626053800
 PR,can mean public relations or pull request,10,2025-08-08T23:55:17.832958700
 GDPR,general data protection requirement,0,2025-08-08T23:56:11.130208100
+error budget,how many errors are considered toleratable,8,2025-08-09T15:08:59.073630
+servlet/controller/MVC,responsible for exposing endpoints; dealing user requests; directing computation and data retrieval,10,2025-08-09T15:10:07.623890600
+stub,code that can be inserted for prototyping or testing purposes,10,2025-08-09T15:11:07.650765700
+CTE (SQL),Common Table Expression,10,2025-08-09T15:11:37.597373
+token,a message containing authentication and authorisation information,9,2025-08-09T15:12:07.376084800
+garbage collection,in application program this means removing unused objects from the memory,9,2025-08-09T15:13:15.898413400
+retrieve,to get something from somewhere,9,2025-08-09T15:13:38.697282100
+DRT,Disaster Recovery Testing — checking how well can service be started up after unexpected failure,10,2025-08-09T15:15:07.747238900
+aspect,In aspect oriented programming this is some functionality; that can be extracted from many classes; implemented in the aspect class; including the triggers,10,2025-08-09T15:17:37.870755100
+base Java Docker image,runtime and configurations for the application instance to run,9,2025-08-09T15:18:39.900949200
+etcd,et cetera direct - common configurationas for the pods in Kubernetes,8,2025-08-09T15:19:32.223472700
+heap,data structure that keeps insertion order and has an efficient O(1) access to first and last item. Is implemented as LinkedList or ArrayDeque,0,2025-08-09T15:21:16.587464
+Google Cloud,Google's platform for remote computing and storage,10,2025-08-09T15:22:20.414275700
+ECB,Europien Central Bank,9,2025-08-09T15:22:32.564289500
+tamper,to make less severe,0,2025-08-09T15:22:47.850238400
+SSO,Single Sign On — a way to authenticate,8,2025-08-09T15:25:13.961563500
+Java bean,Java object,8,2025-08-09T15:25:52.837337900
+PVC (containerisation),Persistent Volume Claim - user request for storage that is independent from pods or applications,10,2025-08-09T15:26:48.443032100
+CTO,Chief Technical Officer - the big computer guy,8,2025-08-09T15:27:18.347280300
+.war file,archive file for running and distributing apps,9,2025-08-09T15:27:44.099739600

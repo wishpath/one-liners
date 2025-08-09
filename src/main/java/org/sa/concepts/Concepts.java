@@ -85,13 +85,13 @@ public class Concepts {
 
   private void loadNotTodayConcepts() throws IOException {
 
-    SimpleColorPrint.blue("NOT TODAY:");
+    SimpleColorPrint.blue("LOADING 'NOT TODAY' CONCEPTS:");
     try (Stream<String> lines = Files.lines(NOT_TODAY_FILE)) {
       LocalDateTime oneDayAgo = LocalDateTime.now().minusDays(1);
       lines.map(line -> line.split(","))
-          .peek(parts -> {
-            SimpleColorPrint.normal(Props.TAB + Arrays.toString(parts));
-            if (parts.length > 2) throw new RuntimeException("LINE CONTAINS TOO MANY COMMAS");
+          .peek(linePartsArr -> {
+            SimpleColorPrint.normal(Props.TAB + Arrays.toString(linePartsArr));
+            if (linePartsArr.length > 2) throw new RuntimeException("LINE CONTAINS TOO MANY COMMAS");
           })
           .map(parts -> Map.entry(parts[0], LocalDateTime.parse(parts[1])))
           .filter(e -> e.getValue().isAfter(oneDayAgo))
@@ -113,7 +113,7 @@ public class Concepts {
   private void autosaveNotTodayMapToFile() throws IOException {
     try (BufferedWriter writer = Files.newBufferedWriter(NOT_TODAY_FILE)) {
       for (Map.Entry<String, LocalDateTime> entry : notTodayKeys.entrySet())
-        writer.write(entry.getKey() + "," + entry.getValue() + System.lineSeparator());
+        writer.write(entry.getKey() + "," + entry.getValue() + System.lineSeparator()); //overwrites
     }
   }
 

@@ -124,7 +124,6 @@ public class Info {
     SimpleColorPrint.blue("Printing not today concepts (of non-negative score):\n");
     for (Map.Entry<String, LocalDateTime> e : concepts.notTodayKeys.entrySet()) {
       if (minusScoreKeys.contains(e.getKey())) continue;
-
         SimpleColorPrint.redInLine(Props.TAB + e.getKey());
         SimpleColorPrint.blueInLine(" - " + concepts.keyDefinition.get(e.getKey()));
         Integer score = concepts.keyScore.get(e.getKey());
@@ -144,6 +143,15 @@ public class Info {
       SimpleColorPrint.normalInLine(Props.TAB + time);
       SimpleColorPrint.red(" " + e.getKey());
     }
+    System.out.println();
+  }
+
+  public void printNotTodayConcepts() {
+    concepts.notTodayKeys.forEach((key, time) -> {
+      SimpleColorPrint.redInLine(time.toString().split("\\.")[0]);
+      SimpleColorPrint.blueInLine(" " + key + " ");
+      SimpleColorPrint.color(concepts.keyDefinition.get(key), Colors.LIGHT_GRAY);
+    });
     System.out.println();
   }
 }

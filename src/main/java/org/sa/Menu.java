@@ -46,7 +46,8 @@ public class Menu {
     MenuLine.string("weak keys", "prints newest failed keys (no definitions)") +
     MenuLine.string("score", "prints current concept score") +
     MenuLine.string("scores", "prints all non-zero scores") +
-    MenuLine.string("menu", "prints command menu") + "\n";
+    MenuLine.string("menu", "prints command menu") +
+    MenuLine.string("not today", "prints concepts that are not to be learned today") + "\n";
 
   public Menu() throws IOException {
     System.out.println(MENU);
@@ -97,6 +98,9 @@ public class Menu {
 
       else if ("weak keys".equals(input) || "weak time".equals(input))
         info.printKeysWithMinusScoreAndDates();
+
+      else if ("not today".equals(input) || "notoday".equals(input))
+        info.printNotTodayConcepts();
 
       else if ("score".equals(input))
         info.printCurrentKeyScore(concept);
