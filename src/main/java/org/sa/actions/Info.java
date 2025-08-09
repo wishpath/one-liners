@@ -107,31 +107,25 @@ public class Info {
     SimpleColorPrint.normal("\n\n");
   }
 
-  public void printEntriesWithMinusScore() {
+  public void printLowestScoreConcepts() {
     Set<String> minusScoreKeys = new HashSet<>();
-    SimpleColorPrint.blue("Printing concepts with minus score:\n");
+    int weakConceptCounter = 0;
+    SimpleColorPrint.blue("Printing concepts with lowest score:\n");
     for (Map.Entry<Integer, List<String>> e : concepts.scoreToKeys.entrySet()) {
-      if (e.getKey() >= 0) break;
-      for (String key : e.getValue()) {
-        minusScoreKeys.add(key);
-        SimpleColorPrint.redInLine(Props.TAB + key);
-        SimpleColorPrint.blueInLine(" - " + concepts.keyDefinition.get(key));
-        SimpleColorPrint.normal(" - score: " + concepts.keyScore.get(key));
+      if (weakConceptCounter > 7) break;
+      int score = e.getKey();
+      List<String> keys= e.getValue();
+      SimpleColorPrint.red(Props.TAB + score + ":");
+      for (String key : keys) {
+        if (weakConceptCounter > 11) break;
+        weakConceptCounter++;
+        SimpleColorPrint.blueInLine(Props.TAB.repeat(2) + key + " ");
+        SimpleColorPrint.colorInLine(concepts.keyDefinition.get(key) + " ", Colors.LIGHT_GRAY);
+        LocalDateTime notTodayTime = concepts.notTodayKeys.get(key);
+        System.out.println(notTodayTime == null ? "" : notTodayTime);
       }
+      System.out.println();
     }
-
-
-    SimpleColorPrint.blue("Printing not today concepts (of non-negative score):\n");
-    for (Map.Entry<String, LocalDateTime> e : concepts.notTodayKeys.entrySet()) {
-      if (minusScoreKeys.contains(e.getKey())) continue;
-        SimpleColorPrint.redInLine(Props.TAB + e.getKey());
-        SimpleColorPrint.blueInLine(" - " + concepts.keyDefinition.get(e.getKey()));
-        Integer score = concepts.keyScore.get(e.getKey());
-        if (score == null) score = 0;
-        SimpleColorPrint.normal(" - score: " + score);
-
-    }
-    System.out.println();
   }
 
   public void printKeysWithMinusScoreAndDates() {
@@ -148,7 +142,7 @@ public class Info {
 
   public void printNotTodayConcepts() {
     concepts.notTodayKeys.forEach((key, time) -> {
-      SimpleColorPrint.redInLine(time.toString().split("\\.")[0]);
+      SimpleColorPrint.redInLine(Props.TAB + time.toString().split("\\.")[0]);
       SimpleColorPrint.blueInLine(" " + key + " ");
       SimpleColorPrint.color(concepts.keyDefinition.get(key), Colors.LIGHT_GRAY);
     });

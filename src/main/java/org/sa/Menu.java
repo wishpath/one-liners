@@ -42,12 +42,12 @@ public class Menu {
     MenuLine.string("all keys", "lists all the keys in this app") +
     MenuLine.string("prev, previous", "comes back to previous concept") +
     MenuLine.string("idk", "marks 'I don't know' to current concept question") +
-    MenuLine.string("weak, weakness, weaknesses", "prints newest failed entries") +
+    MenuLine.string("weak", "prints newest failed entries") +
     MenuLine.string("weak keys", "prints newest failed keys (no definitions)") +
+    MenuLine.string("not today", "prints concepts that are not to be learned today") +
     MenuLine.string("score", "prints current concept score") +
     MenuLine.string("scores", "prints all non-zero scores") +
-    MenuLine.string("menu", "prints command menu") +
-    MenuLine.string("not today", "prints concepts that are not to be learned today") + "\n";
+    MenuLine.string("menu", "prints command menu") + "\n";
 
   public Menu() throws IOException {
     System.out.println(MENU);
@@ -93,8 +93,8 @@ public class Menu {
       else if ("idk".equals(input))
         setConcept(act.answerIDontKnow(concept));
 
-      else if ("weak".equals(input) || "weakness".equals(input) || "weaknesses".equals(input))
-        info.printEntriesWithMinusScore();
+      else if ("weak".equals(input))
+        info.printLowestScoreConcepts();
 
       else if ("weak keys".equals(input) || "weak time".equals(input))
         info.printKeysWithMinusScoreAndDates();
