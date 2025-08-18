@@ -699,3 +699,11 @@ means of defensive programming,checks for unexpected; solving coner cases,9,2025
 HSM (device),Hardware Secure Module - computer specialised for storing authentication data,8,2025-08-17T23:55:18.685759500
 DRY,Don't Repeat Yourself - conding principal which states that there should be no code duplication,9,2025-08-17T23:56:04.604125600
 ubiquitous language (DDD),belonging to the business area where the meanings are standard,8,2025-08-17T23:57:11.257959200
+DC components,Hardware; software; facilities; network components and people,8,2025-08-18T22:08:18.146498200
+DevOps,Development and Operations - philosophy and practice of using automated CI/CD pipelines,9,2025-08-18T22:09:40.021669900
+Liferay,takes care of logs,0,2025-08-18T22:10:07.515394700
+firewall opening,rules for accessing items in the network,8,2025-08-18T22:10:55.110508500
+allocate a list,give a specific place in the memora for all items in the list,8,2025-08-18T22:11:37.681113800
+tamper,to make worse; to alter in the negative way,8,2025-08-18T22:12:07.759305600
+semantic registration message,a text that describes registration; but also have parts of this text understandably labeled,7,2025-08-18T22:13:29.371293200
+DNS,Domain Network System - the way how web page names are connected to their ip,7,2025-08-18T22:14:17.822802300
