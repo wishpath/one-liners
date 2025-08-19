@@ -707,3 +707,11 @@ allocate a list,give a specific place in the memora for all items in the list,8,
 tamper,to make worse; to alter in the negative way,8,2025-08-18T22:12:07.759305600
 semantic registration message,a text that describes registration; but also have parts of this text understandably labeled,7,2025-08-18T22:13:29.371293200
 DNS,Domain Network System - the way how web page names are connected to their ip,7,2025-08-18T22:14:17.822802300
+Ingress Controller,regulates incomming traffic in Kubernetes,9,2025-08-19T22:44:06.293914900
+em dash ("—") function,separates unexpected or important thoughts in the sentence. Example: "And just like that — he entered the room". Typed by alt + 0151.,10,2025-08-19T22:45:48.143491700
+Helm,packet manager; used for running app instances in Kubernetes,9,2025-08-19T22:46:37.945900100
+en dash ("–") function,formulates ranges or connections. Example: Vilnius–Kaunas. Is typed by alt + 0150,10,2025-08-19T22:47:43.832770700
+en dash ("–") function,formulates connection or range,10,2025-08-19T23:11:44.475135500
+en dash ("–") function,formulates connections or ranges.,10,2025-08-19T23:19:27.251700400
+en dash ("–") function,formulates connections or ranges,10,2025-08-19T23:20:39.875255500
+em dash ("—") function,separates unexpected or important thought,9,2025-08-19T23:22:33.365410900

@@ -1,4 +1,5 @@
 problems:
+  - write a test to verify that loadScores() correctly loads keys containing UTF-8 symbols like "—" (em dash) and "–" (en dash); these used to get corrupted by Properties.load(InputStream) due to its default ISO-8859-1 decoding
   - 'Current scores:' prints without score 0
   - make command 'score 1' - print all the concepts with score 1
   - additional instruction specific to a single concept

@@ -6,6 +6,8 @@ import org.sa.other.ValueAscendingMap;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
+import java.io.Reader;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -44,6 +46,7 @@ public class Concepts {
           String[] arr = line.split("=", 2);
           if (arr[0].contains(";")) throw new RuntimeException("Key '" + arr[0] + "' should not contain semicolons (;)");
           if (arr[0].contains(",")) throw new RuntimeException("Key '" + arr[0] + "' should not contain commas (,)");
+          if (arr[0].contains("dash")) System.out.println("KEY CONTAINS DASH: " + arr[0]);
           String repeated = keyDefinition.put(arr[0], arr[1]);
           if (repeated != null) {
             SimpleColorPrint.redInLine("The repeated key: ");
@@ -58,10 +61,15 @@ public class Concepts {
 
   private void loadScores() throws IOException {
     Properties scoreProps = new Properties();
-    scoreProps.load(Files.newInputStream(SCORE_PATH));
+    //scoreProps.load(Files.newInputStream(SCORE_PATH));
+    try (Reader reader = Files.newBufferedReader(SCORE_PATH, StandardCharsets.UTF_8)) {
+      scoreProps.load(reader);
+    }
     for (Map.Entry<Object, Object> e : scoreProps.entrySet()) {
       if (e.getValue().equals("0")) continue; // 0 is default...
       if (!keyDefinition.containsKey(e.getKey())) continue; // has score but key got deleted/ altered
+      String key = e.getKey().toString();
+      if (key.contains("dash")) System.out.println("SCORE KEY CONTAINS DASH: " + key);
       keyScore.put(e.getKey().toString(), Integer.parseInt((String)e.getValue()));
     }
   }
