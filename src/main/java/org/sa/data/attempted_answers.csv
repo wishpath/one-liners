@@ -715,3 +715,6 @@ en dash ("–") function,formulates connection or range,10,2025-08-19T23:11:44.4
 en dash ("–") function,formulates connections or ranges.,10,2025-08-19T23:19:27.251700400
 en dash ("–") function,formulates connections or ranges,10,2025-08-19T23:20:39.875255500
 em dash ("—") function,separates unexpected or important thought,9,2025-08-19T23:22:33.365410900
+exponent (math),when raising a number to some power; this is the number showing to what power the number is being raised,10,2025-08-20T15:03:40.188225800
+volatile (Java),in java this is a way to mark variable so it would be always updated correctly in multiple threads,9,2025-08-20T15:05:12.240936600
+Kerberos,a container orchestration platform. Used to run multiple instances of an application.,0,2025-08-20T15:06:09.860543900

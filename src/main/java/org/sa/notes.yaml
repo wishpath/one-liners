@@ -1,10 +1,9 @@
 problems:
-  - write a test to verify that loadScores() correctly loads keys containing UTF-8 symbols like "—" (em dash) and "–" (en dash); these used to get corrupted by Properties.load(InputStream) due to its default ISO-8859-1 decoding
-  - 'Current scores:' prints without score 0
   - make command 'score 1' - print all the concepts with score 1
   - additional instruction specific to a single concept
 
 ideas:
+  - should score 0 be explicit?
   - as every concept has been tried:
       - check how many of phrases has never received a score of 8, then 9, then 10
       - if for some concepts it is impossible to receive 10, add additional instructions for the AI. provide a couple of examples with answers that would match the evaluation of 10/10

@@ -46,7 +46,6 @@ public class Concepts {
           String[] arr = line.split("=", 2);
           if (arr[0].contains(";")) throw new RuntimeException("Key '" + arr[0] + "' should not contain semicolons (;)");
           if (arr[0].contains(",")) throw new RuntimeException("Key '" + arr[0] + "' should not contain commas (,)");
-          if (arr[0].contains("dash")) System.out.println("KEY CONTAINS DASH: " + arr[0]);
           String repeated = keyDefinition.put(arr[0], arr[1]);
           if (repeated != null) {
             SimpleColorPrint.redInLine("The repeated key: ");
@@ -69,7 +68,6 @@ public class Concepts {
       if (e.getValue().equals("0")) continue; // 0 is default...
       if (!keyDefinition.containsKey(e.getKey())) continue; // has score but key got deleted/ altered
       String key = e.getKey().toString();
-      if (key.contains("dash")) System.out.println("SCORE KEY CONTAINS DASH: " + key);
       keyScore.put(e.getKey().toString(), Integer.parseInt((String)e.getValue()));
     }
   }
@@ -83,7 +81,14 @@ public class Concepts {
 
   private void mapAscendingScoresToConcepts() {
     SimpleColorPrint.red("Current scores:");
-    for(Map.Entry<String, Integer> e : keyScore.entrySet()) {
+    //0 scores
+    for (Map.Entry<String, String> e : keyDefinition.entrySet())
+      if (!keyScore.containsKey(e.getKey())) {
+        SimpleColorPrint.blueInLine(Props.TAB + e.getKey() + ": ");
+        SimpleColorPrint.red("0");
+      }
+    //non 0 scores
+    for (Map.Entry<String, Integer> e : keyScore.entrySet()) {
       SimpleColorPrint.blueInLine(Props.TAB + e.getKey() + ": ");
       SimpleColorPrint.red(String.valueOf(e.getValue()));
       scoreToKeys.computeIfAbsent(e.getValue(), k -> new ArrayList<>()).add(e.getKey());
