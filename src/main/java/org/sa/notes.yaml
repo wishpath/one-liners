@@ -1,9 +1,14 @@
 problems:
-  - make command 'score 1' - print all the concepts with score 1
-  - additional instruction specific to a single concept
-
+  - a separate app checking which phrase never received above  7, 8, 9
+    - 1. read attempted answers, and print them to console correctly
+    - 2. think of a data structure to print all attempts for a single key
+    - 3. separate non existant keys, but print them, so it would be clear that something is excluded
+    - 4. possibility to print all the grades for a single key
+    - 5. data structure to have max grade of each concept. maybe Map<maxGrade, List<keys>>
 ideas:
+  - spaced repetition?
   - should score 0 be explicit?
+  - additional instruction specific to a single concept
   - as every concept has been tried:
       - check how many of phrases has never received a score of 8, then 9, then 10
       - if for some concepts it is impossible to receive 10, add additional instructions for the AI. provide a couple of examples with answers that would match the evaluation of 10/10
@@ -22,6 +27,9 @@ ok, not needed to change:
       - there's only one developer.
       - input files are small and predictable.
       - You’ll iterate quickly, and the app will likely be rewritten or discarded.
+
+maybe no, not needed:
+  - make command 'score 1' - print all the concepts with score 1
 
 how to:
   - add submodule:
