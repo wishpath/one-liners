@@ -32,7 +32,7 @@ public class CheckConceptsAttempts {
     List<AttemptRecord> attempts = readAttempts();
     Map<String, List<AttemptRecord>> key_attempts = app.groupAttemptsByExistingKey(attempts); // filters out keys that are not present in 'keyDefinition'
     //app.printGroupedAttempts(key_attempts);
-    app.printKeyGrades(key_attempts);
+    app.printKeyGrades(key_attempts, 8);
     //app.printAttemptsByAlphabeticalOrderOfKeys(attempts);
   }
 
@@ -156,4 +156,18 @@ public class CheckConceptsAttempts {
       SimpleColorPrint.blue(grades);
     });
   }
+
+  public void printKeyGrades(Map<String, List<AttemptRecord>> keyAttempts, int belowThisGrade) {
+    keyAttempts.forEach((key, records) -> {
+      boolean allBelow = records.stream().allMatch(r -> r.evaluation() < belowThisGrade);
+      if (allBelow) {
+        SimpleColorPrint.redInLine(key + ": ");
+        String grades = records.stream()
+            .map(r -> String.valueOf(r.evaluation()))
+            .collect(Collectors.joining(", "));
+        SimpleColorPrint.blue(grades);
+      }
+    });
+  }
+
 }

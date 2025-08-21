@@ -1,9 +1,5 @@
 problems:
-  - a separate app checking which phrase never received above  7, 8, 9
-    - 2. think of a data structure to print all attempts for a single key
-    - 3. separate non existant keys, but print them, so it would be clear that something is excluded
-    - 4. possibility to print all the grades for a single key
-    - 5. data structure to have max grade of each concept. maybe Map<maxGrade, List<keys>>
+
 ideas:
   - spaced repetition?
   - should score 0 be explicit?
