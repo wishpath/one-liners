@@ -12,7 +12,7 @@ public class WikiExporter {
 
   private static final Path WIKI_SWED_OUTPUT_FILE = Paths.get("src/main/java/org/sa/concepts/wiki_swed.txt");
   private static final Path WIKI_PUBLIC_OUTPUT_FILE = Paths.get("src/main/java/org/sa/concepts/wiki_public.txt");
-  private static final String WIKI_INTRO = "*Goal of this article*\nThis collection of super-short definitions captures the core of each concept in just a few words, creating a broad, foundational framework for quick knowledge acquisition. By reducing concepts to their essence—even if imperfect—this approach fosters the confidence needed to deepen understanding later. This minimalist style lets you absorb a wide set of ideas rapidly, forming a scaffold for continuous growth.\n\n";
+  private static final String WIKI_INTRO = "*Goal of this article*\nThis collection of super-short definitions captures the core of each key in just a few words, creating a broad, foundational framework for quick knowledge acquisition. By reducing concepts to their essence—even if imperfect—this approach fosters the confidence needed to deepen understanding later. This minimalist style lets you absorb a wide set of ideas rapidly, forming a scaffold for continuous growth.\n\n";
   private static final String WIKI_INTRO_SIMPLE = "*Goal of this article*\nThis set of very short definitions gets straight to the point, giving you the basics of each idea in just a few words. It’s a fast way to start learning and build confidence, even if the definitions aren’t perfect. The simple style helps you pick up many ideas quickly and gives you a base to learn more over time.\n\n";
 
   public static void main(String[] args) throws IOException {

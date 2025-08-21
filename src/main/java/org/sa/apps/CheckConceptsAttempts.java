@@ -1,5 +1,6 @@
 package org.sa.apps;
 
+import org.sa.config.Props;
 import org.sa.console.SimpleColorPrint;
 
 import java.io.BufferedReader;
@@ -16,14 +17,14 @@ public class CheckConceptsAttempts {
   private static final Path ATTEMPTED_ANSWERS_FILEPATH = Paths.get("src/main/java/org/sa/data/attempted_answers.csv");
   public final Map<String, String> keyDefinition = loadConceptsCheckRepeated();
 
-  record AttemptRecord(String concept, String definition, int evaluation, LocalDateTime timestamp) {}
+  record AttemptRecord(String key, String definition, int evaluation, LocalDateTime timestamp) {}
 
   public static void main(String[] args) {
     CheckConceptsAttempts app = new CheckConceptsAttempts();
     List<AttemptRecord> attempts = readAttempts();
-    //app.printAttemptsByOrderOfFile(attempts);
-    System.out.println("\n--- Sorted Alphabetically ---\n");
-    app.printAttemptsByAlphabeticalOrderOfKeys(attempts);
+    Map<String, List<AttemptRecord>> key_attempts = app.groupAttemptsByExistingKey(attempts); // filters out keys that are not present in 'keyDefinition'
+    app.printGroupedAttempts(key_attempts);
+    //app.printAttemptsByAlphabeticalOrderOfKeys(attempts);
   }
 
   private static List<AttemptRecord> readAttempts() {
@@ -47,21 +48,17 @@ public class CheckConceptsAttempts {
     return new AttemptRecord(concept, definition, evaluation, timestamp);
   }
 
-  private void printAttemptsByOrderOfFile(List<AttemptRecord> attempts) {
-    attempts.forEach(this::printSingleAttempt);
-  }
-
   public void printAttemptsByAlphabeticalOrderOfKeys(List<AttemptRecord> attempts) {
     attempts.stream()
-        .sorted(Comparator.comparing(AttemptRecord::concept, String.CASE_INSENSITIVE_ORDER))
+        .sorted(Comparator.comparing(AttemptRecord::key, String.CASE_INSENSITIVE_ORDER))
         .forEach(this::printSingleAttempt);
   }
 
   private void printSingleAttempt(AttemptRecord a) {
-    if (!keyDefinition.containsKey(a.concept())) {
-      SimpleColorPrint.red(a.concept() + " | " + a.definition() + " | " + a.evaluation() + " | " + a.timestamp());
+    if (!keyDefinition.containsKey(a.key())) {
+      SimpleColorPrint.red(a.key() + " | " + a.definition() + " | " + a.evaluation() + " | " + a.timestamp());
     } else {
-      SimpleColorPrint.blueInLine(a.concept());
+      SimpleColorPrint.blueInLine(a.key());
       SimpleColorPrint.normalInLine(" | ");
       SimpleColorPrint.yellowInLine(a.definition());
       SimpleColorPrint.normalInLine(" | ");
@@ -69,6 +66,14 @@ public class CheckConceptsAttempts {
       SimpleColorPrint.normalInLine(" | ");
       SimpleColorPrint.normal(a.timestamp().toString());
     }
+  }
+
+  private void printSingleAttemptWithoutKey(AttemptRecord a) {
+    SimpleColorPrint.blueInLine(Props.TAB + String.valueOf(a.evaluation()));
+    SimpleColorPrint.normalInLine(" | ");
+    SimpleColorPrint.yellowInLine(a.definition());
+    SimpleColorPrint.normalInLine(" | ");
+    SimpleColorPrint.normal(a.timestamp().toString());
   }
 
   private Map<String, String> loadConceptsCheckRepeated() {
@@ -96,5 +101,19 @@ public class CheckConceptsAttempts {
       throw new RuntimeException(e);
     }
     return keyDefinitionX;
+  }
+
+  public Map<String, List<AttemptRecord>> groupAttemptsByExistingKey(List<AttemptRecord> attempts) {
+    return attempts.stream()
+        .filter(a -> keyDefinition.containsKey(a.key()))
+        .collect(Collectors.groupingBy(AttemptRecord::key));
+  }
+
+  public void printGroupedAttempts(Map<String, List<AttemptRecord>> keyAttempts) {
+    keyAttempts.forEach((key, attempts) -> {
+      SimpleColorPrint.red(key + ":");
+      attempts.forEach(this::printSingleAttemptWithoutKey);
+      System.out.println();
+    });
   }
 }
