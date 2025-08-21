@@ -60,14 +60,12 @@ public class Concepts {
 
   private void loadScores() throws IOException {
     Properties scoreProps = new Properties();
-    //scoreProps.load(Files.newInputStream(SCORE_PATH));
     try (Reader reader = Files.newBufferedReader(SCORE_PATH, StandardCharsets.UTF_8)) {
       scoreProps.load(reader);
     }
     for (Map.Entry<Object, Object> e : scoreProps.entrySet()) {
       if (e.getValue().equals("0")) continue; // 0 is default...
       if (!keyDefinition.containsKey(e.getKey())) continue; // has score but key got deleted/ altered
-      String key = e.getKey().toString();
       keyScore.put(e.getKey().toString(), Integer.parseInt((String)e.getValue()));
     }
   }

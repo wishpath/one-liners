@@ -1,11 +1,15 @@
 package org.sa.apps;
 
 import org.sa.config.Props;
+import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
+import org.sa.other.ValueAscendingMap;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.Reader;
 import java.io.UncheckedIOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -13,9 +17,13 @@ import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 
+
+//loads keyDefinition and keyScore from files independently from main app.
 public class CheckConceptsAttempts {
-  private static final Path ATTEMPTED_ANSWERS_FILEPATH = Paths.get("src/main/java/org/sa/data/attempted_answers.csv");
+
   public final Map<String, String> keyDefinition = loadConceptsCheckRepeated();
+  public final ValueAscendingMap<String, Integer> keyScore = loadScores(); //no keys with score zero, auto ascending
+
 
   record AttemptRecord(String key, String definition, int evaluation, LocalDateTime timestamp) {}
 
@@ -28,6 +36,7 @@ public class CheckConceptsAttempts {
   }
 
   private static List<AttemptRecord> readAttempts() {
+    final Path ATTEMPTED_ANSWERS_FILEPATH = Paths.get("src/main/java/org/sa/data/attempted_answers.csv");
     try (BufferedReader reader = Files.newBufferedReader(ATTEMPTED_ANSWERS_FILEPATH)) {
       return reader.lines()
           .map(CheckConceptsAttempts::parseLine)
@@ -69,7 +78,7 @@ public class CheckConceptsAttempts {
   }
 
   private void printSingleAttemptWithoutKey(AttemptRecord a) {
-    SimpleColorPrint.blueInLine(Props.TAB + String.valueOf(a.evaluation()));
+    SimpleColorPrint.blueInLine(Props.TAB.repeat(2) + String.valueOf(a.evaluation()));
     SimpleColorPrint.normalInLine(" | ");
     SimpleColorPrint.yellowInLine(a.definition());
     SimpleColorPrint.normalInLine(" | ");
@@ -111,9 +120,29 @@ public class CheckConceptsAttempts {
 
   public void printGroupedAttempts(Map<String, List<AttemptRecord>> keyAttempts) {
     keyAttempts.forEach((key, attempts) -> {
-      SimpleColorPrint.red(key + ":");
+      String score = keyScore.containsKey(key) ? Integer.toString(keyScore.get(key)) : "0";
+      SimpleColorPrint.red(key + ": ");
+      SimpleColorPrint.normal(Props.TAB + Colors.LIGHT_GRAY + "score: " + score + Colors.RESET);
       attempts.forEach(this::printSingleAttemptWithoutKey);
       System.out.println();
     });
+  }
+
+  private ValueAscendingMap<String, Integer> loadScores(){
+    ValueAscendingMap<String, Integer> keyScoreX = new ValueAscendingMap<>(); //no keys with score zero, auto ascending
+    final Path SCORE_PATH = Paths.get("src/main/java/org/sa/score/score.properties");
+    Properties scoreProps = new Properties();
+    try (Reader reader = Files.newBufferedReader(SCORE_PATH, StandardCharsets.UTF_8)) {
+      scoreProps.load(reader);
+    } catch (IOException e) {
+      throw new RuntimeException(e);
+    }
+    for (Map.Entry<Object, Object> e : scoreProps.entrySet()) {
+      if (e.getValue().equals("0")) continue; // 0 is default...
+      if (!keyDefinition.containsKey(e.getKey())) continue; // has score but key got deleted/ altered
+      keyScoreX.put(e.getKey().toString(), Integer.parseInt((String)e.getValue()));
+    }
+
+    return keyScoreX;
   }
 }
