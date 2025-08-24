@@ -20,8 +20,8 @@ import java.util.stream.Stream;
 public class Concepts {
   public static final Path TOPICS_PUBLIC = Paths.get("src/main/java/org/sa/concepts/topics");
   public static final Path TOPICS_SWED = Paths.get("src/main/java/org/sa/concepts/topics-swed");
-  public static final Path SCORE_PATH = Paths.get("src/main/java/org/sa/score/score.properties");
-  public static final Path NOT_TODAY_FILE = Paths.get("src/main/java/org/sa/data/not_today.csv");
+  public static final Path SCORE_PATH = Paths.get("src/main/java/org/sa/storage/score.properties");
+  public static final Path NOT_TODAY_FILE = Paths.get("src/main/java/org/sa/storage/not_today.csv");
 
   public final Map<String, String> keyDefinition = new HashMap<>();
   public final ValueAscendingMap<String, Integer> keyScore = new ValueAscendingMap<>(); //no keys with score zero, auto ascending

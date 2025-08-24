@@ -37,7 +37,7 @@ public class CheckConceptsAttempts {
   }
 
   private static List<AttemptRecord> readAttempts() {
-    final Path ATTEMPTED_ANSWERS_FILEPATH = Paths.get("src/main/java/org/sa/data/attempted_answers.csv");
+    final Path ATTEMPTED_ANSWERS_FILEPATH = Paths.get("src/main/java/org/sa/storage/attempted_answers.csv");
     try (BufferedReader reader = Files.newBufferedReader(ATTEMPTED_ANSWERS_FILEPATH)) {
       return reader.lines()
           .map(CheckConceptsAttempts::parseLine)
@@ -131,7 +131,7 @@ public class CheckConceptsAttempts {
 
   private ValueAscendingMap<String, Integer> loadScores(){
     ValueAscendingMap<String, Integer> keyScoreX = new ValueAscendingMap<>(); //no keys with score zero, auto ascending
-    final Path SCORE_PATH = Paths.get("src/main/java/org/sa/score/score.properties");
+    final Path SCORE_PATH = Paths.get("src/main/java/org/sa/storage/score.properties");
     Properties scoreProps = new Properties();
     try (Reader reader = Files.newBufferedReader(SCORE_PATH, StandardCharsets.UTF_8)) {
       scoreProps.load(reader);

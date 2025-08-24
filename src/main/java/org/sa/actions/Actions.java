@@ -21,7 +21,7 @@ public class Actions {
 
   private Concepts concepts;
   private AiClient ai;
-  private static final Path ATTEMPTED_ANSWERS_FILEPATH = Paths.get("src/main/java/org/sa/data/attempted_answers.csv");
+  private static final Path ATTEMPTED_ANSWERS_FILEPATH = Paths.get("src/main/java/org/sa/storage/attempted_answers.csv");
 
   public Actions(Concepts concepts, AiClient ai) throws IOException {
     this.concepts = concepts;
