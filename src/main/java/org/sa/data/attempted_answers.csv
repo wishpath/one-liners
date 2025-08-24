@@ -718,3 +718,19 @@ em dash ("—") function,separates unexpected or important thought,9,2025-08-19T
 exponent (math),when raising a number to some power; this is the number showing to what power the number is being raised,10,2025-08-20T15:03:40.188225800
 volatile (Java),in java this is a way to mark variable so it would be always updated correctly in multiple threads,9,2025-08-20T15:05:12.240936600
 Kerberos,a container orchestration platform. Used to run multiple instances of an application.,0,2025-08-20T15:06:09.860543900
+exploratory testing,flexible way to find out problems or bugs of the app,10,2025-08-24T23:22:59.907332800
+Wireshark,software to troubleshoot network problems,8,2025-08-24T23:23:19.207176500
+Liferay,platform and framework to set up business application,8,2025-08-24T23:24:26.242879300
+Kerberos,Authentication software,8,2025-08-24T23:24:46.096098900
+base (math),a number that is inteded to be raised by some power,8,2025-08-24T23:25:43.861920300
+full-text search,technology and metodology for smart searching; where gramatical forms and synonyms are taken into account and words that are too common — skipped.,10,2025-08-24T23:27:02.552776800
+dispatcher,someone or somethind that directs goods or information,8,2025-08-24T23:27:44.802602900
+RESTful data formats,JSON; XML; YAML,10,2025-08-24T23:27:58.238026900
+cluster,group of nodes,9,2025-08-24T23:28:08.167432800
+factory pattern,object creations is dealt by factory. Both factory and the object extend the same interface,9,2025-08-24T23:28:54.555860900
+observability,overseeing how the app works via logs or monitoring,9,2025-08-24T23:29:20.158311700
+collision resistant,data structure is not likely to generate the same value by accident,8,2025-08-24T23:29:57.430552700
+diamond operator (Java),typed by <>; implies that the type is the same as described on the left side,9,2025-08-24T23:30:33.642165200
+container management platform,takes care of containers and instances of apps. Good for scalability. Example: Kubernetes,9,2025-08-24T23:31:54.827881200
+aspect oriented programming,single aspect like logging is entirely operated in separate classes,9,2025-08-24T23:32:27.084181100
+ubiquitous,common,8,2025-08-24T23:32:40.079185700
