@@ -734,3 +734,13 @@ diamond operator (Java),typed by <>; implies that the type is the same as descri
 container management platform,takes care of containers and instances of apps. Good for scalability. Example: Kubernetes,9,2025-08-24T23:31:54.827881200
 aspect oriented programming,single aspect like logging is entirely operated in separate classes,9,2025-08-24T23:32:27.084181100
 ubiquitous,common,8,2025-08-24T23:32:40.079185700
+API,Application Programming Interface,10,2025-08-24T23:40:44.066801900
+gateway team,takes care of incomming requests and exposure of endpoints,8,2025-08-24T23:41:17.639665300
+Argo CD,software for installing application instances to Kubernetes using Git respositories,9,2025-08-25T08:08:34.071144400
+Spring boot,Java framework for quicker production of applications,10,2025-08-25T08:09:04.045456100
+GCT,general complience testing,9,2025-08-25T08:10:30.878131800
+onboarding,welcomming to the company,8,2025-08-25T08:11:02.318195
+DC,data center,9,2025-08-25T08:11:15.773637
+pipeline (IT),automated processes that are executed one after another,9,2025-08-25T08:11:45.836447700
+URL safe format,having all characters allowed in the URL,10,2025-08-25T08:12:18.444380700
+heap,pile,7,2025-08-25T08:12:27.819159600

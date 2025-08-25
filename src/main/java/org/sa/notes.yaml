@@ -1,5 +1,13 @@
 problems:
-
+  - additional instructions:
+    - properties-like-files
+      - loaded to some datastructure
+        - when formulating AI question — if entry not null - add instruction
+    - "Please explain this: heap":
+      - pile:
+        - A. Yes, it captures the essence:
+          - "Rating: 7/10":
+            - The default definition: ordered data structure, in Java implemented as PriorityQueue. Good for efficient sorting.
 ideas:
   - spaced repetition?
   - should score 0 be explicit?
