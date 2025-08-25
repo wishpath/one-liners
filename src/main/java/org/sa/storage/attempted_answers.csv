@@ -744,3 +744,7 @@ DC,data center,9,2025-08-25T08:11:15.773637
 pipeline (IT),automated processes that are executed one after another,9,2025-08-25T08:11:45.836447700
 URL safe format,having all characters allowed in the URL,10,2025-08-25T08:12:18.444380700
 heap,pile,7,2025-08-25T08:12:27.819159600
+database transactions,sets of actions in database; where a single fail makes the whole group (transaction) considered a failed one,10,2025-08-25T14:41:02.552288900
+Java EE,Java Enterprise Edition - set of tools for big companies,8,2025-08-25T14:41:37.386636400
+Kibana,tool for logs and monitoring,9,2025-08-25T14:41:59.625842300
+assess,to make sure it works,0,2025-08-25T14:42:31.569776800

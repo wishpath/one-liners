@@ -22,7 +22,7 @@ greedy solution=picks best now, ignores future. Assumes local = global best.
 hash=unique representation of input data. Deterministic, fixed size, irreversible.
 hash use cases=data integrity, password storage, encryption, verification, indexing, quick lookups.
 hashing=transforming data into fixed-size code; deterministic; collisions possible.
-heap=ordered data structure, in Java implemented as PriorityQueue. Good for efficient sorting.
+heap (context: data structure)=ordered data structure, in Java implemented as PriorityQueue. Good for efficient sorting.
 indegree=number of incoming edges directed towards a node.
 irreversible data transformation=not possible to obtain the original input from the outcome.
 justified vs excusable=justified focuses on positives despite downsides; excusable tolerates known flaws.
