@@ -21,7 +21,7 @@ public class Concepts {
   public static final Path TOPICS_PUBLIC = Paths.get("src/main/java/org/sa/concepts/topics");
   public static final Path TOPICS_SWED = Paths.get("src/main/java/org/sa/concepts/topics-swed");
   public static final Path SCORE_PATH = Paths.get("src/main/java/org/sa/storage/score.properties");
-  public static final Path NOT_TODAY_FILE = Paths.get("src/main/java/org/sa/storage/not_today.csv");
+  public static final Path NOT_TODAY_FILEPATH = Paths.get("src/main/java/org/sa/storage/not_today.csv");
 
   public final Map<String, String> keyDefinition = new HashMap<>();
   public final ValueAscendingMap<String, Integer> keyScore = new ValueAscendingMap<>(); //no keys with score zero, auto ascending
@@ -97,7 +97,7 @@ public class Concepts {
   private void loadNotTodayConcepts() throws IOException {
 
     SimpleColorPrint.blue("LOADING 'NOT TODAY' CONCEPTS:");
-    try (Stream<String> lines = Files.lines(NOT_TODAY_FILE)) {
+    try (Stream<String> lines = Files.lines(NOT_TODAY_FILEPATH)) {
       LocalDateTime oneDayAgo = LocalDateTime.now().minusDays(1);
       lines.map(line -> line.split(","))
           .peek(linePartsArr -> {
@@ -122,7 +122,7 @@ public class Concepts {
   }
 
   private void autosaveNotTodayMapToFile() throws IOException {
-    try (BufferedWriter writer = Files.newBufferedWriter(NOT_TODAY_FILE)) {
+    try (BufferedWriter writer = Files.newBufferedWriter(NOT_TODAY_FILEPATH)) {
       for (Map.Entry<String, LocalDateTime> entry : notTodayKeys.entrySet())
         writer.write(entry.getKey() + "," + entry.getValue() + System.lineSeparator()); //overwrites
     }

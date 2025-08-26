@@ -19,13 +19,15 @@ import java.util.regex.Pattern;
 
 public class Actions {
 
+  private Instruction instruction;
   private Concepts concepts;
   private AiClient ai;
   private static final Path ATTEMPTED_ANSWERS_FILEPATH = Paths.get("src/main/java/org/sa/storage/attempted_answers.csv");
 
-  public Actions(Concepts concepts, AiClient ai) throws IOException {
+  public Actions(Concepts concepts, AiClient ai, Instruction instruction) throws IOException {
     this.concepts = concepts;
     this.ai = ai;
+    this.instruction = instruction;
   }
 
   public Entry<String, String> pickConceptWithLowestScore() {
@@ -148,6 +150,9 @@ public class Actions {
   }
 
   public Entry<String, String> evaluateUserExplanationWithAI(Entry<String, String> concept, String userInputDefinitionAttempt) throws IOException {
+    //just testing
+    if (instruction.key_instructions.containsKey(concept.getKey())) System.out.println(concept.getKey() + " CONTAINS EXTRA INSTRUCTION");
+
     //AI evaluation
     String questionB =
         "Is this a good key and definition: key: \"" + concept.getKey() + "\", and definition: \"" + userInputDefinitionAttempt + "\". " +

@@ -748,3 +748,14 @@ database transactions,sets of actions in database; where a single fail makes the
 Java EE,Java Enterprise Edition - set of tools for big companies,8,2025-08-25T14:41:37.386636400
 Kibana,tool for logs and monitoring,9,2025-08-25T14:41:59.625842300
 assess,to make sure it works,0,2025-08-25T14:42:31.569776800
+heap space,memory for the duration when the app runs,9,2025-08-26T21:54:52.799646900
+Liferay,CMS,9,2025-08-26T21:55:14.662811
+Wireshark,software to troubleshoot network,10,2025-08-26T21:55:58.904569
+domain model,the logic how some buiness function operates on software,9,2025-08-26T21:57:38.300117300
+Kerberos keytab,file for authentication,8,2025-08-26T21:57:55.900042800
+DGOM,Data Governance Object Model,0,2025-08-26T21:58:23.417035200
+allocate,give memory space,8,2025-08-26T21:58:45.184766900
+NFS,need for speed,7,2025-08-26T22:00:56.402596500
+throughput,how much data can travel over period of time,10,2025-08-26T22:05:01.119611200
+DDoS attacks,Distributed Domain Swarm,0,2025-08-26T22:05:39.892721900
+DBA,Data Base Administrators,7,2025-08-26T22:50:52.189705900

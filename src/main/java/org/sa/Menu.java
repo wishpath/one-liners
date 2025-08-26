@@ -2,6 +2,7 @@ package org.sa;
 
 import org.sa.actions.Actions;
 import org.sa.actions.Info;
+import org.sa.actions.Instruction;
 import org.sa.concepts.Concepts;
 import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
@@ -25,7 +26,8 @@ public class Menu {
 
   private Scanner scanner = new Scanner(System.in);
   private Concepts concepts = new Concepts();
-  private Actions act = new Actions(concepts, new AiClient());
+  private Instruction instruction = new Instruction(concepts);
+  private Actions act = new Actions(concepts, new AiClient(), instruction);
   private Info info = new Info(concepts);
   private Map.Entry<String, String> previousConcept = act.pickConceptWithLowestScore();
   private Map.Entry<String, String> concept = previousConcept;
