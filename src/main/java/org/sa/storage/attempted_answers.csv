@@ -767,3 +767,12 @@ DGOM,Data Governance Object Management,0,2025-08-27T23:56:39.997831100
 proprietary,belonggin to a company,10,2025-08-27T23:56:54.573991400
 heap space,memory used for the time an app runs,8,2025-08-27T23:57:13.295298500
 NFC,like KFC but not Kentucky. Nebraska fried chicken,0,2025-08-27T23:57:53.776752200
+Kerberos,Authentication protocol,10,2025-08-28T23:47:42.159063600
+good cohesion (DDD),Single unit of code contains related functionalities,10,2025-08-28T23:48:21.710607800
+bounded context,part of business where language is ubiquitous,8,2025-08-28T23:49:17.340671400
+JPA entity management (db),Java Persistence API; manges objects mapped to table rows,9,2025-08-28T23:50:29.336742600
+pointcut,in aspect oriented programing this an annotation which shows the trigger of the method,8,2025-08-28T23:51:36.055555200
+gateway,computer or team responsible for managing incomming traffic and exposing endpoints,9,2025-08-28T23:52:27.020010900
+ICT system (components),Information and Communication Technology system: hardware; software; network; infrastructure; people,10,2025-08-28T23:54:11.249896100
+bounded context (example of order processing),software unit that takes care of order processing; for example class of OrderProcessor; that has methods like reserve(); putToBasket(); buy() and so on,8,2025-08-28T23:56:03.092998100
+assess,to check or make sure,8,2025-08-28T23:56:18.138391900
