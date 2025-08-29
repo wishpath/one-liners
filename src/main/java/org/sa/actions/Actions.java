@@ -19,12 +19,12 @@ import java.util.regex.Pattern;
 
 public class Actions {
 
-  private Instruction instruction;
+  private IndividualInstruction instruction;
   private Concepts concepts;
   private AiClient ai;
   private static final Path ATTEMPTED_ANSWERS_FILEPATH = Paths.get("src/main/java/org/sa/storage/attempted_answers.csv");
 
-  public Actions(Concepts concepts, AiClient ai, Instruction instruction) throws IOException {
+  public Actions(Concepts concepts, AiClient ai, IndividualInstruction instruction) throws IOException {
     this.concepts = concepts;
     this.ai = ai;
     this.instruction = instruction;
@@ -171,7 +171,14 @@ public class Actions {
             "\n K. If the key is an acronym, each core expanded word — even if misspelled — must clearly match the key’s intended word; wrong words aren’t accepted (e.g., for “SSL”: “securing” OK (only gramatical form is different), “sekure” −1 point (misspell), “service” rejected (totally wrong word)).\n" +
 
             "\n Step 2 - If the evaluation is less than 7/10, provide the correct answer (if 7/10 to 10/10, skip this step)." +
-            "\n Your entire answer should be up to 300 characters.";
+            "\n Your entire answer should be up to 300 characters." +
+
+            //instructions for individual concept
+            (instruction.key_instructions.containsKey(concept.getKey()) ?
+                "\nAdditional instructions: \n" + instruction.getIndividualInstructions(concept.getKey()) :
+                "")
+        ;
+    System.out.println(questionB);
 
     String answer = ai.getAnswer(questionB) + "\n";
     String evaluationString = extractEvaluationString(answer);

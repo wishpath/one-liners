@@ -776,3 +776,10 @@ gateway,computer or team responsible for managing incomming traffic and exposing
 ICT system (components),Information and Communication Technology system: hardware; software; network; infrastructure; people,10,2025-08-28T23:54:11.249896100
 bounded context (example of order processing),software unit that takes care of order processing; for example class of OrderProcessor; that has methods like reserve(); putToBasket(); buy() and so on,8,2025-08-28T23:56:03.092998100
 assess,to check or make sure,8,2025-08-28T23:56:18.138391900
+DGOM,Data Governance Operating Model - rules; processes and roles regarding how personal data is being oprated in the company,9,2025-08-29T14:24:30.082652800
+NFC,Near Field Communication - technology for sending data over typically very short distances wirelessly,10,2025-08-29T14:25:18.922403600
+object mapping (database),fields in the object means columns in the database,8,2025-08-29T14:26:18.007153400
+MLM,Multi Level Marketing - way of marketing where a person rules a group of other people that distributes goods for him; and each can rule a group on their own,7,2025-08-29T14:30:18.555400900
+hyphen ("-") function,joins words to make up a new single word,9,2025-08-29T14:30:58.314705300
+good cohesion for DocManager,All methods in this class are about managing documents: create() edit() delete() and so on,10,2025-08-29T14:31:38.783246800
+DBA,Database Administrators,10,2025-08-29T14:42:18.510272700

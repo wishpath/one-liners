@@ -10,12 +10,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Stream;
 
-public class Instruction {
+public class IndividualInstruction {
   private static final Path ADDITIONAL_INSTRUCTIONS_FILEPATH = Paths.get("src/main/java/org/sa/storage/instructions.csv");
   Map<String, String[]> key_instructions;
   Concepts concepts;
 
-  public Instruction(Concepts concepts) {
+  public IndividualInstruction(Concepts concepts) {
     this.concepts = concepts;
     this.key_instructions = loadAdditionalInstructions();
   }
@@ -38,5 +38,12 @@ public class Instruction {
     }
 
     return key_instructions;
+  }
+
+  public String getIndividualInstructions(String key) {
+    StringBuilder sb = new StringBuilder();
+    for (String instruction : key_instructions.get(key))
+      sb.append(instruction + "\n");
+    return sb.toString();
   }
 }
