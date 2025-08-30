@@ -783,3 +783,6 @@ MLM,Multi Level Marketing - way of marketing where a person rules a group of oth
 hyphen ("-") function,joins words to make up a new single word,9,2025-08-29T14:30:58.314705300
 good cohesion for DocManager,All methods in this class are about managing documents: create() edit() delete() and so on,10,2025-08-29T14:31:38.783246800
 DBA,Database Administrators,10,2025-08-29T14:42:18.510272700
+bounded context (example of inventory management),Software unit only takes care only of invetory management; so all the terms are ubiquitous for this area,8,2025-08-30T23:49:50.018129
+GitHub repository access HTTPS vs SSH,https requires a passwords and ssh does not,7,2025-08-30T23:50:24.552713700
+DGOM,Data Governance Operation Model - how a company takes care of personal data,8,2025-08-30T23:52:05.063141700

@@ -2,7 +2,6 @@ Argo CD=Argo Continuous Delivery - deploys app from Git repo to Kubernetes clust
 CI/CD=C - continuous (automatic), I - integration (merging code and testing it), D - delivery (deploying).
 DevOps=practices, principles, philosophies on automation of the process of software delivery and infrastructure changes.
 DevSecOps=practice of integrating security into every phase of the software development and delivery pipeline.
-GitHub repository access HTTPS vs SSH=HTTPS uses username/password, SSH uses cryptographic keys (no password).
 Ingress Controller=Kubernetes component that manages external access to services.
 Ivy=dependency management tool for Java, automates retrieving libraries and modules during build or deployment.
 Ivy integration to Gradle=Gradle plugin for Ivy repos, allows using Ivy modules and dependencies in Gradle builds.
