@@ -101,8 +101,14 @@ public class Menu {
       else if ("weak keys".equals(input))
         info.printNotTodayKeysByTimeAvailableAndLowestScore2();
 
-      else if ("not today".equals(input) || "no today".equals(input))
+      else if ("not today print".equals(input))
         info.printNotTodayConcepts();
+
+      else if ("not today add".equals(input))
+        setConcept(act.addKeywordToNotToday(concept));
+
+      else if (input.startsWith("not today"))
+        System.out.println("'not today print' or 'not today add'?");
 
       else if ("score".equals(input))
         info.printCurrentKeyScore(concept);

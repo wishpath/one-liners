@@ -3,6 +3,7 @@ SSL=Secure Sockets Layer - encryption of browser-server communication.
 TLS=Transport Layer Security - encryption of browser-server communication; successor to SSL.
 VPN=Virtual Private Network - encrypted connection to a remote server, hiding identity while accessing the internet.
 VPN whitelisting=security measure that allows only specific IP addresses or devices to access a service through a VPN.
+whitelisting=approving specific entities (IPs, apps, emails) to bypass security restrictions; opposite of blacklisting.
 Wireshark=app for network troubleshooting.
 connection protection (examples)=encryption, authentication, integrity checks, access control, key exchange.
 firewall=network security system that monitors and controls inc-and-out network traffic based on predetermined rules.

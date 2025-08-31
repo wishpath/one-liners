@@ -206,5 +206,10 @@ public class Actions {
 
     return pickConceptWithLowestScore();
   }
+
+  public Entry<String, String> addKeywordToNotToday(Entry<String, String> concept) throws IOException {
+    concepts.dontLearnThisToday(concept.getKey());
+    return pickConceptWithLowestScore();
+  }
 }
 
