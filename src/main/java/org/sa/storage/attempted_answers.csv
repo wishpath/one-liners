@@ -786,3 +786,16 @@ DBA,Database Administrators,10,2025-08-29T14:42:18.510272700
 bounded context (example of inventory management),Software unit only takes care only of invetory management; so all the terms are ubiquitous for this area,8,2025-08-30T23:49:50.018129
 GitHub repository access HTTPS vs SSH,https requires a passwords and ssh does not,7,2025-08-30T23:50:24.552713700
 DGOM,Data Governance Operation Model - how a company takes care of personal data,8,2025-08-30T23:52:05.063141700
+Saba,External platform for employee work; improvement; goals etc.,9,2025-09-01T14:50:06.593959900
+VPN whitelisting,allowing certain IPs via VPN to access certain services in the network,10,2025-09-01T14:50:52.566769700
+DSL,Domain Specific Language - programming language for concrete buisiness area,9,2025-09-01T14:51:28.728769100
+namespace (networking),isolated unit in the network where external duplicates of names are allowed but internal - not,8,2025-09-01T14:52:30.961527100
+whitelisting,allowing certain criteria like ip or email to access certain services over network,9,2025-09-01T14:53:16.649870
+assess,to make sure; to check,8,2025-09-01T14:53:54.965072700
+bounded context (example of inventory management),separate unit of software where terms are ubiquitous and follows standards of inventory management,8,2025-09-01T14:54:51.074196500
+heap (context: data structure),data structure; in java implemented as PriorityQueue. good for automated sorting,8,2025-09-01T14:56:05.424088200
+build process,pieces of code are brought together; dependecies are downloaded; code is compiled and prepared for running and distribution,10,2025-09-01T14:57:32.688713500
+Agile Test Quadrants,test categories depending on two dimentions: business and technical,9,2025-09-01T14:58:14.644098100
+arbitrary,based on choosing without calculation,8,2025-09-01T14:58:55.587406
+canary deployment,deploying changes to a part of users only.,10,2025-09-01T14:59:29.041725700
+landing page,where a customer reaches web service first,7,2025-09-01T14:59:50.230259800
