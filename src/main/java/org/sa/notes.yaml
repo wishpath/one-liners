@@ -1,6 +1,4 @@
 problems:
-  - additional instructions:
-    - when formulating AI question — if entry not null - add instruction
 
 ideas:
   - spaced repetition?
@@ -34,18 +32,5 @@ how to:
   - update submodules:
     - git submodule update --remote --merge
     - then commit
-  - tone down the definitions in .concepts:
+  - tone down the definitions color in .concepts:
     - Settings > ... > File Types > "+" > in the "line comment" put "="
-      
-      
-      https://www.strava.com/oauth/authorize?client_id=165873
-      &response_type=code
-      &redirect_uri=http://localhost
-      &approval_prompt=force
-      &scope=read,activity:read_all
-
-TOTALLY WRONG:
-  Please explain this: GPA
-    General Purpose Application
-    0/10. GPA typically stands for "Grade Point Average," not "General Purpose Application." A correct definition of GPA would be "Grade Point Average, a measure of academic performance."
-  The default definition: general purpose app.`
