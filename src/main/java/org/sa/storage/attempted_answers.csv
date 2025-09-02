@@ -799,3 +799,4 @@ Agile Test Quadrants,test categories depending on two dimentions: business and t
 arbitrary,based on choosing without calculation,8,2025-09-01T14:58:55.587406
 canary deployment,deploying changes to a part of users only.,10,2025-09-01T14:59:29.041725700
 landing page,where a customer reaches web service first,7,2025-09-01T14:59:50.230259800
+namespace (networking),where names are unique and not conflicting,8,2025-09-02T23:52:30.417653400
