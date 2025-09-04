@@ -34,7 +34,6 @@ public class Menu {
   private String input = "";
 
   private static final String MENU = Colors.BLUE + "Menu:" + Colors.RESET +
-    MenuLine.string("skip", "reloads key") +
     MenuLine.string("define", "defines current key") +
     MenuLine.string("define all <fragment>", "defines all keys containing fragment") +
     MenuLine.string("define all all <fragment>", "defines all keys and values containing fragment") +
@@ -46,7 +45,9 @@ public class Menu {
     MenuLine.string("idk", "marks 'I don't know' to current concept question") +
     MenuLine.string("weak", "prints concepts with lowest score") +
     MenuLine.string("weak keys", "prints newest failed keys (no definitions)") +
-    MenuLine.string("not today", "prints concepts that are not to be learned today") +
+    MenuLine.string("not today print", "prints concepts that are not to be learned today") +
+    MenuLine.string("not today add", "adds concepts that are not to be learned today") +
+    MenuLine.string("skip", "reloads key") +
     MenuLine.string("score", "prints current concept score") +
     MenuLine.string("scores", "prints all non-zero scores") +
     MenuLine.string("menu", "prints command menu") + "\n";
