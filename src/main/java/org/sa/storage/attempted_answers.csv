@@ -800,3 +800,34 @@ arbitrary,based on choosing without calculation,8,2025-09-01T14:58:55.587406
 canary deployment,deploying changes to a part of users only.,10,2025-09-01T14:59:29.041725700
 landing page,where a customer reaches web service first,7,2025-09-01T14:59:50.230259800
 namespace (networking),where names are unique and not conflicting,8,2025-09-02T23:52:30.417653400
+Saba,for employee growth; development; goals and so on,8,2025-09-04T22:08:57.127842400
+SES (Smart-ID),Simple Electonic Signature,0,2025-09-04T22:09:21.479274500
+Elasticsearch,platform for observability,9,2025-09-04T22:13:14.750619700
+Loki (observability),Tool for Kubernetes. Gathers logs,8,2025-09-04T22:13:51.443193900
+bounded context (example of order processing),separate software unit; where all terms are ubiquitous to business area of order processing,9,2025-09-04T22:15:16.968360400
+enhanced,made stronger,10,2025-09-04T22:15:26.572928400
+proxy pattern,coding pattern where a target object and its proxy object; both implement the same interface. Proxy object controls the access to the target.,10,2025-09-04T22:17:31.015874400
+DSL,Domain Specific Language - a programming language that is not universal but rather is best fit for a specific business case,10,2025-09-04T22:18:16.880567600
+RESTful methods,GET; PUT; DELETE,9,2025-09-04T22:18:50.224297700
+defensive programming,extra checks for corner cases and solving them each,8,2025-09-04T22:19:21.768425300
+integrity (of documents),means the documents are unaltered; orgiginal; not spoiled,10,2025-09-04T22:20:02.950039100
+cohesion example,A single software unit; like class; contains only related methods; for example DocManager class methods are only related to doncument managing: create(); edit(); delete() and so on,10,2025-09-04T22:21:38.581736800
+Kerberos keytab,File for authentication,8,2025-09-04T22:21:52.750622600
+NOT IN (SQL),checks if item is lited in the list,8,2025-09-04T22:22:33.910457300
+JSON,Javascript Object Notation - standard online semantic message format,9,2025-09-04T22:23:39.714451800
+container runtime,everything needed to run a container: builds; libraries; settings,8,2025-09-04T22:24:25.402060900
+state (of object),values of object fields,9,2025-09-04T22:24:45.619369200
+connection pool (context: database),a number of possible connections to database,8,2025-09-04T22:25:13.927153800
+entity (database),row in a table that means an object in the back end,8,2025-09-04T22:26:03.292789700
+stereotype in Spring,annotations before objects (beans) and methods,10,2025-09-04T22:27:13.981321100
+ubiquitous,in general means present always and everywhere,9,2025-09-04T22:27:47.744360800
+volatile,means that it changes quily and strogly,9,2025-09-04T22:28:19.301190
+TDM,Test Data Management,10,2025-09-04T22:28:35.188942400
+F5,traffic rules for load balancing,8,2025-09-04T22:29:21.636014300
+F5 rules,traffic rules and load balancing,8,2025-09-04T22:29:43.198620400
+facility,building,8,2025-09-04T22:29:50.598268900
+credential,name; password or any other data to authorise,9,2025-09-04T22:30:24.277829800
+permutation,same set; different order,10,2025-09-04T22:30:39.649857900
+AD,Active Dircetory,9,2025-09-04T22:30:52.463712700
+domain vs bounded context,domain is a business area and bounded context is a software unit for this business area where the language is ubiquitous,9,2025-09-04T22:31:55.291026800
+partition and sample,separates a portion of data in the database,8,2025-09-04T22:32:16.706982700

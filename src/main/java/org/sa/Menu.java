@@ -65,9 +65,6 @@ public class Menu {
       else if ("menu".equals(input))
         System.out.println(MENU);
 
-      else if ("skip".equals(input) || "s".equals(input))
-        setConcept(act.pickConceptWithLowestScore());
-
       else if ("all keys".equals(input) || "keys".equals(input))
         info.printAllKeys();
 
@@ -104,7 +101,7 @@ public class Menu {
       else if ("not today print".equals(input))
         info.printNotTodayConcepts();
 
-      else if ("not today add".equals(input))
+      else if ("not today add".equals(input) || "skip".equals(input))
         setConcept(act.addKeywordToNotToday(concept));
 
       else if (input.startsWith("not today"))
