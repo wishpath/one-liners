@@ -1,5 +1,10 @@
 problems:
-
+  - test "REST" additional instructions if user enters "standard use of API - data formats like, JSON or XML, http methods like PUT, POST, DELETE, application layers like controller, service, storage"
+  - how to pick "REST" key:
+      - new command "pick exact <key>"
+      - print indexes for pick nth <fragment index>
+        - require "pick nth <fagment>"
+          - only then "index"
 ideas:
   - spaced repetition?
   - should score 0 be explicit?

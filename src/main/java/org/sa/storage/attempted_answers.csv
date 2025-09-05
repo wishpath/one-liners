@@ -847,3 +847,20 @@ gateway team,manages incomming and outgoing traffic,9,2025-09-05T22:56:43.210565
 obfuscate data,make not readable for a human,9,2025-09-05T22:57:10.052010400
 deque,data structure; implemented as PriorityQue; good for always being sorted,8,2025-09-05T22:58:04.181558400
 deque,data structure; implemented as PriorityQue; good for always being sorted,0,2025-09-05T23:30:42.559506600
+interface in java,only defines what methods should a class have,9,2025-09-05T23:35:22.878243900
+semantic message,containing both information values and labels on them,8,2025-09-05T23:35:56.427086700
+pointcut,in aspect oriented programming this is the annotation that shows how the method is being triggered,9,2025-09-05T23:37:29.022998700
+RESTful layers,Controller; Service; Storage,10,2025-09-05T23:37:46.422319100
+artifactory,is where the buit pieces of code are being stored,9,2025-09-05T23:38:55.317379
+jar hell,when multiple dependencies has their own dependecies that are almost same; but has different version; that might cause confusion and failures,9,2025-09-05T23:40:08.460618700
+worker node,normal node with application instance,8,2025-09-05T23:40:23.562137200
+VPN,Virtual Private Network - secure connection to a server; which directs further to the internet,9,2025-09-05T23:41:06.829056300
+Unix,operating system; the old one :),8,2025-09-05T23:41:32.457427200
+Helm chart,A list of settings; preferences and descriptions how the app will be deployed,9,2025-09-05T23:42:28.488926800
+due,1. about now 2. proper,9,2025-09-05T23:42:59.866479700
+Helm,Software that takes care of settings and preferences on how the app instances will be installed in Kubernetes containers,8,2025-09-05T23:44:18.162229600
+chaos engineering,intentionally and legally adding malfunctioning pieces in the code; to test how the application fails,10,2025-09-05T23:45:32.207897700
+assemble,bring all peaces together,9,2025-09-05T23:45:53.634552400
+secret (Kubernetes),a file with authentication data,3,2025-09-05T23:49:17.005552800
+REST,standard use of API: data formats like; JSON or XML; http methods like PUT; POST; DELETE; application layers like controller; service; storage,7,2025-09-05T23:51:03.411748800
+RESTful methods,pirck nth rest 5,0,2025-09-05T23:59:10.218142200
