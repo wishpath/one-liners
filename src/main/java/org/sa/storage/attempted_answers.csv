@@ -831,3 +831,19 @@ permutation,same set; different order,10,2025-09-04T22:30:39.649857900
 AD,Active Dircetory,9,2025-09-04T22:30:52.463712700
 domain vs bounded context,domain is a business area and bounded context is a software unit for this business area where the language is ubiquitous,9,2025-09-04T22:31:55.291026800
 partition and sample,separates a portion of data in the database,8,2025-09-04T22:32:16.706982700
+SES (context: Smart-ID),Simple Electronic Signature,10,2025-09-05T22:47:37.062790500
+AES (context: Smart-ID),Advanced Electronic Signature,10,2025-09-05T22:48:01.301985600
+QES (context: Smart-ID),Qualified Electronic Signature,10,2025-09-05T22:48:25.380047900
+commissioning example sentence,we commissioned a new feature into production,9,2025-09-05T22:49:10.660279900
+provisioning,putting in a working condition,8,2025-09-05T22:50:14.100093200
+using APIs,accessing service through exposed endpoints; that trigger computation or access of data,9,2025-09-05T22:51:25.915817
+tamper,to make worse; make illegal changes,9,2025-09-05T22:52:07.297796
+VIP (OpenShift),Virtual IP - for directing traffic to needed service instances,10,2025-09-05T22:53:01.769051400
+container image,everything needed to run an instance of an application. Builds; libraries; settings; environment,10,2025-09-05T22:54:23.922933700
+A/B testing,trying out two variations of feature implementation and comparing them,9,2025-09-05T22:55:01.125430800
+microservice,separate unit of software; that usually work in combination of more microservices,8,2025-09-05T22:55:41.851555800
+Ivy,Tool form managing dependecies in Gradle and Jenkins,0,2025-09-05T22:56:09.432392400
+gateway team,manages incomming and outgoing traffic,9,2025-09-05T22:56:43.210565600
+obfuscate data,make not readable for a human,9,2025-09-05T22:57:10.052010400
+deque,data structure; implemented as PriorityQue; good for always being sorted,8,2025-09-05T22:58:04.181558400
+deque,data structure; implemented as PriorityQue; good for always being sorted,0,2025-09-05T23:30:42.559506600
