@@ -81,7 +81,7 @@ public class Menu {
       else if ("define".equals(input))
         System.out.println(Colors.BLUE + concept.getKey() + ": " + Colors.RESET + concept.getValue() + "\n");
 
-      else if (input.startsWith("pick nth "))
+      else if (input.startsWith("pick nth"))
         setConcept(act.pickNthConceptWithFragmentInKey(input));
 
       else if (input.startsWith("pick "))

@@ -52,7 +52,7 @@ public class Info {
     System.out.println();
   }
 
-  private static void printConceptWithFragmentHighlighted(Map.Entry<String, String> entry, String fragment) {
+  public static void printConceptWithFragmentHighlighted(Map.Entry<String, String> entry, String fragment) {
     String concept = Props.TAB + entry.getKey() + ": " + entry.getValue();
     printStringWithFragmentHighlighted(fragment, concept, Colors.LIGHT_GRAY, Colors.RED);
   }
@@ -170,6 +170,15 @@ public class Info {
       SimpleColorPrint.blueInLine(" " + key + " ");
       SimpleColorPrint.color(concepts.keyDefinition.get(key), Colors.LIGHT_GRAY);
     });
+    System.out.println();
+  }
+
+  public static void printConceptEntryList_indexed_fragmentHighlighted(String fragment, List<Map.Entry<String, String>> matchingKey_Definition) {
+    SimpleColorPrint.blue("Matching concepts: ");
+    for (int i = 0; i < matchingKey_Definition.size(); i++) {
+      SimpleColorPrint.normalInLine(Props.TAB + i + " ");
+      Info.printConceptWithFragmentHighlighted(matchingKey_Definition.get(i), fragment);
+    }
     System.out.println();
   }
 }

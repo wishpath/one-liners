@@ -864,3 +864,26 @@ assemble,bring all peaces together,9,2025-09-05T23:45:53.634552400
 secret (Kubernetes),a file with authentication data,3,2025-09-05T23:49:17.005552800
 REST,standard use of API: data formats like; JSON or XML; http methods like PUT; POST; DELETE; application layers like controller; service; storage,7,2025-09-05T23:51:03.411748800
 RESTful methods,pirck nth rest 5,0,2025-09-05T23:59:10.218142200
+RESTful layers,prick nth rest 5,0,2025-09-06T22:49:43.115518900
+overlay (web),element in the dom that covers the screan and block actions on the page,9,2025-09-06T22:52:31.993125800
+sticky session,it's where a single session usually defined by IP belongs to a single instance of application,9,2025-09-06T22:53:32.339648200
+semantic registration message,a message containing needed information for resgistration; as well as labels for this information,9,2025-09-06T22:54:31.592202400
+intrusive,unwanted; disturbing,9,2025-09-06T22:55:43.342871100
+Saba,platform for employee development and growth. Former name,10,2025-09-06T22:56:13.293255400
+Ivy,Tool and repository for dependencies solved by Gradle of Jenkins,0,2025-09-06T22:56:56.605989900
+bounded context (example of user management),unit of software where the language is ubiquitos for the business area of user management,10,2025-09-06T22:58:12.128646500
+encapsulation,hiding object details by marking fields private and managing them in controlled fassion using setters; geters or other methods,9,2025-09-06T22:59:13.404750900
+web container,runtime for web app,8,2025-09-06T22:59:46.508517300
+hashing,applying predictable algorithms,8,2025-09-06T23:00:15.084024
+stop word filtering,search technology; that understands wordforms; synonims and skips overly common words,8,2025-09-06T23:01:06.372930600
+data flow,information gets sent or processed,8,2025-09-06T23:02:00.421189600
+HSM (device),Hardware Secure Module - a special computer for storing login data,8,2025-09-06T23:02:23.291939800
+Data governance,rules; roles and processes on how user data is being handled in the company,9,2025-09-06T23:03:01.692304600
+undirected graph,means that nodes are connected bidirectionally,10,2025-09-06T23:03:27.314487400
+integration testing,checking how well implemented features works within the context of the whole service and the systems around,9,2025-09-06T23:04:24.434154800
+Swagger,tool for exposing API endpoints,7,2025-09-06T23:04:44.268122400
+credibility,how well a person or company is known to fulfill promisses,9,2025-09-06T23:05:37.846589400
+backlog,where the waiting tasks are being held for the team,9,2025-09-06T23:06:05.920857400
+CTO,Cheaf Technical Officer - usually the head of IT,8,2025-09-06T23:06:41.384690300
+OKR,Objective Key Requirements,0,2025-09-06T23:06:57.819110900
+REST,standard use of API - data formats like; JSON or XML; http methods like PUT; POST; DELETE; application layers like controller; service; storage,6,2025-09-06T23:11:27.972807200

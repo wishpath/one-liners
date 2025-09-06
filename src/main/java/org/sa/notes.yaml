@@ -1,10 +1,6 @@
 problems:
-  - test "REST" additional instructions if user enters "standard use of API - data formats like, JSON or XML, http methods like PUT, POST, DELETE, application layers like controller, service, storage"
-  - how to pick "REST" key:
-      - new command "pick exact <key>"
-      - print indexes for pick nth <fragment index>
-        - require "pick nth <fagment>"
-          - only then "index"
+  - "define all all <fragment>" and "define all <fragment>" should print indexes of the entry items.
+
 ideas:
   - spaced repetition?
   - should score 0 be explicit?
@@ -29,6 +25,7 @@ ok, not needed to change:
       - You’ll iterate quickly, and the app will likely be rewritten or discarded.
 
 maybe no, not needed:
+  - new command "pick exact <key>"
   - make command 'score 1' - print all the concepts with score 1
 
 how to:

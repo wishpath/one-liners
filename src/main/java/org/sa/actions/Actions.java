@@ -52,6 +52,11 @@ public class Actions {
   }
 
   public Entry<String, String> pickConceptWithFragmentInKey(String fragment) {
+    if (fragment == null || fragment.isEmpty()) {
+      SimpleColorPrint.red("Fragment is empty");
+      return pickConceptWithLowestScore();
+    }
+
     SimpleColorPrint.blueInLine("Picking key containing fragment: ");
     SimpleColorPrint.red(fragment + "\n");
 
@@ -68,19 +73,34 @@ public class Actions {
 
 
   public Entry<String, String> pickNthKeyDefinition(String fragment, int nthInstance) {
-    return concepts.keyDefinition.entrySet()
+    List<Entry<String, String>> matchingKey_Definition = concepts.keyDefinition
+        .entrySet()
         .stream()
         .filter(entry -> entry.getKey().toLowerCase().contains(fragment.toLowerCase()))
-        .skip(nthInstance)
-        .findFirst()
-        .orElseGet(() -> {
-          SimpleColorPrint.blueInLine("Not found ");
-          SimpleColorPrint.redInLine(String.valueOf(nthInstance));
-          SimpleColorPrint.blueInLine("-th concept containing fragment: ");
-          SimpleColorPrint.red(fragment);
-          return pickConceptWithLowestScore();
-        });
+        .toList();
+
+    if (matchingKey_Definition.size() == 0) {
+      SimpleColorPrint.redInLine("Not found any concept containing fragment: ");
+      SimpleColorPrint.blue(fragment + "\n");
+      return pickConceptWithLowestScore();
+    }
+
+    if (matchingKey_Definition.size() - 1 < nthInstance) {
+      SimpleColorPrint.redInLine("There are only ");
+      SimpleColorPrint.blueInLine(String.valueOf(matchingKey_Definition.size()));
+      SimpleColorPrint.redInLine(" matches for the fragment ");
+      SimpleColorPrint.blueInLine(fragment);
+      SimpleColorPrint.redInLine(". The entered 'nth' value is too high: ");
+      SimpleColorPrint.blue(String.valueOf(nthInstance) + "\n");
+      Info.printConceptEntryList_indexed_fragmentHighlighted(fragment, matchingKey_Definition);
+      return pickConceptWithLowestScore();
+    }
+
+    Info.printConceptEntryList_indexed_fragmentHighlighted(fragment, matchingKey_Definition);
+    return matchingKey_Definition.get(nthInstance);
   }
+
+
 
   public void askAi(String input) {
     SimpleColorPrint.yellow(ai.getAnswer(input) + "\n");
@@ -88,22 +108,22 @@ public class Actions {
 
   public Entry<String, String> pickNthConceptWithFragmentInKey(String input) {
     //pick nth <fragment nth> - pick nth key containing fragment;
-    String fragmentToSearchForAndNumber = input.substring("pick nth ".length()); //should be "<fragment nth>"
-    String endsWithSpaceDigitsPattern = "^(.*) (\\d+)$";
+    String fragmentToSearchForAndNumber = input.substring("pick nth".length()); //should be "<fragment nth>"
+    final String ENDS_WITH_SPACE_AND_DIGITS_PATTERN = "^(.*) (\\d+)$";
 
-    if (!fragmentToSearchForAndNumber.matches(endsWithSpaceDigitsPattern)) {
+    if (!fragmentToSearchForAndNumber.matches(ENDS_WITH_SPACE_AND_DIGITS_PATTERN)) {
       SimpleColorPrint.blueInLine("pick nth <fragment nth>, ");
       SimpleColorPrint.redInLine(fragmentToSearchForAndNumber);
       SimpleColorPrint.normal(" - did not end with space and number.");
-      SimpleColorPrint.red("pick nth <fragment nth> was aborted");
-      return pickConceptWithFragmentInKey(input.substring("pick nth ".length()));
+      SimpleColorPrint.red("'pick nth <fragment nth>' was aborted due to not matching ENDS_WITH_SPACE_AND_DIGITS_PATTERN = \"(.*) (\\d+)$\"");
+      return pickConceptWithFragmentInKey(input.substring("pick nth".length()).trim());
     } else {
-      String fragment = fragmentToSearchForAndNumber.replaceAll(endsWithSpaceDigitsPattern, "$1");
-      int nth = Integer.parseInt(fragmentToSearchForAndNumber.replaceAll(endsWithSpaceDigitsPattern, "$2"));
+      String fragment = fragmentToSearchForAndNumber.replaceAll(ENDS_WITH_SPACE_AND_DIGITS_PATTERN, "$1").trim();
+      int nth = Integer.parseInt(fragmentToSearchForAndNumber.replaceAll(ENDS_WITH_SPACE_AND_DIGITS_PATTERN, "$2"));
       SimpleColorPrint.blueInLine("Searching for fragment: ");
       SimpleColorPrint.redInLine(fragment);
       SimpleColorPrint.blueInLine(" nth: ");
-      SimpleColorPrint.red(String.valueOf(nth) + "\n");
+      SimpleColorPrint.red(String.valueOf(nth));
       return pickNthKeyDefinition(fragment, nth);
     }
   }
