@@ -29,8 +29,8 @@ public class Info {
     }
     else {
       SimpleColorPrint.blueInLine("Defining all keys containing fragment: ");
-      SimpleColorPrint.red(fragment + "\n");
-      found.forEach(entry -> printConceptWithFragmentHighlighted(entry, fragment));
+      SimpleColorPrint.red(fragment);
+      printConceptEntryList_indexed_fragmentHighlighted(fragment, found);
     }
     System.out.println();
   }
@@ -46,8 +46,8 @@ public class Info {
     }
     else {
       SimpleColorPrint.blueInLine("Defining all key-values containing fragment: ");
-      SimpleColorPrint.red(fragment + "\n");
-      found.forEach(entry -> printConceptWithFragmentHighlighted(entry, fragment));
+      SimpleColorPrint.red(fragment);
+      printConceptEntryList_indexed_fragmentHighlighted(fragment, found);
     }
     System.out.println();
   }
