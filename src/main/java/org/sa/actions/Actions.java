@@ -198,7 +198,7 @@ public class Actions {
                 "\nAdditional instructions: \n" + instruction.getIndividualInstructions(concept.getKey()) :
                 "")
         ;
-    System.out.println(questionB);
+    //System.out.println(questionB);
 
     String answer = ai.getAnswer(questionB) + "\n";
     String evaluationString = extractEvaluationString(answer);

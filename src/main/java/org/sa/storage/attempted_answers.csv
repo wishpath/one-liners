@@ -887,3 +887,31 @@ backlog,where the waiting tasks are being held for the team,9,2025-09-06T23:06:0
 CTO,Cheaf Technical Officer - usually the head of IT,8,2025-09-06T23:06:41.384690300
 OKR,Objective Key Requirements,0,2025-09-06T23:06:57.819110900
 REST,standard use of API - data formats like; JSON or XML; http methods like PUT; POST; DELETE; application layers like controller; service; storage,6,2025-09-06T23:11:27.972807200
+Ivy,Java tool to handle dependecies during build or deployment,9,2025-09-08T22:30:02.341775700
+API gateway,server that handles incomming and outgoing traffic,8,2025-09-08T22:30:52.619437800
+Kerberos principal,user and service name in the format of username@service.com,8,2025-09-08T22:31:34.432022100
+OKR,Objectives and Key Results,10,2025-09-08T22:31:58.269982600
+secret (Kubernetes),authorisation data in etcd,9,2025-09-08T22:32:35.400926400
+DNS,Domain Name System - user friendly website names mapped to their IPs,10,2025-09-08T22:33:26.221226500
+data custodian,person or team responsible for data,10,2025-09-08T22:33:46.581816500
+DC components,Data Ceter components: hardware; software; infrastructure; network and people,10,2025-09-08T22:34:33.663312800
+assess,check to ensure,9,2025-09-08T22:34:44.963360200
+deterministic,such action would mean a single result,9,2025-09-08T22:35:26.587840700
+modal window,web component similar to dialog,9,2025-09-08T22:35:53.115170200
+cohesion,relatedness,8,2025-09-08T22:36:18.003180400
+web,internet,7,2025-09-08T22:36:28.470791800
+IoC,Iversion of Control - software component takes care of lifecycle of objects; beans and their injection,10,2025-09-08T22:37:32.108491500
+Kafka,Data flow orchectration platform,9,2025-09-08T22:37:52.930999400
+collision resistant,low chance of accidently getting results that match exactly,9,2025-09-08T22:38:35.981640200
+allocate,find place and reserve it,8,2025-09-08T22:39:01.115184300
+detrimental,very bad; damaging,10,2025-09-08T22:39:47.508223400
+distributed computing,multiple remote computers does a single computation,7,2025-09-08T22:40:26.076074200
+synchronous,not overlaping by time,0,2025-09-08T22:40:57.755111600
+to prompt,to ask,8,2025-09-08T22:41:25.035805800
+to stash,to hide temporary until applied back,9,2025-09-08T22:42:02.764892500
+operational risk,any risk for a running system,8,2025-09-08T22:42:26.829378
+heap (context: data structure),data structure; two ended que; good for accessing object in LIFO and FIFO way.,0,2025-09-08T22:44:15.226594100
+artifact (context: compilation),compiled piece of code; ready for distribution or running,9,2025-09-08T22:45:30.452415800
+onboarding,welcoming to a company,9,2025-09-08T22:45:40.090208400
+heap space,memory allocated while the app is running,10,2025-09-08T22:46:07.351069700
+package (software),sort of a folder where classes can be placed,8,2025-09-08T22:46:34.215003300
