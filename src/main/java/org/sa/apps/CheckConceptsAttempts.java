@@ -17,28 +17,26 @@ import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 
-
 //loads keyDefinition and keyScore from files independently from main app.
 public class CheckConceptsAttempts {
 
   public final Map<String, String> keyDefinition = loadConceptsCheckRepeated();
   public final ValueAscendingMap<String, Integer> keyScore = loadScores(); //no keys with score zero, auto ascending
 
-
   record AttemptRecord(String key, String definition, int evaluation, LocalDateTime timestamp) {}
 
   public static void main(String[] args) {
     CheckConceptsAttempts app = new CheckConceptsAttempts();
     List<AttemptRecord> attempts = readAttempts();
+    System.out.println(attempts.size() + "(size)");
     Map<String, List<AttemptRecord>> key_attempts = app.groupAttemptsByExistingKey(attempts); // filters out keys that are not present in 'keyDefinition'
     //app.printGroupedAttempts(key_attempts);
-    app.printKeyGrades(key_attempts, 8);
+    app.printKeyGradesThatAreAllBelowSomeGrade(key_attempts, 9);
     //app.printAttemptsByAlphabeticalOrderOfKeys(attempts);
   }
 
   private static List<AttemptRecord> readAttempts() {
-    final Path ATTEMPTED_ANSWERS_FILEPATH = Paths.get("src/main/java/org/sa/storage/attempted_answers.csv");
-    try (BufferedReader reader = Files.newBufferedReader(ATTEMPTED_ANSWERS_FILEPATH)) {
+    try (BufferedReader reader = Files.newBufferedReader(Paths.get("src/main/java/org/sa/storage/attempted_answers.csv"))) {
       return reader.lines()
           .map(CheckConceptsAttempts::parseLine)
           .filter(Objects::nonNull)
@@ -87,10 +85,9 @@ public class CheckConceptsAttempts {
   }
 
   private Map<String, String> loadConceptsCheckRepeated() {
-    final Path TOPICS_PUBLIC = Paths.get("src/main/java/org/sa/concepts/topics");
     Map<String, String> keyDefinitionX = new HashMap<>();
     try {
-      for (Path subtopicPath : Files.walk(TOPICS_PUBLIC).filter(p -> p.toString().endsWith(".concepts")).toList())
+      for (Path subtopicPath : Files.walk(Paths.get("src/main/java/org/sa/concepts/topics")).filter(p -> p.toString().endsWith(".concepts")).toList())
         Files.lines(subtopicPath)
             .filter(line -> line.contains("="))
             .forEach(line -> {
@@ -147,7 +144,7 @@ public class CheckConceptsAttempts {
     return keyScoreX;
   }
 
-  public void printKeyGrades(Map<String, List<AttemptRecord>> keyAttempts) {
+  public void printKeyGradesThatAreAllBelowSomeGrade(Map<String, List<AttemptRecord>> keyAttempts) {
     keyAttempts.forEach((key, records) -> {
       SimpleColorPrint.redInLine(key + ": ");
       String grades = records.stream()
@@ -157,7 +154,7 @@ public class CheckConceptsAttempts {
     });
   }
 
-  public void printKeyGrades(Map<String, List<AttemptRecord>> keyAttempts, int belowThisGrade) {
+  public void printKeyGradesThatAreAllBelowSomeGrade(Map<String, List<AttemptRecord>> keyAttempts, int belowThisGrade) {
     keyAttempts.forEach((key, records) -> {
       boolean allBelow = records.stream().allMatch(r -> r.evaluation() < belowThisGrade);
       if (allBelow) {

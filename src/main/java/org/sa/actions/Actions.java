@@ -61,16 +61,15 @@ public class Actions {
     SimpleColorPrint.red(fragment + "\n");
 
     return concepts.keyDefinition.entrySet()
-        .stream()
-        .filter(entry -> entry.getKey().toLowerCase().contains(fragment.toLowerCase()))
-        .findFirst()
-        .orElseGet(() -> {
-          SimpleColorPrint.blueInLine("Not found any concept containing fragment: ");
-          SimpleColorPrint.red(fragment);
-          return pickConceptWithLowestScore();
-        });
+      .stream()
+      .filter(entry -> entry.getKey().toLowerCase().contains(fragment.toLowerCase()))
+      .findFirst()
+      .orElseGet(() -> {
+        SimpleColorPrint.blueInLine("Not found any concept containing fragment: ");
+        SimpleColorPrint.red(fragment);
+        return pickConceptWithLowestScore();
+      });
   }
-
 
   public Entry<String, String> pickNthKeyDefinition(String fragment, int nthInstance) {
     List<Entry<String, String>> matchingKey_Definition = concepts.keyDefinition
@@ -99,8 +98,6 @@ public class Actions {
     Info.printConceptEntryList_indexed_fragmentHighlighted(fragment, matchingKey_Definition);
     return matchingKey_Definition.get(nthInstance);
   }
-
-
 
   public void askAi(String input) {
     SimpleColorPrint.yellow(ai.getAnswer(input) + "\n");
