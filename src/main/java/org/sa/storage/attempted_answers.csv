@@ -915,3 +915,10 @@ artifact (context: compilation),compiled piece of code; ready for distribution o
 onboarding,welcoming to a company,9,2025-09-08T22:45:40.090208400
 heap space,memory allocated while the app is running,10,2025-09-08T22:46:07.351069700
 package (software),sort of a folder where classes can be placed,8,2025-09-08T22:46:34.215003300
+synchronous,happening back to back; one after another,8,2025-09-10T10:28:56.352763900
+heap (context: data structure),data structure; good for keeping items sorted automatically; implemented as PriorityQueue,9,2025-09-10T10:30:18.283546600
+JSX,Javascrip as XML - the way to add web elements and logit in React,7,2025-09-10T10:31:11.556014900
+domain model,concept of how a business works,9,2025-09-10T10:31:49.968969500
+RBAC,role based access,9,2025-09-10T10:32:17.501061
+good separation of concerns for DocManager,class only contains methods regarding managing documents: edit; create; delete and so on,10,2025-09-10T10:36:53.001085800
+dispatcher,something or someone who directs and manages flows,9,2025-09-10T10:37:59.822737800
