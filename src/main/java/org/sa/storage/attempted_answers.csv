@@ -935,3 +935,14 @@ bad separation of concerns (DDD),a single software unit contains unrelated funct
 customer data domain,part of business where the concern is how customer data is being operated,8,2025-09-11T11:00:12.586669400
 code integration,means code is being assembled; built; tested and if needed fixed in the feedback loop,8,2025-09-11T11:01:07.794929500
 signup metadata,names of signup information: email; username; password and so on,9,2025-09-11T11:02:08.443903700
+SSO,singe sign on - a way to authenticate without entering a password,9,2025-09-11T23:21:11.745456200
+test integration,how well tests do when integrated into realistic context,9,2025-09-11T23:22:24.989739600
+hub,central point of something,8,2025-09-11T23:25:13.691558400
+Kerberos keytab key,file with authentication data,8,2025-09-11T23:26:22.728615300
+hash,a standard deterministic outcome of defined algorithms (hashing functions),7,2025-09-11T23:27:47.403232100
+test data management for enterprise,business area which takes care of data that will be used for testing purposes,8,2025-09-11T23:29:25.272865400
+sticky session benefit,session data does not have to be transfered to another app instances,9,2025-09-11T23:33:29.923010
+staging environment,evironment that contains next release changes,9,2025-09-11T23:34:11.026617400
+feature flag,software technique; where some new features are hiden using a single boolean - feature flag,8,2025-09-11T23:35:08.963954600
+collision,when algorithm is expected to produce unique results; but they are matching,9,2025-09-11T23:35:51.990865500
+credential examples,username; password; email; address,9,2025-09-11T23:36:13.331716600
