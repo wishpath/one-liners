@@ -922,3 +922,16 @@ domain model,concept of how a business works,9,2025-09-10T10:31:49.968969500
 RBAC,role based access,9,2025-09-10T10:32:17.501061
 good separation of concerns for DocManager,class only contains methods regarding managing documents: edit; create; delete and so on,10,2025-09-10T10:36:53.001085800
 dispatcher,something or someone who directs and manages flows,9,2025-09-10T10:37:59.822737800
+OpenShift,container orchestration platform,9,2025-09-11T10:52:19.838748800
+continuous integration components,assembe; build; dependecties; testing,8,2025-09-11T10:53:06.052616900
+commissioning,starting to use a feature in the production,9,2025-09-11T10:53:41.095445
+edge (graphs),a conncection between nodes,9,2025-09-11T10:54:31.858686500
+Ingress Controller,In Openshift this dispatches traffic and balances load,8,2025-09-11T10:55:09.998428700
+abstraction,hiding unnecesarry details; exposing key parts of an object,9,2025-09-11T10:56:04.128931200
+memoization,saving intermediate calculations for performance improvement,9,2025-09-11T10:57:00.929582
+operations specialist,takes care of infrastructure like servers; network; and deployment of applications,10,2025-09-11T10:57:36.671447100
+JPA transaction (db),Java Persistance API transaction -  a goup of actions in the database; where a single fail of any action means that the whole transaction has failed,9,2025-09-11T10:58:53.075888600
+bad separation of concerns (DDD),a single software unit contains unrelated functionalities,8,2025-09-11T10:59:27.825527200
+customer data domain,part of business where the concern is how customer data is being operated,8,2025-09-11T11:00:12.586669400
+code integration,means code is being assembled; built; tested and if needed fixed in the feedback loop,8,2025-09-11T11:01:07.794929500
+signup metadata,names of signup information: email; username; password and so on,9,2025-09-11T11:02:08.443903700
