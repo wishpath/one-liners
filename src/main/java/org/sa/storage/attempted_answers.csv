@@ -946,3 +946,9 @@ staging environment,evironment that contains next release changes,9,2025-09-11T2
 feature flag,software technique; where some new features are hiden using a single boolean - feature flag,8,2025-09-11T23:35:08.963954600
 collision,when algorithm is expected to produce unique results; but they are matching,9,2025-09-11T23:35:51.990865500
 credential examples,username; password; email; address,9,2025-09-11T23:36:13.331716600
+conduct,behavior,10,2025-09-12T22:22:29.388259900
+subsetting data,getting a part of data,10,2025-09-12T22:23:37.088617700
+justified vs excusable,justified focuses on positives — best that can be done in an imperfect situation; excusable lets assume that faults can be tolerated,10,2025-09-12T22:26:20.212202700
+Java bean,Java object in Spring,8,2025-09-12T22:28:57.519541900
+on-premises datacenter,datacenter that is owned by company and located in the building owned by company,10,2025-09-12T22:30:03.064729600
+abstraction examples,interface; abstract class; API; method,9,2025-09-12T22:30:24.472576500
