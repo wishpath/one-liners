@@ -952,3 +952,17 @@ justified vs excusable,justified focuses on positives — best that can be done 
 Java bean,Java object in Spring,8,2025-09-12T22:28:57.519541900
 on-premises datacenter,datacenter that is owned by company and located in the building owned by company,10,2025-09-12T22:30:03.064729600
 abstraction examples,interface; abstract class; API; method,9,2025-09-12T22:30:24.472576500
+REST,Representational State Transfer - standards for building API,10,2025-09-14T21:53:24.446130500
+Kerberos principal,user@server.com,9,2025-09-14T21:54:40.238433400
+namespace (cluster),separate unit of instance containers,8,2025-09-14T21:56:07.248906100
+namespace (networking),separate unit of instance containers,8,2025-09-14T22:03:14.799346400
+namespace (networking),separate unit of instance containers,0,2025-09-14T22:03:51.387037
+namespace (cluster),separate unit of instance containers,7,2025-09-14T22:04:47.315380300
+lazy initialization,where an object is only initialised when called the first time,10,2025-09-14T22:05:56.617753800
+DGOM,Data Grid Operational Memory,0,2025-09-14T22:06:34.321161600
+RESTful,means the API follows REST standards (Representational State Trasfer); standard file formats like JSON; stateless classes; layers like controller; service; storage; http standard methods like GET PUT DELETE,8,2025-09-14T22:08:45.385389500
+RESTful layers,means the API follows REST standards (Representational State Trasfer); standard file formats like JSON; stateless classes; layers like controller; service; storage; http standard methods like GET PUT DELETE,9,2025-09-14T22:15:37.836164400
+RESTful,means the API follows REST standards (Representational State Trasfer); standard file formats like JSON; stateless classes; layers like controller; service; storage; http standard methods like GET PUT DELETE,9,2025-09-14T22:16:44.456525300
+RESTful,means the API follows REST standards (Representational State Transfer); standard file formats like JSON; stateless classes; layers like controller; service; storage; http standard methods like GET PUT DELETE,9,2025-09-14T22:21:38.529633
+RESTful,means the API follows REST standards (Representational State Transfer); standard file formats like JSON; stateless classes; layers like controller; service; storage; http standard methods like GET PUT DELETE,9,2025-09-14T22:26:06.222043500
+RESTful,means the API follows REST standards (Representational State Transfer); standard file formats like JSON; stateless classes; layers like controller; service; storage; http standard methods like GET PUT DELETE,10,2025-09-14T22:27:05.573410700

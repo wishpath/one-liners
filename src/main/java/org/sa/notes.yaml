@@ -1,4 +1,15 @@
 problems:
+  pick nth fragment 2 - should only print keys, not the values
+  extra instructions for
+  
+Please explain this: namespace (cluster)
+  
+  separate unit of instance containers
+Rating: 8/10. The definition "separate unit of instance containers" somewhat touches the essence of "namespace (cluster)" by implying separation but doesn't highlight resource division among projects or teams. Better definition example: "Logical partitioning of cluster resources to isolate workloads."
+
+The default definition: divides cluster resources (pods, services, deployments) among projects or teams.
+
+extra instructions should be printed before the answer is given
 
 ideas:
   - spaced repetition?
