@@ -966,3 +966,12 @@ RESTful,means the API follows REST standards (Representational State Trasfer); s
 RESTful,means the API follows REST standards (Representational State Transfer); standard file formats like JSON; stateless classes; layers like controller; service; storage; http standard methods like GET PUT DELETE,9,2025-09-14T22:21:38.529633
 RESTful,means the API follows REST standards (Representational State Transfer); standard file formats like JSON; stateless classes; layers like controller; service; storage; http standard methods like GET PUT DELETE,9,2025-09-14T22:26:06.222043500
 RESTful,means the API follows REST standards (Representational State Transfer); standard file formats like JSON; stateless classes; layers like controller; service; storage; http standard methods like GET PUT DELETE,10,2025-09-14T22:27:05.573410700
+error budget,how many erros are allowed in the project,8,2025-09-15T15:47:02.773689700
+allocate a list,reserve memory for the items of the list,10,2025-09-15T15:47:27.986287600
+MLM,Multi Level Marketing - where the goods are distributed by recruits or their own recruits,10,2025-09-15T15:48:26.096252200
+ubiquitous language (DDD),commonly understood language in scpecific business area,8,2025-09-15T15:49:17.264509
+bounded context (example of inventory management),inventory managment part is part of some bigger business model and is implemented in a separate software unit like microservice; module or class,10,2025-09-15T15:50:30.171789400
+base (math),the nuber that is going to be rased by some power,9,2025-09-15T15:52:15.100788300
+synchronous,happening back to back,9,2025-09-15T15:52:29.481293600
+pod,an instance in Kubernetes with own resources; container and app instance,9,2025-09-15T15:53:23.639031700
+object mapping (database),java object is mapped on database table enry,8,2025-09-15T15:53:55.430866
