@@ -177,7 +177,16 @@ public class Info {
     SimpleColorPrint.blue("Matching concepts: ");
     for (int i = 0; i < matchingKey_Definition.size(); i++) {
       SimpleColorPrint.normalInLine(Props.TAB + i + " ");
-      Info.printConceptWithFragmentHighlighted(matchingKey_Definition.get(i), fragment);
+      printConceptWithFragmentHighlighted(matchingKey_Definition.get(i), fragment);
+    }
+    System.out.println();
+  }
+
+  public static void printKeyEntryList_indexed_fragmentHighlighted(String fragment, List<Map.Entry<String, String>> matchingKey_Definition) {
+    SimpleColorPrint.blue("Matching keys: ");
+    for (int i = 0; i < matchingKey_Definition.size(); i++) {
+      SimpleColorPrint.normalInLine(Props.TAB + i + " ");
+      printStringWithFragmentHighlighted(fragment, Props.TAB + matchingKey_Definition.get(i).getKey(), Colors.LIGHT_GRAY, Colors.RED);
     }
     System.out.println();
   }

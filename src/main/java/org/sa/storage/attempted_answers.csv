@@ -975,3 +975,19 @@ base (math),the nuber that is going to be rased by some power,9,2025-09-15T15:52
 synchronous,happening back to back,9,2025-09-15T15:52:29.481293600
 pod,an instance in Kubernetes with own resources; container and app instance,9,2025-09-15T15:53:23.639031700
 object mapping (database),java object is mapped on database table enry,8,2025-09-15T15:53:55.430866
+API gateway,Application Programming Interface gateway — a server that adds controll to the traffic to endpoints,10,2025-09-16T23:21:34.122308900
+DGOM,Data Governance Object Model,0,2025-09-16T23:22:11.890318900
+traverse,to visit,9,2025-09-16T23:22:24.303558500
+vague,not expressed enough,8,2025-09-16T23:22:36.667871900
+Rancher platform,container orchestration platform,10,2025-09-16T23:23:04.180236100
+CDD (compliance),Customer Data Domain,0,2025-09-16T23:23:25.774762500
+web portal,internet page from where other websited are accessed,7,2025-09-16T23:24:18.230112900
+Ivy,Dependency management tool building and deploying apps,9,2025-09-16T23:25:04.273940
+Spring beans,Java objects in spring that has getters and setters and are usually DTO,8,2025-09-16T23:25:49.225667800
+OpenShift vs Kubernetes?,OpensShift is based on Kubernetes,8,2025-09-16T23:26:29.159070200
+whitelisting,enabling asses by some criteria like IP,8,2025-09-16T23:27:02.683095300
+namespace (networking),devides cluster resources among teams; services; contains pods,8,2025-09-16T23:27:49.025222200
+real-time data flow,data transfers and transformation at a given time,8,2025-09-16T23:28:49.783003200
+Java EE,Java Enterprise Edition - set of tool for large companies,9,2025-09-16T23:29:21.081024200
+enterprise-level,fits to satisfy big company needs,9,2025-09-16T23:30:04.605285200
+product backlog (agile),task to be doen,5,2025-09-16T23:30:15.374094900

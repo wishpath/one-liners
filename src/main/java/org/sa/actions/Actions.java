@@ -91,11 +91,11 @@ public class Actions {
       SimpleColorPrint.blueInLine(fragment);
       SimpleColorPrint.redInLine(". The entered 'nth' value is too high: ");
       SimpleColorPrint.blue(String.valueOf(nthInstance) + "\n");
-      Info.printConceptEntryList_indexed_fragmentHighlighted(fragment, matchingKey_Definition);
+      Info.printKeyEntryList_indexed_fragmentHighlighted(fragment, matchingKey_Definition);
       return pickConceptWithLowestScore();
     }
 
-    Info.printConceptEntryList_indexed_fragmentHighlighted(fragment, matchingKey_Definition);
+    Info.printKeyEntryList_indexed_fragmentHighlighted(fragment, matchingKey_Definition);
     return matchingKey_Definition.get(nthInstance);
   }
 
