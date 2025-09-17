@@ -1,5 +1,4 @@
 problems:
-  pick nth fragment 2 - should only print keys, not the values
 
 ideas:
   - there could be extra note for key for the user before the answer
