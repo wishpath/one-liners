@@ -44,3 +44,4 @@ verbose=using too many words
 suite=related set treated as a group, e.g. suite of tests.
 volatile=likely to change suddenly or unpredictably; unstable or temporary.
 arbitrary=based on choice or chance, not a fixed rule or system.
+constraint (general word)=restriction or limitation that defines what is allowed.

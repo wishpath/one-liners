@@ -999,3 +999,11 @@ tampering,making worse; making illegal alterations,10,2025-09-17T10:10:47.338267
 Loki (observability),in kubernetes it takes care of gathering logs,8,2025-09-17T10:11:13.872634300
 irreversible data transformation,from the result one cannot tell what the initial data was,10,2025-09-17T10:12:06.419114800
 bounded context,in DDD bounded context is a separate unit of the software with ubiquitous language,10,2025-09-17T10:13:10.794470200
+trie,words stored letter by letter into tree-like data structures,10,2025-09-18T14:48:57.005614500
+Logstash,tool to process data; most usually logs,8,2025-09-18T14:49:32.283741500
+DGOM,Data Governance Operating Model,9,2025-09-18T14:49:52.975055600
+product backlog (agile),task in the backlog that are prioritized by importance,8,2025-09-18T14:50:32.130799500
+CDD (compliance),Customer Due Dilligence - customer checks,9,2025-09-18T14:50:57.531079500
+RESTful client-server,Representative State Transfer exploses endpoints on server that are consumed on the client side,6,2025-09-18T14:52:17.607935800
+dispose,get rid of,10,2025-09-18T15:17:35.635533
+Hibernate,Database tool for Java,8,2025-09-18T15:19:05.172283
