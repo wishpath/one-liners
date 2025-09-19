@@ -1007,3 +1007,17 @@ CDD (compliance),Customer Due Dilligence - customer checks,9,2025-09-18T14:50:57
 RESTful client-server,Representative State Transfer exploses endpoints on server that are consumed on the client side,6,2025-09-18T14:52:17.607935800
 dispose,get rid of,10,2025-09-18T15:17:35.635533
 Hibernate,Database tool for Java,8,2025-09-18T15:19:05.172283
+downlink (networking),incomming traffic,10,2025-09-19T23:33:46.336143300
+Logstash,tool for data processing; most ususally logs,8,2025-09-19T23:34:13.177594900
+jitter,variation how manay packets gets passed throug network,10,2025-09-19T23:34:44.927869600
+latency,how long it takes a singnal to reach its destination,9,2025-09-19T23:35:15.549742400
+uplink (networking),outgoing traffic,10,2025-09-19T23:35:31.148551900
+REST client-server constraint,separation of concerns between client that is usually UI; and server backend. For independent development,10,2025-09-19T23:36:32.950429500
+bandwidth,data sending speed cap,9,2025-09-19T23:37:13.156085300
+constraint (general word),limitation,9,2025-09-19T23:37:23.948448300
+PV (containerisation),Persistent Volume - storage that are independent of application instances or pods,10,2025-09-19T23:38:21.230650300
+remediation,fixing some problem,8,2025-09-19T23:38:43.675448800
+value stream,agile way for multiple teams to work together,8,2025-09-19T23:39:14.858042500
+product backlog (agile),prioritised tasks to be done,9,2025-09-19T23:39:43.668531700
+firewall,network rules of accessing certain instances,8,2025-09-19T23:40:21.066705100
+etcd,et cetera directory - common settings and preferences in Kubernetes,7,2025-09-19T23:41:07.138734200
