@@ -1026,3 +1026,9 @@ data pseudonymization,data is exchanged with some other names,8,2025-09-20T19:49
 functional testing,check if functions work well,8,2025-09-20T19:50:22.730351
 DGOM,Data Governance Operating Model - how a company takes care of personal data,9,2025-09-20T19:50:59.626139600
 verbose,having many words,10,2025-09-20T19:51:12.024233200
+Logstash,tool for information processing. mostly logs,8,2025-09-21T18:24:13.656216100
+remediation,solving inssues or making them less severe,9,2025-09-21T18:24:50.548695500
+deque,data structure implemented as ArrayDeque. Keeps insertion order with efficient access to it's front and back so it is both FIFO LIFO,9,2025-09-21T18:26:35.853687200
+Liferay,tool for bringing gathering logs,8,2025-09-21T18:27:22.641892100
+Liferay,premade content management system for large companies. backend and frontend,10,2025-09-21T18:37:57.876274200
+Liferay,tool for bringing gathering logs,0,2025-09-21T18:38:32.938256800
