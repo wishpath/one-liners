@@ -1032,3 +1032,7 @@ deque,data structure implemented as ArrayDeque. Keeps insertion order with effic
 Liferay,tool for bringing gathering logs,8,2025-09-21T18:27:22.641892100
 Liferay,premade content management system for large companies. backend and frontend,10,2025-09-21T18:37:57.876274200
 Liferay,tool for bringing gathering logs,0,2025-09-21T18:38:32.938256800
+latency,how long it takes for data to travel over network,8,2025-09-21T21:45:25.291426300
+directed graph,a graph where edges are one-directional,10,2025-09-22T23:52:19.089335400
+Logstash,tool for processing information; usually logs,8,2025-09-22T23:53:02.076947600
+Logstash,tool to process information; usually logs,9,2025-09-22T23:54:30.517339700
