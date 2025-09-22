@@ -1036,3 +1036,4 @@ latency,how long it takes for data to travel over network,8,2025-09-21T21:45:25.
 directed graph,a graph where edges are one-directional,10,2025-09-22T23:52:19.089335400
 Logstash,tool for processing information; usually logs,8,2025-09-22T23:53:02.076947600
 Logstash,tool to process information; usually logs,9,2025-09-22T23:54:30.517339700
+Logstash,pipeline for information ingesting and processing. usually for logs,9,2025-09-22T23:58:06.715585900
