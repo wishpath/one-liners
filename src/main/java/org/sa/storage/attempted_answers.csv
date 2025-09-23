@@ -1037,3 +1037,8 @@ directed graph,a graph where edges are one-directional,10,2025-09-22T23:52:19.08
 Logstash,tool for processing information; usually logs,8,2025-09-22T23:53:02.076947600
 Logstash,tool to process information; usually logs,9,2025-09-22T23:54:30.517339700
 Logstash,pipeline for information ingesting and processing. usually for logs,9,2025-09-22T23:58:06.715585900
+Logstash,Tool having data processing pipleline.,9,2025-09-23T10:28:42.685227400
+Logstash,tool with information processing pipline,8,2025-09-23T11:05:38.197620500
+JETTY,application server,8,2025-09-23T11:06:39.636296200
+domain,business area,8,2025-09-23T11:07:14.174434400
+connection protection (examples),obfucation; pseudonymisation; encryption\,8,2025-09-23T11:07:56.415049500

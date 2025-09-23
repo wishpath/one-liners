@@ -1,5 +1,5 @@
 problems:
- immediately after answer, using 'scores' score stays the same as before. using 'score' command the value is correct. after restart 'scores' command gives the correct value as well
+
 ideas:
   - there could be extra note for key for the user before the answer
     - it should tell what is expected to be mentioned in the answer
