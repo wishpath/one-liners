@@ -1042,3 +1042,12 @@ Logstash,tool with information processing pipline,8,2025-09-23T11:05:38.19762050
 JETTY,application server,8,2025-09-23T11:06:39.636296200
 domain,business area,8,2025-09-23T11:07:14.174434400
 connection protection (examples),obfucation; pseudonymisation; encryption\,8,2025-09-23T11:07:56.415049500
+regression testing,checking UI how features function from user perspective,8,2025-09-24T22:13:52.439106600
+regression testing,checking UI how features function from user perspective,6,2025-09-24T22:17:50.124245900
+bandwidth,how much traffic can be transfered in defined time period. This is cap value; not a measurement,9,2025-09-24T22:19:31.221650300
+firewall opening,establishing rules in the network who can access what.,8,2025-09-24T22:20:42.750468300
+YAML,yaml aint markup language,9,2025-09-24T22:21:05.131976200
+coupling (noun) (software),two units of software depends on each other,8,2025-09-24T22:21:43.881302800
+container instance,containter instance has runtime; configuration and setting for application instance to run,7,2025-09-24T22:22:30.886627300
+CI/CD,continuous integration - continuous delivery,10,2025-09-24T22:23:00.414323900
+cross architecture,containing multiple concerns regarding architecture,9,2025-09-24T22:24:08.025313700
