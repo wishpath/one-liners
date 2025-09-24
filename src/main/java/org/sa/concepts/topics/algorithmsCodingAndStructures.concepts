@@ -37,3 +37,4 @@ state (of object)=current values of fields.
 technical debt=accumulated code imperfections.
 trie=tree storing words by letters, good for fast prefix search. Pronounced like “try” (/traɪ/).
 undirected graph=nodes connected bi-directionally.
+polymorphism (OOP)=overriding and overloading; objects and methods take multiple forms via extending or implementing.
