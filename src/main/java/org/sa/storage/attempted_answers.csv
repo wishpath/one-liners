@@ -1051,3 +1051,10 @@ coupling (noun) (software),two units of software depends on each other,8,2025-09
 container instance,containter instance has runtime; configuration and setting for application instance to run,7,2025-09-24T22:22:30.886627300
 CI/CD,continuous integration - continuous delivery,10,2025-09-24T22:23:00.414323900
 cross architecture,containing multiple concerns regarding architecture,9,2025-09-24T22:24:08.025313700
+polymorphism (OOP),ability for object to take multiple forms; by overriding and overloading. This is also enabled by inheritance.,10,2025-09-25T08:09:59.759244500
+good separation of concerns (DDD),each software unit takes care of a single domain,9,2025-09-25T08:10:32.751382500
+unit testing,chek if parts of software work while not integrated to a common context,8,2025-09-25T08:11:27.429978600
+constraint (general word),limitation,9,2025-09-25T08:11:39.751045400
+Hungarian pollution,variables gets overly described by suffixes that gives out variable types,8,2025-09-25T08:12:22.921579500
+SLI,Service Level Indicator - measurement of how well application works in production,9,2025-09-25T08:13:21.947211600
+container,environment; runtime; resources and settings as a unit to enable app instances to run independently on environment,9,2025-09-25T08:14:49.226925200
