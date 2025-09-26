@@ -1058,3 +1058,9 @@ constraint (general word),limitation,9,2025-09-25T08:11:39.751045400
 Hungarian pollution,variables gets overly described by suffixes that gives out variable types,8,2025-09-25T08:12:22.921579500
 SLI,Service Level Indicator - measurement of how well application works in production,9,2025-09-25T08:13:21.947211600
 container,environment; runtime; resources and settings as a unit to enable app instances to run independently on environment,9,2025-09-25T08:14:49.226925200
+signatory,a person authorised to sign on behalf of someone or a company,10,2025-09-26T10:38:07.584090500
+Kafka vs Kubernetes,Kafka is platorm for data orchectration and Kubernetes is a platform for container orchestration,10,2025-09-26T10:39:15.637423700
+regression testing,checking to know if introduced functionalities has not impacted the existing ones,9,2025-09-26T10:40:27.792998400
+code integration,gathering parts of code together into a single system and testing it.,10,2025-09-26T10:41:28.572326100
+cohesion (DDD),how connected two peaces of code are in terms of functional similarity,8,2025-09-26T10:42:33.818343300
+namespace (cluster),subdivistion of cluster for a team or service,8,2025-09-26T10:43:09.270446
