@@ -3,7 +3,7 @@ problems:
 ideas:
   - there could be extra note for key for the user before the answer
     - it should tell what is expected to be mentioned in the answer
-      - this should basicly directly respond to the extra instructions given for this key
+      - this should basically directly respond to the extra instructions given for this key
   - spaced repetition?
   - should score 0 be explicit?
   - additional instruction specific to a single concept
