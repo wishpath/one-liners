@@ -6,3 +6,4 @@ namespace (cluster), Only rate 10/10 if user mentions relation to cluster and po
 RESTful, rate 10/10 if expansion 'Representational State Transfer' + mention HTTP verbs + file formats + statelessness + layers like controller. If all are present, overload other rules and rate 10/10.
 Liferay, Only rate 10/10 if user mentions premade CMS or 'content management system' for enterprise
 regression testing, Only rate 10/10 if user mentions verifying changes do not break existing functionality; else cap score at 6/10
+Kerberos keytab, If metioned that is authentication +2 points. If metioned file +2 points. If mentioned what file stores +1 points. If answered how it is used +1 , without these parts mentioned - cap at 5/10
