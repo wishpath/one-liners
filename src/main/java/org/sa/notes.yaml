@@ -38,3 +38,6 @@ how to:
     - then commit
   - tone down the definitions color in .concepts:
     - Settings > ... > File Types > "+" > in the "line comment" put "="
+
+top up openAI:
+  - https://platform.openai.com/settings/organization/billing/overview

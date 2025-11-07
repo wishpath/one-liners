@@ -1064,3 +1064,9 @@ regression testing,checking to know if introduced functionalities has not impact
 code integration,gathering parts of code together into a single system and testing it.,10,2025-09-26T10:41:28.572326100
 cohesion (DDD),how connected two peaces of code are in terms of functional similarity,8,2025-09-26T10:42:33.818343300
 namespace (cluster),subdivistion of cluster for a team or service,8,2025-09-26T10:43:09.270446
+application server,a server that provide enironment for application and manages beans; objects; servlets and so on,9,2025-11-07T23:02:55.216705200
+ORM,object related management,0,2025-11-07T23:04:01.888454800
+PII,project increment iteration,0,2025-11-07T23:04:30.217847900
+custody,action of taking care legaly,8,2025-11-07T23:05:22.193346400
+stop word filtering,technology of filters where too common words are ignored; it understands synonims and grammar,8,2025-11-07T23:06:23.368276300
+distributed computing,multiple remote computers completing a single task,8,2025-11-07T23:07:20.272486200
