@@ -1072,3 +1072,4 @@ stop word filtering,technology of filters where too common words are ignored; it
 distributed computing,multiple remote computers completing a single task,8,2025-11-07T23:07:20.272486200
 Kerberos keytab,Authentication information,8,2025-11-07T23:11:19.045803300
 Kerberos keytab,authentication file that stores username; service name and is used to request ticket from Kerberos,10,2025-11-07T23:28:01.226794200
+Unix,operating system,10,2025-11-08T22:34:34.442812200

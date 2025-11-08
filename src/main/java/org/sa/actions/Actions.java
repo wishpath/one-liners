@@ -19,12 +19,12 @@ import java.util.regex.Pattern;
 
 public class Actions {
 
-  private IndividualInstruction instruction;
+  private IndividualInstructionFromFile instruction;
   private Concepts concepts;
   private AiClient ai;
   private static final Path ATTEMPTED_ANSWERS_FILEPATH = Paths.get("src/main/java/org/sa/storage/attempted_answers.csv");
 
-  public Actions(Concepts concepts, AiClient ai, IndividualInstruction instruction) throws IOException {
+  public Actions(Concepts concepts, AiClient ai, IndividualInstructionFromFile instruction) throws IOException {
     this.concepts = concepts;
     this.ai = ai;
     this.instruction = instruction;
@@ -166,38 +166,13 @@ public class Actions {
         .orElse("");
   }
 
-  public Entry<String, String> evaluateUserExplanationWithAI(Entry<String, String> concept, String userInputDefinitionAttempt) throws IOException {
+  public Entry<String, String> evaluateUserExplanationWithAI(Entry<String, String> concept, String userInputDefinitionAttempt, String instructionToEvaluateUserInput) throws IOException {
     //just testing
     if (instruction.key_instructions.containsKey(concept.getKey())) System.out.println(concept.getKey() + " CONTAINS EXTRA INSTRUCTION");
-
+    instructionToEvaluateUserInput = instructionToEvaluateUserInput.replace("here_will_be_userInputDefinitionAttempt", userInputDefinitionAttempt);
+    System.out.println(instructionToEvaluateUserInput);
     //AI evaluation
-    String questionB =
-        "Is this a good key and definition: key: \"" + concept.getKey() + "\", and definition: \"" + userInputDefinitionAttempt + "\". " +
-            "\n A. Step 1 - Evaluate the answer by asking: 'Does this capture the essence?' (aim to be positive)." +
-            "\n B. If some details are missing but it captures the essence, rate 10/10." +
-            "\n C. If the definition matches this one, rate 10/10: " + concept.getValue() + ", but other definitions might get a perfect rating as well." +
-            "\n D. If the essence is ALMOST there, rate 9/10." +
-            "\n E. If the essence is somewhat touched, rate 8/10." +
-            "\n F. Think of an answer in up to 10 words - if you can't come up with a better one, rate 10/10." +
-            "\n G. If the answer is completely off, rate 0/10." +
-            "\n H. If the answer is somewhat acceptable, rate 7/10." +
-
-            //acronyms
-            "\n I. If the key is an acronym, definitions should include the exact matching word for each letter in the definition (e.g., 'Intelligence Quotient' for IQ); case does not matter." +
-            "\n J. If the key is an acronym, each core expanded word must be spelled exactly (−1 point per misspelling); Ignore if letters are lowercase or uppercase\n" +
-            "\n K. If the key is an acronym, each core expanded word — even if misspelled — must clearly match the key’s intended word; wrong words aren’t accepted (e.g., for “SSL”: “securing” OK (only gramatical form is different), “sekure” −1 point (misspell), “service” rejected (totally wrong word)).\n" +
-
-            "\n Step 2 - If the evaluation is less than 7/10, provide the correct answer (if 7/10 to 10/10, skip this step)." +
-            "\n Your entire answer should be up to 300 characters." +
-
-            //instructions for individual concept
-            (instruction.key_instructions.containsKey(concept.getKey()) ?
-                "\nAdditional instructions: \n" + instruction.getIndividualInstructions(concept.getKey()) :
-                "")
-        ;
-    //System.out.println(questionB);
-
-    String answer = ai.getAnswer(questionB) + "\n";
+    String answer = ai.getAnswer(instructionToEvaluateUserInput) + "\n";
     String evaluationString = extractEvaluationString(answer);
     int evaluation = Integer.parseInt(evaluationString.split("/")[0]);
 

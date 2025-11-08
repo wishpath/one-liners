@@ -10,12 +10,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Stream;
 
-public class IndividualInstruction {
+public class IndividualInstructionFromFile {
   private static final Path ADDITIONAL_INSTRUCTIONS_FILEPATH = Paths.get("src/main/java/org/sa/storage/instructions.csv");
   Map<String, String[]> key_instructions;
   Concepts concepts;
 
-  public IndividualInstruction(Concepts concepts) {
+  public IndividualInstructionFromFile(Concepts concepts) {
     this.concepts = concepts;
     this.key_instructions = loadAdditionalInstructions();
   }

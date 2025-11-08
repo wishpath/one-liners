@@ -1,12 +1,14 @@
 package org.sa;
 
 import org.sa.actions.Actions;
+import org.sa.actions.IndividualInstructionFromFile;
 import org.sa.actions.Info;
-import org.sa.actions.IndividualInstruction;
+import org.sa.actions.InstructionsForAi;
 import org.sa.concepts.Concepts;
+import org.sa.config.Props;
+import org.sa.console.ColoredString;
 import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
-import org.sa.other.MenuLine;
 
 import java.io.IOException;
 import java.util.Map;
@@ -26,7 +28,7 @@ public class Menu {
 
   private Scanner scanner = new Scanner(System.in);
   private Concepts concepts = new Concepts();
-  private IndividualInstruction instruction = new IndividualInstruction(concepts);
+  private IndividualInstructionFromFile instruction = new IndividualInstructionFromFile(concepts);
   private Actions act = new Actions(concepts, new AiClient(), instruction);
   private Info info = new Info(concepts);
   private Map.Entry<String, String> previousConcept = act.pickConceptWithLowestScore();
@@ -55,6 +57,7 @@ public class Menu {
   public Menu() throws IOException {
     System.out.println(MENU);
     while (true) {
+      String instructionToEvaluateUserInput = InstructionsForAi.getInstructionToEvaluateUserInput(concept, instruction);
       act.save();
       SimpleColorPrint.blueInLine("Please explain this: ");
       SimpleColorPrint.red(concept.getKey() + "\n");
@@ -115,7 +118,16 @@ public class Menu {
         info.printAllNonZeroScores();
 
       else
-        setConcept(act.evaluateUserExplanationWithAI(concept, input)); //if evaluation < 7, keeps same concept;
+        setConcept(act.evaluateUserExplanationWithAI(concept, input, instructionToEvaluateUserInput)); //if evaluation < 7, keeps same concept;
     }
+  }
+}
+
+class MenuLine {
+  public static String string(String command, String function) {
+    return
+        "\n" +
+            Props.TAB + ColoredString.red(command) +
+            " - " + function;
   }
 }
