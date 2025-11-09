@@ -1,14 +1,15 @@
 package org.sa;
 
 import org.sa.actions.Actions;
-import org.sa.actions.IndividualInstructionFromFile;
+import org.sa.service.IndividualInstructionFromFile;
 import org.sa.actions.Info;
-import org.sa.actions.InstructionsForAi;
+import org.sa.service.InstructionTextForAi;
 import org.sa.concepts.Concepts;
 import org.sa.config.Props;
 import org.sa.console.ColoredString;
 import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
+import org.sa.service.InstructionTextForUser;
 
 import java.io.IOException;
 import java.util.Map;
@@ -29,7 +30,9 @@ public class Menu {
   private Scanner scanner = new Scanner(System.in);
   private Concepts concepts = new Concepts();
   private IndividualInstructionFromFile instruction = new IndividualInstructionFromFile(concepts);
-  private Actions act = new Actions(concepts, new AiClient(), instruction);
+  private AiClient ai = new AiClient();
+  private Actions act = new Actions(concepts, ai, instruction);
+  InstructionTextForUser instructionForUser = new InstructionTextForUser(ai);
   private Info info = new Info(concepts);
   private Map.Entry<String, String> previousConcept = act.pickConceptWithLowestScore();
   private Map.Entry<String, String> concept = previousConcept;
@@ -57,10 +60,12 @@ public class Menu {
   public Menu() throws IOException {
     System.out.println(MENU);
     while (true) {
-      String instructionToEvaluateUserInput = InstructionsForAi.getInstructionToEvaluateUserInput(concept, instruction);
+      String instructionToEvaluateUserInput = InstructionTextForAi.getInstructionToEvaluateUserInput(concept, instruction);
+      String instructionForUserForConcept = instructionForUser.getInstructionForUserForConcept(concept, instructionToEvaluateUserInput);
       act.save();
       SimpleColorPrint.blueInLine("Please explain this: ");
       SimpleColorPrint.red(concept.getKey() + "\n");
+      System.out.println("AI instruction: \n" + instructionForUserForConcept);
       input = scanner.nextLine().trim();
 
       if (input.isEmpty())

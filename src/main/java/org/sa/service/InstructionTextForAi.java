@@ -1,8 +1,8 @@
-package org.sa.actions;
+package org.sa.service;
 
 import java.util.Map;
 
-public class InstructionsForAi {
+public class InstructionTextForAi {
   public static String getInstructionToEvaluateUserInput(Map.Entry<String, String> concept, IndividualInstructionFromFile instruction) {
     String questionB =
         "Is this a good key and definition: key: \"" + concept.getKey() + "\", and definition: \"here_will_be_userInputDefinitionAttempt\". " +

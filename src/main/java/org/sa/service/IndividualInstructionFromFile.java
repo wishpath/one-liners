@@ -1,4 +1,4 @@
-package org.sa.actions;
+package org.sa.service;
 
 import org.sa.concepts.Concepts;
 
@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 
 public class IndividualInstructionFromFile {
   private static final Path ADDITIONAL_INSTRUCTIONS_FILEPATH = Paths.get("src/main/java/org/sa/storage/instructions.csv");
-  Map<String, String[]> key_instructions;
+  public Map<String, String[]> key_instructions;
   Concepts concepts;
 
   public IndividualInstructionFromFile(Concepts concepts) {

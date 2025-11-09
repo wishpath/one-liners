@@ -5,6 +5,7 @@ import org.sa.concepts.Concepts;
 import org.sa.config.Props;
 import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
+import org.sa.service.IndividualInstructionFromFile;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
