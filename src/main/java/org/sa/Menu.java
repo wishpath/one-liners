@@ -1,14 +1,13 @@
 package org.sa;
 
 import org.sa.actions.Actions;
-import org.sa.service.IndividualInstructionFromFile;
 import org.sa.actions.Info;
-import org.sa.service.InstructionTextForAi;
 import org.sa.concepts.Concepts;
 import org.sa.config.Props;
 import org.sa.console.ColoredString;
 import org.sa.console.Colors;
-import org.sa.console.SimpleColorPrint;
+import org.sa.service.IndividualInstructionFromFile;
+import org.sa.service.InstructionTextForAi;
 import org.sa.service.InstructionTextForUser;
 
 import java.io.IOException;
@@ -62,10 +61,8 @@ public class Menu {
     while (true) {
       String instructionToEvaluateUserInput = InstructionTextForAi.getInstructionToEvaluateUserInput(concept, instruction);
       String instructionForUserForConcept = instructionForUser.getInstructionForUserForConcept(concept, instructionToEvaluateUserInput);
+      System.out.println(instructionForUserForConcept);
       act.save();
-      SimpleColorPrint.blueInLine("Please explain this: ");
-      SimpleColorPrint.red(concept.getKey() + "\n");
-      System.out.println("AI instruction: \n" + instructionForUserForConcept);
       input = scanner.nextLine().trim();
 
       if (input.isEmpty())

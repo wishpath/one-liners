@@ -1073,3 +1073,5 @@ distributed computing,multiple remote computers completing a single task,8,2025-
 Kerberos keytab,Authentication information,8,2025-11-07T23:11:19.045803300
 Kerberos keytab,authentication file that stores username; service name and is used to request ticket from Kerberos,10,2025-11-07T23:28:01.226794200
 Unix,operating system,10,2025-11-08T22:34:34.442812200
+PII,personal indentifieble information - a data from which you can identify who the customer is,9,2025-11-10T15:35:06.177736500
+ORM,object relational mapping - java objects mapped to database tables,10,2025-11-10T15:36:15.738530500

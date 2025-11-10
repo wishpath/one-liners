@@ -1,5 +1,8 @@
 problems:
-  - let ai read requirements and formulate explicitly what is expected from the user
+  - instruction for the user:
+      - ai is not capable to formulate instruction. it gets confused:
+          - try latest model
+      - write instructions manually in the csv file.
 ideas:
   - there could be extra note for key for the user before the answer
     - it should tell what is expected to be mentioned in the answer
