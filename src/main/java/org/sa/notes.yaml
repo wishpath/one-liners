@@ -1,8 +1,11 @@
 problems:
   - instruction for the user:
-      - ai is not capable to formulate instruction. it gets confused:
-          - try latest model
-      - write instructions manually in the csv file.
+      - gpt-5 IS capable to formulate instruction.
+      - only call ai instruction if:
+          - a concept key has additional evaluation instruction (from csv)
+          - a concept does not concept-individual instruction for the user
+      - save ai provided instruction:
+          - let user know that "ai is thinking"
 ideas:
   - there could be extra note for key for the user before the answer
     - it should tell what is expected to be mentioned in the answer
