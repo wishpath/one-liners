@@ -1075,3 +1075,5 @@ Kerberos keytab,authentication file that stores username; service name and is us
 Unix,operating system,10,2025-11-08T22:34:34.442812200
 PII,personal indentifieble information - a data from which you can identify who the customer is,9,2025-11-10T15:35:06.177736500
 ORM,object relational mapping - java objects mapped to database tables,10,2025-11-10T15:36:15.738530500
+application server,application server contains settings; configurations and runtime to manage application objects; beans and so on.,7,2025-11-12T08:02:56.229610500
+web container,web container manages servlets and beans,8,2025-11-12T08:04:08.111045300
