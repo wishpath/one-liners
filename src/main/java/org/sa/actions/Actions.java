@@ -5,7 +5,7 @@ import org.sa.concepts.Concepts;
 import org.sa.config.Props;
 import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
-import org.sa.service.IndividualInstructionFromFile;
+import org.sa.service.AdditionalInstructionsToEvaluate;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -20,12 +20,12 @@ import java.util.regex.Pattern;
 
 public class Actions {
 
-  private IndividualInstructionFromFile instruction;
+  private AdditionalInstructionsToEvaluate instruction;
   private Concepts concepts;
   private AiClient ai;
   private static final Path ATTEMPTED_ANSWERS_FILEPATH = Paths.get("src/main/java/org/sa/storage/attempted_answers.csv");
 
-  public Actions(Concepts concepts, AiClient ai, IndividualInstructionFromFile instruction) throws IOException {
+  public Actions(Concepts concepts, AiClient ai, AdditionalInstructionsToEvaluate instruction) throws IOException {
     this.concepts = concepts;
     this.ai = ai;
     this.instruction = instruction;

@@ -6,7 +6,7 @@ import org.sa.concepts.Concepts;
 import org.sa.config.Props;
 import org.sa.console.ColoredString;
 import org.sa.console.Colors;
-import org.sa.service.IndividualInstructionFromFile;
+import org.sa.service.AdditionalInstructionsToEvaluate;
 import org.sa.service.InstructionTextForAi;
 import org.sa.service.InstructionTextForUser;
 
@@ -28,9 +28,9 @@ public class Menu {
 
   private Scanner scanner = new Scanner(System.in);
   private Concepts concepts = new Concepts();
-  private IndividualInstructionFromFile instruction = new IndividualInstructionFromFile(concepts);
+  private AdditionalInstructionsToEvaluate instructionsToEvaluate = new AdditionalInstructionsToEvaluate(concepts);
   private AiClient ai = new AiClient();
-  private Actions act = new Actions(concepts, ai, instruction);
+  private Actions act = new Actions(concepts, ai, instructionsToEvaluate);
   InstructionTextForUser instructionForUser = new InstructionTextForUser(ai);
   private Info info = new Info(concepts);
   private Map.Entry<String, String> previousConcept = act.pickConceptWithLowestScore();
@@ -59,8 +59,8 @@ public class Menu {
   public Menu() throws IOException {
     System.out.println(MENU);
     while (true) {
-      String instructionToEvaluateUserInput = InstructionTextForAi.getInstructionToEvaluateUserInput(concept, instruction);
-      String instructionForUserForConcept = instructionForUser.getInstructionForUserForConcept(concept, instructionToEvaluateUserInput);
+      String instructionToEvaluateUserInput = InstructionTextForAi.getInstructionToEvaluateUserInput(concept, instructionsToEvaluate);
+      String instructionForUserForConcept = instructionForUser.getInstructionForUserForConcept(concept, instructionToEvaluateUserInput, instructionsToEvaluate);
       System.out.println(instructionForUserForConcept);
       act.save();
       input = scanner.nextLine().trim();

@@ -10,12 +10,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Stream;
 
-public class IndividualInstructionFromFile {
-  private static final Path ADDITIONAL_INSTRUCTIONS_FILEPATH = Paths.get("src/main/java/org/sa/storage/instructions.csv");
+public class AdditionalInstructionsToEvaluate {
+  private static final Path ADDITIONAL_INSTRUCTIONS_TO_EVALUATE_FILEPATH = Paths.get("src/main/java/org/sa/storage/instructions_to_evaluate.csv");
   public Map<String, String[]> key_instructions;
   Concepts concepts;
 
-  public IndividualInstructionFromFile(Concepts concepts) {
+  public AdditionalInstructionsToEvaluate(Concepts concepts) {
     this.concepts = concepts;
     this.key_instructions = loadAdditionalInstructions();
   }
@@ -23,7 +23,7 @@ public class IndividualInstructionFromFile {
   private Map<String, String[]> loadAdditionalInstructions() {
     Map<String, String[]> key_instructions = new HashMap<>();
 
-    try (Stream<String> lines = Files.lines(ADDITIONAL_INSTRUCTIONS_FILEPATH)) {
+    try (Stream<String> lines = Files.lines(ADDITIONAL_INSTRUCTIONS_TO_EVALUATE_FILEPATH)) {
       lines.forEach(line -> {
         String[] key_instruction = line.split(",", 2);
         if (key_instruction.length == 1) throw new RuntimeException("LINE DOES NOT CONTAIN COMMA");

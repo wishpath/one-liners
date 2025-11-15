@@ -1,6 +1,7 @@
 package org.sa.service;
 
 import org.sa.AiClient;
+import org.sa.console.Colors;
 
 import java.util.Map;
 
@@ -11,7 +12,10 @@ public class InstructionTextForUser {
     //this.ai = ai;
   }
 
-  public String getInstructionForUserForConcept(Map.Entry<String, String> concept, String instructionToEvaluateUserInput) {
+  public String getInstructionForUserForConcept(Map.Entry<String, String> concept, String instructionToEvaluateUserInput, AdditionalInstructionsToEvaluate instructionsToEvaluate) {
+    if (!instructionsToEvaluate.key_instructions.containsKey(concept.getKey()))
+      return "Please explain this: " + Colors.RED + concept.getKey() + Colors.RESET + "\n";
+
     String instructionForUserForConcept = ai.getAnswer(
         "You are writing a short instruction (max 200 characters) for a learner in a concept-learning app." +
         "\nThe learner must describe the concept \033[31m" + concept.getKey() + "\033[0m to earn 10/10." +
@@ -24,6 +28,5 @@ public class InstructionTextForUser {
         "\nEvaluation instructions (for context only): " + instructionToEvaluateUserInput);
 
     return instructionForUserForConcept;
-    //return "Please explain this: " + Colors.RED + concept.getKey() + Colors.RESET + "\n";
   }
 }

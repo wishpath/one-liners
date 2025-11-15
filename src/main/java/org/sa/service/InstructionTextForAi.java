@@ -3,7 +3,7 @@ package org.sa.service;
 import java.util.Map;
 
 public class InstructionTextForAi {
-  public static String getInstructionToEvaluateUserInput(Map.Entry<String, String> concept, IndividualInstructionFromFile instruction) {
+  public static String getInstructionToEvaluateUserInput(Map.Entry<String, String> concept, AdditionalInstructionsToEvaluate instruction) {
     String questionB =
         "Is this a good key and definition: key: \"" + concept.getKey() + "\", and definition: \"here_will_be_userInputDefinitionAttempt\". " +
             "\n A. Step 1 - Evaluate the answer by asking: 'Does this capture the essence?' (aim to be positive)." +

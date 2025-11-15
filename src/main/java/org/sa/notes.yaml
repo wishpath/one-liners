@@ -3,7 +3,7 @@ problems:
       - gpt-5 IS capable to formulate instruction.
       - only call ai instruction if:
           - a concept key has additional evaluation instruction (from csv)
-          - a concept does not concept-individual instruction for the user
+          - a concept does not have concept-individual instruction for the user
       - save ai provided instruction:
           - let user know that "ai is thinking"
 ideas:

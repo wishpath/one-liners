@@ -6,3 +6,4 @@ RESTful, rate 10/10 if expansion 'Representational State Transfer' + mention HTT
 Liferay, Only rate 10/10 if user mentions premade CMS or 'content management system' for enterprise
 regression testing, Only rate 10/10 if user mentions verifying changes do not break existing functionality; else cap score at 6/10
 Kerberos keytab, If metioned that is authentication +2 points. If metioned file +2 points. If mentioned what file stores +1 points. If answered how it is used +1 , without these parts mentioned - cap at 5/10
+RESTful methods (mention all 4), Only rate 10/10 if all four methods are named (GET; POST; PUT; DELETE), Subtract 1 point for each missing method, If none are mentioned rate 0/10
