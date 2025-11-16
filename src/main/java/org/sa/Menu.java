@@ -31,7 +31,7 @@ public class Menu {
   private AdditionalInstructionsToEvaluate instructionsToEvaluate = new AdditionalInstructionsToEvaluate(concepts);
   private AiClient ai = new AiClient();
   private Actions act = new Actions(concepts, ai, instructionsToEvaluate);
-  InstructionTextForUser instructionForUser = new InstructionTextForUser(ai);
+  InstructionTextForUser instructionForUser = new InstructionTextForUser(concepts);
   private Info info = new Info(concepts);
   private Map.Entry<String, String> previousConcept = act.pickConceptWithLowestScore();
   private Map.Entry<String, String> concept = previousConcept;

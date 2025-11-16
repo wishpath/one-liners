@@ -1079,3 +1079,9 @@ application server,application server contains settings; configurations and runt
 web container,web container manages servlets and beans,8,2025-11-12T08:04:08.111045300
 RESTful methods,GET; PUT; DELETE,10,2025-11-15T08:45:48.860012100
 RESTful methods (mention all 4),PUT POST DELETE GET,10,2025-11-15T08:56:14.475086300
+semantic message,a message that icludes both information and description what it means. good example would be JSON.,10,2025-11-16T18:06:05.438215600
+hash,hash is a deterministic function applied to a value; where the result is so called hash-code,10,2025-11-16T18:07:43.669907700
+.war file,web archive file. is a form of compiled application; ready for distribution and running. similar to ".jar",9,2025-11-16T18:09:43.035960800
+parity,quality of a count of things regarding if it is divisible by 2 or not.,9,2025-11-16T18:11:48.144147900
+retrieve,to get,7,2025-11-16T18:12:26.544858
+package (software),kind of like a directory or folder to sort files for application,8,2025-11-16T18:37:40.574350600
