@@ -1,9 +1,7 @@
 problems:
   - instruction for the user:
-      - gpt-5 IS capable to formulate instruction.
-      - only call ai instruction if:
-          - a concept key has additional evaluation instruction (from csv)
-          - a concept does not have concept-individual instruction for the user
+      - use printStringWithFragmentHighlighted to highlight keyword (not ai)
+      - AI generates requirements that are not defined in the instructions. it invents details
       - save ai provided instruction:
           - let user know that "ai is thinking"
 ideas:

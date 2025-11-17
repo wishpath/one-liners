@@ -65,6 +65,11 @@ public class Actions {
       .stream()
       .filter(entry -> entry.getKey().toLowerCase().contains(fragment.toLowerCase()))
       .findFirst()
+      .map(entry -> {
+        SimpleColorPrint.redInLine("Picked key: ");
+        SimpleColorPrint.blue(entry.getKey());
+        return entry;
+      })
       .orElseGet(() -> {
         SimpleColorPrint.blueInLine("Not found any concept containing fragment: ");
         SimpleColorPrint.red(fragment);

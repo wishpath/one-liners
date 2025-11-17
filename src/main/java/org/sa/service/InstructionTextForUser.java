@@ -3,6 +3,7 @@ package org.sa.service;
 import org.sa.AiClient;
 import org.sa.concepts.Concepts;
 import org.sa.console.Colors;
+import org.sa.console.SimpleColorPrint;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -30,6 +31,7 @@ public class InstructionTextForUser {
     if (key_userInstruction.containsKey(concept.getKey()))
       return key_userInstruction.get(concept.getKey())[0];
 
+    SimpleColorPrint.red("AI is generating instruction for the user...");
     String instructionForUserForConcept = ai.getAnswer(
         "Write one simple instruction (max 200 characters) for a learner." +
             "\nThey must describe the concept " + Colors.RED + concept.getKey() + Colors.RESET + " to score 10/10." +
