@@ -1,4 +1,5 @@
 problems:
+  - don't confuse AI with evaluation instructions for instructing user. only use "extra instructions".
   - instruction for the user:
       - use printStringWithFragmentHighlighted to highlight keyword (not ai)
       - AI generates requirements that are not defined in the instructions. it invents details

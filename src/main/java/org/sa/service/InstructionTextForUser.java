@@ -31,13 +31,16 @@ public class InstructionTextForUser {
     if (key_userInstruction.containsKey(concept.getKey()))
       return key_userInstruction.get(concept.getKey())[0];
 
-    SimpleColorPrint.red("AI is generating instruction for the user...");
+    SimpleColorPrint.blueInLine("AI is generating instruction for the user to describe: ");
+    SimpleColorPrint.redInLine(concept.getKey());
+    SimpleColorPrint.blue("...");
     String instructionForUserForConcept = ai.getAnswer(
         "Write one simple instruction (max 200 characters) for a learner." +
             "\nThey must describe the concept " + Colors.RED + concept.getKey() + Colors.RESET + " to score 10/10." +
             "\nDo not include, restate, or hint at any information from the definition or evaluation rules." +
             "\nDo not explain what the concept means or does." +
-            "\nTell the learner which key points their answer must mention, but keep the wording easy to read." +
+            "\nIf the concept key contains an acronym (uppercase or mixed-case abbreviation), ignore the element-counting rule and tell the learner to fully spell out the acronym and provide a short general narrative. Do NOT include any definition details." +
+            "\nIf you can describe the required elements abstractly without revealing them for non-acronym concepts, do so. If abstract description would reveal them, instead tell the learner how many elements they must include without naming or describing them." +
             "\nThe instruction must be ONE single line with no line breaks." +
             "\nSeparate content elements using semicolons." +
             "\nUse the concept key exactly as shown, including ANSI codes." +
