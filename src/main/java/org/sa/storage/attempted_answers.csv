@@ -1091,3 +1091,8 @@ DC (infrastructure),data center - a building for storing servers for data storag
 signup raw data,identifier; passoword and other details without labels on them,10,2025-11-19T23:52:36.041950400
 operational risk,any riska application has due to usage and development,6,2025-11-19T23:53:58.754268500
 DC components (infrastructure),building; storage; power; cooling; computation; people,9,2025-11-21T07:16:31.320697300
+operational risk,due to app incidents there are financial and reputational risks,8,2025-11-23T23:51:31.126478100
+pipeline (IT),processes that goes one after another to deploy and test the application,10,2025-11-23T23:53:38.560820400
+IMDG,in memory data grid,10,2025-11-23T23:54:15.266605800
+application server,server where that it takes care of beans and objects; controllers; servlets and so on,10,2025-11-23T23:55:53.963544300
+arbitrary,not universaly correct,3,2025-11-23T23:56:35.123949500
