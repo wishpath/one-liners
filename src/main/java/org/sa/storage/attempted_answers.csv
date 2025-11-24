@@ -1096,3 +1096,6 @@ pipeline (IT),processes that goes one after another to deploy and test the appli
 IMDG,in memory data grid,10,2025-11-23T23:54:15.266605800
 application server,server where that it takes care of beans and objects; controllers; servlets and so on,10,2025-11-23T23:55:53.963544300
 arbitrary,not universaly correct,3,2025-11-23T23:56:35.123949500
+firewall opening,setting a netowork rule between two servers,8,2025-11-24T23:11:08.492009500
+aspect oriented programming,when specific aspect of programming can be exported/outsoursed to dedicated classes; that listens for triggers,8,2025-11-24T23:12:46.080191800
+asynchronous,processes that can happen at the same time,3,2025-11-24T23:13:40.322967300
