@@ -1,4 +1,8 @@
 problems:
+  - put ConceptDTO to use:
+      - "public final Map<String, String> keyDefinition = new HashMap<>();" should be Map<String, ConceptDTO>
+      - transfer concepts from text files to ConceptObjects class
+  - use quicker ai model for evaluation
   - don't confuse AI with evaluation instructions for instructing user. only use "extra instructions".
   - instruction for the user:
       - use printStringWithFragmentHighlighted to highlight keyword (not ai)
