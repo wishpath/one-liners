@@ -8,7 +8,6 @@ import org.sa.console.ColoredString;
 import org.sa.console.Colors;
 import org.sa.service.AdditionalInstructionsToEvaluate;
 import org.sa.service.InstructionTextForAi;
-import org.sa.service.InstructionTextForUser;
 
 import java.io.IOException;
 import java.util.Map;
@@ -30,7 +29,6 @@ public class Menu {
   private Concepts concepts = new Concepts();
   private AdditionalInstructionsToEvaluate instructionsToEvaluate = new AdditionalInstructionsToEvaluate(concepts);
   private Actions act = new Actions(concepts, instructionsToEvaluate);
-  InstructionTextForUser instructionForUser = new InstructionTextForUser(concepts);
   private Info info = new Info(concepts);
   private Map.Entry<String, String> previousConcept = act.pickConceptWithLowestScore();
   private Map.Entry<String, String> concept = previousConcept;
@@ -58,9 +56,6 @@ public class Menu {
   public Menu() throws IOException {
     System.out.println(MENU);
     while (true) {
-      String instructionToEvaluateUserInput = InstructionTextForAi.getInstructionToEvaluateUserInput(concept, instructionsToEvaluate);
-      String instructionForUserForConcept = instructionForUser.getInstructionForUserForConcept(concept, instructionToEvaluateUserInput, instructionsToEvaluate);
-      System.out.println(instructionForUserForConcept);
       act.save();
       input = scanner.nextLine().trim();
 
@@ -119,7 +114,7 @@ public class Menu {
         info.printAllNonZeroScores();
 
       else
-        setConcept(act.evaluateUserExplanationWithAI(concept, input, instructionToEvaluateUserInput)); //if evaluation < 7, keeps same concept;
+        setConcept(act.evaluateUserExplanationWithAI(concept, input, InstructionTextForAi.getInstructionToEvaluateUserInput(concept, instructionsToEvaluate, input))); //if evaluation < 7, keeps same concept;
     }
   }
 }
