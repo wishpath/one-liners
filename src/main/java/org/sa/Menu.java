@@ -29,8 +29,7 @@ public class Menu {
   private Scanner scanner = new Scanner(System.in);
   private Concepts concepts = new Concepts();
   private AdditionalInstructionsToEvaluate instructionsToEvaluate = new AdditionalInstructionsToEvaluate(concepts);
-  private AiClient ai = new AiClient();
-  private Actions act = new Actions(concepts, ai, instructionsToEvaluate);
+  private Actions act = new Actions(concepts, instructionsToEvaluate);
   InstructionTextForUser instructionForUser = new InstructionTextForUser(concepts);
   private Info info = new Info(concepts);
   private Map.Entry<String, String> previousConcept = act.pickConceptWithLowestScore();

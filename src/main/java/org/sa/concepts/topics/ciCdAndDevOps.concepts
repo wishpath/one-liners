@@ -22,3 +22,4 @@ git stash=git command to temporarily save uncommitted changes for later retrieva
 heap space=memory area during program execution, for storing objects.
 pipeline (IT)=process of building, testing and deploying. Often associated with automatisation.
 roll out=deployment and activation of a new product or feature for use.
+failover=automatic switch to a backup system when the primary fails.

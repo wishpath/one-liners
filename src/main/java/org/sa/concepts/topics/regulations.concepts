@@ -19,3 +19,4 @@ data custodian=person/team managing data storage, security, and maintenance.
 enterprise-level=scale, complexity, and requirements to meet the needs of large organizations.
 personal data retention=storing and maintaining individuals' personal information for a specific period.
 tampering=making illegal or/and damaging alterations.
+PI (data)=personal information

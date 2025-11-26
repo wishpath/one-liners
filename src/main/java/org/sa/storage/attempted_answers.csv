@@ -1101,3 +1101,17 @@ aspect oriented programming,when specific aspect of programming can be exported/
 asynchronous,processes that can happen at the same time,3,2025-11-24T23:13:40.322967300
 Apache Ivy,Java tool to fetch dependecy JARs,10,2025-11-26T21:19:04.698389500
 npm,JavaScript tool for fetching dependencies,10,2025-11-26T21:19:41.326909700
+anonymous access to Artifactory,Being able to access repositories without login,10,2025-11-26T21:25:12.530311200
+SA (technical user),service account - non-human access credential,10,2025-11-26T21:26:51.105336200
+Apache Ant,Java tool for runing scripts defined in XML format,9,2025-11-26T21:27:25.302995200
+JFrog Artifactory,repository for dependencies,9,2025-11-26T21:27:54.318515700
+UrbanCode Deploy (UCD),java tool to move application between environments,9,2025-11-26T21:28:16.693529400
+SO (role),Service owner - a person responsible for the whole application.,9,2025-11-26T21:28:44.999215
+operational risk,finantial or reputational risk regarding failures of an application due to various reasons: people; hardware; network conditions and other,9,2025-11-26T21:31:54.891012700
+arbitrary,something not hardly defined but rather something that depends on other things,8,2025-11-26T21:32:53.387906400
+PI (data),personal information,10,2025-11-26T22:07:59.213334300
+PI (agile),program increment - multiple teams plan for upcoming weeks.,9,2025-11-26T22:08:29.351691500
+failover,on failure system switches on redundant instances,9,2025-11-26T22:09:41.664743200
+asynchronous,proceses start and finish independently on other processes.,9,2025-11-26T22:10:31.522063100
+defensive programming,doing thorough checks and defining all cornercases,9,2025-11-26T22:11:17.600399100
+to prompt,to give instruction,8,2025-11-26T22:11:27.355452300

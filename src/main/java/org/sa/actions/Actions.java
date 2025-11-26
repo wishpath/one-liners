@@ -22,12 +22,12 @@ public class Actions {
 
   private AdditionalInstructionsToEvaluate instruction;
   private Concepts concepts;
-  private AiClient ai;
+  private AiClient evaluatorAi = new AiClient().setModelGpt4oMini();
+  private AiClient answersAi = new AiClient().setModelGpt4oMini();
   private static final Path ATTEMPTED_ANSWERS_FILEPATH = Paths.get("src/main/java/org/sa/storage/attempted_answers.csv");
 
-  public Actions(Concepts concepts, AiClient ai, AdditionalInstructionsToEvaluate instruction) throws IOException {
+  public Actions(Concepts concepts, AdditionalInstructionsToEvaluate instruction) throws IOException {
     this.concepts = concepts;
-    this.ai = ai;
     this.instruction = instruction;
   }
 
@@ -106,7 +106,7 @@ public class Actions {
   }
 
   public void askAi(String input) {
-    SimpleColorPrint.yellow(ai.getAnswer(input) + "\n");
+    SimpleColorPrint.yellow(answersAi.getAnswer(input) + "\n");
   }
 
   public Entry<String, String> pickNthConceptWithFragmentInKey(String input) {
@@ -176,9 +176,8 @@ public class Actions {
     //just testing
     if (instruction.key_instructions.containsKey(concept.getKey())) System.out.println(concept.getKey() + " CONTAINS EXTRA INSTRUCTION");
     instructionToEvaluateUserInput = instructionToEvaluateUserInput.replace("here_will_be_userInputDefinitionAttempt", userInputDefinitionAttempt);
-    System.out.println(instructionToEvaluateUserInput);
     //AI evaluation
-    String answer = ai.getAnswer(instructionToEvaluateUserInput) + "\n";
+    String answer = evaluatorAi.getAnswer(instructionToEvaluateUserInput) + "\n";
     String evaluationString = extractEvaluationString(answer);
     int evaluation = Integer.parseInt(evaluationString.split("/")[0]);
 
