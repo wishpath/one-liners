@@ -1099,3 +1099,5 @@ arbitrary,not universaly correct,3,2025-11-23T23:56:35.123949500
 firewall opening,setting a netowork rule between two servers,8,2025-11-24T23:11:08.492009500
 aspect oriented programming,when specific aspect of programming can be exported/outsoursed to dedicated classes; that listens for triggers,8,2025-11-24T23:12:46.080191800
 asynchronous,processes that can happen at the same time,3,2025-11-24T23:13:40.322967300
+Apache Ivy,Java tool to fetch dependecy JARs,10,2025-11-26T21:19:04.698389500
+npm,JavaScript tool for fetching dependencies,10,2025-11-26T21:19:41.326909700
