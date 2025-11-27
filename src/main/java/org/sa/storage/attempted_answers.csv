@@ -1116,3 +1116,8 @@ asynchronous,proceses start and finish independently on other processes.,9,2025-
 defensive programming,doing thorough checks and defining all cornercases,9,2025-11-26T22:11:17.600399100
 to prompt,to give instruction,8,2025-11-26T22:11:27.355452300
 to prompt (general meaning),to encourage to say something,9,2025-11-26T22:44:14.068812100
+personal data retention,saving user data and storing it for defined period of time,9,2025-11-27T12:22:02.137428300
+web server,server that provides environment for servlets; controllers and other beans,9,2025-11-27T12:23:12.349617900
+value stream,agile way of teams working and creating business value,8,2025-11-27T12:24:12.098933300
+JDBC,Java Data Base Connection - takes care of java backend connection to database,9,2025-11-27T12:25:05.761605800
+DevSecOps,Development Security Operations - discipline and philosophy of promoting security in CI/CD pipelines,8,2025-11-27T12:27:02.416537200

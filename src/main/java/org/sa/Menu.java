@@ -57,10 +57,12 @@ public class Menu {
     System.out.println(MENU);
     while (true) {
       act.save();
+      info.printUserInstruction(concept);
       input = scanner.nextLine().trim();
 
+
       if (input.isEmpty())
-        continue;
+        info.printUserInstruction(concept);
 
       else if ("menu".equals(input))
         System.out.println(MENU);
@@ -115,6 +117,7 @@ public class Menu {
 
       else
         setConcept(act.evaluateUserExplanationWithAI(concept, input, InstructionTextForAi.getInstructionToEvaluateUserInput(concept, instructionsToEvaluate, input))); //if evaluation < 7, keeps same concept;
+
     }
   }
 }

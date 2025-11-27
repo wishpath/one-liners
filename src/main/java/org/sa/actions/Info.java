@@ -190,4 +190,9 @@ public class Info {
     }
     System.out.println();
   }
+
+  public void printUserInstruction(Map.Entry<String, String> concept) {
+    SimpleColorPrint.blueInLine("\nPlease explain this concept: ");
+    SimpleColorPrint.red(concept.getKey());
+  }
 }
