@@ -4,6 +4,7 @@ import org.sa.concepts.Concepts;
 import org.sa.config.Props;
 import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
+import org.sa.dto.ConceptDTO;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -50,11 +51,6 @@ public class Info {
       printConceptEntryList_indexed_fragmentHighlighted(fragment, found);
     }
     System.out.println();
-  }
-
-  public static void printConceptWithFragmentHighlighted(Map.Entry<String, String> entry, String fragment) {
-    String concept = Props.TAB + entry.getKey() + ": " + entry.getValue();
-    printStringWithFragmentHighlighted(fragment, concept, Colors.LIGHT_GRAY, Colors.RED);
   }
 
   public static void printStringWithFragmentHighlighted(String fragment, String string, String mainColorAnsiCode, String fragmentColorAnsiCode) {
@@ -174,25 +170,34 @@ public class Info {
   }
 
   public static void printConceptEntryList_indexed_fragmentHighlighted(String fragment, List<Map.Entry<String, String>> matchingKey_Definition) {
+    List<ConceptDTO> concepts = matchingKey_Definition.stream()
+        .map(e -> new ConceptDTO(e.getKey(), e.getValue()))
+        .toList();
+
     SimpleColorPrint.blue("Matching concepts: ");
-    for (int i = 0; i < matchingKey_Definition.size(); i++) {
+    for (int i = 0; i < concepts.size(); i++) {
       SimpleColorPrint.normalInLine(Props.TAB + i + " ");
-      printConceptWithFragmentHighlighted(matchingKey_Definition.get(i), fragment);
+      String concept = Props.TAB + concepts.get(i).key + ": " + concepts.get(i).definition;
+      printStringWithFragmentHighlighted(fragment, concept, Colors.LIGHT_GRAY, Colors.RED);
     }
     System.out.println();
   }
 
   public static void printKeyEntryList_indexed_fragmentHighlighted(String fragment, List<Map.Entry<String, String>> matchingKey_Definition) {
+    List<ConceptDTO> concepts = matchingKey_Definition.stream().map(entry -> new ConceptDTO(entry.getKey(), entry.getValue())).toList();
+
     SimpleColorPrint.blue("Matching keys: ");
-    for (int i = 0; i < matchingKey_Definition.size(); i++) {
+    for (int i = 0; i < concepts.size(); i++) {
       SimpleColorPrint.normalInLine(Props.TAB + i + " ");
-      printStringWithFragmentHighlighted(fragment, Props.TAB + matchingKey_Definition.get(i).getKey(), Colors.LIGHT_GRAY, Colors.RED);
+      printStringWithFragmentHighlighted(fragment, Props.TAB + concepts.get(i).key, Colors.LIGHT_GRAY, Colors.RED);
     }
     System.out.println();
   }
 
   public void printUserInstruction(Map.Entry<String, String> concept) {
+    ConceptDTO c = new ConceptDTO(concept.getKey(), concept.getValue());
+
     SimpleColorPrint.blueInLine("\nPlease explain this concept: ");
-    SimpleColorPrint.red(concept.getKey());
+    SimpleColorPrint.red(c.key);
   }
 }

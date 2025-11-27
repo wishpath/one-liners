@@ -1,17 +1,15 @@
 package org.sa.dto;
 
-import java.util.List;
-
 public class ConceptDTO {
   public String key;
   public String definition;
-  public List<String> evaluationInstructions;
-  public List<String> userInstructions;
+  public String evaluationInstructions;
+  public String userInstructions;
 
-  public ConceptDTO(String key, String definition, List<String> evaluationInstructions, List<String> userInstructions) {
+  public ConceptDTO(String key, String definition) {
     this.key = key;
     this.definition = definition;
-    this.evaluationInstructions = evaluationInstructions;
-    this.userInstructions = userInstructions;
+    this.evaluationInstructions = "";
+    this.userInstructions = "";
   }
 }
