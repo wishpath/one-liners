@@ -6,16 +6,16 @@ import org.sa.concepts.Concepts;
 import org.sa.config.Props;
 import org.sa.console.ColoredString;
 import org.sa.console.Colors;
+import org.sa.dto.ConceptDTO;
 import org.sa.service.AdditionalInstructionsToEvaluate;
 import org.sa.service.InstructionTextForAi;
 
 import java.io.IOException;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Menu {
 
-  private void setConcept(Map.Entry<String, String> newConcept) {
+  private void setConcept(ConceptDTO newConcept) {
     if (newConcept.equals(concept)) return;
     previousConcept = concept;
     concept = newConcept;
@@ -28,10 +28,10 @@ public class Menu {
   private Scanner scanner = new Scanner(System.in);
   private Concepts concepts = new Concepts();
   private AdditionalInstructionsToEvaluate instructionsToEvaluate = new AdditionalInstructionsToEvaluate(concepts);
-  private Actions act = new Actions(concepts, instructionsToEvaluate);
+  private Actions act = new Actions(concepts);
   private Info info = new Info(concepts);
-  private Map.Entry<String, String> previousConcept = act.pickConceptWithLowestScore();
-  private Map.Entry<String, String> concept = previousConcept;
+  private ConceptDTO previousConcept = act.pickConceptWithLowestScore();
+  private ConceptDTO concept = previousConcept;
   private String input = "";
 
   private static final String MENU = Colors.BLUE + "Menu:" + Colors.RESET +
@@ -80,7 +80,7 @@ public class Menu {
         info.printAllConceptsContainingFragmentInKey(sub("define all "));
 
       else if ("define".equals(input))
-        System.out.println(Colors.BLUE + concept.getKey() + ": " + Colors.RESET + concept.getValue() + "\n");
+        System.out.println(Colors.BLUE + concept.key + ": " + Colors.RESET + concept.definition + "\n");
 
       else if (input.startsWith("pick nth"))
         setConcept(act.pickNthConceptWithFragmentInKey(input));

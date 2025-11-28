@@ -1132,3 +1132,5 @@ UrbanCode Deploy (UCD),tool to move application across environments,9,2025-11-28
 Argo CD,tool for deploying an app; using git; and managing instances,9,2025-11-28T12:32:52.582380400
 DORA,Data Object Risk Assessment,0,2025-11-28T12:33:38.647424200
 Logread,Internal company tool that stores log files in readable text format.,10,2025-11-28T12:48:23.616764
+namespace (networking),portion of cloud resources,8,2025-11-28T22:32:31.671099
+diamond operator (Java),'<>' picks up data structure type from the left side of the line,9,2025-11-28T22:37:13.088651500

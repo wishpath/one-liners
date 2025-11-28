@@ -6,7 +6,6 @@ import org.sa.config.Props;
 import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
 import org.sa.dto.ConceptDTO;
-import org.sa.service.AdditionalInstructionsToEvaluate;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -21,24 +20,22 @@ import java.util.regex.Pattern;
 
 public class Actions {
 
-  private AdditionalInstructionsToEvaluate instruction;
   private Concepts concepts;
   private AiClient evaluatorAi = new AiClient().setModelGpt4oMini();
   private AiClient answersAi = new AiClient().setModelGpt4oMini();
   private static final Path ATTEMPTED_ANSWERS_FILEPATH = Paths.get("src/main/java/org/sa/storage/attempted_answers.csv");
 
-  public Actions(Concepts concepts, AdditionalInstructionsToEvaluate instruction) throws IOException {
+  public Actions(Concepts concepts) throws IOException {
     this.concepts = concepts;
-    this.instruction = instruction;
   }
 
-  public Entry<String, String> pickConceptWithLowestScore() {
+  public ConceptDTO pickConceptWithLowestScore() {
     SimpleColorPrint.blue("Picking concept with lowest score...\n");
 
     concepts.refreshNotTodayMap();
-    Set<String> skippableKeys = concepts.notTodayKeys.keySet();
+    Set<String> skippableKeys = concepts.notTodayKey_time.keySet();
 
-    for (List<String> keys : concepts.scoreToKeys.values()) {
+    for (List<String> keys : concepts.score_keyList.values()) {
       List<String> eligibleKeys = new ArrayList<>();
 
       for (String key : keys)
@@ -47,13 +44,13 @@ public class Actions {
 
       if (eligibleKeys.isEmpty()) continue;
       String randomKey = eligibleKeys.get(new Random().nextInt(eligibleKeys.size()));
-      return Map.entry(randomKey, concepts.keyDefinition.get(randomKey));
+      return concepts.key_concept.get(randomKey);
     }
 
     throw new NoSuchElementException("No eligible concept available");
   }
 
-  public Entry<String, String> pickConceptWithFragmentInKey(String fragment) {
+  public ConceptDTO pickConceptWithFragmentInKey(String fragment) {
     if (fragment == null || fragment.isEmpty()) {
       SimpleColorPrint.red("Fragment is empty");
       return pickConceptWithLowestScore();
@@ -62,14 +59,14 @@ public class Actions {
     SimpleColorPrint.blueInLine("Picking key containing fragment: ");
     SimpleColorPrint.red(fragment + "\n");
 
-    return concepts.keyDefinition.entrySet()
+    return concepts.key_concept.entrySet()
       .stream()
       .filter(entry -> entry.getKey().toLowerCase().contains(fragment.toLowerCase()))
       .findFirst()
       .map(entry -> {
         SimpleColorPrint.redInLine("Picked key: ");
         SimpleColorPrint.blue(entry.getKey());
-        return entry;
+        return concepts.key_concept.get(entry.getKey());
       })
       .orElseGet(() -> {
         SimpleColorPrint.blueInLine("Not found any concept containing fragment: ");
@@ -78,39 +75,39 @@ public class Actions {
       });
   }
 
-  public Entry<String, String> pickNthKeyDefinition(String fragment, int nthInstance) {
-    List<Entry<String, String>> matchingKey_Definition = concepts.keyDefinition
+  public ConceptDTO pickNthKeyDefinition(String fragment, int nthInstance) {
+    List<Entry<String, ConceptDTO>> matchingKey_Concept = concepts.key_concept
         .entrySet()
         .stream()
         .filter(entry -> entry.getKey().toLowerCase().contains(fragment.toLowerCase()))
         .toList();
 
-    if (matchingKey_Definition.size() == 0) {
+    if (matchingKey_Concept.size() == 0) {
       SimpleColorPrint.redInLine("Not found any concept containing fragment: ");
       SimpleColorPrint.blue(fragment + "\n");
       return pickConceptWithLowestScore();
     }
 
-    if (matchingKey_Definition.size() - 1 < nthInstance) {
+    if (matchingKey_Concept.size() - 1 < nthInstance) {
       SimpleColorPrint.redInLine("There are only ");
-      SimpleColorPrint.blueInLine(String.valueOf(matchingKey_Definition.size()));
+      SimpleColorPrint.blueInLine(String.valueOf(matchingKey_Concept.size()));
       SimpleColorPrint.redInLine(" matches for the fragment ");
       SimpleColorPrint.blueInLine(fragment);
       SimpleColorPrint.redInLine(". The entered 'nth' value is too high: ");
       SimpleColorPrint.blue(String.valueOf(nthInstance) + "\n");
-      Info.printKeyEntryList_indexed_fragmentHighlighted(fragment, matchingKey_Definition);
+      Info.printKeyEntryList_indexed_fragmentHighlighted(fragment, matchingKey_Concept);
       return pickConceptWithLowestScore();
     }
 
-    Info.printKeyEntryList_indexed_fragmentHighlighted(fragment, matchingKey_Definition);
-    return matchingKey_Definition.get(nthInstance);
+    Info.printKeyEntryList_indexed_fragmentHighlighted(fragment, matchingKey_Concept);
+    return concepts.key_concept.get(matchingKey_Concept.get(nthInstance).getKey());
   }
 
   public void askAi(String input) {
     SimpleColorPrint.yellow(answersAi.getAnswer(input) + "\n");
   }
 
-  public Entry<String, String> pickNthConceptWithFragmentInKey(String input) {
+  public ConceptDTO pickNthConceptWithFragmentInKey(String input) {
     //pick nth <fragment nth> - pick nth key containing fragment;
     String fragmentToSearchForAndNumber = input.substring("pick nth".length()); //should be "<fragment nth>"
     final String ENDS_WITH_SPACE_AND_DIGITS_PATTERN = "^(.*) (\\d+)$";
@@ -135,15 +132,15 @@ public class Actions {
   public void save() throws IOException {
     BufferedWriter writer = Files.newBufferedWriter(concepts.SCORE_PATH);
 
-    for (Entry<String, Integer> e : concepts.keyScore.entrySet())
+    for (Entry<String, Integer> e : concepts.key_score.entrySet())
       writer.write(e.getKey().replaceAll("([ \\t\\n\\r\\f=:])", "\\\\$1") + "=" + e.getValue() + "\n");
 
     writer.flush();
     writer.close();
   }
 
-  public Entry<String, String> answerIDontKnow(Entry<String, String> concept) throws IOException {
-    ConceptDTO c = new ConceptDTO(concept.getKey(), concept.getValue());
+  public ConceptDTO answerIDontKnow(ConceptDTO concept) throws IOException {
+    ConceptDTO c = new ConceptDTO(concept.key, concept.definition);
     incrementScore(c.key, -1);
     SimpleColorPrint.blue("Concept has received a score of -1: ");
     SimpleColorPrint.red(Props.TAB + c.key + ": " + c.definition + "\n");
@@ -152,25 +149,25 @@ public class Actions {
   }
 
   public void incrementScore(String key, int increment) {
-    Integer initialScore = concepts.keyScore.get(key);
+    Integer initialScore = concepts.key_score.get(key);
     if (initialScore == null) initialScore = 0;
-    concepts.keyScore.merge(key, increment, Integer::sum);
-    int finalScore = concepts.keyScore.get(key);
-    if (finalScore == 0) concepts.keyScore.remove(key);
+    concepts.key_score.merge(key, increment, Integer::sum);
+    int finalScore = concepts.key_score.get(key);
+    if (finalScore == 0) concepts.key_score.remove(key);
 
-    List<String> initialList = concepts.scoreToKeys.get(initialScore);
-    if (initialList.size() == 1) concepts.scoreToKeys.remove(initialScore);
+    List<String> initialList = concepts.score_keyList.get(initialScore);
+    if (initialList.size() == 1) concepts.score_keyList.remove(initialScore);
     else initialList.remove(key);
 
-    concepts.scoreToKeys.computeIfAbsent(finalScore, k -> new ArrayList<>()).add(key);
+    concepts.score_keyList.computeIfAbsent(finalScore, k -> new ArrayList<>()).add(key);
   }
 
   private String extractEvaluationString(String s) {
     return Pattern.compile("\\b([0-9]|10)/10\\b").matcher(s).results().map(matchResult -> matchResult.group()).findFirst().orElse("");
   }
 
-  public Entry<String, String> evaluateUserExplanationWithAI(Entry<String, String> concept, String userInputDefinitionAttempt, String instructionToEvaluateUserInput) throws IOException {
-    ConceptDTO c = new ConceptDTO(concept.getKey(), concept.getValue());
+  public ConceptDTO evaluateUserExplanationWithAI(ConceptDTO concept, String userInputDefinitionAttempt, String instructionToEvaluateUserInput) throws IOException {
+    ConceptDTO c = new ConceptDTO(concept.key, concept.definition);
 
 
     //AI evaluation
@@ -180,7 +177,7 @@ public class Actions {
 
     if ("".equals(evaluationString)) {
       SimpleColorPrint.red("The AI has not provided the evaluation. Try again. AI answer: \n" + answer);
-      return Map.entry(c.key, c.definition);
+      return c;
     }
 
     Info.printStringWithFragmentHighlighted(evaluationString, answer, Colors.YELLOW, Colors.RED);
@@ -201,8 +198,8 @@ public class Actions {
     return pickConceptWithLowestScore();
   }
 
-  public Entry<String, String> addKeywordToNotToday(Entry<String, String> concept) throws IOException {
-    ConceptDTO c = new ConceptDTO(concept.getKey(), concept.getValue());
+  public ConceptDTO addKeywordToNotToday(ConceptDTO concept) throws IOException {
+    ConceptDTO c = new ConceptDTO(concept.key, concept.definition);
     concepts.dontLearnThisToday(c.key);
     return pickConceptWithLowestScore();
   }

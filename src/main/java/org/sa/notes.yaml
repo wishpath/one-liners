@@ -1,4 +1,5 @@
 problems:
+  - use explicit score of 0
   - put ConceptDTO to use:
       - "public final Map<String, String> keyDefinition = new HashMap<>();" should be Map<String, ConceptDTO>
       - transfer concepts from text files to ConceptObjects class

@@ -1,14 +1,14 @@
 package org.sa.service;
 
-import java.util.Map;
+import org.sa.dto.ConceptDTO;
 
 public class InstructionTextForAi {
-  public static String getInstructionToEvaluateUserInput(Map.Entry<String, String> concept, AdditionalInstructionsToEvaluate instruction, String input) {
+  public static String getInstructionToEvaluateUserInput(ConceptDTO concept, AdditionalInstructionsToEvaluate instruction, String input) {
     String questionB =
-        "Is this a good key and definition: key: \"" + concept.getKey() + "\", and definition: \"" + input + "\". " +
+        "Is this a good key and definition: key: \"" + concept.key + "\", and definition: \"" + input + "\". " +
             "\n A. Step 1 - Evaluate the answer by asking: 'Does this capture the essence?' (aim to be positive)." +
             "\n B. If some details are missing but it captures the essence, rate 10/10." +
-            "\n C. If the definition matches this one, rate 10/10: " + concept.getValue() + ", but other definitions might get a perfect rating as well." +
+            "\n C. If the definition matches this one, rate 10/10: " + concept.definition + ", but other definitions might get a perfect rating as well." +
             "\n D. If the essence is ALMOST there, rate 9/10." +
             "\n E. If the essence is somewhat touched, rate 8/10." +
             "\n F. Think of an answer in up to 10 words - if you can't come up with a better one, rate 10/10." +
@@ -24,8 +24,8 @@ public class InstructionTextForAi {
             "\n Your entire answer should be up to 300 characters." +
 
             //instructions for individual concept
-            (instruction.key_instructions.containsKey(concept.getKey()) ?
-                "\nAdditional instructions: \n" + instruction.getIndividualInstructions(concept.getKey()) :
+            (instruction.key_instructions.containsKey(concept.key) ?
+                "\nAdditional instructions: \n" + instruction.getIndividualInstructions(concept.key) :
                 "")
         ;
     return questionB;

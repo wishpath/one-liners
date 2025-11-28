@@ -2,7 +2,9 @@ package org.sa.concepts;
 
 import org.sa.config.Props;
 import org.sa.console.SimpleColorPrint;
+import org.sa.dto.ConceptDTO;
 import org.sa.other.ValueAscendingMap;
+import org.sa.service.A_ConceptsLoader;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -18,45 +20,26 @@ import java.util.stream.Stream;
 
 //purpose: load, keep and manage concept info: key, definition, score, status and their permutations
 public class Concepts {
-  public static final Path TOPICS_PUBLIC = Paths.get("src/main/java/org/sa/concepts/topics");
+
   public static final Path TOPICS_SWED = Paths.get("src/main/java/org/sa/concepts/topics-swed");
   public static final Path SCORE_PATH = Paths.get("src/main/java/org/sa/storage/score.properties");
   public static final Path NOT_TODAY_FILEPATH = Paths.get("src/main/java/org/sa/storage/not_today.csv");
 
-  public final Map<String, String> keyDefinition = new HashMap<>();
-  public final ValueAscendingMap<String, Integer> keyScore = new ValueAscendingMap<>(); //no keys with score zero, auto ascending
-  public final TreeMap<Integer, List<String>> scoreToKeys = new TreeMap<>(); //auto ascending map
-  public final ValueAscendingMap<String, LocalDateTime> notTodayKeys = new ValueAscendingMap<>();//keys skipped from learning for one day
+  public final Map<String, ConceptDTO> key_concept = A_ConceptsLoader.loadConceptsCheckRepeated();
+  public final ValueAscendingMap<String, Integer> key_score = new ValueAscendingMap<>(); //no keys with score zero, auto ascending
+  public final TreeMap<Integer, List<String>> score_keyList = new TreeMap<>(); //auto ascending map
+  public final ValueAscendingMap<String, LocalDateTime> notTodayKey_time = new ValueAscendingMap<>();//keys skipped from learning for one day
 
   public Concepts() throws IOException {
-    loadConceptsCheckRepeated();
     loadScores();
     applyDefaultScoreZero();
     mapAscendingScoresToConcepts();
     loadNotTodayConcepts();
-    System.out.println("Count of concepts: " + keyDefinition.size());
-    System.out.println("Count of scores: " + keyScore.size());
+    System.out.println("Count of concepts: " + key_concept.size());
+    System.out.println("Count of scores: " + key_score.size());
   }
 
-  private void loadConceptsCheckRepeated() throws IOException {
-    for (Path subtopicPath : Files.walk(TOPICS_PUBLIC).filter(p -> p.toString().endsWith(".concepts")).toList())
-      Files.lines(subtopicPath)
-        .filter(line -> line.contains("="))
-        .forEach(line -> {
-          String[] arr = line.split("=", 2);
-          if (arr[0].contains(";")) throw new RuntimeException("Key '" + arr[0] + "' should not contain semicolons (;)");
-          if (arr[0].contains(",")) throw new RuntimeException("Key '" + arr[0] + "' should not contain commas (,)");
-          String repeated = keyDefinition.put(arr[0], arr[1]);
-          if (repeated != null) {
-            SimpleColorPrint.redInLine("The repeated key: ");
-            SimpleColorPrint.blueInLine(arr[0]);
-            SimpleColorPrint.redInLine(", the definitions: ");
-            SimpleColorPrint.blueInLine(arr[1]);
-            SimpleColorPrint.redInLine(" and ");
-            SimpleColorPrint.blue(repeated);
-          }
-        });
-  }
+
 
   private void loadScores() throws IOException {
     Properties scoreProps = new Properties();
@@ -65,31 +48,31 @@ public class Concepts {
     }
     for (Map.Entry<Object, Object> e : scoreProps.entrySet()) {
       if (e.getValue().equals("0")) continue; // 0 is default...
-      if (!keyDefinition.containsKey(e.getKey())) continue; // has score but key got deleted/ altered
-      keyScore.put(e.getKey().toString(), Integer.parseInt((String)e.getValue()));
+      if (!key_concept.containsKey(e.getKey())) continue; // has score but key got deleted/ altered
+      key_score.put(e.getKey().toString(), Integer.parseInt((String)e.getValue()));
     }
   }
 
   private void applyDefaultScoreZero() {
     //keys not having explicit score, load with score 0
-    for (String key : keyDefinition.keySet())
-      if (keyScore.get(key) == null)
-        scoreToKeys.computeIfAbsent(0, k -> new ArrayList<>()).add(key);
+    for (String key : key_concept.keySet())
+      if (key_score.get(key) == null)
+        score_keyList.computeIfAbsent(0, k -> new ArrayList<>()).add(key);
   }
 
   private void mapAscendingScoresToConcepts() {
     SimpleColorPrint.red("Current scores:");
     //0 scores
-    for (Map.Entry<String, String> e : keyDefinition.entrySet())
-      if (!keyScore.containsKey(e.getKey())) {
+    for (Map.Entry<String, ConceptDTO> e : key_concept.entrySet())
+      if (!key_score.containsKey(e.getKey())) {
         SimpleColorPrint.blueInLine(Props.TAB + e.getKey() + ": ");
         SimpleColorPrint.red("0");
       }
     //non 0 scores
-    for (Map.Entry<String, Integer> e : keyScore.entrySet()) {
+    for (Map.Entry<String, Integer> e : key_score.entrySet()) {
       SimpleColorPrint.blueInLine(Props.TAB + e.getKey() + ": ");
       SimpleColorPrint.red(String.valueOf(e.getValue()));
-      scoreToKeys.computeIfAbsent(e.getValue(), k -> new ArrayList<>()).add(e.getKey());
+      score_keyList.computeIfAbsent(e.getValue(), k -> new ArrayList<>()).add(e.getKey());
     }
     System.out.println();
   }
@@ -106,8 +89,8 @@ public class Concepts {
           })
           .map(parts -> Map.entry(parts[0], LocalDateTime.parse(parts[1])))
           .filter(e -> e.getValue().isAfter(oneDayAgo))
-          .filter(e -> keyDefinition.containsKey(e.getKey()))
-          .forEach(e -> notTodayKeys.put(e.getKey(), e.getValue()));
+          .filter(e -> key_concept.containsKey(e.getKey()))
+          .forEach(e -> notTodayKey_time.put(e.getKey(), e.getValue()));
     }
     autosaveNotTodayMapToFile();
     System.out.println();
@@ -117,19 +100,19 @@ public class Concepts {
 
   public void dontLearnThisToday(String key) throws IOException {
     refreshNotTodayMap(); //remove entries older than one day
-    notTodayKeys.put(key, LocalDateTime.now());
+    notTodayKey_time.put(key, LocalDateTime.now());
     autosaveNotTodayMapToFile();
   }
 
   private void autosaveNotTodayMapToFile() throws IOException {
     try (BufferedWriter writer = Files.newBufferedWriter(NOT_TODAY_FILEPATH)) {
-      for (Map.Entry<String, LocalDateTime> entry : notTodayKeys.entrySet())
+      for (Map.Entry<String, LocalDateTime> entry : notTodayKey_time.entrySet())
         writer.write(entry.getKey() + "," + entry.getValue() + System.lineSeparator()); //overwrites
     }
   }
 
   public void refreshNotTodayMap() {
     LocalDateTime oneDayAgo = LocalDateTime.now().minusDays(1);
-    notTodayKeys.entrySet().removeIf(e -> e.getValue().isBefore(oneDayAgo));
+    notTodayKey_time.entrySet().removeIf(e -> e.getValue().isBefore(oneDayAgo));
   }
 }

@@ -20,24 +20,24 @@ public class Info {
   }
 
   public void printAllConceptsContainingFragmentInKey(String fragment) {
-    List<Map.Entry<String, String>> found = concepts.keyDefinition.entrySet().stream()
+    List<Map.Entry<String, ConceptDTO>> entryListFound = concepts.key_concept.entrySet().stream()
         .filter(entry -> entry.getKey().toLowerCase().contains(fragment.toLowerCase()))
         .toList();
 
-    if (found.isEmpty()) {
+    if (entryListFound.isEmpty()) {
       SimpleColorPrint.redInLine("No keys found containing fragment: ");
       SimpleColorPrint.red(fragment);
     }
     else {
       SimpleColorPrint.blueInLine("Defining all keys containing fragment: ");
       SimpleColorPrint.red(fragment);
-      printConceptEntryList_indexed_fragmentHighlighted(fragment, found);
+      printConceptEntryList_indexed_fragmentHighlighted(fragment, entryListFound);
     }
     System.out.println();
   }
 
   public void printAllConceptsContainingFragmentInKeyValue(String fragment) {
-    List<Map.Entry<String, String>> found = concepts.keyDefinition.entrySet().stream()
+    List<Map.Entry<String, ConceptDTO>> found = concepts.key_concept.entrySet().stream()
         .filter(entry -> (entry.getKey() + " " + entry.getValue()).toLowerCase().contains(fragment.toLowerCase()))
         .toList();
 
@@ -75,7 +75,7 @@ public class Info {
 
   public void printAllKeys() {
     SimpleColorPrint.blue("Listing all the keys:");
-    concepts.keyDefinition.entrySet()
+    concepts.key_concept.entrySet()
         .stream()
         .forEach(entry -> {
           System.out.print(entry.getKey() + ", ");
@@ -83,18 +83,18 @@ public class Info {
     System.out.println("\n");
   }
 
-  public void printCurrentKeyScore(Map.Entry<String, String> concept) {
+  public void printCurrentKeyScore(ConceptDTO concept) {
     SimpleColorPrint.blueInLine("The score of concept '");
-    SimpleColorPrint.redInLine(concept.getKey());
+    SimpleColorPrint.redInLine(concept.key);
     SimpleColorPrint.blueInLine("' is: ");
-    Integer score = concepts.keyScore.get(concept.getKey());
+    Integer score = concepts.key_score.get(concept.key);
     String finalScore = score == null ? "0" : String.valueOf(score);
     SimpleColorPrint.red(finalScore + "\n");
   }
 
   public void printAllNonZeroScores() {
     SimpleColorPrint.red("All non-zero scores:");
-    for (Map.Entry<String, Integer> e : concepts.keyScore.entrySet()) {
+    for (Map.Entry<String, Integer> e : concepts.key_score.entrySet()) {
       SimpleColorPrint.blueInLine(Props.TAB + e.getKey() + ": ");
       SimpleColorPrint.red(String.valueOf(e.getValue()));
     }
@@ -104,7 +104,7 @@ public class Info {
   public void printLowestScoreConcepts() {
     int weakConceptCounter = 0;
     SimpleColorPrint.blue("Printing concepts with lowest score:\n");
-    for (Map.Entry<Integer, List<String>> e : concepts.scoreToKeys.entrySet()) {
+    for (Map.Entry<Integer, List<String>> e : concepts.score_keyList.entrySet()) {
       if (weakConceptCounter > 7) break;
       int score = e.getKey();
       List<String> keys= e.getValue();
@@ -113,8 +113,8 @@ public class Info {
         if (weakConceptCounter > 11) break;
         weakConceptCounter++;
         SimpleColorPrint.blueInLine(Props.TAB.repeat(2) + key + " ");
-        SimpleColorPrint.colorInLine(concepts.keyDefinition.get(key) + " ", Colors.LIGHT_GRAY);
-        LocalDateTime notTodayTime = concepts.notTodayKeys.get(key);
+        SimpleColorPrint.colorInLine(concepts.key_concept.get(key).definition + " ", Colors.LIGHT_GRAY);
+        LocalDateTime notTodayTime = concepts.notTodayKey_time.get(key);
         String time = notTodayTime == null ? "" : notTodayTime.format(DateTimeFormatter.ofPattern("HH:mm"));
         System.out.println(time);
       }
@@ -125,10 +125,10 @@ public class Info {
   public void printNotTodayKeysByTimeAvailableAndLowestScore2() {
     int passableScore = getPassableScore();
     SimpleColorPrint.blue("Printing 'not today' keys with lower scores:\n");
-    concepts.notTodayKeys.entrySet().stream()
-        .filter(e -> concepts.keyScore.getOrDefault(e.getKey(), 0) <= passableScore)
+    concepts.notTodayKey_time.entrySet().stream()
+        .filter(e -> concepts.key_score.getOrDefault(e.getKey(), 0) <= passableScore)
         .forEach(e -> {
-          int score = concepts.keyScore.getOrDefault(e.getKey(), 0);
+          int score = concepts.key_score.getOrDefault(e.getKey(), 0);
           String time = e.getValue().plusDays(1).format(DateTimeFormatter.ofPattern("HH:mm"));
           SimpleColorPrint.normalInLine(Props.TAB + time);
           SimpleColorPrint.redInLine(" " + e.getKey());
@@ -143,9 +143,9 @@ public class Info {
     int passableScore = Integer.MIN_VALUE; // score pointer in order to print at least 8 concepts
     int willBePrinted = 0;
 
-    for (Map.Entry<Integer, List<String>> e : concepts.scoreToKeys.entrySet()) {
+    for (Map.Entry<Integer, List<String>> e : concepts.score_keyList.entrySet()) {
       long countAtScore = e.getValue().stream()
-          .filter(concepts.notTodayKeys::containsKey)
+          .filter(concepts.notTodayKey_time::containsKey)
           .count();
       willBePrinted += countAtScore;
 
@@ -160,18 +160,18 @@ public class Info {
   }
 
   public void printNotTodayConcepts() {
-    concepts.notTodayKeys.forEach((key, time) -> {
+    concepts.notTodayKey_time.forEach((key, time) -> {
       String timeString = time.plusDays(1).format(DateTimeFormatter.ofPattern("HH:mm"));
       SimpleColorPrint.redInLine(Props.TAB + timeString);
       SimpleColorPrint.blueInLine(" " + key + " ");
-      SimpleColorPrint.color(concepts.keyDefinition.get(key), Colors.LIGHT_GRAY);
+      SimpleColorPrint.color(concepts.key_concept.get(key).definition, Colors.LIGHT_GRAY);
     });
     System.out.println();
   }
 
-  public static void printConceptEntryList_indexed_fragmentHighlighted(String fragment, List<Map.Entry<String, String>> matchingKey_Definition) {
+  public static void printConceptEntryList_indexed_fragmentHighlighted(String fragment, List<Map.Entry<String, ConceptDTO>> matchingKey_Definition) {
     List<ConceptDTO> concepts = matchingKey_Definition.stream()
-        .map(e -> new ConceptDTO(e.getKey(), e.getValue()))
+        .map(e -> e.getValue())
         .toList();
 
     SimpleColorPrint.blue("Matching concepts: ");
@@ -183,8 +183,8 @@ public class Info {
     System.out.println();
   }
 
-  public static void printKeyEntryList_indexed_fragmentHighlighted(String fragment, List<Map.Entry<String, String>> matchingKey_Definition) {
-    List<ConceptDTO> concepts = matchingKey_Definition.stream().map(entry -> new ConceptDTO(entry.getKey(), entry.getValue())).toList();
+  public static void printKeyEntryList_indexed_fragmentHighlighted(String fragment, List<Map.Entry<String, ConceptDTO>> matchingKey_concept) {
+    List<ConceptDTO> concepts = matchingKey_concept.stream().map(entry -> entry.getValue()).toList();
 
     SimpleColorPrint.blue("Matching keys: ");
     for (int i = 0; i < concepts.size(); i++) {
@@ -194,9 +194,7 @@ public class Info {
     System.out.println();
   }
 
-  public void printUserInstruction(Map.Entry<String, String> concept) {
-    ConceptDTO c = new ConceptDTO(concept.getKey(), concept.getValue());
-
+  public void printUserInstruction(ConceptDTO c) {
     SimpleColorPrint.blueInLine("\nPlease explain this concept: ");
     SimpleColorPrint.red(c.key);
   }

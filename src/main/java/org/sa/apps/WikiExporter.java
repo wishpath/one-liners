@@ -1,6 +1,7 @@
 package org.sa.apps;
 
 import org.sa.concepts.Concepts;
+import org.sa.service.A_ConceptsLoader;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -22,7 +23,7 @@ public class WikiExporter {
   }
 
   private static void printListOfTopics(Concepts c) throws IOException {
-    Files.walk(c.TOPICS_PUBLIC)
+    Files.walk(A_ConceptsLoader.TOPICS_PUBLIC)
         .filter(p -> p.toString().endsWith(".concepts"))
         .forEach(p -> System.out.println(p.getFileName().toString().replace(".concepts", "")));
   }
@@ -32,7 +33,7 @@ public class WikiExporter {
     StringBuilder sb_public_wiki_text = new StringBuilder(WIKI_INTRO_SIMPLE);
 
     List<Path> swedTopicFiles = Files.walk(c.TOPICS_SWED).filter(p -> p.toString().endsWith(".concepts")).toList();
-    List<Path> publicTopicFiles = Files.walk(c.TOPICS_PUBLIC).filter(p -> p.toString().endsWith(".concepts")).toList();
+    List<Path> publicTopicFiles = Files.walk(A_ConceptsLoader.TOPICS_PUBLIC).filter(p -> p.toString().endsWith(".concepts")).toList();
 
     addPublicTopicsToBothWikis(publicTopicFiles, sb_swed_wiki_text, sb_public_wiki_text);
     addSwedTopicsToSwedWikiOnly(swedTopicFiles, sb_swed_wiki_text);
