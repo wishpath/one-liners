@@ -1121,3 +1121,14 @@ web server,server that provides environment for servlets; controllers and other 
 value stream,agile way of teams working and creating business value,8,2025-11-27T12:24:12.098933300
 JDBC,Java Data Base Connection - takes care of java backend connection to database,9,2025-11-27T12:25:05.761605800
 DevSecOps,Development Security Operations - discipline and philosophy of promoting security in CI/CD pipelines,8,2025-11-27T12:27:02.416537200
+etcd etymology,et cetera directory - in linux this is the name of directory with settings and configurations.,9,2025-11-27T12:50:31.635627100
+to prompt (general meaning),to encourage to tell something,9,2025-11-28T12:29:13.143818600
+SO (role),Service Owner - a person who is responsible for the whole app (service),10,2025-11-28T12:29:43.209311100
+failover,automatic switching from failed system instances to redundant ones,9,2025-11-28T12:30:15.989049600
+PI (agile),Program Increment - teams are planning works for the upcomming weeks,9,2025-11-28T12:31:04.290679
+JFrog Artifactory,repository for dependencies,9,2025-11-28T12:31:18.843058500
+Apache Ant,Java tool for running scripts defined in xml,10,2025-11-28T12:31:37.857257400
+UrbanCode Deploy (UCD),tool to move application across environments,9,2025-11-28T12:32:02.979384800
+Argo CD,tool for deploying an app; using git; and managing instances,9,2025-11-28T12:32:52.582380400
+DORA,Data Object Risk Assessment,0,2025-11-28T12:33:38.647424200
+Logread,Internal company tool that stores log files in readable text format.,10,2025-11-28T12:48:23.616764

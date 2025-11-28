@@ -5,6 +5,7 @@ import org.sa.concepts.Concepts;
 import org.sa.config.Props;
 import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
+import org.sa.dto.ConceptDTO;
 import org.sa.service.AdditionalInstructionsToEvaluate;
 
 import java.io.BufferedWriter;
@@ -142,10 +143,11 @@ public class Actions {
   }
 
   public Entry<String, String> answerIDontKnow(Entry<String, String> concept) throws IOException {
-    incrementScore(concept.getKey(), -1);
+    ConceptDTO c = new ConceptDTO(concept.getKey(), concept.getValue());
+    incrementScore(c.key, -1);
     SimpleColorPrint.blue("Concept has received a score of -1: ");
-    SimpleColorPrint.red(Props.TAB + concept.getKey() + ": " + concept.getValue() + "\n");
-    concepts.dontLearnThisToday(concept.getKey());
+    SimpleColorPrint.red(Props.TAB + c.key + ": " + c.definition + "\n");
+    concepts.dontLearnThisToday(c.key);
     return pickConceptWithLowestScore();
   }
 
@@ -164,18 +166,13 @@ public class Actions {
   }
 
   private String extractEvaluationString(String s) {
-    return Pattern.compile("\\b([0-9]|10)/10\\b")
-        .matcher(s)
-        .results()
-        .map(matchResult -> matchResult.group())
-        .findFirst()
-        .orElse("");
+    return Pattern.compile("\\b([0-9]|10)/10\\b").matcher(s).results().map(matchResult -> matchResult.group()).findFirst().orElse("");
   }
 
   public Entry<String, String> evaluateUserExplanationWithAI(Entry<String, String> concept, String userInputDefinitionAttempt, String instructionToEvaluateUserInput) throws IOException {
-    //just testing
-    if (instruction.key_instructions.containsKey(concept.getKey())) System.out.println(concept.getKey() + " CONTAINS EXTRA INSTRUCTION");
-    instructionToEvaluateUserInput = instructionToEvaluateUserInput.replace("here_will_be_userInputDefinitionAttempt", userInputDefinitionAttempt);
+    ConceptDTO c = new ConceptDTO(concept.getKey(), concept.getValue());
+
+
     //AI evaluation
     String answer = evaluatorAi.getAnswer(instructionToEvaluateUserInput) + "\n";
     String evaluationString = extractEvaluationString(answer);
@@ -183,29 +180,30 @@ public class Actions {
 
     if ("".equals(evaluationString)) {
       SimpleColorPrint.red("The AI has not provided the evaluation. Try again. AI answer: \n" + answer);
-      return concept;
+      return Map.entry(c.key, c.definition);
     }
 
     Info.printStringWithFragmentHighlighted(evaluationString, answer, Colors.YELLOW, Colors.RED);
 
     //memorize answer
-    String definition = userInputDefinitionAttempt.replace(",", ";");
-    String recordLine = String.join(",", concept.getKey(), definition, String.valueOf(evaluation), LocalDateTime.now().toString()) + "\n";
+    String userAttemptedDefinition = userInputDefinitionAttempt.replace(",", ";");
+    String recordLine = String.join(",", c.key, userAttemptedDefinition, String.valueOf(evaluation), LocalDateTime.now().toString()) + "\n";
     try (BufferedWriter writer = Files.newBufferedWriter(ATTEMPTED_ANSWERS_FILEPATH, StandardOpenOption.CREATE, StandardOpenOption.APPEND)) {
       writer.write(recordLine);
     }
 
     //score, put to "not_today", print default answer
-    incrementScore(concept.getKey(), evaluation < 7 ? -1 : evaluation <= 8 ? 1 : evaluation == 9 ? 2 : 4);
-    concepts.dontLearnThisToday(concept.getKey());
+    incrementScore(c.key, evaluation < 7 ? -1 : evaluation <= 8 ? 1 : evaluation == 9 ? 2 : 4);
+    concepts.dontLearnThisToday(c.key);
     SimpleColorPrint.blueInLine("The default definition: ");
-    SimpleColorPrint.normal(concept.getValue() + "\n");
+    SimpleColorPrint.normal(c.definition + "\n");
 
     return pickConceptWithLowestScore();
   }
 
   public Entry<String, String> addKeywordToNotToday(Entry<String, String> concept) throws IOException {
-    concepts.dontLearnThisToday(concept.getKey());
+    ConceptDTO c = new ConceptDTO(concept.getKey(), concept.getValue());
+    concepts.dontLearnThisToday(c.key);
     return pickConceptWithLowestScore();
   }
 }
