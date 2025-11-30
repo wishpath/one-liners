@@ -1,7 +1,7 @@
 package org.sa.apps;
 
 import org.sa.concepts.Concepts;
-import org.sa.service.A_ConceptsLoader;
+import org.sa.service.loaders.A_ConceptsLoader;
 
 import java.io.IOException;
 import java.nio.file.Files;

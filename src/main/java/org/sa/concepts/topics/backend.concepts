@@ -16,4 +16,4 @@ sticky session=user always routed to same server for session consistency.
 sticky session benefit=avoids session data transfer and Java object serialization.
 throughput=rate at which data is processed or transmitted through a system, measured in units/events per interval.
 SA (technical user)=service account — non-human access credential.
-PATH variable=system lookup list for executables, e.g., Java (java) or Python (python) commands.
+PATH environment variable=system lookup list for executables, e.g., Java (java) or Python (python) commands.

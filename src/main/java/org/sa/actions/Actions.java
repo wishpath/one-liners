@@ -130,7 +130,7 @@ public class Actions {
   }
 
   public void save() throws IOException {
-    BufferedWriter writer = Files.newBufferedWriter(concepts.SCORE_PATH);
+    BufferedWriter writer = Files.newBufferedWriter(org.sa.config.Paths.SCORE_PATH);
 
     for (Entry<String, Integer> e : concepts.key_score.entrySet())
       writer.write(e.getKey().replaceAll("([ \\t\\n\\r\\f=:])", "\\\\$1") + "=" + e.getValue() + "\n");

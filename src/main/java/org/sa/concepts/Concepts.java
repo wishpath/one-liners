@@ -4,7 +4,8 @@ import org.sa.config.Props;
 import org.sa.console.SimpleColorPrint;
 import org.sa.dto.ConceptDTO;
 import org.sa.other.ValueAscendingMap;
-import org.sa.service.A_ConceptsLoader;
+import org.sa.service.loaders.A_ConceptsLoader;
+import org.sa.service.loaders.A_ScoresLoader;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -22,16 +23,15 @@ import java.util.stream.Stream;
 public class Concepts {
 
   public static final Path TOPICS_SWED = Paths.get("src/main/java/org/sa/concepts/topics-swed");
-  public static final Path SCORE_PATH = Paths.get("src/main/java/org/sa/storage/score.properties");
+
   public static final Path NOT_TODAY_FILEPATH = Paths.get("src/main/java/org/sa/storage/not_today.csv");
 
   public final Map<String, ConceptDTO> key_concept = A_ConceptsLoader.loadConceptsCheckRepeated();
-  public final ValueAscendingMap<String, Integer> key_score = new ValueAscendingMap<>(); //no keys with score zero, auto ascending
+  public final ValueAscendingMap<String, Integer> key_score = A_ScoresLoader.loadScores(key_concept); //no keys with score zero, auto ascending
   public final TreeMap<Integer, List<String>> score_keyList = new TreeMap<>(); //auto ascending map
   public final ValueAscendingMap<String, LocalDateTime> notTodayKey_time = new ValueAscendingMap<>();//keys skipped from learning for one day
 
   public Concepts() throws IOException {
-    loadScores();
     applyDefaultScoreZero();
     mapAscendingScoresToConcepts();
     loadNotTodayConcepts();
@@ -41,17 +41,7 @@ public class Concepts {
 
 
 
-  private void loadScores() throws IOException {
-    Properties scoreProps = new Properties();
-    try (Reader reader = Files.newBufferedReader(SCORE_PATH, StandardCharsets.UTF_8)) {
-      scoreProps.load(reader);
-    }
-    for (Map.Entry<Object, Object> e : scoreProps.entrySet()) {
-      if (e.getValue().equals("0")) continue; // 0 is default...
-      if (!key_concept.containsKey(e.getKey())) continue; // has score but key got deleted/ altered
-      key_score.put(e.getKey().toString(), Integer.parseInt((String)e.getValue()));
-    }
-  }
+
 
   private void applyDefaultScoreZero() {
     //keys not having explicit score, load with score 0
