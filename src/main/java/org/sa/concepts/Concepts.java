@@ -9,8 +9,6 @@ import org.sa.service.loaders.A_ScoresLoader;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
-import java.io.Reader;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -27,30 +25,22 @@ public class Concepts {
   public static final Path NOT_TODAY_FILEPATH = Paths.get("src/main/java/org/sa/storage/not_today.csv");
 
   public final Map<String, ConceptDTO> key_concept = A_ConceptsLoader.loadConceptsCheckRepeated();
-  public final ValueAscendingMap<String, Integer> key_score = A_ScoresLoader.loadScores(key_concept); //no keys with score zero, auto ascending
-  public final TreeMap<Integer, List<String>> score_keyList = new TreeMap<>(); //auto ascending map
+
+  //TODO: temporary score structure
+  public final Object[] scores = A_ScoresLoader.loadScores(key_concept);
+  public final ValueAscendingMap<String, Integer> key_score = (ValueAscendingMap<String, Integer>) scores[0]; //no keys with score zero, auto ascending
+  public final TreeMap<Integer, List<String>> score_keyList = (TreeMap<Integer, List<String>>) scores[1]; //auto ascending map
+
   public final ValueAscendingMap<String, LocalDateTime> notTodayKey_time = new ValueAscendingMap<>();//keys skipped from learning for one day
 
   public Concepts() throws IOException {
-    applyDefaultScoreZero();
-    mapAscendingScoresToConcepts();
+    printAllCurrentScores();
     loadNotTodayConcepts();
     System.out.println("Count of concepts: " + key_concept.size());
     System.out.println("Count of scores: " + key_score.size());
   }
 
-
-
-
-
-  private void applyDefaultScoreZero() {
-    //keys not having explicit score, load with score 0
-    for (String key : key_concept.keySet())
-      if (key_score.get(key) == null)
-        score_keyList.computeIfAbsent(0, k -> new ArrayList<>()).add(key);
-  }
-
-  private void mapAscendingScoresToConcepts() {
+  private void printAllCurrentScores() {
     SimpleColorPrint.red("Current scores:");
     //0 scores
     for (Map.Entry<String, ConceptDTO> e : key_concept.entrySet())
@@ -62,7 +52,6 @@ public class Concepts {
     for (Map.Entry<String, Integer> e : key_score.entrySet()) {
       SimpleColorPrint.blueInLine(Props.TAB + e.getKey() + ": ");
       SimpleColorPrint.red(String.valueOf(e.getValue()));
-      score_keyList.computeIfAbsent(e.getValue(), k -> new ArrayList<>()).add(e.getKey());
     }
     System.out.println();
   }
