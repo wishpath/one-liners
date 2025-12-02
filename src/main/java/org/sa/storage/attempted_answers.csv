@@ -1138,3 +1138,6 @@ PATH environment variable,system looks up for exe files listed under this variab
 TLS,transport layer security; predecessor of SSL. Authentication protocol,9,2025-12-01T16:07:13.889952600
 try-except (Python),handles exceptions just like try-catch in Java,10,2025-12-01T16:07:55.472717300
 raise (Python),throws the exception in Python; similar to 'throw' keyword in Java,9,2025-12-01T16:33:32.301790300
+pip,tool included in Python porgramming language to fetch dependencies,8,2025-12-02T07:43:26.596071100
+package manager examples by programming language,java: maven; gradle; ivy; python: pip; javascript: npm,10,2025-12-02T07:44:25.162144500
+tuple (Python),Object type in Python. List,8,2025-12-02T07:50:25.605682800

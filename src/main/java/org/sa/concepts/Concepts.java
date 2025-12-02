@@ -34,26 +34,9 @@ public class Concepts {
   public final ValueAscendingMap<String, LocalDateTime> notTodayKey_time = new ValueAscendingMap<>();//keys skipped from learning for one day
 
   public Concepts() throws IOException {
-    printAllCurrentScores();
     loadNotTodayConcepts();
     System.out.println("Count of concepts: " + key_concept.size());
     System.out.println("Count of scores: " + key_score.size());
-  }
-
-  private void printAllCurrentScores() {
-    SimpleColorPrint.red("Current scores:");
-    //0 scores
-    for (Map.Entry<String, ConceptDTO> e : key_concept.entrySet())
-      if (!key_score.containsKey(e.getKey())) {
-        SimpleColorPrint.blueInLine(Props.TAB + e.getKey() + ": ");
-        SimpleColorPrint.red("0");
-      }
-    //non 0 scores
-    for (Map.Entry<String, Integer> e : key_score.entrySet()) {
-      SimpleColorPrint.blueInLine(Props.TAB + e.getKey() + ": ");
-      SimpleColorPrint.red(String.valueOf(e.getValue()));
-    }
-    System.out.println();
   }
 
   private void loadNotTodayConcepts() throws IOException {

@@ -54,6 +54,7 @@ public class Menu {
     MenuLine.string("menu", "prints command menu") + "\n";
 
   public Menu() throws IOException {
+    info.printAllCurrentScores();
     System.out.println(MENU);
     while (true) {
       act.save();

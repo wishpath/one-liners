@@ -198,4 +198,20 @@ public class Info {
     SimpleColorPrint.blueInLine("\nPlease explain this concept: ");
     SimpleColorPrint.red(c.key);
   }
+
+  public void printAllCurrentScores() {
+    SimpleColorPrint.red("Current scores:");
+    //0 scores
+    for (Map.Entry<String, ConceptDTO> e : concepts.key_concept.entrySet())
+      if (!concepts.key_score.containsKey(e.getKey())) {
+        SimpleColorPrint.blueInLine(Props.TAB + e.getKey() + ": ");
+        SimpleColorPrint.red("0");
+      }
+    //non 0 scores
+    for (Map.Entry<String, Integer> e : concepts.key_score.entrySet()) {
+      SimpleColorPrint.blueInLine(Props.TAB + e.getKey() + ": ");
+      SimpleColorPrint.red(String.valueOf(e.getValue()));
+    }
+    System.out.println();
+  }
 }
