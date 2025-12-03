@@ -33,3 +33,5 @@ subsetting data=selecting and using a representative portion of a larger dataset
 integration testing=testing combined components to ensure they work together.
 test pilot (IT)=limited-scale trial of a new version before full release, for testing, feedback, and identifying issues.
 unit testing=Testing individual units of code in isolation (AKA component testing).
+lazy-loading (Playwright)=website loads new items only when you scroll near the bottom
+Playwright=automation tool for browser testing, interacts with web pages and verifies behavior.
