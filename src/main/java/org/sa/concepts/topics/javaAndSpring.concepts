@@ -23,4 +23,5 @@ application server=provides the environment to run the application and manage it
 web server=handles HTTP and static content.
 servlet/controller/MVC=Model View Controller - handles user input, process it, and update the model or view.
 stereotype in Spring=role of class, marked by annotation. E.g.: @Controller @Service
-volatile (Java)=keyword, ensures variable updates visible to all threads, e.g., private volatile String status;
+volatile (Java)=keyword, ensures variable updates visible to all threads, e.g., private volatile String status.
+ternary operator=inline if-else: condition ? a : b.

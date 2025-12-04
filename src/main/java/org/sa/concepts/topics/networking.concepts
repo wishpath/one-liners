@@ -14,4 +14,4 @@ latency=time delay between sending and receiving data, measured in milliseconds 
 uplink (networking)=outgoing traffic from your system to the network.
 downlink (networking)=incoming traffic to your system from the network.
 jitter=variation in packet delay over a network, measured in milliseconds (ms).
-throughput=actual amount of data successfully transmitted over a network in a given time, measured in bits per second (bps).
+throughput (network)=actual amount of data successfully transmitted over a network in a given time, measured in bits per second (bps).

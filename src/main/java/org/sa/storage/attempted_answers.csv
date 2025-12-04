@@ -1141,3 +1141,6 @@ raise (Python),throws the exception in Python; similar to 'throw' keyword in Jav
 pip,tool included in Python porgramming language to fetch dependencies,8,2025-12-02T07:43:26.596071100
 package manager examples by programming language,java: maven; gradle; ivy; python: pip; javascript: npm,10,2025-12-02T07:44:25.162144500
 tuple (Python),Object type in Python. List,8,2025-12-02T07:50:25.605682800
+Playwright,framework for UI auto testing. Automates user actions.,9,2025-12-04T08:27:57.866416700
+throughput (backend),how many items were passed per time,9,2025-12-04T08:28:33.851307900
+ternary operator,in line if else statement,9,2025-12-04T08:29:48.481270300

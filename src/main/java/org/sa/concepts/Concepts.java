@@ -41,7 +41,6 @@ public class Concepts {
 
   private void loadNotTodayConcepts() throws IOException {
 
-    SimpleColorPrint.blue("LOADING 'NOT TODAY' CONCEPTS:");
     try (Stream<String> lines = Files.lines(NOT_TODAY_FILEPATH)) {
       LocalDateTime oneDayAgo = LocalDateTime.now().minusDays(1);
       lines.map(line -> line.split(","))
@@ -55,7 +54,6 @@ public class Concepts {
           .forEach(e -> notTodayKey_time.put(e.getKey(), e.getValue()));
     }
     autosaveNotTodayMapToFile();
-    System.out.println();
   }
 
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -31,7 +31,7 @@ public class A_ConceptsLoader {
               SimpleColorPrint.redInLine(", the definitions: ");
               SimpleColorPrint.blueInLine(arr[1]);
               SimpleColorPrint.redInLine(" and ");
-              SimpleColorPrint.blue(repeated.toString());
+              SimpleColorPrint.blue(repeated.definition);
             }
           });
 

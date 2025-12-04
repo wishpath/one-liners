@@ -77,7 +77,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      real-time data flow - continuous, asynchronous transfer and processing of data as events occur
      sticky session - user always routed to same server for session consistency.
      sticky session benefit - avoids session data transfer and Java object serialization.
-     throughput - rate at which data is processed or transmitted through a system, measured in units/events per interval.
+     throughput (backend) - rate at which data is processed or transmitted through a system, measured in units/events per interval.
      SA (technical user) - service account — non-human access credential.
      PATH environment variable - system lookup list for executables, e.g., Java (java) or Python (python) commands.
      tuple (Python) - immutable ordered collection, e.g. (1, "a").
@@ -297,7 +297,8 @@ This set of very short definitions gets straight to the point, giving you the ba
      web server - handles HTTP and static content.
      servlet/controller/MVC - Model View Controller - handles user input, process it, and update the model or view.
      stereotype in Spring - role of class, marked by annotation. E.g.: @Controller @Service
-     volatile (Java) - keyword, ensures variable updates visible to all threads, e.g., private volatile String status;
+     volatile (Java) - keyword, ensures variable updates visible to all threads, e.g., private volatile String status.
+     ternary operator - inline if-else: condition ? a : b.
 
 *Logs And Observability*
      ELK - Elasticsearch, Logstash, and Kibana - tools for searching, analyzing, and visualizing logs and data.
@@ -328,7 +329,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      uplink (networking) - outgoing traffic from your system to the network.
      downlink (networking) - incoming traffic to your system from the network.
      jitter - variation in packet delay over a network, measured in milliseconds (ms).
-     throughput - actual amount of data successfully transmitted over a network in a given time, measured in bits per second (bps).
+     throughput (network) - actual amount of data successfully transmitted over a network in a given time, measured in bits per second (bps).
 
 *Qa And Testing*
      A/B testing - split testing - compare two versions (A and B) of a webpage.
@@ -367,6 +368,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      test pilot (IT) - limited-scale trial of a new version before full release, for testing, feedback, and identifying issues.
      unit testing - Testing individual units of code in isolation (AKA component testing).
      lazy-loading (Playwright) - website loads new items only when you scroll near the bottom
+     Playwright - automation tool for browser testing, interacts with web pages and verifies behavior.
 
 *Regulations*
      AFC (compliance) - Anti Financial Crime — preventing and managing financial fraud, money laundering, bribery etc.
