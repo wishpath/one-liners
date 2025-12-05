@@ -1144,3 +1144,8 @@ tuple (Python),Object type in Python. List,8,2025-12-02T07:50:25.605682800
 Playwright,framework for UI auto testing. Automates user actions.,9,2025-12-04T08:27:57.866416700
 throughput (backend),how many items were passed per time,9,2025-12-04T08:28:33.851307900
 ternary operator,in line if else statement,9,2025-12-04T08:29:48.481270300
+lazy-loading (Playwright),loading additional entries to feed when scrolling down to the bottom of the page,9,2025-12-05T23:32:09.467928
+throughput (network),speed of bits transfered per second over network,9,2025-12-05T23:32:49.309669200
+TLS,Transfer Layer Security - encryption of data,9,2025-12-05T23:33:23.395042500
+tuple (Python),Data Structure object in Python,8,2025-12-05T23:33:43.640121200
+pip,dependency manager in python,9,2025-12-05T23:34:03.149410900

@@ -12,13 +12,15 @@ import java.nio.file.Files;
 import java.util.*;
 
 public class A_ScoresLoader {
-  public static Object[] loadScores(Map<String, ConceptDTO> key_concept) throws IOException {
+  public static Object[] loadScores(Map<String, ConceptDTO> key_concept) {
     ValueAscendingMap<String, Integer> key_score = new ValueAscendingMap<>(); //from now on keys with explicit score 0 as well
 
     //load scores to type 'Properties'
     Properties scoreProperties = new Properties();
     try (Reader reader = Files.newBufferedReader(Paths.SCORE_PATH, StandardCharsets.UTF_8)) {
       scoreProperties.load(reader);
+    } catch (IOException e) {
+      throw new RuntimeException(e);
     }
 
     for (Map.Entry<Object, Object> entryOfKey_score : scoreProperties.entrySet()) {
