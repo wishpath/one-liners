@@ -2,8 +2,6 @@ package org.sa.service;
 
 import org.sa.concepts.Concepts;
 import org.sa.config.Paths;
-import org.sa.config.Props;
-import org.sa.console.SimpleColorPrint;
 import org.sa.dto.ConceptDTO;
 import org.sa.other.ValueAscendingMap;
 
@@ -11,7 +9,6 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.time.LocalDateTime;
-import java.util.Arrays;
 import java.util.Map;
 import java.util.stream.Stream;
 
@@ -22,7 +19,6 @@ public class NotTodayService {
   public NotTodayService(Concepts concepts) {
     this.key_concept = concepts.key_concept;
     this.notTodayKey_time = loadNotTodayConcepts();
-    System.out.println(key_concept);
   }
 
   public void autosaveNotTodayMapToFile(ValueAscendingMap<String, LocalDateTime> notTodayKey_time) {
@@ -42,7 +38,6 @@ public class NotTodayService {
       LocalDateTime oneDayAgo = LocalDateTime.now().minusDays(1);
       lines.map(line -> line.split(","))
           .peek(linePartsArr -> {
-            SimpleColorPrint.normal(Props.TAB + Arrays.toString(linePartsArr));
             if (linePartsArr.length > 2) throw new RuntimeException("LINE CONTAINS TOO MANY COMMAS");
           })
           .map(parts -> Map.entry(parts[0], LocalDateTime.parse(parts[1])))
