@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class Info {
 
@@ -107,10 +108,10 @@ public class Info {
   public void printLowestScoreConcepts() {
     int weakConceptCounter = 0;
     SimpleColorPrint.blue("Printing concepts with lowest score:\n");
-    for (Map.Entry<Integer, List<String>> e : concepts.score_keyList.entrySet()) {
+    for (Map.Entry<Integer, Set<String>> e : concepts.score_keySet.entrySet()) {
       if (weakConceptCounter > 7) break;
       int score = e.getKey();
-      List<String> keys= e.getValue();
+      Set<String> keys= e.getValue();
       SimpleColorPrint.red(Props.TAB + score + ":");
       for (String key : keys) {
         if (weakConceptCounter > 11) break;
@@ -146,7 +147,7 @@ public class Info {
     int passableScore = Integer.MIN_VALUE; // score pointer in order to print at least 8 concepts
     int willBePrinted = 0;
 
-    for (Map.Entry<Integer, List<String>> e : concepts.score_keyList.entrySet()) {
+    for (Map.Entry<Integer, Set<String>> e : concepts.score_keySet.entrySet()) {
       long countAtScore = e.getValue().stream()
           .filter(notTodayService.notTodayKey_time::containsKey)
           .count();

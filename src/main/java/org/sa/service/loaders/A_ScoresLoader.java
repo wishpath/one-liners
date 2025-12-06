@@ -14,6 +14,7 @@ import java.util.*;
 public class A_ScoresLoader {
   public static Object[] loadScores(Map<String, ConceptDTO> key_concept) {
     ValueAscendingMap<String, Integer> key_score = new ValueAscendingMap<>(); //from now on keys with explicit score 0 as well
+    TreeMap<Integer, Set<String>> score_keyList = new TreeMap<>(); //auto ascending map
 
     //load scores to type 'Properties'
     Properties scoreProperties = new Properties();
@@ -23,34 +24,27 @@ public class A_ScoresLoader {
       throw new RuntimeException(e);
     }
 
-    for (Map.Entry<Object, Object> entryOfKey_score : scoreProperties.entrySet()) {
-      String key = (String) entryOfKey_score.getKey();
-      int score = Integer.parseInt((String) entryOfKey_score.getValue());
+    for (Map.Entry<Object, Object> entryOfKey_scoreProperties : scoreProperties.entrySet()) {
+      String propertiesKey = (String) entryOfKey_scoreProperties.getKey();
+      int propertiesScore = Integer.parseInt((String) entryOfKey_scoreProperties.getValue());
 
-      if (!key_concept.containsKey(key)) {
-        System.out.println("Detected deleted key, that has score. Deleted key: " + Colors.RED + key + Colors.RESET);
+      if (!key_concept.containsKey(propertiesKey)) {
+        System.err.println("Detected deleted key, that has score. Deleted key: " + Colors.RED + propertiesKey + Colors.RESET);
         continue;
       }
 
       //score added
-      key_score.put(key, score);
+      key_score.put(propertiesKey, propertiesScore);
       //assign score to object
-      key_concept.get(key).score = score;
-      //TODO: can add to score_keyList here as well
+      key_concept.get(propertiesKey).score = propertiesScore;
+      score_keyList.computeIfAbsent(propertiesScore, k -> new HashSet<>()).add(propertiesKey);
     }
 
-    TreeMap<Integer, List<String>> score_keyList = new TreeMap<>(); //auto ascending map
-
-    //keys not having explicit score, map to score 0
+    //when score is not defined in the properties, it is assigned as 0 as default in the concept constructor. (properties might also contain score of 0)
     for (String key : key_concept.keySet())
-      if (key_score.get(key) == null) {
-        score_keyList.computeIfAbsent(0, k -> new ArrayList<>()).add(key);
+      if (key_concept.get(key).score == 0) {
+        score_keyList.computeIfAbsent(0, k -> new HashSet<>()).add(key);
       }
-
-    //sort (map to values) non 0 scores
-    for (Map.Entry<String, Integer> e : key_score.entrySet()) {
-      score_keyList.computeIfAbsent(e.getValue(), k -> new ArrayList<>()).add(e.getKey());
-    }
 
     return new Object[]{key_score, score_keyList};
   }

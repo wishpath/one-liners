@@ -5,7 +5,7 @@ public class ConceptDTO {
   public String definition;
   public String evaluationInstructions;
   public String userInstructions;
-  public int score;
+  public Integer score;
 
   public ConceptDTO(String key, String definition) {
     this.key = key;
