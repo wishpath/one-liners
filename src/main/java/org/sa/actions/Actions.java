@@ -139,10 +139,11 @@ public class Actions {
   public void saveScores_OverwriteFile() throws IOException {
     BufferedWriter writer = Files.newBufferedWriter(org.sa.config.Paths.SCORE_PATH);
 
-    for (Entry<String, Integer> e : concepts.key_score.entrySet()) {
+    for (Entry<String, ConceptDTO> e : concepts.key_concept.entrySet()) {
       // escapes these characters: space, tab, newline, carriage return, formfeed, '=', ':'
       String escapedKeyForPropertiesFileFormat = e.getKey().replaceAll("([ \\t\\n\\r\\f=:])", "\\\\$1");
-      writer.write( escapedKeyForPropertiesFileFormat + "=" + e.getValue() + "\n");
+      String score = e.getValue().score.toString();
+      writer.write( escapedKeyForPropertiesFileFormat + "=" + score + "\n");
     }
 
     writer.flush();
