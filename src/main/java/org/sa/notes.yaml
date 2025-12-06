@@ -5,15 +5,10 @@ problems:
   - continue working on having score mainly on ConceptDTO not on key_score and all score actions should update ConceptDTO now.
   - use explicit score of 0
   - put ConceptDTO to use:
-      - "public final Map<String, String> keyDefinition = new HashMap<>();" should be Map<String, ConceptDTO>
       - transfer concepts from text files to ConceptObjects class
-  - use quicker ai model for evaluation
-  - don't confuse AI with evaluation instructions for instructing user. only use "extra instructions".
   - instruction for the user:
       - use printStringWithFragmentHighlighted to highlight keyword (not ai)
       - AI generates requirements that are not defined in the instructions. it invents details
-      - save ai provided instruction:
-          - let user know that "ai is thinking"
 ideas:
   - there could be extra note for key for the user before the answer
     - it should tell what is expected to be mentioned in the answer
@@ -25,22 +20,9 @@ ideas:
       - check how many of phrases has never received a score of 8, then 9, then 10
       - if for some concepts it is impossible to receive 10, add additional instructions for the AI. provide a couple of examples with answers that would match the evaluation of 10/10
 
-ok, not needed to change:
-   - multiple "=" characters in the concept, because when splitting by it, it is limited to 2 parts max.
-   - characters print well in console, but gradle settings > build and run should be IntelliJ
-   - spaced repetition - would not seem to bring much benefit, but would complicate code
-   - prep and fix console colors:
-      - blue - global narratives
-      - cyan - inner narratives
-      - yellow - AI
-      - bright yellow - extra data
-   - it is ok to not write unit tests if:
-      - it's a prototype or throw-away app
-      - there's only one developer.
-      - input files are small and predictable.
-      - You’ll iterate quickly, and the app will likely be rewritten or discarded.
-
 maybe no, not needed:
+  - spaced repetition - would not seem to bring much benefit, but would complicate code
+  - ai generated instruction
   - new command "pick exact <key>"
   - make command 'score 1' - print all the concepts with score 1
 

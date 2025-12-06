@@ -1,4 +1,4 @@
-package org.sa.apps;
+package org.sa.APP;
 
 import org.sa.Menu;
 

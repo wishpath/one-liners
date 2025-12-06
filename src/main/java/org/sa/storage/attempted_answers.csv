@@ -1160,3 +1160,4 @@ gateway,a server in the nework that manages incomming and outgoing traffic,9,202
 Ivy integration to Gradle,Ivy is a java tool to manage dependecies,9,2025-12-06T14:59:10.888492300
 hyphen ("-") function,joins multiple words into one,9,2025-12-06T15:07:38.790366800
 hub,central point; that rules all other points,9,2025-12-06T16:20:39.404990800
+boilerplate,code that get repeated unchanged in multiple projects,9,2025-12-06T17:44:01.769670200

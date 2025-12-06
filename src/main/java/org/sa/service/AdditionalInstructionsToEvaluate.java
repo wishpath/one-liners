@@ -1,6 +1,6 @@
 package org.sa.service;
 
-import org.sa.concepts.Concepts;
+import org.sa.storage.concepts.Concepts;
 
 import java.io.IOException;
 import java.nio.file.Files;

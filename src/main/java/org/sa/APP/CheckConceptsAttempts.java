@@ -1,9 +1,9 @@
-package org.sa.apps;
+package org.sa.APP;
 
-import org.sa.config.Props;
+import org.sa.A_config.Props;
 import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
-import org.sa.other.ValueAscendingMap;
+import org.sa.z_data_structure.ValueAscendingMap;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -87,7 +87,7 @@ public class CheckConceptsAttempts {
   private Map<String, String> loadConceptsCheckRepeated() {
     Map<String, String> keyDefinitionX = new HashMap<>();
     try {
-      for (Path subtopicPath : Files.walk(Paths.get("src/main/java/org/sa/concepts/topics")).filter(p -> p.toString().endsWith(".concepts")).toList())
+      for (Path subtopicPath : Files.walk(Paths.get("src/main/java/org/sa/storage/concepts/topics")).filter(p -> p.toString().endsWith(".concepts")).toList())
         Files.lines(subtopicPath)
             .filter(line -> line.contains("="))
             .forEach(line -> {

@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class A_ConceptsLoader {
-  public static final Path TOPICS_PUBLIC = Paths.get("src/main/java/org/sa/concepts/topics");
+  public static final Path TOPICS_PUBLIC = Paths.get("src/main/java/org/sa/storage/concepts/topics");
 
   public static Map<String, ConceptDTO> loadConceptsCheckRepeated(){
     Map<String, ConceptDTO> key_concept = new HashMap<>();

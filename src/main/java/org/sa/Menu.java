@@ -1,13 +1,13 @@
 package org.sa;
 
-import org.sa.actions.Actions;
-import org.sa.actions.Info;
-import org.sa.concepts.Concepts;
-import org.sa.config.Props;
+import org.sa.A_config.Props;
 import org.sa.console.ColoredString;
 import org.sa.console.Colors;
 import org.sa.dto.ConceptDTO;
+import org.sa.service.Actions;
+import org.sa.service.Info;
 import org.sa.service.NotTodayService;
+import org.sa.storage.concepts.Concepts;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -55,11 +55,11 @@ public class Menu {
     System.out.println(MENU);
     while (true) {
       act.saveScores_OverwriteFile();
-      info.printUserInstruction(concept);
+      concept.printUserInstruction();
       input = scanner.nextLine().trim();
 
       if (input.isEmpty())
-        info.printUserInstruction(concept);
+        concept.printUserInstruction();
 
       else if ("menu".equals(input))
         System.out.println(MENU);

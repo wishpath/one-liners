@@ -1,14 +1,12 @@
-package org.sa.actions;
+package org.sa.service;
 
 import org.sa.AiClient;
-import org.sa.concepts.Concepts;
-import org.sa.config.Props;
+import org.sa.storage.concepts.Concepts;
+import org.sa.A_config.Props;
 import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
 import org.sa.dto.ConceptDTO;
-import org.sa.service.AdditionalInstructionsToEvaluate;
-import org.sa.service.InstructionTextForAi;
-import org.sa.service.NotTodayService;
+import org.sa.util.StringConsoleUtil;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -137,7 +135,7 @@ public class Actions {
   }
 
   public void saveScores_OverwriteFile() throws IOException {
-    BufferedWriter writer = Files.newBufferedWriter(org.sa.config.Paths.SCORE_PATH);
+    BufferedWriter writer = Files.newBufferedWriter(org.sa.A_config.Paths.SCORE_PATH);
 
     for (Entry<String, ConceptDTO> e : concepts.key_concept.entrySet()) {
       // escapes these characters: space, tab, newline, carriage return, formfeed, '=', ':'
@@ -165,7 +163,6 @@ public class Actions {
     else initialSet.remove(conceptDTO.key);
 
     //increase score in the datastructures:
-    concepts.key_score.merge(conceptDTO.key, increment, Integer::sum); //TODO to be removed later
     conceptDTO.score += increment;
 
     //add key back to score map (to new score)
@@ -191,7 +188,7 @@ public class Actions {
       return concept;
     }
 
-    Info.printStringWithFragmentHighlighted(evaluationOutOfTenString, answer, Colors.YELLOW, Colors.RED);
+    StringConsoleUtil.printStringWithFragmentHighlighted(evaluationOutOfTenString, answer, Colors.YELLOW, Colors.RED);
 
     //memorize answer
     String userAttemptedDefinition = userInputDefinitionAttempt.replace(",", ";");

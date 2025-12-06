@@ -1,4 +1,4 @@
-package org.sa.config;
+package org.sa.A_config;
 
 import java.nio.file.Path;
 

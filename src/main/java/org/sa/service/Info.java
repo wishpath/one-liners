@@ -1,11 +1,11 @@
-package org.sa.actions;
+package org.sa.service;
 
-import org.sa.concepts.Concepts;
-import org.sa.config.Props;
+import org.sa.storage.concepts.Concepts;
+import org.sa.A_config.Props;
 import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
 import org.sa.dto.ConceptDTO;
-import org.sa.service.NotTodayService;
+import org.sa.util.StringConsoleUtil;
 
 import java.time.format.DateTimeFormatter;
 import java.util.Comparator;
@@ -56,26 +56,6 @@ public class Info {
     System.out.println();
   }
 
-  public static void printStringWithFragmentHighlighted(String fragment, String string, String mainColorAnsiCode, String fragmentColorAnsiCode) {
-    //lowercase strings for easy finding of index where the fragment is
-    String lowerS = string.toLowerCase();
-    String lowerFragment = fragment.toLowerCase();
-
-    //each iteration will print up to the end of next matching fragment
-    for (int indexOfPrintStart = 0; indexOfPrintStart < string.length(); ) {
-     int indexOfFragment = lowerS.indexOf(lowerFragment, indexOfPrintStart);
-     if (indexOfFragment == -1) {
-       SimpleColorPrint.color(string.substring(indexOfPrintStart), mainColorAnsiCode);
-       break;
-     }
-     //print before fragment
-     SimpleColorPrint.colorInLine(string.substring(indexOfPrintStart, indexOfFragment), mainColorAnsiCode);
-     //print fragment
-     SimpleColorPrint.colorInLine(string.substring(indexOfFragment, indexOfFragment + fragment.length()), fragmentColorAnsiCode);
-     indexOfPrintStart = indexOfFragment + fragment.length();
-   }
-  }
-
   public void printAllKeys() {
     SimpleColorPrint.blue("Listing all the keys:");
     concepts.key_concept.entrySet()
@@ -112,7 +92,7 @@ public class Info {
     for (int i = 0; i < concepts.size(); i++) {
       SimpleColorPrint.normalInLine(Props.TAB + i + " ");
       String concept = Props.TAB + concepts.get(i).key + ": " + concepts.get(i).definition;
-      printStringWithFragmentHighlighted(fragment, concept, Colors.LIGHT_GRAY, Colors.RED);
+      StringConsoleUtil.printStringWithFragmentHighlighted(fragment, concept, Colors.LIGHT_GRAY, Colors.RED);
     }
     System.out.println();
   }
@@ -123,14 +103,9 @@ public class Info {
     SimpleColorPrint.blue("Matching keys: ");
     for (int i = 0; i < concepts.size(); i++) {
       SimpleColorPrint.normalInLine(Props.TAB + i + " ");
-      printStringWithFragmentHighlighted(fragment, Props.TAB + concepts.get(i).key, Colors.LIGHT_GRAY, Colors.RED);
+      StringConsoleUtil.printStringWithFragmentHighlighted(fragment, Props.TAB + concepts.get(i).key, Colors.LIGHT_GRAY, Colors.RED);
     }
     System.out.println();
-  }
-
-  public void printUserInstruction(ConceptDTO c) {
-    SimpleColorPrint.blueInLine("\nPlease explain this concept: ");
-    SimpleColorPrint.red(c.key);
   }
 
   public void printAllCurrentScores() {

@@ -1,4 +1,4 @@
-package org.sa.other;
+package org.sa.z_data_structure;
 
 import java.util.LinkedHashMap;
 import java.util.List;

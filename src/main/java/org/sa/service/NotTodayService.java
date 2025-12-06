@@ -1,9 +1,9 @@
 package org.sa.service;
 
-import org.sa.concepts.Concepts;
-import org.sa.config.Paths;
+import org.sa.storage.concepts.Concepts;
+import org.sa.A_config.Paths;
 import org.sa.dto.ConceptDTO;
-import org.sa.other.ValueAscendingMap;
+import org.sa.z_data_structure.ValueAscendingMap;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -22,7 +22,7 @@ public class NotTodayService {
   }
 
   public void autosaveNotTodayMapToFile(ValueAscendingMap<String, LocalDateTime> notTodayKey_time) {
-    try (BufferedWriter writer = Files.newBufferedWriter(org.sa.config.Paths.NOT_TODAY_FILEPATH)) {
+    try (BufferedWriter writer = Files.newBufferedWriter(org.sa.A_config.Paths.NOT_TODAY_FILEPATH)) {
       for (Map.Entry<String, LocalDateTime> entry : notTodayKey_time.entrySet())
         writer.write(entry.getKey() + "," + entry.getValue() + System.lineSeparator()); //overwrites
     } catch (IOException e) {
