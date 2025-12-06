@@ -3,32 +3,24 @@ package org.sa;
 import org.sa.a_config.Props;
 import org.sa.console.ColoredString;
 import org.sa.console.Colors;
+import org.sa.console.SimpleColorPrint;
 import org.sa.dto.ConceptDTO;
-import org.sa.service.Actions;
-import org.sa.service.Info;
-import org.sa.service.NotTodayService;
+import org.sa.service.*;
 
 import java.io.IOException;
 import java.util.Scanner;
 
 public class Menu {
 
-  private void setConcept(ConceptDTO newConcept) {
-    if (newConcept.equals(concept)) return;
-    previousConcept = concept;
-    concept = newConcept;
-  }
-
-  private String sub(String skippingThis) {
-    return input.substring(skippingThis.length());
-  }
-
   private Scanner scanner = new Scanner(System.in);
-  private Concepts concepts = new Concepts();
+  private ConceptsLoader concepts = new ConceptsLoader();
+  private ScoreService scoreService = new ScoreService(concepts);
   private NotTodayService notTodayService = new NotTodayService(concepts);
-  private Actions act = new Actions(concepts, notTodayService);
-  private Info info = new Info(concepts, notTodayService);
-  private ConceptDTO previousConcept = act.pickConceptWithLowestScore();
+  private ConceptPicker pick = new ConceptPicker(concepts, notTodayService);
+  private InfoPrinter info = new InfoPrinter(concepts, notTodayService);
+  private AiService aiService = new AiService(pick, scoreService, notTodayService);
+
+  private ConceptDTO previousConcept = pick.pickConceptWithLowestScore();
   private ConceptDTO concept = previousConcept;
   private String input = "";
 
@@ -53,7 +45,7 @@ public class Menu {
     info.printAllCurrentScores();
     System.out.println(MENU);
     while (true) {
-      act.saveScores_OverwriteFile();
+      scoreService.saveScores_OverwriteFile();
       concept.printUserInstruction();
       input = scanner.nextLine().trim();
 
@@ -79,38 +71,55 @@ public class Menu {
         System.out.println(Colors.BLUE + concept.key + ": " + Colors.RESET + concept.definition + "\n");
 
       else if (input.startsWith("pick nth"))
-        setConcept(act.pickNthConceptWithFragmentInKey(input));
+        setConcept(pick.pickNthConceptWithFragmentInKey(input));
 
       else if (input.startsWith("pick "))
-        setConcept(act.pickConceptWithFragmentInKey(sub("pick ")));
+        setConcept(pick.pickConceptWithFragmentInKey(sub("pick ")));
 
       else if (input.contains("?"))
-        act.askAi(input);
+        aiService.askAi(input);
 
-      else if ("idk".equals(input))
-        setConcept(act.answerIDontKnow(concept));
+      else if ("idk".equals(input)) {
+        scoreService.incrementScore(concept, -1);
+        SimpleColorPrint.blue("Concept has received a score of -1: ");
+        SimpleColorPrint.red(Props.TAB + concept.key + ": " + concept.definition + "\n");
+        notTodayService.dontLearnThisToday(concept);
+        setConcept(pick.pickConceptWithLowestScore());
+      }
 
       else if ("not today print".equals(input))
         info.printNotTodayConcepts();
 
-      else if ("not today add".equals(input) || "skip".equals(input))
-        setConcept(act.addKeywordToNotToday(concept));
+      else if ("not today add".equals(input) || "skip".equals(input)) {
+        notTodayService.dontLearnThisToday(concept);
+        setConcept(pick.pickConceptWithLowestScore());
+      }
 
       else if (input.startsWith("not today"))
         System.out.println("'not today print' or 'not today add'?");
 
       else if ("score".equals(input))
-        info.printCurrentKeyScore(concept);
+        concept.printScore();
 
       else if ("scores".equals(input))
         info.printAllCurrentScores();
 
       else {
-        ConceptDTO conceptToSet = act.evaluateUserExplanationWithAI(concept, input); //if evaluation < 7, keeps same concept;
+        ConceptDTO conceptToSet = aiService.evaluateUserExplanationWithAI(concept, input);
         setConcept(conceptToSet);
       }
 
     }
+  }
+
+  private void setConcept(ConceptDTO newConcept) {
+    if (newConcept.equals(concept)) return;
+    previousConcept = concept;
+    concept = newConcept;
+  }
+
+  private String sub(String skippingThis) {
+    return input.substring(skippingThis.length());
   }
 }
 

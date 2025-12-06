@@ -25,4 +25,11 @@ public class ConceptDTO {
     SimpleColorPrint.blueInLine(answerInstruction);
     SimpleColorPrint.red(key);
   }
+
+  public void printScore() {
+    SimpleColorPrint.blueInLine("The score of concept '");
+    SimpleColorPrint.redInLine(key);
+    SimpleColorPrint.blueInLine("' is: ");
+    SimpleColorPrint.red(score + "\n");
+  }
 }

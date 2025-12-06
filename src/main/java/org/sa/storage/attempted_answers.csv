@@ -1164,3 +1164,7 @@ boilerplate,code that get repeated unchanged in multiple projects,9,2025-12-06T1
 interface in java,interface is sort of contract or what a class that implements it should have: what methods,9,2025-12-06T18:25:22.961785500
 port,sort of connection endpoint,9,2025-12-06T18:56:24.877844300
 token,authentication credential,9,2025-12-06T18:56:48.217887
+Hibernate,java database connection framework,7,2025-12-06T19:27:22.862141300
+functional testing,testing if feature is functional,8,2025-12-06T20:34:25.785010500
+data flow,data processed and/or sent over network,9,2025-12-06T21:00:28.373508200
+due diligence,customer cheks,7,2025-12-06T21:01:00.363015300

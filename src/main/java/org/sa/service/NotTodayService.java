@@ -1,7 +1,6 @@
 package org.sa.service;
 
-import org.sa.Concepts;
-import org.sa.a_config.Paths;
+import org.sa.a_config.FilePath;
 import org.sa.dto.ConceptDTO;
 import org.sa.z_data_structure.ValueAscendingMap;
 
@@ -16,13 +15,13 @@ public class NotTodayService {
   public ValueAscendingMap<String, LocalDateTime> notTodayKey_time;//keys skipped from learning for one day
   private Map<String, ConceptDTO> key_concept;
 
-  public NotTodayService(Concepts concepts) {
+  public NotTodayService(ConceptsLoader concepts) {
     this.key_concept = concepts.key_concept;
     this.notTodayKey_time = loadNotTodayConcepts();
   }
 
   public void autosaveNotTodayMapToFile(ValueAscendingMap<String, LocalDateTime> notTodayKey_time) {
-    try (BufferedWriter writer = Files.newBufferedWriter(org.sa.a_config.Paths.NOT_TODAY_FILEPATH)) {
+    try (BufferedWriter writer = Files.newBufferedWriter(FilePath.NOT_TODAY_FILEPATH)) {
       for (Map.Entry<String, LocalDateTime> entry : notTodayKey_time.entrySet())
         writer.write(entry.getKey() + "," + entry.getValue() + System.lineSeparator()); //overwrites
     } catch (IOException e) {
@@ -34,7 +33,7 @@ public class NotTodayService {
 
     ValueAscendingMap<String, LocalDateTime> notTodayKey_time = new ValueAscendingMap<>();//keys skipped from learning for one day
 
-    try (Stream<String> lines = Files.lines(Paths.NOT_TODAY_FILEPATH)) {
+    try (Stream<String> lines = Files.lines(FilePath.NOT_TODAY_FILEPATH)) {
       LocalDateTime oneDayAgo = LocalDateTime.now().minusDays(1);
       lines.map(line -> line.split(","))
           .peek(linePartsArr -> {
@@ -52,9 +51,9 @@ public class NotTodayService {
     return notTodayKey_time;
   }
 
-  public void dontLearnThisToday(String key){
+  public void dontLearnThisToday(ConceptDTO concept){
     refreshNotTodayMap(); //remove entries older than one day
-    notTodayKey_time.put(key, LocalDateTime.now());
+    notTodayKey_time.put(concept.key, LocalDateTime.now());
     autosaveNotTodayMapToFile(notTodayKey_time);
   }
 

@@ -1,23 +1,23 @@
 package org.sa.service;
 
-import org.sa.Concepts;
 import org.sa.a_config.Props;
 import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
 import org.sa.dto.ConceptDTO;
 import org.sa.util.StringConsoleUtil;
 
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 
-public class Info {
+public class InfoPrinter {
 
-  private final Concepts concepts;
+  private final ConceptsLoader concepts;
   private final NotTodayService notTodayService;
 
-  public Info(Concepts concepts, NotTodayService notTodayService) {
+  public InfoPrinter(ConceptsLoader concepts, NotTodayService notTodayService) {
     this.concepts = concepts;
     this.notTodayService = notTodayService;
   }
@@ -34,7 +34,7 @@ public class Info {
     else {
       SimpleColorPrint.blueInLine("Defining all keys containing fragment: ");
       SimpleColorPrint.red(fragment);
-      printConceptEntryList_indexed_fragmentHighlighted(fragment, entryListFound);
+      printConcepts_fragmentHighlighted(fragment, entryListFound);
     }
     System.out.println();
   }
@@ -51,7 +51,7 @@ public class Info {
     else {
       SimpleColorPrint.blueInLine("Defining all key-values containing fragment: ");
       SimpleColorPrint.red(fragment);
-      printConceptEntryList_indexed_fragmentHighlighted(fragment, found);
+      printConcepts_fragmentHighlighted(fragment, found);
     }
     System.out.println();
   }
@@ -66,13 +66,6 @@ public class Info {
     System.out.println("\n");
   }
 
-  public void printCurrentKeyScore(ConceptDTO concept) {
-    SimpleColorPrint.blueInLine("The score of concept '");
-    SimpleColorPrint.redInLine(concept.key);
-    SimpleColorPrint.blueInLine("' is: ");
-    SimpleColorPrint.red(concept.score + "\n");
-  }
-
   public void printNotTodayConcepts() {
     notTodayService.notTodayKey_time.forEach((key, time) -> {
       String timeString = time.plusDays(1).format(DateTimeFormatter.ofPattern("HH:mm"));
@@ -83,11 +76,8 @@ public class Info {
     System.out.println();
   }
 
-  public static void printConceptEntryList_indexed_fragmentHighlighted(String fragment, List<Map.Entry<String, ConceptDTO>> matchingKey_Definition) {
-    List<ConceptDTO> concepts = matchingKey_Definition.stream()
-        .map(e -> e.getValue())
-        .toList();
-
+  public static void printConcepts_fragmentHighlighted(String fragment, List<Map.Entry<String, ConceptDTO>> conceptEntries) {
+    List<ConceptDTO> concepts = conceptEntries.stream().map(e -> e.getValue()).toList();
     SimpleColorPrint.blue("Matching concepts: ");
     for (int i = 0; i < concepts.size(); i++) {
       SimpleColorPrint.normalInLine(Props.TAB + i + " ");
@@ -97,8 +87,8 @@ public class Info {
     System.out.println();
   }
 
-  public static void printKeyEntryList_indexed_fragmentHighlighted(String fragment, List<Map.Entry<String, ConceptDTO>> matchingKey_concept) {
-    List<ConceptDTO> concepts = matchingKey_concept.stream().map(entry -> entry.getValue()).toList();
+  public static void printKeys_fragmentHighlighted(String fragment, List<Map.Entry<String, ConceptDTO>> conceptEntries) {
+    List<ConceptDTO> concepts = conceptEntries.stream().map(entry -> entry.getValue()).toList();
 
     SimpleColorPrint.blue("Matching keys: ");
     for (int i = 0; i < concepts.size(); i++) {
@@ -115,13 +105,27 @@ public class Info {
         .forEach(e -> {
 
           //print: key - blue; not today key - green
-          String key = Props.TAB + e.getKey() + ": ";
+          String keyFormatted = Props.TAB + e.getKey() + ": ";
           if (notTodayService.notTodayKey_time.containsKey(e.getKey()))
-            SimpleColorPrint.colorInLine(key, Colors.GREEN);
-          else SimpleColorPrint.blueInLine(key);
+            SimpleColorPrint.colorInLine(keyFormatted, Colors.GREEN);
+          else SimpleColorPrint.blueInLine(keyFormatted);
 
           //print score
-          SimpleColorPrint.red(String.valueOf(e.getValue().score));
+          SimpleColorPrint.redInLine(String.valueOf(e.getValue().score));
+
+          //print not today time
+          LocalDateTime notTodayTime = notTodayService.notTodayKey_time.get(e.getKey());
+          if (notTodayTime != null) {
+            String time = notTodayTime.plusDays(1).format(DateTimeFormatter.ofPattern(" HH:mm"));
+            SimpleColorPrint.colorInLine( time, Colors.LIGHT_GRAY);
+
+            //print definition
+            if (LocalDateTime.now().isBefore(notTodayTime.plusHours(23))) {
+              SimpleColorPrint.yellowInLine(" " + e.getValue().definition);
+            }
+          }
+
+          System.out.println();
         });
     System.out.println();
   }

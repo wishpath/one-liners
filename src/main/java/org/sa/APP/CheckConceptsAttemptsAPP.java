@@ -1,5 +1,6 @@
 package org.sa.APP;
 
+import org.sa.a_config.FilePath;
 import org.sa.a_config.Props;
 import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
@@ -12,13 +13,12 @@ import java.io.UncheckedIOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 
 //loads keyDefinition and keyScore from files independently from main app.
-public class CheckConceptsAttempts {
+public class CheckConceptsAttemptsAPP {
 
   public final Map<String, String> keyDefinition = loadConceptsCheckRepeated();
   public final ValueAscendingMap<String, Integer> keyScore = loadScores(); //no keys with score zero, auto ascending
@@ -26,7 +26,7 @@ public class CheckConceptsAttempts {
   record AttemptRecord(String key, String definition, int evaluation, LocalDateTime timestamp) {}
 
   public static void main(String[] args) {
-    CheckConceptsAttempts app = new CheckConceptsAttempts();
+    CheckConceptsAttemptsAPP app = new CheckConceptsAttemptsAPP();
     List<AttemptRecord> attempts = readAttempts();
     System.out.println(attempts.size() + "(size)");
     Map<String, List<AttemptRecord>> key_attempts = app.groupAttemptsByExistingKey(attempts); // filters out keys that are not present in 'keyDefinition'
@@ -36,9 +36,9 @@ public class CheckConceptsAttempts {
   }
 
   private static List<AttemptRecord> readAttempts() {
-    try (BufferedReader reader = Files.newBufferedReader(Paths.get("src/main/java/org/sa/storage/attempted_answers.csv"))) {
+    try (BufferedReader reader = Files.newBufferedReader(FilePath.ATTEMPTED_ANSWERS)) {
       return reader.lines()
-          .map(CheckConceptsAttempts::parseLine)
+          .map(CheckConceptsAttemptsAPP::parseLine)
           .filter(Objects::nonNull)
           .collect(Collectors.toList());
     } catch (IOException e) {
@@ -87,7 +87,7 @@ public class CheckConceptsAttempts {
   private Map<String, String> loadConceptsCheckRepeated() {
     Map<String, String> keyDefinitionX = new HashMap<>();
     try {
-      for (Path subtopicPath : Files.walk(Paths.get("src/main/java/org/sa/storage/concepts/topics")).filter(p -> p.toString().endsWith(".concepts")).toList())
+      for (Path subtopicPath : Files.walk(FilePath.TOPICS_PUBLIC).filter(p -> p.toString().endsWith(".concepts")).toList())
         Files.lines(subtopicPath)
             .filter(line -> line.contains("="))
             .forEach(line -> {
@@ -128,9 +128,8 @@ public class CheckConceptsAttempts {
 
   private ValueAscendingMap<String, Integer> loadScores(){
     ValueAscendingMap<String, Integer> keyScoreX = new ValueAscendingMap<>(); //no keys with score zero, auto ascending
-    final Path SCORE_PATH = Paths.get("src/main/java/org/sa/storage/score.properties");
     Properties scoreProps = new Properties();
-    try (Reader reader = Files.newBufferedReader(SCORE_PATH, StandardCharsets.UTF_8)) {
+    try (Reader reader = Files.newBufferedReader(FilePath.SCORE_PATH, StandardCharsets.UTF_8)) {
       scoreProps.load(reader);
     } catch (IOException e) {
       throw new RuntimeException(e);

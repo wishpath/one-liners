@@ -18,8 +18,7 @@ compatibility testing=checks software performance across different environments 
 data pseudonymization=protecting privacy by encrypting personal indentifiers or replacing them with pseudonyms.
 error budget=maximum allowable errors metric in a system within a specified time frame for reliability.
 exploratory testing=flexible approach to uncover unexpected defects and understand behavior.
-feature flag=feature toggle.
-functional testing=Verifies that software features align with specified requirements.
+feature flag==toggle to enable/disable a feature at runtime without redeploying.
 integrated test environment=closely resembles production. integrated - combined components functioning together.
 penetration testing=authorized simulated cyberattack to evaluate system security.
 performance testing=Testing the performance and scalability of a software application under various conditions.

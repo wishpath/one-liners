@@ -1,5 +1,6 @@
 package org.sa.service;
 
+import org.sa.a_config.FilePath;
 import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
 import org.sa.dto.ConceptDTO;
@@ -9,21 +10,27 @@ import java.io.Reader;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Properties;
+import java.util.*;
 import java.util.stream.Stream;
 
-public class A_ConceptsLoader {
-  public static final Path TOPICS_PUBLIC = Paths.get("src/main/java/org/sa/storage/concepts/topics");
+public class ConceptsLoader {
 
-  public static Map<String, ConceptDTO> loadConceptsCheckRepeated(){
+  public Map<String, ConceptDTO> key_concept = loadConceptsWithAttributes();
+  public final TreeMap<Integer, Set<String>> score_keySet = mapScores(key_concept);
+
+
+  public static TreeMap<Integer, Set<String>> mapScores(Map<String, ConceptDTO> key_concept) {
+    TreeMap<Integer, Set<String>> score_keyList = new TreeMap<>(); //auto ascending map
+    for (ConceptDTO c : key_concept.values()) score_keyList.computeIfAbsent(c.score, k -> new HashSet<>()).add(c.key);
+    return score_keyList;
+  }
+
+  public static Map<String, ConceptDTO> loadConceptsWithAttributes(){
     Map<String, ConceptDTO> key_concept = new HashMap<>();
 
     //load keys and definitions from file
     try {
-      for (Path subtopicPath : Files.walk(TOPICS_PUBLIC).filter(p -> p.toString().endsWith(".concepts")).toList())
+      for (Path subtopicPath : Files.walk(FilePath.TOPICS_PUBLIC).filter(p -> p.toString().endsWith(".concepts")).toList())
         Files.lines(subtopicPath)
             .filter(line -> line.contains("="))
             .forEach(line -> {
@@ -46,7 +53,7 @@ public class A_ConceptsLoader {
     }
 
     // load and assign evaluateInstructions from file
-    try (Stream<String> lines = Files.lines(Paths.get("src/main/java/org/sa/storage/instructions_to_evaluate.csv"))) {
+    try (Stream<String> lines = Files.lines(FilePath.INSTRUCTIONS_TO_EVALUATE)) {
       lines.forEach(line -> {
         String[] key_instruction = line.split(",", 2);
         String key = key_instruction[0];
@@ -64,7 +71,7 @@ public class A_ConceptsLoader {
 
     //load scores to type "Properties" from file
     Properties scoreProperties = new Properties();
-    try (Reader reader = Files.newBufferedReader(org.sa.a_config.Paths.SCORE_PATH, StandardCharsets.UTF_8)) {
+    try (Reader reader = Files.newBufferedReader(FilePath.SCORE_PATH, StandardCharsets.UTF_8)) {
       scoreProperties.load(reader);
     } catch (IOException e) {
       throw new RuntimeException(e);
