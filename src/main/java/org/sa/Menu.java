@@ -39,13 +39,11 @@ public class Menu {
     MenuLine.string("define all all <fragment>", "defines all keys and values containing fragment") +
     MenuLine.string("pick nth <fragment nth>", "picks nth key containing fragment") +
     MenuLine.string("pick <fragment>", "picks key containing fragment") +
-    MenuLine.string("<fragment ?>", "includes question mark to get an answer") +
+    MenuLine.string("<fragment ?>", "type something with \"?\" to get an answer") +
     MenuLine.string("all keys", "lists all the keys in this app") +
     MenuLine.string("prev, previous", "comes back to previous concept") +
     MenuLine.string("idk", "marks 'I don't know' to current concept question") +
-    MenuLine.string("weak", "prints concepts with lowest score") +
-    MenuLine.string("weak keys", "prints newest failed keys (no definitions)") +
-    MenuLine.string("not today print", "prints concepts that are not to be learned today") +
+    MenuLine.string("not today print", "prints concepts that are not to be tested today") +
     MenuLine.string("not today add", "adds concepts that are not to be learned today") +
     MenuLine.string("skip", "reloads key") +
     MenuLine.string("score", "prints current concept score") +
@@ -93,12 +91,6 @@ public class Menu {
       else if ("idk".equals(input))
         setConcept(act.answerIDontKnow(concept));
 
-      else if ("weak".equals(input))
-        info.printLowestScoreConcepts();
-
-      else if ("weak keys".equals(input))
-        info.printNotTodayKeysByTimeAvailableAndLowestScore2();
-
       else if ("not today print".equals(input))
         info.printNotTodayConcepts();
 
@@ -112,7 +104,7 @@ public class Menu {
         info.printCurrentKeyScore(concept);
 
       else if ("scores".equals(input))
-        info.printAllNonZeroScores();
+        info.printAllCurrentScores();
 
       else {
         ConceptDTO conceptToSet = act.evaluateUserExplanationWithAI(concept, input); //if evaluation < 7, keeps same concept;
