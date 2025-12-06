@@ -6,6 +6,8 @@ import org.sa.config.Props;
 import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
 import org.sa.dto.ConceptDTO;
+import org.sa.service.AdditionalInstructionsToEvaluate;
+import org.sa.service.InstructionTextForAi;
 import org.sa.service.NotTodayService;
 
 import java.io.BufferedWriter;
@@ -25,11 +27,13 @@ public class Actions {
   private Concepts concepts;
   private AiClient evaluatorAi = new AiClient().setModelGpt4oMini();
   private AiClient answersAi = new AiClient().setModelGpt4oMini();
+  private AdditionalInstructionsToEvaluate instructionsToEvaluate;
   private static final Path ATTEMPTED_ANSWERS_FILEPATH = Paths.get("src/main/java/org/sa/storage/attempted_answers.csv");
 
   public Actions(Concepts concepts, NotTodayService notTodayService) throws IOException {
     this.notTodayService = notTodayService;
     this.concepts = concepts;
+    this.instructionsToEvaluate = new AdditionalInstructionsToEvaluate(concepts);
   }
 
   public ConceptDTO pickConceptWithLowestScore() {
@@ -132,71 +136,74 @@ public class Actions {
     }
   }
 
-  public void save() throws IOException {
+  public void saveScores_OverwriteFile() throws IOException {
     BufferedWriter writer = Files.newBufferedWriter(org.sa.config.Paths.SCORE_PATH);
 
-    for (Entry<String, Integer> e : concepts.key_score.entrySet())
-      writer.write(e.getKey().replaceAll("([ \\t\\n\\r\\f=:])", "\\\\$1") + "=" + e.getValue() + "\n");
+    for (Entry<String, Integer> e : concepts.key_score.entrySet()) {
+      // escapes these characters: space, tab, newline, carriage return, formfeed, '=', ':'
+      String escapedKeyForPropertiesFileFormat = e.getKey().replaceAll("([ \\t\\n\\r\\f=:])", "\\\\$1");
+      writer.write( escapedKeyForPropertiesFileFormat + "=" + e.getValue() + "\n");
+    }
 
     writer.flush();
     writer.close();
   }
 
-  public ConceptDTO answerIDontKnow(ConceptDTO concept) throws IOException {
-    ConceptDTO c = new ConceptDTO(concept.key, concept.definition);
-    incrementScore(c.key, -1);
+  public ConceptDTO answerIDontKnow(ConceptDTO c){
+    incrementScore(c, -1);
     SimpleColorPrint.blue("Concept has received a score of -1: ");
     SimpleColorPrint.red(Props.TAB + c.key + ": " + c.definition + "\n");
     notTodayService.dontLearnThisToday(c.key);
     return pickConceptWithLowestScore();
   }
 
-  public void incrementScore(String key, int increment) {
-    Integer initialScore = concepts.key_score.get(key);
-    if (initialScore == null) initialScore = 0;
-    concepts.key_score.merge(key, increment, Integer::sum);
-    int finalScore = concepts.key_score.get(key);
-    if (finalScore == 0) concepts.key_score.remove(key);
+  public void incrementScore(ConceptDTO conceptDTO, int increment) {
+    //remove key from score map (from old score)
+    Set<String> initialSet = concepts.score_keySet.get(conceptDTO.score);
+    if (initialSet.size() == 1) concepts.score_keySet.remove(conceptDTO.score);
+    else initialSet.remove(conceptDTO.key);
 
-    Set<String> initialList = concepts.score_keySet.get(initialScore);
-    if (initialList.size() == 1) concepts.score_keySet.remove(initialScore);
-    else initialList.remove(key);
+    //increase score in the datastructures:
+    concepts.key_score.merge(conceptDTO.key, increment, Integer::sum); //TODO to be removed later
+    conceptDTO.score += increment;
 
-    concepts.score_keySet.computeIfAbsent(finalScore, k -> new HashSet<>()).add(key);
+    //add key back to score map (to new score)
+    concepts.score_keySet.computeIfAbsent(conceptDTO.score, k -> new HashSet<>()).add(conceptDTO.key);
   }
 
   private String extractEvaluationString(String s) {
     return Pattern.compile("\\b([0-9]|10)/10\\b").matcher(s).results().map(matchResult -> matchResult.group()).findFirst().orElse("");
   }
 
-  public ConceptDTO evaluateUserExplanationWithAI(ConceptDTO concept, String userInputDefinitionAttempt, String instructionToEvaluateUserInput) throws IOException {
-    ConceptDTO c = new ConceptDTO(concept.key, concept.definition);
+  public ConceptDTO evaluateUserExplanationWithAI(ConceptDTO concept, String userInputDefinitionAttempt) throws IOException {
 
+    String instructionToEvaluateUserInput = InstructionTextForAi.getInstructionToEvaluateUserInput(concept, instructionsToEvaluate, userInputDefinitionAttempt);
 
     //AI evaluation
     String answer = evaluatorAi.getAnswer(instructionToEvaluateUserInput) + "\n";
-    String evaluationString = extractEvaluationString(answer);
-    int evaluation = Integer.parseInt(evaluationString.split("/")[0]);
 
-    if ("".equals(evaluationString)) {
+    //get evaluation out of 10
+    String evaluationOutOfTenString = extractEvaluationString(answer);
+    int evaluationOutOfTen = Integer.parseInt(evaluationOutOfTenString.split("/")[0]);
+    if ("".equals(evaluationOutOfTenString)) {
       SimpleColorPrint.red("The AI has not provided the evaluation. Try again. AI answer: \n" + answer);
-      return c;
+      return concept;
     }
 
-    Info.printStringWithFragmentHighlighted(evaluationString, answer, Colors.YELLOW, Colors.RED);
+    Info.printStringWithFragmentHighlighted(evaluationOutOfTenString, answer, Colors.YELLOW, Colors.RED);
 
     //memorize answer
     String userAttemptedDefinition = userInputDefinitionAttempt.replace(",", ";");
-    String recordLine = String.join(",", c.key, userAttemptedDefinition, String.valueOf(evaluation), LocalDateTime.now().toString()) + "\n";
+    String recordLine = String.join(",", concept.key, userAttemptedDefinition, String.valueOf(evaluationOutOfTen), LocalDateTime.now().toString()) + "\n";
     try (BufferedWriter writer = Files.newBufferedWriter(ATTEMPTED_ANSWERS_FILEPATH, StandardOpenOption.CREATE, StandardOpenOption.APPEND)) {
       writer.write(recordLine);
     }
 
     //score, put to "not_today", print default answer
-    incrementScore(c.key, evaluation < 7 ? -1 : evaluation <= 8 ? 1 : evaluation == 9 ? 2 : 4);
-    notTodayService.dontLearnThisToday(c.key);
+    incrementScore(concept, evaluationOutOfTen < 7 ? -1 : evaluationOutOfTen <= 8 ? 1 : evaluationOutOfTen == 9 ? 2 : 4);
+    notTodayService.dontLearnThisToday(concept.key);
     SimpleColorPrint.blueInLine("The default definition: ");
-    SimpleColorPrint.normal(c.definition + "\n");
+    SimpleColorPrint.normal(concept.definition + "\n");
 
     return pickConceptWithLowestScore();
   }

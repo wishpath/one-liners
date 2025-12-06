@@ -7,8 +7,6 @@ import org.sa.config.Props;
 import org.sa.console.ColoredString;
 import org.sa.console.Colors;
 import org.sa.dto.ConceptDTO;
-import org.sa.service.AdditionalInstructionsToEvaluate;
-import org.sa.service.InstructionTextForAi;
 import org.sa.service.NotTodayService;
 
 import java.io.IOException;
@@ -29,7 +27,6 @@ public class Menu {
   private Scanner scanner = new Scanner(System.in);
   private Concepts concepts = new Concepts();
   private NotTodayService notTodayService = new NotTodayService(concepts);
-  private AdditionalInstructionsToEvaluate instructionsToEvaluate = new AdditionalInstructionsToEvaluate(concepts);
   private Actions act = new Actions(concepts, notTodayService);
   private Info info = new Info(concepts, notTodayService);
   private ConceptDTO previousConcept = act.pickConceptWithLowestScore();
@@ -59,7 +56,7 @@ public class Menu {
     info.printAllCurrentScores();
     System.out.println(MENU);
     while (true) {
-      act.save();
+      act.saveScores_OverwriteFile();
       info.printUserInstruction(concept);
       input = scanner.nextLine().trim();
 
@@ -118,8 +115,10 @@ public class Menu {
       else if ("scores".equals(input))
         info.printAllNonZeroScores();
 
-      else
-        setConcept(act.evaluateUserExplanationWithAI(concept, input, InstructionTextForAi.getInstructionToEvaluateUserInput(concept, instructionsToEvaluate, input))); //if evaluation < 7, keeps same concept;
+      else {
+        ConceptDTO conceptToSet = act.evaluateUserExplanationWithAI(concept, input); //if evaluation < 7, keeps same concept;
+        setConcept(conceptToSet);
+      }
 
     }
   }

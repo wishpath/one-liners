@@ -1155,3 +1155,6 @@ ternary operator,if else statement in one line,9,2025-12-06T12:59:18.268379300
 throughput (backend),number of items that can be processed in a given time,9,2025-12-06T13:00:09.371289
 JETTY,web server,9,2025-12-06T13:00:26.907897100
 raise (Python),keyword that throws an exception in python. equivalent to "throw" in java,9,2025-12-06T13:01:01.139790
+PII,Personal Identifieble Information,9,2025-12-06T14:12:19.806372700
+gateway,a server in the nework that manages incomming and outgoing traffic,9,2025-12-06T14:57:05.185943700
+Ivy integration to Gradle,Ivy is a java tool to manage dependecies,9,2025-12-06T14:59:10.888492300
