@@ -60,7 +60,6 @@ public class Menu {
       info.printUserInstruction(concept);
       input = scanner.nextLine().trim();
 
-
       if (input.isEmpty())
         info.printUserInstruction(concept);
 

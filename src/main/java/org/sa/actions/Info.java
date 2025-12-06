@@ -9,6 +9,7 @@ import org.sa.service.NotTodayService;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -205,17 +206,19 @@ public class Info {
 
   public void printAllCurrentScores() {
     SimpleColorPrint.red("Current scores:");
-    //0 scores
-    for (Map.Entry<String, ConceptDTO> e : concepts.key_concept.entrySet())
-      if (!concepts.key_score.containsKey(e.getKey())) {
-        SimpleColorPrint.blueInLine(Props.TAB + e.getKey() + ": ");
-        SimpleColorPrint.red("0");
-      }
-    //non 0 scores
-    for (Map.Entry<String, Integer> e : concepts.key_score.entrySet()) {
-      SimpleColorPrint.blueInLine(Props.TAB + e.getKey() + ": ");
-      SimpleColorPrint.red(String.valueOf(e.getValue()));
-    }
+    concepts.key_concept.entrySet().stream()
+        .sorted(Comparator.comparingInt(e -> e.getValue().score))
+        .forEach(e -> {
+
+          //print: key - blue; not today key - green
+          String key = Props.TAB + e.getKey() + ": ";
+          if (notTodayService.notTodayKey_time.containsKey(e.getKey()))
+            SimpleColorPrint.colorInLine(key, Colors.GREEN);
+          else SimpleColorPrint.blueInLine(key);
+
+          //print score
+          SimpleColorPrint.red(String.valueOf(e.getValue().score));
+        });
     System.out.println();
   }
 }
