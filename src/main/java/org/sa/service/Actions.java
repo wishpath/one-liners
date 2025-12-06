@@ -1,8 +1,9 @@
 package org.sa.service;
 
 import org.sa.AiClient;
-import org.sa.storage.concepts.Concepts;
-import org.sa.A_config.Props;
+import org.sa.Concepts;
+import org.sa.a_config.Paths;
+import org.sa.a_config.Props;
 import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
 import org.sa.dto.ConceptDTO;
@@ -11,8 +12,6 @@ import org.sa.util.StringConsoleUtil;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.time.LocalDateTime;
 import java.util.*;
@@ -25,13 +24,11 @@ public class Actions {
   private Concepts concepts;
   private AiClient evaluatorAi = new AiClient().setModelGpt4oMini();
   private AiClient answersAi = new AiClient().setModelGpt4oMini();
-  private AdditionalInstructionsToEvaluate instructionsToEvaluate;
-  private static final Path ATTEMPTED_ANSWERS_FILEPATH = Paths.get("src/main/java/org/sa/storage/attempted_answers.csv");
+
 
   public Actions(Concepts concepts, NotTodayService notTodayService) throws IOException {
     this.notTodayService = notTodayService;
     this.concepts = concepts;
-    this.instructionsToEvaluate = new AdditionalInstructionsToEvaluate(concepts);
   }
 
   public ConceptDTO pickConceptWithLowestScore() {
@@ -135,7 +132,7 @@ public class Actions {
   }
 
   public void saveScores_OverwriteFile() throws IOException {
-    BufferedWriter writer = Files.newBufferedWriter(org.sa.A_config.Paths.SCORE_PATH);
+    BufferedWriter writer = Files.newBufferedWriter(org.sa.a_config.Paths.SCORE_PATH);
 
     for (Entry<String, ConceptDTO> e : concepts.key_concept.entrySet()) {
       // escapes these characters: space, tab, newline, carriage return, formfeed, '=', ':'
@@ -175,7 +172,7 @@ public class Actions {
 
   public ConceptDTO evaluateUserExplanationWithAI(ConceptDTO concept, String userInputDefinitionAttempt) throws IOException {
 
-    String instructionToEvaluateUserInput = InstructionTextForAi.getInstructionToEvaluateUserInput(concept, instructionsToEvaluate, userInputDefinitionAttempt);
+    String instructionToEvaluateUserInput = InstructionTextForAi.getInstructionToEvaluateUserInput(concept, userInputDefinitionAttempt);
 
     //AI evaluation
     String answer = evaluatorAi.getAnswer(instructionToEvaluateUserInput) + "\n";
@@ -193,7 +190,7 @@ public class Actions {
     //memorize answer
     String userAttemptedDefinition = userInputDefinitionAttempt.replace(",", ";");
     String recordLine = String.join(",", concept.key, userAttemptedDefinition, String.valueOf(evaluationOutOfTen), LocalDateTime.now().toString()) + "\n";
-    try (BufferedWriter writer = Files.newBufferedWriter(ATTEMPTED_ANSWERS_FILEPATH, StandardOpenOption.CREATE, StandardOpenOption.APPEND)) {
+    try (BufferedWriter writer = Files.newBufferedWriter(Paths.ATTEMPTED_ANSWERS_FILEPATH, StandardOpenOption.CREATE, StandardOpenOption.APPEND)) {
       writer.write(recordLine);
     }
 

@@ -1,7 +1,7 @@
 package org.sa.service;
 
-import org.sa.storage.concepts.Concepts;
-import org.sa.A_config.Props;
+import org.sa.Concepts;
+import org.sa.a_config.Props;
 import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
 import org.sa.dto.ConceptDTO;

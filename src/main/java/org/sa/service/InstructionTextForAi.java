@@ -3,8 +3,8 @@ package org.sa.service;
 import org.sa.dto.ConceptDTO;
 
 public class InstructionTextForAi {
-  public static String getInstructionToEvaluateUserInput(ConceptDTO concept, AdditionalInstructionsToEvaluate instruction, String input) {
-    String questionB =
+  public static String getInstructionToEvaluateUserInput(ConceptDTO concept, String input) {
+    String question =
         "Is this a good key and definition: key: \"" + concept.key + "\", and definition: \"" + input + "\". " +
             "\n A. Step 1 - Evaluate the answer by asking: 'Does this capture the essence?' (aim to be positive)." +
             "\n B. If some details are missing but it captures the essence, rate 10/10." +
@@ -21,13 +21,10 @@ public class InstructionTextForAi {
             "\n K. If the key is an acronym, each core expanded word — even if misspelled — must clearly match the key’s intended word; wrong words aren’t accepted (e.g., for “SSL”: “securing” OK (only gramatical form is different), “sekure” −1 point (misspell), “service” rejected (totally wrong word)).\n" +
 
             "\n Step 2 - If the evaluation is less than 7/10, provide the correct answer (if 7/10 to 10/10, skip this step)." +
-            "\n Your entire answer should be up to 300 characters." +
-
+            "\n Your entire answer should be up to 300 characters. \n"
+            +
             //instructions for individual concept
-            (instruction.key_instructions.containsKey(concept.key) ?
-                "\nAdditional instructions: \n" + instruction.getIndividualInstructions(concept.key) :
-                "")
-        ;
-    return questionB;
+            (concept.evaluateInstruction == null ? "" : "\nAdditional instructions: \n" + concept.evaluateInstruction);
+    return question;
   }
 }

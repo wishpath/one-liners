@@ -1,13 +1,12 @@
 package org.sa;
 
-import org.sa.A_config.Props;
+import org.sa.a_config.Props;
 import org.sa.console.ColoredString;
 import org.sa.console.Colors;
 import org.sa.dto.ConceptDTO;
 import org.sa.service.Actions;
 import org.sa.service.Info;
 import org.sa.service.NotTodayService;
-import org.sa.storage.concepts.Concepts;
 
 import java.io.IOException;
 import java.util.Scanner;

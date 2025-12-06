@@ -8,7 +8,8 @@ public class ConceptDTO {
   public String evaluationInstructions;
   public String userInstructions;
   public Integer score;
-  public String instruction;
+  public String answerInstruction;
+  public String evaluateInstruction;
 
   public ConceptDTO(String key, String definition) {
     this.key = key;
@@ -16,11 +17,12 @@ public class ConceptDTO {
     this.evaluationInstructions = "";
     this.userInstructions = "";
     this.score = 0;
-    this.instruction = "\nPlease explain this concept: ";
+    this.answerInstruction = "\nPlease explain this concept: ";
+    this.evaluateInstruction = null;
   }
 
   public void printUserInstruction() {
-    SimpleColorPrint.blueInLine(instruction);
+    SimpleColorPrint.blueInLine(answerInstruction);
     SimpleColorPrint.red(key);
   }
 }
