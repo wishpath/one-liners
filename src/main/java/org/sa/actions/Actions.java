@@ -6,6 +6,7 @@ import org.sa.config.Props;
 import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
 import org.sa.dto.ConceptDTO;
+import org.sa.service.NotTodayService;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -20,20 +21,22 @@ import java.util.regex.Pattern;
 
 public class Actions {
 
+  private final NotTodayService notTodayService;
   private Concepts concepts;
   private AiClient evaluatorAi = new AiClient().setModelGpt4oMini();
   private AiClient answersAi = new AiClient().setModelGpt4oMini();
   private static final Path ATTEMPTED_ANSWERS_FILEPATH = Paths.get("src/main/java/org/sa/storage/attempted_answers.csv");
 
-  public Actions(Concepts concepts) throws IOException {
+  public Actions(Concepts concepts, NotTodayService notTodayService) throws IOException {
+    this.notTodayService = notTodayService;
     this.concepts = concepts;
   }
 
   public ConceptDTO pickConceptWithLowestScore() {
     SimpleColorPrint.blue("Picking concept with lowest score...\n");
 
-    concepts.refreshNotTodayMap();
-    Set<String> skippableKeys = concepts.notTodayKey_time.keySet();
+    notTodayService.refreshNotTodayMap();
+    Set<String> skippableKeys = notTodayService.notTodayKey_time.keySet();
 
     for (List<String> keys : concepts.score_keyList.values()) {
       List<String> eligibleKeys = new ArrayList<>();
@@ -144,7 +147,7 @@ public class Actions {
     incrementScore(c.key, -1);
     SimpleColorPrint.blue("Concept has received a score of -1: ");
     SimpleColorPrint.red(Props.TAB + c.key + ": " + c.definition + "\n");
-    concepts.dontLearnThisToday(c.key);
+    notTodayService.dontLearnThisToday(c.key);
     return pickConceptWithLowestScore();
   }
 
@@ -191,7 +194,7 @@ public class Actions {
 
     //score, put to "not_today", print default answer
     incrementScore(c.key, evaluation < 7 ? -1 : evaluation <= 8 ? 1 : evaluation == 9 ? 2 : 4);
-    concepts.dontLearnThisToday(c.key);
+    notTodayService.dontLearnThisToday(c.key);
     SimpleColorPrint.blueInLine("The default definition: ");
     SimpleColorPrint.normal(c.definition + "\n");
 
@@ -200,7 +203,7 @@ public class Actions {
 
   public ConceptDTO addKeywordToNotToday(ConceptDTO concept) throws IOException {
     ConceptDTO c = new ConceptDTO(concept.key, concept.definition);
-    concepts.dontLearnThisToday(c.key);
+    notTodayService.dontLearnThisToday(c.key);
     return pickConceptWithLowestScore();
   }
 }

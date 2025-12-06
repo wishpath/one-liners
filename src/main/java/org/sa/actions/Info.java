@@ -5,6 +5,7 @@ import org.sa.config.Props;
 import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
 import org.sa.dto.ConceptDTO;
+import org.sa.service.NotTodayService;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -14,9 +15,11 @@ import java.util.Map;
 public class Info {
 
   private final Concepts concepts;
+  private final NotTodayService notTodayService;
 
-  public Info(Concepts concepts) {
+  public Info(Concepts concepts, NotTodayService notTodayService) {
     this.concepts = concepts;
+    this.notTodayService = notTodayService;
   }
 
   public void printAllConceptsContainingFragmentInKey(String fragment) {
@@ -114,7 +117,7 @@ public class Info {
         weakConceptCounter++;
         SimpleColorPrint.blueInLine(Props.TAB.repeat(2) + key + " ");
         SimpleColorPrint.colorInLine(concepts.key_concept.get(key).definition + " ", Colors.LIGHT_GRAY);
-        LocalDateTime notTodayTime = concepts.notTodayKey_time.get(key);
+        LocalDateTime notTodayTime = notTodayService.notTodayKey_time.get(key);
         String time = notTodayTime == null ? "" : notTodayTime.format(DateTimeFormatter.ofPattern("HH:mm"));
         System.out.println(time);
       }
@@ -125,7 +128,7 @@ public class Info {
   public void printNotTodayKeysByTimeAvailableAndLowestScore2() {
     int passableScore = getPassableScore();
     SimpleColorPrint.blue("Printing 'not today' keys with lower scores:\n");
-    concepts.notTodayKey_time.entrySet().stream()
+    notTodayService.notTodayKey_time.entrySet().stream()
         .filter(e -> concepts.key_score.getOrDefault(e.getKey(), 0) <= passableScore)
         .forEach(e -> {
           int score = concepts.key_score.getOrDefault(e.getKey(), 0);
@@ -145,7 +148,7 @@ public class Info {
 
     for (Map.Entry<Integer, List<String>> e : concepts.score_keyList.entrySet()) {
       long countAtScore = e.getValue().stream()
-          .filter(concepts.notTodayKey_time::containsKey)
+          .filter(notTodayService.notTodayKey_time::containsKey)
           .count();
       willBePrinted += countAtScore;
 
@@ -160,7 +163,7 @@ public class Info {
   }
 
   public void printNotTodayConcepts() {
-    concepts.notTodayKey_time.forEach((key, time) -> {
+    notTodayService.notTodayKey_time.forEach((key, time) -> {
       String timeString = time.plusDays(1).format(DateTimeFormatter.ofPattern("HH:mm"));
       SimpleColorPrint.redInLine(Props.TAB + timeString);
       SimpleColorPrint.blueInLine(" " + key + " ");

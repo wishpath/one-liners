@@ -9,6 +9,7 @@ import org.sa.console.Colors;
 import org.sa.dto.ConceptDTO;
 import org.sa.service.AdditionalInstructionsToEvaluate;
 import org.sa.service.InstructionTextForAi;
+import org.sa.service.NotTodayService;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -27,9 +28,10 @@ public class Menu {
 
   private Scanner scanner = new Scanner(System.in);
   private Concepts concepts = new Concepts();
+  private NotTodayService notTodayService = new NotTodayService(concepts);
   private AdditionalInstructionsToEvaluate instructionsToEvaluate = new AdditionalInstructionsToEvaluate(concepts);
-  private Actions act = new Actions(concepts);
-  private Info info = new Info(concepts);
+  private Actions act = new Actions(concepts, notTodayService);
+  private Info info = new Info(concepts, notTodayService);
   private ConceptDTO previousConcept = act.pickConceptWithLowestScore();
   private ConceptDTO concept = previousConcept;
   private String input = "";

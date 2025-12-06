@@ -1149,3 +1149,9 @@ throughput (network),speed of bits transfered per second over network,9,2025-12-
 TLS,Transfer Layer Security - encryption of data,9,2025-12-05T23:33:23.395042500
 tuple (Python),Data Structure object in Python,8,2025-12-05T23:33:43.640121200
 pip,dependency manager in python,9,2025-12-05T23:34:03.149410900
+Playwright,Testing framework to trigger automatic browser actions,9,2025-12-06T12:57:21.553432700
+PATH environment variable,a variable where system executalbles are listed; so for command "java" it has java.exe listed,9,2025-12-06T12:58:44.846746600
+ternary operator,if else statement in one line,9,2025-12-06T12:59:18.268379300
+throughput (backend),number of items that can be processed in a given time,9,2025-12-06T13:00:09.371289
+JETTY,web server,9,2025-12-06T13:00:26.907897100
+raise (Python),keyword that throws an exception in python. equivalent to "throw" in java,9,2025-12-06T13:01:01.139790
