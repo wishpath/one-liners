@@ -27,7 +27,6 @@ public class Menu {
   private static final String MENU = Colors.BLUE + "Menu:" + Colors.RESET +
     MenuLine.string("define", "defines current key") +
     MenuLine.string("define all <fragment>", "defines all keys containing fragment") +
-    MenuLine.string("define all all <fragment>", "defines all keys and values containing fragment") +
     MenuLine.string("pick nth <fragment nth>", "picks nth key containing fragment") +
     MenuLine.string("pick <fragment>", "picks key containing fragment") +
     MenuLine.string("<fragment ?>", "type something with \"?\" to get an answer") +
@@ -61,11 +60,8 @@ public class Menu {
       else if ("previous".equals(input) || "prev".equals(input))
         setConcept(previousConcept);
 
-      else if (input.startsWith("define all all "))
-        info.printAllConceptsContainingFragmentInKeyValue(sub("define all all "));
-
       else if (input.startsWith("define all "))
-        info.printAllConceptsContainingFragmentInKey(sub("define all "));
+        info.printAllConceptsContainingFragment(sub("define all "));
 
       else if ("define".equals(input))
         System.out.println(Colors.BLUE + concept.key + ": " + Colors.RESET + concept.definition + "\n");

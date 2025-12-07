@@ -1,7 +1,6 @@
 problems:
-  - load scores in A_ConceptsLoader
-  - concept should have record InstructionPair(evaluateInstruction, answerInstruction)
-  - define all and define all all should be a single menu and method
+  - simplify printAllConceptsContainingFragment
+  - decide if concept should have record InstructionPair(evaluateInstruction, answerInstruction)
   - should key_concept map be ascending by concept.score?
   - String[] mainPartsOfConceptToDescribeItCorrectly should be part of ConceptDTO. better name needed.
   - continue working on having score mainly on ConceptDTO not on key_score and all score actions should update ConceptDTO now.

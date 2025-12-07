@@ -22,7 +22,8 @@ public class InfoPrinter {
     this.notTodayService = notTodayService;
   }
 
-  public void printAllConceptsContainingFragmentInKey(String fragment) {
+  public void printAllConceptsContainingFragment(String fragment) {
+    //concepts that contains fragment in key
     List<Map.Entry<String, ConceptDTO>> entryListFound = concepts.key_concept.entrySet().stream()
         .filter(entry -> entry.getKey().toLowerCase().contains(fragment.toLowerCase()))
         .toList();
@@ -37,9 +38,8 @@ public class InfoPrinter {
       printConcepts_fragmentHighlighted(fragment, entryListFound);
     }
     System.out.println();
-  }
 
-  public void printAllConceptsContainingFragmentInKeyValue(String fragment) {
+    //other concepts that also contains fragment
     List<Map.Entry<String, ConceptDTO>> found = concepts.key_concept.entrySet().stream()
         .filter(entry -> (entry.getKey() + " " + entry.getValue()).toLowerCase().contains(fragment.toLowerCase()))
         .toList();

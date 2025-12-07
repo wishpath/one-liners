@@ -1168,3 +1168,13 @@ Hibernate,java database connection framework,7,2025-12-06T19:27:22.862141300
 functional testing,testing if feature is functional,8,2025-12-06T20:34:25.785010500
 data flow,data processed and/or sent over network,9,2025-12-06T21:00:28.373508200
 due diligence,customer cheks,7,2025-12-06T21:01:00.363015300
+DORA,digital operational resilience act - EU rules for banks regarding disaster situations,9,2025-12-07T21:50:57.550358900
+tuple (Python),data structure object in Python; sort of like List in Java,9,2025-12-07T21:51:37.899189700
+GCT,General compience testing,9,2025-12-07T21:52:12.954917800
+lazy-loading (Playwright),feed loads aditional entries when user scrols down tho the bottom of it,9,2025-12-07T21:53:41.223593700
+throughput (network),amount of bits sent over netwok per time unit,9,2025-12-07T21:54:12.436239200
+dispose of memory,freeing up memory,10,2025-12-07T21:54:30.021790700
+CI (IT component),changable item. any part of a services that can be changed,8,2025-12-07T21:55:27.773413500
+pip,dependency manager in python,9,2025-12-07T21:56:19.556354900
+feature flag,toggling feature on and of in the production without additional deployment,9,2025-12-07T21:56:52.060323800
+Hungarian pollution,suffixes in the variable names that means variable type,0,2025-12-07T21:57:17.104158600

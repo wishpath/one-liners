@@ -13,6 +13,7 @@ import java.nio.file.Path;
 import java.util.*;
 import java.util.stream.Stream;
 
+//loads key, definition, score, evaluateInstruction
 public class ConceptsLoader {
 
   public Map<String, ConceptDTO> key_concept = loadConceptsWithAttributes();
@@ -52,7 +53,7 @@ public class ConceptsLoader {
       throw new RuntimeException(e);
     }
 
-    // load and assign evaluateInstructions from file
+    // load and assign evaluateInstructions
     try (Stream<String> lines = Files.lines(FilePath.INSTRUCTIONS_TO_EVALUATE)) {
       lines.forEach(line -> {
         String[] key_instruction = line.split(",", 2);
