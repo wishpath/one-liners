@@ -1178,3 +1178,12 @@ CI (IT component),changable item. any part of a services that can be changed,8,2
 pip,dependency manager in python,9,2025-12-07T21:56:19.556354900
 feature flag,toggling feature on and of in the production without additional deployment,9,2025-12-07T21:56:52.060323800
 Hungarian pollution,suffixes in the variable names that means variable type,0,2025-12-07T21:57:17.104158600
+Hungarian pollution,using suffixes in variable names to mark variable types,8,2025-12-08T22:25:58.817768100
+domain,business area,9,2025-12-08T22:26:15.415272600
+garbage collection,part of software where unused data gets disposed,9,2025-12-08T22:26:55.242203900
+base Java Docker image,blueprint for container with runtime and configuration for an app instance to run,9,2025-12-08T22:28:15.885895500
+whitelisting,making a network rule to allow access,9,2025-12-08T22:28:40.831293600
+diligence,persistent thorough work,10,2025-12-08T22:28:55.915840800
+DevOps,Development and Operations - practice and philosophy of automated CI/CD piplines,8,2025-12-08T22:29:55.073347100
+SSL,security shell - data encription protocol,8,2025-12-08T22:30:20.023280400
+partition and sample,subdivision of database data,9,2025-12-08T22:30:41.310052400

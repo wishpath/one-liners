@@ -1,5 +1,4 @@
 problems:
-  - simplify printAllConceptsContainingFragment
   - decide if concept should have record InstructionPair(evaluateInstruction, answerInstruction)
   - should key_concept map be ascending by concept.score?
   - String[] mainPartsOfConceptToDescribeItCorrectly should be part of ConceptDTO. better name needed.

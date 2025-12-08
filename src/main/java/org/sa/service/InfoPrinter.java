@@ -24,34 +24,36 @@ public class InfoPrinter {
 
   public void printAllConceptsContainingFragment(String fragment) {
     //concepts that contains fragment in key
-    List<Map.Entry<String, ConceptDTO>> entryListFound = concepts.key_concept.entrySet().stream()
+    List<Map.Entry<String, ConceptDTO>> entriesContainingFragmentInKey = concepts.key_concept.entrySet().stream()
         .filter(entry -> entry.getKey().toLowerCase().contains(fragment.toLowerCase()))
         .toList();
 
-    if (entryListFound.isEmpty()) {
+    if (entriesContainingFragmentInKey.isEmpty()) {
       SimpleColorPrint.redInLine("No keys found containing fragment: ");
       SimpleColorPrint.red(fragment);
     }
     else {
-      SimpleColorPrint.blueInLine("Defining all keys containing fragment: ");
+      SimpleColorPrint.blueInLine("All keys containing fragment: ");
       SimpleColorPrint.red(fragment);
-      printConcepts_fragmentHighlighted(fragment, entryListFound);
+      printConcepts_fragmentHighlighted(fragment, entriesContainingFragmentInKey);
     }
     System.out.println();
 
-    //other concepts that also contains fragment
-    List<Map.Entry<String, ConceptDTO>> found = concepts.key_concept.entrySet().stream()
-        .filter(entry -> (entry.getKey() + " " + entry.getValue()).toLowerCase().contains(fragment.toLowerCase()))
+    //other concepts that also contains fragment (in the definition)
+    List<Map.Entry<String, ConceptDTO>> otherEntriesContainingFragmentInDefinition = concepts.key_concept.entrySet()
+        .stream()
+        .filter(entry -> !entriesContainingFragmentInKey.contains(entry))
+        .filter(entry -> entry.getValue().definition.toLowerCase().contains(fragment.toLowerCase()))
         .toList();
 
-    if (found.isEmpty()) {
-      SimpleColorPrint.redInLine("No key-values found containing fragment: ");
+    if (otherEntriesContainingFragmentInDefinition.isEmpty()) {
+      SimpleColorPrint.redInLine("No other concepts found containing fragment: ");
       SimpleColorPrint.red(fragment);
     }
     else {
-      SimpleColorPrint.blueInLine("Defining all key-values containing fragment: ");
+      SimpleColorPrint.blueInLine("Other concepts containing fragment: ");
       SimpleColorPrint.red(fragment);
-      printConcepts_fragmentHighlighted(fragment, found);
+      printConcepts_fragmentHighlighted(fragment, otherEntriesContainingFragmentInDefinition);
     }
     System.out.println();
   }
