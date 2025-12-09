@@ -1,13 +1,7 @@
 problems:
-  - decide if concept should have record InstructionPair(evaluateInstruction, answerInstruction)
-  - should key_concept map be ascending by concept.score?
-  - String[] mainPartsOfConceptToDescribeItCorrectly should be part of ConceptDTO. better name needed.
-  - continue working on having score mainly on ConceptDTO not on key_score and all score actions should update ConceptDTO now.
   - put ConceptDTO to use:
       - transfer concepts from text files to ConceptObjects class
-  - instruction for the user:
-      - use printStringWithFragmentHighlighted to highlight keyword (not ai)
-      - AI generates requirements that are not defined in the instructions. it invents details
+
 ideas:
   - there could be extra note for key for the user before the answer
     - it should tell what is expected to be mentioned in the answer
