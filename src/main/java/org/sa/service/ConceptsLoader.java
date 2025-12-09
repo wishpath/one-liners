@@ -64,7 +64,6 @@ public class ConceptsLoader {
         if (conceptDTO == null) throw new RuntimeException("EVALUATE INSTRUCTION KEY DOES NOT EXIST IN key_concept: " + key);
         if (conceptDTO.evaluateInstruction != null) throw new RuntimeException("EVALUATE INSTRUCTION KEY SHOULD BE UNIQUE AND NOT REPEATED: " + key);
         conceptDTO.evaluateInstruction = instructions;
-        System.out.println("A_ConceptsLoader: " + conceptDTO.evaluateInstruction);
       });
     } catch (IOException e) {
       throw new RuntimeException(e);

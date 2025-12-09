@@ -3,7 +3,6 @@ problems:
   - should key_concept map be ascending by concept.score?
   - String[] mainPartsOfConceptToDescribeItCorrectly should be part of ConceptDTO. better name needed.
   - continue working on having score mainly on ConceptDTO not on key_score and all score actions should update ConceptDTO now.
-  - use explicit score of 0
   - put ConceptDTO to use:
       - transfer concepts from text files to ConceptObjects class
   - instruction for the user:
