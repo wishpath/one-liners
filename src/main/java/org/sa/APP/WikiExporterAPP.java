@@ -1,7 +1,8 @@
 package org.sa.APP;
 
-import org.sa.service.ConceptsLoader;
 import org.sa.a_config.FilePath;
+import org.sa.service.ConceptsLoader;
+import org.sa.util.FileUtil;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -34,8 +35,8 @@ public class WikiExporterAPP {
     addPublicTopicsToBothWikis(publicTopicFiles, sb_swed_wiki_text, sb_public_wiki_text);
     addSwedTopicsToSwedWikiOnly(swedTopicFiles, sb_swed_wiki_text);
 
-    Files.writeString(FilePath.WIKI_SWED_OUTPUT_FILE, sb_swed_wiki_text.toString());
-    Files.writeString(FilePath.WIKI_PUBLIC_OUTPUT_FILE, sb_public_wiki_text.toString());
+    FileUtil.overwriteToFileAndCreatePath(FilePath.WIKI_SWED_OUTPUT_FILE, sb_swed_wiki_text);
+    FileUtil.overwriteToFileAndCreatePath(FilePath.WIKI_PUBLIC_OUTPUT_FILE, sb_public_wiki_text);
   }
 
   private static void addPublicTopicsToBothWikis(List<Path> publicTopicFiles, StringBuilder sb_swed, StringBuilder sb_public) throws IOException {

@@ -41,3 +41,7 @@ runtime=software providing components to execute an app (or period when a progra
 secret (Kubernetes)=resource storing sensitive data as key-value pairs in etcd.
 throttling=intentional limitation or control of certain resources, actions, or processes within an app or a system.
 worker node=computing node for running the containerized applications, has its own CPU, memory, and other resources.
+docker desktop=local Docker environment for running containers on your machine.
+headlamp=Kubernetes UI tool, visualizes clusters and resources.
+managed cloud service=provider-run cloud system you use without handling setup or maintenance.
+AKS=Azure Kubernetes Service — Azure-provided Kubernetes with setup and maintenance handled.

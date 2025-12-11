@@ -104,12 +104,15 @@ This set of very short definitions gets straight to the point, giving you the ba
      product backlog (agile) - prioritized list of features and tasks in agile projects.
      stakeholder - one with interest in outcome: customer, team, tester, manager, regulator, security, leadership, marketing.
      streamline - remove obstacles and add improvements to optimize.
-     ubiquitous language (DDD) - shared, common, used by both domain experts and developers to describe the domain model.
      value stream - sequence of processes a company uses to deliver product, showing steps, efficiency, and bottlenecks.
      Saba - former name of a Learning & Development platform for managing training, skills, and employee growth.
      conduct - behavior
      SO (role) - service owner — person accountable for the whole app.
      PI (agile) - program increment — multiple teams plan work for the upcoming weeks.
+     instant payment - payment transferred immediately via digital channels (mobile/online)
+     authorized signatory - a person who can handle the company's banking matters at the bank branch.
+     channels - mediums for communication.
+     teleagreement user - a person who can manage banking matters in the online bank.
 
 *Ci Cd And Dev Ops*
      Argo CD - Argo Continuous Delivery - deploys app from Git repo to Kubernetes cluster.
@@ -139,6 +142,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      failover - automatic switch to a backup system when the primary fails.
      pip - Python package manager, installs and manages libraries (e.g., pip install requests).
      package manager examples by programming language - pip (Python), npm (JS), Maven/Gradle/Ivy (Java).
+     emergency release - software deployment outside regular schedule to fix critical issues.
 
 *Containerisation*
      DC (infrastructure) - data center — building housing IT systems.
@@ -184,6 +188,10 @@ This set of very short definitions gets straight to the point, giving you the ba
      secret (Kubernetes) - resource storing sensitive data as key-value pairs in etcd.
      throttling - intentional limitation or control of certain resources, actions, or processes within an app or a system.
      worker node - computing node for running the containerized applications, has its own CPU, memory, and other resources.
+     docker desktop - local Docker environment for running containers on your machine.
+     headlamp - Kubernetes UI tool, visualizes clusters and resources.
+     managed cloud service - provider-run cloud system you use without handling setup or maintenance.
+     AKS - Azure Kubernetes Service — Azure-provided Kubernetes with setup and maintenance handled.
 
 *Databases*
      CTE (SQL) - Common Table Expression - temporary result set in a larger query.
@@ -226,6 +234,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      separation of concerns (DDD) - dividing system into distinct parts, each handling a specific responsibility.
      signup metadata - contextual info: registrationSource, referralCode, ipAddress, verification status.
      signup raw data - core data fields: userId, username, email, registration date, status.
+     ubiquitous language (DDD) - shared, common, used by both domain experts and developers to describe the domain model.
 
 *Frontend*
      Chromium - base upon which many modern web browsers are built.
@@ -311,6 +320,8 @@ This set of very short definitions gets straight to the point, giving you the ba
      full-text search - search technique that scores matches, understands synonyms, and reduces words to stems.
      observability - monitoring system health via logs, metrics, and traces for real-time insights.
      stop word filtering - ignoring frequently occurring, non-informative words (e.g., "the," "and") to improve search.
+     filebeat - software that sends log files to Elasticsearch/Logstash.
+     monitoring (app) - app performance charts - observation via Grafana or other tool.
 
 *Networking*
      DNS - Domain Name System - maps user-friendly domain names to numeric IP addresses.
@@ -352,8 +363,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      data pseudonymization - protecting privacy by encrypting personal indentifiers or replacing them with pseudonyms.
      error budget - maximum allowable errors metric in a system within a specified time frame for reliability.
      exploratory testing - flexible approach to uncover unexpected defects and understand behavior.
-     feature flag - feature toggle.
-     functional testing - Verifies that software features align with specified requirements.
+     feature flag - =toggle to enable/disable a feature at runtime without redeploying.
      integrated test environment - closely resembles production. integrated - combined components functioning together.
      penetration testing - authorized simulated cyberattack to evaluate system security.
      performance testing - Testing the performance and scalability of a software application under various conditions.
@@ -444,32 +454,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      constraint (general word) - restriction or limitation that defines what is allowed.
      signatory - person authorized to sign on someones behalf.
 
-*Business Star*
-     AB - appointment booking.
-     AD rights - Windows/Microsoft LDAP implementation - in our context it's the same as LDAP.
-     CIM - customer interaction management.
-     CRM - customer relationship management.
-     IB - internet bank.
-     LDAP rights - Lightweight Directory Access Protocol - protocol which is used to reach STAR portlets.
-     Mrq - meeting request / appointment.
-     NIC - not identified customer.
-     PEGA offers - offers tool for clients in STAR. Offers are sent to the Internet Bank (IB) or displayed to STAR clients for various proposals for sales.
-     PORTAL - main part of STAR, which accesses all other parts.
-     PRODIGY - microservice that has a set of scheduled background tasks like SMS reminders, old iBank notification cleanup, outlook and permission check.
-     authorized signatory - a person who can handle the company's banking matters at the bank branch.
-     channels - mediums for communication.
-     emergency release - if the release is called REL240, after it emergency release might be done. It would be called REL240.1. Changes would be tested by the team who needs them implemented.
-     monitoring (context: STAR project) - STAR performance charts - observation via GRAFANA.
-     teleagreement user - a person who can manage banking matters in the online bank.
-
-*Esealing*
-     E-archive - stores documents. Works on Andromeda.
-     E-seal - a proof that the document has integrity (not tampered).
-     ESealing narrative - tellers upload preped docs and add e-seals to them on STAR. Users access these docs through iBank.
-     Seal Service - sorts and groups documents. Works on Andromeda.
-     Signature Container Service - adds e-seals to documents. Works on Andromeda.
-
-*Swedbank General*
+*Swedbank Specific*
      AI - chat-based banking services: support, transactions, and service access.
      CC1, - CC2, CC3, CC4=Criticality Categories classifying IT services by importance and compliance impact.
      CTE - common test environment.
@@ -492,8 +477,22 @@ This set of very short definitions gets straight to the point, giving you the ba
      party - an entity involved in a transaction or relationship. example: customer, vendor, partner.
      party master data - key info about customers, partners within an organization.
      Development Tools - team, previously known as CI/CD.
-
-*Swed Migrations*
+     AB - appointment booking.
+     AD rights - Windows/Microsoft LDAP implementation - in our context it's the same as LDAP.
+     CIM - customer interaction management.
+     CRM - customer relationship management.
+     IB - internet bank.
+     LDAP rights - Lightweight Directory Access Protocol - protocol which is used to reach STAR portlets.
+     Mrq - meeting request / appointment.
+     NIC - not identified customer.
+     PEGA offers - offers tool for clients in STAR. Offers are sent to the Internet Bank (IB) or displayed to STAR clients for various proposals for sales.
+     PORTAL - main part of STAR, which accesses all other parts.
+     PRODIGY - microservice that has a set of scheduled background tasks like SMS reminders, old iBank notification cleanup, outlook and permission check.
+     E-archive - stores documents. Works on Andromeda.
+     E-seal - a proof that the document has integrity (not tampered).
+     ESealing narrative - tellers upload prepped docs and add e-seals to them on STAR. Users access these docs through iBank.
+     Seal Service - sorts and groups documents. Works on Andromeda.
+     Signature Container Service - adds e-seals to documents. Works on Andromeda.
      Skyvault - internal Swedbank project to migrate applications to cloud. Does not relate to external company SkyVault.
      datacenters in Estonia - third-party hosting, rented, will be closed.
      datacenters in Frankfurt - uses Azure cloud, Baltic apps will be migrated there, as part of Skyvault initiative.

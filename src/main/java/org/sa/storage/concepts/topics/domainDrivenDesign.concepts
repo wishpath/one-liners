@@ -18,3 +18,4 @@ semantic registration message=JSON structure for user signup. Includes raw data 
 separation of concerns (DDD)=dividing system into distinct parts, each handling a specific responsibility.
 signup metadata=contextual info: registrationSource, referralCode, ipAddress, verification status.
 signup raw data=core data fields: userId, username, email, registration date, status.
+ubiquitous language (DDD)=shared, common, used by both domain experts and developers to describe the domain model.

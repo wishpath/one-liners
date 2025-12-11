@@ -1,4 +1,7 @@
 problems:
+  - to wiki print time.now()
+  - use file util where possible
+  - make app : printTopics (separate from wiki exporter)
   - put ConceptDTO to use:
       - transfer concepts from text files to ConceptObjects class
 

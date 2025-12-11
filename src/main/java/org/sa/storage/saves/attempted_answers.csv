@@ -1198,3 +1198,5 @@ DORA,Digital Operational Resilience Act - EU rules for bank performance during u
 secret (Kubernetes),authentication credential,9,2025-12-10T23:44:48.852015700
 commissioning example sentence,we commisioned new feature (started to use),8,2025-12-10T23:45:17.175711400
 YubiKey,usb stick with authentication,8,2025-12-10T23:45:42.332784900
+firewall,a rule in the network of allowing or not allowing access to specific address,9,2025-12-11T19:26:09.588691600
+channels,mediums of communication,10,2025-12-11T21:57:35.190077600

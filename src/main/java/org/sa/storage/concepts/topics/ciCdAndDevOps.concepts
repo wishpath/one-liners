@@ -25,3 +25,4 @@ roll out=deployment and activation of a new product or feature for use.
 failover=automatic switch to a backup system when the primary fails.
 pip=Python package manager, installs and manages libraries (e.g., pip install requests).
 package manager examples by programming language=pip (Python), npm (JS), Maven/Gradle/Ivy (Java).
+emergency release=software deployment outside regular schedule to fix critical issues.

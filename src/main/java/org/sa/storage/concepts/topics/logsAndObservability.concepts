@@ -8,3 +8,5 @@ distributed computing=computers in different locations working together as one s
 full-text search=search technique that scores matches, understands synonyms, and reduces words to stems.
 observability=monitoring system health via logs, metrics, and traces for real-time insights.
 stop word filtering=ignoring frequently occurring, non-informative words (e.g., "the," "and") to improve search.
+filebeat=software that sends log files to Elasticsearch/Logstash.
+monitoring (app)=app performance charts - observation via Grafana or other tool.
