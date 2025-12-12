@@ -1200,3 +1200,5 @@ commissioning example sentence,we commisioned new feature (started to use),8,202
 YubiKey,usb stick with authentication,8,2025-12-10T23:45:42.332784900
 firewall,a rule in the network of allowing or not allowing access to specific address,9,2025-12-11T19:26:09.588691600
 channels,mediums of communication,10,2025-12-11T21:57:35.190077600
+AKS,Azure Kubernetes Service - Azure managed Kubernetes with maintenance and setup provided,10,2025-12-12T23:50:36.982288600
+emergency release,when unscheduled changes are released due to a need to fix a problem,9,2025-12-12T23:51:30.884128900

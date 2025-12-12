@@ -111,7 +111,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      PI (agile) - program increment — multiple teams plan work for the upcoming weeks.
      instant payment - payment transferred immediately via digital channels (mobile/online)
      authorized signatory - a person who can handle the company's banking matters at the bank branch.
-     channels - mediums for communication.
+     channels (bank) - mediums for communication.
      teleagreement user - a person who can manage banking matters in the online bank.
 
 *Ci Cd And Dev Ops*

@@ -1,4 +1,5 @@
 problems:
+  - do something with INSTRUCTIONS_FOR_USER
   - to wiki print time.now()
   - use file util where possible
   - make app : printTopics (separate from wiki exporter)
