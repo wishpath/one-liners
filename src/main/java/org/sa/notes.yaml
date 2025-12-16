@@ -5,7 +5,8 @@ problems:
   - make app : printTopics (separate from wiki exporter)
   - put ConceptDTO to use:
       - transfer concepts from text files to ConceptObjects class
-
+  - TopicsPrinterApp update when topics will be folder names rather than filenames
+  - open wiki text files after generating them
 ideas:
   - there could be extra note for key for the user before the answer
     - it should tell what is expected to be mentioned in the answer

@@ -1,7 +1,6 @@
 package org.sa.APP;
 
 import org.sa.a_config.FilePath;
-import org.sa.service.ConceptsLoader;
 import org.sa.util.FileUtil;
 
 import java.io.IOException;
@@ -10,22 +9,9 @@ import java.nio.file.Path;
 import java.util.List;
 
 public class WikiExporterAPP {
-  private static final String WIKI_INTRO = "*Goal of this article*\nThis collection of super-short definitions captures the core of each key in just a few words, creating a broad, foundational framework for quick knowledge acquisition. By reducing concepts to their essence—even if imperfect—this approach fosters the confidence needed to deepen understanding later. This minimalist style lets you absorb a wide set of ideas rapidly, forming a scaffold for continuous growth.\n\n";
   private static final String WIKI_INTRO_SIMPLE = "*Goal of this article*\nThis set of very short definitions gets straight to the point, giving you the basics of each idea in just a few words. It’s a fast way to start learning and build confidence, even if the definitions aren’t perfect. The simple style helps you pick up many ideas quickly and gives you a base to learn more over time.\n\n";
 
   public static void main(String[] args) throws IOException {
-    ConceptsLoader c = new ConceptsLoader(); // not injected because this class is a separate app
-    printListOfTopics(c);
-    exportAllConceptsForWikiPage(c);
-  }
-
-  private static void printListOfTopics(ConceptsLoader c) throws IOException {
-    Files.walk(FilePath.TOPICS_PUBLIC)
-        .filter(p -> p.toString().endsWith(".concepts"))
-        .forEach(p -> System.out.println(p.getFileName().toString().replace(".concepts", "")));
-  }
-
-  private static void exportAllConceptsForWikiPage(ConceptsLoader c) throws IOException {
     StringBuilder sb_swed_wiki_text = new StringBuilder(WIKI_INTRO_SIMPLE);
     StringBuilder sb_public_wiki_text = new StringBuilder(WIKI_INTRO_SIMPLE);
 

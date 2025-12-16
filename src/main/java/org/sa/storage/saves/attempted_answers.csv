@@ -1202,3 +1202,13 @@ firewall,a rule in the network of allowing or not allowing access to specific ad
 channels,mediums of communication,10,2025-12-11T21:57:35.190077600
 AKS,Azure Kubernetes Service - Azure managed Kubernetes with maintenance and setup provided,10,2025-12-12T23:50:36.982288600
 emergency release,when unscheduled changes are released due to a need to fix a problem,9,2025-12-12T23:51:30.884128900
+managed cloud service,provided cloud solution; with maintenance and setup completed externaly,9,2025-12-16T13:04:55.886356400
+monitoring (app),graphs of performance shown as graphs. for example in grafana,8,2025-12-16T13:05:32.359929100
+authorized signatory,person who can take care of companys business in the bank,9,2025-12-16T13:06:02.591141700
+teleagreement user,someone who has access to an internet bank,9,2025-12-16T13:06:27.265384400
+headlamp,application for managing app instances in the cloud,8,2025-12-16T13:06:56.208391100
+channels (bank),means of communication,8,2025-12-16T13:07:09.972892100
+filebeat,tool to send log files to monitoring in kubernetes,9,2025-12-16T13:07:53.539654300
+docker desktop,application on desktop to run containers,9,2025-12-16T13:08:15.704225800
+instant payment,payment that takes virtually no time to accomplish,9,2025-12-16T13:08:36.511430500
+emergency release,additional release other than scheduled one for fixing problems,9,2025-12-16T13:09:15.545601200
