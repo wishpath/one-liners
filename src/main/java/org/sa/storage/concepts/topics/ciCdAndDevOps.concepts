@@ -26,3 +26,5 @@ failover=automatic switch to a backup system when the primary fails.
 pip=Python package manager, installs and manages libraries (e.g., pip install requests).
 package manager examples by programming language=pip (Python), npm (JS), Maven/Gradle/Ivy (Java).
 emergency release=software deployment outside regular schedule to fix critical issues.
+RPO (requirement)=max data loss allowed, measured in time, e.g., 15 minutes.
+SLA (commitment)=Service Level Agreement — defines expected service quality and uptime.

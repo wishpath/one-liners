@@ -1,4 +1,4 @@
-ELK=Elasticsearch, Logstash, and Kibana - tools for searching, analyzing, and visualizing logs and data.
+ELK=Elasticsearch, Logstash, and Kibana - tools for searching, analyzing, and visualizing logs.
 Elasticsearch=search and analytics engine. Handles and analyzes large volumes of data in real-time.
 Kibana=log and data visualization and exploration tool. Used in conjunction with OpenShift (or other).
 Logread=our system where logs are being stored in files.

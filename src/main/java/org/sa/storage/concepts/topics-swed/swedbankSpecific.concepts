@@ -41,3 +41,4 @@ datacenters in Estonia=third-party hosting, rented, will be closed.
 datacenters in Frankfurt=uses Azure cloud, Baltic apps will be migrated there, as part of Skyvault initiative.
 datacenters in Stockholm=on premises, Baltic apps had a choice to be migrated there, as part of Skyvault initiative.
 Andromeda=app development platform also for deployment and operation of cloud-native applications. Runs on OpenShift.
+OLM (observability)=Operational Log Management — bank's central platform for logs, built on ELK stack.

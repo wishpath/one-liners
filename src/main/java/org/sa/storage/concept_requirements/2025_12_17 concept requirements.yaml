@@ -1,0 +1,68 @@
+DefinitionGuidelines:
+  Objectives:
+    - Generate definitions that are extremely concise, laconic, and to the point.
+    - Capture the essence of the concept in the shortest possible form without losing fundamental meaning.
+    - When relevant, provide a short example or key detail to clarify usage.
+  Length:
+    - Ideal length is well below 140 characters.
+    - Use 2-3 words if possible; shorter is better even at some clarity cost.
+    - Avoid unnecessary details.
+  Format:
+    - One line per concept.
+    - Use "=" to separate key from definition; only one "=" per line.
+    - Start non-proper nouns with lowercase letters.
+    - Include a very short example or context if helpful: e.g., "en dash (–)=dash for range or connection, example: 'New York – Boston', type Alt+0150"
+    - Acronyms/initialisms must be spelled out in full in the definition: e.g., "SLI=Service Level Indicator — metric measuring system performance."
+  Tone:
+    - Direct, terse, and brief.
+    - Avoid unnecessary explanation or elaboration.
+  ContentStructure:
+    - "{$Concept} = {$Short Definition}, (optional) {$Example}, (optional) {$Key Detail}"
+    - Definitions must be self-explanatory.
+  Examples:
+    - "SLI=Service Level Indicator — metric measuring system performance."
+    - "URL=Uniform Resource Locators."
+    - "en dash (–)=dash for range or connection, example: 'New York – Boston', type Alt+0150"
+    - "substitution=replacement"
+    - "hub=central point, where things are executed."
+  Guidelines:
+    - Prioritize brevity over precision.
+    - If a longer phrase can be reduced to 1-2 words, do so.
+    - Essence only — avoid elaboration.
+    - Shorter and less clear is better than longer and more precise.
+    - Use acronyms/initialisms full spelling in definitions, but keep it concise.
+    - Include examples, context, or minor clarifications only if they help understanding.
+  TopicAssignment:
+    - Optional: Suggest a single relevant topic from the provided list.
+    - If the concept fits multiple topics, select the most precise one.
+    - Topics to choose from:
+        - algorithmsCodingAndStructures
+        - apis
+        - backend
+        - businessAndWorkplace
+        - ciCdAndDevOps
+        - containerisation
+        - databases
+        - domainDrivenDesign
+        - frontend
+        - generalITTerms
+        - hardware
+        - javaAndSpring
+        - logsAndObservability
+        - networking
+        - qaAndTesting
+        - regulations
+        - workUsefulEnglish
+TwoLineAnswerGuidelines:
+  Instruction:
+    - Always provide answers in exactly **two lines**.
+    - Line 1: pick **one topic** from the provided list and write it alone.
+    - Line 2: provide the **key and definition** in the prescribed concise format.
+  FormatExample:
+    - frontend: button=UI element triggering an action when clicked, e.g., "Submit" button on a form.
+AdditionalInstructions:
+  - contextHints: "Use very short context hints in parentheses after the key, e.g., RPO (requirement), without revealing the definition."
+  - capitalizeAcronyms: "Capitalize the full form of acronyms/initialisms in the definition."
+  - longDash: "Use a long dash (—) after the expanded acronym in the definition."
+
+
