@@ -6,10 +6,17 @@ import org.sa.util.FileUtil;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class WikiExporterAPP {
-  private static final String WIKI_INTRO_SIMPLE = "*Goal of this article*\nThis set of very short definitions gets straight to the point, giving you the basics of each idea in just a few words. It’s a fast way to start learning and build confidence, even if the definitions aren’t perfect. The simple style helps you pick up many ideas quickly and gives you a base to learn more over time.\n\n";
+  private static final String WIKI_INTRO_SIMPLE
+      = LocalDateTime.now().format(java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))
+      + "\n*Goal of this article*"
+      + "\nThis set of very short definitions gets straight to the point, "
+      + "giving you the basics of each idea in just a few words. "
+      + "It’s a fast way to start learning and build confidence, even if the definitions aren’t perfect. "
+      + "The simple style helps you pick up many ideas quickly and gives you a base to learn more over time.\n\n";
 
   public static void main(String[] args) throws IOException {
     StringBuilder sb_swed_wiki_text = new StringBuilder(WIKI_INTRO_SIMPLE);

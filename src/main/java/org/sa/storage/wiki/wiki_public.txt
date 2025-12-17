@@ -1,3 +1,4 @@
+2025-12-17 17:38:51
 *Goal of this article*
 This set of very short definitions gets straight to the point, giving you the basics of each idea in just a few words. It’s a fast way to start learning and build confidence, even if the definitions aren’t perfect. The simple style helps you pick up many ideas quickly and gives you a base to learn more over time.
 
@@ -188,8 +189,8 @@ This set of very short definitions gets straight to the point, giving you the ba
      secret (Kubernetes) - resource storing sensitive data as key-value pairs in etcd.
      throttling - intentional limitation or control of certain resources, actions, or processes within an app or a system.
      worker node - computing node for running the containerized applications, has its own CPU, memory, and other resources.
-     docker desktop - local Docker environment for running containers on your machine.
-     headlamp - Kubernetes UI tool, visualizes clusters and resources.
+     Docker desktop - local Docker environment for running containers on your machine.
+     Headlamp (app) - Kubernetes UI tool, visualizes clusters and resources.
      managed cloud service - provider-run cloud system you use without handling setup or maintenance.
      AKS - Azure Kubernetes Service — Azure-provided Kubernetes with setup and maintenance handled.
 
@@ -359,7 +360,6 @@ This set of very short definitions gets straight to the point, giving you the ba
      accessibility testing - ensures software usability for individuals with disabilities.
      canary deployment - gradual rollout of a new app version to a small group before full deployment.
      chaos engineering - injecting controlled instances of failure into a system to identify vulnerabilities.
-     compatibility testing - checks software performance across different environments and setups.
      data pseudonymization - protecting privacy by encrypting personal indentifiers or replacing them with pseudonyms.
      error budget - maximum allowable errors metric in a system within a specified time frame for reliability.
      exploratory testing - flexible approach to uncover unexpected defects and understand behavior.
