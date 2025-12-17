@@ -90,6 +90,8 @@ public class AiService {
             +
             //instructions for individual concept
             (concept.evaluateInstruction == null ? "" : "\nAdditional instructions: \n" + concept.evaluateInstruction);
+    System.out.println("GENERATED QUESTION: ");
+    System.out.println(question);
     return question;
   }
 }

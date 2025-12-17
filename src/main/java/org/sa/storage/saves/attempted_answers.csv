@@ -1212,3 +1212,8 @@ filebeat,tool to send log files to monitoring in kubernetes,9,2025-12-16T13:07:5
 docker desktop,application on desktop to run containers,9,2025-12-16T13:08:15.704225800
 instant payment,payment that takes virtually no time to accomplish,9,2025-12-16T13:08:36.511430500
 emergency release,additional release other than scheduled one for fixing problems,9,2025-12-16T13:09:15.545601200
+monitoring (app),graphs in grafana,9,2025-12-17T17:18:17.840681600
+headlamp,app for managing app instances in kubernetes,0,2025-12-17T17:18:42.050992900
+channels (bank),mediums of comunication,9,2025-12-17T17:21:35.015865800
+Docker desktop,app to run docker images on your local machine,9,2025-12-17T17:26:02.271296500
+Headlamp (app),Kubernetes UI tool to manage containerised app instances,9,2025-12-17T17:26:33.879838
