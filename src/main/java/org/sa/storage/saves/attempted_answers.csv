@@ -1217,3 +1217,7 @@ headlamp,app for managing app instances in kubernetes,0,2025-12-17T17:18:42.0509
 channels (bank),mediums of comunication,9,2025-12-17T17:21:35.015865800
 Docker desktop,app to run docker images on your local machine,9,2025-12-17T17:26:02.271296500
 Headlamp (app),Kubernetes UI tool to manage containerised app instances,9,2025-12-17T17:26:33.879838
+PCI-DSS (compliance),Paying Card regulations,7,2025-12-18T23:32:25.740374400
+SLA (commitment),Service Level Assessment,8,2025-12-18T23:32:44.409265800
+AML (compliance),Anti-Money Laundering regulations,9,2025-12-18T23:33:31.386155400
+CIF (importance),Critical Information Function,8,2025-12-18T23:33:48.900372600

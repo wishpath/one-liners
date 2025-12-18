@@ -21,5 +21,5 @@ personal data retention=storing and maintaining individuals' personal informatio
 tampering=making illegal or/and damaging alterations.
 PI (data)=personal information
 PCI-DSS (compliance)=Payment Card Industry Data Security Standard — rules protecting cardholder data.
-CIF (importance)=Mission Critical Function — ensures continuity, fast failover, integrity, and constant monitoring.
+CIF (regulation)=Critical Information Function — key system whose failure would harm financial operations (DORA term)
 AML (compliance)=Anti-Money Laundering — laws and processes preventing illicit financial transactions.

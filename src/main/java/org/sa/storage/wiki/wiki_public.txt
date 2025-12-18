@@ -1,4 +1,4 @@
-2025-12-17 17:38:51
+2025-12-18 23:31:44
 *Goal of this article*
 This set of very short definitions gets straight to the point, giving you the basics of each idea in just a few words. It’s a fast way to start learning and build confidence, even if the definitions aren’t perfect. The simple style helps you pick up many ideas quickly and gives you a base to learn more over time.
 
@@ -144,6 +144,8 @@ This set of very short definitions gets straight to the point, giving you the ba
      pip - Python package manager, installs and manages libraries (e.g., pip install requests).
      package manager examples by programming language - pip (Python), npm (JS), Maven/Gradle/Ivy (Java).
      emergency release - software deployment outside regular schedule to fix critical issues.
+     RPO (requirement) - max data loss allowed, measured in time, e.g., 15 minutes.
+     SLA (commitment) - Service Level Agreement — defines expected service quality and uptime.
 
 *Containerisation*
      DC (infrastructure) - data center — building housing IT systems.
@@ -311,7 +313,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      ternary operator - inline if-else: condition ? a : b.
 
 *Logs And Observability*
-     ELK - Elasticsearch, Logstash, and Kibana - tools for searching, analyzing, and visualizing logs and data.
+     ELK - Elasticsearch, Logstash, and Kibana - tools for searching, analyzing, and visualizing logs.
      Elasticsearch - search and analytics engine. Handles and analyzes large volumes of data in real-time.
      Kibana - log and data visualization and exploration tool. Used in conjunction with OpenShift (or other).
      Logread - our system where logs are being stored in files.
@@ -403,6 +405,9 @@ This set of very short definitions gets straight to the point, giving you the ba
      personal data retention - storing and maintaining individuals' personal information for a specific period.
      tampering - making illegal or/and damaging alterations.
      PI (data) - personal information
+     PCI-DSS (compliance) - Payment Card Industry Data Security Standard — rules protecting cardholder data.
+     CIF (importance) - Mission Critical Function — ensures continuity, fast failover, integrity, and constant monitoring.
+     AML (compliance) - Anti-Money Laundering — laws and processes preventing illicit financial transactions.
 
 *Work Useful English*
      allocate - reserve a specific amount of any resource, so it's available when needed
@@ -453,3 +458,4 @@ This set of very short definitions gets straight to the point, giving you the ba
      arbitrary - based on choice or chance, not a fixed rule or system.
      constraint (general word) - restriction or limitation that defines what is allowed.
      signatory - person authorized to sign on someones behalf.
+     silo - group isolated from others, e.g., "marketing works in a silo."
