@@ -1,0 +1,2 @@
+memoization
+storing results of expensive function calls and return the cached result when the same inputs occur again.

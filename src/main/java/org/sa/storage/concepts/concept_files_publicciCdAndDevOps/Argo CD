@@ -1,0 +1,2 @@
+Argo CD
+Argo Continuous Delivery - deploys app from Git repo to Kubernetes cluster.

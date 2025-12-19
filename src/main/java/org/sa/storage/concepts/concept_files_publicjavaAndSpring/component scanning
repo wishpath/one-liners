@@ -1,0 +1,2 @@
+component scanning
+method of configuration: annotations added to classes, attributes, and methods. Helps defining bean.

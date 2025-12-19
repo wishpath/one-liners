@@ -1,4 +1,5 @@
 problems:
+  - make keys filename-friendly
   - do something with INSTRUCTIONS_FOR_USER
   - to wiki print time.now()
   - use file util where possible

@@ -1,0 +1,2 @@
+URL safe format
+avoids special characters, making data suitable for transmission in URLs.

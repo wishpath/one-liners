@@ -1,0 +1,2 @@
+cohesion example
+UserManager class with createUser, deleteUser methods; high cohesion, focused only on user management.

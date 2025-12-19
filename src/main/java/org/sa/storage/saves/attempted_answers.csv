@@ -1221,3 +1221,17 @@ PCI-DSS (compliance),Paying Card regulations,7,2025-12-18T23:32:25.740374400
 SLA (commitment),Service Level Assessment,8,2025-12-18T23:32:44.409265800
 AML (compliance),Anti-Money Laundering regulations,9,2025-12-18T23:33:31.386155400
 CIF (importance),Critical Information Function,8,2025-12-18T23:33:48.900372600
+silo,a separate group,9,2025-12-19T20:06:50.853906100
+CIF (regulation),Critical Information Function - DORA terminology for very important financial services,9,2025-12-19T20:09:36.868136500
+ICT system,Information and Compute Technology system,7,2025-12-19T20:10:21.910564100
+filebeat,tool in kubernetes to transfer log files to Grafana,8,2025-12-19T20:10:59.364406800
+authorized signatory,person who has a right to sign company documents,10,2025-12-19T20:11:20.609471700
+Docker desktop,app that allows to run docker images on local machine,9,2025-12-19T20:11:44.305013600
+managed cloud service,cloud storage and compute provided as service with setup and maintenance already covered by provider,9,2025-12-19T20:12:27.516767100
+Headlamp (app),application to take care of application instances in kubernetes,8,2025-12-19T20:13:13.519029
+teleagreement user,customer than can use internet bank,8,2025-12-19T20:13:31.665969100
+instant payment,payment that goes trhough instantly,9,2025-12-19T20:13:52.950927700
+Hazelcast,Tool that distributes compute over various instances,9,2025-12-19T20:14:22.386148600
+TDC,Test Data Complience - how well test data preserves personal data and and complies to other regulations,8,2025-12-19T20:15:36.154583500
+performance testing,testing on app and infrastructure behaviour on increased load,9,2025-12-19T20:16:11.461968
+facility,building,10,2025-12-19T20:16:24.075429800

@@ -1,0 +1,2 @@
+stop word filtering
+ignoring frequently occurring, non-informative words (e.g., "the," "and") to improve search.

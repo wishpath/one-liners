@@ -1,0 +1,2 @@
+deque
+double-ended queue maintaining insertion order, allows access at both ends, implemented in Java as ArrayDeque.

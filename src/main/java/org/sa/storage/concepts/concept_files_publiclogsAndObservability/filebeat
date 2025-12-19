@@ -1,0 +1,2 @@
+filebeat
+software that sends log files to Elasticsearch/Logstash.

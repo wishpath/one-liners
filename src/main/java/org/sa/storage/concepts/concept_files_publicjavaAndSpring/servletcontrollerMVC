@@ -1,0 +1,2 @@
+servlet/controller/MVC
+Model View Controller - handles user input, process it, and update the model or view.

@@ -1,0 +1,2 @@
+aspect
+class handling shared concerns like logging or security.

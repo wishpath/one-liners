@@ -1,0 +1,2 @@
+namespace (networking)
+isolated environment where systems or apps has unique identifiers without conflicting others.

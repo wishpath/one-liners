@@ -1,0 +1,2 @@
+JPA transaction (db)
+sequence of database operations as a single unit.

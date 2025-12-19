@@ -8,8 +8,10 @@ public class FilePath {
   private static final String STORAGE = "src/main/java/org/sa/storage/";
 
   //source
-  public static final Path TOPICS_SWED = Paths.get(STORAGE + "concepts/topics-swed");
   public static final Path TOPICS_PUBLIC = Paths.get(STORAGE + "concepts/topics");
+  public static final Path CONCEPT_FILES_PUBLIC = Paths.get(STORAGE + "concepts/concept_files_public/");
+  public static final Path TOPICS_SWED = Paths.get(STORAGE + "concepts/topics-swed");
+  public static final Path CONCEPT_FILES_SWED = Paths.get(STORAGE + "concepts/concept_files_swed\\");
 
   //saves
   public static final Path SCORE_PATH = Paths.get(STORAGE + "saves/score.properties");
