@@ -61,8 +61,8 @@ public class ConceptsLoader {
         ConceptDTO conceptDTO = key_concept.get(key);
         if (key_instruction.length != 2) throw new RuntimeException("EVALUATE INSTRUCTION LINE DOES NOT CONTAIN EXACTLY ONE COMMA");
         if (conceptDTO == null) throw new RuntimeException("EVALUATE INSTRUCTION KEY DOES NOT EXIST IN key_concept: " + key);
-        if (conceptDTO.evaluateInstruction != null) throw new RuntimeException("EVALUATE INSTRUCTION KEY SHOULD BE UNIQUE AND NOT REPEATED: " + key);
-        conceptDTO.evaluateInstruction = instructions;
+        if (conceptDTO.aiEvaluateInstruction != null) throw new RuntimeException("EVALUATE INSTRUCTION KEY SHOULD BE UNIQUE AND NOT REPEATED: " + key);
+        conceptDTO.aiEvaluateInstruction = instructions;
       });
     } catch (IOException e) {
       throw new RuntimeException(e);

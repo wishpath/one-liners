@@ -1,0 +1,2 @@
+servlet container
+part of application server (like Tomcat or Jetty) that loads, manages, and executes servlet classes.

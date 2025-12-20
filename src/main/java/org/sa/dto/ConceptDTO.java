@@ -5,8 +5,8 @@ import org.sa.console.SimpleColorPrint;
 public class ConceptDTO {
   public String key;
   public String definition;
-  public String answerInstruction = "\nPlease explain this concept: ";
-  public String evaluateInstruction = null;
+  public String userAnswerInstruction = "\nPlease explain this concept: ";
+  public String aiEvaluateInstruction = null;
 
   public String topic;
   public Integer score;
@@ -18,7 +18,7 @@ public class ConceptDTO {
   }
 
   public void printUserInstruction() {
-    SimpleColorPrint.blueInLine(answerInstruction);
+    SimpleColorPrint.blueInLine(userAnswerInstruction);
     SimpleColorPrint.red(key);
   }
 

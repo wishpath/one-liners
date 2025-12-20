@@ -1,0 +1,2 @@
+connection pool (database)
+multiple reusable database connections, speeds up app-db interactions.

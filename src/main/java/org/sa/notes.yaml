@@ -1,5 +1,7 @@
 problems:
-  - make keys filename-friendly
+  - add default instructions to separate concept file:
+      - user answer instruction
+      - ai evaluation instruction
   - do something with INSTRUCTIONS_FOR_USER
   - to wiki print time.now()
   - use file util where possible

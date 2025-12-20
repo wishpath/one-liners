@@ -1,0 +1,2 @@
+proxy pattern
+proxy object controls access to real object, both share interface, with the proxy being used externally.

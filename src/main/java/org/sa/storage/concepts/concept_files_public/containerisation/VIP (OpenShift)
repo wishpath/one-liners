@@ -1,0 +1,2 @@
+VIP (OpenShift)
+Virtual IP - routes traffic to services or pods within cluster, often for load balancing.

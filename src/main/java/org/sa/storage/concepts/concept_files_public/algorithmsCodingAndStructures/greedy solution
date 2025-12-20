@@ -1,0 +1,2 @@
+greedy solution
+picks best now, ignores future. Assumes local = global best.

@@ -89,7 +89,7 @@ public class AiService {
             "\n Your entire answer should be up to 300 characters. \n"
             +
             //instructions for individual concept
-            (concept.evaluateInstruction == null ? "" : "\nAdditional instructions: \n" + concept.evaluateInstruction);
+            (concept.aiEvaluateInstruction == null ? "" : "\nAdditional instructions: \n" + concept.aiEvaluateInstruction);
     return question;
   }
 }

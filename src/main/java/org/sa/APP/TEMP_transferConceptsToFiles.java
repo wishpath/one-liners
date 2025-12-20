@@ -28,10 +28,9 @@ public class TEMP_transferConceptsToFiles {
         System.out.println(key);
         String path = outputDirectory + "\\" +  topicAsPath  + key;
         System.out.println(path);
+        String content = keyDefinition[0] + "\n" + keyDefinition[1];
 
-//        FileUtil.createTextFileOverwritingly_createPathIfMissing(
-//            outputDirectory + topicAsPath + (keyDefinition[0].replaceAll("[\\\\/:*?\"<>|]", "")),
-//            keyDefinition[0] + "\n" + keyDefinition[1]);
+        FileUtil.createTextFileOverwritingly_createPathIfMissing(path, content);
       }
     }
   }

@@ -1,0 +1,2 @@
+artifact (compilation)
+file produced by a build process, like a JAR, WAR, or binary, ready for deployment.
