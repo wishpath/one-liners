@@ -1235,3 +1235,5 @@ Hazelcast,Tool that distributes compute over various instances,9,2025-12-19T20:1
 TDC,Test Data Complience - how well test data preserves personal data and and complies to other regulations,8,2025-12-19T20:15:36.154583500
 performance testing,testing on app and infrastructure behaviour on increased load,9,2025-12-19T20:16:11.461968
 facility,building,10,2025-12-19T20:16:24.075429800
+RPO (requirement),Recover Point Objective - how fast system will recover,8,2025-12-20T23:58:55.616575
+PCI-DSS (compliance),Payment Card Industry Security Starndard,8,2025-12-20T23:59:33.379698100
