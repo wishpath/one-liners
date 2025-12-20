@@ -1,2 +1,0 @@
-asynchronous
-each next task starts without previous one ending. Task become concurrent.

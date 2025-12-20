@@ -1,2 +1,0 @@
-worker node
-computing node for running the containerized applications, has its own CPU, memory, and other resources.

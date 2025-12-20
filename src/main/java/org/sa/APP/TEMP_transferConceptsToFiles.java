@@ -2,7 +2,6 @@ package org.sa.APP;
 
 import org.sa.a_config.FilePath;
 import org.sa.a_config.Props;
-import org.sa.console.Colors;
 import org.sa.util.FileUtil;
 
 import java.io.File;
@@ -24,7 +23,7 @@ public class TEMP_transferConceptsToFiles {
         if (keyDefinition.length != 2) throw new IllegalStateException("OH NO");
         String key = keyDefinition[0];
         String definition = keyDefinition[1];
-        if (key.matches(".*[\\\\/:*?\"<>|].*")) System.out.println(Colors.RED + key + Colors.RESET);
+        if (key.matches(".*[\\\\/:*?\"<>|].*")) throw new IllegalArgumentException("key should be filename-friendly: " + key);
         key = key.replaceAll("[\\\\/:*?\"<>|]", "");
         System.out.println(key);
         String path = outputDirectory + "\\" +  topicAsPath  + key;

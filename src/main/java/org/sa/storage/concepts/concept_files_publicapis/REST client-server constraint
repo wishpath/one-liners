@@ -1,2 +1,0 @@
-REST client-server constraint
-separates client (UI) and server (logic) responsibilities for independent evolution.

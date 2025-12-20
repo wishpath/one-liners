@@ -1,2 +1,0 @@
-Enigma
-internal service to sign and encrypt data. Stores encryption keys in HSM.

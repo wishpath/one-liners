@@ -1,2 +1,0 @@
-servlet vs controller
-both are beans handling requests; controller is a higher abstraction built over servlet.

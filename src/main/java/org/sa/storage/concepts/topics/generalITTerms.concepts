@@ -12,6 +12,6 @@ hub=central point, where things are executed.
 infer=deduce info from evidence. Java example: in "var x = stream.toList()", x is inferred as a List.
 interface=an intermediate between user and internal functionality; serves as both abstraction and boundary.
 metadata=data about data: format, source, purpose, quality, relationships with other data.
-QES (context: Smart-ID)=Qualified Electronic Signature — legally equal to handwritten.
-AES (context: Smart-ID)=Advanced Electronic Signature — using a certificate, but without full Qualified (QES) legal status.
-SES (context: Smart-ID)=Simple Electronic Signature — basic electronic signing, lowest assurance, no certificate required.
+QES (Smart-ID)=Qualified Electronic Signature — legally equal to handwritten.
+AES (Smart-ID)=Advanced Electronic Signature — using a certificate, but without full Qualified (QES) legal status.
+SES (Smart-ID)=Simple Electronic Signature — basic electronic signing, lowest assurance, no certificate required.

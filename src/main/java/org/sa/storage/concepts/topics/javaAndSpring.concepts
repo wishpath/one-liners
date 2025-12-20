@@ -1,5 +1,5 @@
 .war file=Web Application Archive - deployable Java web app package, similar to .jar.
-Bean factory/ Application context=dependency injection container in Spring. Implements IoC - Inversion of Control.
+bean factory - application context=dependency injection container — implements inversion of control in Spring.
 IoC=Inversion of Control - design principle where object creation and lifecycle are managed by a container or framework.
 JSP=Java Server Pages - embed Java code in HTML, with tags for loops, conditions, formatting.
 Java bean=simple Java object with getters/setters, often used as DTO for data transfer.
@@ -21,7 +21,7 @@ servlet vs controller=both are beans handling requests; controller is a higher a
 servlet container=part of application server (like Tomcat or Jetty) that loads, manages, and executes servlet classes.
 application server=provides the environment to run the application and manage its components (e.g., beans, servlets).
 web server=handles HTTP and static content.
-servlet/controller/MVC=Model View Controller - handles user input, process it, and update the model or view.
+servlet - controller - MVC=Model View Controller - handles user input, process it, and update the model or view.
 stereotype in Spring=role of class, marked by annotation. E.g.: @Controller @Service
 volatile (Java)=keyword, ensures variable updates visible to all threads, e.g., private volatile String status.
 ternary operator=inline if-else: condition ? a : b.

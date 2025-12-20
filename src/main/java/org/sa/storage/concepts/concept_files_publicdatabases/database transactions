@@ -1,2 +1,0 @@
-database transactions
-group of database actions done as one, all succeed or fail together.

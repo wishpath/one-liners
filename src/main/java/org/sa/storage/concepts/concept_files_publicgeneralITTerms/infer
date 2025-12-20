@@ -1,2 +1,0 @@
-infer
-deduce info from evidence. Java example: in "var x = stream.toList()", x is inferred as a List.

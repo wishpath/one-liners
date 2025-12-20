@@ -1,2 +1,0 @@
-namespace (cluster)
-divides cluster resources (pods, services, deployments) among projects or teams.

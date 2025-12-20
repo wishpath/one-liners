@@ -1,2 +1,0 @@
-lazy initialization
-object creation delayed until first use, improving performance and reducing resource consumption.

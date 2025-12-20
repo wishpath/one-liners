@@ -1,2 +1,0 @@
-RESTful
-API using HTTP verbs(GET, POST), data in JSON/XML, layers: stateless controller, service, data storage.

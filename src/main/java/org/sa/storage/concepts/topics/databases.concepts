@@ -11,7 +11,7 @@ JPQL=Java Persistence Query Language - platform-independent database queries (ge
 NOT IN (SQL)=operator, similar to "!=" (not equals)
 ORM=Object-Relational Mapping - framework for object mapping e.g. Hibernate.
 RDBMS=relational database management system.
-connection pool (context: database)=multiple reusable database connections, speeds up app-db interactions.
+connection pool (database)=multiple reusable database connections, speeds up app-db interactions.
 database transactions=group of database actions done as one, all succeed or fail together.
 entity (database)=object stored in database, represents data record.
 object mapping (database)=linking app objects to database tables for storage/retrieval.

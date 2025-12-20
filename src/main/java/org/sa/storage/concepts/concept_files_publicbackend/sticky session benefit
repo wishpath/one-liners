@@ -1,2 +1,0 @@
-sticky session benefit
-avoids session data transfer and Java object serialization.

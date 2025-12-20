@@ -1,4 +1,4 @@
-2025-12-18 23:31:44
+2025-12-21 00:03:57
 *Goal of this article*
 This set of very short definitions gets straight to the point, giving you the basics of each idea in just a few words. It’s a fast way to start learning and build confidence, even if the definitions aren’t perfect. The simple style helps you pick up many ideas quickly and gives you a base to learn more over time.
 
@@ -28,7 +28,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      hash - unique representation of input data. Deterministic, fixed size, irreversible.
      hash use cases - data integrity, password storage, encryption, verification, indexing, quick lookups.
      hashing - transforming data into fixed-size code; deterministic; collisions possible.
-     heap (context: data structure) - ordered data structure, in Java implemented as PriorityQueue. Good for efficient sorting.
+     heap (data structure) - ordered data structure, in Java implemented as PriorityQueue. Good for efficient sorting.
      indegree - number of incoming edges directed towards a node.
      irreversible data transformation - not possible to obtain the original input from the outcome.
      justified vs excusable - justified focuses on positives despite downsides; excusable tolerates known flaws.
@@ -86,7 +86,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      try-except (Python) - handle exceptions, like try-catch in Java
 
 *Business And Workplace*
-     CFT (context: company structure) - cross functional team - individuals with different areas of expertise.
+     CFT (company structure) - cross functional team - individuals with different areas of expertise.
      CI (IT component) - Configuration Item - any manageable component to deliver IT service.
      CTO - Chief Technology Officer - executive responsible for overseeing technological development and innovation.
      Genesys Cloud - cloud-based support contact-center app.
@@ -129,7 +129,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      anonymous access to Artifactory - repository access without login.
      Ivy integration to Gradle - Gradle plugin for Ivy repos, allows using Ivy modules and dependencies in Gradle builds.
      Jenkins - app for automating tasks like code integration, testing, and deployment. Written in Java.
-     artifact (context: compilation) - file produced by a build process, like a JAR, WAR, or binary, ready for deployment.
+     artifact (compilation) - file produced by a build process, like a JAR, WAR, or binary, ready for deployment.
      artifactory - stores built artifacts (JAR, WAR, binaries), not source code.
      assemble - specific phase within the build process - collecting and combining individual components into larger units.
      build process - entire prep for execution - compiling files, linking libraries, and packaging into a distributable format.
@@ -144,7 +144,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      pip - Python package manager, installs and manages libraries (e.g., pip install requests).
      package manager examples by programming language - pip (Python), npm (JS), Maven/Gradle/Ivy (Java).
      emergency release - software deployment outside regular schedule to fix critical issues.
-     RPO (requirement) - max data loss allowed, measured in time, e.g., 15 minutes.
+     RPO (requirement) - Recovery Point Objective — maximum data loss allowed, measured in time, e.g., 15 minutes.
      SLA (commitment) - Service Level Agreement — defines expected service quality and uptime.
 
 *Containerisation*
@@ -210,7 +210,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      NOT IN (SQL) - operator, similar to "!=" (not equals)
      ORM - Object-Relational Mapping - framework for object mapping e.g. Hibernate.
      RDBMS - relational database management system.
-     connection pool (context: database) - multiple reusable database connections, speeds up app-db interactions.
+     connection pool (database) - multiple reusable database connections, speeds up app-db interactions.
      database transactions - group of database actions done as one, all succeed or fail together.
      entity (database) - object stored in database, represents data record.
      object mapping (database) - linking app objects to database tables for storage/retrieval.
@@ -273,9 +273,9 @@ This set of very short definitions gets straight to the point, giving you the ba
      infer - deduce info from evidence. Java example: in "var x = stream.toList()", x is inferred as a List.
      interface - an intermediate between user and internal functionality; serves as both abstraction and boundary.
      metadata - data about data: format, source, purpose, quality, relationships with other data.
-     QES (context: Smart-ID) - Qualified Electronic Signature — legally equal to handwritten.
-     AES (context: Smart-ID) - Advanced Electronic Signature — using a certificate, but without full Qualified (QES) legal status.
-     SES (context: Smart-ID) - Simple Electronic Signature — basic electronic signing, lowest assurance, no certificate required.
+     QES (Smart-ID) - Qualified Electronic Signature — legally equal to handwritten.
+     AES (Smart-ID) - Advanced Electronic Signature — using a certificate, but without full Qualified (QES) legal status.
+     SES (Smart-ID) - Simple Electronic Signature — basic electronic signing, lowest assurance, no certificate required.
 
 *Hardware*
      NFC - Near Field Communication - wireless communication technology - between devices typically a few centimeters away.
@@ -406,7 +406,7 @@ This set of very short definitions gets straight to the point, giving you the ba
      tampering - making illegal or/and damaging alterations.
      PI (data) - personal information
      PCI-DSS (compliance) - Payment Card Industry Data Security Standard — rules protecting cardholder data.
-     CIF (importance) - Mission Critical Function — ensures continuity, fast failover, integrity, and constant monitoring.
+     CIF (regulation) - Critical Information Function — key system whose failure would harm financial operations (DORA term)
      AML (compliance) - Anti-Money Laundering — laws and processes preventing illicit financial transactions.
 
 *Work Useful English*
