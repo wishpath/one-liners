@@ -1,2 +1,5 @@
 stub
 small code replacing larger code, simulates unimplemented parts, aids testing isolation.
+Please explain this concept: 
+Default aiEvaluateInstruction
+qaAndTesting

@@ -1,2 +1,5 @@
 application server
 provides the environment to run the application and manage its components (e.g., beans, servlets).
+Please explain this concept: 
+Default aiEvaluateInstruction
+javaAndSpring

@@ -1,2 +1,5 @@
 JPA transaction (db)
 sequence of database operations as a single unit.
+Please explain this concept: 
+Default aiEvaluateInstruction
+databases

@@ -1,2 +1,5 @@
 lazy initialization
 object creation delayed until first use, improving performance and reducing resource consumption.
+Please explain this concept: 
+Default aiEvaluateInstruction
+algorithmsCodingAndStructures

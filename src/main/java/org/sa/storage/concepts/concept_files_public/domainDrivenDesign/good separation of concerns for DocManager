@@ -1,2 +1,5 @@
 good separation of concerns for DocManager
 only doc creation; formatting and notifications are in separate classes.
+Please explain this concept: 
+Default aiEvaluateInstruction
+domainDrivenDesign

@@ -1,7 +1,6 @@
 package org.sa.APP;
 
 import org.sa.a_config.FilePath;
-import org.sa.a_config.Props;
 import org.sa.util.FileUtil;
 
 import java.io.File;
@@ -15,22 +14,34 @@ public class TEMP_transferConceptsToFiles {
 
   private static void transfer(Path inputDirectory, Path outputDirectory) {
     for (File file : FileUtil.listFiles(inputDirectory)) {
-      String topicAsPath = file.getName().split("[.]")[0] + "/";
-      System.out.println(topicAsPath);
-      for (String line : FileUtil.listLines(file)) {
-        System.out.println(Props.TAB + line);
-        String[] keyDefinition = line.split("[=]", 2);
-        if (keyDefinition.length != 2) throw new IllegalStateException("OH NO");
-        String key = keyDefinition[0];
-        String definition = keyDefinition[1];
-        if (key.matches(".*[\\\\/:*?\"<>|].*")) throw new IllegalArgumentException("key should be filename-friendly: " + key);
-        key = key.replaceAll("[\\\\/:*?\"<>|]", "");
-        System.out.println(key);
-        String path = outputDirectory + "\\" +  topicAsPath  + key;
-        System.out.println(path);
-        String content = keyDefinition[0] + "\n" + keyDefinition[1];
 
-        FileUtil.createTextFileOverwritingly_createPathIfMissing(path, content);
+      //get topic
+      String topic = file.getName().split("[.]")[0];
+      System.out.println("topic that we get from filename: " + topic);
+
+      for (String lineAsConcept : FileUtil.listLines(file)) {
+        //get concept
+        String[] keyDefinition = lineAsConcept.split("[=]", 2);
+        if (keyDefinition.length != 2) throw new IllegalStateException("OH NO");
+
+        //get key
+        String key = keyDefinition[0];
+        if (key.matches(".*[\\\\/:*?\"<>|].*")) throw new IllegalArgumentException("key should be filename-friendly: " + key);
+
+        //get concept lines:
+        String definition = keyDefinition[1];
+        String userAnswerInstruction = "Please explain this concept: ";
+        String aiEvaluateInstruction = "Default aiEvaluateInstruction";
+
+        //write to file
+        String path = outputDirectory + "\\" +  topic  + "\\" +  key;
+        String fileContent
+            = key + "\n"
+            + definition + "\n"
+            + userAnswerInstruction + "\n"
+            + aiEvaluateInstruction + "\n"
+            + topic;
+        FileUtil.createTextFileOverwritingly_createPathIfMissing(path, fileContent);
       }
     }
   }

@@ -1,2 +1,5 @@
 container
 isolated unit with app code, dependencies, and settings.
+Please explain this concept: 
+Default aiEvaluateInstruction
+containerisation

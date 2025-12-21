@@ -1,2 +1,5 @@
 core
 marks that database is main. But in our case there are only core databases so it's a bit meaningless.
+Please explain this concept: 
+Default aiEvaluateInstruction
+swedbankSpecific

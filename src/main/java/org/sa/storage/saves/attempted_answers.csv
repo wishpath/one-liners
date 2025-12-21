@@ -1237,3 +1237,10 @@ performance testing,testing on app and infrastructure behaviour on increased loa
 facility,building,10,2025-12-19T20:16:24.075429800
 RPO (requirement),Recover Point Objective - how fast system will recover,8,2025-12-20T23:58:55.616575
 PCI-DSS (compliance),Payment Card Industry Security Starndard,8,2025-12-20T23:59:33.379698100
+connection pool (database),how many separate connections can be made to database,8,2025-12-21T18:58:50.741277900
+A_B testing,testing two variations of functionality to decide which variant is better,9,2025-12-21T18:59:23.934425300
+AES (Smart-ID),Advanced Electronic Signarure - type of signature,8,2025-12-21T19:00:18.499183500
+OpenShift vs Kubernetes,OpenShift is a platform based on Kubernetes,9,2025-12-21T19:00:39.932917300
+CI_CD,Continuous Integration Continuous Delivery - application piplines associated with DevOps,9,2025-12-21T19:01:45.725622600
+hyphen (-) function,joins words to one,9,2025-12-21T19:01:58.411652600
+bean factory - application context,inversion of control in Spring,9,2025-12-21T19:02:17.909380900

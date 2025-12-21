@@ -1,2 +1,5 @@
 interface
 an intermediate between user and internal functionality; serves as both abstraction and boundary.
+Please explain this concept: 
+Default aiEvaluateInstruction
+generalITTerms

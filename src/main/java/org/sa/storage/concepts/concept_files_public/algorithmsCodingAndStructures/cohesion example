@@ -1,2 +1,5 @@
 cohesion example
 UserManager class with createUser, deleteUser methods; high cohesion, focused only on user management.
+Please explain this concept: 
+Default aiEvaluateInstruction
+algorithmsCodingAndStructures

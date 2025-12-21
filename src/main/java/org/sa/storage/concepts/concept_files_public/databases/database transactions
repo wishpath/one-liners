@@ -1,2 +1,5 @@
 database transactions
 group of database actions done as one, all succeed or fail together.
+Please explain this concept: 
+Default aiEvaluateInstruction
+databases

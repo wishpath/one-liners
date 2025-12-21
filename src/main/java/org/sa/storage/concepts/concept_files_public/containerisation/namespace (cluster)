@@ -1,2 +1,5 @@
 namespace (cluster)
 divides cluster resources (pods, services, deployments) among projects or teams.
+Please explain this concept: 
+Default aiEvaluateInstruction
+containerisation

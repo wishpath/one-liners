@@ -1,2 +1,5 @@
 staging environment
 closely resembles the production environment without affecting actual production data.
+Please explain this concept: 
+Default aiEvaluateInstruction
+qaAndTesting

@@ -1,2 +1,5 @@
 abstract class
 both shows what methods the extending classes have to implement and can implement some shared code.
+Please explain this concept: 
+Default aiEvaluateInstruction
+javaAndSpring

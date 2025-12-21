@@ -1,2 +1,5 @@
 greedy solution
 picks best now, ignores future. Assumes local = global best.
+Please explain this concept: 
+Default aiEvaluateInstruction
+algorithmsCodingAndStructures

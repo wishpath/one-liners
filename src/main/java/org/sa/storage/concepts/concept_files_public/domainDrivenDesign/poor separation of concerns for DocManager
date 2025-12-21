@@ -1,2 +1,5 @@
 poor separation of concerns for DocManager
 creation, formatting, saving, notifications, mixing responsibilities.
+Please explain this concept: 
+Default aiEvaluateInstruction
+domainDrivenDesign

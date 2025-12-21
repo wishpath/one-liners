@@ -1,2 +1,5 @@
 volatile (Java)
 keyword, ensures variable updates visible to all threads, e.g., private volatile String status.
+Please explain this concept: 
+Default aiEvaluateInstruction
+javaAndSpring

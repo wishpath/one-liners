@@ -1,2 +1,5 @@
 bad separation of concerns (DDD)
 overlapping responsibilities causing tight coupling and confusion.
+Please explain this concept: 
+Default aiEvaluateInstruction
+domainDrivenDesign

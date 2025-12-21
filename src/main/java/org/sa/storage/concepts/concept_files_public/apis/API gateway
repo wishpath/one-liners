@@ -1,2 +1,5 @@
 API gateway
 server, single entry for routing requests to APIs/services, adding security, monitoring, and management.
+Please explain this concept: 
+Default aiEvaluateInstruction
+apis
