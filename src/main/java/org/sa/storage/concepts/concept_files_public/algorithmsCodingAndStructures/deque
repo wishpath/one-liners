@@ -1,5 +1,5 @@
 deque
 double-ended queue maintaining insertion order, allows access at both ends, implemented in Java as ArrayDeque.
 Please explain this concept: 
-Default aiEvaluateInstruction
+Only rate 10/10 if user mentions 'keeping insertion order' and 'ArrayDeque'; metioning 'allows access at both ends' is important too; do not confuse with other data structures
 algorithmsCodingAndStructures

@@ -1,5 +1,5 @@
 regression testing
 Testing to ensure new changes don't negatively impact existing functionality.
 Please explain this concept: 
-Default aiEvaluateInstruction
+Only rate 10/10 if user mentions verifying changes do not break existing functionality; else cap score at 6/10
 qaAndTesting

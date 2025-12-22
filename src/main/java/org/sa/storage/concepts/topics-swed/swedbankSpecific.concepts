@@ -1,5 +1,4 @@
-AI=chat-based banking services: support, transactions, and service access.
-CC1,=CC2, CC3, CC4=Criticality Categories classifying IT services by importance and compliance impact.
+CC1 CC2 CC3 CC4=Criticality Categories classifying IT services by importance and compliance impact.
 CTE=common test environment.
 CasC=Development Tools team tool to encrypt service account credentials and config files for OpenShift onboarding.
 ECD=Entreprise Continuous Delivery (team).

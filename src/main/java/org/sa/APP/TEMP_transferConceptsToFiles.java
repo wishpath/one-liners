@@ -1,10 +1,13 @@
 package org.sa.APP;
 
 import org.sa.a_config.FilePath;
+import org.sa.dto.ConceptDTO;
+import org.sa.service.ConceptsLoader;
 import org.sa.util.FileUtil;
 
 import java.io.File;
 import java.nio.file.Path;
+import java.util.Map;
 
 public class TEMP_transferConceptsToFiles {
   public static void main(String[] args) {
@@ -13,6 +16,7 @@ public class TEMP_transferConceptsToFiles {
   }
 
   private static void transfer(Path inputDirectory, Path outputDirectory) {
+    Map<String, ConceptDTO> key_concept = ConceptsLoader.loadConceptsWithAttributes();
     for (File file : FileUtil.listFiles(inputDirectory)) {
 
       //get topic
@@ -28,10 +32,19 @@ public class TEMP_transferConceptsToFiles {
         String key = keyDefinition[0];
         if (key.matches(".*[\\\\/:*?\"<>|].*")) throw new IllegalArgumentException("key should be filename-friendly: " + key);
 
+        //mach old concept entry
+        ConceptDTO oldConceptEntry = null;
+        if (inputDirectory == FilePath.TOPICS_PUBLIC) {
+          oldConceptEntry = key_concept.get(key);
+          if (oldConceptEntry == null) throw new IllegalArgumentException("key should match existing (old) concept key: " + key);
+        }
+
         //get concept lines:
         String definition = keyDefinition[1];
         String userAnswerInstruction = "Please explain this concept: ";
         String aiEvaluateInstruction = "Default aiEvaluateInstruction";
+        if (inputDirectory == FilePath.TOPICS_PUBLIC && oldConceptEntry.aiEvaluateInstruction != null)
+          aiEvaluateInstruction = oldConceptEntry.aiEvaluateInstruction.trim();
 
         //write to file
         String path = outputDirectory + "\\" +  topic  + "\\" +  key;
