@@ -1245,3 +1245,9 @@ CI_CD,Continuous Integration Continuous Delivery - application piplines associat
 hyphen (-) function,joins words to one,9,2025-12-21T19:01:58.411652600
 bean factory - application context,inversion of control in Spring,9,2025-12-21T19:02:17.909380900
 SES (Smart-ID),simple electonic signature - most simple proof that a document has been signed,9,2025-12-23T10:38:13.500838200
+en dash (–) function,joins words together,8,2025-12-24T00:43:20.312730500
+artifact (compilation),code ready for deployment or distribution,9,2025-12-24T00:43:49.095546600
+QES (Smart-ID),Qualified Electronic Signature - most safe electronic signature,8,2025-12-24T00:44:24.464295100
+servlet - controller - MVC,object that exposes endpoints,8,2025-12-24T00:45:45.865474800
+em dash (—) function,expresses sudden change in the sentence,9,2025-12-24T00:49:42.492022
+RPO (requirement),Recovery Point Objective - how fast a system has to recover,8,2025-12-24T00:51:17.772606

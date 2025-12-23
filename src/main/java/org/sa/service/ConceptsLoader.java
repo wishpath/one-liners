@@ -1,9 +1,11 @@
 package org.sa.service;
 
 import org.sa.a_config.FilePath;
+import org.sa.a_config.Props;
 import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
 import org.sa.dto.ConceptDTO;
+import org.sa.util.FileUtil;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -62,7 +64,7 @@ public class ConceptsLoader {
         ConceptDTO conceptDTO = key_concept.get(key);
         if (key_instruction.length != 2) throw new RuntimeException("EVALUATE INSTRUCTION LINE DOES NOT CONTAIN EXACTLY ONE COMMA");
         if (conceptDTO == null) throw new RuntimeException("EVALUATE INSTRUCTION KEY DOES NOT EXIST IN key_concept: " + key);
-        if (conceptDTO.aiEvaluateInstruction != null) throw new RuntimeException("EVALUATE INSTRUCTION KEY SHOULD BE UNIQUE AND NOT REPEATED: " + key);
+        if (!conceptDTO.aiEvaluateInstruction.equals(Props.DEFAULT_AI_EVALUATION_INSTRUCTION)) throw new RuntimeException("EVALUATE INSTRUCTION KEY SHOULD BE UNIQUE AND NOT REPEATED: " + key);
         conceptDTO.aiEvaluateInstruction = instructions;
       });
     } catch (IOException e) {
@@ -93,20 +95,58 @@ public class ConceptsLoader {
   }
 
   private static void TEMP_check_if_concepts_in_separate_files_match(Map<String, ConceptDTO> key_concept) {
+    AtomicInteger defaultAiInstructionCount = new AtomicInteger();
+    AtomicInteger specificAiInstructionCount = new AtomicInteger();
     key_concept.forEach((key, conceptDTO) -> {
       //key can be in any topic, topics are directories in FilePath.CONCEPT_FILES_PUBLIC
       //check if key exists in any topic
       AtomicInteger keyExistsTimes = new AtomicInteger();
+
+
       try (Stream<Path> topics = Files.list(FilePath.CONCEPT_FILES_PUBLIC)) {
         topics.forEach(topicPath -> {
-          String topicName = topicPath.getFileName().toString();
-          if (Files.isRegularFile(topicPath.resolve(key))) keyExistsTimes.getAndIncrement();
+          String topicNameAsDirectory = topicPath.getFileName().toString();
+          Path filePath = topicPath.resolve(key);
+          if (Files.isRegularFile(filePath)) {
+            keyExistsTimes.getAndIncrement();
+            List<String> fileLines = FileUtil.listLines(filePath.toFile());
+
+            //check key
+            String contentKey = fileLines.get(0);
+            if (!key.equals(contentKey)) throw new IllegalArgumentException("KEY MISMATCH");
+            if (!conceptDTO.key.equals(contentKey)) throw new IllegalArgumentException("KEY MISMATCH");
+            //System.out.println(key);
+
+            //check definition
+            String contentDefinition = fileLines.get(1);
+            if (!conceptDTO.definition.equals(contentDefinition)) throw new IllegalArgumentException("DEFINITION MISMATCH");
+
+            //check user instruction
+            String contentUserAnswerInstruction = fileLines.get(2);
+            if (!conceptDTO.userAnswerInstruction.equals(contentUserAnswerInstruction)) throw new IllegalArgumentException("USER INSTRUCTION MISMATCH");
+
+            //check ai instruction
+            String contentAiEvaluationInstruction = fileLines.get(3);
+            if (!contentAiEvaluationInstruction.trim().equals(conceptDTO.aiEvaluateInstruction.trim()))
+                throw new IllegalArgumentException("AI INSTRUCTION MISMATCH: \n" + contentAiEvaluationInstruction.trim() + " \n" + conceptDTO.aiEvaluateInstruction.trim());
+            if (contentAiEvaluationInstruction.equals(Props.DEFAULT_AI_EVALUATION_INSTRUCTION)) defaultAiInstructionCount.getAndIncrement();
+            else specificAiInstructionCount.getAndIncrement();
+
+            //check topic
+            String contentTopic = fileLines.get(4);
+            if (!contentTopic.equals(topicNameAsDirectory)) throw new IllegalArgumentException("TOPIC MISMATCH: " + topicNameAsDirectory);
+          }
         });
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
       if (keyExistsTimes.get() != 1) throw new IllegalStateException("KEY NAMED FILE SHOULD EXIST EXACTLY ONCE");
+
     });
     System.out.println("GREAT, ALL THE CONCEPTS HAS A CORRECT SEPARATE FILE");
+    System.out.println("DEFAULT INSTRUCTION COUNT: " + defaultAiInstructionCount.get());
+    System.out.println("SPECIFIC INSTRUCTION COUNT: " + specificAiInstructionCount.get());
+
+
   }
 }

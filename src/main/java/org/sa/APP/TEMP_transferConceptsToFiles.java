@@ -1,6 +1,7 @@
 package org.sa.APP;
 
 import org.sa.a_config.FilePath;
+import org.sa.a_config.Props;
 import org.sa.dto.ConceptDTO;
 import org.sa.service.ConceptsLoader;
 import org.sa.util.FileUtil;
@@ -42,7 +43,7 @@ public class TEMP_transferConceptsToFiles {
         //get concept lines:
         String definition = keyDefinition[1];
         String userAnswerInstruction = "Please explain this concept: ";
-        String aiEvaluateInstruction = "Default aiEvaluateInstruction";
+        String aiEvaluateInstruction = Props.DEFAULT_AI_EVALUATION_INSTRUCTION;
         if (inputDirectory == FilePath.TOPICS_PUBLIC && oldConceptEntry.aiEvaluateInstruction != null)
           aiEvaluateInstruction = oldConceptEntry.aiEvaluateInstruction.trim();
 
