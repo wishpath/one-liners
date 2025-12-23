@@ -11,6 +11,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Stream;
 
 //loads key, definition, score, evaluateInstruction
@@ -87,6 +88,25 @@ public class ConceptsLoader {
       key_concept.get(propertiesKey).score = propertiesScore;
     }
 
+    TEMP_check_if_concepts_in_separate_files_match(key_concept);
     return key_concept;
+  }
+
+  private static void TEMP_check_if_concepts_in_separate_files_match(Map<String, ConceptDTO> key_concept) {
+    key_concept.forEach((key, conceptDTO) -> {
+      //key can be in any topic, topics are directories in FilePath.CONCEPT_FILES_PUBLIC
+      //check if key exists in any topic
+      AtomicInteger keyExistsTimes = new AtomicInteger();
+      try (Stream<Path> topics = Files.list(FilePath.CONCEPT_FILES_PUBLIC)) {
+        topics.forEach(topicPath -> {
+          String topicName = topicPath.getFileName().toString();
+          if (Files.isRegularFile(topicPath.resolve(key))) keyExistsTimes.getAndIncrement();
+        });
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+      if (keyExistsTimes.get() != 1) throw new IllegalStateException("KEY NAMED FILE SHOULD EXIST EXACTLY ONCE");
+    });
+    System.out.println("GREAT, ALL THE CONCEPTS HAS A CORRECT SEPARATE FILE");
   }
 }
