@@ -18,6 +18,14 @@ public class ConceptDTO {
     this.score = 0;
   }
 
+  public ConceptDTO(String key, String definition, String userAnswerInstruction, String aiEvaluationInstruction, String topic) {
+    this.key = key;
+    this.definition = definition;
+    this.userAnswerInstruction = userAnswerInstruction;
+    this.aiEvaluateInstruction = aiEvaluationInstruction;
+    this.topic = topic;
+  }
+
   public void printUserInstruction() {
     SimpleColorPrint.blueInLine("\n" + userAnswerInstruction);
     SimpleColorPrint.red(key);

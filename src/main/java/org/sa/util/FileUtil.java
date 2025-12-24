@@ -52,5 +52,13 @@ public class FileUtil {
     }
   }
 
+  public static Stream<Path> listDirectories(Path path) {
+    try {
+      return Files.list(path);
+    } catch (IOException e) {
+      throw new RuntimeException(e);
+    }
+  }
+
 
 }
