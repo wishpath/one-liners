@@ -21,8 +21,35 @@ import java.util.stream.Stream;
 public class ConceptsLoader {
 
 
-  public Map<String, ConceptDTO> key_concept2 = loadConceptsWithAttributes2();
+//  public Map<String, ConceptDTO> key_concept2 = loadConceptsWithAttributes2();
   public Map<String, ConceptDTO> key_concept = loadConceptsWithAttributes();
+//  public boolean match = TEMP_validate_old_and_new_math_matches(key_concept2, key_concept);
+
+  private boolean TEMP_validate_old_and_new_math_matches(Map<String, ConceptDTO> keyConcept2, Map<String, ConceptDTO> keyConcept) {
+    Map<String, ConceptDTO> key_concept = ConceptsLoader.loadConceptsWithAttributes();
+    Map<String, ConceptDTO> key_concept2 = ConceptsLoader.loadConceptsWithAttributes2();
+
+// check size first
+    if (key_concept.size() != key_concept2.size()) throw new IllegalStateException("Size mismatch");
+
+// check all keys exist
+    if (!key_concept.keySet().equals(key_concept2.keySet())) throw new IllegalStateException("Keys mismatch");
+
+// check each ConceptDTO fields
+    key_concept.forEach((key, c1) -> {
+      ConceptDTO c2 = key_concept2.get(key);
+      if (!c1.definition.equals(c2.definition)
+          || !c1.userAnswerInstruction.equals(c2.userAnswerInstruction)
+          || !c1.aiEvaluateInstruction.equals(c2.aiEvaluateInstruction)
+          || !c1.topic.equals(c2.topic)
+          || c1.score != c2.score)
+        throw new IllegalStateException("Concept mismatch for key: " + key);
+    });
+
+    System.out.println("All concepts match perfectly!");
+    return true;
+  }
+
   public final TreeMap<Integer, Set<String>> score_keySet = mapScores(key_concept);
 
   public static TreeMap<Integer, Set<String>> mapScores(Map<String, ConceptDTO> key_concept) {
@@ -162,11 +189,11 @@ public class ConceptsLoader {
       String topicNameAsDirectory = topicPath.getFileName().toString();
       for (File conceptFile : FileUtil.listFiles(topicPath)) {
         if (!conceptFile.isFile()) throw new IllegalArgumentException("IN THE TOPIC FOLDER THERE SHOULD ONLY BE CONCEPT FILES");
-        String keyAsFilename = conceptFile.getName();
+        String keyAsFilename = conceptFile.getName().trim();
         List<String> fileLines = FileUtil.listLines(conceptFile);
         //key
-        String contentKey = fileLines.get(0);
-        if (!keyAsFilename.equals(contentKey)) throw new IllegalArgumentException("KEY MISMATCH");
+        String contentKey = fileLines.get(0).trim();
+        if (!keyAsFilename.equals(contentKey)) throw new IllegalArgumentException("KEY MISMATCH " + contentKey + " " + keyAsFilename);
         if (contentKey.contains(";")) throw new RuntimeException("Key '" + contentKey + "' should not contain semicolons (;)");
         if (contentKey.contains(",")) throw new RuntimeException("Key '" + contentKey + "' should not contain commas (,)");
         //definition

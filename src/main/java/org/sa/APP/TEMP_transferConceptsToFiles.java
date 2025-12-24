@@ -32,6 +32,7 @@ public class TEMP_transferConceptsToFiles {
         //get key
         String key = keyDefinition[0];
         if (key.matches(".*[\\\\/:*?\"<>|].*")) throw new IllegalArgumentException("key should be filename-friendly: " + key);
+        if (key.endsWith(".")) throw new IllegalArgumentException("key cannot end with a dot: " + key);
 
         //mach old concept entry
         ConceptDTO oldConceptEntry = null;
