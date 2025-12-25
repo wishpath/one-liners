@@ -1251,3 +1251,6 @@ QES (Smart-ID),Qualified Electronic Signature - most safe electronic signature,8
 servlet - controller - MVC,object that exposes endpoints,8,2025-12-24T00:45:45.865474800
 em dash (—) function,expresses sudden change in the sentence,9,2025-12-24T00:49:42.492022
 RPO (requirement),Recovery Point Objective - how fast a system has to recover,8,2025-12-24T00:51:17.772606
+CFT (company structure),cross functional team - team has various functions,9,2025-12-25T21:03:40.608658300
+SLA (commitment),service level assignment,6,2025-12-25T21:05:27.719694800
+RPO (requirement),recovery point objective - how fast should a service recover,8,2025-12-25T21:06:04.053556800

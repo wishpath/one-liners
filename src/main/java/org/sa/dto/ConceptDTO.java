@@ -24,6 +24,7 @@ public class ConceptDTO {
     this.userAnswerInstruction = userAnswerInstruction;
     this.aiEvaluateInstruction = aiEvaluationInstruction;
     this.topic = topic;
+    this.score = 0;
   }
 
   public void printUserInstruction() {
