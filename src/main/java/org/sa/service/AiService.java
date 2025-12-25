@@ -2,6 +2,7 @@ package org.sa.service;
 
 import org.sa.AiClient;
 import org.sa.a_config.FilePath;
+import org.sa.a_config.Props;
 import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
 import org.sa.dto.ConceptDTO;
@@ -30,6 +31,9 @@ public class AiService {
   public ConceptDTO evaluateUserExplanationWithAI(ConceptDTO concept, String userInputDefinitionAttempt) throws IOException {
 
     String instructionToEvaluateUserInput = getInstructionToEvaluateUserInput(concept, userInputDefinitionAttempt);
+    System.out.println("TEMP PRINTING INSTRUCTION HERE");
+    System.out.println(instructionToEvaluateUserInput);
+    System.out.println(concept.aiEvaluateInstruction);
 
     //AI evaluation
     String answer = evaluatorAi.getAnswer(instructionToEvaluateUserInput) + "\n";
@@ -72,8 +76,8 @@ public class AiService {
     String question =
         "Is this a good key and definition: key: \"" + concept.key + "\", and definition: \"" + input + "\". " +
             "\n A. Step 1 - Evaluate the answer by asking: 'Does this capture the essence?' (aim to be positive)." +
-            "\n B. If some details are missing but it captures the essence, rate 10/10." +
-            "\n C. If the definition matches this one, rate 10/10: " + concept.definition + ", but other definitions might get a perfect rating as well." +
+            "\n B. If some details are missing (but they are not mentioned in the 'additional instructions') you can still cap the evaluation at 10/10." +
+            "\n C. If the definition is a lot like this one, rate 10/10: " + concept.definition + ", but other definitions might get a perfect rating as well." +
             "\n D. If the essence is ALMOST there, rate 9/10." +
             "\n E. If the essence is somewhat touched, rate 8/10." +
             "\n F. Think of an answer in up to 10 words - if you can't come up with a better one, rate 10/10." +
@@ -85,11 +89,11 @@ public class AiService {
             "\n J. If the key is an acronym, each core expanded word must be spelled exactly (−1 point per misspelling); Ignore if letters are lowercase or uppercase\n" +
             "\n K. If the key is an acronym, each core expanded word — even if misspelled — must clearly match the key’s intended word; wrong words aren’t accepted (e.g., for “SSL”: “securing” OK (only gramatical form is different), “sekure” −1 point (misspell), “service” rejected (totally wrong word)).\n" +
 
-            "\n Step 2 - If the evaluation is less than 7/10, provide the correct answer (if 7/10 to 10/10, skip this step)." +
-            "\n Your entire answer should be up to 300 characters. \n"
+            "\n Step 2 - If the evaluation is less than 7/10, provide the correct answer (if 7/10 to 10/10 — do not provide the answer)." +
+            "\n Your entire response should be up to 300 characters. \n"
             +
             //instructions for individual concept
-            (concept.aiEvaluateInstruction == null ? "" : "\nAdditional instructions: \n" + concept.aiEvaluateInstruction);
+            (concept.aiEvaluateInstruction.equals(Props.DEFAULT_AI_EVALUATION_INSTRUCTION) ? "" : "\nAdditional instructions: \n" + concept.aiEvaluateInstruction);
     return question;
   }
 }

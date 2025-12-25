@@ -1,12 +1,12 @@
 problems:
+  - 'abstraction examples' does not listen to additional instructions:
+    - for explicit instruction use instruction A, for additional instruction use instruction B.
   - check if loaded concept matches the one in the separate file.
   - when loading concept from file, check if key matches file, and topic matches directory, else throw.
-  - do something with INSTRUCTIONS_FOR_USER
+  - INSTRUCTIONS_FOR_USER: should be transfered to files manually
   - to wiki print time.now()
   - use file util where possible
   - make app : printTopics (separate from wiki exporter)
-  - put ConceptDTO to use:
-      - transfer concepts from text files to ConceptObjects class
   - TopicsPrinterApp update when topics will be folder names rather than filenames
   - open wiki text files after generating them
 ideas:
