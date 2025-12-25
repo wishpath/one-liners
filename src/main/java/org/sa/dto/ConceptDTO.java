@@ -1,12 +1,14 @@
 package org.sa.dto;
 
 import org.sa.a_config.Props;
+import org.sa.console.Colors;
 import org.sa.console.SimpleColorPrint;
+import org.sa.util.StringConsoleUtil;
 
 public class ConceptDTO {
   public String key;
   public String definition;
-  public String userAnswerInstruction = "Please explain this concept: ";
+  public String userAnswerInstruction = Props.DEFAULT_USER_ANSWER_INSTRUCTION;
   public String aiEvaluateInstruction = Props.DEFAULT_AI_EVALUATION_INSTRUCTION;
 
   public String topic;
@@ -28,8 +30,18 @@ public class ConceptDTO {
   }
 
   public void printUserInstruction() {
-    SimpleColorPrint.blueInLine("\n" + userAnswerInstruction);
-    SimpleColorPrint.red(key);
+    if (userAnswerInstruction.equals(Props.DEFAULT_USER_ANSWER_INSTRUCTION)) {
+      SimpleColorPrint.blueInLine("\n" + userAnswerInstruction);
+      SimpleColorPrint.red(key);
+    }
+    else {
+      String formatted = "\n\n" + userAnswerInstruction
+          .replace("****", "\n\t\t\t\t")
+          .replace("***", "\n\t\t\t")
+          .replace("**", "\n\t\t")
+          .replace("*", "\n\t");
+      StringConsoleUtil.printStringWithFragmentHighlighted(key, formatted, Colors.BLUE, Colors.RED);
+    }
   }
 
   public void printScore() {
