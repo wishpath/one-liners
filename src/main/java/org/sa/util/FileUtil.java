@@ -2,9 +2,14 @@ package org.sa.util;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.Reader;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -40,18 +45,6 @@ public class FileUtil {
     }
   }
 
-
-
-  public static void createTextFileOverwritingly_createPathIfMissing(String path, String content) {
-    Path filePath = Path.of(path);
-    try {
-      if (Files.notExists(filePath.getParent())) Files.createDirectories(filePath.getParent());
-      Files.writeString(filePath, content);
-    } catch (IOException e) {
-      throw new RuntimeException(e);
-    }
-  }
-
   public static Stream<Path> listDirectories(Path path) {
     try {
       return Files.list(path);
@@ -60,5 +53,13 @@ public class FileUtil {
     }
   }
 
-
+  public static Set<Map.Entry<Object, Object>> loadPropertiesFileAsMapEntrySet(Path path) {
+    Properties scoreProperties = new Properties();
+    try (Reader reader = Files.newBufferedReader(path, StandardCharsets.UTF_8)) {
+      scoreProperties.load(reader);
+    } catch (IOException e) {
+      throw new RuntimeException(e);
+    }
+    return scoreProperties.entrySet();
+  }
 }

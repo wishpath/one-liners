@@ -1259,3 +1259,7 @@ en dash (–) function,formulates ranges and vectors; e.g. Kaunas – Vilnius,9,
 en dash (–) function,formulates ranges,9,2025-12-25T21:14:45.196626700
 servlet - controller - MVC,inversion of constroll in spring,8,2025-12-25T21:18:05.399363300
 AES (Smart-ID),Advanced Electronic Signature - average electronic signature,8,2025-12-25T21:25:42.463021400
+connection pool (database),a number of connections allowed simulataniously for better performance,8,2025-12-25T21:43:13.583561400
+OpenShift vs Kubernetes,Openshift is based on kubernetes so both are containerised application platforms,9,2025-12-25T22:06:46.409006900
+CIF (regulation),Critical Information Function - DORA terminology for important financial applications,9,2025-12-25T22:08:07.172475100
+SES (Smart-ID),Simple Electronic Signature - most basic electronic signature,9,2025-12-25T22:15:56.052282800
