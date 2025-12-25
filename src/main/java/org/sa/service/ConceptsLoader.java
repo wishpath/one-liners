@@ -21,56 +21,56 @@ import java.util.stream.Stream;
 public class ConceptsLoader {
 
 
-  public Map<String, ConceptDTO> key_concept2 = loadConceptsWithAttributes2();
-  public Map<String, ConceptDTO> key_concept = loadConceptsWithAttributes();
-  public boolean match = TEMP_validate_old_and_new_math_matches(key_concept2, key_concept);
+  public Map<String, ConceptDTO> key_concept = loadConceptsWithAttributes2();
+//  public Map<String, ConceptDTO> key_concept = loadConceptsWithAttributes();
+//  public boolean match = TEMP_validate_old_and_new_math_matches(key_concept2, key_concept);
 
-  private boolean TEMP_validate_old_and_new_math_matches(Map<String, ConceptDTO> keyConcept2, Map<String, ConceptDTO> keyConcept) {
-    Map<String, ConceptDTO> key_concept = ConceptsLoader.loadConceptsWithAttributes();
-    Map<String, ConceptDTO> key_concept2 = ConceptsLoader.loadConceptsWithAttributes2();
-    key_concept2.forEach((key, concept) -> System.out.println(key + " " + concept.score));
-
-// check size first
-    if (key_concept.size() != key_concept2.size()) throw new IllegalStateException("Size mismatch");
-
-// check all keys exist
-    if (!key_concept.keySet().equals(key_concept2.keySet())) throw new IllegalStateException("Keys mismatch");
-
-// check each ConceptDTO fields
-    key_concept.forEach((key, oldConcept) -> {
-      ConceptDTO newConcept = key_concept2.get(key);
-      if (!oldConcept.definition.equals(newConcept.definition))
-        throw new IllegalStateException(
-            "Definition mismatch for key: " + key + "\n" +
-                "old: " + oldConcept.definition + "\n" +
-                "new: " + newConcept.definition
-        );
-
-      if (!oldConcept.userAnswerInstruction.equals(newConcept.userAnswerInstruction))
-        throw new IllegalStateException(
-            "User answer instruction mismatch for key: " + key + "\n" +
-                "old: " + oldConcept.userAnswerInstruction + "\n" +
-                "new: " + newConcept.userAnswerInstruction
-        );
-
-      if (!oldConcept.aiEvaluateInstruction.trim().equals(newConcept.aiEvaluateInstruction))
-        throw new IllegalStateException(
-            "AI evaluate instruction mismatch for key: " + key + "\n" +
-                "old: " + oldConcept.aiEvaluateInstruction + "\n" +
-                "new: " + newConcept.aiEvaluateInstruction
-        );
-
-      if (oldConcept.score != newConcept.score)
-        throw new IllegalStateException(
-            "Score mismatch for key: " + key + "\n" +
-                "old: " + oldConcept.score + "\n" +
-                "new: " + newConcept.score
-        );
-    });
-
-    System.out.println("All concepts match perfectly!");
-    return true;
-  }
+//  private boolean TEMP_validate_old_and_new_math_matches(Map<String, ConceptDTO> keyConcept2, Map<String, ConceptDTO> keyConcept) {
+//    Map<String, ConceptDTO> key_concept = ConceptsLoader.loadConceptsWithAttributes();
+//    Map<String, ConceptDTO> key_concept2 = ConceptsLoader.loadConceptsWithAttributes2();
+//    key_concept2.forEach((key, concept) -> System.out.println(key + " " + concept.score));
+//
+//// check size first
+//    if (key_concept.size() != key_concept2.size()) throw new IllegalStateException("Size mismatch");
+//
+//// check all keys exist
+//    if (!key_concept.keySet().equals(key_concept2.keySet())) throw new IllegalStateException("Keys mismatch");
+//
+//// check each ConceptDTO fields
+//    key_concept.forEach((key, oldConcept) -> {
+//      ConceptDTO newConcept = key_concept2.get(key);
+//      if (!oldConcept.definition.equals(newConcept.definition))
+//        throw new IllegalStateException(
+//            "Definition mismatch for key: " + key + "\n" +
+//                "old: " + oldConcept.definition + "\n" +
+//                "new: " + newConcept.definition
+//        );
+//
+//      if (!oldConcept.userAnswerInstruction.equals(newConcept.userAnswerInstruction))
+//        throw new IllegalStateException(
+//            "User answer instruction mismatch for key: " + key + "\n" +
+//                "old: " + oldConcept.userAnswerInstruction + "\n" +
+//                "new: " + newConcept.userAnswerInstruction
+//        );
+//
+//      if (!oldConcept.aiEvaluateInstruction.trim().equals(newConcept.aiEvaluateInstruction))
+//        throw new IllegalStateException(
+//            "AI evaluate instruction mismatch for key: " + key + "\n" +
+//                "old: " + oldConcept.aiEvaluateInstruction + "\n" +
+//                "new: " + newConcept.aiEvaluateInstruction
+//        );
+//
+//      if (oldConcept.score != newConcept.score)
+//        throw new IllegalStateException(
+//            "Score mismatch for key: " + key + "\n" +
+//                "old: " + oldConcept.score + "\n" +
+//                "new: " + newConcept.score
+//        );
+//    });
+//
+//    System.out.println("All concepts match perfectly!");
+//    return true;
+//  }
 
   public final TreeMap<Integer, Set<String>> score_keySet = mapScores(key_concept);
 

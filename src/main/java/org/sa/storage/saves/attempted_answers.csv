@@ -1254,3 +1254,6 @@ RPO (requirement),Recovery Point Objective - how fast a system has to recover,8,
 CFT (company structure),cross functional team - team has various functions,9,2025-12-25T21:03:40.608658300
 SLA (commitment),service level assignment,6,2025-12-25T21:05:27.719694800
 RPO (requirement),recovery point objective - how fast should a service recover,8,2025-12-25T21:06:04.053556800
+QES (Smart-ID),qualified electonic signature - most advanced electonic signature - equal to handwritten one leagly,8,2025-12-25T21:11:42.334420600
+en dash (–) function,formulates ranges and vectors; e.g. Kaunas – Vilnius,9,2025-12-25T21:13:25.516435300
+en dash (–) function,formulates ranges,9,2025-12-25T21:14:45.196626700
