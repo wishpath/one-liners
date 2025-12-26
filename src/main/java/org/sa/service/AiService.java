@@ -106,7 +106,7 @@ public class AiService {
             + "\n\"" + concept.key + "\"\n\n"
             + "User has provided this answer: "
             + "\n\"" + input + "\"\n\n"
-            + "Your job is to valuate users answer from 0/10 to 10/10. This is how you should do it: "
+            + "Your job is to evaluate user's answer from 0/10 to 10/10. This is how you should do it: "
             + "\n\"" + concept.aiEvaluateInstruction + "\"\n\n"
             + "Don't be too strict when evaluating.\n\n"
             + "Just for the context, the default example of definitions in the system is: "
@@ -114,11 +114,9 @@ public class AiService {
             + "This is what you should output: "
             + "\nFirst line should only be evaluation in this format, nothing extra: \n"
             + "*/10"
-            + "\nThen empty line\n"
-            + "Then reason your evaluation decision in less than 200 characters\n"
+            + "\nThen next line: reason your evaluation decision in less than 200 characters (show the MATH of provided points)\n"
             + "Then optional part in case the evaluation was less than 7/10:"
-            + "Empty Line\n"
-            + "Formulate what would be a better answer in 10 words or less";
+            + "\nIn the next line: Formulate what would be a better answer in 10 words or less";
     return instruction;
   }
 }
