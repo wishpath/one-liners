@@ -1,5 +1,5 @@
 namespace (cluster)
 divides cluster resources (pods, services, deployments) among projects or teams.
-Please explain this concept: 
+Please describe what is namespace (cluster). What is its relation to cluster? What is its relation to pods? What is its relations to projects and teams?
 Only rate 10/10 if user mentions relation to cluster and pods; definition must emphasize dividing cluster resources among projects or teams; do not rate above 7/10 if pods or workloads are not mentioned
 containerisation
