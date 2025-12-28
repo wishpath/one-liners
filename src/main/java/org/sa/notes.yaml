@@ -1,4 +1,6 @@
 problems:
+  - fix ai instruction part in the concept file requirements
+  - validate loaded user instruction: if not default then must contain key
   - 'abstraction examples' does not listen to additional instructions:
     - for explicit instruction use instruction A, for additional instruction use instruction B.
   - check if loaded concept matches the one in the separate file.

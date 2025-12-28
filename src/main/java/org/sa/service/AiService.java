@@ -17,8 +17,8 @@ import java.util.regex.Pattern;
 
 public class AiService {
   private final ConceptPicker act;
-  private final AiClient evaluatorAi = new AiClient().setModelGpt4oMini();
-  private AiClient answersAi = new AiClient().setModelGpt4oMini();
+  private final AiClient evaluatorAi = new AiClient().setModelGpt5();
+  private AiClient answersAi = new AiClient().setModelGpt5();
   private final ScoreService scoreService;
   private final NotTodayService notTodayService;
 
@@ -106,17 +106,17 @@ public class AiService {
             + "\n\"" + concept.key + "\"\n\n"
             + "User has provided this answer: "
             + "\n\"" + input + "\"\n\n"
-            + "Your job is to evaluate user's answer from 0/10 to 10/10. This is how you should do it: "
+            + "Your job is to evaluate user's answer from 0/10 to 10/10. Always use whole points (1/10) never a fraction of them. This is how you should do it: "
             + "\n\"" + concept.aiEvaluateInstruction + "\"\n\n"
-            + "Don't be too strict when evaluating.\n\n"
+            + "Don't be too strict when evaluating. Allow user to use own words and formulations. The point is so the essence of a concept is there\n\n"
+            + "Most important keywords in the answer should be spelled correctly\n\n"
             + "Just for the context, the default example of definitions in the system is: "
             + "\n\"" + concept.definition + "\"\n\n\n"
             + "This is what you should output: "
             + "\nFirst line should only be evaluation in this format, nothing extra: \n"
             + "*/10"
-            + "\nThen next line: reason your evaluation decision in less than 200 characters (show the MATH of provided points)\n"
-            + "Then optional part in case the evaluation was less than 7/10:"
-            + "\nIn the next line: Formulate what would be a better answer in 10 words or less";
+            + "\nSecond line: math fomula of how you have added the evaluation points. (Put hhe result of this math formula as the first line)\n"
+            + "Then optional part for each element that did not receive maximum score (separated by blank line): mention how to improve this element (super laconic please)";
     return instruction;
   }
 }

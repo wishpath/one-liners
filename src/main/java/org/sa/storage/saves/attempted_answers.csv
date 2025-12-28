@@ -1278,3 +1278,16 @@ abstraction examples,interface; microservice; API; module; method,10,2025-12-26T
 abstraction examples,API,2,2025-12-26T12:33:38.486708200
 e.g,exampli gratia - latin phrase that in english means 'for exampl',9,2025-12-27T23:26:37.449709300
 SLA (commitment),Service Level Agreement - how well shoud a service work,8,2025-12-27T23:27:12.038490300
+RPO (requirement),Recovery Point Objective - time in which a system should be recovered,5,2025-12-28T10:44:49.280030500
+RPO (requirement),Recovery Point Objective - time in which the service has to be recovered.,5,2025-12-28T10:49:47.985407
+RPO (requirement),Recovery Point Objective - how much times it shuld take maximum to recover the service,6,2025-12-28T10:56:54.798448800
+RPO (requirement),Recovery Point Objective - how much time it should take (maximum) to recover a service,7,2025-12-28T10:59:29.977507100
+RPO (requirement),Recovery Point Objective - maximum time i has to take to recover a service,9,2025-12-28T11:09:07.446180500
+RPO (requirement),Recovery Point Objective - maximum data loss allowed measured in time; example: 15 minutes,10,2025-12-28T11:18:14.859822700
+RPO (requirement),Recovery Point Objective - how fast should a service recover,9,2025-12-28T11:18:56.924508700
+RPO (requirement),Recovery Point Objective - how fast should a service recover,9,2025-12-28T11:22:16.914143700
+RPO (requirement),Recovery Point Object — maximum data loss allowed; measured in time; e.g.; 15 minutes.,7,2025-12-28T11:23:44.863496
+RPO (requirement),Recovary Point Objective — maximum data loss allowed; measured in time; e.g.; 15 minutes.,5,2025-12-28T11:24:42.814867200
+RPO (requirement),Recovary Point Objective — maximum data loss allowed; measured in time; e.g.; 15 minutes.,10,2025-12-28T11:28:14.209017800
+RPO (requirement),Recavary Poynt Objactive — maximum data loss allowed; measured in time; e.g.; 15 minutes.,10,2025-12-28T11:31:32.649209200
+RPO (requirement),Recavary Poynt Objactive — maximum data loss allowed; measured in time; e.g.; 15 minutes.,7,2025-12-28T11:35:22.089280500

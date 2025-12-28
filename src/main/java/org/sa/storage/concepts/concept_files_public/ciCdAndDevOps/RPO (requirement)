@@ -1,5 +1,5 @@
 RPO (requirement)
 Recovery Point Objective — maximum data loss allowed, measured in time, e.g., 15 minutes.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Explain RPO (requirement). *Expand what each letter means? **R? **P? **O? *Provide a short narrative
+User has to expand each letter correctly. Add points to score for each explicitly in the math formula (R=3/10, P=3/10, O=3/10). User has to include a short note on the concept meaning - you score it (1/10) and add points to this point explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 3/10 + 1/10= 10/10.
 ciCdAndDevOps
