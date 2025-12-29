@@ -1,5 +1,5 @@
 cohesion
-degree to which elements of a module or class are related and work together to achieve a single purpose.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Degree to which elements of a module or class are related — aimed at achieving a single purpose.
+Please describe concept 'cohesion': *what it measures *its goal
+User has to correctly identify what cohesion measures (relatedness of elements) — score 5/10. User has to correctly identify its goal (achieving a single purpose) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 algorithmsCodingAndStructures

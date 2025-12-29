@@ -1,5 +1,5 @@
 collision
-when different data produce the same hash code.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Different inputs producing identical hash codes.
+Please describe concept 'collision': *what collides *what outcome occurs
+User has to identify what collides (different inputs) — score 5/10. User has to identify what outcome occurs (same hash code) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 algorithmsCodingAndStructures

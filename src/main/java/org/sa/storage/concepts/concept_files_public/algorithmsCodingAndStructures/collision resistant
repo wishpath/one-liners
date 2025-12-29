@@ -1,5 +1,5 @@
 collision resistant
-different inputs should not produce the same outcome.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Different inputs should not produce the same outcome.
+Please describe concept 'collision resistant': *what is protected *expected result
+User has to identify what is protected (inputs, data) — score 5/10. User has to identify the expected result (no identical outcomes) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 algorithmsCodingAndStructures

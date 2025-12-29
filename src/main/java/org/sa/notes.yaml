@@ -1,4 +1,5 @@
 problems:
+  - separate types of concepts: INITIALISM, EXAMPLES, DEFAULT
   - fix ai instruction part in the concept file requirements
   - validate loaded user instruction: if not default then must contain key
   - 'abstraction examples' does not listen to additional instructions:

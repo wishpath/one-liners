@@ -1,5 +1,5 @@
 cohesion example
-UserManager class with createUser, deleteUser methods; high cohesion, focused only on user management.
-Please explain this concept: 
-Default aiEvaluateInstruction
+UserManager class with createUser, deleteUser methods — focused on single responsibility.
+Please describe a 'cohesion example': *concrete structure elements *quality it focuses on
+User has to describe any concrete structure and elements in the example — score 5/10. User has to correctly identify the quality it focuses on (e.g., elements work closely together, single responsibility) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 algorithmsCodingAndStructures

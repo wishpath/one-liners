@@ -71,18 +71,24 @@ conceptFileGuidelines:
         - use long dash (—) after expanded acronym
         - lowercase unless proper noun
         - optional example or key detail only if it improves clarity
+      note:
+        - clearly distinguish the separate elements that make up the definition, as these will directly correspond to the user instructions in line 3 and the AI evaluation in line 4
       examples:
         - "Recovery Point Objective — max data loss measured in time."
         - "Critical Information Function — key system impacting financial operations."
 
     line3_userRequirements:
       rules:
+        - user answer instructions must directly correspond to the elements in the concept definition:
+            - elements in user answer requirements has to never reveal any part of the answer
+            - for concepts where breaking into multiple elements would reveal the answer, define a single element called *meaning of the concept
         - include EXACT key that has to be explained or defined or named or expanded, etc.
         - explicit instructions for how the user must answer, but not give out the answer
         - clearly state minimum requirements, but not give out the answer
         - quantify expectations where possible (counts, conditions)
         - written for humans, short and direct
         - try to not use the same words as in definition (user has to come up with these words himself)
+        - avoid hinting the answer in user instructions whenever possible
         - do not instruct user how long should his answer be.
         - for initialisms, abbreviations and acronyms always ask to expand meaning of each letter and give a general narrative of a concept meaning.
         - ""
@@ -108,22 +114,23 @@ conceptFileGuidelines:
 
     line4_aiEvaluation:
       rules:
+        - AI evaluation must directly correspond to both the definition and user answer instructions
         - list exact elements to check in the answer:
             - start with "User has to"
             - formulation should directly correspond to what was user asked about
             - explicit point allocation per element:
               - evaluation point, example: "2/10"
-            - example: "User has to expand each letter correctly (R=2/10, P=2/10, O=2/10), and include a short narrative (1/10)."
-        - define score cap:
-          - example: "Without these elements cap score at 3/10."
+              - do not avoid mentioning that for each element "add points in the math formula explicitly"
+            - example: "User has to expand each letter correctly. Add points to score for each explicitly in the math formula (R=3/10, P=3/10, O=3/10). User has to include a short note on the concept meaning - you score it (1/10). You add this point in the math formula explicitly."
         - do include math formula of perfect score:
             - explicit math showing how 10/10 is reached
             - do state that it is a math formula
             - example : "Perfect score math formula: 2/10 + 2/10 + 2/10 + 1/10 + 3/10 = 10/10."
+            - all points in the evaluation must be whole numbers like this "1/10" and never use fractions or halves
         - no interpretation or subjective judgment
       examples:
-        - "User has to expand each letter correctly (R=2/10, P=2/10, O=2/10), and include a short narrative (1/10). Without these elements cap score at 3/10. Perfect score math formula: 2/10 + 2/10 + 2/10 + 1/10 + 3/10= 10/10."
-        - "User has to mention at least 5 abstraction examples. For each correct abstraction example user gets 2/10 points. 5 examples are enough to provide 10/10 evaluation. Perfect score math formula: '5 * 2/10 = 10/10'."
+        - "User has to expand each letter correctly. Add points to score for each explicitly in the math formula (R=3/10, P=3/10, O=3/10). User has to include a short note on the concept meaning - you score it (1/10). You add this point in the math formula explicitly. Perfect score math formula: 3/10 + 3/10 + 3/10 + 1/10= 10/10."
+        - "User has to mention at least 5 abstraction examples. For each correct abstraction example user gets 2/10 points. 5 examples are enough to provide 10/10 evaluation. Add points in the math formula explicitly. Perfect score math formula: '5 * 2/10 = 10/10'."
 
     line5_topic:
       rules:
@@ -160,11 +167,33 @@ conceptFileGuidelines:
 abstraction examples
 interfaces, modules, packages, APIs, frameworks, ORMs, microservices, VMs, containers.
 Please name >=5 abstraction examples.
-User has to mention at least 5 abstraction examples. For each correct abstraction example user gets 2/10 points. 5 examples are enough to provide 10/10 evaluation. The math for perfect evaluation is '5 * 2/10 = 10/10'.
+User has to mention at least 5 abstraction examples. For each correct abstraction example user gets 2/10 points. 5 examples are enough to provide 10/10 evaluation. Add points in the math formula explicitly. Perfect score math formula: '5 * 2/10 = 10/10'.
 algorithmsCodingAndStructures
+  
+  
+RPO (requirement)
+Recovery Point Objective — maximum data loss allowed, measured in time, e.g., 15 minutes.
+Explain RPO (requirement). *Expand what each letter means? **R? **P? **O? *Provide a short narrative
+User has to expand each letter correctly. Add points to score for each explicitly in the math formula (R=3/10, P=3/10, O=3/10). User has to include a short note on the concept meaning - you score it (1/10) and add points to this point explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 3/10 + 1/10= 10/10.
+ciCdAndDevOps
+  
   
 abstraction
 process of hiding complex details, exposing only essential features to manage complexity.
-Please describe abstraction: *to get evaluation of 10/10 please mention: **what it hides **what it exposes
-Default aiEvaluateInstruction
+Please describe concept 'abstraction': *what it hides *what it exposes
+User has to correctly identify what abstraction hides (complex details) — score 5/10. User has to correctly identify what it exposes (essential features) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
+algorithmsCodingAndStructures
+  
+  
+boilerplate
+sections of code that have to be included in many places with little or no alteration.
+Please describe concept 'boilerplate': *meaning of the concept
+User has to explain the general meaning of the concept. Award full score (10/10) if the answer captures the concept. Perfect score math formula: 10/10.
+algorithmsCodingAndStructures
+  
+  
+cohesion example
+UserManager class with createUser, deleteUser methods — focused on single responsibility.
+Please describe a 'cohesion example': *concrete structure elements *quality it focuses on
+User has to describe any concrete structure and elements in the example — score 5/10. User has to correctly identify the quality it focuses on (e.g., elements work closely together, single responsibility) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 algorithmsCodingAndStructures

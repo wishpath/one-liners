@@ -1291,3 +1291,6 @@ RPO (requirement),Recovary Point Objective — maximum data loss allowed; measur
 RPO (requirement),Recovary Point Objective — maximum data loss allowed; measured in time; e.g.; 15 minutes.,10,2025-12-28T11:28:14.209017800
 RPO (requirement),Recavary Poynt Objactive — maximum data loss allowed; measured in time; e.g.; 15 minutes.,10,2025-12-28T11:31:32.649209200
 RPO (requirement),Recavary Poynt Objactive — maximum data loss allowed; measured in time; e.g.; 15 minutes.,7,2025-12-28T11:35:22.089280500
+boilerplate,repeated code used in many places,10,2025-12-29T23:01:26.274265900
+cohesion,cohesion measures how interconnected elements in the code are. elements has cohesion in order to work together,8,2025-12-29T23:12:57.250199300
+boilerplate,piece of code,3,2025-12-29T23:47:29.983015200
