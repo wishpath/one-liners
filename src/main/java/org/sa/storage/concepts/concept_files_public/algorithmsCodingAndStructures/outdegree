@@ -1,5 +1,5 @@
 outdegree
-number of outgoing edges directed from a node.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Number of outgoing edges directed from a node.
+Please describe concept 'outdegree': *what quality is being quantified? *specify element direction?
+User has to describe what quality is being quantified (outgoing connections/edges) — score 7/10. User has to specify the direction of the element (from the node) — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 7/10 + 3/10 = 10/10.
 algorithmsCodingAndStructures
