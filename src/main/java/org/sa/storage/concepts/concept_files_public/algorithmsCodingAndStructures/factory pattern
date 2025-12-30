@@ -1,5 +1,5 @@
 factory pattern
-method for creating objects that implement a common interface.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Using a method to produce objects implementing a common interface.
+Please describe concept 'factory pattern': *where production happens? *what is created? *what is shared across produced items?
+User has to describe where production happens (creator method) — score 4/10. User has to describe what is created (concrete product implementing the interface) — score 4/10. User has to describe what is shared across produced items (common interface/contract) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 4/10 + 2/10 = 10/10.
 algorithmsCodingAndStructures

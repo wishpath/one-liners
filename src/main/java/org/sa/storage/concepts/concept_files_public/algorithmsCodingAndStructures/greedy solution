@@ -1,5 +1,5 @@
 greedy solution
-picks best now, ignores future. Assumes local = global best.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Picks best now, ignores future. Assumes local = global best.
+Please describe concept 'greedy solution': *what it selects *what it ignores *what assumption is made
+User has to describe what is selected (current/best choice) — score 4/10. User has to describe what is ignored (future options) — score 3/10. User has to describe the assumption made (local optimum equals global optimum) — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 3/10 + 3/10 = 10/10.
 algorithmsCodingAndStructures

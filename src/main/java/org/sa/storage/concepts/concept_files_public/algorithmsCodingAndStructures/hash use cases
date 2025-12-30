@@ -1,5 +1,5 @@
 hash use cases
-data integrity, password storage, encryption, verification, indexing, quick lookups.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Data integrity, password storage, encryption, verification, indexing, quick lookups.
+Please name >=4 hash use cases.
+User has to mention at least 4 correct hash use cases. For the first two correct use cases user gets 3/10 points each, for the next two correct use cases user gets 2/10 points each. 4 examples are enough to provide 10/10 evaluation. Add points in the math formula explicitly. Perfect score math formula: 3/10 + 3/10 + 2/10 + 2/10 = 10/10.
 algorithmsCodingAndStructures

@@ -1,5 +1,5 @@
 hashing
-transforming data into fixed-size code; deterministic; collisions possible.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Transforming data into fixed-size code; deterministic; collisions possible; irreversible;
+Please describe concept 'hashing': *what it does? *how predictable is output? *how dynamic is its length? *possibility to get original input? *what is the downside?
+User has to describe what it does (transforms data into fixed-size code) — score 3/10. User has to describe how predictable the output is (deterministic) — score 2/10. User has to describe how dynamic its length is (fixed size) — score 2/10. User has to describe the impossibility to get original input (irreversible) — score 2/10. User has to describe the downside (collisions possible) — score 1/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 2/10 + 2/10 + 2/10 + 1/10 = 10/10.
 algorithmsCodingAndStructures

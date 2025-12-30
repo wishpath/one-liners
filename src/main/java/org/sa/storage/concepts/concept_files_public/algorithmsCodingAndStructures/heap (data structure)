@@ -1,5 +1,5 @@
 heap (data structure)
-ordered data structure, in Java implemented as PriorityQueue. Good for efficient sorting.
-Please explain this concept: 
-Default aiEvaluateInstruction
+ordered data structure, in Java implemented as PriorityQueue. Good for efficient auto sorting.
+Please describe concept 'heap (data structure)': *dynamics of item order *Java implementation
+User has to describe the ordering dynamics of items (automatic priority-based organization) — score 6/10. User has to name the Java implementation (PriorityQueue) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 6/10 + 4/10 = 10/10.
 algorithmsCodingAndStructures

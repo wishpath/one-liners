@@ -1,5 +1,5 @@
 indegree
-number of incoming edges directed towards a node.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Number of incoming edges directed towards a node.
+Please describe concept 'indegree': *what quality is being quantified? *specify element direction?
+User has to describe what quality is being quantified (incoming connections/edges) — score 7/10. User has to specify the direction of the element (towards the node) — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 7/10 + 3/10 = 10/10.
 algorithmsCodingAndStructures

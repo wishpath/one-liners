@@ -1,5 +1,5 @@
 Hungarian pollution
 overusing type prefixes in variable names.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please describe concept 'Hungarian pollution': *narrative *what code element is affected? *what properties of this code element is included? *what word part is included?
+User has to provide a short narrative explaining the concept — score 3/10. User has to describe what code element is affected (variables, including names and types) — score 3/10. User has to describe what properties of this code element are included (type information) — score 2/10. User has to describe what kind of word part is included (prefix) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 2/10 + 2/10 = 10/10.
 algorithmsCodingAndStructures

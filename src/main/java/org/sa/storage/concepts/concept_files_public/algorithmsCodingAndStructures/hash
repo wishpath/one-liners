@@ -1,5 +1,5 @@
 hash
-unique representation of input data. Deterministic, fixed size, irreversible.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Unique representation of input data. Deterministic, fixed size, irreversible.
+Please describe concept 'hash': *what it is? *how predictable is output? *how dynamic is its length? *possibility to get original input?
+User has to describe what it is (representation of input data) — score 3/10. User has to describe how predictable the output is (deterministic) — score 2/10. User has to describe how dynamic its length is (fixed size) — score 2/10. User has to describe the impossibility to get original input (irreversible) — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 2/10 + 2/10 + 3/10 = 10/10.
 algorithmsCodingAndStructures
