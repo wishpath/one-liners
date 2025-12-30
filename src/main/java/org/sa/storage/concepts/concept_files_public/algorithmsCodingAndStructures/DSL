@@ -1,5 +1,5 @@
 DSL
-Domain-Specific Language - syntax tailored to a non-general domain. Example: Thymeleaf provides DSL for HTML.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Domain-Specific Language — syntax tailored to a non-general domain. Example: Thymeleaf provides DSL for HTML.
+Explain DSL. *Expand what each letter means? **D? **S? **L? *Provide a short narrative
+User has to expand each letter correctly. Add points to score for each explicitly in the math formula (D=2/10, S=2/10, L=2/10). User has to include a short note on the concept meaning — you score it (4/10) and add points to this point explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 2/10 + 4/10 = 10/10.
 algorithmsCodingAndStructures

@@ -1,5 +1,5 @@
 directed graph
-nodes connected one-directionally.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Nodes connected one-directionally.
+Please describe concept 'directed graph': *elements involved *directional rule
+User has to identify the elements involved (nodes and connections) — score 5/10. User has to describe the directional rule (connections have a single direction) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 algorithmsCodingAndStructures

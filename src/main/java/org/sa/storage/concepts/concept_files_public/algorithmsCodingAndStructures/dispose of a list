@@ -1,5 +1,5 @@
 dispose of a list
-release the list and its resources.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Release the list and its resources.
+Please describe concept 'dispose of a list': *intended effect
+User has to describe the intended effect (freeing or releasing associated resources) — score 10/10. Add points explicitly in the math formula. Perfect score math formula: 10/10.
 algorithmsCodingAndStructures

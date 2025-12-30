@@ -1,5 +1,5 @@
 DRY
-Don't Repeat Yourself - programming principle.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Don't Repeat Yourself — programming principle promoting avoidance of duplicate code or logic.
+Explain DRY (principle). *Expand what each letter means? **D? **R? **Y? *Provide a short narrative
+User has to expand each letter correctly. Add points to score for each explicitly in the math formula (D=3/10, R=3/10, Y=3/10). User has to include a short note on the concept meaning — you score it (1/10) and add points to this point explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 3/10 + 1/10 = 10/10.
 algorithmsCodingAndStructures

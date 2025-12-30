@@ -1,5 +1,5 @@
 deque
-double-ended queue maintaining insertion order, allows access at both ends, implemented in Java as ArrayDeque.
-Please explain this concept: 
-Only rate 10/10 if user mentions 'keeping insertion order' and 'ArrayDeque'; metioning 'allows access at both ends' is important too; do not confuse with other data structures
+Double-ended queue maintaining insertion order, allows access at both ends, implemented in Java as ArrayDeque.
+Please describe concept 'deque': *ordering behavior *access pattern *Java implementation
+User has to mention that it keeps insertion order — score 4/10. User has to mention that elements can be accessed at both ends — score 3/10. User has to name the Java implementation (ArrayDeque) — score 3/10. Do not confuse with other data structures. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 3/10 + 3/10 = 10/10.
 algorithmsCodingAndStructures

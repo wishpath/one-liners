@@ -1,5 +1,5 @@
 deterministic
-same input will always produce the same outcome.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Same input will always produce the same outcome.
+Please describe concept 'deterministic': *what inputs are like? *what is result like?
+User has to describe the behavior of inputs (same input) — score 5/10. User has to describe the consistency of results (always same outcome) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 algorithmsCodingAndStructures

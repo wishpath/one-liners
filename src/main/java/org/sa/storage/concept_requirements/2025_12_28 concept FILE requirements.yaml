@@ -5,6 +5,7 @@ conceptFileGuidelines:
     - capture essence with minimal wording
     - make user expectations and grading math explicit and mechanical
     - avoid ambiguity for user and evaluator
+    - unit can should be able to stand alone, no extra context should be needed.
 
   fileFormat:
     type: plain text
@@ -55,6 +56,9 @@ conceptFileGuidelines:
               - greater-than sign (>)
               - vertical bar (|)
           - key must not end with a dot (.)
+      evaluation_elements:
+        - Whenever a concept key is an initialism, abbreviation, or acronym, each letter or component requiring expansion must be treated as a separate element and  each explicitly included in both the user answer instructions and the AI evaluation instructions.
+        - For example in key "RPO (requirement)" separate elements that needs separate treatment and consideration are letters R, P and O
       examples:
         - "RPO (requirement)"
         - "CIF (regulation)"
@@ -71,7 +75,7 @@ conceptFileGuidelines:
         - use long dash (—) after expanded acronym
         - lowercase unless proper noun
         - optional example or key detail only if it improves clarity
-      note:
+      evaluation_elements:
         - clearly distinguish the separate elements that make up the definition, as these will directly correspond to the user instructions in line 3 and the AI evaluation in line 4
       examples:
         - "Recovery Point Objective — max data loss measured in time."
@@ -163,7 +167,9 @@ conceptFileGuidelines:
     - definitions must stand alone
     - evaluation must be reproducible and deterministic
 
-  examples:
+examples:
+
+
 abstraction examples
 interfaces, modules, packages, APIs, frameworks, ORMs, microservices, VMs, containers.
 Please name >=5 abstraction examples.
@@ -196,4 +202,39 @@ cohesion example
 UserManager class with createUser, deleteUser methods — focused on single responsibility.
 Please describe a 'cohesion example': *concrete structure elements *quality it focuses on
 User has to describe any concrete structure and elements in the example — score 5/10. User has to correctly identify the quality it focuses on (e.g., elements work closely together, single responsibility) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
+algorithmsCodingAndStructures
+
+
+defensive programming
+Ensuring software behaves as expected even when encountering unexpected inputs or conditions.
+Please describe concept 'defensive programming': *situation it addresses *intended behavior
+User has to describe the situation it addresses (unexpected inputs or conditions) — score 5/10. User has to describe the intended behavior (software continues to behave as expected) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
+algorithmsCodingAndStructures
+  
+  
+deterministic
+Same input will always produce the same outcome.
+Please describe concept 'deterministic': *what inputs are like? *what is result like?
+User has to describe the behavior of inputs (same input) — score 5/10. User has to describe the consistency of results (always same outcome) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
+algorithmsCodingAndStructures
+  
+  
+dispose of a list
+Release the list and its resources.
+Please describe concept 'dispose of a list': *intended effect
+User has to describe the intended effect (freeing or releasing associated resources) — score 10/10. Add points explicitly in the math formula. Perfect score math formula: 10/10.
+algorithmsCodingAndStructures
+  
+  
+DRY
+Don't Repeat Yourself — programming principle promoting avoidance of duplicate code or logic.
+Explain DRY (principle). *Expand what each letter means? **D? **R? **Y? *Provide a short narrative
+User has to expand each letter correctly. Add points to score for each explicitly in the math formula (D=3/10, R=3/10, Y=3/10). User has to include a short note on the concept meaning — you score it (1/10) and add points to this point explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 3/10 + 1/10 = 10/10.
+algorithmsCodingAndStructures
+  
+  
+DSL
+Domain-Specific Language — syntax tailored to a non-general domain. Example: Thymeleaf provides DSL for HTML.
+Explain DSL. *Expand what each letter means? **D? **S? **L? *Provide a short narrative
+User has to expand each letter correctly. Add points to score for each explicitly in the math formula (D=2/10, S=2/10, L=2/10). User has to include a short note on the concept meaning — you score it (4/10) and add points to this point explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 2/10 + 4/10 = 10/10.
 algorithmsCodingAndStructures

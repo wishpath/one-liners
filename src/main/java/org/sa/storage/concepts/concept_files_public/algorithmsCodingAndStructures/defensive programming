@@ -1,5 +1,5 @@
 defensive programming
-ensuring software behaves as expected even when encountering unexpected inputs or conditions.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Ensuring software behaves as expected even when encountering unexpected inputs or conditions.
+Please describe concept 'defensive programming': *situation it addresses *intended behavior
+User has to describe the situation it addresses (unexpected inputs or conditions) — score 5/10. User has to describe the intended behavior (software continues to behave as expected) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 algorithmsCodingAndStructures

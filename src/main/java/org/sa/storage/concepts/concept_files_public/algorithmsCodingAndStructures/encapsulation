@@ -1,5 +1,5 @@
 encapsulation
 Hiding internal elements of object or service. Provides clear separation. Improves maintainability.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please describe concept 'encapsulation': *structure elements *resulting relationship *work-related effect
+User has to describe that encapsulation addresses elements as internal — score 5/10. User has to describe the resulting relationship (separation from external elements) — score 3/10. User has to describe the work-related effect (improved maintainability) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 3/10 + 2/10 = 10/10.
 algorithmsCodingAndStructures
