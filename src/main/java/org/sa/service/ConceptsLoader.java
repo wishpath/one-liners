@@ -1,6 +1,7 @@
 package org.sa.service;
 
 import org.sa.a_config.FilePath;
+import org.sa.a_config.Props;
 import org.sa.console.Colors;
 import org.sa.dto.ConceptDTO;
 import org.sa.util.FileUtil;
@@ -52,18 +53,30 @@ public class ConceptsLoader {
         if (!conceptFile.isFile()) throw new IllegalArgumentException("IN THE TOPIC FOLDER THERE SHOULD ONLY BE CONCEPT FILES");
         List<String> fileLines = FileUtil.listLines(conceptFile);
         String contentKey = getValidContentKey(fileLines.get(KEY).trim(), conceptFile.getName().trim(), key_concept);
+        String contentUserAnswerInstruction = getValidatedUserAnswerInstruction(fileLines.get(USER_ANSWER_INSTRUCTION), contentKey);
         key_concept.put(
             contentKey,
             new ConceptDTO(
                 contentKey,
                 fileLines.get(DEFINITION),
-                fileLines.get(USER_ANSWER_INSTRUCTION),
+                contentUserAnswerInstruction,
                 fileLines.get(AI_EVALUATION_INSTRUCTION),
                 getValidatedContentTopic(fileLines.get(TOPIC), topicPath.getFileName().toString()))
         );
       }
     });
     return key_concept;
+  }
+
+  private static String getValidatedUserAnswerInstruction(String UserAnswerInstructionLineInFile, String contentKey) {
+    if (UserAnswerInstructionLineInFile.equals(Props.DEFAULT_USER_ANSWER_INSTRUCTION))
+      return Props.DEFAULT_USER_ANSWER_INSTRUCTION;
+
+    if (!UserAnswerInstructionLineInFile.contains(contentKey))
+      throw new IllegalArgumentException(
+          "User answer instruction must contain EXACT 'key'\n\tUser answer instruction:\n\t\t" + UserAnswerInstructionLineInFile + "\n\tKey: " + contentKey);
+
+    return UserAnswerInstructionLineInFile;
   }
 
   private static String getValidatedContentTopic(String contentTopic, String topicNameAsDirectory) {

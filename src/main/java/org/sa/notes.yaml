@@ -1,9 +1,4 @@
 problems:
-  - separate types of concepts: INITIALISM, EXAMPLES, DEFAULT
-  - fix ai instruction part in the concept file requirements
-  - validate loaded user instruction: if not default then must contain key
-  - 'abstraction examples' does not listen to additional instructions:
-    - for explicit instruction use instruction A, for additional instruction use instruction B.
   - check if loaded concept matches the one in the separate file.
   - when loading concept from file, check if key matches file, and topic matches directory, else throw.
   - INSTRUCTIONS_FOR_USER: should be transfered to files manually
@@ -24,6 +19,8 @@ ideas:
       - if for some concepts it is impossible to receive 10, add additional instructions for the AI. provide a couple of examples with answers that would match the evaluation of 10/10
 
 maybe no, not needed:
+  - defining separate elements/aspects of concept definition would be too complex for current scale of ~400 concepts
+  - maybe not needed optimisation (and complexity added) for as few concepts as ~400: "separate types of concepts - INITIALISM, EXAMPLES, DEFAULT"
   - spaced repetition - would not seem to bring much benefit, but would complicate code
   - ai generated instruction
   - new command "pick exact <key>"

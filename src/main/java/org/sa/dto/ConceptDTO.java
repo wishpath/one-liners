@@ -39,7 +39,7 @@ public class ConceptDTO {
           .replace("****", "\n\t\t\t\t")
           .replace("***", "\n\t\t\t")
           .replace("**", "\n\t\t")
-          .replace("*", "\n\t");
+          .replace("*", "\n\t") + "\n";
       StringConsoleUtil.printStringWithFragmentHighlighted(key, formatted, Colors.BLUE, Colors.RED);
     }
   }

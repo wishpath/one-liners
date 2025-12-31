@@ -1294,3 +1294,4 @@ RPO (requirement),Recavary Poynt Objactive — maximum data loss allowed; measur
 boilerplate,repeated code used in many places,10,2025-12-29T23:01:26.274265900
 cohesion,cohesion measures how interconnected elements in the code are. elements has cohesion in order to work together,8,2025-12-29T23:12:57.250199300
 boilerplate,piece of code,3,2025-12-29T23:47:29.983015200
+heap (data structure),Data structure in Java. Items are in fixed order. Auto-sorts items. Items are sorted by priority. In Java it is implemented as PriorityQue,8,2025-12-31T11:14:41.108168700
