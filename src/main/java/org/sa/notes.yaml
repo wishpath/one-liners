@@ -1,8 +1,5 @@
 problems:
-  - check if loaded concept matches the one in the separate file.
-  - when loading concept from file, check if key matches file, and topic matches directory, else throw.
-  - INSTRUCTIONS_FOR_USER: should be transfered to files manually
-  - to wiki print time.now()
+  - clean up words and swed topics
   - use file util where possible
   - make app : printTopics (separate from wiki exporter)
   - TopicsPrinterApp update when topics will be folder names rather than filenames

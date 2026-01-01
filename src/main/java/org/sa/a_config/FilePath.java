@@ -2,6 +2,8 @@ package org.sa.a_config;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class FilePath {
   //general
@@ -10,17 +12,13 @@ public class FilePath {
   //source
   public static final Path TOPICS_PUBLIC = Paths.get(STORAGE + "concepts/topics");
   public static final Path CONCEPT_FILES_PUBLIC = Paths.get(STORAGE + "concepts/concept_files_public/");
-  public static final Path TOPICS_SWED = Paths.get(STORAGE + "concepts/topics-swed");
-  public static final Path CONCEPT_FILES_SWED = Paths.get(STORAGE + "concepts/concept_files_swed\\");
 
   //saves
   public static final Path SCORE_PATH = Paths.get(STORAGE + "saves/score.properties");
   public static final Path NOT_TODAY_FILEPATH = Paths.get(STORAGE + "saves/not_today.csv");
   public static final Path ATTEMPTED_ANSWERS = Paths.get(STORAGE + "saves/attempted_answers.csv");
-  public static final Path INSTRUCTIONS_TO_EVALUATE = Paths.get(STORAGE + "saves/instructions_to_evaluate.csv");
-  public static final Path INSTRUCTIONS_FOR_USER = Paths.get(STORAGE + "saves/instructions_for_user.csv");
+
 
   //wiki
-  public static final Path WIKI_SWED_OUTPUT_FILE = Paths.get(STORAGE + "wiki/wiki_swed.txt");
-  public static final Path WIKI_PUBLIC_OUTPUT_FILE = Paths.get(STORAGE + "wiki/wiki_public.txt");
+  public static final Path WIKI = Paths.get(STORAGE + "wiki/wiki_" + LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy_MM_dd")) + ".txt");
 }
