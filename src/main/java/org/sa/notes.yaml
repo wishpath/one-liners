@@ -1,7 +1,7 @@
 problems:
-  - clean swed topics
+  - update apps regarding new reading from concept files
+  - why do i still use FilePath.TOPICS_PUBLIC? reduce these usages.
   - use file util where possible
-  - make app : printTopics (separate from wiki exporter)
   - TopicsPrinterApp update when topics will be folder names rather than filenames
   - open wiki text files after generating them
 ideas:

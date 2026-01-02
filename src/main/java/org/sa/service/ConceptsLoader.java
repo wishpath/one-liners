@@ -48,7 +48,7 @@ public class ConceptsLoader {
   public static Map<String, ConceptDTO> loadConceptsWithAllAttributesExceptScore() {
     Map<String, ConceptDTO> key_concept = new HashMap<>();
 
-    FileUtil.listDirectories(FilePath.CONCEPT_FILES_PUBLIC).forEach(topicPath -> {
+    FileUtil.listDirectories(FilePath.CONCEPT_FILES).forEach(topicPath -> {
       for (File conceptFile : FileUtil.listFiles(topicPath)) {
         if (!conceptFile.isFile()) throw new IllegalArgumentException("IN THE TOPIC FOLDER THERE SHOULD ONLY BE CONCEPT FILES");
         List<String> fileLines = FileUtil.listLines(conceptFile);
