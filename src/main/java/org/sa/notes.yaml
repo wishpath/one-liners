@@ -1,19 +1,9 @@
 problems:
-  - update apps regarding new reading from concept files
-  - why do i still use FilePath.TOPICS_PUBLIC? reduce these usages.
-  - use file util where possible
   - TopicsPrinterApp update when topics will be folder names rather than filenames
   - open wiki text files after generating them
+  - write non-default user and ai instruction for each concept.
 ideas:
-  - there could be extra note for key for the user before the answer
-    - it should tell what is expected to be mentioned in the answer
-      - this should basically directly respond to the extra instructions given for this key
-  - spaced repetition?
-  - should score 0 be explicit?
-  - additional instruction specific to a single concept
-  - as every concept has been tried:
-      - check how many of phrases has never received a score of 8, then 9, then 10
-      - if for some concepts it is impossible to receive 10, add additional instructions for the AI. provide a couple of examples with answers that would match the evaluation of 10/10
+  - check which concepts never received above some grade: 7, 8, 9
 
 maybe no, not needed:
   - defining separate elements/aspects of concept definition would be too complex for current scale of ~400 concepts

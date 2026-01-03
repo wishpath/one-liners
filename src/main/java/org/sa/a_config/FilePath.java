@@ -10,7 +10,6 @@ public class FilePath {
   private static final String STORAGE = "src/main/java/org/sa/storage/";
 
   //source
-  public static final Path TOPICS_PUBLIC = Paths.get(STORAGE + "concepts/topics");
   public static final Path CONCEPT_FILES = Paths.get(STORAGE + "concepts/");
 
   //saves
