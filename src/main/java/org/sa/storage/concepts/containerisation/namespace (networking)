@@ -1,5 +1,5 @@
 namespace (networking)
-isolated environment where systems or apps has unique identifiers without conflicting others.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Virtual network environment — separates address names — prevents conflicts.
+Please describe concept 'namespace (networking)': *what it is *what it separates *what it prevents
+User has to describe what it is (virtual network environment) — score 4/10. User has to describe what it separates (address names) — score 3/10. User has to describe what it prevents (conflicts) — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 3/10 + 3/10 = 10/10.
 containerisation

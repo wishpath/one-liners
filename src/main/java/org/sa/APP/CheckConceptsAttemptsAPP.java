@@ -34,7 +34,7 @@ public class CheckConceptsAttemptsAPP {
     app.printKeyGradesThatAreAllBelowSomeGrade_veryConcise(key_attempts, 9);
 
     //what were the answers?
-    app.printGroupedAttempts_veryExplicit(key_attempts, loader);
+    //app.printGroupedAttempts_veryExplicit(key_attempts, loader);
 
 
   }

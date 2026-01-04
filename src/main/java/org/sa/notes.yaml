@@ -3,7 +3,8 @@ problems:
   - open wiki text files after generating them
   - write non-default user and ai instruction for each concept.
 ideas:
-  - check which concepts never received above some grade: 7, 8, 9
+  - improve instructions and succeed to get 10 from these concepts:
+    - app.printKeyGradesThatAreAllBelowSomeGrade_veryConcise(key_attempts, 9);
 
 maybe no, not needed:
   - defining separate elements/aspects of concept definition would be too complex for current scale of ~400 concepts

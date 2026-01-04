@@ -1297,3 +1297,4 @@ boilerplate,piece of code,3,2025-12-29T23:47:29.983015200
 heap (data structure),Data structure in Java. Items are in fixed order. Auto-sorts items. Items are sorted by priority. In Java it is implemented as PriorityQue,8,2025-12-31T11:14:41.108168700
 heap (data structure),heap is data structure in Java; that is implemented as PriorityQue. It is good for keeping items sorted in priority order.,9,2026-01-02T20:58:23.755959
 VTE,Virtual Test Environment,10,2026-01-02T20:59:19.636157700
+namespace (networking),In the network where some addresses might repeat; namespace is kind of non-physical environment or portion of this network; where names are isolated from other namespaces to prevent naming conflicts.,10,2026-01-04T11:04:24.441158600
