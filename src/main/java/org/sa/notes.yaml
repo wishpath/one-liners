@@ -1,6 +1,4 @@
 problems:
-  - TopicsPrinterApp update when topics will be folder names rather than filenames
-  - open wiki text files after generating them
   - write non-default user and ai instruction for each concept.
 ideas:
   - improve instructions and succeed to get 10 from these concepts:

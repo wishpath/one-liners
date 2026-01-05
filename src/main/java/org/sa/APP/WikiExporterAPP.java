@@ -45,5 +45,6 @@ public class WikiExporterAPP {
         });
 
     FileUtil.overwriteToFileAndCreatePath(FilePath.WIKI, wikiTextBuilder);
+    FileUtil.openInNotepad(FilePath.WIKI.toAbsolutePath().toString());
   }
 }

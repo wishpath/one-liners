@@ -62,4 +62,9 @@ public class FileUtil {
     }
     return scoreProperties.entrySet();
   }
+
+  public static void openInNotepad(String filePath) {
+    try { new ProcessBuilder("notepad.exe", filePath).start(); }
+    catch (IOException ignored) {}
+  }
 }
