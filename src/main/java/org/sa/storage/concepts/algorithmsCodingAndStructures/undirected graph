@@ -1,5 +1,5 @@
 undirected graph
-nodes connected bi-directionally.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Nodes connected bi-directionally.
+Please describe concept 'undirected graph': *elements involved *connection rule
+User has to identify the elements involved (nodes and connections) — score 5/10. User has to describe the connection rule (connections work both ways) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 algorithmsCodingAndStructures

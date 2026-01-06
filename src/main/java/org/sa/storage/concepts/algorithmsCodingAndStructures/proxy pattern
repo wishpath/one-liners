@@ -1,5 +1,5 @@
 proxy pattern
-proxy object controls access to real object, both share interface, with the proxy being used externally.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Proxy object controls access to real object, both share interface, with the proxy being used externally.
+Please describe concept 'proxy pattern': *elements involved *what is common between participants? *how interaction works
+User has to mention these elements involved in the interaction (object controlling access, target object) — score 4/10. User has to describe what is common between participants (both objects extend same interface) — score 3/10. User has to explain how the interaction works (caller uses controlling object to access target) — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 3/10 + 3/10 = 10/10.
 algorithmsCodingAndStructures

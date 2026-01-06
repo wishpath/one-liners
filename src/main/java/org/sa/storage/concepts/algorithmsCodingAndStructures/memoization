@@ -1,5 +1,5 @@
 memoization
-storing results of expensive function calls and return the cached result when the same inputs occur again.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Storing results of expensive function calls and returning the cached result when the same inputs occur again.
+Please describe concept 'memoization': *what is stored *when is it reused *effect on performance
+User has to describe what is stored (function results) — score 4/10. User has to describe when it is reused (for same inputs) — score 3/10. User has to describe the effect on performance (reduces computation time) — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 3/10 + 3/10 = 10/10.
 algorithmsCodingAndStructures

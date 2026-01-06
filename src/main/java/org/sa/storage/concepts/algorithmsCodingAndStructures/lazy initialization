@@ -1,5 +1,5 @@
 lazy initialization
-object creation delayed until first use, improving performance and reducing resource consumption.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Object creation delayed until first use, improving performance and reducing resource consumption.
+Please describe concept 'lazy initialization': *what happens to object creation regarding time? *what is the trigger? *effect on performance/resources
+User has to describe what happens to object creation (delayed until needed) — score 4/10. User has to describe when it happens (at first use) — score 3/10. User has to describe effect on performance or resources (improved efficiency, lower consumption) — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 3/10 + 3/10 = 10/10.
 algorithmsCodingAndStructures

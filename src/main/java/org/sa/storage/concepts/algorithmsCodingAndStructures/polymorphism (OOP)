@@ -1,5 +1,5 @@
 polymorphism (OOP)
-overriding and overloading; objects and methods take multiple forms via extending or implementing.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Overriding and overloading; objects and methods take multiple forms via extending or implementing.
+Please describe concept 'polymorphism (OOP)': *2 main actions with methods *2 main actions with classes *narrative
+User has to mention the 2 main actions with methods (overriding and overloading) — score 3/10. User has to mention the 2 main actions with classes (extending and implementing) — score 3/10. User has to provide a narrative (objects and methods take multiple forms) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
 algorithmsCodingAndStructures

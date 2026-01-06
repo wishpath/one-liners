@@ -1,5 +1,5 @@
 trie
-tree storing words by letters, good for fast prefix search. Pronounced like “try” (/traɪ/).
-Please explain this concept: 
-Default aiEvaluateInstruction
+Tree storing words by letters, good for fast prefix search. Pronounced like “try” (/traɪ/).
+Please describe concept 'trie': *structure type *what is stored *what it is efficient at
+User has to describe the structure type (tree-based structure) — score 4/10. User has to describe what is stored (sequences built from characters) — score 3/10. User has to describe what it is efficient at (prefix-based lookup/search) — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 3/10 + 3/10 = 10/10.
 algorithmsCodingAndStructures

@@ -1,5 +1,5 @@
 means of defensive programming
-input validation, error handling, robustness, fail-safe defaults, clear documentation.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Input validation, error handling, robustness, fail-safe defaults, clear documentation, assertions, logging.
+Please name >=5 means of defensive programming examples.
+User has to mention at least 5 defensive programming techniques. For each correct example user gets 2/10 points. 5 examples are enough to provide 10/10 evaluation. Add points in the math formula explicitly. Perfect score math formula: 5 * 2/10 = 10/10.
 algorithmsCodingAndStructures
