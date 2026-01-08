@@ -1,5 +1,5 @@
 API gateway
-server, single entry for routing requests to APIs/services, adding security, monitoring, and management.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Application Programming Interface Gateway — server, single entry for routing requests to APIs/services, adding security, monitoring, and management.
+Please describe concept 'API gateway': *expand each letter in API *what kind of component it is *short narrative of how it works *name >=2 benefits it provides
+User has to expand each letter correctly and add points explicitly (A=1/10, P=1/10, I=1/10, G=1/10). User has to identify what kind of component it is (server / intermediary component) — score 2/10. User has to provide a short narrative explaining how it works (single entry point routing requests to underlying APIs or services) — score 3/10. User has to mention >=2 benefits it provides (2 benefits are enough for perfect scoring) (e.g., security, monitoring, management, aggregation, rate limiting) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 1/10 + 1/10 + 1/10 + 1/10 + 2/10 + 3/10 + 2/10 = 10/10.
 apis
