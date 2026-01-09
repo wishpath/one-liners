@@ -1298,3 +1298,6 @@ heap (data structure),Data structure in Java. Items are in fixed order. Auto-sor
 heap (data structure),heap is data structure in Java; that is implemented as PriorityQue. It is good for keeping items sorted in priority order.,9,2026-01-02T20:58:23.755959
 VTE,Virtual Test Environment,10,2026-01-02T20:59:19.636157700
 namespace (networking),In the network where some addresses might repeat; namespace is kind of non-physical environment or portion of this network; where names are isolated from other namespaces to prevent naming conflicts.,10,2026-01-04T11:04:24.441158600
+REST,RRRRRR State Transfer - API communication standards,8,2026-01-09T22:19:15.405100
+REST,Representable State Transfer - API communication standards,9,2026-01-09T22:20:45.647307700
+CTE,Common Test Environment,10,2026-01-09T22:21:35.769782600

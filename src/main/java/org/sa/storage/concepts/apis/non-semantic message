@@ -1,5 +1,5 @@
 non-semantic message
-raw data with no context within about its meaning (e.g., plain text, CSV row, raw byte stream)
-Please explain this concept: 
-Default aiEvaluateInstruction
+raw data with no context about its meaning, e.g., plain text, CSV row, raw byte stream
+Please describe concept 'non-semantic message': *meaning of the concept *provide at least one example
+User has to describe the general meaning of the concept — score 6/10. User has to give at least one example (e.g., plain text, CSV row, raw byte stream) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 6/10 + 4/10 = 10/10.
 apis
