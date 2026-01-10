@@ -1,5 +1,5 @@
 REST client-server constraint
 separates client (UI) and server (logic) responsibilities for independent evolution.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please describe concept 'REST client-server constraint': *what the constraint enforces *what benefit it enables
+User has to describe what the constraint enforces (separation of client and server responsibilities) — score 5/10. User has to describe what benefit it enables (independent evolution of client and server) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 apis

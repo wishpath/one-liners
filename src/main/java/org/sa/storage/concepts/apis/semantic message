@@ -1,5 +1,5 @@
 semantic message
-data with structure or metadata that explains meaning (e.g., JSON with field names)
-Please explain this concept: 
-Default aiEvaluateInstruction
+data and its explanation by metadata, e.g., JSON with field names as metadata and values as data
+Please describe concept 'semantic message': *name the two types of information it contains *provide at least one example of format **explain how this format fits the two types of information
+User has to name the two types of information (data and metadata) — score 4/10. User has to provide at least one example of format (e.g., JSON) — score 3/10. User has to explain how this format fits the two types of information — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 3/10 + 3/10 = 10/10.
 apis

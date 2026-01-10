@@ -1,5 +1,5 @@
-RESTful methods (mention all 4)
-uses standard HTTP verbs: GET, POST, PUT, DELETE.
-Please explain this concept: 
-Only rate 10/10 if all four methods are named (GET; POST; PUT; DELETE); Subtract 1 point for each missing method; If none are mentioned rate 0/10
+RESTful methods
+uses standard HTTP verbs: GET, POST, PUT, DELETE
+Please describe concept 'RESTful methods': *name the four standard HTTP verbs **one for retrieving data **one for creating data **one for modifying data **one for removing data
+User has to correctly name GET — score 2/10. User has to correctly name POST — score 2/10. User has to correctly name PUT — score 3/10. User has to correctly name DELETE — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 3/10 + 3/10 = 10/10.
 apis

@@ -1,5 +1,5 @@
 RESTful
 API using HTTP verbs(GET, POST), data in JSON/XML, layers: stateless controller, service, data storage.
-Please explain this concept: 
-rate 10/10 if expansion 'Representational State Transfer' + mention HTTP verbs + file formats + statelessness + layers like controller. If all are present; overload other rules and rate 10/10.
+Please describe concept 'RESTful': *expand what each letter means **R? **E? **S? **T? *indentify >= operation types *name >= 2 representation formats *name class property regarding field values *name at least three layers
+User has to expand each letter correctly (R=1/10, E=1/10, S=1/10, T=1/10). User has to name at least two standard HTTP verbs (e.g.: GET, PUT) — score 2/10. User has to name at least two representation formats (e.g.: JSON, XML) — score 1/10. User has to name the class property regarding field values (statelessness) — score 1/10. User has to name at least three layers (controller, service, data storage) — score 2/10. Perfect score math formula: 1/10 + 1/10 + 1/10 + 1/10 + 2/10 + 1/10 + 1/10 + 2/10 = 10/10.
 apis

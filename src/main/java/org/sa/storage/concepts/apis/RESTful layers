@@ -1,5 +1,5 @@
 RESTful layers
-structured as controller, service, and data access layers.
-Please explain this concept: 
-Default aiEvaluateInstruction
+structured as controller, service, and data access layers
+Please describe concept 'RESTful layers': *name the three layers
+User has to correctly name the controller layer — score 3/10. User has to correctly name the service layer — score 3/10. User has to correctly name the data access layer — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
 apis

@@ -1,5 +1,5 @@
 RESTful data formats
-common data formats like JSON, XML, HTML.
-Please explain this concept: 
-Default aiEvaluateInstruction
+common data formats like JSON, XML, HTML
+Please describe concept 'RESTful data formats': *meaning of the concept *name at least two formats
+User has to explain the general meaning of the concept (that these formats are commonly used in RESTful APIs) — score 5/10. User has to name at least two data formats (e.g., JSON, XML, HTML) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 apis
