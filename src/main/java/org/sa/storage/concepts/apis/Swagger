@@ -1,5 +1,5 @@
 Swagger
-framework that simplifies designing, documenting, and testing RESTful web APIs
-Please describe concept 'Swagger': *name the type of software it is *name which part of software it addresses *provide at least one key function it supports
+framework that simplifies listing, designing, documenting, and testing RESTful web APIs
+Please describe concept 'Swagger': *name the type of software component it is *name which part of software it addresses *provide at least one key function it supports
 User has to correctly identify the type of software (framework) — score 3/10. User has to identify which part of software it addresses (RESTful APIs) — score 3/10. User has to provide at least one key function it supports (listing, designing, documenting, or testing) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
 apis

@@ -1,0 +1,254 @@
+conceptFileGuidelines:
+  objective:
+    - store each concept as a self-contained evaluation unit
+    - keep definitions extremely concise and laconic
+    - capture essence with minimal wording
+    - make user expectations and grading math explicit and mechanical
+    - avoid ambiguity for user and evaluator
+    - unit can should be able to stand alone, no extra context should be needed.
+
+  fileFormat:
+    type: plain text
+    parsing:
+      - file is read line-by-line
+      - no line contains metadata or structure markers
+      - no indentation, prefixes, or extra whitespace are allowed
+      - each line represents data only
+    structure:
+      - line 1: key
+      - line 2: description
+      - line 3: user answer requirements (the way user will be asked about the concept)
+      - line 4: ai evaluation instructions (the way ai will evaluate user answer)
+      - line 5: topic (predefined)
+    constraints:
+      - exactly 5 lines per file
+      - lines must appear in the defined order
+      - no empty lines allowed
+      - no leading or trailing spaces on any line
+
+  structure_by_each_line:
+    line1_key:
+      rules:
+        semantic:
+          - concept name only
+          - lowercase unless proper noun or acronym
+          - windows filename friendly
+          - must exactly match filename
+          - must be unique across all concepts
+          - use " - " (space-hyphen-space) to join closely related concepts
+          - optional parentheses may contain a context or hint
+          - context or hint exists only to disambiguate meaning
+          - context or hint must NOT reveal the definition
+          - context or hint must avoid using the same words as the definition
+          - context or hint should force the user to produce the defining terms themselves
+          - key must never contain the answer implicitly or explicitly
+        technical_validation:
+          - key must not contain characters:
+              - semicolon (;)
+              - comma (,)
+              - backslash (\)
+              - forward slash (/)
+              - colon (:)
+              - asterisk (*)
+              - question mark (?)
+              - double quote (")
+              - less-than sign (<)
+              - greater-than sign (>)
+              - vertical bar (|)
+          - key must not end with a dot (.)
+      evaluation_elements:
+        - Whenever a concept key is an initialism, abbreviation, or acronym, each letter or component requiring expansion must be treated as a separate element and  each explicitly included in both the user answer instructions and the AI evaluation instructions.
+        - For example in key "RPO (requirement)" separate elements that needs separate treatment and consideration are letters R, P and O
+      examples:
+        - "RPO (requirement)"
+        - "CIF (regulation)"
+        - "bean factory - application context"
+
+    line2_description:
+      rules:
+        - one-line definition only
+        - extremely concise, essence only
+        - ideal length well below 140 characters
+        - prefer 2–6 words; short sentence if unavoidable
+        - acronyms and initialisms must be expanded here
+        - expanded form must be capitalized
+        - use long dash (—) after expanded acronym
+        - lowercase unless proper noun
+        - optional example or key detail only if it improves clarity
+        - if a concept key is a name of any type of software component (application, software, platform, framework, library, service, tool, plugin, API, middleware, etc):
+            - definition (line2) has to state what type of software components it is
+      evaluation_elements:
+        - clearly distinguish the separate elements that make up the definition, as these will directly correspond to the user instructions in line 3 and the AI evaluation in line 4
+      examples:
+        - "Recovery Point Objective — max data loss measured in time."
+        - "Critical Information Function — key system impacting financial operations."
+        - "framework that simplifies listing, designing, documenting, and testing RESTful web APIs"
+
+    line3_userRequirements:
+      rules:
+        - user answer instructions must directly correspond to the elements in the concept definition:
+            - elements in user answer requirements has to never reveal any part of the answer
+            - for concepts where breaking into multiple elements would reveal the answer, define a single element called *meaning of the concept
+        - include EXACT key that has to be explained or defined or named or expanded, etc.
+        - explicit instructions for how the user must answer, but not give out the answer
+        - clearly state minimum requirements, but not give out the answer
+        - quantify expectations where possible (counts, conditions)
+        - written for humans, short and direct
+        - try to not use the same words as in definition (user has to come up with these words himself)
+        - avoid hinting the answer in user instructions whenever possible
+        - do not instruct user how long should his answer be.
+        - for initialisms, abbreviations and acronyms always ask to expand meaning of each letter and give a general narrative of a concept meaning.
+        - if a concept key is a name of any type of software component (application, software, platform, framework, library, service, tool, plugin, API, middleware, etc):
+          - user instruction (line3) has to prompt user to name this software component type
+      examples:
+        - "Please name >=5 abstraction examples."
+        - "Explain RPO. *Expand what each letter means? **R? **P? **O? *Provide a short narrative"
+        - "Please describe concept 'Swagger': *name the type of software component it is *name which part of software it addresses *provide at least one key function it supports"
+
+      userInstructionSyntax:
+        purpose: "Explain the special markup used in user answer instructions for formatting."
+        rules:
+          - "**** → new line + 4 tabs"
+          - "***  → new line + 3 tabs"
+          - "**   → new line + 2 tabs"
+          - "*    → new line + 1 tab"
+        example:
+          rawInstruction: "Explain RPO. *Expand what each letter means? **R? **P? **O? *Provide a short narrative"
+          rendered:
+            - "Explain RPO."
+            - "    Expand what each letter means?"
+            - "        R?"
+            - "        P?"
+            - "        O?"
+            - "    Provide a short narrative"
+
+    line4_aiEvaluation:
+      rules:
+        - AI evaluation must directly correspond to both the definition and user answer instructions
+        - list exact elements to check in the answer:
+            - start with "User has to"
+            - formulation should directly correspond to what was user asked about
+            - explicit point allocation per element:
+              - evaluation point, example: "2/10"
+              - do not avoid mentioning that for each element "add points in the math formula explicitly"
+            - example: "User has to expand each letter correctly. Add points to score for each explicitly in the math formula (R=3/10, P=3/10, O=3/10). User has to include a short note on the concept meaning - you score it (1/10). You add this point in the math formula explicitly."
+        - do include math formula of perfect score:
+            - explicit math showing how 10/10 is reached
+            - do state that it is a math formula
+            - example : "Perfect score math formula: 2/10 + 2/10 + 2/10 + 1/10 + 3/10 = 10/10."
+            - all points in the evaluation must be whole numbers like this "1/10" and never use fractions or halves
+        - no interpretation or subjective judgment
+      examples:
+        - "User has to expand each letter correctly. Add points to score for each explicitly in the math formula (R=3/10, P=3/10, O=3/10). User has to include a short note on the concept meaning - you score it (1/10). You add this point in the math formula explicitly. Perfect score math formula: 3/10 + 3/10 + 3/10 + 1/10= 10/10."
+        - "User has to mention at least 5 abstraction examples. For each correct abstraction example user gets 2/10 points. 5 examples are enough to provide 10/10 evaluation. Add points in the math formula explicitly. Perfect score math formula: '5 * 2/10 = 10/10'."
+        - "User has to correctly identify the type of software (framework) — score 3/10. User has to identify which part of software it addresses (RESTful APIs) — score 3/10. User has to provide at least one key function it supports (listing, designing, documenting, or testing) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10."
+
+    line5_topic:
+      rules:
+        - exactly one topic must be assigned
+        - topic must be chosen from the predefined list
+        - no variants, aliases, or comments allowed
+      allowedTopics:
+        - algorithmsCodingAndStructures
+        - apis
+        - backend
+        - businessAndWorkplace
+        - ciCdAndDevOps
+        - containerisation
+        - databases
+        - domainDrivenDesign
+        - frontend
+        - generalITTerms
+        - hardware
+        - javaAndSpring
+        - logsAndObservability
+        - networking
+        - qaAndTesting
+        - regulations
+        - workUsefulEnglish
+
+  preservedPrinciples:
+    - brevity over precision
+    - essence over completeness
+    - shorter and slightly unclear preferred over longer and precise
+    - definitions must stand alone
+    - evaluation must be reproducible and deterministic
+
+examples:
+
+
+abstraction examples
+interfaces, modules, packages, APIs, frameworks, ORMs, microservices, VMs, containers.
+Please name >=5 abstraction examples.
+User has to mention at least 5 abstraction examples. For each correct abstraction example user gets 2/10 points. 5 examples are enough to provide 10/10 evaluation. Add points in the math formula explicitly. Perfect score math formula: '5 * 2/10 = 10/10'.
+algorithmsCodingAndStructures
+  
+  
+RPO (requirement)
+Recovery Point Objective — maximum data loss allowed, measured in time, e.g., 15 minutes.
+Explain RPO (requirement). *Expand what each letter means? **R? **P? **O? *Provide a short narrative
+User has to expand each letter correctly. Add points to score for each explicitly in the math formula (R=3/10, P=3/10, O=3/10). User has to include a short note on the concept meaning - you score it (1/10) and add points to this point explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 3/10 + 1/10= 10/10.
+ciCdAndDevOps
+  
+  
+abstraction
+process of hiding complex details, exposing only essential features to manage complexity.
+Please describe concept 'abstraction': *what it hides *what it exposes
+User has to correctly identify what abstraction hides (complex details) — score 5/10. User has to correctly identify what it exposes (essential features) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
+algorithmsCodingAndStructures
+  
+  
+boilerplate
+sections of code that have to be included in many places with little or no alteration.
+Please describe concept 'boilerplate': *meaning of the concept
+User has to explain the general meaning of the concept. Award full score (10/10) if the answer captures the concept. Perfect score math formula: 10/10.
+algorithmsCodingAndStructures
+  
+  
+cohesion example
+UserManager class with createUser, deleteUser methods — focused on single responsibility.
+Please describe a 'cohesion example': *concrete structure elements *quality it focuses on
+User has to describe any concrete structure and elements in the example — score 5/10. User has to correctly identify the quality it focuses on (e.g., elements work closely together, single responsibility) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
+algorithmsCodingAndStructures
+
+
+defensive programming
+Ensuring software behaves as expected even when encountering unexpected inputs or conditions.
+Please describe concept 'defensive programming': *situation it addresses *intended behavior
+User has to describe the situation it addresses (unexpected inputs or conditions) — score 5/10. User has to describe the intended behavior (software continues to behave as expected) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
+algorithmsCodingAndStructures
+  
+  
+deterministic
+Same input will always produce the same outcome.
+Please describe concept 'deterministic': *what inputs are like? *what is result like?
+User has to describe the behavior of inputs (same input) — score 5/10. User has to describe the consistency of results (always same outcome) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
+algorithmsCodingAndStructures
+  
+  
+dispose of a list
+Release the list and its resources.
+Please describe concept 'dispose of a list': *intended effect
+User has to describe the intended effect (freeing or releasing associated resources) — score 10/10. Add points explicitly in the math formula. Perfect score math formula: 10/10.
+algorithmsCodingAndStructures
+  
+  
+DRY
+Don't Repeat Yourself — programming principle promoting avoidance of duplicate code or logic.
+Explain DRY (principle). *Expand what each letter means? **D? **R? **Y? *Provide a short narrative
+User has to expand each letter correctly. Add points to score for each explicitly in the math formula (D=3/10, R=3/10, Y=3/10). User has to include a short note on the concept meaning — you score it (1/10) and add points to this point explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 3/10 + 1/10 = 10/10.
+algorithmsCodingAndStructures
+  
+  
+DSL
+Domain-Specific Language — syntax tailored to a non-general domain. Example: Thymeleaf provides DSL for HTML.
+Explain DSL. *Expand what each letter means? **D? **S? **L? *Provide a short narrative
+User has to expand each letter correctly. Add points to score for each explicitly in the math formula (D=2/10, S=2/10, L=2/10). User has to include a short note on the concept meaning — you score it (4/10) and add points to this point explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 2/10 + 4/10 = 10/10.
+algorithmsCodingAndStructures
+  
+  
+Swagger
+framework that simplifies listing, designing, documenting, and testing RESTful web APIs
+Please describe concept 'Swagger': *name the type of software component it is *name which part of software it addresses *provide at least one key function it supports
+User has to correctly identify the type of software (framework) — score 3/10. User has to identify which part of software it addresses (RESTful APIs) — score 3/10. User has to provide at least one key function it supports (listing, designing, documenting, or testing) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
+apis
