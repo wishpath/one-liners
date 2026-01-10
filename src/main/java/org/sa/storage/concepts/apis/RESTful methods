@@ -1,0 +1,5 @@
+RESTful methods
+uses standard HTTP verbs: GET, POST, PUT, DELETE
+Please describe concept 'RESTful methods': *identify the kind of operations defined by this style (protocol + part of language) *list the four operations used in this style **one for retrieving data **one for creating data **one for modifying data **one for removing data
+User has to correctly identify the concept as HTTP verbs — score 2/10. User has to list all four operations used in this style — score 2/10 for GET, 2/10 for POST, 2/10 for PUT, 2/10 for DELETE. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 2/10 + 2/10 + 2/10 = 10/10.
+apis

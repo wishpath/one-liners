@@ -1301,3 +1301,5 @@ namespace (networking),In the network where some addresses might repeat; namespa
 REST,RRRRRR State Transfer - API communication standards,8,2026-01-09T22:19:15.405100
 REST,Representable State Transfer - API communication standards,9,2026-01-09T22:20:45.647307700
 CTE,Common Test Environment,10,2026-01-09T22:21:35.769782600
+CIM,Customer Interaction Management,10,2026-01-10T14:43:19.716303600
+RESTful methods,GET; PUT; DELETE; POST,10,2026-01-10T14:44:18.252099800
