@@ -1,5 +1,5 @@
 data flow
-data moves and changes through ingestion, processing, and output in backend systems.
-Please explain this concept: 
-Default aiEvaluateInstruction
+movement and transformation of data — ingestion, processing, and output in backend systems.
+Explain data flow. *Describe 2 examples of what happens to data *Name 3 locations regarding interacting or not interacting with client
+User has to describe what happens to data as it moves (transfer) — score 4/10. User has to describe what happens to data as it changes (processing) — score 3/10. User has to name 3 locations regarding interacting or not interacting with client (ingestion, processing, output) — score 1/10 each. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 3/10 + 1/10 + 1/10 + 1/10 = 10/10.
 backend

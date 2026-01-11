@@ -1,5 +1,5 @@
 cloud platform
-online infrastructure for hosting apps, data, and services.
-Please explain this concept: 
-Default aiEvaluateInstruction
+online infrastructure — hosts applications, data, and services with scalable computing.
+Explain cloud platform. *List >=2 categories it hosts or runs *Describe where this infrastructure exists *Name the primary capability it provides regarding growth
+User has to list at least 2 main categories it hosts or runs (applications, data, services) — score 1/10 each, 2 items enough for full 2/10. User has to describe where the infrastructure exists (cloud/online) — score 4/10. User has to correctly identify the primary capability it provides regarding growth (scalable computing) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 1/10 + 1/10 + 4/10 + 4/10 = 10/10.
 backend

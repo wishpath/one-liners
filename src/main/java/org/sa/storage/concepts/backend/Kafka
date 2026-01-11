@@ -1,5 +1,5 @@
 Kafka
-platform orchestrating data flow. Event streaming platform.
-Please explain this concept: 
-Default aiEvaluateInstruction
+platform orchestrating data flow — event streaming system for real-time data.
+Explain Kafka. *Name the type of software component it is *Describe its primary purpose *List >=2 example functionalities it provides
+User has to correctly name the type of software component (platform) — score 2/10. User has to describe its primary purpose (orchestrating data flow, streaming events) — score 4/10. User has to list at least 2 key functionalities it provides (e.g., ingesting events, processing streams, delivering messages) — score 4/10, 2/10 each. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 4/10 + (2/10 + 2/10) = 10/10.
 backend

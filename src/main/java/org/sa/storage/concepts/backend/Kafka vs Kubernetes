@@ -1,5 +1,5 @@
 Kafka vs Kubernetes
-Kafka orchestrates data streams; Kubernetes orchestrates container management.
-Please explain this concept: 
-Default aiEvaluateInstruction
+orchestration comparison — Kafka manages data streams; Kubernetes manages containers.
+Explain the difference between 'Kafka vs Kubernetes'. *Name what Kafka orchestrates *Name what Kubernetes orchestrates
+User has to correctly name what Kafka orchestrates (data streams) — score 5/10. User has to correctly name what Kubernetes orchestrates (containers) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 backend

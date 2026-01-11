@@ -1,5 +1,5 @@
 Google Cloud
-Google cloud platform for hosting, data, and AI.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Google cloud platform — hosts applications, data, and AI with scalable computing.
+Explain Google Cloud. *Name the type of software component it is *List >=2 categories it hosts or runs *Name the primary capability it provides regarding growth *Describe where the infrastructure exists
+User has to correctly name the type of software component (platform) — score 2/10. User has to list at least 2 main categories it hosts or runs (applications, data, AI) — score 1/10 each, 2 items enough for full 2/10. User has to correctly identify the primary capability it provides regarding growth (scalable computing) — score 4/10. User has to describe where the infrastructure exists (cloud/online) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 1/10 + 1/10 + 4/10 + 2/10 = 10/10.
 backend

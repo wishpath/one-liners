@@ -1303,3 +1303,6 @@ REST,Representable State Transfer - API communication standards,9,2026-01-09T22:
 CTE,Common Test Environment,10,2026-01-09T22:21:35.769782600
 CIM,Customer Interaction Management,10,2026-01-10T14:43:19.716303600
 RESTful methods,GET; PUT; DELETE; POST,10,2026-01-10T14:44:18.252099800
+OLM (observability),a group of observability software components - a stack.,7,2026-01-11T11:05:49.335910400
+service vs managed service,service - managed by user. managed service - managed by provider.,10,2026-01-11T11:08:54.843526100
+NIC,not identified customer,10,2026-01-11T11:09:19.090756100
