@@ -1,5 +1,5 @@
 Kerberos ticket
-credential proving identity without sending password or keytab to service.
-Please explain this concept: 
-Default aiEvaluateInstruction
+user authentication information — binary — created by Key Distribution Center — stored temporarily in user cache.
+Explain 'Kerberos ticket': *Describe its purpose/function *Describe what it represents *Provide its format/form/type *Name where it is created *Name where it is stored *Explain how it is stored regarding time
+User has to describe its purpose/function (authentication) — score 3/10. User has to describe what it represents (user) — score 2/10. User has to provide its format/type and example (binary) — score 2/10. User has to name where it is created (Kerberos Key Distribution Center) — score 1/10. User has to name where it is stored (client cache) — score 1/10. User has to explain how it is stored regarding time (temporarily) — score 1/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 2/10 + 2/10 + 1/10 + 1/10 + 1/10 = 10/10.
 backend

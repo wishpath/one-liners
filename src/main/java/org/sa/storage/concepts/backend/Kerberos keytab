@@ -1,5 +1,5 @@
 Kerberos keytab
 file storing username, service name and key to request Kerberos tickets.
-Please explain this concept: 
-If metioned that is authentication +2 points. If metioned file +2 points. If mentioned what file stores +1 points. If answered how it is used +1 ; without these parts mentioned - cap at 5/10
+Explain 'Kerberos keytab': *Describe its purpose/function *Name what type of data unit it is *List its contents *Provide a short narrative of how it works
+User has to describe its purpose/function (authentication) — score 3/10. User has to name what type of data unit it is (file) — score 3/10. User has to list its contents: username — 1/10, service name — 1/10, key — 1/10. User has to provide a short narrative of how it works (used to request Kerberos tickets) — score 1/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 1/10 + 1/10 + 1/10 + 1/10 = 10/10.
 backend

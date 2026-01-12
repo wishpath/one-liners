@@ -1,5 +1,5 @@
 Kerberos principal
-identity containing user and server, e.g.: user@SERVER.COM
-Please explain this concept: 
-Default aiEvaluateInstruction
+pair of user and service — e.g.: user@SERVER.COM — for authentication — found in keytabs, tickets, and configurations.
+Explain 'Kerberos principal': *Describe its general purpose/function *Describe both elements that it contains *Provide example of its format *Name >=1 place where it can be found
+User has to describe its general purpose/function (authentication, identity) — score 4/10. User has to describe both elements it contains: user — score 2/10, target service — score 2/10. User has to provide an example of its format (user@SERVER.COM) — score 1/10. User has to name at least one place where it can be found (keytabs, tickets, or service configurations) — score 1/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 2/10 + 2/10 + 1/10 + 1/10 = 10/10.
 backend

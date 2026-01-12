@@ -1,5 +1,5 @@
 Kerberos keytab key
-encrypted, requested from authentication service using user password for target service.
-Please explain this concept: 
-Default aiEvaluateInstruction
+key generated from a service’s password — used for authentication — requested from the Kerberos Authentication Service.
+Explain 'Kerberos keytab key': *Describe its purpose/function *Describe how it is produced: **What it is made from **What security measure is applied *What requests it
+User has to describe its purpose/function (authentication) — score 4/10. User has to describe how it is produced: what it is made from (password for the target service) — score 2/10. User has to describe how it is produced: what security measure is applied (encrypted) — score 2/10. User has to describe what requests it (Kerberos Authentication Service) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 2/10 + 2/10 + 2/10 = 10/10.
 backend
