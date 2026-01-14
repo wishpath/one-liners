@@ -1,5 +1,0 @@
-service vs managed service
-Standard service — user handles operation; managed service — provider handles operation, updates, and scaling.
-Explain 'service vs managed service': *Describe each type focusing on who is responsible for operation and upkeep
-User has to correctly define 'service' emphasizing user responsibility — score 5/10. User has to correctly define 'managed service' emphasizing provider responsibility (operation, updates, scaling) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
-backend

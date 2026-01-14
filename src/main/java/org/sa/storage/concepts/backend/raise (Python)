@@ -1,5 +1,5 @@
 raise (Python)
 trigger an exception, like throw in Java, e.g., raise ValueError("error").
-Please explain this concept: 
-Default aiEvaluateInstruction
+Explain raise (Python): *Describe its function *Name the similar construct in Java
+User has to correctly describe its function (triggering/throwing an exception) — score 6/10. User has to correctly name the similar construct in Java (throw) — score 4/10. Perfect score math formula: 6/10 + 4/10 = 10/10.
 backend

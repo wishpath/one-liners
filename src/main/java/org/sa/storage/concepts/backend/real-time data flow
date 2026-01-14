@@ -1,5 +1,5 @@
 real-time data flow
 continuous, asynchronous transfer and processing of data as events occur
-Please explain this concept: 
-Default aiEvaluateInstruction
+Explain 'real-time data flow': *Name >=2 processes defined by this concept *Use >=2 key adjectives/adverbs to describe these processes *Describe what the data is about
+User has to name processes defined by this concept (e.g. transfer, processing, streaming) — score up to 4/10 (2/10 per correct process, max 2). User has to use key adjectives/adverbs describing these processes (e.g. continuous, asynchronous, immediate) — score up to 4/10 (2/10 per correct adjective/adverb, max 2). User has to correctly describe what the data represents (events, changes, occurrences) — score 2/10. Perfect score math formula: 4/10 + 4/10 + 2/10 = 10/10.
 backend

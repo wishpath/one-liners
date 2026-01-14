@@ -1,0 +1,5 @@
+managed service
+owner only starts and uses it; outsourcing maintenance, updates, setup, and scaling to a third-party provider.
+Explain 'managed service': *Name >=1 responsibility of the service owner *Describe what happens with other aspects of the service *Name >=2 of these aspects
+User has to name >=1 responsibility of the service owner (starting/using the service) — score 3/10. User has to describe what happens with other aspects of the service (outsourced to provider) — score 3/10. User has to name >=2 of these aspects (two examples are enough for full points; e.g., maintenance and updates) — score 2/10 for each correct aspect. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 2/10 + 2/10 = 10/10.
+backend

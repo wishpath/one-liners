@@ -1,5 +1,5 @@
 on-premises datacenter
-organization-owned data center on-site, unlike cloud or third-party hosting.
-Please explain this concept: 
-Default aiEvaluateInstruction
+organization-owned data center located on-site, not hosted by external providers.
+Explain 'on-premises datacenter': *Who owns it? *Describe where it is located *Give one example of an opposite approach
+User has to correctly name the owner (the organization itself) — score 3/10. User has to correctly describe the location (on-site / within the organization’s facilities) — score 3/10. User has to give one valid opposite example (cloud hosting or third-party datacenter) — score 4/10. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
 backend

@@ -1,5 +1,5 @@
 PATH environment variable
 system lookup list for executables, e.g., Java (java) or Python (python) commands.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Explain 'PATH environment variable': *Name who it is intended for *Describe what it contains *Give at least one example of what it enables
+User has to correctly name the intended user (operating system) — score 3/10. User has to correctly describe its content (list of executables) — score 3/10. User has to give at least one correct example (one example alone is enough for full points) such as running java, python, or git without a full path — score 4/10. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
 backend

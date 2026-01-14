@@ -1,5 +1,5 @@
 SA (technical user)
 service account — non-human access credential.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Explain 'SA (technical user)': *Expand what each letter means? **S? **A? *Describe its purpose/function *Describe what it represents
+User has to expand each letter correctly (S = Service — 3/10, A = Account — 3/10). User has to describe its purpose/function (automated/programmatic access) — score 2/10. User has to describe what it represents (non-human account) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 2/10 + 2/10 = 10/10.
 backend
