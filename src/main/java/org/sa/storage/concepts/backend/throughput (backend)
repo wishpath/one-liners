@@ -1,5 +1,5 @@
 throughput (backend)
-rate at which data is processed or transmitted through a system, measured in units/events per interval.
-Please explain this concept: 
-Default aiEvaluateInstruction
+rate at which data is processed or transmitted through a system
+Please explain concept 'throughput (backend)': *name what it is in general *name 2 possible actions being measured *name >=1 medium involved *name >=2 measuring units
+User has to correctly state what it is in general (measurement or rate) — score 1/10. User has to name two correct actions being measured (e.g., processing, transmitting) — score 2/10 each. User has to name at least one medium involved — score 1/10. User has to name at least two measuring units (e.g., bytes/sec, requests/sec) — score 2/10 each. Add points explicitly in the math formula. Perfect score math formula: 1/10 + 2/10 + 2/10 + 1/10 + 2/10 + 2/10 = 10/10.
 backend

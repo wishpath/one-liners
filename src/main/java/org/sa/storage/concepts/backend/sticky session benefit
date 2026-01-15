@@ -1,5 +1,5 @@
 sticky session benefit
-avoids session data transfer and Java object serialization.
-Please explain this concept: 
-Default aiEvaluateInstruction
+avoids session data transfer and Java object serialization
+Please explain concept 'sticky session benefit': *name one benefit regarding session information handling *name one benefit regarding Java objects
+User has to name one benefit related to session information handling (no need to move session state between servers) — score 5/10. User has to name one benefit related to Java objects (no need to serialize or deserialize them) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 backend

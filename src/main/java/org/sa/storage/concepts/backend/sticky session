@@ -1,5 +1,5 @@
 sticky session
-user always routed to same server for session consistency.
-Please explain this concept: 
-Default aiEvaluateInstruction
+user always routed to same server for session consistency
+Please explain concept 'sticky session': *name 2 participants of the interaction *describe the rule governing how communication is assigned between them
+User has to name two participants correctly. Add points explicitly in the math formula ((user)=2/10, (server)=2/10). User has to correctly describe the governing rule of assignment (same association preserved across interactions) — score 6/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 6/10 = 10/10.
 backend
