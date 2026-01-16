@@ -1,5 +1,5 @@
 backlog
-pending tasks or features to complete.
-Please explain this concept: 
-Default aiEvaluateInstruction
+pending tasks or features to complete
+Please explain concept 'backlog': *name what it contains *state its status
+User has to correctly identify what it contains (tasks, features, or items to do) — score 5/10. User has to correctly state its status (pending, not completed) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 businessAndWorkplace

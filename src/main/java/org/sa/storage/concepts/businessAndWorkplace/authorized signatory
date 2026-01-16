@@ -1,5 +1,5 @@
 authorized signatory
-a person who can handle the company's banking matters at the bank branch.
-Please explain this concept: 
-Default aiEvaluateInstruction
+a person who can handle the company's banking matters at the bank branch
+Please explain concept 'authorized signatory': *what type of entity it is *name another entity in relation *describe the relation
+User has to correctly name the type of entity (person) — score 3/10. User has to correctly name another entity in relation (company, bank) — score 3/10. User has to correctly describe the relation (authorized to act on behalf regarding banking matters) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
 businessAndWorkplace

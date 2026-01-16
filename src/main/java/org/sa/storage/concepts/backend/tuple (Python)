@@ -1,5 +1,5 @@
 tuple (Python)
-immutable ordered collection, e.g. (1, "a").
-Please explain this concept: 
-Default aiEvaluateInstruction
+immutable ordered list, e.g., (1, "a")
+Please explain concept 'tuple (Python)': *what it does *name 2 main properties: **in terms of change **in terms of relation of elements
+User has to correctly describe what it does (holds multiple items together as a collection) — score 5/10. User has to correctly state its immutability — score 3/10. User has to correctly describe its order property (elements maintain position) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 3/10 + 3/10 = 10/10.
 backend

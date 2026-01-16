@@ -1,4 +1,5 @@
 problems:
+  - if the result is 0/10 take away even more points
   - test API concept
   - write non-default user and ai instruction for each concept.
 ideas:

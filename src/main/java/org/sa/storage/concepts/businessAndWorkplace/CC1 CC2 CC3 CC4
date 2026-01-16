@@ -1,5 +1,5 @@
 CC1 CC2 CC3 CC4
-Criticality Categories classifying IT services by importance and compliance impact.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Criticality Categories — classifying IT services by importance and compliance impact
+Please explain concept 'CC1 CC2 CC3 CC4': *expand CC *name what items it describes *describe the preciseness of this description in terms of segmentation *name 2 criteria used for evaluation
+User has to correctly expand CC (Criticality=2/10, Categories=2/10). User has to name items that are classified (services) — score 2/10. User has to indicate this is a fixed set of criticalities (limited number of distinct elements, not a continuous rating) — score 2/10. User has to correctly name 2 evaluation criteria: importance — score 1/10, compliance impact — score 1/10. Add points explicitly in the math formula. Perfect score math formula: (2/10 + 2/10) + 2/10 + 2/10 + 1/10 + 1/10 = 10/10.
 businessAndWorkplace
