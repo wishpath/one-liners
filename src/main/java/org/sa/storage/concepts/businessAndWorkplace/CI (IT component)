@@ -1,5 +1,5 @@
 CI (IT component)
-Configuration Item - any manageable component to deliver IT service.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Configuration Item — any manageable component to deliver IT service
+Please explain concept 'CI (IT component)': *expand C *expand I *name >=1 trait of it *describe its role in the overall delivery
+User has to correctly expand C (Configuration) — score 2/10. User has to correctly expand I (Item) — score 2/10. User has to mention at least one valid trait (e.g., manageable, identifiable, controllable) — score 3/10. User has to correctly describe its role in the overall delivery (contributes to enabling or providing an IT service) — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 3/10 + 3/10 = 10/10.
 businessAndWorkplace
