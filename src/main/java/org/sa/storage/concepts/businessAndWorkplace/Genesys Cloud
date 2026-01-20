@@ -1,5 +1,5 @@
 Genesys Cloud
-cloud-based support contact-center app.
-Please explain this concept: 
-Default aiEvaluateInstruction
+cloud-based contact center application for customer support.
+Please describe concept 'Genesys Cloud': *name the type of software component it is *name which business function it supports *name at least one key capability it provides
+User has to correctly identify the type of software component (application) — score 3/10. User has to correctly identify the business function it supports (customer support or contact center operations) — score 3/10. User has to name at least one key capability it provides (e.g., call handling, chat support, routing, analytics) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
 businessAndWorkplace

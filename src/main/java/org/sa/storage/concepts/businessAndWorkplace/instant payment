@@ -1,5 +1,5 @@
 instant payment
 payment transferred immediately via digital channels (mobile/online)
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please describe concept 'instant payment': *transfer speed *delivery channel
+User has to correctly describe the transfer speed (immediate) — score 5/10. User has to correctly describe the delivery channel (digital such as mobile or online) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 businessAndWorkplace
