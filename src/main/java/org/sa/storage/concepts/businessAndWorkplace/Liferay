@@ -1,5 +1,5 @@
 Liferay
 content management system (CMS). Pre-made, highly customisable website for enterprise. Backend and frontend.
-Please explain this concept: 
-Only rate 10/10 if user mentions premade CMS or 'content management system' for enterprise
+Please describe concept 'Liferay': *name the type of software component it is *name the target usage context *describe the level of product completeness *name provided part(s) of an application in terms of architecture or layers
+User has to identify the software type as a content management system or CMS — score 3/10. User has to identify the target usage context as enterprise — score 3/10. User has to state that the product is pre-made — score 2/10. User has to name the provided parts (backend and frontend) — score 2/10. Only award full score if CMS or content management system and enterprise are explicitly mentioned. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 2/10 + 2/10 = 10/10.
 businessAndWorkplace
