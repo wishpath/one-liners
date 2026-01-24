@@ -1,5 +1,5 @@
 party
 an entity involved in a transaction or relationship. example: customer, vendor, partner.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please describe concept 'party': *define the concept *name >=2 examples
+User has to correctly define the concept (entity in a transaction or relationship) — score 4/10. User has to name >=2 correct examples (customer, vendor, partner) — score 3/10 per example. Naming 2 examples is enough to get full points (6/10). Add points explicitly in the math formula. Perfect score math formula: 4/10 + 3 * 2/10 = 10/10.
 businessAndWorkplace

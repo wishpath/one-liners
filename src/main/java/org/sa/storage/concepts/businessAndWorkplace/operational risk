@@ -1,5 +1,5 @@
 operational risk
 financial or reputational loss from failed processes, people, systems, or external events.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please describe concept 'operational risk': *name >=2 types of damage *name >=3 sources that can cause it
+User has to name >=2 correct types of damage (financial, reputational) — score 2/10 per correct damage. Naming 2 damages is enough to get full points (4/10). User has to name >=3 correct sources (processes, people, systems, external events) — score 2/10 per correct source. Naming 3 sources is enough to get full points (6/10). Add points explicitly in the math formula. Perfect score math formula: 2 * 2/10 + 3 * 2/10 = 10/10.
 businessAndWorkplace
