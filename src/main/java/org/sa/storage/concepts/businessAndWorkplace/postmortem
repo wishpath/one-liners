@@ -1,5 +1,5 @@
 postmortem
 structured analysis that takes place after a failure has occurred.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please describe concept 'postmortem': *name trigger *name action
+User has to correctly name the trigger (failure, incident, or problem) — score 5/10. User has to correctly name the action (structured analysis, review, investigation) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 businessAndWorkplace

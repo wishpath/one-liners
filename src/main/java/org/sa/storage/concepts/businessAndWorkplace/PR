@@ -1,5 +1,5 @@
 PR
 can mean public release, pull request, public relations.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Explain PR. *Expand what each letter means? **P? **R? *name >=2 different interpretations (distinct meanings of the abbreviation)
+User has to name >=2 valid interpretations (public release, pull request, public relations) — score 5/10 per correct interpretation with correctly expanded letters (P - public, pull (2/10), R - request, relations, release (3/10). Naming 2 interpretations is enough to get full points (10/10). Add points explicitly in the math formula. Perfect score math formula: 2/10 + 3/10 + 2/10 + 3/10 = 10/10.
 businessAndWorkplace
