@@ -1,5 +1,5 @@
 product backlog (agile)
 prioritized list of features and tasks in agile projects.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Explain product backlog (agile). *describe the ordering logic *name >=1 kind of item it contains
+User has to describe how items are ordered (priority or importance) — score 5/10. User has to name >=1 valid item type (features, tasks, stories, requirements) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 businessAndWorkplace
