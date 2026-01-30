@@ -1,5 +1,5 @@
 stakeholder
 one with interest in outcome: customer, team, tester, manager, regulator, security, leadership, marketing.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'stakeholder': *provide a short narrative of the concept *name >=4 example stakeholders
+User has to provide a general narrative describing what a stakeholder is (entity with interest in an outcome) — score 6/10. User has to name >=4 valid example stakeholders (customer, team, tester, manager, regulator, security, leadership, marketing). Each correct example scores 1/10. 4 examples are enough to reach max score for this part. Add points explicitly in the math formula. Perfect score math formula: 6/10 + 4 * 1/10 = 10/10.
 businessAndWorkplace
