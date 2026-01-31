@@ -1,5 +1,5 @@
 streamline
 remove obstacles and add improvements to optimize.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'streamline': *provide a short narrative of the concept *name >=2 actions involved
+User has to provide a general narrative describing what streamlining means (making a process more efficient or optimized) — score 6/10. User has to name >=2 valid actions involved (e.g., removing obstacles, simplifying steps, reducing waste, improving flow). Each correct action scores 2/10. 2 actions are enough to reach max score for this part. Add points explicitly in the math formula. Perfect score math formula: 6/10 + 2 * 2/10 = 10/10.
 businessAndWorkplace
