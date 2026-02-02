@@ -1,5 +1,5 @@
 value stream
 sequence of processes a company uses to deliver product, showing steps, efficiency, and bottlenecks.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'value stream': *name the benefitor or organizer *describe the benefit or result *list >=3 aspects it highlights
+User has to identify the benefitor or organizer (company or organization) — score 3/10. User has to describe the benefit or result (delivering a product or value) — score 4/10. User has to list >=3 correct aspects it highlights (steps, efficiency, bottlenecks). Each correct aspect scores 1/10. 3 aspects are enough to reach max score for this part. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 4/10 + 3 * 1/10 = 10/10.
 businessAndWorkplace
