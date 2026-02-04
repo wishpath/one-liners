@@ -1,5 +1,5 @@
 anonymous access to Artifactory
 repository access without login.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'anonymous access to Artifactory': *state what authentication is not required to gain access *name the type of software component Artifactory is
+User has to state that access does not require authentication in the form of a login — score 5/10. User has to correctly identify Artifactory as a repository or artifact repository — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 ciCdAndDevOps
