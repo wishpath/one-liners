@@ -1,5 +1,5 @@
 Apache Ant
-Java automation tool, runs XML scripts.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Java build automation tool executing XML scripts.
+Please describe concept 'Apache Ant': *name the type of software component it is *name the runtime ecosystem it is associated with *state in short what it does
+User has to correctly identify the software type as a build automation tool — score 3/10. User has to identify the runtime ecosystem as Java — score 3/10. User has to describe in very short what it does; stating "executes XML scripts" is sufficient for full score — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
 ciCdAndDevOps
