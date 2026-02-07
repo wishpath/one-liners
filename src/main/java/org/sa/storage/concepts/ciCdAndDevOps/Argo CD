@@ -1,5 +1,5 @@
 Argo CD
-Argo Continuous Delivery - deploys app from Git repo to Kubernetes cluster.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Argo Continuous Delivery — app, runs in Kubernetes, reads from Git repo, deploys apps to Kubernetes.
+Explain Argo CD. *Expand what each letter of CD means? **C? **D? *name the software type *state where it runs *state what it reads from *state what it manages *state what it does to those elements *state the target of the action
+User has to correctly expand "C" as "Continuous" — score 2/10. User has to correctly expand "D" as "Delivery" — score 2/10. User has to correctly identify the software type (app) — score 1/10. User has to state where it runs (Kubernetes) — score 1/10. User has to state what it reads from (Git repository) — score 1/10. User has to describe what it manages (applications) — score 1/10. User has to describe what it does to those elements (deploys) — score 1/10. User has to state the target of the action (Kubernetes cluster) — score 1/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 1/10 + 1/10 + 1/10 + 1/10 + 1/10 + 1/10 = 10/10.
 ciCdAndDevOps
