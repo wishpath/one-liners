@@ -1,5 +1,5 @@
 artifact (compilation)
 file produced by a build process, like a JAR, WAR, or binary, ready for deployment.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'artifact (compilation)': *provide a short narrative of meaning *state what it is ready for *name >=2 outcome format examples
+User has to provide a short narrative describing a file produced by a build process — score 4/10. User has to state that it is ready for deployment or execution or distribution — score 2/10. User has to name >=2 correct outcome format examples (e.g., JAR, WAR, binary). Each correct example gives 2/10. 2 examples are enough to reach full score for this element. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 2/10 + 2 * 2/10 = 10/10.
 ciCdAndDevOps
