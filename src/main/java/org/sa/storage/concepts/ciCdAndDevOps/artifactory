@@ -1,5 +1,5 @@
 artifactory
 stores built artifacts (JAR, WAR, binaries), not source code.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'artifactory': *state its main function *name >=2 format examples it handles *describe relation to source code
+User has to state that it stores built artifacts or compiled outputs — score 4/10. User has to name >=2 correct format examples (e.g., JAR, WAR, binaries). Each correct example gives 2/10. 2 examples are enough to reach full score for this element. User has to describe that it does not store source code or is separate from source code storage — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 2 * 2/10 + 2/10 = 10/10.
 ciCdAndDevOps
