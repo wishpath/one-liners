@@ -1,5 +1,5 @@
 assemble
-specific phase within the build process - collecting and combining individual components into larger units.
-Please explain this concept: 
-Default aiEvaluateInstruction
+specific phase within the build process — collecting and combining individual components into larger units.
+Please explain concept 'assemble': *part of what bigger process *describe the action performed
+User has to state that it is part of the build process — score 4/10. User has to describe the action of collecting or combining individual components into larger units — score 6/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 6/10 = 10/10.
 ciCdAndDevOps
