@@ -1,5 +1,5 @@
 build process
-entire prep for execution - compiling files, linking libraries, and packaging into a distributable format.
-Please explain this concept: 
-Default aiEvaluateInstruction
+entire prep for execution — compiling files, linking libraries, and packaging into a distributable format.
+Please explain concept 'build process': *state overall purpose *name >=2 activities it includes *state the form of the final result
+User has to state the overall purpose as preparation for execution or runnable/distributable outcome — score 4/10. User has to name >=2 correct included activities (e.g., compiling, linking, packaging). Each correct activity gives 2/10. 2 activities are enough to reach full score for this element. User has to state the final result form as distributable, executable, or packaged artifact — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 2 * 2/10 + 2/10 = 10/10.
 ciCdAndDevOps
