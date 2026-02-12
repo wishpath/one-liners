@@ -1,5 +1,5 @@
 code integration
 combining code changes from multiple contributors into a shared repository.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'code integration': *which code areas are involved *what action occurs *what makes it hard *where result is placed
+User has to identify which parts of code are addressed (code changes) — score 3/10. User has to describe the action performed (combining into one state) — score 3/10. User has to mention >= 1 thing what makes it difficult (dealing with multiple contributors, conflicts, inconsistencies). Stating 1 example is enough to receive full score for this element — score 2/10. User has to specify the destination of the action (shared repository) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 2/10 + 2/10 = 10/10.
 ciCdAndDevOps

@@ -1,5 +1,5 @@
 CI_CD
 C - continuous (automatic), I - integration (merging code and testing it), D - delivery (deploying).
-Please explain this concept: 
-Default aiEvaluateInstruction
+Explain CI_CD. *Expand what each letter means? **C? **I? **C? **D? *describe how actions typically relate to human involvement *name >=2 actions related to "I" *state the application-related action in "D"
+User has to correctly expand first "C" as "continuous" — score 1/10. User has to correctly expand "I" as "integration" — score 2/10. User has to correctly expand second "C" as "continuous" — score 1/10. User has to correctly expand "D" as "delivery" — score 2/10. User has to describe that actions are automatic or with minimal human involvement — score 1/10. User has to name >=2 correct actions related to "I" (e.g., merging, testing). Each correct action gives 1/10. 2 actions are enough to reach full score for this element. User has to state the application-related action in "D" as deploying or release to environment — score 1/10. Add points explicitly in the math formula. Perfect score math formula: 1/10 + 2/10 + 1/10 + 2/10 + 1/10 + 2 * 1/10 + 1/10 = 10/10.
 ciCdAndDevOps
