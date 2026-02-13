@@ -1,5 +1,5 @@
 continuous integration components
 VCS (e.g., Git), automated: builds, tests, feedback, build server (e.g., Jenkins).
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'continuous integration components': *list >=4 distinct components involved
+User has to list >= 4 distinct continuous integration components. Each of the first three correct components gives 2/10. The fourth correct component gives 4/10. Listing 4 components is enough to receive full score. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 2/10 + 4/10 = 10/10.
 ciCdAndDevOps
