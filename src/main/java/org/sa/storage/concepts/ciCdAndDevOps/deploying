@@ -1,5 +1,5 @@
 deploying
 making app available on a target environment. For example production environment.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'deploying': *what is the object of this action *what is the destination context *provide >=1 example of that destination *what status is achieved
+User has to identify the object of the action (application) — score 3/10. User has to specify the destination context (target environment) — score 3/10. User has to provide >= 1 correct example of destination (e.g., production). Stating 1 example is enough to receive full score for this element — score 2/10. User has to describe the achieved status (available or running) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 2/10 + 2/10 = 10/10.
 ciCdAndDevOps
