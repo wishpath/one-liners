@@ -1,5 +1,5 @@
 DevOps
 practices, principles, philosophies on automation of the process of software delivery and infrastructure changes.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'DevOps': *name =2 main processes this term covers *name the main way these processes are implemented regarding human participation *name >=2 conceptual approaches describing this way
+User has to name exactly 2 main processes covered (software delivery, infrastructure changes). Each correct process gives 2/10 — total 4/10. User has to describe the main implementation way regarding human participation (automation) — score 4/10. User has to name >= 2 conceptual approaches (practices, principles, philosophies). Each correct approach gives 1/10. Stating 2 approaches is enough to receive full score for this element — total 2/10. Add points explicitly in the math formula. Perfect score math formula: 2 * 2/10 + 4/10 + 2 * 1/10 = 10/10.
 ciCdAndDevOps
