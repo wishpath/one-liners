@@ -1,5 +1,5 @@
 DevSecOps
-practice of integrating security into every phase of the software development and delivery pipeline.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Development Security Operations — practice of integrating security into every phase of the software development and delivery pipeline.
+Explain DevSecOps. *Expand what each part means? **Dev? **Sec? **Ops? *State what is integrated *State how broadly it is applied
+User has to correctly expand each part. Add points explicitly in the math formula (Dev=2/10, Sec=2/10, Ops=2/10). User has to state what is integrated (security) — score 2/10. User has to state how broadly it is applied (every phase of software development and delivery pipeline) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 2/10 + 2/10 + 2/10 = 10/10.
 ciCdAndDevOps
