@@ -1,0 +1,5 @@
+multibranch pipeline
+auto-detects all Git branches, creates an independent pipeline for each, and builds them separately.
+Please explain concept 'multibranch pipeline': *how and what it detects *name =2 actions it performs for each detected element
+User has to describe how and what it detects (automatically detects all Git branches) — score 4/10. User has to name exactly 2 actions performed for each (creates independent pipeline, builds separately). Each correct action gives 3/10. Stating 2 actions is enough to receive full score for this element — total 6/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 2 * 3/10 = 10/10.
+ciCdAndDevOps
