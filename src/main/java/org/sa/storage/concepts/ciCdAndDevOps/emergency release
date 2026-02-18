@@ -1,5 +1,5 @@
 emergency release
 software deployment outside regular schedule to fix critical issues.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'emergency release': *what action is performed *what is the object of the action *what is unusual about its timing *why it is needed
+User has to state the action performed (deployment) — score 2/10. User has to state the object of the action (software) — score 2/10. User has to state what is unusual about its timing (outside regular schedule) — score 3/10. User has to state the reason why it is needed (to fix critical issues). Stating the critical nature of the problem is required for full score — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 3/10 + 3/10 = 10/10.
 ciCdAndDevOps
