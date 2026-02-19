@@ -1,5 +1,5 @@
 failover
 automatic switch to a backup system when the primary fails.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'failover': *situation when needed *what is the solution *how it is performed regarding human participation
+User has to describe the situation when needed (primary system fails) — score 4/10. User has to state the solution (switch to backup system) — score 4/10. User has to describe how it is performed regarding human participation (automatically) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 4/10 + 2/10 = 10/10.
 ciCdAndDevOps
