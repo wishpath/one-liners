@@ -1,5 +1,5 @@
 heap space
 memory area during program execution, for storing objects.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'heap space': *what type of resource it is *when it is used *what it stores
+User has to identify the type of resource (memory area) — score 4/10. User has to state when it is used (during program execution) — score 3/10. User has to state what it stores (objects) — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 3/10 + 3/10 = 10/10.
 ciCdAndDevOps
