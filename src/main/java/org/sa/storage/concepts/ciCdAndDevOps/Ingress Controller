@@ -1,5 +1,5 @@
 Ingress Controller
 Kubernetes component that manages external access to services.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'Ingress Controller': *what type of component it is *what it manages *which direction of access it controls
+User has to identify the type of component (Kubernetes component) — score 3/10. User has to state what it manages (access to services) — score 4/10. User has to specify which direction of access it controls (external) — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 4/10 + 3/10 = 10/10.
 ciCdAndDevOps
