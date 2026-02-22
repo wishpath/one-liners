@@ -1,0 +1,5 @@
+consuming Ivy repositories in Gradle
+Setting repository URL in build.gradle to enable use of Ivy modules and dependencies stored in the Ivy repo.
+Please explain concept 'consuming Ivy repositories in Gradle': *in which file the configuration is made *what exactly has to be set *name 2 things it allows to use
+User has to specify the configuration file (build.gradle) — score 3/10. User has to state what has to be set (repository URL) — score 3/10. User has to name exactly 2 things it allows to use (Ivy modules, Ivy dependencies). Each correct element gives 2/10. Stating 2 elements is enough to receive full score for this element — total 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 2 * 2/10 = 10/10.
+ciCdAndDevOps

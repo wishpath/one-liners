@@ -1,0 +1,5 @@
+publishing Ivy artifacts in Gradle
+Setting plugin "ivy-publish", URL of an Ivy repository, and published item in build.gradle file.
+Please explain concept 'publishing Ivy artifacts in Gradle': *in which file the configuration is made *name 3 things that have to be set
+User has to specify the configuration file (build.gradle) — score 1/10. User has to name exactly 3 things that have to be set (plugin "ivy-publish", repository URL, published item). Each correct item gives 3/10. Stating 3 items is enough to receive full score for this element — total 9/10. Add points explicitly in the math formula. Perfect score math formula: 1/10 + 3 * 3/10 = 10/10.
+ciCdAndDevOps
