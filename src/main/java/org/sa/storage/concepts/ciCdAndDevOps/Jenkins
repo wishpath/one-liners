@@ -1,5 +1,5 @@
 Jenkins
-app for automating tasks like code integration, testing, and deployment. Written in Java.
-Please explain this concept: 
-Default aiEvaluateInstruction
+application for automating building, testing, and deployment. Written in Java. Managed via Jenkinsfile.
+Please explain concept 'Jenkins': *name the type of software component it is *state the main productivity value it adds *name exactly 3 activities it manages *name the implementation language *state in which file the configuration is managed
+User has to identify the type of software component (application) — score 2/10. User has to state the main productivity value it adds (automation of processes) — score 2/10. User has to name exactly 3 activities it manages (building, testing, deployment). Each correct activity gives 1/10 — total 3/10. Stating 3 activities is enough to receive full score for this element. User has to name the implementation language (Java) — score 1/10. User has to state the configuration file (Jenkinsfile) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 3 * 1/10 + 1/10 + 2/10 = 10/10.
 ciCdAndDevOps
