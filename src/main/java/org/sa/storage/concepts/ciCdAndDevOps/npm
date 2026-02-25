@@ -1,5 +1,5 @@
 npm
-JavaScript dependency manager, installs packages.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Node Package Manager — JavaScript dependency manager that installs packages.
+Explain npm. *Expand what each letter means? **N? **P? **M? *Name the ecosystem it is associated with *State its main action
+User has to correctly expand each letter. Add points explicitly in the math formula (N=2/10, P=2/10, M=2/10). User has to name the ecosystem it is associated with (JavaScript or Node.js) — score 2/10. User has to state its main action (installs packages) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 2/10 + 2/10 + 2/10 = 10/10.
 ciCdAndDevOps
