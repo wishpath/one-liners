@@ -1,5 +1,5 @@
 JFrog Artifactory
-repository manager, stores JARs.
-Please explain this concept: 
-Default aiEvaluateInstruction
+artifact repository — stores, versions, and distributes artifacts.
+Please explain concept 'JFrog Artifactory': *name the type of software component it is *state 3 main functions it provides
+User has to correctly identify the software component type (artifact repository, or artifact repository manager) — score 3/10. User has to name exactly 3 main functions it provides (stores, versions, distributes artifacts). Each correct function gives 2/10. Stating all 3 functions is enough to receive full score — total 6/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3 * 2/10 = 10/10.
 ciCdAndDevOps
