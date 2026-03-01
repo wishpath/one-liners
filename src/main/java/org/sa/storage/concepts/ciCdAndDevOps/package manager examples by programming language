@@ -1,5 +1,5 @@
 package manager examples by programming language
-pip (Python), npm (JS), Maven/Gradle/Ivy (Java).
-Please explain this concept: 
-Default aiEvaluateInstruction
+pip (Python), npm (JavaScript), Maven, Gradle, Ivy (Java).
+Please name 'package manager examples by programming language': *name >=3 correct package managers *for each, state its associated programming language
+User has to name >= 3 correct package managers from the set (pip, npm, Maven, Gradle, Ivy). Each correct package manager correctly matched with its programming language gives 3/10. Stating 3 correct pairs is enough to receive full score — total 9/10. User has to clearly reflect that these tools are grouped by programming language — score 1/10. Add points explicitly in the math formula. Perfect score math formula: 3 * 3/10 + 1/10 = 10/10.
 ciCdAndDevOps
