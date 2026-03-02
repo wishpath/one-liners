@@ -1,5 +1,5 @@
 pip
-Python package manager, installs and manages libraries (e.g., pip install requests).
-Please explain this concept: 
-Default aiEvaluateInstruction
+Pip Installs Packages — Python package manager that installs and manages libraries.
+Explain pip. *Expand what each letter means? **P? **I? **P? *Name the ecosystem it is associated with *Name the type of software component it is *Name >=1 action it performs
+User has to correctly expand each letter. Add points explicitly in the math formula (P=2/10, I=2/10, P=2/10). User has to name the ecosystem it is associated with (Python) — score 1/10. User has to name the type of software component (package manager) — score 2/10. User has to name >= 1 correct action it performs (installs or manages libraries). Stating 1 action is enough to receive full score for this element — score 1/10. Add points explicitly in the math formula. Perfect score math formula: 3 * 2/10 + 1/10 + 2/10 + 1/10 = 10/10.
 ciCdAndDevOps

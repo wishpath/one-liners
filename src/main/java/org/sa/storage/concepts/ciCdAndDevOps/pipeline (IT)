@@ -1,5 +1,5 @@
 pipeline (IT)
 process of building, testing and deploying. Often associated with automatisation.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please describe concept 'pipeline (IT)': *name >=3 key activities it performs *state what it is associated with in regard to human involvement
+User has to name >=3 key activities it performs (building, testing, deploying; any 3). Each correct activity gives 2/10. Stating 3 activities is enough to receive full score for this element — total 6/10. User has to describe what it is associated with regarding human involvement (automation or reduction of manual work). Either answer is sufficient for full score — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3 * 2/10 + 4/10 = 10/10.
 ciCdAndDevOps
