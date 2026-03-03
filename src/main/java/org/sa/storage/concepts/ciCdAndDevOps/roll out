@@ -1,5 +1,5 @@
 roll out
 deployment and activation of a new product or feature for use.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please describe concept 'roll out': *name >=2 key actions it includes *name >=1 object to which these actions are applied
+User has to name >=2 key actions it includes (deployment and activation). Each correct action gives 3/10. Stating both is enough to receive full score for this element — total 6/10. User has to name >=1 object to which these actions are applied (new product or feature). Stating 1 correct object is enough for full score for this element — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 2 * 3/10 + 4/10 = 10/10.
 ciCdAndDevOps
