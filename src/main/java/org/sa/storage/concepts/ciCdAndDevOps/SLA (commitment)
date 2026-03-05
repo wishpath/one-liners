@@ -1,5 +1,5 @@
 SLA (commitment)
 Service Level Agreement — defines expected service quality and uptime.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Explain SLA (commitment). *Expand what each letter means? **S? **L? **A? *Name >=2 aspects of service it specifies
+User has to expand each letter correctly. Add points to score for each explicitly in the math formula (S=2/10, L=2/10, A=2/10). User has to name >=2 aspects of service it specifies (service quality, uptime). Each correct aspect gives 2/10. Stating 2 aspects is enough to receive full score for this element — total 4/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 2/10 + 2 * 2/10 = 10/10.
 ciCdAndDevOps
