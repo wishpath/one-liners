@@ -1,5 +1,5 @@
 UrbanCode Deploy (UCD)
 deployment tool, moves app between environments.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'UrbanCode Deploy (UCD)': *name the type of software component it is *state in short what it does
+User has to correctly identify the software component type (deployment tool) — score 5/10. User has to correctly state in short what it does (moves application between environments) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 ciCdAndDevOps
