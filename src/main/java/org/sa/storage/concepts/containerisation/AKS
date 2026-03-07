@@ -1,5 +1,5 @@
 AKS
 Azure Kubernetes Service — Azure-provided Kubernetes with setup and maintenance handled.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'AKS'. *Expand what each letter means? **A? **K? **S? *Name the provider platform *State in short what is managed for the user
+User has to expand each letter correctly. Add points to score for each explicitly in the math formula (A=2/10, K=2/10, S=2/10). User has to name the provider platform (Azure) — score 2/10. User has to correctly state in short what is managed for the user (Kubernetes setup and maintenance) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 2/10 + 2/10 + 2/10 = 10/10.
 containerisation
