@@ -1,5 +1,5 @@
 base Java Docker image
 foundation image with Java runtime for running apps in containers.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'base Java Docker image': *name the type of software artifact it is *name the runtime it provides *state in short what it is used for
+User has to correctly identify the artifact type (Docker image / container image) — score 4/10. User has to name the runtime it provides (Java runtime / JVM) — score 3/10. User has to correctly state in short what it is used for (running Java applications in containers) — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 3/10 + 3/10 = 10/10.
 containerisation
