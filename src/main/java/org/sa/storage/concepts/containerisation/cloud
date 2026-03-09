@@ -1,5 +1,5 @@
 cloud
 internet-based services like storage, compute, databases—no local hardware needed.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'cloud': *name >=2 types of services it provides *state where these services are accessed from
+User has to name >=2 types of services it provides (e.g., storage, compute, databases). Each correct service gives 3/10. Stating 2 services is enough to receive full score for this element — total 6/10. User has to correctly state where these services are accessed from (internet) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 2 * 3/10 + 4/10 = 10/10.
 containerisation
