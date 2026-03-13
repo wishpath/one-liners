@@ -1,5 +1,5 @@
 cluster
-group of nodes working together as one system.
+collection of all nodes and therefore all pods as well.
 Please explain concept 'cluster': *name the type of elements it consists of *state in short how they operate together
 User has to correctly identify the element type it consists of (nodes) — score 5/10. User has to correctly state in short how they operate together (work together as one system) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 containerisation

@@ -1,5 +1,5 @@
 container
 isolated unit with app code, dependencies, and settings.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'container': *name exactly 3 elements it includes *state its relation to the host system *state its relation to other containers
+User has to name exactly 3 elements it includes (application code, dependencies, settings). Each correct element gives 2/10 — total 6/10. User has to correctly state its relation to the host system (runs isolated from the host) — score 2/10. User has to correctly state its relation to other containers (runs isolated from other containers) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 3 * 2/10 + 2/10 + 2/10 = 10/10.
 containerisation
