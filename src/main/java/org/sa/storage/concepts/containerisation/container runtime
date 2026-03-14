@@ -1,5 +1,5 @@
 container runtime
 software component that runs and isolates containers.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'container runtime': *state what type of component it is *name >=2 actions it performs
+User has to correctly state what type of component it is — score 4/10. User has to name >=2 actions it performs (running containers, isolating containers). Each correct action gives 3/10. Stating 2 actions is enough to receive full score for this element — total 6/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 2 * 3/10 = 10/10.
 containerisation

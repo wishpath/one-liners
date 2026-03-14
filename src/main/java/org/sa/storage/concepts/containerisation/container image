@@ -1,5 +1,5 @@
 container image
 package with code, runtime, libs, tools—ready to run.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'container image': *name the type of artifact it is *name exactly 3 elements it includes
+User has to correctly identify the artifact type (package) — score 4/10. User has to name exactly 3 elements it includes (code, runtime, libraries). Each correct element gives 2/10 — total 6/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 3 * 2/10 = 10/10.
 containerisation

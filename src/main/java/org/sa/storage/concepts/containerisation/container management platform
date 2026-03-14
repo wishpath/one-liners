@@ -1,5 +1,5 @@
 container management platform
 software system for deploying, scaling, and orchestrating containers across cluster.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'container management platform': *name the type of software component it is *name >=3 key activities it performs
+User has to correctly identify the software component type (software system / platform) — score 4/10. User has to name >=3 key activities it performs (deploying containers, scaling containers, orchestrating containers across cluster). Each correct activity gives 2/10. Stating 3 activities is enough to receive full score for this element — total 6/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 3 * 2/10 = 10/10.
 containerisation
