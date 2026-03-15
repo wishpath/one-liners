@@ -1,5 +1,5 @@
 Docker
-container runtime.
-Please explain this concept: 
-Default aiEvaluateInstruction
+container runtime — runs and isolates containers.
+Please explain concept 'Docker': *Name the type of component it is *Name >=2 key actions it performs
+User has to correctly state the type of component (container runtime) — score 4/10. User has to name >=2 key actions it performs (running containers, isolating containers). Each correct action gives 3/10. Stating 2 actions is enough to receive full score for this element — total 6/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 2 * 3/10 = 10/10.
 containerisation
