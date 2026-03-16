@@ -1,5 +1,5 @@
 endpoint
-specific address or location in a network where communication or data transfer can occur.
-Please explain this concept: 
-Default aiEvaluateInstruction
+URL (or URI) the client calls to interact with the server.
+Please explain concept 'endpoint': *state what kind of network reference it is *name >=1 interaction that occurs there
+User has to correctly state the kind of network reference (URL or URI) — score 5/10. User has to name >=1 interaction that occurs there (client-server interaction, request handling, data exchange). Stating 1 correct interaction is enough to receive full score for this element — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 containerisation
