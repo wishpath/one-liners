@@ -1,5 +1,5 @@
 etcd
 configuration data shared among nodes in a distributed system.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'etcd': *state what kind of data it stores *state where this data is used
+User has to correctly state what kind of data it stores (configuration data) — score 5/10. User has to correctly state where this data is used (shared among nodes in a distributed system) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 containerisation

@@ -1,5 +1,5 @@
 etcd etymology
-"et cetera" + "distributed" - comes from the /etc directory in Linux for configuration.
-Please explain this concept: 
-Default aiEvaluateInstruction
+"et cetera" + "distributed" — name inspired by /etc directory in Linux for configuration.
+Please explain concept 'etcd etymology': *name 2 parts the name is derived from *state where the inspiration of this name comes from **OS **directory **purpose
+User has to name 2 parts the name is derived from ("et cetera", "distributed"). Each correct part gives 2/10 — total 4/10. User has to correctly state the OS (Linux) — score 2/10. User has to correctly state the directory (/etc) — score 2/10. User has to correctly state the purpose (configuration storage) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 2 * 2/10 + 2/10 + 2/10 + 2/10 = 10/10.
 containerisation
