@@ -1,5 +1,5 @@
 F5
-advanced load balancer and application traffic controller.
-Please explain this concept: 
-Default aiEvaluateInstruction
+application — distributes and manages requests across servers
+Please explain concept 'F5': *name the software component type *name the managed object *name the action performed *name the destination
+User has to correctly identify the software component type (application) — score 2/10. User has to correctly identify the managed object (requests) — score 3/10. User has to correctly identify the action performed (distribution or routing) — score 3/10. User has to correctly identify the destination (servers) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 3/10 + 3/10 + 2/10 = 10/10.
 containerisation
