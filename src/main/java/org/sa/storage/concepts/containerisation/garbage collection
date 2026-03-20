@@ -1,5 +1,5 @@
 garbage collection
-is an automated process that identifies and frees up memory.
-Please explain this concept: 
-Default aiEvaluateInstruction
+automatic memory cleanup process
+Please explain concept 'garbage collection': *name how the process is triggered in terms of user involvement *name the managed object *name the action it performs
+User has to correctly identify how the process is triggered in terms of user involvement (no direct user involvement or automatic) — score 3/10. User has to correctly identify the managed object (memory) — score 3/10. User has to correctly identify the action it performs (cleanup or freeing up) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
 containerisation
