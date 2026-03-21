@@ -1,5 +1,5 @@
 Hazelcast
-software distributing data and compute over nodes; offers parallel processing and in-memory data grid.
-Please explain this concept: 
-Default aiEvaluateInstruction
+platform — distributes data and computation across nodes
+Please explain concept 'Hazelcast': *name the type of software component it is *name >=2 capabilities it provides
+User has to correctly identify the type of software component (platform) — score 2/10. User has to name at least 2 correct capabilities it provides (data distribution, computation distribution, parallel processing, in-memory data grid). For each correct capability add 4/10 points in the math formula. 2 capabilities are enough to receive full score for this element. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2 * 4/10 = 10/10.
 containerisation
