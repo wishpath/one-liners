@@ -1,5 +1,5 @@
 Headlamp (app)
 Kubernetes UI tool, visualizes clusters and resources.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'Headlamp (app)': *name the software component type *name the platform it is used with *name exactly 2 things it visualizes
+User has to correctly identify the software component type (UI tool or application) — score 2/10. User has to correctly identify the platform it is used with (Kubernetes) — score 4/10. User has to name exactly 2 correct things it visualizes (clusters, resources). For each correct item add 2/10 points in the math formula. Naming both is required to receive full score for this element. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 4/10 + 2 * 2/10 = 10/10.
 containerisation
