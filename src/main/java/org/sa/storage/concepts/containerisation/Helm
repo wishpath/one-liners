@@ -1,5 +1,5 @@
 Helm
-package manager for Kubernetes - sets up and manages applications using Helm charts.
-Please explain this concept: 
-Default aiEvaluateInstruction
+package manager for Kubernetes — installs and manages applications via charts
+Please explain concept 'Helm': *name the software component type *name the platform it is used with *name exactly 2 actions it performs
+User has to correctly identify the software component type (package manager) — score 2/10. User has to correctly identify the platform it is used with (Kubernetes) — score 4/10. User has to name exactly 2 correct actions it performs (installing, managing applications via charts). For each correct action add 2/10 points in the math formula. Naming both is required to receive full score for this element. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 4/10 + 2 * 2/10 = 10/10.
 containerisation
