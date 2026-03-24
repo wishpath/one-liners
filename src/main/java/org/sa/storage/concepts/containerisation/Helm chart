@@ -1,5 +1,5 @@
 Helm chart
 package of container images, services, deployments, configs that produce pods.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'Helm chart': *name the concept type *name >=3 components it includes *name the outcome it produces
+User has to correctly identify the concept type (package) — score 2/10. User has to name at least 3 correct components it includes (container images, services, deployments, configs). For each correct component add 2/10 points in the math formula. 3 components are enough to receive full score for this element. User has to correctly identify the outcome it produces (pods) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 3 * 2/10 + 2/10 = 10/10.
 containerisation
