@@ -1,5 +1,5 @@
 master node
 responsible for managing the overall cluster state.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'master node': *name what action it is responsible for *name the scope it applies to
+User has to correctly identify what it is responsible for (managing state) — score 5/10. User has to correctly identify the scope it applies to (cluster) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 containerisation

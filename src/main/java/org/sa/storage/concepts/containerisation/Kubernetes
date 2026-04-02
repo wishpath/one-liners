@@ -1,5 +1,5 @@
 Kubernetes
 container orchestration platform.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'Kubernetes': *name the software component type *name the managed unit *name the action it performs
+User has to correctly identify the software component type (platform) — score 3/10. User has to correctly identify the managed unit (containers) — score 3/10. User has to correctly identify the action it performs (orchestration) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
 containerisation
