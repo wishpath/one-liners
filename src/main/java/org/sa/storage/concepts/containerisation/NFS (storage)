@@ -1,5 +1,5 @@
 NFS (storage)
 Network File System - for accessing files over a network as if they were on a local file system.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'NFS (storage)': *expand acronym letters **N? **F? **S? *name what it enables *name what this access resembles from user perspective
+User has to expand each letter correctly. Add points to score for each explicitly in the math formula (Network=2/10, File=2/10, System=2/10). User has to correctly identify what it enables (file access over a network) — score 3/10. User has to correctly identify what this access resembles from user perspective (local filesystem behavior) — score 1/10. Add points explicitly in the math formula. Perfect score math formula: 3 * 2/10 + 3/10 + 1/10 = 10/10.
 containerisation

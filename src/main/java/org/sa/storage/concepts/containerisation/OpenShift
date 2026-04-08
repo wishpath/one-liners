@@ -1,5 +1,5 @@
 OpenShift
 platform for container orchestration, automation, development, deployment, management; built on Kubernetes.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'OpenShift': *name the software component type *name what it is built on *name >=4 capabilities it provides
+User has to correctly identify the software component type (platform) — score 3/10. User has to correctly identify what it is built on (Kubernetes) — score 3/10. User has to correctly name at least 4 capabilities it provides (orchestration, automation, development, deployment, management). Each correct capability adds 1/10; 4 are required for full score for this element. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4 * 1/10 = 10/10.
 containerisation

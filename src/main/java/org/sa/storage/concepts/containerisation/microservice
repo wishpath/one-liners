@@ -1,5 +1,5 @@
 microservice
 independent part of application for a specific function.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'microservice': *name what it is a part of *name how it is connected to its surrounding system *name the scale of its focus
+User has to correctly identify what it is a part of (application) — score 3/10. User has to correctly identify how it is connected to its surrounding system (independent) — score 3/10. User has to correctly identify the scale of its focus (single function or small bounded responsibility) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
 containerisation
