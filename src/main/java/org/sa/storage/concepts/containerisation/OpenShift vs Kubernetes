@@ -1,5 +1,4 @@
 OpenShift vs Kubernetes
 OpenShift is built on top of Kubernetes, extending its capabilities with additional features.
-Please explain this concept: 
-Default aiEvaluateInstruction
-containerisation
+Please explain relation between 'OpenShift vs Kubernetes': *name how they are similar regarding base system *name how they are similar regarding function *name in what scope they differ
+User has to correctly identify similarity regarding base system (Kubernetes foundation) — score 3/10. User has to correctly identify similarity regarding function (container orchestration) — score 3/10. User has to correctly identify in what scope they differ (OpenShift has larger capability / feature scope) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
