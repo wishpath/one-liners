@@ -1,5 +1,5 @@
 pod
 smallest deployable unit. It can hold one or more containers.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'pod': *name what type of unit it is *name what it can contain *name how many such items it can contain
+User has to correctly identify what type of unit it is (deployable unit) — score 3/10. User has to correctly identify what it can contain (containers) — score 3/10. User has to correctly state how many such items it can contain (one or more) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
 containerisation
