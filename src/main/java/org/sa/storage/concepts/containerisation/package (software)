@@ -1,5 +1,5 @@
 package (software)
 set of files or resources bundled for software deployment.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'package (software)': *name what it consists of *name the action applied to them *name the purpose it serves
+User has to correctly identify what it consists of (files or resources) — score 3/10. User has to correctly identify the action applied to them (bundled) — score 3/10. User has to correctly identify the purpose it serves (software deployment) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
 containerisation
