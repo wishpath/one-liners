@@ -1,5 +1,5 @@
 PVC (containerisation)
 Persistent Volume Claim - request for PV storage by a user.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Explain 'PVC (containerisation)': *expand acronym letters **P? **V? **C? *name what type of operation it represents *name who initiates this operation *name what the operation targets
+User has to expand each acronym letter correctly (Persistent=2/10, Volume=2/10, Claim=2/10). User has to correctly identify what type of operation it represents (request, demand, requirement) — score 2/10. User has to correctly identify who initiates this operation (user / workload) — score 1/10. User has to correctly identify what the operation targets (storage / PV) — score 1/10. Add points explicitly in the math formula. Perfect score math formula: 3 * 2/10 + 2/10 + 1/10 + 1/10 = 10/10.
 containerisation
