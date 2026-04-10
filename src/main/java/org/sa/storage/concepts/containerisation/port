@@ -1,5 +1,5 @@
 port
 communication endpoint.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'port': *name what type of element it is *name what it is used for
+User has to correctly identify what type of element it is (endpoint) — score 5/10. User has to correctly identify what it is used for (communication) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 containerisation

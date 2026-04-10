@@ -1,5 +1,5 @@
 PV (containerisation)
 Persistent Volume — storage independent of containers, managed by platform or admin.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Explain 'PV (containerisation)'. *Expand what each letter means? **P? **V? *name what it is independent from *name who manages it
+User has to expand each letter correctly. Add points to score for each explicitly in the math formula (Persistent=2/10, Volume=2/10). User has to correctly identify what it is independent from (containers) — score 3/10. User has to correctly identify who manages it (platform or admin). For each correct manager add 3/10 points in the math formula. 2 managers are enough to receive full score for this element. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 3/10 + 2 * 3/10 = 10/10.
 containerisation
