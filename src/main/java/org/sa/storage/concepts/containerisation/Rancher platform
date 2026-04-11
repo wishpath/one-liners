@@ -1,5 +1,5 @@
 Rancher platform
 management platform for container orchestration and Kubernetes.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'Rancher platform': *name the software component type *name what functionality it manages *name the concrete base platform it manages
+User has to correctly identify the software component type (platform) — score 3/10. User has to correctly identify what functionality it manages (container orchestration) — score 3/10. User has to correctly identify the concrete base platform it manages (Kubernetes) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
 containerisation
