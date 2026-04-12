@@ -1,5 +1,5 @@
 runtime
 software providing components to execute an app (or period when a program is executing).
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'runtime': *name the software component type *name what it provides *name what it enables to happen
+User has to correctly identify the software component type (software) — score 3/10. User has to correctly identify what it provides (components) — score 3/10. User has to correctly identify what it enables to happen (application execution) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
 containerisation

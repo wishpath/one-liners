@@ -1,5 +1,5 @@
 SSH
 Secure Shell key pair (public/private) – authenticates and secures network communication.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'SSH': *expand acronym letters **S? **SH? *name what it proves *name what it allows after this proof *name where it allows it
+User has to expand each acronym component correctly (Secure=2/10, Shell=2/10). User has to correctly identify what it proves (identity / authenticity via authentication) — score 2/10. User has to correctly identify what it allows after this proof (secure remote communication and command execution) — score 2/10. User has to correctly identify where it allows it (remote systems / network hosts) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 2 * 2/10 + 3 * 2/10 = 10/10.
 containerisation

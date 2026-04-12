@@ -1,5 +1,5 @@
 throttling
 intentional limitation or control of certain resources, actions, or processes within an app or a system.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'throttling': *name objects of this action *describe the action in other words *name where this happens
+User has to correctly identify objects of the action (certain resources / actions / processes) — score 3/10. User has to correctly describe the action in other words (limiting / controlling / restricting usage or execution rate) — score 3/10. User has to correctly identify where this happens (applications / systems / services) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
 containerisation
