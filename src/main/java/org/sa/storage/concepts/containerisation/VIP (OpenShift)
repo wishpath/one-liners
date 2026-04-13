@@ -1,5 +1,5 @@
 VIP (OpenShift)
 Virtual IP - routes traffic to services or pods within cluster, often for load balancing.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Explain 'VIP (OpenShift)'. *expand acronym letters **V? **I? **P? *name what it routes *name where it routes within *name purpose it often serves regarding relation between instances
+User has to expand each acronym letter correctly (Virtual=2/10, IP=2/10). User has to correctly identify what it routes (traffic) — score 2/10. User has to correctly identify where it routes within (cluster to services or pods) — score 2/10. User has to correctly identify purpose it often serves (load balancing) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 2 * 2/10 + 3 * 2/10 = 10/10.
 containerisation
