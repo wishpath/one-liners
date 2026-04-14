@@ -1,5 +1,6 @@
 worker node
-computing node for running the containerized applications, has its own CPU, memory, and other resources.
-Please explain this concept: 
-Default aiEvaluateInstruction
+node for running the containerized apps - has its own CPU, memory, and storage.
+Please explain concept 'worker node': *name what its main function is *name exactly 3 resources it has
+User has to correctly identify its main function (running containerized applications / execution of workloads) — score 4/10. User has to correctly name exactly 3 resources it has (CPU, memory, storage). Each correct resource contributes 2/10 — expressed as 3 * 2/10 = 6/10 total.
+Perfect score math formula: 4/10 + 3 * 2/10 = 10/10.
 containerisation
