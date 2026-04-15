@@ -1,5 +1,5 @@
 YAML
 (YAML Ain't Markup Language) - is a human-readable data serialization format. Like XML or JSON.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'YAML': *expand acronym letters **Y? **A? **M? **L? *name what type of format it is in terms of purpose *name >=2 similar formats
+User has to expand each acronym letter correctly (Y=YAML, A=Ain’t, M=Markup, L=Language). Each correct letter contributes 1/10 — expressed as 4 * 1/10 = 4/10 total. User has to correctly identify what type of format it is in terms of purpose (data serialization format) — score 3/10. User has to correctly name at least 2 similar formats (XML, JSON). Each correct format contributes 1/10 — 2 are required for full score for this element. Add points explicitly in the math formula. Perfect score math formula: 4 * 1/10 + 3/10 + 2 * 1/10 + 1/10 = 10/10.
 containerisation
