@@ -1,5 +1,5 @@
 connection pool (database)
 multiple reusable database connections, speeds up app-db interactions.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'connection pool (database)': *name what it consists of *name what it improves
+User has to correctly identify what it consists of (database connections) — score 4/10. User has to correctly identify what it improves (application-database interaction performance / speed) — score 6/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 6/10 = 10/10.
 databases
