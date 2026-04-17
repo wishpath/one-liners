@@ -1,5 +1,5 @@
 CTE (SQL)
 Common Table Expression - temporary result set in a larger query.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'CTE (SQL)': *expand acronym letters **C? **T? **E? *name what it contains *in what surrounding structure is it defined and then referenced
+User has to expand each acronym letter correctly (Common=2/10, Table=2/10, Expression=2/10). User has to correctly identify what it contains (temporary result set / query result) — score 2/10. User has to correctly identify the surrounding structure where it is defined and referenced (larger SQL query / statement) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 3 * 2/10 + 2/10 + 2/10 = 10/10.
 databases
