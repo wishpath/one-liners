@@ -1,5 +1,5 @@
 entity (database)
-object stored in database, represents data record.
-Please explain this concept: 
-Default aiEvaluateInstruction
+row (entry) in database, represents an object.
+Please explain concept 'entity (database)': *what it represents in a relational database table *what software abstraction it maps to
+User has to correctly identify what it represents in a relational database table (row / record / entry) — score 5/10. User has to correctly identify what software abstraction it maps to (object) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 databases

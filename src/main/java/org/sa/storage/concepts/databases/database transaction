@@ -1,0 +1,5 @@
+database transaction
+group of database actions done as one, all succeed or fail together.
+Please explain concept 'database transaction': *name what it consists of *explain how it can succeed *explain the minimum requirement for how it can fail
+User has to correctly identify what it consists of (group of database actions / operations) — score 3/10. User has to correctly explain how it can succeed (all actions must succeed together) — score 3/10. User has to correctly explain the minimum requirement for failure (if one action fails, the whole transaction fails) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
+databases

@@ -1,5 +1,5 @@
 DAO
 Data Access Object - object with custom CRUD methods to interact with database.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'DAO': *expand acronym letters **D? **A? **O? *name what type of software component it is *name what it is used to interact with
+User has to expand each acronym letter correctly (Data=2/10, Access=2/10, Object=2/10). User has to correctly identify what type of software component it is (object) — score 2/10. User has to correctly identify what it is used to interact with (database) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 3 * 2/10 + 2/10 + 2/10 = 10/10.
 databases
