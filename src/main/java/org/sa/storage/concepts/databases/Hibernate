@@ -1,5 +1,5 @@
 Hibernate
-Object-Relational Mapping (ORM) framework for the Java - predecessor of JPA (Java Persistence API).
-Please explain this concept: 
-Default aiEvaluateInstruction
+Object-Relational Mapping (ORM) framework for Java - predecessor of JPA (Java Persistence API).
+Please explain concept 'Hibernate': *name what type of software component it is *name what programming language it is used with *name what newer standard it preceded
+User has to correctly identify what type of software component it is (Object-Relational Mapping / ORM framework) — score 6/10. User has to correctly identify what programming language it is used with (Java) — score 3/10. User has to correctly identify what newer standard it preceded (JPA / Java Persistence API) — score 1/10. Add points explicitly in the math formula. Perfect score math formula: 6/10 + 3/10 + 1/10 = 10/10.
 databases
