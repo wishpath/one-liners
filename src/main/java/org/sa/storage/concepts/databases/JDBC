@@ -1,5 +1,5 @@
 JDBC
-Java Database Connectivity - Java API for executing SQL in relational databases.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Java Database Connectivity - Java dependency providing standard methods for executing SQL in relational databases.
+Please explain concept 'JDBC': *expand acronym letters **J? **D? **B? **C? *which programming language uses it *what type of component it is in the application project *what is an interaction target *what does JDBC define for this interaction
+User has to expand each acronym letter correctly (Java=1/10, Database=1/10, Connectivity=1/10). User has to correctly identify programming language (Java) — score 2/10. User has to correctly identify component type in application (API layer / database access component / library / dependency) — score 2/10. User has to correctly identify interaction target (relational database) — score 2/10. User has to correctly identify what JDBC defines for this interaction (standard interface / standard methods for database communication) — score 1/10. Add points explicitly in the math formula. Perfect score math formula: 3 * 1/10 + 3 * 2/10 + 1/10 = 10/10.
 databases
