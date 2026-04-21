@@ -1,5 +1,5 @@
 JPA (db)
-Java Persistence API - standard for managing relational data in Java apps, mapping objects to database tables.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Java Persistence API - standard methods for managing relational data in Java apps, mapping objects to database tables.
+Please explain concept 'JPA (db)': *expand acronym letters **J? **P? **A? *explain the expanded acronym letters **J? **P? **A? *name what is being mapped
+User has to correctly expand each acronym letter (Java=1/10, Persistence=1/10, API=1/10). User has to correctly explain the meaning of the expanded acronym letters (Java = programming language in which JPA works — 2/10, Persistence = keeping data stored, retrieved, and managed — 2/10, API = standard interface / standard methods for interaction — 2/10). User has to correctly identify what is being mapped (objects to database tables) — score 1/10. Add points explicitly in the math formula. Perfect score math formula: 3 * 1/10 + 3 * 2/10 + 1/10 = 10/10.
 databases
