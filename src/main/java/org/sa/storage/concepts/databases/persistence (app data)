@@ -1,0 +1,5 @@
+persistence (app data)
+keeping data stored so it remains after the program stops running.
+Please explain concept 'persistence (app data)': *what happens to data in relation to the application lifecycle
+User has to correctly identify what happens to the data in relation to the application lifecycle (it remains stored after the application stops running / restarts) — score 10/10. Add points explicitly in the math formula. Perfect score math formula: 10/10 = 10/10.
+databases
