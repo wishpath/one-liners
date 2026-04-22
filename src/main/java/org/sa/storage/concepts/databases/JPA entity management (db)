@@ -1,5 +1,5 @@
 JPA entity management (db)
 handling objects mapped to database rows.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'JPA entity management (db)': *name what is being handled *name what it is mapped to
+User has to correctly identify what is being handled (objects / entities) — score 5/10. User has to correctly identify what it is mapped to (database rows / table records) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 databases
