@@ -1,5 +1,5 @@
 JPA responsibilities (db)
-Java Persistence API covers SQL queries, object mapping, transactions, and entity management.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Java Persistence API — connects DB & Java through JPQL/SQL queries; maps objects-tables; manages transactions
+Please explain concept 'JPA responsibilities (db)': *expand acronym letters **J? **P? **A? *name two main components it helps to interact *what command format is used to interact *name what is being mapped *name responsibility on group of these all-or-nothing interactions
+User has to correctly expand each acronym letter (Java=1/10, Persistence=1/10, API=1/10). User has to correctly identify two main components it helps to interact (Java (application/object), relational database) — score 2/10. User has to correctly identify command format used to interact (JPQL / SQL) — score 2/10. User has to correctly identify what is being mapped (objects to database tables) — score 2/10. User has to correctly identify responsibility on group of all-or-nothing interactions (transaction management) — score 1/10. Add points explicitly in the math formula. Perfect score math formula: 3 * 1/10 + 3 * 2/10 + 1/10 = 10/10.
 databases
