@@ -1,5 +1,5 @@
 JPQL
-Java Persistence Query Language - platform-independent database queries (get auto-translated to specific SQL).
-Please explain this concept: 
-Default aiEvaluateInstruction
+Java Persistence Query Language - platform-independent database queries auto-translated to specific SQL.
+Please explain concept 'JPQL': *expand acronym letters **J? **P? **Q? **L? *name what type of commands it represents *explain its relation to platforms *name what those commands are translated into
+User has to correctly expand each acronym letter (Java=1/10, Persistence=1/10, Query=1/10, Language=1/10). User has to correctly identify what type of commands it represents (database queries / query commands) — score 2/10. User has to correctly explain its relation to platforms (platform-independent / not tied to specific database platform) — score 2/10. User has to correctly identify what those commands are translated into (SQL) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 4 * 1/10 + 3 * 2/10 = 10/10.
 databases
