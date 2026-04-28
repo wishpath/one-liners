@@ -1,5 +1,5 @@
 object mapping (database)
 linking app objects to database tables for storage/retrieval.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'object mapping (database)': *name what two things are being connected *name what purpose this connection serves
+User has to correctly identify what two things are being connected (application objects and database tables) — score 6/10. User has to correctly identify what purpose this connection serves (storage and retrieval of data) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 6/10 + 4/10 = 10/10.
 databases
