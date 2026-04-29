@@ -1,5 +1,5 @@
 ORM
 Object-Relational Mapping - framework for object mapping e.g. Hibernate.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'ORM': *expand acronym letters **O? **R? **M? *name what type of software component it is *explain what it connects on larger and smaller scale
+User has to correctly expand each acronym letter (Object=1/10, Relational=1/10, Mapping=1/10). User has to correctly identify what type of software component it is (framework) — score 2/10. User has to correctly explain what it connects on larger scale (application and relational database) — score 3/10. User has to correctly explain what it connects on smaller scale (objects and database tables / rows) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 3 * 1/10 + 2/10 + 3/10 + 2/10 = 10/10.
 databases
