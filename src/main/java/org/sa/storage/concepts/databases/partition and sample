@@ -1,5 +1,5 @@
 partition and sample
 part of database table.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'partition and sample': *what software component do they both relate to *what is the relation
+User has to correctly identify what software component they both relate to (database table) — score 4/10. User has to correctly describe what the relation is (both represent subsets / parts of a table) — score 6/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 6/10 = 10/10.
 databases
