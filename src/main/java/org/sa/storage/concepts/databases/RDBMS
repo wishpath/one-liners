@@ -1,5 +1,5 @@
 RDBMS
-relational database management system.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Relational DataBase Management System — manages structured data in tables — example: MySQL, PostgreSQL, Oracle Database
+Please explain concept 'RDBMS': *expand acronym letters **R? **D? **B? **M? **S? *name what it does *name at least one example
+User has to correctly expand each acronym letter (Relational=1/10, Database=1/10, Management=1/10, System=1/10). User has to correctly identify what it does (manages structured data in tables) — score 3/10. User has to correctly name at least one example (e.g., MySQL / PostgreSQL / Oracle Database). Providing one correct example is sufficient for full score — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 4 * 1/10 + 3/10 + 3/10 = 10/10.
 databases
