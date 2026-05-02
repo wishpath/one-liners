@@ -1,5 +1,5 @@
 bad cohesion (DDD)
-module elements unrelated, causing complexity and confusion.
-Please explain this concept: 
-Default aiEvaluateInstruction
+grouping unrelated elements together, causing complexity and confusion.
+Please explain concept 'bad cohesion (DDD)': *name what is being grouped *describe the relationship between grouped elements *name the consequence of this grouping
+User has to correctly identify what is being grouped (module elements / components) — score 3/10. User has to correctly describe the relationship between grouped elements (unrelated / weakly related) — score 3/10. User has to correctly identify the consequence of this grouping (complexity / confusion / poor maintainability) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
 domainDrivenDesign
