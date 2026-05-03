@@ -1,5 +1,5 @@
 bad separation of concerns (DDD)
-overlapping responsibilities causing tight coupling and confusion.
-Please explain this concept: 
-Default aiEvaluateInstruction
+software components overlap in concerns, creating tight coupling.
+Please explain concept 'bad separation of concerns (DDD)': *compare functionalities of software components *name >=1 problem this causes
+User has to correctly compare functionalities of software components (overlapping / not clearly separated responsibilities) — score 6/10. User has to correctly name at least one problem this causes (tight coupling / confusion / reduced maintainability). Providing one correct problem is sufficient for full score — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 6/10 + 4/10 = 10/10.
 domainDrivenDesign
