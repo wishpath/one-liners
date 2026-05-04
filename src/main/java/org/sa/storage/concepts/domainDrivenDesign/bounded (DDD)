@@ -1,0 +1,5 @@
+bounded (DDD)
+distinct business area, isolated from other contexts, distinct contextual meaning, independent evolution.
+Please explain concept 'bounded (DDD)': *name the business area context *describe its relation to other contexts *describe how its meaning compares to other contexts *comment on its evolution dependency
+User has to correctly identify the business area context (specific domain / business area) — score 3/10. User has to correctly describe its relation to other contexts (isolated / separated from other contexts) — score 3/10. User has to correctly describe how its meaning compares to other contexts (distinct contextual meaning / terms differ across contexts) — score 2/10. User has to correctly comment on its evolution dependency (independent evolution from other contexts) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 2/10 + 2/10 = 10/10.
+domainDrivenDesign
