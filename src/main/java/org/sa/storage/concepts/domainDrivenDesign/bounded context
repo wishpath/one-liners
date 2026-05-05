@@ -1,5 +1,5 @@
 bounded context
-software unit with consistent terms, e.g., order processing in retail, payments in finance.
-Please explain this concept: 
-Default aiEvaluateInstruction
+software unit with consistent terms
+Please explain concept 'bounded context': *name what type of unit/component it is *describe what is consistent within it
+User has to correctly identify what type of unit it is (software unit) — score 4/10. User has to correctly describe what is consistent within it (terms / language / meaning within the model) — score 6/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 6/10 = 10/10.
 domainDrivenDesign
