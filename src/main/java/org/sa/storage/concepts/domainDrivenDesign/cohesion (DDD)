@@ -1,5 +1,5 @@
 cohesion (DDD)
-degree to which elements in a module belong together.
-Please explain this concept: 
-Default aiEvaluateInstruction
+degree to which parts of a software element fit together around a single purpose.
+Please explain concept 'cohesion (DDD)': *describe the context for the analysed parts *how do parts relate to context *how do parts relate to one another
+User has to correctly describe the context for the analysed parts (software element / module / component with a defined purpose) — score 3/10. User has to correctly describe how parts relate to context (they are part of a single context with single purpose) — score 3/10. User has to correctly describe how parts relate to one another (they are strongly related / work together / contribute to a single purpose) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
 domainDrivenDesign
