@@ -1,4 +1,4 @@
-domain vs bounded context
+gdomain vs bounded context
 domain usually contains multiple bounded contexts.
 Please explain this concept: 
 Default aiEvaluateInstruction

@@ -1,5 +1,5 @@
 domain model
-conceptual design of business logic and rules, implemented by software units like microservices.
-Please explain this concept: 
-Default aiEvaluateInstruction
+group of related classes and objects representing business logic, rules and concepts of single business area.
+Please explain concept 'domain model': *what empiric aspects it describes in relation to company *how is it implemented *what company aspect makes domain model distinct from other domain models
+User has to correctly identify what empiric aspects it describes in relation to company (business logic / rules / processes / concepts of the business domain) — score 5/10. User has to correctly describe how it is implemented (as related classes and objects in software) — score 3/10. User has to correctly identify what company aspect makes it distinct from other domain models (the specific business domain / business area it represents) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 3/10 + 2/10 = 10/10.
 domainDrivenDesign
