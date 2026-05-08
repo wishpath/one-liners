@@ -1,5 +1,5 @@
-gdomain vs bounded context
+domain vs bounded context
 domain usually contains multiple bounded contexts.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'domain vs bounded context': *which one is bigger *how do they relate
+User has to correctly identify which one is bigger (domain is bigger than bounded context) — score 4/10. User has to correctly describe how they relate (a domain contains multiple bounded contexts) — score 6/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 6/10 = 10/10.
 domainDrivenDesign
