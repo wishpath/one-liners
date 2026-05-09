@@ -1,5 +1,5 @@
 good cohesion (DDD)
-module elements focused on a single purpose, easy to maintain.
-Please explain this concept: 
-Default aiEvaluateInstruction
+software elements/parts focused on a single purpose, easy to maintain.
+explain concept 'good cohesion (DDD)': *what is being assessed (what kind of elements) *what criteria fit the definition *what it results in
+User has to correctly identify what is being assessed (software elements / parts of a module or component) — score 3/10. User has to correctly describe criteria (strong focus on single responsibility / related functionality / shared purpose) — score 3/10. User has to correctly describe result (easy maintenance, clarity, low complexity) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
 domainDrivenDesign
