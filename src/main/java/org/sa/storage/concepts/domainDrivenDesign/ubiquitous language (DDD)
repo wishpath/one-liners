@@ -1,5 +1,5 @@
 ubiquitous language (DDD)
-shared, common, used by both domain experts and developers to describe the domain model.
-Please explain this concept: 
-Default aiEvaluateInstruction
+shared, common language used by both domain experts and developers to describe the domain model.
+Please explain concept 'ubiquitous language (DDD)': *what kind of language it is (use synonym/adjective) *which parties use it *what it describes
+User has to correctly identify what kind of language it is (shared / common / unified language) — score 3/10. User has to correctly identify which parties use it (domain experts and developers) — score 3/10. User has to correctly identify what it describes (domain model / business concepts and rules) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
 domainDrivenDesign
