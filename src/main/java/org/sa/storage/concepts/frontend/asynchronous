@@ -1,5 +1,5 @@
 asynchronous
-each next task starts without previous one ending. Task become concurrent.
-Please explain this concept: 
-Default aiEvaluateInstruction
+each next task starts without previous one ending. Tasks become concurrent.
+Please explain concept 'asynchronous': *describe relationship between task start and previous task completion *name what happens to tasks because of this
+User has to correctly describe relationship between task start and previous task completion (next task can start before previous task finishes) — score 5/10. User has to correctly identify what happens to tasks because of this (they become concurrent / overlap in execution) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 frontend
