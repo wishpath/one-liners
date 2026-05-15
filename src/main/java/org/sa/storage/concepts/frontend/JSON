@@ -1,5 +1,5 @@
 JSON
 JavaScript Object Notation - text-based data format representing objects; for easy data exchange between systems.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'JSON': *expand acronym letters **J? **S? **O? **N? *name what format medium it uses *name what software element it usually represents *name what it is commonly used for (very general answer)
+User has to correctly expand each acronym letter (JavaScript=1/10, Object=1/10, Notation=1/10). User has to correctly identify format medium it uses (text / plain text format) — score 2/10. User has to correctly identify what software element it usually represents (structured data / objects / data structures) — score 3/10. User has to correctly identify what it is commonly used for (data exchange / communication between systems) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 3 * 1/10 + 2/10 + 3/10 + 2/10 = 10/10.
 frontend
