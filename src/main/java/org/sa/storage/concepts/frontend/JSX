@@ -1,5 +1,5 @@
 JSX
 JavaScript as XML - is an HTML-like syntax used in React to create UI elements.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'JSX': *expand acronym letters **J? **S? **X? *name what kind of syntax it is similar to *name what library/framework commonly uses it *name what it is used to create
+User has to correctly expand each acronym letter (JavaScript=1/10, XML=1/10). User has to correctly identify what kind of syntax it is similar to (HTML / XML-like syntax) — score 3/10. User has to correctly identify what library/framework commonly uses it (React) — score 2/10. User has to correctly identify what it is used to create (UI elements / user interface components) — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 2 * 1/10 + 3/10 + 2/10 + 3/10 = 10/10.
 frontend
