@@ -1,5 +1,5 @@
 JWT
 JSON Web Token - compact, URL-safe token format commonly used for authentication and authorization purposes.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'JWT': *expand acronym letters **J? **W? **T? *describe in which transmission context JWT can be embedded without requiring encoding changes *name >2 general functions what it is commonly used for
+User has to correctly expand each acronym letter (JSON=1/10, Web=1/10, Token=1/10). User has to correctly describe transmission context where JWT can be embedded without encoding changes (URL / HTTP headers / request bodies as text-safe token) — score 3/10. User has to correctly name general functions (authentication, authorization, session handling, identity propagation, claims exchange). Each correct function contributes 2/10, and naming any two is sufficient for full 4/10. Add points explicitly in the math formula. Perfect score math formula: 3 * 1/10 + 3/10 + 2 * 2/10 = 10/10.
 frontend
