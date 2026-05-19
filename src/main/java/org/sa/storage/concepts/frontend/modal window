@@ -1,5 +1,5 @@
 modal window
 UI element that blocks interaction with the rest of the interface until closed.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'modal window': *what type of element it is *describe its interaction with context *when this interaction stops?
+User has to correctly identify what type of element it is (UI overlay / dialog / blocking interface component) — score 4/10. User has to correctly describe its interaction with context (it disables or prevents interaction with underlying UI while active) — score 3/10. User has to correctly state when this interaction stops (when the modal is closed/dismissed/confirmed/cancelled) — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 3/10 + 3/10 = 10/10.
 frontend
