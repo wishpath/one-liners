@@ -1,5 +1,5 @@
 landing page
 entry point for a particular section of a website. Prompts a specific action like purchase or signing up.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'landing page': *name what kind of website location it is *name what it usually encourages (in general)
+User has to correctly identify what kind of website location it is (entry page / entry point for a section or campaign) — score 5/10. User has to correctly identify what it usually encourages (specific user action / conversion) — mentioning “specific user action” is sufficient for full 5/10 score; no examples are required. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 frontend
