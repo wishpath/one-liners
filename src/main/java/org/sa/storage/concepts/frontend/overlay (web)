@@ -1,5 +1,5 @@
 overlay (web)
 UI element layered above others, may be modal (blocks underlying UI) or just provide extra content.
-Please explain this concept: 
-Default aiEvaluateInstruction
-frontend
+Please explain concept 'overlay (web)': *what type of element it is *how it relates to its context in terms of positioning *name 2 possible interactions with the underlying context *name what it is called in the more restrictive case
+User has to correctly identify what type of element it is (layered UI element / floating UI component / UI layer above content) — score 2/10. User has to correctly describe positioning relation (rendered above other UI layers, visually stacked over existing UI context) — score 2/10. User has to correctly name two interactions (non-blocking informational overlay + blocking modal interaction) — each correct interaction contributes 2/10, total 4/10. User has to correctly name restrictive case (modal window / modal overlay) — score 2/10.
+Perfect score math formula: 2/10 + 2/10 + 2 * 2/10 + 2/10 = 10/10.
