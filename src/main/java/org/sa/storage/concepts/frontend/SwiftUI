@@ -1,5 +1,5 @@
 SwiftUI
 user interface framework developed by Apple for building apps across iOS, macOS, watchOS, and tvOS.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'SwiftUI': *name what type of software component it is *name who developed it *name what it is used to build *name at least 2 supported platforms
+User has to correctly identify what type of software component it is (user interface framework / UI framework) — score 2/10. User has to correctly identify who developed it (Apple) — score 2/10. User has to correctly identify what it is used to build (applications / user interfaces for apps) — score 2/10. User has to correctly name supported platforms (iOS, macOS, watchOS, tvOS). Each correct platform contributes 2/10, and naming any 2 is sufficient for full 4/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 2/10 + 2 * 2/10 = 10/10.
 frontend
