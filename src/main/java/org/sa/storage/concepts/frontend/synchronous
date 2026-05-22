@@ -1,5 +1,5 @@
 synchronous
 each next task starts when previous one ends.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'synchronous': *describe task start in comparison to other tasks *how do tasks relate in terms of concurrency
+User has to correctly describe task start in comparison to other tasks (a task starts only after previous task completes) — score 5/10. User has to correctly describe how tasks relate in terms of concurrency (tasks are sequential / non-concurrent / do not overlap) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 frontend
