@@ -1,0 +1,5 @@
+token (security)
+value (usually string or binary) issued to represent authentication, authorization, or session state
+Please explain concept 'token (security)': *name >=2 forms it usually has *name >=2 functions it completes
+User has to correctly name at least two forms it usually has (e.g., string, binary, JWT, opaque token, base64-encoded token, signed token) — each correct form contributes 2/10, and naming any two is sufficient for full 4/10. User has to correctly name at least two functions it completes (e.g., authentication, authorization, session identification, access control, identity propagation) — each correct function contributes 3/10, and naming any two is sufficient for full 6/10. Add points explicitly in the math formula. Perfect score math formula: 2 * 2/10 + 2 * 3/10 = 10/10.
+frontend
