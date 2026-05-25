@@ -1,5 +1,5 @@
 URL safe format
-avoids special characters, making data suitable for transmission in URLs.
-Please explain this concept: 
-Default aiEvaluateInstruction
+avoids special characters — suitable for transmission in URLs.
+Please explain concept 'URL safe format': *what it avoids *what transmission context it becomes suitable for
+User has to correctly identify what it avoids (special/reserved/problematic URL characters) — score 5/10. User has to correctly identify what transmission context it becomes suitable for (URLs / web addresses / URL parameters) — score 5/10. Perfect score math formula: 5/10 + 5/10 = 10/10.
 frontend

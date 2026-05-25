@@ -1,5 +1,5 @@
 UI dialog
-secondary window used to display information or prompt user action.
-Please explain this concept: 
-Default aiEvaluateInstruction
+UI state — prioritizes attention for a prompt or message — requires action or dismissal — e.g. window or popup.
+Please explain concept 'UI dialog': *what kind of UI construct it is *what it does regarding its context and user *what it presents, please list >=2 *what resolution it requires, please list >=2 *list >=2 common UI presentation forms (>=2)
+User has to correctly identify what kind of UI construct it is (focused interaction unit / bounded decision or input flow within a UI) — score 2/10. User has to correctly describe what it does regarding its context and user (temporarily isolates a task, requires user attention, and pauses or restricts interaction with surrounding UI until resolved) — score 2/10. User has to correctly list at least two things it presents (e.g. message, prompt, form, input request, confirmation request) — each correct item contributes 1/10, so 2 items = 2/10. User has to correctly list at least two resolutions it requires (e.g. confirm, cancel, submit, dismiss, accept, reject) — each correct item contributes 1/10, so 2 items = 2/10. User has to correctly list at least two presentation forms (e.g. modal popup, full-screen view, side sheet/drawer, inline embedded panel, route-level view replacement) — each correct form contributes 1/10, so 2 items = 2/10. Perfect score math formula: 2/10 + 2/10 + 2 * 1/10 + 2 * 1/10 + 2 * 1/10 = 10/10.
 frontend
