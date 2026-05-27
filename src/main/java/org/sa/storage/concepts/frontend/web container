@@ -1,5 +1,5 @@
 web container
 server component managing servlets and Java Server Pages (JSP) execution.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'web container': *is a component of what bigger structure *name >=2 example managed element types
+User has to correctly identify what bigger structure it is a component of (web server / application server / Java EE server) — score 6/10. User has to correctly name at least two managed element types (Servlets, JSP, filters, listeners) — each correct item contributes 2/10, so 2 items = 4/10. Perfect score math formula: 6/10 + 2 * 2/10 = 10/10.
 frontend
