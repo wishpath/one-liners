@@ -1,5 +1,5 @@
 web portal
-platform - provides access to services.
-Please explain this concept: 
-Default aiEvaluateInstruction
+platform — provides access to services.
+Please explain concept 'web portal': *what type of software/system layer can be considered "web portal" together with related services, ecosystem and infrastructure (one word)? *what is its function to related services and users?
+User has to correctly identify the system layer it belongs to (platform) — score 5/10. User has to correctly describe its function to services and users (centralized access point that aggregates and exposes multiple services through a unified entry interface) — score 5/10. Perfect score math formula: 5/10 + 5/10 = 10/10.
 frontend
