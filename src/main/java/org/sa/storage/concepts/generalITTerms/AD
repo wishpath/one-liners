@@ -1,5 +1,6 @@
 AD
 architecture description or active directory (access rights).
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please expand acronym 'AD' in two common ways: *one related to system design documentation *second related to access management
+User has to correctly expand first meaning (architecture description) — score 2 * 3/10 (each correct letter scored separately). User has to correctly expand second meaning (Active Directory) — score 2 * 2/10 (each correct letter scored separately).
+Perfect score math formula: 2 * 3/10 + 2 * 2/10 = 10/10.
 generalITTerms
