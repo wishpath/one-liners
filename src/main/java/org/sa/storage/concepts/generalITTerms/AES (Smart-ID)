@@ -1,5 +1,5 @@
 AES (Smart-ID)
 Advanced Electronic Signature — using a certificate, but without full Qualified (QES) legal status.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'AES (Smart-ID)': *expand acronym letters **A? **E? **S? *what does it uses to validate/verify (it has cryptographic binding, one word)? *what is its relation with QES legal status?
+User has to correctly expand acronym (Advanced=2/10, Electronic=2/10, Signature=2/10) — score 6/10. User has to correctly identify what it uses to validate/verify (certificate) — score 2/10. User has to correctly identify its relation with QES legal status (does not have full QES legal status / is not a QES / is below QES status legally) — score 2/10. Perfect score math formula: 3 * 2/10 + 2/10 + 2/10 = 10/10.
 generalITTerms
