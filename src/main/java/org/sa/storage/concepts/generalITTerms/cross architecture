@@ -1,5 +1,5 @@
 cross architecture
-making sure components fit well: front, back, data, infrastructure and security
-Please explain this concept: 
-Default aiEvaluateInstruction
+making sure components fit well: front, back, data, infrastructure and security.
+Please explain concept 'cross architecture': *narrative *name >=3 parts involved
+User has to provide a narrative describing the concept (alignment and fit between different architectural areas/components) — score 4/10. User has to correctly name at least three involved parts (frontend, backend, data, infrastructure, security) — each correct part contributes 2/10, so 3 parts = 6/10. Perfect score math formula: 4/10 + 3 * 2/10 = 10/10.
 generalITTerms
