@@ -1,5 +1,5 @@
 dispatcher
 system or person that ensures efficiency by distributing resources, tasks, and information.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'dispatcher': *what is the main action *list >= 2 examples of objects *list >= 2 examples of subject types
+User has to correctly identify main action (distribution / routing / allocation) — score 4/10. User has to correctly list at least two objects (tasks, requests, messages, jobs, resources, information) — each correct item contributes 2/10, so 2 items = 4/10. User has to correctly list at least two subject types (system, service, person, scheduler, controller) — each correct item contributes 1/10, so 2 items = 2/10. Perfect score math formula: 4/10 + 2 * 2/10 + 2 * 1/10 = 10/10.
 generalITTerms
