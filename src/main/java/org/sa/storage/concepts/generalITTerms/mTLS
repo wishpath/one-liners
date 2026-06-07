@@ -1,0 +1,5 @@
+mTLS
+Mutual Transport Layer Security — protocol — mechanism where client and server authenticate each other.
+Please explain concept 'mTLS': *expand acronym letters **m? **T? **L? **S? *what software component it is? *what is main action *what is a direction of main action *name 2 sides included
+User has to correctly expand acronym (Mutual=1/10, Transport=1/10, Layer=1/10, Security=1/10) — score 4/10. User has to correctly identify software component type (security protocol) — score 1/10. User has to correctly identify main action (mutual authentication / verification) — score 2/10. User has to correctly identify direction (bidirectional authentication between both endpoints) — score 1/10. User has to correctly name two sides (client and server) — score 2 * 1/10. Perfect score math formula: 4 * 1/10 + 1/10 + 2/10 + 1/10 + 2 * 1/10 = 10/10.
+generalITTerms
