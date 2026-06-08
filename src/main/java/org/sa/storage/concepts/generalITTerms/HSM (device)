@@ -1,5 +1,5 @@
 HSM (device)
 Hardware Security Module — specialised computer device that stores and manages cryptographic keys.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'HSM (device)': *expand acronym letters **H? **S? **M? *what does it store *what does it manage
+User has to correctly expand acronym (Hardware=2/10, Security=2/10, Module=2/10) — score 6/10. User has to correctly identify what it stores (cryptographic keys) — score 2/10. User has to correctly identify what it manages (cryptographic keys) — score 2/10. Perfect score math formula: 3 * 2/10 + 2/10 + 2/10 = 10/10.
 generalITTerms
