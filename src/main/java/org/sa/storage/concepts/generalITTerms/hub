@@ -1,5 +1,5 @@
 hub
-central point, where things are executed.
-Please explain this concept: 
-Default aiEvaluateInstruction
+central component where interactions are coordinated or routed.
+Please explain concept 'hub': *what is its logical position in a system context *name >=2 actions it performs
+User has to correctly identify logical position (central / intermediary / coordination point within a system or network structure) — score 4/10. User has to correctly name at least two actions it performs (routing, coordination, forwarding, distribution, aggregation) — each correct action contributes 3/10, so 2 actions = 6/10. Perfect score math formula: 4/10 + 2 * 3/10 = 10/10.
 generalITTerms
