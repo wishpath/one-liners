@@ -1,5 +1,5 @@
 infer
 deduce info from evidence. Java example: in "var x = stream.toList()", x is inferred as a List.
-Please explain this concept: 
-Default aiEvaluateInstruction
-generalITTerms
+Please explain concept 'infer': *define the word in short *give example of code *explain the example using the word infer
+User has to correctly define “infer” (derive/compute a value or type from context or evidence) — score 4/10. User has to provide a correct code example — score 3/10. User has to explain the example using the word “infer” correctly — score 3/10.
+Perfect score math formula: 4/10 + 3/10 + 3/10 = 10/10.
