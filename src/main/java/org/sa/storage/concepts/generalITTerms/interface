@@ -1,5 +1,5 @@
 interface
 an intermediate between user and internal functionality; serves as both abstraction and boundary.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'interface': *between what two sides does it exist *what two roles does it serve (both should be one word answers — role functions: in terms of hiding and in terms of separation)
+User has to correctly identify the two sides (user and system/internal functionality) — score 4/10. User has to correctly identify hiding role (abstraction) — score 3/10. User has to correctly identify separation role (boundary) — score 3/10. Perfect score math formula: 4/10 + 3/10 + 3/10 = 10/10.
 generalITTerms
