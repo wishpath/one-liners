@@ -1,5 +1,5 @@
 metadata
 data about data: format, source, purpose, quality, relationships with other data.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'metadata': *what is metadata about *name >=2 examples of information it can contain
+User has to correctly identify what metadata is about (data) — score 4/10. User has to correctly name at least two examples of information it can contain (format, source, purpose, quality, relationships with other data) — each correct example contributes 3/10, so 2 examples = 6/10. Perfect score math formula: 4/10 + 2 * 3/10 = 10/10.
 generalITTerms
