@@ -1,5 +1,5 @@
 SES (Smart-ID)
 Simple Electronic Signature — basic electronic signing, lowest assurance, no certificate required.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'SES (Smart-ID)': *expand acronym letters **S? **E? **S? *what level of assurance does it provide in comparison to QES and AES *is a certificate required
+User has to correctly expand acronym (Simple=2/10, Electronic=2/10, Signature=2/10) — score 6/10. User has to correctly identify assurance level relative to QES and AES (lowest assurance) — score 2/10. User has to correctly identify certificate requirement (no certificate required) — score 2/10. Perfect score math formula: 3 * 2/10 + 2/10 + 2/10 = 10/10.
 generalITTerms
