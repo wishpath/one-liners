@@ -1,5 +1,6 @@
 SSO
 Single Sign-On - authentication method for accessing multiple apps with one login.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'SSO': *expand acronym letters **S? **S? **O? *what main function it serves *what is the benefit regarding case of using multiple apps
+User has to correctly expand acronym (Single=2/10, Sign=2/10, On=2/10) — score 6/10. User has to correctly identify main function (authentication / centralized login / identity verification) — score 2/10. User has to correctly identify benefit (one login for multiple apps / reduced re-authentication / seamless access across apps) — score 2/10.
+Perfect score math formula: 3 * 2/10 + 2/10 + 2/10 = 10/10.
 generalITTerms
