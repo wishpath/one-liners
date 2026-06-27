@@ -1,5 +1,5 @@
 operations specialist
-takes care of IT infrastructure: severs, networks, hardware. Deploys and configures apps.
-Please explain this concept: 
-Default aiEvaluateInstruction
+takes care of IT infrastructure: servers, networks, hardware. Deploys and configures apps.
+Please explain concept 'operations specialist': *what is the main category one takes care of *name >=3 example items of this category *name software component one takes care of *name >=2 actions one performs to take care of this software component
+User has to correctly identify main category (IT infrastructure) — score 1/10. User has to correctly name example items (e.g. servers, networks, hardware, database, storage) — each correct item contributes 2/10, up to 6/10 total (3 items are enough for full score in this part). User has to correctly identify software component (applications/apps, systems, CI/CD pipelines) — score 1/10. User has to correctly name actions performed on this software component (e.g. deploys, configures, troubleshoots, monitors) — each correct action contributes 1/10, up to 2/10 total (2 actions are enough for full score in this part). Perfect score math formula: 1/10 + 3 * 2/10 + 1/10 + 2 * 1/10 = 10/10.
 hardware
