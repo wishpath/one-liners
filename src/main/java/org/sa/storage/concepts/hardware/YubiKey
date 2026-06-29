@@ -1,5 +1,5 @@
 YubiKey
-A flash drive for security purposes on a Mac.
-Please explain this concept: 
-Default aiEvaluateInstruction
+A flash drive for authentication.
+Please explain concept 'YubiKey': *what type of hardware device is it *what is it used for
+User has to correctly identify device type (hardware security key / authentication device) — score 4/10. User has to correctly identify purpose (authentication / secure login / second-factor authentication) — score 6/10. Perfect score math formula: 4/10 + 6/10 = 10/10.
 hardware
