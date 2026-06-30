@@ -1,5 +1,5 @@
 .war file
-Web Application Archive - deployable Java web app package, similar to .jar.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Web Application Archive — deployable Java web app package — similar to .jar.
+Please explain concept '.war file': *expand acronym letters **W? **A? **R? *which programming language is it associated with *main thing, what it enables regarding app *name one similar file type
+User has to correctly expand acronym (Web=2/10, Application=2/10, Archive=2/10) — score 6/10. User has to correctly identify associated programming language (Java) — score 1/10. User has to correctly identify what it enables regarding the application (deployment / deployable web application package) — score 2/10. User has to correctly name similar file type (.jar) — score 1/10. Perfect score math formula: 3 * 2/10 + 1/10 + 2/10 + 1/10 = 10/10.
 javaAndSpring
