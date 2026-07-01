@@ -1,5 +1,5 @@
 abstract class
 both shows what methods the extending classes have to implement and can implement some shared code.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'abstract class': *what can be done with it in terms of inheritance? *name 2 method types it can contain *what does it obligate
+User has to correctly identify inheritance usage (can be extended / subclassed) — score 3/10. User has to correctly name 2 method types it can contain (abstract methods, concrete methods) — each correct item contributes 3/10, so 2 items = 6/10. User has to correctly identify obligation (implement abstract methods) — score 1/10. Perfect score math formula: 3/10 + 2 * 3/10 + 1/10 = 10/10.
 javaAndSpring
