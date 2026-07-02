@@ -1,5 +1,5 @@
 application server
 provides the environment to run the application and manage its components (e.g., beans, servlets).
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'application server': *what does it provide for the application *name >=2 things it manages
+User has to correctly identify what it provides (environment to run the application) — score 4/10. User has to correctly name managed components (e.g. beans, servlets) — each correct item contributes 3/10, up to 6/10 total (2 items are enough for full score in this part). Perfect score math formula: 4/10 + 2 * 3/10 = 10/10.
 javaAndSpring
