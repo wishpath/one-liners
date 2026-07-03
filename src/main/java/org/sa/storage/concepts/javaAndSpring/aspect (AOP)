@@ -1,0 +1,5 @@
+aspect (AOP)
+class handling shared concerns like logging or security.
+Please explain concept 'aspect (AOP)': *what software element is it *what kind of concerns does it handle *name >=2 example concerns
+User has to correctly identify software element (class / component) — score 3/10. User has to correctly identify kind of concerns (cross-cutting / shared concerns) — score 3/10. User has to correctly name example concerns (logging, security, transaction management, monitoring, caching, auditing) — each correct item contributes 2/10, so 2 items = 4/10. Perfect score math formula: 3/10 + 3/10 + 2 * 2/10 = 10/10.
+javaAndSpring
