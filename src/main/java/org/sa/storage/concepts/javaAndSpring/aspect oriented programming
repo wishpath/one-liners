@@ -1,5 +1,5 @@
 aspect oriented programming
 separates shared functionality like logging specific methods from separate log class.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'aspect oriented programming': *what does it separate *name >=2 examples of separated things *name software design principle this addresses
+User has to correctly identify what it separates (cross-cutting concerns from business logic) — score 4/10. User has to correctly name at least two separated things (logging, security, transactions, caching, monitoring, auditing) — each correct item contributes 2/10, so 2 items = 4/10. User has to correctly name software design principle (separation of concerns) — score 2/10. Perfect score math formula: 4/10 + 2 * 2/10 + 2/10 = 10/10.
 javaAndSpring
