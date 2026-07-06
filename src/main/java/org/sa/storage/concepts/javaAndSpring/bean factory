@@ -1,0 +1,5 @@
+bean factory
+dependency injection container — implements inversion of control in Spring.
+Please explain concept 'bean factory': *what design principle does it implement *in what framework
+User has to correctly identify implemented design principle (inversion of control) — score 8/10. User has to correctly identify framework (Spring) — score 2/10. Perfect score math formula: 8/10 + 2/10 = 10/10.
+javaAndSpring
