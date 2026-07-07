@@ -1,0 +1,5 @@
+component scanning (Spring)
+a way to configure an app — annotations added to app elements: classes, attributes, and methods — helps defining bean.
+Please explain concept 'component scanning (Spring)': *what is it a way to do *what is added to application elements *name >=2 application element types, where this item is added *what does it help define
+User has to correctly identify what it is a way to do (configure an application / auto-detect beans) — score 2/10. User has to correctly identify what is added to application elements (annotations) — score 2/10. User has to correctly name application element types where it is added (classes, attributes, methods) — each correct item contributes 2/10, up to 4/10 total (2 items are enough for full score in this part). User has to correctly identify what it helps define (bean) — score 2/10. Perfect score math formula: 2/10 + 2/10 + 2 * 2/10 + 2/10 = 10/10.
+javaAndSpring
