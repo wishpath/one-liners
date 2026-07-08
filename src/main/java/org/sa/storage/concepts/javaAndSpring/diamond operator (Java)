@@ -1,5 +1,5 @@
 diamond operator (Java)
 copies the variable type from the left side to avoid repeating it; marked by <>.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'diamond operator (Java)': *what does it do *what does it help to avoid *how is it written/marked
+User has to correctly identify what it does (copies the variable/generic type from the left side) — score 5/10. User has to correctly identify what it helps avoid (repeating the type) — score 3/10. User has to correctly identify how it is written/marked (<>) — score 2/10. Perfect score math formula: 5/10 + 3/10 + 2/10 = 10/10.
 javaAndSpring
