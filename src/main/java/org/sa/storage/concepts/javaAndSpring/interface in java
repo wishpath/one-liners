@@ -1,5 +1,5 @@
-interface in java
+interface in Java
 only shows what methods the implementing classes has to implement.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'interface in Java': *what does it obligate *which classes does it apply to
+User has to correctly identify what it obligates (implementing the declared methods) — score 6/10. User has to correctly identify which classes it applies to (implementing classes) — score 4/10. Perfect score math formula: 6/10 + 4/10 = 10/10.
 javaAndSpring
