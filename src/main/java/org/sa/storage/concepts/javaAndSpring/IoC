@@ -1,5 +1,5 @@
 IoC
-Inversion of Control - design principle where object creation and lifecycle are managed by a container or framework.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Inversion of Control — design principle — object lifecycle is managed by a container or framework.
+Please explain concept 'IoC': *expand acronym letters **I? **o? **C? *what kind of concept is IoC in software engineering (answer in 2 words) *what is the target item *what action is performed *name >=2 items, which may perform this function
+User has to correctly expand acronym (Inversion=1/10, of=1/10, Control=1/10) — score 3/10. User has to correctly identify concept type (design principle / design pattern / architectural pattern / coding paradigm / architectural principle / software pattern / programming paradigm) — score 2/10. User has to correctly identify target item (object, object lifecycle) — score 1/10. User has to correctly identify action performed (lifecycle is managed / controlled by external component) — score 2/10. User has to correctly name items that may perform this function (container, framework, e.g. Spring container) — each correct item contributes 1/10, so 2 items = 2/10. Perfect score math formula: 3 * 1/10 + 2/10 + 1/10 + 2/10 + 2 * 1/10 = 10/10.
 javaAndSpring
