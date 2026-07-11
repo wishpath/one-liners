@@ -1,5 +1,5 @@
 jar hell
 conflicts between Java Archive (JAR) versions in projects with multiple dependencies.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'jar hell': *what is a function of those files *how do those files relate *in what kind of project this happens
+User has to correctly identify function of JAR files (package/distribute Java code and libraries, dependency) — score 4/10. User has to correctly identify how those files relate (conflicting, conflicting versions/different versions of the same dependency conflict) — score 3/10. User has to correctly identify in what kind of project this happens (projects with multiple dependencies) — score 3/10. Perfect score math formula: 4/10 + 3/10 + 3/10 = 10/10.
 javaAndSpring
