@@ -1,5 +1,5 @@
 Java bean
 simple Java object with getters/setters, often used as DTO for data transfer.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'Java bean': *what type of Java element is it *what methods does it typically contain *how is it called, when it carries values between parts of the system?
+User has to correctly identify Java element type (object) — score 3/10. User has to correctly identify typical methods (getters/setters) — score 4/10. User has to correctly identify name when it carries values between system parts (DTO / Data Transfer Object) — score 3/10. Perfect score math formula: 3/10 + 4/10 + 3/10 = 10/10.
 javaAndSpring
