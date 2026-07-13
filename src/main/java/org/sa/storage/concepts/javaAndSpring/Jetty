@@ -1,0 +1,5 @@
+Jetty
+Java web server — runs inside app — hosts web content directly.
+Please explain concept 'Jetty': *what programming language is it associated with *what type of software component is it *where does it run in regards to app *what does it do
+User has to correctly identify associated programming language (Java) — score 2/10. User has to correctly identify software component type (web server) — score 2/10. User has to correctly identify where it runs (inside the application, or alongside) — score 3/10. User has to correctly identify what it does (hosts web content directly) — score 3/10. Perfect score math formula: 2/10 + 2/10 + 3/10 + 3/10 = 10/10.
+javaAndSpring
