@@ -1,5 +1,5 @@
 pointcut
 rule defined in aspect method's annotation — contains trigger method — when a trigger runs aspect method gets executed.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'pointcut': *via what Java metadata construct is it declared *what does it match *what it activates
+User has to correctly identify declaration construct (annotation) — score 3/10. User has to correctly identify what it matches (method execution / join points) — score 3/10. User has to correctly identify what it activates (aspect method / advice) — score 4/10. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
 javaAndSpring
