@@ -1,5 +1,5 @@
 pointcut
-rule defined in aspect method's annotation — when external method is executed, aspect method gets executed too.
+rule defined in aspect method's annotation — contains trigger method — when a trigger runs aspect method gets executed.
 Please explain this concept: 
 Default aiEvaluateInstruction
 javaAndSpring
