@@ -1,5 +1,5 @@
 POJO
-Plain Old Java Object - simple Java class without framework inheritance or interfaces.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Plain Old Java Object — ordinary Java class — independent of frameworks.
+Please explain concept 'POJO': *expand acronym letters **P? **O? **J? **O? *what type of Java element is it *what is it independent of (name >=1 example)
+User has to correctly expand acronym (Plain=2/10, Old=2/10, Java=2/10, Object=2/10) — score 8/10. User has to correctly identify Java element type (ordinary Java class/object) — score 1/10. User has to correctly identify what it is independent of (frameworks, framework-specific inheritance, framework annotations) — score 1/10. One correct example of independence is enough for full score in this part. Perfect score math formula: 4 * 2/10 + 1/10 + 1/10 = 10/10.
 javaAndSpring
