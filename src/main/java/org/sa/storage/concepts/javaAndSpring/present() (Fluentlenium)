@@ -1,5 +1,5 @@
 present() (Fluentlenium)
-method, checks if the element is present in the DOM.
-Please explain this concept: 
-Default aiEvaluateInstruction
+method — checks if the element is present in the DOM.
+Please explain concept 'present() (Fluentlenium)': *what type of element is it *what is the subject *what would true mean *where
+User has to correctly identify element type (method) — score 2/10. User has to correctly identify the subject (element) — score 2/10. User has to correctly identify what true means (the element is present) — score 3/10. User has to correctly identify where (in the DOM) — score 3/10. Perfect score math formula: 2/10 + 2/10 + 3/10 + 3/10 = 10/10.
 javaAndSpring
