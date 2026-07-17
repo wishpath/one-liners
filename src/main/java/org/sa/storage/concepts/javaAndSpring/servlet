@@ -1,5 +1,5 @@
 servlet
-bean within app handling requests, generating dynamic web content, often interacting with databases.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Java class — handles HTTP requests — generates dynamic responses — interacts with web resources/services/databases.
+Please explain concept 'servlet': *what type of Java element is it *what does it handle *what does it generate *name >=1 type of resource it can interact with
+User has to correctly identify Java element type (Java class) — score 2/10. User has to correctly identify what it handles (HTTP requests) — score 3/10. User has to correctly identify what it generates (dynamic responses) — score 3/10. User has to correctly name interaction target (web resources/services/databases) — score 2/10. Naming one correct interaction target is enough for full score in this part. Perfect score math formula: 2/10 + 3/10 + 3/10 + 2/10 = 10/10.
 javaAndSpring
