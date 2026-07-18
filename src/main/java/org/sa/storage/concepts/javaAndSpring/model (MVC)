@@ -1,0 +1,5 @@
+model (MVC)
+part of MVC architecture — represents application data and business logic.
+Please explain concept 'model (MVC)': *it is a part of what concrete software engineering concept *name exactly 2 elements what it represents
+User has to correctly identify the software engineering concept it is part of (MVC architecture) — score 2/10. User has to correctly identify represented elements (application data=4/10, business logic=4/10) — score 8/10. Perfect score math formula: 2/10 + 4/10 + 4/10 = 10/10.
+javaAndSpring
