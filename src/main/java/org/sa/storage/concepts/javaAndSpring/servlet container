@@ -1,5 +1,5 @@
 servlet container
-part of application server (like Tomcat or Jetty) that loads, manages, and executes servlet classes.
-Please explain this concept: 
-Default aiEvaluateInstruction
+part of application server (e.g., Tomcat or Jetty) — loads, manages, and executes servlet classes.
+Please explain concept 'servlet container': *what larger software component is it part of *name >=1 example of this larger software component *name >=2 actions it performs
+User has to correctly identify the larger software component (application server) — score 2/10. User has to correctly name an example (Tomcat or Jetty) — score 2/10. User has to correctly identify actions it performs (loads, manages, executes servlet classes) — score 3/10 each, but cap at 6/10 points. Any 2 correct actions are enough for full score in this part. Perfect score math formula: 2/10 + 2/10 + 2 * 3/10 = 10/10.
 javaAndSpring
