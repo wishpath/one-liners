@@ -1,5 +1,5 @@
 servlet vs controller
-both are beans handling requests; controller is a higher abstraction built over servlet.
-Please explain this concept: 
-Default aiEvaluateInstruction
+both are request-handling components — controller is a higher-level abstraction built over servlet.
+Please explain concept 'servlet vs controller': *name >=2 similarities they have *compare their relation in terms of abstraction
+User has to correctly identify similarities (request handling=3/10, application components / beans=3/10) — score up to 6/10. Naming any 2 correct similarities is enough for full score in this part. User has to correctly compare abstraction level (servlet is lower-level, controller is higher-level abstraction) — score 4/10. Perfect score math formula: 2 * 3/10 + 4/10 = 10/10.
 javaAndSpring
