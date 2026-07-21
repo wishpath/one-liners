@@ -1,0 +1,5 @@
+Spring bean
+Java object/POJO — created and managed by the Spring IoC container (ApplicationContext).
+Please explain concept 'Spring bean': *what type of Java element is it *what Spring component creates and manages it
+User has to correctly identify Java element type (Java object/POJO) — score 5/10. User has to correctly identify Spring component (IoC container/ApplicationContext) — score 5/10. Perfect score math formula: 5/10 + 5/10 = 10/10.
+javaAndSpring
