@@ -1,5 +1,5 @@
-Spring boot
-part of Spring (Java framework) specific for creating web app back end.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Spring Boot
+part of Spring ecosystem — Java framework — for creating web-app backends.
+Please explain concept 'Spring Boot': *what larger framework is it part of? *what programming language is it? associated with *what kind of things is it helping with and what part?
+User has to correctly identify the larger framework (Spring, Spring ecosystem, Spring Framework) — score 3/10. User has to correctly identify the programming language (Java) — score 2/10. User has to correctly identify application type (backend web-app, microservice) — score 5/10. Perfect score math formula: 3/10 + 2/10 + 5/10 = 10/10.
 javaAndSpring
