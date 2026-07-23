@@ -1,5 +1,5 @@
 stereotype in Spring
-role of class, marked by annotation. E.g.: @Controller @Service
-Please explain this concept: 
-Default aiEvaluateInstruction
+role of class — marked by annotation — e.g., @Controller, @Service.
+Please explain concept 'stereotype in Spring': *what element of Java does it mark *what kind of quality of this element does it mark *it is marked with what kind of item *write >=1 concrete example of this item
+User has to correctly identify Java element (class) — score 2/10. User has to correctly identify what quality it marks (role) — score 2/10. User has to correctly identify the marking item (annotation) — score 4/10. User has to correctly write a concrete example (@Controller, @Service) — score 2/10. Any 1 correct example is enough for full score in this part. Perfect score math formula: 2/10 + 2/10 + 4/10 + 2/10 = 10/10.
 javaAndSpring
