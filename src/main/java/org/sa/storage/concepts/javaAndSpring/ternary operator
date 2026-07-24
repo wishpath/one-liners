@@ -1,5 +1,5 @@
 ternary operator
-inline if-else: condition ? a : b.
-Please explain this concept: 
-Default aiEvaluateInstruction
+inline if-else — condition ? a : b.
+Please explain concept 'ternary operator': *what control structure is it equivalent to *how many operands does it have *write its syntax
+User has to correctly identify the equivalent control structure (if-else) — score 3/10. User has to correctly identify the number of operands (3) — score 2/10. User has to correctly write the syntax (condition ? a : b) — score 5/10. Perfect score math formula: 3/10 + 2/10 + 5/10 = 10/10.
 javaAndSpring
