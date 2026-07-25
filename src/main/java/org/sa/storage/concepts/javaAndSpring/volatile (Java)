@@ -1,5 +1,5 @@
 volatile (Java)
-keyword, ensures variable updates visible to all threads, e.g., private volatile String status.
-Please explain this concept: 
-Default aiEvaluateInstruction
+keyword, field modifier — ensures variable updates are visible between threads — e.g., private volatile String status.
+Please explain concept 'volatile (Java)': *what type of Java element is it *what Java element is it applied to *what execution model is it about *what property of some element is it about *what is the scope (in terms of execution model) *provide example definition (literal Java)
+User has to correctly identify Java element type (keyword/modifier) — score 2/10. User has to correctly identify applied element (field/variable) — score 2/10. User has to correctly identify execution model (multithreading/concurrent execution) — score 2/10. User has to correctly identify element property (visibility of variable updates) — score 2/10. User has to correctly identify scope (all threads) — score 1/10. User has to correctly provide literal Java example (private volatile String status;) — score 1/10. Perfect score math formula: 2/10 + 2/10 + 2/10 + 2/10 + 1/10 + 1/10 = 10/10.
 javaAndSpring
