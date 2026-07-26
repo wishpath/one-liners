@@ -1,0 +1,5 @@
+UUID
+Universally Unique Identifier — 128-bit identifier for unique identification.
+Please explain concept 'UUID': *expand what each letter means? **U? **U? **I? **D? *how many bits does it contain *what is it used for
+User has to expand letters in UUID correctly. Add points to score for each explicitly in the math formula (Universally=1/10, Unique=1/10, Identifier=2/10). User has to identify size (128 bits) — score 2/10. User has to identify purpose (unique identification) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 1/10 + 1/10 + 2/10 + 2/10 + 4/10 = 10/10.
+generalITTerms
