@@ -1,0 +1,5 @@
+web server
+software — handles HTTP/HTTPS requests — routes them to applications or resources — serves web content.
+Please explain concept 'web server': *what type of IT component is it *what does it handle *what type of software components does it handle *where does it route them, name 2 answers for this question *what does it serve
+User has to correctly identify the IT component type (software component) — score 2/10. User has to correctly identify what type of protocol items it handles (requests) — score 2/10. User has to correctly identify the protocol (HTTP/HTTPS) — score 2/10. User has to correctly identify routing targets (applications=1/10, resources=1/10). User has to correctly identify what it serves (content) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 2/10 + 2 * 1/10 + 2/10 = 10/10.
+networking
