@@ -1,0 +1,5 @@
+distributed computing
+computers in different locations working together as one system over a network.
+Please explain concept 'distributed computing': *what entities participate *what is different between them *what behavior do they provide *what connects them
+User has to correctly identify participating entities (computers) — score 3/10. User has to correctly identify location relationship (different locations) — score 2/10. User has to correctly identify behavior (work together as one system, collaborate) — score 3/10. User has to correctly identify connection method (network) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 2/10 + 3/10 + 2/10 = 10/10.
+networking
