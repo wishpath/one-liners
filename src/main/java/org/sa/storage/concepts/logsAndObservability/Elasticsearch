@@ -1,5 +1,5 @@
 Elasticsearch
-search and analytics engine. Handles and analyzes large volumes of data in real-time.
-Please explain this concept: 
-Default aiEvaluateInstruction
+search and analytics engine — handles and analyzes large volumes of data (JSON) in real time.
+Please explain concept 'Elasticsearch': *what type of software component is it *in very general, what is an amount of data it handles *what is a standard format of data it handles *what does it do, name >=3 verbs *how does it do that regarding time
+User has to correctly identify the software component type (search and analytics engine, search engine, distributed search engine) — score 2/10. User has to correctly identify the amount of handled data (large volumes) — score 2/10. User has to correctly identify the data format (JSON) — score 2/10. User has to correctly identify >=3 performed actions (store, search, analyze, filter, scale, visualize) (1/10 point per verb). Any 3 correct verbs are enough for a maximum score of 3/10 for this part (3 * 1/10). User has to correctly identify the time characteristic (real time, near real time) — score 1/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 2/10 + 3 * 1/10 + 1/10 = 10/10.
 logsAndObservability
