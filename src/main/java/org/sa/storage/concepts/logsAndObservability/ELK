@@ -1,5 +1,5 @@
 ELK
-Elasticsearch, Logstash, and Kibana - tools for searching, analyzing, and visualizing logs.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Elasticsearch, Logstash, and Kibana — tools for collecting, storing, searching, analyzing, and visualizing logs.
+Please explain concept 'ELK': *expand acronym letters **E? **L? **K? *what target do they work with *what do they do, name >=3 verbs
+User has to expand each letter correctly (Elasticsearch, Logstash, Kibana). Add points to score for each explicitly in the math formula (E=2/10, L=2/10, K=2/10). User has to correctly identify the target they work with (logs) — score 1/10. User has to correctly identify >=3 performed actions (collect, ingest, parse, transform, store, index, search, analyze, visualize) (1/10 point per verb). Any 3 correct verbs are enough for a maximum score of 3/10 for this part (3 * 1/10). Add points explicitly in the math formula. Perfect score math formula: 3 * 2/10 + 1/10 + 3 * 1/10 = 10/10.
 logsAndObservability
