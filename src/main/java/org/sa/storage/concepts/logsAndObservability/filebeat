@@ -1,5 +1,5 @@
 filebeat
-software that sends log files to Elasticsearch/Logstash.
-Please explain this concept: 
-Default aiEvaluateInstruction
+background app — scans log files in defined locations — extracts text lines — converts to JSON — streams to Elasticsearch or Logstash.
+Please explain concept 'filebeat': *what kind of software component is it (one word)? *how does this software run (one word)? *what primary object does it deal with? *what does it do to this primary object (one word, verb)? *what are those locations (where this primary object is dealt with) like? *what exact parts does it extract from that primary object? *to which standard format does it transform those extracted parts? *what does it do to this transformed product (one word, verb)? *name >=2 targets of this action
+User has to correctly identify the software component type (app, service, agent, daemon) — score 1/10. User has to correctly identify how it runs (background, continuously) — score 1/10. User has to correctly identify the primary object (logs, log files) — score 1/10. User has to correctly identify the action on that object (scan, monitor, read) — score 1/10. User has to correctly identify the location characteristic (defined/configured/specified locations) — score 1/10. User has to correctly identify extracted parts (text lines, log lines, entries) — score 1/10. User has to correctly identify the target format (JSON) — score 1/10. User has to correctly identify the action on the transformed product (stream, send, ship, forward) — score 1/10. User has to correctly identify action targets (Elasticsearch=1/10, Logstash=1/10). Add points explicitly in the math formula. Perfect score math formula: 8 * 1/10 + 2 * 1/10 = 10/10.
 logsAndObservability
