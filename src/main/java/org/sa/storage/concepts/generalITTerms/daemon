@@ -1,0 +1,5 @@
+daemon
+background software component — runs continuously — performs tasks without direct user interaction.
+Please explain concept 'daemon': *what kind of IT component is it? *how does it run? *what does it do? *with whom does it avoid direct interaction?
+User has to correctly identify the IT component type (software, software component, application, app, service, process) — score 3/10. User has to correctly identify how it runs (background, continuously) — score 2/10. User has to correctly identify its purpose (perform tasks) — score 3/10. User has to correctly identify with whom it avoids direct interaction (user) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 2/10 + 3/10 + 2/10 = 10/10.
+generalITTerms
