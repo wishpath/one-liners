@@ -1,5 +1,5 @@
 full-text search
-search technique that scores matches, understands synonyms, and reduces words to stems.
-Please explain this concept: 
-Default aiEvaluateInstruction
+search technique — understands synonyms and inflections by reducing words to stems — scores matches.
+Please explain concept 'full-text search': *what type of sense relation and lexical relation is it able to detect, name 2? *what does it reduce words to, to detect this characteristic, name 1? *describe what it does to evaluate matches, answer in 2 words.
+User has to correctly identify the detectable relations (synonims=2/10, inflection=2/10). User has to correctly identify what words are reduced to (stems) — score 3/10. User has to correctly identify what it does to matches (scores matches, ranks matches, rates relevance, evaluates similarity) — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 3/10 + 3/10 = 10/10.
 logsAndObservability
