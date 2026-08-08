@@ -1,0 +1,5 @@
+semantic search
+maps text to multidimensional vectors — captures meaning — matches vector similarity.
+Please explain concept 'semantic search': *what does it map text to? *what characteristic does the mapping capture, name 1? *what is it matching, when searching?
+User has to correctly identify what text is mapped to (multidimensional vectors, vector embeddings, vectors) — score 3/10. User has to correctly identify what the mapping captures (meaning, semantic meaning, context, intent) — score 3/10. User has to correctly identify what it matches (vector similarity) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
+logsAndObservability
