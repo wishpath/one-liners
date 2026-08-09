@@ -1,5 +1,5 @@
 Kibana
-log and data visualization and exploration tool. Used in conjunction with OpenShift (or other).
-Please explain this concept: 
-Default aiEvaluateInstruction
+application — visualizes data — data exploration tool — usually for logs — takes data from Elasticsearch.
+Please explain concept 'Kibana': *what type of software component is it *what is its primary purpose *what kind of user's cognitive interation does it provide (besides its primary purpose, sort of like a slightly distict interative functionality) *what type of data is it usually used with *where does it take data from
+User has to correctly identify the software component type (application, app, web UI, web app) — score 2/10. User has to correctly identify its primary purpose (visualizes data) — score 2/10. User has to correctly identify the user's cognitive interaction (data exploration, explores data) — score 2/10. User has to correctly identify the usual data type (logs, log data) — score 2/10. User has to correctly identify the data source (Elasticsearch) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 2/10 + 2/10 + 2/10 = 10/10.
 logsAndObservability
