@@ -1,5 +1,5 @@
 Logstash
-data processing pipeline. Ingests, transforms, and enriches data. Often used for logs.
-Please explain this concept: 
-Default aiEvaluateInstruction
+data processing pipeline — ingests, transforms, and enriches data — often used for logs.
+Please explain concept 'Logstash': *what kind of software component is it *what does it do to data, name >=2 actions *what kind of data is it usually used for
+User has to correctly identify the software component type (data processing pipeline, pipeline, application, ingest engine) — score 3/10. User has to correctly identify >=2 actions on data (collects, forwards, ingests, transforms, enriches, ingests, parses, ships, filter) (1/10 point per action). Any 2 correct actions are enough for a maximum score of 4/10 for this part (2 * 2/10). User has to correctly identify the usual data type (logs, log data, metrics, event streams, traces) — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 2 * 2/10 + 3/10 = 10/10.
 logsAndObservability
