@@ -1,5 +1,5 @@
 observability
-monitoring system health via logs, metrics, and traces for real-time insights.
-Please explain this concept: 
-Default aiEvaluateInstruction
+explains system health — why a failure happened — uses logs, metrics & traces.
+Please explain concept 'observability': *what does a desired general thing it can explain about a system (one word) *to what event can explain a reason/cause/ *name the 3 data sources it uses
+User has to correctly identify what it can explain about a system (health, state) — score 2/10. User has to correctly identify the event whose reason or cause it can explain (failure, incident, error, exception) — score 2/10. User has to correctly identify the 3 data sources (logs=3/10, metrics=2/10, traces=1/10). Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 3/10 + 2/10 + 1/10 = 10/10.
 logsAndObservability
