@@ -1,5 +1,5 @@
 stop word filtering
-ignoring frequently occurring, non-informative words (e.g., "the," "and") to improve search.
-Please explain this concept: 
-Default aiEvaluateInstruction
+ignoring frequently-occurring, non-informative words (e.g., "the," "and") — improve search.
+Please explain concept 'stop word filtering': *what does it ignore *name 2 characteristics/criteria by which it ignores *name >=2 examples of ignored objects (concrete ones) *what does this improve
+User has to correctly identify what it ignores (words) — score 2/10. User has to correctly identify the >=2 characteristics/criteria (frequently occurring, non-informative, low-value, low semantic value) — score 2/10 (each scores 1/10, so in total that is 2 * 1/10). Any 2 correct examples are enough for a maximum score of 2/10 for this part (2 * 1/10). User has to correctly identify >=2 concrete ignored-word examples ("the", "and",  or any other valid stop word). Any 2 correct examples are enough for a maximum score of 2/10 for this part (2 * 1/10). User has to correctly identify one thing it improves (search, search quality, search performance, indexing) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2 * 1/10 + 2 * 1/10 + 4/10 = 10/10.
 logsAndObservability
