@@ -1,5 +1,5 @@
 bandwidth
-maximum data transfer capacity over a network, bits per second (bps, kbps, Mbps).
-Please explain this concept: 
-Default aiEvaluateInstruction
+maximum data transfer capacity over a network — bits per second (bps, kbps, Mbps).
+Please explain concept 'bandwidth': *what is sent? *where is it sent? *what extreme is measured? *what is the measuring unit? *give >=1 example of such unit abbreviation.
+User has to correctly identify what is sent (data) — score 2/10. User has to correctly identify where it is sent (over a network) — score 2/10. User has to correctly identify what extreme is measured (maximum capacity) — score 2/10. User has to correctly identify the measuring unit (bits per second) — score 2/10. User has to correctly provide >=1 valid unit abbreviation (bps, kbps, Mbps, Gbps, etc.) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 2/10 + 2/10 + 2/10 = 10/10.
 networking
