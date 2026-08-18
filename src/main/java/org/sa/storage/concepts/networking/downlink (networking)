@@ -1,5 +1,5 @@
 downlink (networking)
-incoming traffic to your system from the network.
-Please explain this concept: 
-Default aiEvaluateInstruction
+incoming traffic to user system from the network.
+Please explain concept 'downlink (networking)': *describe direction origin *describe direction destination *describe object that has this direction *describe action
+User has to correctly identify the direction origin (network) — score 2/10. User has to correctly identify the direction destination (user system, client, device) — score 2/10. User has to correctly identify the object carrying this direction (traffic, data) — score 3/10. User has to correctly identify the action (incoming, receiving, downloading) — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 3/10 + 3/10 = 10/10.
 networking
