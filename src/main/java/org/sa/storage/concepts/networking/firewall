@@ -1,5 +1,5 @@
 firewall
-network security system that monitors and controls inc-and-out network traffic based on predetermined rules.
-Please explain this concept: 
-Default aiEvaluateInstruction
+network security system that monitors and controls incoming and outgoing network traffic based on predetermined rules.
+Please explain concept 'firewall': *in what place does it matter? *what aspect of this place does it help with? *what is being sent in this place? *name the directions *what is its functionality based on?
+User has to correctly identify the location context (network, between networks, between systems) — score 2/10. User has to correctly identify the aspect it helps with (security, access control) — score 2/10. User has to correctly identify what is being sent there (network traffic, data, network packets) — score 2/10. User has to correctly identify the 2 directions (incoming=1/10, outgoing=1/10) — score 2/10. User has to correctly identify what its functionality is based on (predetermined rules, predefined rules, security rules, rule set, policies) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 2/10 + 2*1/10 + 2/10 = 10/10.
 networking
