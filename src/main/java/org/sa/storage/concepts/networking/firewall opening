@@ -1,5 +1,5 @@
 firewall opening
-configuration that allows specific traffic through the firewall on designated ports or IP ranges.
-Please explain this concept: 
-Default aiEvaluateInstruction
+allows network traffic through a specified port, IP range or other rule.
+Please explain concept 'firewall opening': *in what infrastructure does it matter? *what aspect of this infrastructure does it govern? *what does it do to aspect *name >=2 specific criteria it is based on
+User has to correctly identify the infrastructure context (network infrastructure) — score 2/10. User has to correctly identify the infrastructure aspect it governs (network access, traffic flow, connectivity) — score 2/10. User has to correctly identify what it does to that aspect (allows, permits, opens) — score 2/10. User has to correctly identify >=2 specific criteria it is based on (port, IP range, IP address, protocol, source, destination) (2/10 per criterion). Any 2 correct criteria are enough for full score for this part (2 * 2/10). Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 2/10 + 2 * 2/10 = 10/10.
 networking
