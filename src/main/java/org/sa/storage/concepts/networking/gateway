@@ -1,5 +1,5 @@
 gateway
-device or software bridging networks or applications, converting data between protocols
-Please describe concept 'gateway': *what kind of component it is *what it interacts with *what it does to the data flow
-User has to identify what kind of component it is (device or software) — score 4/10. User has to describe what it interacts with (networks or applications) — score 3/10. User has to describe what it does to the data flow (protocol or data conversion) — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 3/10 + 3/10 = 10/10.
+device or software — bridges networks or applications — converts data between protocols.
+Please describe concept 'gateway': *what kind of component might it be (name >=2 possibilities) *what does it do to components it takes care of? *what type of components does it take care of (name >=2) *what does it do to the data flow
+User has to correctly identify >=2 component possibilities (device, software, appliance, service, network node). Any 2 correct possibilities are enough for a maximum score of 2/10 for this part (2 * 1/10). User has to correctly identify what it does to components (bridges, connects, links, connects and translates) — score 2/10. User has to correctly identify >=2 component types it takes care of (networks, applications, systems, services, protocols). Any 2 correct component types are enough for a maximum score of 2/10 for this part (2 * 1/10). User has to correctly identify what it does to the data flow (converts/translates data between protocols) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 2 * 1/10 + 2/10 + 2 * 1/10 + 4/10 = 10/10.
 networking
