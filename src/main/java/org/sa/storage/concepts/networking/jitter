@@ -1,5 +1,5 @@
 jitter
-variation in packet delay over a network, measured in milliseconds (ms).
-Please explain this concept: 
-Default aiEvaluateInstruction
+variation in packet delay over a network — measured in milliseconds (ms).
+Please explain concept 'jitter': *where does it occur? *what is sent? *what is measured? *what are the units?
+User has to correctly identify where it occurs (over a network, network communication, network data streams) — score 2/10. User has to correctly identify what is sent (packets, network packets, data packets, incoming packets) — score 2/10. User has to correctly identify what is measured (variation in packet delay, variation in latency, delay variation) — score 4/10. User has to correctly identify the units (milliseconds, ms) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 4/10 + 2/10 = 10/10.
 networking
