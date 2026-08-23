@@ -1,5 +1,5 @@
 latency
 time delay between sending and receiving data, measured in milliseconds (ms).
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'latency': *what parameter is measured (one word)? *what points of this parameter are measured? *what kind of effect do these points define? *in what unit is it measured?
+User has to correctly identify the measured parameter (time) — score 2/10. User has to correctly identify the two points (cause and effect, input and output, origin and destination, request and response, start and end) — score 2/10 each so (2 * 2/10 for this question). User has to correctly identify the effect defined by these points (delay, time delay, elapsed time, lag) — score 2/10. User has to correctly identify the measuring unit (milliseconds, ms) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2 * 2/10 + 2/10 + 2/10 = 10/10.
 networking
