@@ -1,5 +1,5 @@
 SSL
-Secure Sockets Layer - encryption of browser-server communication.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Secure Sockets Layer — encryption of browser-server communication.
+Please explain concept 'SSL': *expand each letter **S? **S? **L? *name the 2 locations involved *what is the process between those two locations (one word)? *what does SSL do to this communication (one word)?
+User has to expand each letter correctly (Secure=2/10, Sockets=2/10, Layer=2/10). User has to correctly identify the 2 locations involved (browser/client=1/10, server=1/10). User has to correctly identify the process between those locations (communication, handshake) — score 1/10. User has to correctly identify what SSL does to this communication (encryption, encrypts communication) — score 1/10. Add points explicitly in the math formula. Perfect score math formula: 3 * 2/10 + 2 * 1/10 + 1/10 + 1/10 = 10/10.
 networking
