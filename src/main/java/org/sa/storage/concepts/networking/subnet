@@ -1,5 +1,5 @@
 subnet
-subnetwork - segment of a larger network. Subnetting improves network performance, security, and organization.
-Please explain this concept: 
-Default aiEvaluateInstruction
+subnetwork — segment of a larger network. Subnetting improves network performance, security, and organization.
+Please explain concept 'subnet': *expand it to the full word *define what it is *name >=2 aspects that subnetting improves
+User has to correctly expand the word (subnetwork) — score 2/10. User has to correctly define what it is (segment of a larger network, network segment, logical partition of a larger network, smaller network in a larger network) — score 4/10. User has to correctly identify >=2 improved aspects (performance, security, organization, management). Any 2 correct aspects are enough for a maximum score for this part (2 * 2/10). Add points explicitly in the math formula. Perfect score math formula: 2/10 + 4/10 + 2 * 2/10 = 10/10.
 networking
