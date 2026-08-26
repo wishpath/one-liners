@@ -1,5 +1,5 @@
 throughput (network)
 actual amount of data successfully transmitted over a network in a given time, measured in bits per second (bps).
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'throughput (network)': *what thing is measured (one word)? *what is an action that is being applied to this thing (besides the measuring)? *what should be an objective assessment for this action, so a measurement can take place? *name 2 measurements that are being taken *name the unit used for measurement *name unit abreviation
+User has to correctly identify the measured thing (data) — score 2/10. User has to correctly identify the action applied to this thing (transmitted, sent, transferred) — score 2/10. User has to correctly identify the assessment of this action (successful, successful delivery) — score 2/10. User has to name the 2 measurements being taken (data amount/volume=1/10, time=1/10). User has to correctly identify the measurement unit (bits per second) — score 1/10.  User has to correctly identify the measurement unit abbreviation (bps) — score 1/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 2/10 + 2*1/10 + 1/10 + 1/10 = 10/10.
 networking
