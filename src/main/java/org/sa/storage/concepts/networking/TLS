@@ -1,5 +1,5 @@
 TLS
-Transport Layer Security - encryption of browser-server communication; successor to SSL.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Transport Layer Security — encryption of browser-server communication; successor to SSL.
+Please explain concept 'TLS': *expand each letter **T? **L? **S? *name the 2 locations involved *what do those two locations both do? *what does TLS apply to this action? *what concept is it a successor to?
+User has to expand each letter correctly (Transport=1/10, Layer=1/10, Security=1/10). User has to correctly identify the 2 locations involved (browser=1/10, server=1/10). User has to correctly identify what happens between those locations (communication, exchange data) — score 2/10. User has to correctly identify what TLS does to it (encryption, encrypts communication, secures communication, encrypts connection) — score 2/10. User has to correctly identify the predecessor concept (SSL, Secure Sockets Layer) — score 1/10. Add points explicitly in the math formula. Perfect score math formula: 3 * 1/10 + 2 * 1/10 + 2/10 + 2/10 + 1/10 = 10/10.
 networking
