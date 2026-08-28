@@ -1,5 +1,5 @@
 uplink (networking)
-outgoing traffic from your system to the network.
-Please explain this concept: 
-Default aiEvaluateInstruction
+outgoing traffic from user system to the network.
+Please explain concept 'uplink (networking)': *describe direction origin *describe direction destination *describe action *define object that this action is applied to
+User has to correctly identify the direction origin (user system, client, device, local device, local network) — score 2/10. User has to correctly identify the direction destination (network, higher-level network, ISP, remote server) — score 2/10. User has to correctly identify the action (outgoing, sending, uploading, transmitting) — score 3/10. User has to correctly define the object that this action is applied to (traffic, data, packets) — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 3/10 + 3/10 = 10/10.
 networking
