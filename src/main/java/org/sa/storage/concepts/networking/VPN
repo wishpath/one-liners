@@ -1,5 +1,5 @@
 VPN
-Virtual Private Network - encrypted connection to a remote server, hiding identity while accessing the internet.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Virtual Private Network — encrypted connection to a remote server, hiding identity while accessing the internet.
+Please explain concept 'VPN': *expand each letter **V? **P? **N? *what concrete action/measure is applied to some usage *what is a target destination *what does it hide *when does it hide it, while accessing what?
+User has to expand each letter correctly (Virtual=1/10, Private=1/10, Network=1/10). User has to correctly identify the connection characteristic (encrypted, encrypts traffic, secures connection) — score 2/10. User has to correctly identify the connection target (remote server,remote network) — score 2/10. User has to correctly identify what it hides (identity, IP address) — score 2/10. User has to correctly identify when it hides it (while accessing the internet) — score 1/10. Add points explicitly in the math formula. Perfect score math formula: 3 * 1/10 + 2/10 + 2/10 + 2/10 + 1/10 = 10/10.
 networking
