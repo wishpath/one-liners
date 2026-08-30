@@ -1,5 +1,5 @@
 VPN whitelisting
-security measure that allows only specific IP addresses or devices to access a service through a VPN.
-Please explain this concept: 
-Default aiEvaluateInstruction
+security measure — allows only specific IP addresses or devices to access a service through a VPN.
+Please explain concept 'VPN whitelisting': *what general area / what kind of measure is it (one word) *what action does it apply/ state provides (one word) *name >=2 types of origin identity attributes things it applies this action to *what IT capability type might be found at the destination (that a human user might be interested in)(name one)? *through what does it provide this access
+User has to correctly identify the measure type (security measure, access control) — score 2/10. User has to that is it (allows, permits, denies), alternatively user can provide state it gives (access) — score 2/10. User has to correctly identify >=2 types of allowed things (IP address, MAC address, user credentials, digital certificates, device ID, domain name, security group, user role, client TLS certificate, device compliance status). 1/10 per each answer, but cap at 2. Any 2 correct types are enough for a maximum score of 2/10 for this part (2 * 1/10). User has to correctly identify what it provides access to (service, app, application, resource) — score 2/10. User has to correctly identify what provides the access path (VPN, Virtual Private Network, encrypted VPN tunnel) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 2 * 1/10 + 2/10 + 2/10 = 10/10.
 networking
