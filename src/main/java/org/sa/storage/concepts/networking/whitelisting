@@ -1,5 +1,5 @@
 whitelisting
-approving specific entities (IPs, apps, emails) to bypass security restrictions; opposite of blacklisting.
-Please explain this concept: 
-Default aiEvaluateInstruction
+approving specific entities (IPs, apps, emails) to bypass security restrictions — opposite of blacklisting.
+Please explain concept 'whitelisting': *what does it do to entities (one verb)? *name >=2 types of entities it can apply to *what do these entities bypass? *what concept is the opposite of it?
+User has to correctly identify what it does to entities (approves, allows, permits) — score 2/10. User has to correctly identify >=2 entity types it can apply to (IP addresses, applications/apps, emails/email addresses, users). Any 2 correct entity types are enough for a maximum score of 2/10 for this part (2 * 1/10). User has to correctly identify what these entities bypass (security restrictions, restrictions, security controls, security blocks, filters) — score 3/10. User has to correctly identify the opposite concept (blacklisting) — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2 * 1/10 + 3/10 + 3/10 = 10/10.
 networking
