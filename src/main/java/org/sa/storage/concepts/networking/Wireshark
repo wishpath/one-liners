@@ -1,5 +1,5 @@
 Wireshark
-app for network troubleshooting.
-Please explain this concept: 
-Default aiEvaluateInstruction
+app — for network troubleshooting.
+Please explain concept 'Wireshark': *what type of software component is it *what kind of infrastructure does it work with *what purpose is it used for
+User has to correctly identify the software component type (app, application, tool) — score 3/10. User has to correctly identify the infrastructure it works with (network, networking) — score 3/10. User has to correctly identify its purpose (troubleshooting, diagnosing, analyzing network problems, inspecting traffic) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
 networking
