@@ -1,5 +1,5 @@
 A B testing
-split testing - compare two versions (A and B) of a webpage.
-Please explain this concept: 
-Default aiEvaluateInstruction
+split testing — compares two versions (A and B) of a webpage.
+Please explain concept 'A B testing': *what is another name for it? *name verb, what it does in regards to "A B" relation (one word) *what does "A B" stand for (symbolize)?
+User has to correctly identify the alternative name (split testing) — score 3/10. User has to correctly identify the action applied to A and B (compares) — score 3/10. User has to correctly identify what A and B symbolize (two versions, variants, two variations (control vs variant)) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
 qaAndTesting
