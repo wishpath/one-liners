@@ -1,5 +1,5 @@
 canary deployment
-gradual rollout of a new app version to a small group before full deployment.
-Please explain this concept: 
-Default aiEvaluateInstruction
+new app version — released to a small group of users — before full deployment — for testing purposes.
+Please explain concept 'canary deployment': *what software component is dealt with? *what action is applied to that software component? *what is the target? *before what is it done (regarding scale)? *for what purpose is it done (one word)?
+User has to correctly identify the software component (new app version, application version, software version, software update, software release, application release) — score 2/10. User has to correctly identify the applied action (released, deployed, rolled out) — score 2/10. User has to correctly identify the target (small group of users, subset of users, limited users) — score 2/10. User has to correctly identify what it happens before (full deployment, full rollout, wider release, full-scale rollout) — score 2/10. User has to correctly identify the purpose (testing, validation) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 2/10 + 2/10 + 2/10 = 10/10.
 qaAndTesting
