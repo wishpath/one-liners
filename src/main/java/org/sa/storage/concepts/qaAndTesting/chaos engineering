@@ -1,5 +1,5 @@
 chaos engineering
 injecting controlled instances of failure into a system to identify vulnerabilities.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'chaos engineering': *what is injected? *it is done to identify what?
+User has to correctly identify what is injected (failures, faults, disruptions) — score 5/10. User has to correctly identify what it is done to identify (vulnerabilities, weaknesses, failure points) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 qaAndTesting
