@@ -1,5 +1,5 @@
 DRT
-Disaster Recovery Tests - process to prepare and test functions for actual disaster recovery.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Disaster Recovery Testing — evaluating system restoration — prepares and tests for major outages & data loss
+Please explain concept 'DRT': *expand each letter **D? **R? **T? *what process does it evalute? *name >= 2 negative operational impacts?
+User has to expand each letter correctly (Disaster=2/10, Recovery=2/10, (Testing, Test)=2/10). User has to correctly identify the process it evaluates (system restoration, system recovery, restoring systems, recovery process) — score 2/10. User has to correctly identify >=2 negative operational impacts (major outages, downtime, service disruption, data loss, business interruption). Any 2 correct impacts are enough for a maximum score of 2/10 for this part (2 * 1/10). Add points explicitly in the math formula. Perfect score math formula: 3 * 2/10 + 2/10 + 2 * 1/10 = 10/10.
 qaAndTesting
