@@ -1,5 +1,5 @@
 error budget
-maximum allowable errors metric in a system within a specified time frame for reliability.
-Please explain this concept: 
-Default aiEvaluateInstruction
+allowed system unreliability — caused by errors, failed requests, downtime, or latency violations.
+Please explain concept 'error budget': *what component does it target? *what is the target like regarding permission? *what is subject of this permission? *name 3 negative technical outcomes it includes
+User has to correctly identify the target (system, service, application) — score 2/10. User has to correctly identify the permission characteristic (allowed, permitted, acceptable, allowable threshold) — score 2/10. User has to correctly identify the system attribute it defines (unreliability, acceptable unreliability, allowed unreliability, downtime) — score 3/10. User has to correctly identify 3 causes of this attribute (errors, failed requests, downtime, latency violations, service degradation, unavailable responses). Any 3 correct causes are enough for a maximum score of 3/10 for this part (3 * 1/10). Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 3/10 + 3 * 1/10 = 10/10.
 qaAndTesting
