@@ -1,5 +1,5 @@
 feature flag
-=toggle to enable/disable a feature at runtime without redeploying.
-Please explain this concept: 
-Default aiEvaluateInstruction
+software configuration mechanism — toggles functionality on or off — without deploying new code.
+Please explain concept 'feature flag': *name two states can it set? what do those states target? *what does it avoid regarding code?
+User has to correctly identify the two states it can set (on=2/10, off=2/10). User has to correctly identify what those states target (functionality, feature, software feature, functionality availability) — score 3/10. User has to correctly identify what it avoids regarding code (deploying new code, a new code deployment, redeploying code) — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 3/10 + 3/10 = 10/10.
 qaAndTesting
