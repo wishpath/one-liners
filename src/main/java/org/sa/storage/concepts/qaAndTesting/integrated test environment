@@ -1,5 +1,5 @@
 integrated test environment
-closely resembles production. integrated - combined components functioning together.
-Please explain this concept: 
-Default aiEvaluateInstruction
+closely resembles production — integrated means combined components functioning together.
+Please explain concept 'integrated test environment': *explain regarding similarity *define 'integrated' in this context regarding working parts
+User has to correctly explain the similarity (closely resembles production, similar to production, production-like, mirrors production environment) — score 5/10. User has to correctly define 'integrated' regarding working parts (combined components, components functioning together, interconnected components working together, multiple components/services working together) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 qaAndTesting
