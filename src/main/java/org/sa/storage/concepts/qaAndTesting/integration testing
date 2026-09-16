@@ -1,5 +1,5 @@
 integration testing
 testing combined components to ensure they work together.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'integration testing': *what is the object of it regarding segmentation? *describe the relation? *what does it ensure?
+User has to correctly identify the object regarding segmentation (combined components, multiple components, component group, combined software modules) — score 3/10. User has to correctly describe the relation (working together, interaction, integration, interfaces and interactions between them) — score 3/10. User has to correctly identify what it ensures (components work together correctly, correct interaction, proper integration, correct unified system behavior) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
 qaAndTesting
