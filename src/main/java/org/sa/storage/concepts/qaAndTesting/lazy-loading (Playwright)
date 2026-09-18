@@ -1,5 +1,5 @@
 lazy-loading (Playwright)
-website loads new items only when you scroll near the bottom
-Please explain this concept: 
-Default aiEvaluateInstruction
+website loads new items only when you scroll near the bottom.
+Please explain concept 'lazy-loading (Playwright)': *describe subject *describe initial state *describe what triggers *describe final state
+User has to correctly identify the subject (website, page, content, web resource, page content/resources) — score 2/10. User has to correctly describe the initial state (new items are not loaded, only initially available items are loaded, deferred (unloaded), not loaded) — score 3/10. User has to correctly identify what triggers the loading (scrolling near the bottom, approaching the bottom of the page, explicit navigation or lazy-load action, triggered by scroll/interaction) — score 2/10. User has to correctly describe the final state (new items are loaded, additional content appears, loaded) — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 3/10 + 2/10 + 3/10 = 10/10.
 qaAndTesting
