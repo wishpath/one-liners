@@ -1,5 +1,5 @@
 penetration testing
 authorized simulated cyberattack to evaluate system security.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'penetration testing': *what is applied (single word)? *what characteristic does it have regarding control? *what is its nature regards representation? *what aspect does it evaluate?
+User has to correctly identify what is applied (cyberattack, security attack, attack) — score 2/10. User has to correctly identify its authorization characteristic (authorized, permitted, approved, controlled/authorized) — score 2/10. User has to correctly identify its nature (simulated, simulated attack, controlled simulation, mimics real cyberattacks) — score 2/10. User has to correctly identify what it evaluates (system security, security, security defenses, system security vulnerabilities, security robustness) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 2/10 + 4/10 = 10/10.
 qaAndTesting
