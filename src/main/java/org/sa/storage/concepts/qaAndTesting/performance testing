@@ -1,5 +1,5 @@
 performance testing
-Testing the performance and scalability of a software application under various conditions.
-Please explain this concept: 
-Default aiEvaluateInstruction
+testing system or application — for speed and stability — under expected or peak workload conditions
+Please explain concept 'performance testing': *what component is tested? *what two characteristics are evaluated? *under what kind of conditions?
+User has to correctly identify what is tested (software application, application, system) — score 2/10. User has to correctly identify the two evaluated characteristics (speed=2/10, stability=2/10). User has to correctly identify the condition characteristic (under expected or peak workload conditions, under load/stress conditions) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 2/10 + 4/10 = 10/10.
 qaAndTesting
