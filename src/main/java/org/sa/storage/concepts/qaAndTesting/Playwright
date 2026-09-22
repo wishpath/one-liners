@@ -1,5 +1,5 @@
 Playwright
-automation tool for browser testing, interacts with web pages and verifies behavior.
-Please explain this concept: 
-Default aiEvaluateInstruction
+framework for automation testing — relies on browser interaction — interacts with web apps and checks functionality.
+Please explain concept 'Playwright': *what kind of software component is it (one word)? *on what kind of agency level is it based (one word)? *for what kind of integration process is it for (one word)? *on what kind of software does it rely regarding interaction? *what does it interact with? *what does it check?
+User has to correctly identify the software component type (tool, framework, library) — score 1/10. User has to correctly identify the agency level (automation, automated) — score 1/10. User has to correctly identify the integration process (testing, test automation) — score 1/10. User has to correctly identify the software type it relies on for interaction (browser, web browser) — score 2/10. User has to correctly identify what it interacts with (web pages, websites, web applications) — score 2/10. User has to correctly identify what it checks (behavior, functionality, page behavior, expected behavior) — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 1/10 + 1/10 + 1/10 + 2/10 + 2/10 + 3/10 = 10/10.
 qaAndTesting
