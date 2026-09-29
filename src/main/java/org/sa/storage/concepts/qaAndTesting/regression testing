@@ -1,5 +1,5 @@
 regression testing
-Testing to ensure new changes don't negatively impact existing functionality.
-Please explain this concept: 
-Only rate 10/10 if user mentions verifying changes do not break existing functionality; else cap score at 6/10
+Re-testing existing software — verifies code updates didn't break functionality.
+Please explain concept 'regression testing': *what is tested? *what is the purpose of testing?
+User has to correctly identify what is tested (software changes, new changes, code changes, existing software) — score 3/10. User has to correctly identify the purpose (verify changes do not break or negatively impact existing functionality, ensure existing functionality still works after changes, prevents unintended bugs) — score 7/10. Only rate 10/10 if the answer explicitly mentions verifying changes do not break existing functionality; otherwise, cap the total score at 6/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 7/10 = 10/10.
 qaAndTesting
