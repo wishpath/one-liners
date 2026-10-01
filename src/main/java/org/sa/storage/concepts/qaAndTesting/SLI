@@ -1,5 +1,5 @@
 SLI
-Service Level Indicator - metric measuring system performance.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Service Level Indicator — metric measuring system performance.
+Please explain concept 'SLI': *expand each letter **S? **L? **I? *what does it measure?
+User has to expand each letter correctly (Service=2/10, Level=2/10, Indicator=2/10). User has to correctly identify what it measures (system performance, service performance, reliability, availability, latency, error rate) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 3 * 2/10 + 4/10 = 10/10.
 qaAndTesting
