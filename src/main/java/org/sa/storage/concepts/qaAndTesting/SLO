@@ -1,5 +1,5 @@
 SLO
-Service Level Objective - target level of performance for reliability.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Service Level Objective — specifies target performance or availability metrics — concerns system reliability.
+Please explain concept 'SLO': *expand each letter **S? **L? **O? *what does it specify? *which system quality does it concern?
+User has to expand each letter correctly (Service=2/10, Level=2/10, Objective=2/10). User has to correctly identify what it specifies (target, goal, desired level, target performance or availability metrics) — score 2/10. User has to correctly identify the targeted system quality (system reliability, service reliability, reliability, availability) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 3 * 2/10 + 2/10 + 2/10 = 10/10.
 qaAndTesting
