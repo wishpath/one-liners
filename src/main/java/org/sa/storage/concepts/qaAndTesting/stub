@@ -1,5 +1,5 @@
 stub
-small code replacing larger code, simulates unimplemented parts, aids testing isolation.
-Please explain this concept: 
-Default aiEvaluateInstruction
+minimal placeholder for code component — example what it can provide: dummy code, fake dependency
+Please explain concept 'stub': *in terms of scale, how does it try to be? *what kind of marker is it? *name >=1 examples of what it can provide.
+User has to correctly identify how it is designed in terms of scale (minimal, simple, lightweight) — score 3/10. User has to correctly identify what kind of marker it is (placeholder) — score 3/10. User has to correctly identify 1 example of what it can provide (dummy code, fake dependency, predefined responses, simplified implementation). Any 1 correct example is enough for a maximum score of 4/10 for this part. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 4/10 = 10/10.
 qaAndTesting
