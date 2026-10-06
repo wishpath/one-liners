@@ -1,5 +1,5 @@
 subsetting data
 selecting and using a representative portion of a larger dataset.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'subsetting data': *what is the source? *what action is performed on the source? *what is the result's scale compared to the source? *what is the result's symbolic relation to the source in terms of replaceability for analytical and statistical validity?
+User has to correctly identify the source (larger dataset, original dataset) — score 2/10. User has to correctly identify the action performed on the source (selecting, extracting, taking a subset, filtering the original dataset) — score 3/10. User has to correctly identify the result's scale compared to the source (smaller, less data, reduced size) — score 2/10. User has to correctly identify the result's symbolic relation to the source in terms of replaceability for analytical and statistical validity (representative, representative of the source) — score 3/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 3/10 + 2/10 + 3/10 = 10/10.
 qaAndTesting
