@@ -1,5 +1,5 @@
 test pilot (IT)
 limited-scale trial of a new version before full release, for testing, feedback, and identifying issues.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'test pilot (IT)': *what is the scale? *what is exposed? *what are the conditions like? *what action follows in a successful case? *what is the goal in case of success? *what is the goal in case of failure?
+User has to correctly identify the scale (small-scale, limited-scale, small user subset) — score 1/10. User has to correctly identify what is exposed (new version, new software version, new release, new features) — score 2/10. User has to correctly identify the conditions (live conditions, real-world conditions, production-like conditions, real production) — score 2/10. User has to correctly identify the action following a successful trial (full release, wider rollout, full deployment, full rolout) — score 2/10. User has to correctly identify the goal in case of success (validate the version, confirm readiness for full release, proceed with rollout) — score 2/10. User has to correctly identify the goal in case of failure (identify issues, collect feedback, fix defects, prevent a faulty full release, rollback) — score 1/10. Add points explicitly in the math formula. Perfect score math formula: 1/10 + 2/10 + 2/10 + 2/10 + 2/10 + 1/10 = 10/10.
 qaAndTesting
