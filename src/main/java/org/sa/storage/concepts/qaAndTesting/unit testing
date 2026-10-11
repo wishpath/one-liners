@@ -1,5 +1,5 @@
 unit testing
 Testing individual units of code in isolation (AKA component testing).
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'unit testing': *what granular part is being tested? *how does that granular part relate to its context?
+User has to correctly identify the granular part being tested (individual unit, function, method, class, small component of code) — score 5/10. User has to correctly describe how it relates to its context (in isolation, independently from other components, without relying on the whole system) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
 qaAndTesting
