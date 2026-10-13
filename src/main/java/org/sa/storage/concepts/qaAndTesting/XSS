@@ -1,5 +1,5 @@
 XSS
 Cross-Site Scripting — security flaw allowing attackers to inject malicious scripts into web pages.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'XSS': *expand each letter **X? **S? **S? *what kind of issue is it? *what can be done through it? *what IT component can suffer from it?
+User has to expand the acronym correctly (Cross=3/10, Site=3/10, Scripting=2/10). User has to correctly identify the issue type (security flaw, vulnerability, security weakness) — score 1/10. User has to correctly identify what can be done through it (execute malicious scripts, run harmful code, inject and execute scripts) — score 1/10. User has to correctly identify the IT component that can suffer from it (website, web application, web page) — score 1/10. Add points explicitly in the math formula. Perfect score math formula: 3/10 + 3/10 + 2/10 + 1/10 + 1/10 = 10/10.
 qaAndTesting
