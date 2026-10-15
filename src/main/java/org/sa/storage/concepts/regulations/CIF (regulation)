@@ -1,5 +1,5 @@
 CIF (regulation)
-Critical Information Function — key system whose failure would harm financial operations (DORA term)
-Please explain this concept: 
-Default aiEvaluateInstruction
+Critical Information Function — key system whose failure would harm financial operations (DORA term).
+Please explain concept 'CIF (regulation)': *expand each letter **C? **I? **F? *what is the subject? *what is the subject's state? *how does that state cause harm?
+User has to expand the acronym correctly (Critical=2/10, Information=2/10, Function=2/10). User has to correctly identify the subject (system, information system, ICT-supported function) — score 1/10. User has to correctly identify the subject's state (failure, disruption, unavailability) — score 1/10. User has to correctly identify how that state causes harm (disrupts or harms financial operations, affects critical services, threatens business continuity) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 3 * 2/10 + 1/10 + 1/10 + 2/10 = 10/10.
 regulations
