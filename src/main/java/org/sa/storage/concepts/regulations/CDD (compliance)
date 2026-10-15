@@ -1,5 +1,5 @@
 CDD (compliance)
-Customer Due Diligence - performing customer checks.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Customer Due Diligence — performing customer checks.
+Please explain concept 'CDD (compliance)': *expand each letter **C? **D? **D? *who is the subject? *what is done?
+User has to expand the acronym correctly (Customer=2/10, Due=2/10, Diligence=2/10). User has to correctly identify the subject (customer, client, business customer) — score 2/10. User has to correctly identify what is done (checks, verification, identity verification, risk assessment, due diligence) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 3 * 2/10 + 2/10 + 2/10 = 10/10.
 regulations
