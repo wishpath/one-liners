@@ -1,5 +1,5 @@
 data custodian
-person/team managing data storage, security, and maintenance.
-Please explain this concept: 
-Default aiEvaluateInstruction
+person/team/department — manages data — aspects: security, integrity, storage, access/availability.
+Please explain concept 'data custodian': *describe who (what type) can act as it? *what thing is taken care of (one word)? *name >=2 aspects of the thing that is taken care of.
+User has to correctly identify who can act as a data custodian (person, team, department, IT team, organization) — score 2/10. User has to correctly identify what is taken care of (data) — score 2/10. User has to correctly identify >=2 aspects of the data that are taken care of (storage, security, maintenance, access, backup, integrity, availability, protection). Any 2 valid aspects are enough for a maximum score of 6/10 for this part (2 * 3/10). Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 2 * 3/10 = 10/10.
 regulations

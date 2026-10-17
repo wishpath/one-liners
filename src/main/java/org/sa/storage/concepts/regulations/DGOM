@@ -1,5 +1,5 @@
 DGOM
 Data Governance Operating Model — roles, policies, and processes ensuring data quality, security and compliance.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'DGOM': *expand each letter **D? **G? **O? **M? *what does it provide to management (one word)? *through what tools does it provide this (name >=2)? *what is being managed (one word)? *what aspects of it are managed (name >=2)?
+User has to expand the acronym correctly (Data=1/10, Governance=1/10, Operating=1/10, Model=1/10). User has to correctly identify what it provides to management (structure, framework, model) — score 2/10. User has to correctly identify >=2 tools through which it provides this (roles, policies, processes, procedures, standards). Any 2 valid tools are enough for a maximum score of 2/10 for this part (2 * 1/10). User has to correctly identify what is managed (data) — score 1/10. User has to correctly identify >=2 managed aspects (quality, security, compliance, integrity, accessibility, availability, consistency). Any 2 valid aspects are enough for a maximum score of 2/10 for this part (2 * 1/10). Add points explicitly in the math formula. Perfect score math formula: 4 * 1/10 + 2/10 + 2 * 1/10 + 1/10 + 2 * 1/10 = 10/10.
 regulations

@@ -1,5 +1,5 @@
 DORA
-Digital Operational Resilience Act - EU rules for banks to manage unforeseen data disruption incidents.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Digital Operational Resilience Act — EU rules for financial entities to manage unforeseen ICT disruption incidents.
+Please explain concept 'DORA': *expand each letter **D? **O? **R? **A? *what geographic area is it related to? *name >=1 institution it applies to *what type of events does it address? *what is the object of these events? *what happens to that object? *describe the events' predictability.
+User has to expand the acronym correctly (Digital=1/10, Operational=1/10, Resilience=1/10, Act=1/10). User has to correctly identify the geographic area (European Union, EU) — score 1/10. User has to correctly identify >=1 type of institution it applies to (banks, financial entities, investment firms, insurance companies, payment institutions) — score 1/10. User has to correctly identify the type of events it addresses (ICT incidents, operational disruptions, cyber incidents) — score 1/10. User has to correctly identify the object of these events (ICT systems, digital services, information systems, technology infrastructure) — score 1/10. User has to correctly identify what happens to that object (disruption, failure, outage, becomes unavailable) — score 1/10. User has to correctly describe the events' predictability (unforeseen, unexpected, unanticipated) — score 1/10. Add points explicitly in the math formula. Perfect score math formula: 4 * 1/10 + 6 * 1/10 = 10/10.
 regulations
