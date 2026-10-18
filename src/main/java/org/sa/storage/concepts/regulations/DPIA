@@ -1,5 +1,5 @@
 DPIA
-Data Protection Impact Assessment - process identifying and minimising risks of the processing of personal data.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Data Protection Impact Assessment — process identifying and minimising risks of the processing of personal data.
+Please explain concept 'DPIA': *expand each letter **D? **P? **I? **A? *what process is analysed here (initially)(not part of DPIA)? *what aspect of this process is important here? *what >=2 phases characterize how the review manages evaluated factors?
+User has to expand the acronym correctly (Data=1/10, Protection=1/10, Impact=1/10, Assessment=1/10). User has to correctly identify the process being analysed (processing of personal data, personal data processing) — score 2/10. User has to correctly identify the important aspect of this process (risks, risks to individuals' rights and freedoms, privacy risks) — score 2/10. User has to correctly identify >=2 processes through which these risks are addressed (identifying risks, assessing risks, evaluating risks, minimising risks, mitigating risks). Any 2 valid processes are enough for a maximum score of 4/10 for this part (2 * 2/10). Add points explicitly in the math formula. Perfect score math formula: 4 * 1/10 + 2/10 + 2/10 + 2 * 2/10 = 10/10.
 regulations
