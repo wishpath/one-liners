@@ -1,5 +1,5 @@
 enterprise-level
-scale, complexity, and requirements to meet the needs of large organizations.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Scale, complexity, and requirements of solutions designed to meet the needs of large organizations.
+Please explain concept 'enterprise-level': *oriented to what objects? *what is the scale of those objects? *what object is being oriented? *name >=2 aspects that are oriented.
+User has to correctly identify what the concept is oriented toward (organizations, businesses, enterprises) — score 2/10. User has to correctly identify the scale of those objects (large, large-scale) — score 2/10. User has to correctly identify what is oriented (solutions, systems, software, services, capabilities) — score 2/10. User has to correctly identify >=2 aspects that are oriented (scale, complexity, requirements, security, reliability, integration, governance). Any 2 valid aspects are enough for a maximum score of 4/10 for this part (2 * 2/10). Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 2/10 + 2 * 2/10 = 10/10.
 regulations
