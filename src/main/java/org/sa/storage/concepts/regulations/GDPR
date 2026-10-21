@@ -1,5 +1,5 @@
 GDPR
-General Data Protection Regulation - European Union regulation on information privacy.
-Please explain this concept: 
-Default aiEvaluateInstruction
+General Data Protection Regulation — European Union regulation on information privacy.
+Please explain concept 'GDPR': *Expand what each letter means? **G? **D? **P? **R? *Name the geographical region where it applies *Identify what aspect of information it regulates
+User has to expand each letter correctly (General=2/10, Data=2/10, Protection=2/10, Regulation=2/10). User has to identify the geographical region (European Union, EU, Europe in the context of EU legislation) — score 1/10. User has to identify the regulated aspect (personal data protection, privacy, processing of personal data, handling of personal information, or individuals' data rights) — score 1/10. Accept semantically equivalent answers that correctly convey the required meaning. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 2/10 + 2/10 + 1/10 + 1/10 = 10/10.
 regulations
