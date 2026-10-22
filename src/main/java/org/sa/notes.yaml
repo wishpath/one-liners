@@ -1,3 +1,14 @@
+POC — Proof of Concept — Small test to see if an idea can work.
+feasibility — ability to determine if something can realistically be done.
+MVP — Minimum Viable Product — simplest version that users can use.
+batch (database) — group of records fetched or processed together, e.g. 1000 rows at a time.
+fetch size (database) — records fetched from a database in each batch.
+turf — area or responsibility owned by a person, team, or organization.
+harness (verb) — use something to achieve a goal, e.g. "kafka harnesses event streams."
+distributed tracing — tracking a request across multiple services to see its full path and timing.
+span — single operation within a request or distributed trace.
+GraphQL — query language — for APIs with one endpoint — clients request only needed data fields.
+
 - security section might be useful
 problems:
   - if the result is 0/10 take away even more points
