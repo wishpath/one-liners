@@ -1,0 +1,5 @@
+distributed tracing
+Follows a request — across multiple services — to see its full path, timing, latency and possible failures.
+Please explain concept 'distributed tracing': *what is followed? *where? *what does it reveal, name >= 3 things?
+User has to correctly identify what is followed (a request, transaction, operation) — score 4/10. User has to correctly identify where it is followed (multiple services, distributed components, microservices) — score 3/10. User has to correctly name >=3 things the tracing reveals (full path, execution flow, timing, duration, latency, locations of failure). Each valid detail is worth 1/30, up to 3/10 for 3 valid details. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 3/10 + 3 * 1/30 = 10/10.
+qaAndTesting
