@@ -1,0 +1,5 @@
+span
+Single operation within a request or distributed trace.
+Please explain concept 'span': *what does it represent? *what is the count? *where?
+User has to correctly identify what a span represents (a single operation) — score 4/10. User has to correctly identify its count (one, a single operation) — score 2/10. User has to correctly identify where it occurs (within a request or distributed trace) — score 4/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 2/10 + 4/10 = 10/10.
+qaAndTesting
