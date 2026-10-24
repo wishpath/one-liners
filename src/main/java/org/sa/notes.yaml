@@ -1,4 +1,4 @@
-POC — Proof of Concept — Small test to see if an idea can work.
+
 MVP — Minimum Viable Product — simplest version that users can use.
 batch (database) — group of records fetched or processed together, e.g. 1000 rows at a time.
 fetch size (database) — records fetched from a database in each batch.
