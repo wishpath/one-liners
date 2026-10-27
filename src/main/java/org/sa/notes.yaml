@@ -1,7 +1,6 @@
 
 batch (database) — group of records fetched or processed together, e.g. 1000 rows at a time.
 fetch size (database) — records fetched from a database in each batch.
-GraphQL — query language — for APIs with one endpoint — clients request only needed data fields.
 
 - security section might be useful
 problems:

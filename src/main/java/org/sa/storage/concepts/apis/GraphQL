@@ -1,0 +1,5 @@
+GraphQL
+Graph Query Language — API query language that lets clients request specific data fields through a single endpoint.
+Please explain concept 'GraphQL': *expand these letters of the name **Q? **L? *use these questions to narrate what it is **what software component is it? **how many endpoints does it typically use? **what does it normally specify?
+User has to expand Q as Query — score 2/10. User has to expand L as Language — score 2/10. User has to identify the software component type (API query language, API query runtime, API specification) — score 2/10. User has to identify the typical number of endpoints (one, a single endpoint) — score 2/10. User has to identify what it normally specifies (the data fields the client requests, specifies exact data requests) — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 2/10 + 2/10 + 2/10 + 2/10 = 10/10.
+apis
