@@ -1,0 +1,5 @@
+batch (database)
+Group of records fetched or processed together — e.g. expressed in SQL as "LIMIT 1000 OFFSET 0;"
+Please explain concept 'batch (database)': *describe object *express what is it like regarding plurality **describe >=2 actions performed to the content *give an example of SQL.
+User has to identify the object as records, rows, or data entries — score 4/10. User has to describe the plurality as a group, collection, set, or multiple records handled together — score 3/10. User has to name >=2 actions performed on the content (fetched, retrieved, processed, inserted, updated, or deleted); each valid action is worth 1/10, up to 1/10. User has to provide a valid SQL example, such as `SELECT * FROM table_name LIMIT 1000 OFFSET 0;` — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 4/10 + 3/10 + 2 * 1/10 + 1/10 = 10/10.
+databases
