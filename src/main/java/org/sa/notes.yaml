@@ -1,5 +1,3 @@
-fetch size (database) — records fetched from a database in each batch.
-
 - security section might be useful
 problems:
   - if the result is 0/10 take away even more points

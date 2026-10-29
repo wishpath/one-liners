@@ -1,0 +1,5 @@
+fetch size (database)
+Number of records retrieved from a database in each batch.
+Please explain concept 'fetch size (database)': *what is counted? *what are the counted objects part of in regards of grouping?
+User has to identify what is counted (records, rows, or data entries) — score 5/10. User has to identify what the counted objects are part of (each batch fetched from a database, part of a single query result chunk) — score 5/10. Add points explicitly in the math formula. Perfect score math formula: 5/10 + 5/10 = 10/10.
+databases
