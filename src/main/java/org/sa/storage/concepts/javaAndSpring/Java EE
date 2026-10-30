@@ -1,0 +1,5 @@
+Java EE
+Java Enterprise Edition — platform — defines enterprise app specifications — implemented by annotations, interfaces etc.
+Please explain concept 'Java EE': *expand EE **E? **E? *what IT component is it? *what app scale does it have in mind? *in what format are the initial definitions? *name >=2 concrete components used to implement them.
+User has to expand EE correctly (Enterprise=2/10, Edition=1/10). User has to identify the IT component type (platform) — score 1/10. User has to identify the intended application scale (enterprise-level, large-scale applications) — score 1/10. User has to identify the format of the initial definitions (specifications, standards, plain English text, specification documents) — score 1/10. User has to name >=2 concrete implementation components (annotations, interfaces, classes, APIs, Servlets, JPA); each valid component is worth 2/10, up to 4/10. Naming any 2 valid components is sufficient to receive the maximum score of 4/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 1/10 + 1/10 + 1/10 + 1/10 + 2 * 2/10 = 10/10.
+javaAndSpring
