@@ -1,5 +1,5 @@
 PCI-DSS (compliance)
-Payment Card Industry Data Security Standard — rules protecting cardholder data.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Payment Card Industry Data Security Standard — security requirements for protecting cardholder data.
+Please explain this concept: *expand each part of the abbreviation **P? **C? **I? **D? **S? **S? *what persons does it help protect? *what attribute of those persons does it help protect? *what action is applied to that attribute?
+User has to expand each abbreviation part correctly (Payment=1/10, Card=1/10, Industry=1/10, Data=1/10, Security=1/10, Standard=1/10). User has to identify the persons it helps protect (cardholders, payment card users, customers) — score 1/10. User has to identify the protected attribute (their cardholder data, payment card information, financial details, data) — score 2/10. User has to identify the action applied to that attribute (protect, secure, safeguard) — score 1/10. Add points explicitly in the math formula. Perfect score math formula: 6 * 1/10 + 2/10 + 1/10 + 1/10 = 10/10.
 regulations
