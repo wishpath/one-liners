@@ -1,0 +1,479 @@
+2026-11-02 00:22:42
+*Goal of this article*
+This set of very short definitions gets straight to the point, giving you the basics of each idea in just a few words. It’s a fast way to start learning and build confidence, even if the definitions aren’t perfect. The simple style helps you pick up many ideas quickly and gives you a base to learn more over time.
+
+
+*Algorithms Coding And Structures*
+     DRY - Don't Repeat Yourself — programming principle promoting avoidance of duplicate code or logic.
+     DSL - Domain-Specific Language — syntax tailored to a non-general domain. Example: Thymeleaf provides DSL for HTML.
+     Hungarian pollution - overusing type prefixes in variable names.
+     abstraction - Process of hiding complex details, exposing only essential features to manage complexity.
+     abstraction examples - interfaces, modules, packages, APIs, frameworks, ORMs, microservices, VMs, containers.
+     boilerplate - sections of code that have to be included in many places with little or no alteration.
+     cohesion - Degree to which elements of a module or class are related — aimed at achieving a single purpose.
+     cohesion example - UserManager class with createUser, deleteUser methods — focused on single responsibility.
+     collision - Different inputs producing identical hash codes.
+     collision resistant - Different inputs should not produce the same outcome.
+     contiguous - next to each other without gaps. pronunciation: /kənˈtɪɡjuəs/
+     coupling (noun) (software) - Degree of interdependence between software modules.
+     defensive programming - Ensuring software behaves as expected even when encountering unexpected inputs or conditions.
+     deque - Double-ended queue maintaining insertion order, allows access at both ends, implemented in Java as ArrayDeque.
+     deterministic - Same input will always produce the same outcome.
+     directed graph - Nodes connected one-directionally.
+     dispose of a list - Release the list and its resources.
+     dispose of memory - Free up or release memory.
+     edge (graphs) - Connection of two nodes.
+     encapsulation - Hiding internal elements of object or service. Provides clear separation. Improves maintainability.
+     factory pattern - Using a method to produce objects implementing a common interface.
+     greedy solution - Picks best now, ignores future. Assumes local = global best.
+     hash - Unique representation of input data. Deterministic, fixed size, irreversible.
+     hash use cases - Data integrity, password storage, encryption, verification, indexing, quick lookups.
+     hashing - Transforming data into fixed-size code; deterministic; collisions possible; irreversible;
+     heap (data structure) - ordered data structure, in Java implemented as PriorityQueue. Good for efficient auto sorting.
+     indegree - Number of incoming edges directed towards a node.
+     irreversible data transformation - Not possible to obtain the original input from the outcome.
+     justified vs excusable - Justified focuses on positives despite downsides; excusable tolerates known flaws.
+     lazy initialization - Object creation delayed until first use, improving performance and reducing resource consumption.
+     means of defensive programming - Input validation, error handling, robustness, fail-safe defaults, clear documentation, assertions, logging.
+     memoization - Storing results of expensive function calls and returning the cached result when the same inputs occur again.
+     outdegree - Number of outgoing edges directed from a node.
+     parity - State of being even or odd.
+     permutation - Specific arrangement of distinct elements.
+     polymorphism (OOP) - Overriding and overloading; objects and methods take multiple forms via extending or implementing.
+     proxy pattern - Proxy object controls access to real object, both share interface, with the proxy being used externally.
+     state (of object) - Current values of fields.
+     technical debt - Accumulated code imperfections.
+     trie - Tree storing words by letters, good for fast prefix search. Pronounced like “try” (/traɪ/).
+     undirected graph - Nodes connected bi-directionally.
+     vertex - node in a graph
+
+*Apis*
+     API - Application Programming Interface — rules enabling software communication through endpoints.
+     API gateway - Application Programming Interface Gateway — server, single entry for routing requests to APIs/services, adding security, monitoring, and management.
+     GraphQL - Graph Query Language — API query language that lets clients request specific data fields through a single endpoint.
+     REST - Representational State Transfer — API architecture standard.
+     REST client-server constraint - separates client (UI) and server (logic) responsibilities for independent evolution.
+     RESTful - API using HTTP verbs(GET, POST), data in JSON/XML, layers: stateless controller, service, data storage.
+     RESTful data formats - common data formats like JSON, XML, HTML
+     RESTful layers - structured as controller, service, and data access layers
+     RESTful methods - uses standard HTTP verbs: GET, POST, PUT, DELETE
+     Swagger - framework that simplifies listing, designing, documenting, and testing RESTful web APIs
+     URL - Uniform Resource Locator — standard way to identify and locate resources on the web
+     non-semantic message - raw data with no context about its meaning, e.g., plain text, CSV row, raw byte stream
+     semantic message - data and its explanation by metadata, e.g., JSON with field names as metadata and values as data
+     using APIs - exchanging data and functionality between systems via predefined rules
+
+*Backend*
+     AWS (cloud) - Amazon Web Services — cloud platform and service provider for scalable computing, storage, and managed services.
+     Azure - Microsoft cloud platform — enables scalable applications, data, and services.
+     Google Cloud - Google cloud platform — hosts applications, data, and AI with scalable computing.
+     Kafka - platform orchestrating data flow — event streaming system for real-time data.
+     Kafka vs Kubernetes - orchestration comparison — Kafka manages data streams; Kubernetes manages containers.
+     Kerberos - authentication protocol
+     Kerberos keytab - file storing username, service name and key to request Kerberos tickets.
+     Kerberos keytab key - key generated from a service’s password — used for authentication — requested from the Kerberos Authentication Service.
+     Kerberos principal - pair of user and service — e.g.: user@SERVER.COM — for authentication — found in keytabs, tickets, and configurations.
+     Kerberos ticket - user authentication information — binary — created by Key Distribution Center — stored temporarily in user cache.
+     PATH environment variable - system lookup list for executables, e.g., Java (java) or Python (python) commands.
+     SA (technical user) - service account — non-human access credential.
+     cloud platform - online infrastructure — hosts applications, data, and services with scalable computing.
+     data flow - movement and transformation of data — ingestion, processing, and output in backend systems.
+     managed service - owner only starts and uses it; outsourcing maintenance, updates, setup, and scaling to a third-party provider.
+     on-premises datacenter - organization-owned data center located on-site, not hosted by external providers.
+     raise (Python) - trigger an exception, like throw in Java, e.g., raise ValueError("error").
+     real-time data flow - continuous, asynchronous transfer and processing of data as events occur
+     sticky session - user always routed to same server for session consistency
+     sticky session benefit - avoids session data transfer and Java object serialization
+     throughput (backend) - rate at which data is processed or transmitted through a system
+     try-except (Python) - handle exceptions, like try-catch in Java
+     tuple (Python) - immutable ordered list, e.g., (1, "a")
+
+*Business And Workplace*
+     CC1 CC2 CC3 CC4 - Criticality Categories — classifying IT services by importance and compliance impact
+     CFT (company structure) - Cross Functional Team — individuals with different expertise
+     CI (IT component) - Configuration Item — any manageable component to deliver IT service
+     CTO - Chief Technology Officer — executive overseeing technology direction and innovation.
+     Genesys Cloud - cloud-based contact center application for customer support.
+     Liferay - content management system (CMS). Pre-made, highly customisable website for enterprise. Backend and frontend.
+     MLM - Multi-Level Marketing - strategy where salespeople earn from personal sales and sales made by their recruits.
+     NIC - not identified customer.
+     OKR - objectives and key results.
+     PI (agile) - Program Increment — multiple teams plan work for the upcoming weeks.
+     PI planning activities - Program Increment planning activities - aligns teams, sets objectives, and plans iterations collaboratively.
+     PR - can mean public release, pull request, public relations.
+     SO (role) - service owner — person accountable for an application end to end.
+     Saba - former name of a Learning and Development platform for managing training, skills, and employee growth.
+     VDE - value delivery engine — multiple agile teams with shared goal, having PI meeting every 10 weeks.
+     WoW - way of working - team's established approach to tasks and collaboration.
+     authorized signatory - a person who can handle the company's banking matters at the bank branch
+     backlog - pending tasks or features to complete
+     channels (bank) - mediums for communication
+     conduct - behavior
+     gateway team - team managing network security and access incidents.
+     iKiosk - physical iBank access point to clients in a Swedbank branch.
+     instant payment - payment transferred immediately via digital channels (mobile/online)
+     legal person - legal personality, legal entity, juridical person.
+     operational risk - financial or reputational loss from failed processes, people, systems, or external events.
+     party - an entity involved in a transaction or relationship. example: customer, vendor, partner.
+     party master data - key info about customers, partners within an organization.
+     portfolio management team - team responsible for managing collections of products, initiatives, or investments.
+     postmortem - structured analysis that takes place after a failure has occurred.
+     product backlog (agile) - prioritized list of features and tasks in agile projects.
+     product life cycle management - managing a product’s full lifespan: concept, development, use, maintenance, retirement.
+     stakeholder - one with interest in outcome: customer, team, tester, manager, regulator, security, leadership, marketing.
+     streamline - remove obstacles and add improvements to optimize.
+     teleagreement user - a person who can manage banking matters in the online bank.
+     value stream - sequence of processes a company uses to deliver product, showing steps, efficiency, and bottlenecks.
+
+*Ci Cd And Dev Ops*
+     Apache Ant - Java build automation tool executing XML scripts.
+     Apache Ivy - Java dependency tool, fetches JARs. Can be used by most Java dependency tools: Gradle, Maven, Apache Ant
+     Argo CD - Argo Continuous Delivery — app, runs in Kubernetes, reads from Git repo, deploys apps to Kubernetes.
+     CI_CD - C - continuous (automatic), I - integration (merging code and testing it), D - delivery (deploying).
+     DevOps - practices, principles, philosophies on automation of the process of software delivery and infrastructure changes.
+     DevSecOps - Development Security Operations — practice of integrating security into every phase of the software development and delivery pipeline.
+     Google A2A - Google Agent to Agent — protocol enabling multiple agents collaborate.
+     Ingress Controller - Kubernetes component that manages external access to services.
+     JFrog Artifactory - artifact repository — stores, versions, and distributes artifacts.
+     Jenkins - application for automating building, testing, and deployment. Written in Java. Managed via Jenkinsfile.
+     RPO (requirement) - Recovery Point Objective — maximum data loss allowed, measured in time, e.g., 15 minutes.
+     SLA (commitment) - Service Level Agreement — defines expected service quality and uptime.
+     UrbanCode Deploy (UCD) - deployment tool, moves app between environments.
+     anonymous access to Artifactory - repository access without login.
+     artifact (compilation) - file produced by a build process, like a JAR, WAR, or binary, ready for deployment.
+     artifactory - stores built artifacts (JAR, WAR, binaries), not source code.
+     assemble - specific phase within the build process — collecting and combining individual components into larger units.
+     build process - entire prep for execution — compiling files, linking libraries, and packaging into a distributable format.
+     code integration - combining code changes from multiple contributors into a shared repository.
+     consuming Ivy repositories in Gradle - Setting repository URL in build.gradle to enable use of Ivy modules and dependencies stored in the Ivy repo.
+     continuous integration components - VCS (e.g., Git), automated: builds, tests, feedback, build server (e.g., Jenkins).
+     deploying - making app available on a target environment. For example production environment.
+     emergency release - software deployment outside regular schedule to fix critical issues.
+     failover - automatic switch to a backup system when the primary fails.
+     heap space - memory area during program execution, for storing objects.
+     multibranch pipeline - auto-detects all Git branches, creates an independent pipeline for each, and builds them separately.
+     npm - Node Package Manager — JavaScript dependency manager that installs packages.
+     package manager examples by programming language - pip (Python), npm (JavaScript), Maven, Gradle, Ivy (Java).
+     pip - Pip Installs Packages — Python package manager that installs and manages libraries.
+     pipeline (IT) - process of building, testing and deploying. Often associated with automatisation.
+     publishing Ivy artifacts in Gradle - Setting plugin "ivy-publish", URL of an Ivy repository, and published item in build.gradle file.
+     roll out - deployment and activation of a new product or feature for use.
+
+*Containerisation*
+     AKS - Azure Kubernetes Service — Azure-provided Kubernetes with setup and maintenance handled.
+     DC (infrastructure) - data center — building housing IT systems.
+     DC components (infrastructure) - includes hardware (servers, storage, backup) and infrastructure (power, cooling, network).
+     Docker - container runtime — runs and isolates containers.
+     Docker desktop - local Docker environment for running containers on your machine.
+     F5 - application — distributes and manages requests across servers
+     F5 rules - logic to control service traffic (access, balance and security).
+     Hazelcast - platform — distributes data and computation across nodes
+     Headlamp (app) - Kubernetes UI tool, visualizes clusters and resources.
+     Helm - package manager for Kubernetes — installs and manages applications via charts
+     Helm chart - package of container images, services, deployments, configs that produce pods.
+     IMDG - In-Memory Data Grid — distributed computing storing data in RAM for fast access
+     Kubernetes - container orchestration platform.
+     NFS (storage) - Network File System - for accessing files over a network as if they were on a local file system.
+     OpenShift - platform for container orchestration, automation, development, deployment, management; built on Kubernetes.
+     OpenShift vs Kubernetes - OpenShift is built on top of Kubernetes, extending its capabilities with additional features.
+     PV (containerisation) - Persistent Volume — storage independent of containers, managed by platform or admin.
+     PVC (containerisation) - Persistent Volume Claim - request for PV storage by a user.
+     RBAC - Role-Based Access Control — restricts system access based on user roles.
+     Rancher platform - management platform for container orchestration and Kubernetes.
+     SSH - Secure Shell key pair (public/private) – authenticates and secures network communication.
+     VIP (OpenShift) - Virtual IP - routes traffic to services or pods within cluster, often for load balancing.
+     YAML - (YAML Ain't Markup Language) - is a human-readable data serialization format. Like XML or JSON.
+     base Java Docker image - foundation image with Java runtime for running apps in containers.
+     cloud - internet-based services like storage, compute, databases—no local hardware needed.
+     cluster - collection of all nodes and therefore all pods as well.
+     container - isolated unit with app code, dependencies, and settings.
+     container image - package with code, runtime, libs, tools—ready to run.
+     container instance - running version of an image.
+     container management platform - software system for deploying, scaling, and orchestrating containers across cluster.
+     container runtime - software component that runs and isolates containers.
+     endpoint - URL (or URI) the client calls to interact with the server.
+     etcd - configuration data shared among nodes in a distributed system.
+     etcd etymology - "et cetera" + "distributed" — name inspired by /etc directory in Linux for configuration.
+     garbage collection - automatic memory cleanup process
+     managed cloud service - provider-run cloud system you use without handling setup or maintenance.
+     master node - responsible for managing the overall cluster state.
+     microservice - independent part of application for a specific function.
+     namespace (cluster) - divides cluster resources (pods, services, deployments) among projects or teams.
+     namespace (networking) - virtual network environment — separates address names — prevents conflicts.
+     package (software) - set of files or resources bundled for software deployment.
+     pod - smallest deployable unit. It can hold one or more containers.
+     port - communication endpoint.
+     runtime - software providing components to execute an app (or period when a program is executing).
+     secret (Kubernetes) - Key-value sensitive data in etcd (cluster configuration) with restricted access.
+     throttling - intentional limitation or control of certain resources, actions, or processes within an app or a system.
+     worker node - node for running the containerized apps - has its own CPU, memory, and storage.
+
+*Databases*
+     CTE (SQL) - Common Table Expression - temporary result set in a larger query.
+     DAO - Data Access Object - object with custom CRUD methods to interact with database.
+     DBA - database administrators.
+     Hibernate - Object-Relational Mapping (ORM) framework for Java - predecessor of JPA (Java Persistence API).
+     JDBC - Java Database Connectivity - Java dependency providing standard methods for executing SQL in relational databases.
+     JPA (db) - Java Persistence API - standard methods for managing relational data in Java apps, mapping objects to database tables.
+     JPA entity management (db) - handling objects mapped to database rows.
+     JPA responsibilities (db) - Java Persistence API — connects DB & Java through JPQL/SQL queries; maps objects-tables; manages transactions
+     JPA transaction (db) - sequence of database operations as a single unit.
+     JPQL - Java Persistence Query Language - platform-independent database queries auto-translated to specific SQL.
+     NOT IN (SQL) - operator, similar to "!=" (not equals)
+     ORM - Object-Relational Mapping - framework for object mapping e.g. Hibernate.
+     RDBMS - Relational DataBase Management System — manages structured data in tables — example: MySQL, PostgreSQL, Oracle Database
+     batch (database) - Group of records fetched or processed together — e.g. expressed in SQL as "LIMIT 1000 OFFSET 0;"
+     connection pool (database) - multiple reusable database connections, speeds up app-db interactions.
+     database transaction - group of database actions done as one, all succeed or fail together.
+     entity (database) - row (entry) in database, represents an object.
+     fetch size (database) - Number of records retrieved from a database in each batch.
+     object mapping (database) - linking app objects to database tables for storage/retrieval.
+     partition and sample - part of database table.
+     persistence (app data) - keeping data stored so it remains after the program stops running.
+
+*Domain Driven Design*
+     bad cohesion (DDD) - grouping unrelated elements together, causing complexity and confusion.
+     bad separation of concerns (DDD) - software components overlap in concerns, creating tight coupling.
+     bounded (DDD) - distinct business area, isolated from other contexts, distinct contextual meaning, independent evolution.
+     bounded context - software unit with consistent terms
+     cohesion (DDD) - degree to which parts of a software element fit together around a single purpose.
+     domain (DDD) - business area, e.g., retail, banking, finance, healthcare.
+     domain model - group of related classes and objects representing business logic, rules and concepts of single business area.
+     domain vs bounded context - domain usually contains multiple bounded contexts.
+     good cohesion (DDD) - software elements/parts focused on a single purpose, easy to maintain.
+     ubiquitous language (DDD) - shared, common language used by both domain experts and developers to describe the domain model.
+
+*Frontend*
+     Chromium - base upon which many modern web browsers are built.
+     FDP - frontend development platform (example: React).
+     JSON - JavaScript Object Notation - text-based data format representing objects; for easy data exchange between systems.
+     JSX - JavaScript as XML - is an HTML-like syntax used in React to create UI elements.
+     JWT - JSON Web Token - compact, URL-safe token format commonly used for authentication and authorization purposes.
+     SwiftUI - user interface framework developed by Apple for building apps across iOS, macOS, watchOS, and tvOS.
+     UI dialog - UI state — prioritizes attention for a prompt or message — requires action or dismissal — e.g. window or popup.
+     URL safe format - avoids special characters — suitable for transmission in URLs.
+     accessibility - making software usable by people with disabilities.
+     asynchronous - each next task starts without previous one ending. Tasks become concurrent.
+     landing page - entry point for a particular section of a website. Prompts a specific action like purchase or signing up.
+     modal window - UI element that blocks interaction with the rest of the interface until closed.
+     overlay (web) - UI element layered above others, may be modal (blocks underlying UI) or just provide extra content.
+     synchronous - each next task starts when previous one ends.
+     token (security) - value (usually string or binary) issued to represent authentication, authorization, or session state
+     web - a.k.a WWW (World Wide Web) — content reached the internet infrastructure — includes pages, protocols and links.
+     web container - server component managing servlets and Java Server Pages (JSP) execution.
+     web portal - platform — provides access to services.
+
+*General ITTerms*
+     AD - architecture description or active directory (access rights).
+     AES (Smart-ID) - Advanced Electronic Signature — using a certificate, but without full Qualified (QES) legal status.
+     BOM - Byte Order Mark — special marker indicating text encoding and byte order.
+     CIM - customer interaction management.
+     CRM - customer relationship management.
+     HSM (device) - Hardware Security Module — specialised computer device that stores and manages cryptographic keys.
+     ICT system - Information and Communication Technology System — handles data — enables communication
+     ICT system components - Information and Communication Technology setup — hardware, software, networks, and people.
+     MVP - Minimum Viable Product — simplest usable version of a product, built to deliver core functionality to a target audience.
+     QES (Smart-ID) - Qualified Electronic Signature — legally equal to handwritten.
+     SES (Smart-ID) - Simple Electronic Signature — basic electronic signing, lowest assurance, no certificate required.
+     SSO - Single Sign-On - authentication method for accessing multiple apps with one login.
+     UML - Unified Model Language — standard for diagrams — for architecture description or other structures and behaviors
+     UUID - Universally Unique Identifier — 128-bit identifier for unique identification.
+     cross architecture - making sure components fit well: front, back, data, infrastructure and security.
+     daemon - background software component — runs continuously — performs tasks without direct user interaction.
+     deduce - conclude
+     detrimental - causing harm, e.g. "Memory leaks are detrimental to performance."
+     dispatcher - system or person that ensures efficiency by distributing resources, tasks, and information.
+     framework - reusable and extensible structure that helps building applications.
+     hub - central component where interactions are coordinated or routed.
+     infer - deduce info from evidence. Java example: in "var x = stream.toList()", x is inferred as a List.
+     interface - an intermediate between user and internal functionality; serves as both abstraction and boundary.
+     mTLS - Mutual Transport Layer Security — protocol — mechanism where client and server authenticate each other.
+     metadata - data about data: format, source, purpose, quality, relationships with other data.
+     omni-channel - experience of transitioning interconnected channels seamlessly and with consistent experience.
+
+*Hardware*
+     NFC - Near Field Communication - wireless communication technology - between devices typically a few centimeters away.
+     Unix - operating system — Linux is a Unix-like, but not a direct descendant.
+     YubiKey - A flash drive for authentication.
+     operations specialist - takes care of IT infrastructure: servers, networks, hardware. Deploys and configures apps.
+
+*Java And Spring*
+     .war file - Web Application Archive — deployable Java web app package — similar to .jar.
+     IoC - Inversion of Control — design principle — object lifecycle is managed by a container or framework.
+     JSP - Java Server Pages — embed Java code in HTML — with tags for loops, conditions, formatting.
+     Java EE - Java Enterprise Edition — platform — defines enterprise app specifications — implemented by annotations, interfaces etc.
+     Java bean - simple Java object with getters/setters, often used as DTO for data transfer.
+     Jetty - Java web server — runs inside app — hosts web content directly.
+     MVC - Model View Controller — architectural pattern — separates application into model, view, and controller.
+     POJO - Plain Old Java Object — ordinary Java class — independent of frameworks.
+     Spring Boot - part of Spring ecosystem — Java framework — for creating web-app backends.
+     Spring bean - Java object/POJO — created and managed by the Spring IoC container (ApplicationContext).
+     abstract class - both shows what methods the extending classes have to implement and can implement some shared code.
+     application server - provides the environment to run the application and manage its components (e.g., beans, servlets).
+     aspect (AOP) - class handling shared concerns like logging or security.
+     aspect oriented programming - separates shared functionality like logging specific methods from separate log class.
+     bean factory - dependency injection container — implements inversion of control in Spring.
+     component scanning (Spring) - a way to configure an app — annotations added to app elements: classes, attributes, and methods — helps defining bean.
+     diamond operator (Java) - copies the variable type from the left side to avoid repeating it; marked by <>.
+     interface in Java - only shows what methods the implementing classes has to implement.
+     jar hell - conflicts between Java Archive (JAR) versions in projects with multiple dependencies.
+     model (MVC) - part of MVC architecture — represents application data and business logic.
+     pointcut - rule defined in aspect method's annotation — contains trigger method — when a trigger runs aspect method gets executed.
+     present() (Fluentlenium) - method — checks if the element is present in the DOM.
+     servlet - Java class — handles HTTP requests — generates dynamic responses — interacts with web resources/services/databases.
+     servlet container - part of application server (e.g., Tomcat or Jetty) — loads, manages, and executes servlet classes.
+     servlet vs controller - both are request-handling components — controller is a higher-level abstraction built over servlet.
+     stereotype in Spring - role of class — marked by annotation — e.g., @Controller, @Service.
+     ternary operator - inline if-else — condition ? a : b.
+     view (MVC) - part of MVC architecture — frontend — web elements and presentation logic.
+     volatile (Java) - keyword, field modifier — ensures variable updates are visible between threads — e.g., private volatile String status.
+
+*Logs And Observability*
+     ELK - Elasticsearch, Logstash, and Kibana — tools for collecting, storing, searching, analyzing, and visualizing logs.
+     Elasticsearch - search and analytics engine — handles and analyzes large volumes of data (JSON) in real time.
+     Filebeat - background app — scans log files in defined locations — extracts text lines — converts to JSON — streams to Elasticsearch or Logstash.
+     Kibana - application — visualizes data — data exploration tool — usually for logs — takes data from Elasticsearch.
+     Logstash - data processing pipeline — ingests, transforms, and enriches data — often used for logs.
+     Loki (IT) - log collector — handles real-time logs — centralizes & tags them — Grafana pulls from Loki to search & view.
+     distributed tracing - Follows a request — across multiple services — to see its full path, timing, latency and possible failures.
+     full-text search - search technique — understands synonyms and inflections by reducing words to stems — scores matches.
+     observability - explains system health — why a failure happened — uses logs, metrics & traces.
+     semantic search - maps text to multidimensional vectors — captures meaning — matches vector similarity.
+     span - Single operation within a request or distributed trace.
+     stop word filtering - ignoring frequently-occurring, non-informative words (e.g., "the," "and") — improve search.
+
+*Networking*
+     DNS - Domain Name System — maps user-friendly domain names to numeric IP addresses.
+     SSL - Secure Sockets Layer — encryption of browser-server communication.
+     TLS - Transport Layer Security — encryption of browser-server communication; successor to SSL.
+     VPN - Virtual Private Network — encrypted connection to a remote server, hiding identity while accessing the internet.
+     VPN whitelisting - security measure — allows only specific IP addresses or devices to access a service through a VPN.
+     Wireshark - app — for network troubleshooting.
+     bandwidth - maximum data transfer capacity over a network — bits per second (bps, kbps, Mbps).
+     distributed computing - computers in different locations working together as one system over a network.
+     downlink (networking) - incoming traffic to user system from the network.
+     firewall - network security system that monitors and controls incoming and outgoing network traffic based on predetermined rules.
+     firewall opening - allows network traffic through a specified port, IP range or other rule.
+     gateway - device or software — bridges networks or applications — converts data between protocols.
+     jitter - variation in packet delay over a network — measured in milliseconds (ms).
+     latency - time delay between sending and receiving data, measured in milliseconds (ms).
+     subnet - subnetwork — segment of a larger network. Subnetting improves network performance, security, and organization.
+     throughput (network) - actual amount of data successfully transmitted over a network in a given time, measured in bits per second (bps).
+     uplink (networking) - outgoing traffic from user system to the network.
+     web server - software — handles HTTP/HTTPS requests — routes them to applications or resources — serves web content.
+     whitelisting - approving specific entities (IPs, apps, emails) to bypass security restrictions — opposite of blacklisting.
+
+*Qa And Testing*
+     A B testing - split testing — compares two versions (A and B) of a webpage.
+     CTE - common test environment
+     DDoS attacks - Distributed denial-of-service attacks.
+     DRT - Disaster Recovery Testing — evaluating system restoration — prepares and tests for major outages & data loss
+     KPI - key performance indicator.
+     POC - Proof of Concept — small test to see if an idea can work.
+     PPTE - pre production test environment.
+     Playwright - framework for automation testing — relies on browser interaction — interacts with web apps and checks functionality.
+     SLI - Service Level Indicator — metric measuring system performance.
+     SLO - Service Level Objective — specifies target performance or availability metrics — concerns system reliability.
+     XSS - Cross-Site Scripting — security flaw allowing attackers to inject malicious scripts into web pages.
+     canary deployment - new app version — released to a small group of users — before full deployment — for testing purposes.
+     chaos engineering - injecting controlled instances of failure into a system to identify vulnerabilities.
+     data pseudonymization - protecting privacy by encrypting personal identifiers or replacing them with pseudonyms.
+     error budget - allowed system unreliability — caused by errors, failed requests, downtime, or latency violations.
+     feature flag - software configuration mechanism — toggles functionality on or off — without deploying new code.
+     integrated test environment - closely resembles production — integrated means combined components functioning together.
+     integration testing - testing combined components to ensure they work together.
+     lazy-loading (Playwright) - website loads new items only when you scroll near the bottom.
+     penetration testing - authorized simulated cyberattack to evaluate system security.
+     performance testing - testing system or application — for speed and stability — under expected or peak workload conditions
+     provisioning - making hardware, software, or data available and ready for use. e.g.: provisioning user accounts.
+     pseudonym - artificial identifier — links records to an individual indirectly — hides the individual's real identity.
+     regression testing - Re-testing existing software — verifies code updates didn't break functionality.
+     staging environment - closely resembles the production environment without affecting actual production data.
+     stub - minimal placeholder for code component — example what it can provide: dummy code, fake dependency
+     subsetting data - selecting and using a representative portion of a larger dataset.
+     test pilot (IT) - limited-scale trial of a new version before full release, for testing, feedback, and identifying issues.
+     unit testing - Testing individual units of code in isolation (AKA component testing).
+
+*Regulations*
+     AFC (compliance) - Anti-Financial Crime — preventing and managing financial fraud, money laundering, bribery, etc.
+     AML (compliance) - Anti-Money Laundering — laws and processes preventing illicit financial transactions.
+     CDD (compliance) - Customer Due Diligence — performing customer checks.
+     CIF (regulation) - Critical Information Function — key system whose failure would harm financial operations (DORA term).
+     DGOM - Data Governance Operating Model — roles, policies, and processes ensuring data quality, security and compliance.
+     DORA - Digital Operational Resilience Act — EU rules for financial entities to manage unforeseen ICT disruption incidents.
+     DPIA - Data Protection Impact Assessment — process identifying and minimising risks of the processing of personal data.
+     DSS - Data Security Standard.
+     ECB - European Central Bank.
+     ECB stress test - European Central Bank’s check of banks’ strength under tough economic conditions.
+     EDD (compliance) - Enhanced Due Diligence — more thorough investigation of a customer beyond standard KYC procedures.
+     GDPR - General Data Protection Regulation — European Union regulation on information privacy.
+     PCI-DSS (compliance) - Payment Card Industry Data Security Standard — security requirements for protecting cardholder data.
+     PI (data) - Personal Information — information relating to an individual.
+     PII - Personally Identifiable Information — data that can identify an individual.
+     TDC - test data compliance - test data meets standards and regulations.
+     custody - legal responsibility for care or control.
+     customer data domain - centralized focus on managing customer data across all systems.
+     data custodian - person/team/department — manages data — aspects: security, integrity, storage, access/availability.
+     data governance - management of data — aspects: quality, security, and accessibility — through defined roles, rules, and processes.
+     enterprise-level - Scale, complexity, and requirements of solutions designed to meet the needs of large organizations.
+     personal data retention - Storing and maintaining individuals' personal information for a specific period.
+
+*Security*
+     tampering - making illegal or/and damaging alterations.
+
+*Work Useful English*
+     allocate - reserve a specific amount of any resource, so it's available when needed
+     allocate a list - reserve memory space to store list elements.
+     amend - edit official text
+     arbitrary - based on choice or chance, not a fixed rule or system.
+     assess - evaluate/ estimate quality of
+     base (math) - number raised to a power, e.g. 3 in 3^2
+     commissioning - bring (something newly produced, such as a factory or machine) into working condition.
+     commissioning example sentence - we had a few hiccups getting the heating equipment commissioned
+     comply - meet specific standards
+     constraint (general word) - restriction or limitation that defines what is allowed.
+     credential - information, proof of the identity or authorization of an entity (such as a user or a system).
+     credential examples - username, password, API keys, certificates, tokens, biometric data.
+     credibility - quality of being trusted
+     defer - postpone — delay an action, decision, or task until a later time — noun form is deferral
+     diligence - careful or persistent work
+     dispose - remove, or free up a resource
+     due - adequate
+     due diligence - proper level of investigation, analysis, and verification - (due - proper) + (diligence - care)
+     e.g - exampli gratia - example, for sake of
+     em dash (—) function - dash for separation or emphasis, example: "He was gone—just like that.", type: Alt+0151
+     en dash (–) function - dash for range or connection, example: "New York – Boston", type: Alt+0150
+     enhanced - strengthened
+     exponent (math) - power a number is raised to, e.g. 2 in 3^2
+     facilitate meeting - organize meeting
+     facility - building
+     feasibility - Ability to determine whether something can realistically be done.
+     fetch - go, get it and bring back
+     harness (verb) - use — use something to achieve a goal, e.g. "kafka harnesses event streams."
+     hyphen (-) function - dashes for joining words, example: "well-known", type: button on keyboard
+     integrity (of documents) - quality of being accurate, complete, unaltered, not tampered
+     intrusive - annoying, unwanted, causing disturbances, disruptive.
+     mitigate - make less severe
+     obfuscate data - make unclear, unintelligible, encrypt or pseudonimize or anonimize. (etymology: make obscure)
+     onboarding - integration into organisation
+     pagination - sequence of numbers assigned to pages
+     paradigm - model, pattern, or typical example of something
+     pivot - turning point, (key) change, critical point, reversal.
+     proprietary - belonging to company
+     remediation - fixing or mitigating of vulnerabilities
+     retrieve - get back, bring back; regain possession of
+     signatory - person authorized to sign on someones behalf.
+     silo - group isolated from others, e.g., "marketing works in a silo."
+     substitution (general word) - replacement
+     suite - related set treated as a group, e.g. suite of tests.
+     tamper - make illegal or/and damaging alterations
+     thoroughness - being in regard to every detail.
+     to prompt (general meaning) - encourage (a hesitating speaker) to say something
+     to stash - to hide sth in git.
+     traverse - systematically move across an area with a purpose
+     turf - Area of responsibility, authority, or activity belonging to a person, team, or organization.
+     ubiquitous - means present everywhere (common means frequent)
+     upkeep - maintenance or care to keep something in good condition.
+     vague - not clearly defined, expressed, or stated
+     verbose - using too many words
+     volatile - likely to change suddenly or unpredictably; unstable or temporary.

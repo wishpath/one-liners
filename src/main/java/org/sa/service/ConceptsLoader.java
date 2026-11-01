@@ -52,35 +52,39 @@ public class ConceptsLoader {
       for (File conceptFile : FileUtil.listFiles(topicPath)) {
         if (!conceptFile.isFile()) throw new IllegalArgumentException("IN THE TOPIC FOLDER THERE SHOULD ONLY BE CONCEPT FILES");
         List<String> fileLines = FileUtil.listLines(conceptFile);
-        String contentKey = getValidContentKey(fileLines.get(KEY).trim(), conceptFile.getName().trim(), key_concept);
-        String contentUserAnswerInstruction = getValidatedUserAnswerInstruction(fileLines.get(USER_ANSWER_INSTRUCTION), contentKey);
+        if (fileLines.size() <= TOPIC) throw new IllegalArgumentException("Missing topic line: " + topicPath.getFileName() + "/" + conceptFile.getName());
+        String validContentKey = getValidContentKey(fileLines.get(KEY).trim(), conceptFile.getName().trim(), key_concept);
+        String contentUserAnswerInstruction = getValidatedUserAnswerInstruction(fileLines, validContentKey);
         key_concept.put(
-            contentKey,
+            validContentKey,
             new ConceptDTO(
-                contentKey,
+                validContentKey,
                 fileLines.get(DEFINITION),
                 contentUserAnswerInstruction,
                 fileLines.get(AI_EVALUATION_INSTRUCTION),
-                getValidatedContentTopic(fileLines.get(TOPIC), topicPath.getFileName().toString()))
+                getValidatedContentTopic(fileLines, topicPath.getFileName().toString()))
         );
       }
     });
     return key_concept;
   }
 
-  private static String getValidatedUserAnswerInstruction(String UserAnswerInstructionLineInFile, String contentKey) {
+  private static String getValidatedUserAnswerInstruction(List<String> fileLines, String validContentKey) {
+
+    String UserAnswerInstructionLineInFile = fileLines.get(USER_ANSWER_INSTRUCTION);
     if (UserAnswerInstructionLineInFile.equals(Props.DEFAULT_USER_ANSWER_INSTRUCTION))
       return Props.DEFAULT_USER_ANSWER_INSTRUCTION;
 
-    if (!UserAnswerInstructionLineInFile.contains(contentKey))
+    if (!UserAnswerInstructionLineInFile.contains(validContentKey))
       throw new IllegalArgumentException(
-          "User answer instruction must contain EXACT 'key'\n\tUser answer instruction:\n\t\t" + UserAnswerInstructionLineInFile + "\n\tKey: " + contentKey);
+          "User answer instruction must contain EXACT 'key'\n\tUser answer instruction:\n\t\t" + UserAnswerInstructionLineInFile + "\n\tKey: " + validContentKey);
 
     return UserAnswerInstructionLineInFile;
   }
 
-  private static String getValidatedContentTopic(String contentTopic, String topicNameAsDirectory) {
-    if (!contentTopic.equals(topicNameAsDirectory)) throw new IllegalArgumentException("TOPIC MISMATCH: " + topicNameAsDirectory);
+  private static String getValidatedContentTopic(List<String> fileLines, String topicNameAsDirectory) {
+    String contentTopic = fileLines.get(TOPIC);
+    if (!contentTopic.equals(topicNameAsDirectory)) throw new IllegalArgumentException("TOPIC MISMATCH, directory: " + topicNameAsDirectory + "\nFile/Key: " + fileLines.get(KEY));
     return contentTopic;
   }
 

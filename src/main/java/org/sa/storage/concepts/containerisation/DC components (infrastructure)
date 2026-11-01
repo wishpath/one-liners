@@ -1,5 +1,5 @@
-DC components
+DC components (infrastructure)
 includes hardware (servers, storage, backup) and infrastructure (power, cooling, network).
-Describe DC components: *Name all hardware elements (servers, storage, backup) *Name all infrastructure elements (power, cooling, network)
+Describe 'DC components (infrastructure)': *Name all hardware elements (servers, storage, backup) *Name all infrastructure elements (power, cooling, network)
 User has to correctly name the hardware elements: servers — score 2/10, storage — score 1/10, backup — score 1/10. User has to correctly name the infrastructure elements: power — score 2/10, cooling — score 2/10, network — score 2/10. Add points explicitly in the math formula. Perfect score math formula: 2/10 + 1/10 + 1/10 + 2/10 + 2/10 + 2/10 = 10/10.
 containerisation
