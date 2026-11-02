@@ -6,6 +6,7 @@ problems:
       - integrity (of documents)
       - obfuscate data
       - remediation (fixing vulnerabilities)
+  - create topic bankingAndPayments
   - if the result is 0/10 take away even more points
   - test API concept
   - write non-default user and ai instruction for each concept.
