@@ -1,7 +1,5 @@
 problems:
   - do security terms, mark topic in each, also improve these:
-      - credential
-      - credential examples
       - integrity (of documents)
       - obfuscate data
       - remediation (fixing vulnerabilities)
