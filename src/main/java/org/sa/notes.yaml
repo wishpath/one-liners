@@ -1,8 +1,4 @@
 problems:
-  - do security terms, mark topic in each, also improve these:
-      - integrity (of documents)
-      - obfuscate data
-      - remediation (fixing vulnerabilities)
   - create topic bankingAndPayments
   - if the result is 0/10 take away even more points
   - test API concept

@@ -1,5 +1,5 @@
 remediation
 fixing or mitigating of vulnerabilities
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'remediation': *describe what remediation means in your own words.
+User has to explain remediation as addressing vulnerabilities by fixing them or reducing their impact (e.g. applying a security patch, correcting a misconfiguration, or adding a compensating control) — score 10/10. Perfect score math formula: 10/10.
 security
