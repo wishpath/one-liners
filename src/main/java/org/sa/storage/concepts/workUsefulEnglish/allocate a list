@@ -1,5 +1,5 @@
 allocate a list
 reserve memory space to store list elements.
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'allocate a list': *describe what allocating a list means in your own words.
+User has to explain allocating a list as reserving memory space to hold its elements (e.g. creating an array or collection with capacity for storing values) — score 10/10. Perfect score math formula: 10/10.
 workUsefulEnglish
