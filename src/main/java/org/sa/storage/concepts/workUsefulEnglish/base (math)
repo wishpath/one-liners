@@ -1,5 +1,5 @@
 base (math)
 number raised to a power, e.g. 3 in 3^2
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'base (math)': *describe what the base represents in an exponentiation expression.
+User has to explain the base as the number being raised to a power (e.g. 3 is the base in 3^2) — score 10/10. Perfect score math formula: 10/10.
 workUsefulEnglish
