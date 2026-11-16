@@ -1,5 +1,5 @@
 exponent (math)
 power a number is raised to, e.g. 2 in 3^2
-Please explain this concept: 
-Default aiEvaluateInstruction
+Please explain concept 'exponent (math)': *what does the exponent represent in an exponentiation expression? *give a short example.
+User has to explain the exponent as the power indicating how many times the base is used as a factor (e.g. 2 in 3^2) — score 6/10. User has to provide a correct example identifying the exponent in an expression — score 4/10. Perfect score math formula: 6/10 + 4/10 = 10/10.
 workUsefulEnglish
