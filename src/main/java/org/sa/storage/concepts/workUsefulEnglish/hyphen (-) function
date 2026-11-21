@@ -1,5 +1,5 @@
 hyphen (-) function
-dashes for joining words, example: "well-known", type: button on keyboard
-Please explain this concept: 
-Default aiEvaluateInstruction
+dashes for joining words, example: "well-known"
+Please explain concept 'hyphen (-) function': *what does it join? *use it in an example.
+User has to identify what a hyphen joins (words or word parts, often to form compound words or modifiers) — score 5/10. User has to provide a correct example (e.g. well-known, user-friendly, or part-time) — score 5/10. Perfect score math formula: 5/10 + 5/10 = 10/10.
 workUsefulEnglish
